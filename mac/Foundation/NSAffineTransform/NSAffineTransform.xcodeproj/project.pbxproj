@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		742CCD1814E7C10200A1252A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742CCD1714E7C10200A1252A /* Cocoa.framework */; };
+		742CCD2214E7C10200A1252A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 742CCD2014E7C10200A1252A /* InfoPlist.strings */; };
+		742CCD2414E7C10200A1252A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 742CCD2314E7C10200A1252A /* main.m */; };
+		742CCD2814E7C10200A1252A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 742CCD2614E7C10200A1252A /* Credits.rtf */; };
+		742CCD2B14E7C10200A1252A /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 742CCD2A14E7C10200A1252A /* OOOAppDelegate.m */; };
+		742CCD2E14E7C10200A1252A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742CCD2C14E7C10200A1252A /* MainMenu.xib */; };
+		742CCD3614E7C10200A1252A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742CCD3514E7C10200A1252A /* SenTestingKit.framework */; };
+		742CCD3714E7C10200A1252A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742CCD1714E7C10200A1252A /* Cocoa.framework */; };
+		742CCD3F14E7C10200A1252A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 742CCD3D14E7C10200A1252A /* InfoPlist.strings */; };
+		742CCD4214E7C10200A1252A /* NSAffineTransformTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 742CCD4114E7C10200A1252A /* NSAffineTransformTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		742CCD3814E7C10200A1252A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 742CCD0A14E7C10200A1252A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 742CCD1214E7C10200A1252A;
+			remoteInfo = NSAffineTransform;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		742CCD1314E7C10200A1252A /* NSAffineTransform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSAffineTransform.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		742CCD1714E7C10200A1252A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		742CCD1A14E7C10200A1252A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		742CCD1B14E7C10200A1252A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		742CCD1C14E7C10200A1252A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		742CCD1F14E7C10200A1252A /* NSAffineTransform-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSAffineTransform-Info.plist"; sourceTree = "<group>"; };
+		742CCD2114E7C10200A1252A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		742CCD2314E7C10200A1252A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		742CCD2514E7C10200A1252A /* NSAffineTransform-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAffineTransform-Prefix.pch"; sourceTree = "<group>"; };
+		742CCD2714E7C10200A1252A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		742CCD2914E7C10200A1252A /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
+		742CCD2A14E7C10200A1252A /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
+		742CCD2D14E7C10200A1252A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		742CCD3414E7C10200A1252A /* NSAffineTransformTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSAffineTransformTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		742CCD3514E7C10200A1252A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		742CCD3C14E7C10200A1252A /* NSAffineTransformTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSAffineTransformTests-Info.plist"; sourceTree = "<group>"; };
+		742CCD3E14E7C10200A1252A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		742CCD4014E7C10200A1252A /* NSAffineTransformTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAffineTransformTests.h; sourceTree = "<group>"; };
+		742CCD4114E7C10200A1252A /* NSAffineTransformTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAffineTransformTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		742CCD1014E7C10200A1252A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742CCD1814E7C10200A1252A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742CCD3014E7C10200A1252A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742CCD3614E7C10200A1252A /* SenTestingKit.framework in Frameworks */,
+				742CCD3714E7C10200A1252A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		742CCD0814E7C10200A1252A = {
+			isa = PBXGroup;
+			children = (
+				742CCD1D14E7C10200A1252A /* NSAffineTransform */,
+				742CCD3A14E7C10200A1252A /* NSAffineTransformTests */,
+				742CCD1614E7C10200A1252A /* Frameworks */,
+				742CCD1414E7C10200A1252A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		742CCD1414E7C10200A1252A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				742CCD1314E7C10200A1252A /* NSAffineTransform.app */,
+				742CCD3414E7C10200A1252A /* NSAffineTransformTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		742CCD1614E7C10200A1252A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				742CCD1714E7C10200A1252A /* Cocoa.framework */,
+				742CCD3514E7C10200A1252A /* SenTestingKit.framework */,
+				742CCD1914E7C10200A1252A /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		742CCD1914E7C10200A1252A /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				742CCD1A14E7C10200A1252A /* AppKit.framework */,
+				742CCD1B14E7C10200A1252A /* CoreData.framework */,
+				742CCD1C14E7C10200A1252A /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		742CCD1D14E7C10200A1252A /* NSAffineTransform */ = {
+			isa = PBXGroup;
+			children = (
+				742CCD2914E7C10200A1252A /* OOOAppDelegate.h */,
+				742CCD2A14E7C10200A1252A /* OOOAppDelegate.m */,
+				742CCD2C14E7C10200A1252A /* MainMenu.xib */,
+				742CCD1E14E7C10200A1252A /* Supporting Files */,
+			);
+			path = NSAffineTransform;
+			sourceTree = "<group>";
+		};
+		742CCD1E14E7C10200A1252A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				742CCD1F14E7C10200A1252A /* NSAffineTransform-Info.plist */,
+				742CCD2014E7C10200A1252A /* InfoPlist.strings */,
+				742CCD2314E7C10200A1252A /* main.m */,
+				742CCD2514E7C10200A1252A /* NSAffineTransform-Prefix.pch */,
+				742CCD2614E7C10200A1252A /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		742CCD3A14E7C10200A1252A /* NSAffineTransformTests */ = {
+			isa = PBXGroup;
+			children = (
+				742CCD4014E7C10200A1252A /* NSAffineTransformTests.h */,
+				742CCD4114E7C10200A1252A /* NSAffineTransformTests.m */,
+				742CCD3B14E7C10200A1252A /* Supporting Files */,
+			);
+			path = NSAffineTransformTests;
+			sourceTree = "<group>";
+		};
+		742CCD3B14E7C10200A1252A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				742CCD3C14E7C10200A1252A /* NSAffineTransformTests-Info.plist */,
+				742CCD3D14E7C10200A1252A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		742CCD1214E7C10200A1252A /* NSAffineTransform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 742CCD4514E7C10200A1252A /* Build configuration list for PBXNativeTarget "NSAffineTransform" */;
+			buildPhases = (
+				742CCD0F14E7C10200A1252A /* Sources */,
+				742CCD1014E7C10200A1252A /* Frameworks */,
+				742CCD1114E7C10200A1252A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSAffineTransform;
+			productName = NSAffineTransform;
+			productReference = 742CCD1314E7C10200A1252A /* NSAffineTransform.app */;
+			productType = "com.apple.product-type.application";
+		};
+		742CCD3314E7C10200A1252A /* NSAffineTransformTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 742CCD4814E7C10200A1252A /* Build configuration list for PBXNativeTarget "NSAffineTransformTests" */;
+			buildPhases = (
+				742CCD2F14E7C10200A1252A /* Sources */,
+				742CCD3014E7C10200A1252A /* Frameworks */,
+				742CCD3114E7C10200A1252A /* Resources */,
+				742CCD3214E7C10200A1252A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				742CCD3914E7C10200A1252A /* PBXTargetDependency */,
+			);
+			name = NSAffineTransformTests;
+			productName = NSAffineTransformTests;
+			productReference = 742CCD3414E7C10200A1252A /* NSAffineTransformTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		742CCD0A14E7C10200A1252A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 742CCD0D14E7C10200A1252A /* Build configuration list for PBXProject "NSAffineTransform" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 742CCD0814E7C10200A1252A;
+			productRefGroup = 742CCD1414E7C10200A1252A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				742CCD1214E7C10200A1252A /* NSAffineTransform */,
+				742CCD3314E7C10200A1252A /* NSAffineTransformTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		742CCD1114E7C10200A1252A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742CCD2214E7C10200A1252A /* InfoPlist.strings in Resources */,
+				742CCD2814E7C10200A1252A /* Credits.rtf in Resources */,
+				742CCD2E14E7C10200A1252A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742CCD3114E7C10200A1252A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742CCD3F14E7C10200A1252A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		742CCD3214E7C10200A1252A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		742CCD0F14E7C10200A1252A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742CCD2414E7C10200A1252A /* main.m in Sources */,
+				742CCD2B14E7C10200A1252A /* OOOAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742CCD2F14E7C10200A1252A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742CCD4214E7C10200A1252A /* NSAffineTransformTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		742CCD3914E7C10200A1252A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 742CCD1214E7C10200A1252A /* NSAffineTransform */;
+			targetProxy = 742CCD3814E7C10200A1252A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		742CCD2014E7C10200A1252A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				742CCD2114E7C10200A1252A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		742CCD2614E7C10200A1252A /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				742CCD2714E7C10200A1252A /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		742CCD2C14E7C10200A1252A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				742CCD2D14E7C10200A1252A /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		742CCD3D14E7C10200A1252A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				742CCD3E14E7C10200A1252A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		742CCD4314E7C10200A1252A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		742CCD4414E7C10200A1252A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		742CCD4614E7C10200A1252A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSAffineTransform/NSAffineTransform-Prefix.pch";
+				INFOPLIST_FILE = "NSAffineTransform/NSAffineTransform-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		742CCD4714E7C10200A1252A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSAffineTransform/NSAffineTransform-Prefix.pch";
+				INFOPLIST_FILE = "NSAffineTransform/NSAffineTransform-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		742CCD4914E7C10200A1252A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSAffineTransform.app/Contents/MacOS/NSAffineTransform";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSAffineTransform/NSAffineTransform-Prefix.pch";
+				INFOPLIST_FILE = "NSAffineTransformTests/NSAffineTransformTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		742CCD4A14E7C10200A1252A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSAffineTransform.app/Contents/MacOS/NSAffineTransform";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSAffineTransform/NSAffineTransform-Prefix.pch";
+				INFOPLIST_FILE = "NSAffineTransformTests/NSAffineTransformTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		742CCD0D14E7C10200A1252A /* Build configuration list for PBXProject "NSAffineTransform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				742CCD4314E7C10200A1252A /* Debug */,
+				742CCD4414E7C10200A1252A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		742CCD4514E7C10200A1252A /* Build configuration list for PBXNativeTarget "NSAffineTransform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				742CCD4614E7C10200A1252A /* Debug */,
+				742CCD4714E7C10200A1252A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		742CCD4814E7C10200A1252A /* Build configuration list for PBXNativeTarget "NSAffineTransformTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				742CCD4914E7C10200A1252A /* Debug */,
+				742CCD4A14E7C10200A1252A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 742CCD0A14E7C10200A1252A /* Project object */;
+}
