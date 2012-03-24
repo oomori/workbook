@@ -7,7 +7,6 @@
 //
 //http://developer.apple.com/jp/devcenter/ios/library/documentation/LocationAwarenessPG.pdf
 
-
 #import "OOOViewController.h"
 
 @implementation OOOViewController
