@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74923F6F155D4201007A1C90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74923F6E155D4201007A1C90 /* UIKit.framework */; };
+		74923F71155D4201007A1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74923F70155D4201007A1C90 /* Foundation.framework */; };
+		74923F73155D4201007A1C90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74923F72155D4201007A1C90 /* CoreGraphics.framework */; };
+		74923F79155D4201007A1C90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74923F77155D4201007A1C90 /* InfoPlist.strings */; };
+		74923F7B155D4201007A1C90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74923F7A155D4201007A1C90 /* main.m */; };
+		74923F7F155D4201007A1C90 /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74923F7E155D4201007A1C90 /* OOOAppDelegate.m */; };
+		74923F82155D4201007A1C90 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74923F80155D4201007A1C90 /* MainStoryboard_iPhone.storyboard */; };
+		74923F85155D4201007A1C90 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74923F83155D4201007A1C90 /* MainStoryboard_iPad.storyboard */; };
+		74923F88155D4201007A1C90 /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74923F87155D4201007A1C90 /* OOOViewController.m */; };
+		74923F90155D4201007A1C90 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74923F8F155D4201007A1C90 /* SenTestingKit.framework */; };
+		74923F91155D4201007A1C90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74923F6E155D4201007A1C90 /* UIKit.framework */; };
+		74923F92155D4201007A1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74923F70155D4201007A1C90 /* Foundation.framework */; };
+		74923F9A155D4201007A1C90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74923F98155D4201007A1C90 /* InfoPlist.strings */; };
+		74923F9D155D4201007A1C90 /* NSFastEnumerationProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74923F9C155D4201007A1C90 /* NSFastEnumerationProtocolTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74923F93155D4201007A1C90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74923F61155D4201007A1C90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74923F69155D4201007A1C90;
+			remoteInfo = NSFastEnumerationProtocol;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74923F6A155D4201007A1C90 /* NSFastEnumerationProtocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSFastEnumerationProtocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74923F6E155D4201007A1C90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74923F70155D4201007A1C90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74923F72155D4201007A1C90 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74923F76155D4201007A1C90 /* NSFastEnumerationProtocol-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSFastEnumerationProtocol-Info.plist"; sourceTree = "<group>"; };
+		74923F78155D4201007A1C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74923F7A155D4201007A1C90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74923F7C155D4201007A1C90 /* NSFastEnumerationProtocol-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFastEnumerationProtocol-Prefix.pch"; sourceTree = "<group>"; };
+		74923F7D155D4201007A1C90 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
+		74923F7E155D4201007A1C90 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
+		74923F81155D4201007A1C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		74923F84155D4201007A1C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		74923F86155D4201007A1C90 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
+		74923F87155D4201007A1C90 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
+		74923F8E155D4201007A1C90 /* NSFastEnumerationProtocolTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSFastEnumerationProtocolTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74923F8F155D4201007A1C90 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74923F97155D4201007A1C90 /* NSFastEnumerationProtocolTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSFastEnumerationProtocolTests-Info.plist"; sourceTree = "<group>"; };
+		74923F99155D4201007A1C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74923F9B155D4201007A1C90 /* NSFastEnumerationProtocolTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSFastEnumerationProtocolTests.h; sourceTree = "<group>"; };
+		74923F9C155D4201007A1C90 /* NSFastEnumerationProtocolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSFastEnumerationProtocolTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74923F67155D4201007A1C90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74923F6F155D4201007A1C90 /* UIKit.framework in Frameworks */,
+				74923F71155D4201007A1C90 /* Foundation.framework in Frameworks */,
+				74923F73155D4201007A1C90 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74923F8A155D4201007A1C90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74923F90155D4201007A1C90 /* SenTestingKit.framework in Frameworks */,
+				74923F91155D4201007A1C90 /* UIKit.framework in Frameworks */,
+				74923F92155D4201007A1C90 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74923F5F155D4201007A1C90 = {
+			isa = PBXGroup;
+			children = (
+				74923F74155D4201007A1C90 /* NSFastEnumerationProtocol */,
+				74923F95155D4201007A1C90 /* NSFastEnumerationProtocolTests */,
+				74923F6D155D4201007A1C90 /* Frameworks */,
+				74923F6B155D4201007A1C90 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74923F6B155D4201007A1C90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74923F6A155D4201007A1C90 /* NSFastEnumerationProtocol.app */,
+				74923F8E155D4201007A1C90 /* NSFastEnumerationProtocolTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74923F6D155D4201007A1C90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74923F6E155D4201007A1C90 /* UIKit.framework */,
+				74923F70155D4201007A1C90 /* Foundation.framework */,
+				74923F72155D4201007A1C90 /* CoreGraphics.framework */,
+				74923F8F155D4201007A1C90 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74923F74155D4201007A1C90 /* NSFastEnumerationProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				74923F7D155D4201007A1C90 /* OOOAppDelegate.h */,
+				74923F7E155D4201007A1C90 /* OOOAppDelegate.m */,
+				74923F80155D4201007A1C90 /* MainStoryboard_iPhone.storyboard */,
+				74923F83155D4201007A1C90 /* MainStoryboard_iPad.storyboard */,
+				74923F86155D4201007A1C90 /* OOOViewController.h */,
+				74923F87155D4201007A1C90 /* OOOViewController.m */,
+				74923F75155D4201007A1C90 /* Supporting Files */,
+			);
+			path = NSFastEnumerationProtocol;
+			sourceTree = "<group>";
+		};
+		74923F75155D4201007A1C90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74923F76155D4201007A1C90 /* NSFastEnumerationProtocol-Info.plist */,
+				74923F77155D4201007A1C90 /* InfoPlist.strings */,
+				74923F7A155D4201007A1C90 /* main.m */,
+				74923F7C155D4201007A1C90 /* NSFastEnumerationProtocol-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74923F95155D4201007A1C90 /* NSFastEnumerationProtocolTests */ = {
+			isa = PBXGroup;
+			children = (
+				74923F9B155D4201007A1C90 /* NSFastEnumerationProtocolTests.h */,
+				74923F9C155D4201007A1C90 /* NSFastEnumerationProtocolTests.m */,
+				74923F96155D4201007A1C90 /* Supporting Files */,
+			);
+			path = NSFastEnumerationProtocolTests;
+			sourceTree = "<group>";
+		};
+		74923F96155D4201007A1C90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74923F97155D4201007A1C90 /* NSFastEnumerationProtocolTests-Info.plist */,
+				74923F98155D4201007A1C90 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74923F69155D4201007A1C90 /* NSFastEnumerationProtocol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74923FA0155D4201007A1C90 /* Build configuration list for PBXNativeTarget "NSFastEnumerationProtocol" */;
+			buildPhases = (
+				74923F66155D4201007A1C90 /* Sources */,
+				74923F67155D4201007A1C90 /* Frameworks */,
+				74923F68155D4201007A1C90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSFastEnumerationProtocol;
+			productName = NSFastEnumerationProtocol;
+			productReference = 74923F6A155D4201007A1C90 /* NSFastEnumerationProtocol.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74923F8D155D4201007A1C90 /* NSFastEnumerationProtocolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74923FA3155D4201007A1C90 /* Build configuration list for PBXNativeTarget "NSFastEnumerationProtocolTests" */;
+			buildPhases = (
+				74923F89155D4201007A1C90 /* Sources */,
+				74923F8A155D4201007A1C90 /* Frameworks */,
+				74923F8B155D4201007A1C90 /* Resources */,
+				74923F8C155D4201007A1C90 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74923F94155D4201007A1C90 /* PBXTargetDependency */,
+			);
+			name = NSFastEnumerationProtocolTests;
+			productName = NSFastEnumerationProtocolTests;
+			productReference = 74923F8E155D4201007A1C90 /* NSFastEnumerationProtocolTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74923F61155D4201007A1C90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OOO;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 74923F64155D4201007A1C90 /* Build configuration list for PBXProject "NSFastEnumerationProtocol" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74923F5F155D4201007A1C90;
+			productRefGroup = 74923F6B155D4201007A1C90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74923F69155D4201007A1C90 /* NSFastEnumerationProtocol */,
+				74923F8D155D4201007A1C90 /* NSFastEnumerationProtocolTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74923F68155D4201007A1C90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74923F79155D4201007A1C90 /* InfoPlist.strings in Resources */,
+				74923F82155D4201007A1C90 /* MainStoryboard_iPhone.storyboard in Resources */,
+				74923F85155D4201007A1C90 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74923F8B155D4201007A1C90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74923F9A155D4201007A1C90 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74923F8C155D4201007A1C90 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74923F66155D4201007A1C90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74923F7B155D4201007A1C90 /* main.m in Sources */,
+				74923F7F155D4201007A1C90 /* OOOAppDelegate.m in Sources */,
+				74923F88155D4201007A1C90 /* OOOViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74923F89155D4201007A1C90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74923F9D155D4201007A1C90 /* NSFastEnumerationProtocolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74923F94155D4201007A1C90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74923F69155D4201007A1C90 /* NSFastEnumerationProtocol */;
+			targetProxy = 74923F93155D4201007A1C90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74923F77155D4201007A1C90 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74923F78155D4201007A1C90 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74923F80155D4201007A1C90 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74923F81155D4201007A1C90 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		74923F83155D4201007A1C90 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74923F84155D4201007A1C90 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		74923F98155D4201007A1C90 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74923F99155D4201007A1C90 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74923F9E155D4201007A1C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74923F9F155D4201007A1C90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74923FA1155D4201007A1C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSFastEnumerationProtocol/NSFastEnumerationProtocol-Prefix.pch";
+				INFOPLIST_FILE = "NSFastEnumerationProtocol/NSFastEnumerationProtocol-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74923FA2155D4201007A1C90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSFastEnumerationProtocol/NSFastEnumerationProtocol-Prefix.pch";
+				INFOPLIST_FILE = "NSFastEnumerationProtocol/NSFastEnumerationProtocol-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		74923FA4155D4201007A1C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSFastEnumerationProtocol.app/NSFastEnumerationProtocol";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSFastEnumerationProtocol/NSFastEnumerationProtocol-Prefix.pch";
+				INFOPLIST_FILE = "NSFastEnumerationProtocolTests/NSFastEnumerationProtocolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		74923FA5155D4201007A1C90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSFastEnumerationProtocol.app/NSFastEnumerationProtocol";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSFastEnumerationProtocol/NSFastEnumerationProtocol-Prefix.pch";
+				INFOPLIST_FILE = "NSFastEnumerationProtocolTests/NSFastEnumerationProtocolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74923F64155D4201007A1C90 /* Build configuration list for PBXProject "NSFastEnumerationProtocol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74923F9E155D4201007A1C90 /* Debug */,
+				74923F9F155D4201007A1C90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74923FA0155D4201007A1C90 /* Build configuration list for PBXNativeTarget "NSFastEnumerationProtocol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74923FA1155D4201007A1C90 /* Debug */,
+				74923FA2155D4201007A1C90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74923FA3155D4201007A1C90 /* Build configuration list for PBXNativeTarget "NSFastEnumerationProtocolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74923FA4155D4201007A1C90 /* Debug */,
+				74923FA5155D4201007A1C90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74923F61155D4201007A1C90 /* Project object */;
+}

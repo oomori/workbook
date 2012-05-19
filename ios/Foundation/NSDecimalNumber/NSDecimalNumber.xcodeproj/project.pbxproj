@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74924067155E68BA007A1C90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924066155E68BA007A1C90 /* UIKit.framework */; };
+		74924069155E68BA007A1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924068155E68BA007A1C90 /* Foundation.framework */; };
+		7492406B155E68BA007A1C90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7492406A155E68BA007A1C90 /* CoreGraphics.framework */; };
+		74924071155E68BA007A1C90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7492406F155E68BA007A1C90 /* InfoPlist.strings */; };
+		74924073155E68BA007A1C90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74924072155E68BA007A1C90 /* main.m */; };
+		74924077155E68BA007A1C90 /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74924076155E68BA007A1C90 /* OOOAppDelegate.m */; };
+		7492407A155E68BA007A1C90 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74924078155E68BA007A1C90 /* MainStoryboard_iPhone.storyboard */; };
+		7492407D155E68BA007A1C90 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7492407B155E68BA007A1C90 /* MainStoryboard_iPad.storyboard */; };
+		74924080155E68BA007A1C90 /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7492407F155E68BA007A1C90 /* OOOViewController.m */; };
+		74924088155E68BA007A1C90 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924087155E68BA007A1C90 /* SenTestingKit.framework */; };
+		74924089155E68BA007A1C90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924066155E68BA007A1C90 /* UIKit.framework */; };
+		7492408A155E68BA007A1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924068155E68BA007A1C90 /* Foundation.framework */; };
+		74924092155E68BA007A1C90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74924090155E68BA007A1C90 /* InfoPlist.strings */; };
+		74924095155E68BA007A1C90 /* NSDecimalNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74924094155E68BA007A1C90 /* NSDecimalNumberTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7492408B155E68BA007A1C90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74924059155E68BA007A1C90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74924061155E68BA007A1C90;
+			remoteInfo = NSDecimalNumber;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74924062155E68BA007A1C90 /* NSDecimalNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSDecimalNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74924066155E68BA007A1C90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74924068155E68BA007A1C90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7492406A155E68BA007A1C90 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7492406E155E68BA007A1C90 /* NSDecimalNumber-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSDecimalNumber-Info.plist"; sourceTree = "<group>"; };
+		74924070155E68BA007A1C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74924072155E68BA007A1C90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74924074155E68BA007A1C90 /* NSDecimalNumber-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber-Prefix.pch"; sourceTree = "<group>"; };
+		74924075155E68BA007A1C90 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
+		74924076155E68BA007A1C90 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
+		74924079155E68BA007A1C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		7492407C155E68BA007A1C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		7492407E155E68BA007A1C90 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
+		7492407F155E68BA007A1C90 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
+		74924086155E68BA007A1C90 /* NSDecimalNumberTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSDecimalNumberTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74924087155E68BA007A1C90 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7492408F155E68BA007A1C90 /* NSDecimalNumberTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSDecimalNumberTests-Info.plist"; sourceTree = "<group>"; };
+		74924091155E68BA007A1C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74924093155E68BA007A1C90 /* NSDecimalNumberTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberTests.h; sourceTree = "<group>"; };
+		74924094155E68BA007A1C90 /* NSDecimalNumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDecimalNumberTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7492405F155E68BA007A1C90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74924067155E68BA007A1C90 /* UIKit.framework in Frameworks */,
+				74924069155E68BA007A1C90 /* Foundation.framework in Frameworks */,
+				7492406B155E68BA007A1C90 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74924082155E68BA007A1C90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74924088155E68BA007A1C90 /* SenTestingKit.framework in Frameworks */,
+				74924089155E68BA007A1C90 /* UIKit.framework in Frameworks */,
+				7492408A155E68BA007A1C90 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74924057155E68BA007A1C90 = {
+			isa = PBXGroup;
+			children = (
+				7492406C155E68BA007A1C90 /* NSDecimalNumber */,
+				7492408D155E68BA007A1C90 /* NSDecimalNumberTests */,
+				74924065155E68BA007A1C90 /* Frameworks */,
+				74924063155E68BA007A1C90 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74924063155E68BA007A1C90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74924062155E68BA007A1C90 /* NSDecimalNumber.app */,
+				74924086155E68BA007A1C90 /* NSDecimalNumberTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74924065155E68BA007A1C90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74924066155E68BA007A1C90 /* UIKit.framework */,
+				74924068155E68BA007A1C90 /* Foundation.framework */,
+				7492406A155E68BA007A1C90 /* CoreGraphics.framework */,
+				74924087155E68BA007A1C90 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7492406C155E68BA007A1C90 /* NSDecimalNumber */ = {
+			isa = PBXGroup;
+			children = (
+				74924075155E68BA007A1C90 /* OOOAppDelegate.h */,
+				74924076155E68BA007A1C90 /* OOOAppDelegate.m */,
+				74924078155E68BA007A1C90 /* MainStoryboard_iPhone.storyboard */,
+				7492407B155E68BA007A1C90 /* MainStoryboard_iPad.storyboard */,
+				7492407E155E68BA007A1C90 /* OOOViewController.h */,
+				7492407F155E68BA007A1C90 /* OOOViewController.m */,
+				7492406D155E68BA007A1C90 /* Supporting Files */,
+			);
+			path = NSDecimalNumber;
+			sourceTree = "<group>";
+		};
+		7492406D155E68BA007A1C90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7492406E155E68BA007A1C90 /* NSDecimalNumber-Info.plist */,
+				7492406F155E68BA007A1C90 /* InfoPlist.strings */,
+				74924072155E68BA007A1C90 /* main.m */,
+				74924074155E68BA007A1C90 /* NSDecimalNumber-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7492408D155E68BA007A1C90 /* NSDecimalNumberTests */ = {
+			isa = PBXGroup;
+			children = (
+				74924093155E68BA007A1C90 /* NSDecimalNumberTests.h */,
+				74924094155E68BA007A1C90 /* NSDecimalNumberTests.m */,
+				7492408E155E68BA007A1C90 /* Supporting Files */,
+			);
+			path = NSDecimalNumberTests;
+			sourceTree = "<group>";
+		};
+		7492408E155E68BA007A1C90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7492408F155E68BA007A1C90 /* NSDecimalNumberTests-Info.plist */,
+				74924090155E68BA007A1C90 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74924061155E68BA007A1C90 /* NSDecimalNumber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74924098155E68BA007A1C90 /* Build configuration list for PBXNativeTarget "NSDecimalNumber" */;
+			buildPhases = (
+				7492405E155E68BA007A1C90 /* Sources */,
+				7492405F155E68BA007A1C90 /* Frameworks */,
+				74924060155E68BA007A1C90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSDecimalNumber;
+			productName = NSDecimalNumber;
+			productReference = 74924062155E68BA007A1C90 /* NSDecimalNumber.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74924085155E68BA007A1C90 /* NSDecimalNumberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7492409B155E68BA007A1C90 /* Build configuration list for PBXNativeTarget "NSDecimalNumberTests" */;
+			buildPhases = (
+				74924081155E68BA007A1C90 /* Sources */,
+				74924082155E68BA007A1C90 /* Frameworks */,
+				74924083155E68BA007A1C90 /* Resources */,
+				74924084155E68BA007A1C90 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7492408C155E68BA007A1C90 /* PBXTargetDependency */,
+			);
+			name = NSDecimalNumberTests;
+			productName = NSDecimalNumberTests;
+			productReference = 74924086155E68BA007A1C90 /* NSDecimalNumberTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74924059155E68BA007A1C90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OOO;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 7492405C155E68BA007A1C90 /* Build configuration list for PBXProject "NSDecimalNumber" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74924057155E68BA007A1C90;
+			productRefGroup = 74924063155E68BA007A1C90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74924061155E68BA007A1C90 /* NSDecimalNumber */,
+				74924085155E68BA007A1C90 /* NSDecimalNumberTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74924060155E68BA007A1C90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74924071155E68BA007A1C90 /* InfoPlist.strings in Resources */,
+				7492407A155E68BA007A1C90 /* MainStoryboard_iPhone.storyboard in Resources */,
+				7492407D155E68BA007A1C90 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74924083155E68BA007A1C90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74924092155E68BA007A1C90 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74924084155E68BA007A1C90 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7492405E155E68BA007A1C90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74924073155E68BA007A1C90 /* main.m in Sources */,
+				74924077155E68BA007A1C90 /* OOOAppDelegate.m in Sources */,
+				74924080155E68BA007A1C90 /* OOOViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74924081155E68BA007A1C90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74924095155E68BA007A1C90 /* NSDecimalNumberTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7492408C155E68BA007A1C90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74924061155E68BA007A1C90 /* NSDecimalNumber */;
+			targetProxy = 7492408B155E68BA007A1C90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7492406F155E68BA007A1C90 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74924070155E68BA007A1C90 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74924078155E68BA007A1C90 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74924079155E68BA007A1C90 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		7492407B155E68BA007A1C90 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7492407C155E68BA007A1C90 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		74924090155E68BA007A1C90 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74924091155E68BA007A1C90 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74924096155E68BA007A1C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74924097155E68BA007A1C90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74924099155E68BA007A1C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSDecimalNumber/NSDecimalNumber-Prefix.pch";
+				INFOPLIST_FILE = "NSDecimalNumber/NSDecimalNumber-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7492409A155E68BA007A1C90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSDecimalNumber/NSDecimalNumber-Prefix.pch";
+				INFOPLIST_FILE = "NSDecimalNumber/NSDecimalNumber-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7492409C155E68BA007A1C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSDecimalNumber.app/NSDecimalNumber";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSDecimalNumber/NSDecimalNumber-Prefix.pch";
+				INFOPLIST_FILE = "NSDecimalNumberTests/NSDecimalNumberTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7492409D155E68BA007A1C90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSDecimalNumber.app/NSDecimalNumber";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSDecimalNumber/NSDecimalNumber-Prefix.pch";
+				INFOPLIST_FILE = "NSDecimalNumberTests/NSDecimalNumberTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7492405C155E68BA007A1C90 /* Build configuration list for PBXProject "NSDecimalNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74924096155E68BA007A1C90 /* Debug */,
+				74924097155E68BA007A1C90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74924098155E68BA007A1C90 /* Build configuration list for PBXNativeTarget "NSDecimalNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74924099155E68BA007A1C90 /* Debug */,
+				7492409A155E68BA007A1C90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7492409B155E68BA007A1C90 /* Build configuration list for PBXNativeTarget "NSDecimalNumberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7492409C155E68BA007A1C90 /* Debug */,
+				7492409D155E68BA007A1C90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74924059155E68BA007A1C90 /* Project object */;
+}

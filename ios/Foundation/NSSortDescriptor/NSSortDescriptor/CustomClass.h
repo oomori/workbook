@@ -1,0 +1,18 @@
+//
+//  CustomClass.h
+//  NSSortDescriptor
+//
+//  Created by 大森 智史 on 12/05/12.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface CustomClass : NSObject
+{
+    NSString *customClassValue;
+}
+
+@property (retain) NSString *customClassValue;
+
+@end

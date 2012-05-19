@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="8" userLabel="MapView001">
-                                <rect key="frame" x="-17" y="-56" width="768" height="1004"/>
+                                <rect key="frame" x="-17" y="-56" width="768" height="682"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="10" userLabel="button001">
@@ -40,18 +40,9 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-326" y="-189"/>
+            <point key="canvasLocation" x="-328" y="-419"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="OOOViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OOOViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="button1:"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

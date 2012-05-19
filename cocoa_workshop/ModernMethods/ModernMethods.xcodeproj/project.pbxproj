@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74C60254155F0E710047301E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60253155F0E710047301E /* UIKit.framework */; };
+		74C60256155F0E710047301E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60255155F0E710047301E /* Foundation.framework */; };
+		74C60258155F0E710047301E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60257155F0E710047301E /* CoreGraphics.framework */; };
+		74C6025E155F0E710047301E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C6025C155F0E710047301E /* InfoPlist.strings */; };
+		74C60260155F0E710047301E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C6025F155F0E710047301E /* main.m */; };
+		74C60264155F0E710047301E /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C60263155F0E710047301E /* OOOAppDelegate.m */; };
+		74C60267155F0E710047301E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C60265155F0E710047301E /* MainStoryboard_iPhone.storyboard */; };
+		74C6026A155F0E710047301E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C60268155F0E710047301E /* MainStoryboard_iPad.storyboard */; };
+		74C6026D155F0E710047301E /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C6026C155F0E710047301E /* OOOViewController.m */; };
+		74C60275155F0E710047301E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60274155F0E710047301E /* SenTestingKit.framework */; };
+		74C60276155F0E710047301E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60253155F0E710047301E /* UIKit.framework */; };
+		74C60277155F0E710047301E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60255155F0E710047301E /* Foundation.framework */; };
+		74C6027F155F0E710047301E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C6027D155F0E710047301E /* InfoPlist.strings */; };
+		74C60282155F0E710047301E /* ModernMethodsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C60281155F0E710047301E /* ModernMethodsTests.m */; };
+		74C602E9155F13070047301E /* CustomClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C602E8155F13070047301E /* CustomClass.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74C60278155F0E710047301E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74C60246155F0E710047301E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74C6024E155F0E710047301E;
+			remoteInfo = ModernMethods;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74C6024F155F0E710047301E /* ModernMethods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModernMethods.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C60253155F0E710047301E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74C60255155F0E710047301E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74C60257155F0E710047301E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74C6025B155F0E710047301E /* ModernMethods-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ModernMethods-Info.plist"; sourceTree = "<group>"; };
+		74C6025D155F0E710047301E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74C6025F155F0E710047301E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74C60261155F0E710047301E /* ModernMethods-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ModernMethods-Prefix.pch"; sourceTree = "<group>"; };
+		74C60262155F0E710047301E /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
+		74C60263155F0E710047301E /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
+		74C60266155F0E710047301E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		74C60269155F0E710047301E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		74C6026B155F0E710047301E /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
+		74C6026C155F0E710047301E /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
+		74C60273155F0E710047301E /* ModernMethodsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModernMethodsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C60274155F0E710047301E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74C6027C155F0E710047301E /* ModernMethodsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ModernMethodsTests-Info.plist"; sourceTree = "<group>"; };
+		74C6027E155F0E710047301E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74C60280155F0E710047301E /* ModernMethodsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModernMethodsTests.h; sourceTree = "<group>"; };
+		74C60281155F0E710047301E /* ModernMethodsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModernMethodsTests.m; sourceTree = "<group>"; };
+		74C602E7155F13070047301E /* CustomClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomClass.h; sourceTree = "<group>"; };
+		74C602E8155F13070047301E /* CustomClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomClass.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74C6024C155F0E710047301E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C60254155F0E710047301E /* UIKit.framework in Frameworks */,
+				74C60256155F0E710047301E /* Foundation.framework in Frameworks */,
+				74C60258155F0E710047301E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C6026F155F0E710047301E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C60275155F0E710047301E /* SenTestingKit.framework in Frameworks */,
+				74C60276155F0E710047301E /* UIKit.framework in Frameworks */,
+				74C60277155F0E710047301E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74C60244155F0E710047301E = {
+			isa = PBXGroup;
+			children = (
+				74C60259155F0E710047301E /* ModernMethods */,
+				74C6027A155F0E710047301E /* ModernMethodsTests */,
+				74C60252155F0E710047301E /* Frameworks */,
+				74C60250155F0E710047301E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74C60250155F0E710047301E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74C6024F155F0E710047301E /* ModernMethods.app */,
+				74C60273155F0E710047301E /* ModernMethodsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74C60252155F0E710047301E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74C60253155F0E710047301E /* UIKit.framework */,
+				74C60255155F0E710047301E /* Foundation.framework */,
+				74C60257155F0E710047301E /* CoreGraphics.framework */,
+				74C60274155F0E710047301E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74C60259155F0E710047301E /* ModernMethods */ = {
+			isa = PBXGroup;
+			children = (
+				74C602E7155F13070047301E /* CustomClass.h */,
+				74C602E8155F13070047301E /* CustomClass.m */,
+				74C60262155F0E710047301E /* OOOAppDelegate.h */,
+				74C60263155F0E710047301E /* OOOAppDelegate.m */,
+				74C60265155F0E710047301E /* MainStoryboard_iPhone.storyboard */,
+				74C60268155F0E710047301E /* MainStoryboard_iPad.storyboard */,
+				74C6026B155F0E710047301E /* OOOViewController.h */,
+				74C6026C155F0E710047301E /* OOOViewController.m */,
+				74C6025A155F0E710047301E /* Supporting Files */,
+			);
+			path = ModernMethods;
+			sourceTree = "<group>";
+		};
+		74C6025A155F0E710047301E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74C6025B155F0E710047301E /* ModernMethods-Info.plist */,
+				74C6025C155F0E710047301E /* InfoPlist.strings */,
+				74C6025F155F0E710047301E /* main.m */,
+				74C60261155F0E710047301E /* ModernMethods-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74C6027A155F0E710047301E /* ModernMethodsTests */ = {
+			isa = PBXGroup;
+			children = (
+				74C60280155F0E710047301E /* ModernMethodsTests.h */,
+				74C60281155F0E710047301E /* ModernMethodsTests.m */,
+				74C6027B155F0E710047301E /* Supporting Files */,
+			);
+			path = ModernMethodsTests;
+			sourceTree = "<group>";
+		};
+		74C6027B155F0E710047301E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74C6027C155F0E710047301E /* ModernMethodsTests-Info.plist */,
+				74C6027D155F0E710047301E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74C6024E155F0E710047301E /* ModernMethods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C60285155F0E710047301E /* Build configuration list for PBXNativeTarget "ModernMethods" */;
+			buildPhases = (
+				74C6024B155F0E710047301E /* Sources */,
+				74C6024C155F0E710047301E /* Frameworks */,
+				74C6024D155F0E710047301E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ModernMethods;
+			productName = ModernMethods;
+			productReference = 74C6024F155F0E710047301E /* ModernMethods.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74C60272155F0E710047301E /* ModernMethodsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C60288155F0E710047301E /* Build configuration list for PBXNativeTarget "ModernMethodsTests" */;
+			buildPhases = (
+				74C6026E155F0E710047301E /* Sources */,
+				74C6026F155F0E710047301E /* Frameworks */,
+				74C60270155F0E710047301E /* Resources */,
+				74C60271155F0E710047301E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74C60279155F0E710047301E /* PBXTargetDependency */,
+			);
+			name = ModernMethodsTests;
+			productName = ModernMethodsTests;
+			productReference = 74C60273155F0E710047301E /* ModernMethodsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74C60246155F0E710047301E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OOO;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 74C60249155F0E710047301E /* Build configuration list for PBXProject "ModernMethods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74C60244155F0E710047301E;
+			productRefGroup = 74C60250155F0E710047301E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74C6024E155F0E710047301E /* ModernMethods */,
+				74C60272155F0E710047301E /* ModernMethodsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74C6024D155F0E710047301E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C6025E155F0E710047301E /* InfoPlist.strings in Resources */,
+				74C60267155F0E710047301E /* MainStoryboard_iPhone.storyboard in Resources */,
+				74C6026A155F0E710047301E /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C60270155F0E710047301E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C6027F155F0E710047301E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74C60271155F0E710047301E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74C6024B155F0E710047301E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C60260155F0E710047301E /* main.m in Sources */,
+				74C60264155F0E710047301E /* OOOAppDelegate.m in Sources */,
+				74C6026D155F0E710047301E /* OOOViewController.m in Sources */,
+				74C602E9155F13070047301E /* CustomClass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C6026E155F0E710047301E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C60282155F0E710047301E /* ModernMethodsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74C60279155F0E710047301E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74C6024E155F0E710047301E /* ModernMethods */;
+			targetProxy = 74C60278155F0E710047301E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74C6025C155F0E710047301E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C6025D155F0E710047301E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74C60265155F0E710047301E /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C60266155F0E710047301E /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		74C60268155F0E710047301E /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C60269155F0E710047301E /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		74C6027D155F0E710047301E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C6027E155F0E710047301E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74C60283155F0E710047301E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = DEBUG011;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74C60284155F0E710047301E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = DEBUG011;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74C60286155F0E710047301E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ModernMethods/ModernMethods-Prefix.pch";
+				INFOPLIST_FILE = "ModernMethods/ModernMethods-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74C60287155F0E710047301E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ModernMethods/ModernMethods-Prefix.pch";
+				INFOPLIST_FILE = "ModernMethods/ModernMethods-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		74C60289155F0E710047301E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ModernMethods.app/ModernMethods";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ModernMethods/ModernMethods-Prefix.pch";
+				INFOPLIST_FILE = "ModernMethodsTests/ModernMethodsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		74C6028A155F0E710047301E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ModernMethods.app/ModernMethods";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ModernMethods/ModernMethods-Prefix.pch";
+				INFOPLIST_FILE = "ModernMethodsTests/ModernMethodsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74C60249155F0E710047301E /* Build configuration list for PBXProject "ModernMethods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C60283155F0E710047301E /* Debug */,
+				74C60284155F0E710047301E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74C60285155F0E710047301E /* Build configuration list for PBXNativeTarget "ModernMethods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C60286155F0E710047301E /* Debug */,
+				74C60287155F0E710047301E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74C60288155F0E710047301E /* Build configuration list for PBXNativeTarget "ModernMethodsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C60289155F0E710047301E /* Debug */,
+				74C6028A155F0E710047301E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74C60246155F0E710047301E /* Project object */;
+}
