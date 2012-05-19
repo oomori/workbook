@@ -13,8 +13,6 @@
 @implementation OOOAppDelegate
 @synthesize window = _window;
 
-
-
 #pragma mark NSArray indexOfObjectPassingTest:
 -(void)method001
 {
