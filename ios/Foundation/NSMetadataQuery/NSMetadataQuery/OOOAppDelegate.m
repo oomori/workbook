@@ -13,6 +13,15 @@
 @synthesize window = _window;
 @synthesize query = _query;
 #pragma mark initWithObjects:
+
+
+-(void)initalGatherComplete:(id)obj
+
+{
+    NSLog(@"initalGatherComplete ! %d",[_query resultCount]);
+    
+}
+
 -(void)queryDidUpdate:(id)obj
 
 {
@@ -35,7 +44,47 @@
     
 }
 
-
+- (void) startMonitoringUbiquitousDocumentsFolder
+{
+    //Check for iCloud
+    NSURL *ubiq = [[NSFileManager defaultManager] 
+                   URLForUbiquityContainerIdentifier:nil];
+    if (ubiq) {
+        NSLog(@"iCloud access at %@", ubiq);
+        self.query = [[NSMetadataQuery alloc] init] ;
+        [self.query setSearchScopes:[NSArray arrayWithObject:
+                                     NSMetadataQueryUbiquitousDataScope]];
+        _isiCloudEnabled = YES;
+    } else {
+        NSLog(@"No iCloud access");
+        //Get the doc directory
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        self.query = [[NSMetadataQuery alloc] init] ;
+        [self.query setSearchScopes:[NSArray arrayWithObjects:
+                                     [NSURL fileURLWithPath:path],nil]];
+        _isiCloudEnabled = NO;
+    }
+    
+    NSPredicate *pred = [NSPredicate predicateWithFormat: 
+                         @"%K like %@", NSMetadataItemFSNameKey, @"*.adoc"];
+    [self.query setPredicate:pred];
+    [[NSNotificationCenter defaultCenter] 
+     addObserver:self 
+     selector:@selector(queryDidFinishGathering:) 
+     name:NSMetadataQueryDidFinishGatheringNotification 
+     object:self.query];
+    
+    [self.query startQuery];
+}
+- (void) stopMonitoringUbiquitousDocumentsFolder
+{
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:NSMetadataQueryDidFinishGatheringNotification
+     object:nil];
+    [query stopQuery];
+    query = nil;
+}
 -(void)method001
 {
     
@@ -68,10 +117,15 @@
         
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(queryDidUpdate:)
-                                                 name:nil //name:NSMetadataQueryDidUpdateNotification
+                                                 name:NSMetadataQueryDidUpdateNotification
                                                object:_query];
         
-        
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(initalGatherComplete:)
+                                                     name:NSMetadataQueryDidFinishGatheringNotification
+                                                   object:_query]; 
+        NSArray *searchScopes=[NSArray arrayWithObjects:NSMetadataQueryUbiquitousDataScope,nil];
+        [_query setSearchScopes:searchScopes];
         [_query startQuery];
         NSLog(@"%s %@",__FUNCTION__,[query description]);
     }
@@ -98,7 +152,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self method001];
+    //[self method001];
+    [self startMonitoringUbiquitousDocumentsFolder];
     return YES;
 }
 							

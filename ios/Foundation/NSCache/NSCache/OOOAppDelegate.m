@@ -13,7 +13,7 @@
 //キャッシュオブジェクトが破棄される時に呼び出される
 - (void)cache:(NSCache *)cache willEvictObject:(id)obj
 {
-    NSLog(@"%s : remove %@ ", __FUNCTION__,[obj description]);
+    NSLog(@"%s :%@: remove %@ ", __FUNCTION__,[cache name],[obj description]);
 
     
     
@@ -24,6 +24,7 @@
     
     NSCache *aCache = [[NSCache alloc] init]; 
     [aCache setCountLimit:3];
+    [aCache setName:@"method001"];
     
     [aCache setObject:@"Obj1" forKey:@"key1"]; 
     NSLog(@"%s : %@,%@,%@,%@,%@", __FUNCTION__,[aCache objectForKey:@"key1"],[aCache objectForKey:@"key2"],[aCache objectForKey:@"key3"],[aCache objectForKey:@"key4"],[aCache objectForKey:@"key5"]);
@@ -46,15 +47,16 @@
     
 }
 
-#pragma mark setCountLimit:
+#pragma mark setTotalCostLimit:
 -(void)method002
 {
     //コスト
-    //どのオブジェクトが削除されるかは分からないが、コストが大きいものが削除されるわけではないみたい。どちらかというと新しいものから除外されるみたい
+    //どのオブジェクトが削除されるかは分からないが、コストが大きいものが削除されるわけではないみたい。どちらかというと新しいものから除去されるみたい
     
     NSCache *aCache = [[NSCache alloc] init]; 
     [aCache setDelegate:self];
     [aCache setTotalCostLimit:3];
+    [aCache setName:@"method002"];
     
     [aCache setObject:@"Obj1" forKey:@"key1" cost:1]; 
     NSLog(@"%s : %@,%@,%@,%@,%@", __FUNCTION__,[aCache objectForKey:@"key1"],[aCache objectForKey:@"key2"],[aCache objectForKey:@"key3"],[aCache objectForKey:@"key4"],[aCache objectForKey:@"key5"]);

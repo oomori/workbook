@@ -12,7 +12,7 @@
 
 @synthesize window = _window;
 
-#pragma mark -replaceOccurrencesOfString:withString:options:range:
+#pragma mark NSMutableString  -replaceOccurrencesOfString:withString:options:range:
 -(void)method001
 {
     NSMutableString *muString = [[NSMutableString alloc] initWithCapacity:0];
@@ -23,14 +23,70 @@
                                                           range:NSMakeRange(0,[muString length])
                       ];
     NSLog(@"%s : %@",__FUNCTION__ ,muString);
-    //=-[OOOAppDelegate method001] : If into ni onto fo often no and ON
+    //=>-[OOOAppDelegate method001] : If into ni onto fo often no and ON
 
 }
+
+#pragma mark NSMutableString  -appendString:
+-(void)method002
+{
+    NSMutableString *muString = [[NSMutableString alloc] initWithCapacity:0];
+    [muString appendString:@"Hello"];
+    [muString appendString:@"!"];
+    
+    NSLog(@"%s : %@",__FUNCTION__ ,muString);
+    //=> -[OOOAppDelegate method002] : Hello!
+    
+}
+
+#pragma mark NSMutableString  -deleteCharactersInRange:
+-(void)method003
+{
+    NSMutableString *muString = [NSMutableString stringWithCapacity:0];
+	[muString appendString:@"abcdefghijklmnopqrstuvexyz"];
+	[muString deleteCharactersInRange:NSMakeRange(5,10)];
+
+    NSLog(@"%s : %@",__FUNCTION__ ,muString);
+    //=> -[OOOAppDelegate method003] : abcdepqrstuvexyz
+    
+}
+
+#pragma mark NSMutableString  -insertString:atIndex:
+-(void)method004
+{
+    NSMutableString *muString = [NSMutableString stringWithCapacity:0];
+    [muString appendString:@"abcdefghijklmnopqrstuvexyz"];
+	[muString insertString:@"xxxxxxx" atIndex:4];
+	
+    NSLog(@"%s : %@",__FUNCTION__ ,muString);
+    //=> -[OOOAppDelegate method004] : abcdxxxxxxxefghijklmnopqrstuvexyz
+    
+}
+
+#pragma mark NSMutableString  -deleteCharactersInRange:
+-(void)method005
+{
+    NSMutableString *muString = [NSMutableString stringWithCapacity:0];
+    [muString appendString:@"abcdefghijklmnopqrstuvexyz"];
+	[muString insertString:@"xxxxxxx" atIndex:4];
+	
+    NSLog(@"%s : %@",__FUNCTION__ ,muString);
+    //=> -[OOOAppDelegate method004] : abcdxxxxxxxefghijklmnopqrstuvexyz
+    
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self method001];
+    [self method002];
+    [self method003];
+    [self method004];
+    
+    
+    
+    
     return YES;
 }
 							

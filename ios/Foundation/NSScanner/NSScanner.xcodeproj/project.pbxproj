@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7405013415BA0AA100BC84B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7405013315BA0AA100BC84B4 /* UIKit.framework */; };
+		7405013615BA0AA100BC84B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7405013515BA0AA100BC84B4 /* Foundation.framework */; };
+		7405013815BA0AA100BC84B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7405013715BA0AA100BC84B4 /* CoreGraphics.framework */; };
+		7405013E15BA0AA100BC84B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7405013C15BA0AA100BC84B4 /* InfoPlist.strings */; };
+		7405014015BA0AA100BC84B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7405013F15BA0AA100BC84B4 /* main.m */; };
+		7405014415BA0AA100BC84B4 /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7405014315BA0AA100BC84B4 /* OOOAppDelegate.m */; };
+		7405014715BA0AA100BC84B4 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7405014515BA0AA100BC84B4 /* MainStoryboard_iPhone.storyboard */; };
+		7405014A15BA0AA100BC84B4 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7405014815BA0AA100BC84B4 /* MainStoryboard_iPad.storyboard */; };
+		7405014D15BA0AA100BC84B4 /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7405014C15BA0AA100BC84B4 /* OOOViewController.m */; };
+		7405015515BA0AA100BC84B4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7405015415BA0AA100BC84B4 /* SenTestingKit.framework */; };
+		7405015615BA0AA100BC84B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7405013315BA0AA100BC84B4 /* UIKit.framework */; };
+		7405015715BA0AA100BC84B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7405013515BA0AA100BC84B4 /* Foundation.framework */; };
+		7405015F15BA0AA100BC84B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7405015D15BA0AA100BC84B4 /* InfoPlist.strings */; };
+		7405016215BA0AA100BC84B4 /* NSScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7405016115BA0AA100BC84B4 /* NSScannerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7405015815BA0AA100BC84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7405012615BA0AA100BC84B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7405012E15BA0AA100BC84B4;
+			remoteInfo = NSScanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7405012F15BA0AA100BC84B4 /* NSScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7405013315BA0AA100BC84B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7405013515BA0AA100BC84B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7405013715BA0AA100BC84B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7405013B15BA0AA100BC84B4 /* NSScanner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSScanner-Info.plist"; sourceTree = "<group>"; };
+		7405013D15BA0AA100BC84B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7405013F15BA0AA100BC84B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7405014115BA0AA100BC84B4 /* NSScanner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSScanner-Prefix.pch"; sourceTree = "<group>"; };
+		7405014215BA0AA100BC84B4 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
+		7405014315BA0AA100BC84B4 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
+		7405014615BA0AA100BC84B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		7405014915BA0AA100BC84B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		7405014B15BA0AA100BC84B4 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
+		7405014C15BA0AA100BC84B4 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
+		7405015315BA0AA100BC84B4 /* NSScannerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSScannerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7405015415BA0AA100BC84B4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7405015C15BA0AA100BC84B4 /* NSScannerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSScannerTests-Info.plist"; sourceTree = "<group>"; };
+		7405015E15BA0AA100BC84B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7405016015BA0AA100BC84B4 /* NSScannerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSScannerTests.h; sourceTree = "<group>"; };
+		7405016115BA0AA100BC84B4 /* NSScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSScannerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7405012C15BA0AA100BC84B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7405013415BA0AA100BC84B4 /* UIKit.framework in Frameworks */,
+				7405013615BA0AA100BC84B4 /* Foundation.framework in Frameworks */,
+				7405013815BA0AA100BC84B4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7405014F15BA0AA100BC84B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7405015515BA0AA100BC84B4 /* SenTestingKit.framework in Frameworks */,
+				7405015615BA0AA100BC84B4 /* UIKit.framework in Frameworks */,
+				7405015715BA0AA100BC84B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7405012415BA0AA100BC84B4 = {
+			isa = PBXGroup;
+			children = (
+				7405013915BA0AA100BC84B4 /* NSScanner */,
+				7405015A15BA0AA100BC84B4 /* NSScannerTests */,
+				7405013215BA0AA100BC84B4 /* Frameworks */,
+				7405013015BA0AA100BC84B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7405013015BA0AA100BC84B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7405012F15BA0AA100BC84B4 /* NSScanner.app */,
+				7405015315BA0AA100BC84B4 /* NSScannerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7405013215BA0AA100BC84B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7405013315BA0AA100BC84B4 /* UIKit.framework */,
+				7405013515BA0AA100BC84B4 /* Foundation.framework */,
+				7405013715BA0AA100BC84B4 /* CoreGraphics.framework */,
+				7405015415BA0AA100BC84B4 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7405013915BA0AA100BC84B4 /* NSScanner */ = {
+			isa = PBXGroup;
+			children = (
+				7405014215BA0AA100BC84B4 /* OOOAppDelegate.h */,
+				7405014315BA0AA100BC84B4 /* OOOAppDelegate.m */,
+				7405014515BA0AA100BC84B4 /* MainStoryboard_iPhone.storyboard */,
+				7405014815BA0AA100BC84B4 /* MainStoryboard_iPad.storyboard */,
+				7405014B15BA0AA100BC84B4 /* OOOViewController.h */,
+				7405014C15BA0AA100BC84B4 /* OOOViewController.m */,
+				7405013A15BA0AA100BC84B4 /* Supporting Files */,
+			);
+			path = NSScanner;
+			sourceTree = "<group>";
+		};
+		7405013A15BA0AA100BC84B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7405013B15BA0AA100BC84B4 /* NSScanner-Info.plist */,
+				7405013C15BA0AA100BC84B4 /* InfoPlist.strings */,
+				7405013F15BA0AA100BC84B4 /* main.m */,
+				7405014115BA0AA100BC84B4 /* NSScanner-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7405015A15BA0AA100BC84B4 /* NSScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7405016015BA0AA100BC84B4 /* NSScannerTests.h */,
+				7405016115BA0AA100BC84B4 /* NSScannerTests.m */,
+				7405015B15BA0AA100BC84B4 /* Supporting Files */,
+			);
+			path = NSScannerTests;
+			sourceTree = "<group>";
+		};
+		7405015B15BA0AA100BC84B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7405015C15BA0AA100BC84B4 /* NSScannerTests-Info.plist */,
+				7405015D15BA0AA100BC84B4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7405012E15BA0AA100BC84B4 /* NSScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7405016515BA0AA100BC84B4 /* Build configuration list for PBXNativeTarget "NSScanner" */;
+			buildPhases = (
+				7405012B15BA0AA100BC84B4 /* Sources */,
+				7405012C15BA0AA100BC84B4 /* Frameworks */,
+				7405012D15BA0AA100BC84B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSScanner;
+			productName = NSScanner;
+			productReference = 7405012F15BA0AA100BC84B4 /* NSScanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7405015215BA0AA100BC84B4 /* NSScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7405016815BA0AA100BC84B4 /* Build configuration list for PBXNativeTarget "NSScannerTests" */;
+			buildPhases = (
+				7405014E15BA0AA100BC84B4 /* Sources */,
+				7405014F15BA0AA100BC84B4 /* Frameworks */,
+				7405015015BA0AA100BC84B4 /* Resources */,
+				7405015115BA0AA100BC84B4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7405015915BA0AA100BC84B4 /* PBXTargetDependency */,
+			);
+			name = NSScannerTests;
+			productName = NSScannerTests;
+			productReference = 7405015315BA0AA100BC84B4 /* NSScannerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7405012615BA0AA100BC84B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OOO;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 7405012915BA0AA100BC84B4 /* Build configuration list for PBXProject "NSScanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7405012415BA0AA100BC84B4;
+			productRefGroup = 7405013015BA0AA100BC84B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7405012E15BA0AA100BC84B4 /* NSScanner */,
+				7405015215BA0AA100BC84B4 /* NSScannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7405012D15BA0AA100BC84B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7405013E15BA0AA100BC84B4 /* InfoPlist.strings in Resources */,
+				7405014715BA0AA100BC84B4 /* MainStoryboard_iPhone.storyboard in Resources */,
+				7405014A15BA0AA100BC84B4 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7405015015BA0AA100BC84B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7405015F15BA0AA100BC84B4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7405015115BA0AA100BC84B4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7405012B15BA0AA100BC84B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7405014015BA0AA100BC84B4 /* main.m in Sources */,
+				7405014415BA0AA100BC84B4 /* OOOAppDelegate.m in Sources */,
+				7405014D15BA0AA100BC84B4 /* OOOViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7405014E15BA0AA100BC84B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7405016215BA0AA100BC84B4 /* NSScannerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7405015915BA0AA100BC84B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7405012E15BA0AA100BC84B4 /* NSScanner */;
+			targetProxy = 7405015815BA0AA100BC84B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7405013C15BA0AA100BC84B4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7405013D15BA0AA100BC84B4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7405014515BA0AA100BC84B4 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7405014615BA0AA100BC84B4 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		7405014815BA0AA100BC84B4 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7405014915BA0AA100BC84B4 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		7405015D15BA0AA100BC84B4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7405015E15BA0AA100BC84B4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7405016315BA0AA100BC84B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7405016415BA0AA100BC84B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7405016615BA0AA100BC84B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSScanner/NSScanner-Prefix.pch";
+				INFOPLIST_FILE = "NSScanner/NSScanner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7405016715BA0AA100BC84B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSScanner/NSScanner-Prefix.pch";
+				INFOPLIST_FILE = "NSScanner/NSScanner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7405016915BA0AA100BC84B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSScanner.app/NSScanner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSScanner/NSScanner-Prefix.pch";
+				INFOPLIST_FILE = "NSScannerTests/NSScannerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7405016A15BA0AA100BC84B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSScanner.app/NSScanner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSScanner/NSScanner-Prefix.pch";
+				INFOPLIST_FILE = "NSScannerTests/NSScannerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7405012915BA0AA100BC84B4 /* Build configuration list for PBXProject "NSScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7405016315BA0AA100BC84B4 /* Debug */,
+				7405016415BA0AA100BC84B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7405016515BA0AA100BC84B4 /* Build configuration list for PBXNativeTarget "NSScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7405016615BA0AA100BC84B4 /* Debug */,
+				7405016715BA0AA100BC84B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7405016815BA0AA100BC84B4 /* Build configuration list for PBXNativeTarget "NSScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7405016915BA0AA100BC84B4 /* Debug */,
+				7405016A15BA0AA100BC84B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7405012615BA0AA100BC84B4 /* Project object */;
+}

@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74B8EF611568CA6C00BF53A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B8EF601568CA6C00BF53A0 /* UIKit.framework */; };
+		74B8EF631568CA6C00BF53A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B8EF621568CA6C00BF53A0 /* Foundation.framework */; };
+		74B8EF651568CA6C00BF53A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B8EF641568CA6C00BF53A0 /* CoreGraphics.framework */; };
+		74B8EF6B1568CA6C00BF53A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74B8EF691568CA6C00BF53A0 /* InfoPlist.strings */; };
+		74B8EF6D1568CA6C00BF53A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B8EF6C1568CA6C00BF53A0 /* main.m */; };
+		74B8EF711568CA6C00BF53A0 /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B8EF701568CA6C00BF53A0 /* OOOAppDelegate.m */; };
+		74B8EF741568CA6C00BF53A0 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74B8EF721568CA6C00BF53A0 /* MainStoryboard_iPhone.storyboard */; };
+		74B8EF771568CA6C00BF53A0 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74B8EF751568CA6C00BF53A0 /* MainStoryboard_iPad.storyboard */; };
+		74B8EF7A1568CA6C00BF53A0 /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B8EF791568CA6C00BF53A0 /* OOOViewController.m */; };
+		74B8EF821568CA6C00BF53A0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B8EF811568CA6C00BF53A0 /* SenTestingKit.framework */; };
+		74B8EF831568CA6C00BF53A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B8EF601568CA6C00BF53A0 /* UIKit.framework */; };
+		74B8EF841568CA6C00BF53A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B8EF621568CA6C00BF53A0 /* Foundation.framework */; };
+		74B8EF8C1568CA6C00BF53A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74B8EF8A1568CA6C00BF53A0 /* InfoPlist.strings */; };
+		74B8EF8F1568CA6C00BF53A0 /* SpeedTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B8EF8E1568CA6C00BF53A0 /* SpeedTestTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74B8EF851568CA6C00BF53A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74B8EF531568CA6C00BF53A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74B8EF5B1568CA6C00BF53A0;
+			remoteInfo = SpeedTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74B8EF5C1568CA6C00BF53A0 /* SpeedTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B8EF601568CA6C00BF53A0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74B8EF621568CA6C00BF53A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74B8EF641568CA6C00BF53A0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74B8EF681568CA6C00BF53A0 /* SpeedTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpeedTest-Info.plist"; sourceTree = "<group>"; };
+		74B8EF6A1568CA6C00BF53A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74B8EF6C1568CA6C00BF53A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74B8EF6E1568CA6C00BF53A0 /* SpeedTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpeedTest-Prefix.pch"; sourceTree = "<group>"; };
+		74B8EF6F1568CA6C00BF53A0 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
+		74B8EF701568CA6C00BF53A0 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
+		74B8EF731568CA6C00BF53A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		74B8EF761568CA6C00BF53A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		74B8EF781568CA6C00BF53A0 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
+		74B8EF791568CA6C00BF53A0 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
+		74B8EF801568CA6C00BF53A0 /* SpeedTestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedTestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B8EF811568CA6C00BF53A0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74B8EF891568CA6C00BF53A0 /* SpeedTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpeedTestTests-Info.plist"; sourceTree = "<group>"; };
+		74B8EF8B1568CA6C00BF53A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74B8EF8D1568CA6C00BF53A0 /* SpeedTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeedTestTests.h; sourceTree = "<group>"; };
+		74B8EF8E1568CA6C00BF53A0 /* SpeedTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeedTestTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74B8EF591568CA6C00BF53A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B8EF611568CA6C00BF53A0 /* UIKit.framework in Frameworks */,
+				74B8EF631568CA6C00BF53A0 /* Foundation.framework in Frameworks */,
+				74B8EF651568CA6C00BF53A0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74B8EF7C1568CA6C00BF53A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B8EF821568CA6C00BF53A0 /* SenTestingKit.framework in Frameworks */,
+				74B8EF831568CA6C00BF53A0 /* UIKit.framework in Frameworks */,
+				74B8EF841568CA6C00BF53A0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74B8EF511568CA6C00BF53A0 = {
+			isa = PBXGroup;
+			children = (
+				74B8EF661568CA6C00BF53A0 /* SpeedTest */,
+				74B8EF871568CA6C00BF53A0 /* SpeedTestTests */,
+				74B8EF5F1568CA6C00BF53A0 /* Frameworks */,
+				74B8EF5D1568CA6C00BF53A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74B8EF5D1568CA6C00BF53A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74B8EF5C1568CA6C00BF53A0 /* SpeedTest.app */,
+				74B8EF801568CA6C00BF53A0 /* SpeedTestTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74B8EF5F1568CA6C00BF53A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74B8EF601568CA6C00BF53A0 /* UIKit.framework */,
+				74B8EF621568CA6C00BF53A0 /* Foundation.framework */,
+				74B8EF641568CA6C00BF53A0 /* CoreGraphics.framework */,
+				74B8EF811568CA6C00BF53A0 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74B8EF661568CA6C00BF53A0 /* SpeedTest */ = {
+			isa = PBXGroup;
+			children = (
+				74B8EF6F1568CA6C00BF53A0 /* OOOAppDelegate.h */,
+				74B8EF701568CA6C00BF53A0 /* OOOAppDelegate.m */,
+				74B8EF721568CA6C00BF53A0 /* MainStoryboard_iPhone.storyboard */,
+				74B8EF751568CA6C00BF53A0 /* MainStoryboard_iPad.storyboard */,
+				74B8EF781568CA6C00BF53A0 /* OOOViewController.h */,
+				74B8EF791568CA6C00BF53A0 /* OOOViewController.m */,
+				74B8EF671568CA6C00BF53A0 /* Supporting Files */,
+			);
+			path = SpeedTest;
+			sourceTree = "<group>";
+		};
+		74B8EF671568CA6C00BF53A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74B8EF681568CA6C00BF53A0 /* SpeedTest-Info.plist */,
+				74B8EF691568CA6C00BF53A0 /* InfoPlist.strings */,
+				74B8EF6C1568CA6C00BF53A0 /* main.m */,
+				74B8EF6E1568CA6C00BF53A0 /* SpeedTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74B8EF871568CA6C00BF53A0 /* SpeedTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				74B8EF8D1568CA6C00BF53A0 /* SpeedTestTests.h */,
+				74B8EF8E1568CA6C00BF53A0 /* SpeedTestTests.m */,
+				74B8EF881568CA6C00BF53A0 /* Supporting Files */,
+			);
+			path = SpeedTestTests;
+			sourceTree = "<group>";
+		};
+		74B8EF881568CA6C00BF53A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74B8EF891568CA6C00BF53A0 /* SpeedTestTests-Info.plist */,
+				74B8EF8A1568CA6C00BF53A0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74B8EF5B1568CA6C00BF53A0 /* SpeedTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74B8EF921568CA6C00BF53A0 /* Build configuration list for PBXNativeTarget "SpeedTest" */;
+			buildPhases = (
+				74B8EF581568CA6C00BF53A0 /* Sources */,
+				74B8EF591568CA6C00BF53A0 /* Frameworks */,
+				74B8EF5A1568CA6C00BF53A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeedTest;
+			productName = SpeedTest;
+			productReference = 74B8EF5C1568CA6C00BF53A0 /* SpeedTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74B8EF7F1568CA6C00BF53A0 /* SpeedTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74B8EF951568CA6C00BF53A0 /* Build configuration list for PBXNativeTarget "SpeedTestTests" */;
+			buildPhases = (
+				74B8EF7B1568CA6C00BF53A0 /* Sources */,
+				74B8EF7C1568CA6C00BF53A0 /* Frameworks */,
+				74B8EF7D1568CA6C00BF53A0 /* Resources */,
+				74B8EF7E1568CA6C00BF53A0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74B8EF861568CA6C00BF53A0 /* PBXTargetDependency */,
+			);
+			name = SpeedTestTests;
+			productName = SpeedTestTests;
+			productReference = 74B8EF801568CA6C00BF53A0 /* SpeedTestTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74B8EF531568CA6C00BF53A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OOO;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 74B8EF561568CA6C00BF53A0 /* Build configuration list for PBXProject "SpeedTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74B8EF511568CA6C00BF53A0;
+			productRefGroup = 74B8EF5D1568CA6C00BF53A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74B8EF5B1568CA6C00BF53A0 /* SpeedTest */,
+				74B8EF7F1568CA6C00BF53A0 /* SpeedTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74B8EF5A1568CA6C00BF53A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B8EF6B1568CA6C00BF53A0 /* InfoPlist.strings in Resources */,
+				74B8EF741568CA6C00BF53A0 /* MainStoryboard_iPhone.storyboard in Resources */,
+				74B8EF771568CA6C00BF53A0 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74B8EF7D1568CA6C00BF53A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B8EF8C1568CA6C00BF53A0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74B8EF7E1568CA6C00BF53A0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74B8EF581568CA6C00BF53A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B8EF6D1568CA6C00BF53A0 /* main.m in Sources */,
+				74B8EF711568CA6C00BF53A0 /* OOOAppDelegate.m in Sources */,
+				74B8EF7A1568CA6C00BF53A0 /* OOOViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74B8EF7B1568CA6C00BF53A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B8EF8F1568CA6C00BF53A0 /* SpeedTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74B8EF861568CA6C00BF53A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74B8EF5B1568CA6C00BF53A0 /* SpeedTest */;
+			targetProxy = 74B8EF851568CA6C00BF53A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74B8EF691568CA6C00BF53A0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74B8EF6A1568CA6C00BF53A0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74B8EF721568CA6C00BF53A0 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74B8EF731568CA6C00BF53A0 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		74B8EF751568CA6C00BF53A0 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74B8EF761568CA6C00BF53A0 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		74B8EF8A1568CA6C00BF53A0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74B8EF8B1568CA6C00BF53A0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74B8EF901568CA6C00BF53A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74B8EF911568CA6C00BF53A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74B8EF931568CA6C00BF53A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpeedTest/SpeedTest-Prefix.pch";
+				INFOPLIST_FILE = "SpeedTest/SpeedTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74B8EF941568CA6C00BF53A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpeedTest/SpeedTest-Prefix.pch";
+				INFOPLIST_FILE = "SpeedTest/SpeedTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		74B8EF961568CA6C00BF53A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpeedTest.app/SpeedTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpeedTest/SpeedTest-Prefix.pch";
+				INFOPLIST_FILE = "SpeedTestTests/SpeedTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		74B8EF971568CA6C00BF53A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpeedTest.app/SpeedTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpeedTest/SpeedTest-Prefix.pch";
+				INFOPLIST_FILE = "SpeedTestTests/SpeedTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74B8EF561568CA6C00BF53A0 /* Build configuration list for PBXProject "SpeedTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74B8EF901568CA6C00BF53A0 /* Debug */,
+				74B8EF911568CA6C00BF53A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74B8EF921568CA6C00BF53A0 /* Build configuration list for PBXNativeTarget "SpeedTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74B8EF931568CA6C00BF53A0 /* Debug */,
+				74B8EF941568CA6C00BF53A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74B8EF951568CA6C00BF53A0 /* Build configuration list for PBXNativeTarget "SpeedTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74B8EF961568CA6C00BF53A0 /* Debug */,
+				74B8EF971568CA6C00BF53A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74B8EF531568CA6C00BF53A0 /* Project object */;
+}

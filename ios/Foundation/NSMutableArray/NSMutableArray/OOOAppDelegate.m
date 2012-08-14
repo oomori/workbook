@@ -76,12 +76,91 @@
     NSLog(@"%s compare: %@",__FUNCTION__,[anArray description]);
     //=>[OOOAppDelegate method003] compare: (cccc,aaa,bbb,a)
 }
+
+#pragma mark removeObjectIdenticalTo:
+-(void)method004
+{
+    NSMutableArray *anArray = [[NSMutableArray alloc] initWithCapacity:10];
+    NSString *aaa1 = [NSString stringWithFormat:@"a%@%@",@"a",@"a"];
+    NSString *aaa2 = [NSString stringWithFormat:@"a%@%@",@"a",@"a"];
+    NSString *aaa3 = [NSString stringWithFormat:@"%@a%@",@"a",@"a"];
+    
+    [anArray addObject:aaa1];
+    [anArray addObject:aaa2];
+    [anArray addObject:aaa3];
+    
+    //それぞれのアドレスを確認
+    NSLog(@"aaa1=%p ",aaa1);
+    NSLog(@"aaa2=%p ",aaa2);
+    NSLog(@"aaa3=%p ",aaa3);
+    
+    NSLog(@"%s : %@", __FUNCTION__,[anArray description]);    
+    //=>[OOOAppDelegate method004] : (aaa,aaa,aaa)
+    
+    //aaa2だけを除去
+    [anArray removeObjectIdenticalTo:aaa2];
+    if ([anArray indexOfObjectIdenticalTo:aaa2]== NSNotFound) {
+        NSLog(@"NO");
+    }
+    
+    NSLog(@"%s : %@", __FUNCTION__,[anArray description]);
+    //=>[OOOAppDelegate method004] : (aaa,aaa,aaa)
+    
+    //@"aaa"の内容を持つオブジェクトを除去
+    [anArray removeObject:@"aaa"];
+    NSLog(@"%s : %@", __FUNCTION__,[anArray description]);
+    //=>[OOOAppDelegate method004] : ()
+
+}
+
+#pragma mark NSMutableArray  filterUsingPredicate:
+-(void)method005
+{
+    NSMutableArray *anArray = [NSMutableArray arrayWithObjects:@"aaa", @"bbb", @"ccc", @"ddd", nil];
+    NSPredicate *bPredicate = [NSPredicate predicateWithFormat:@"SELF beginswith[c] 'b'"];
+    
+    
+    NSLog(@"%s  %@",__FUNCTION__,[anArray description]);
+    //=>[OOOAppDelegate method005] (aaa,bbb,ccc,ddd)
+    
+    [anArray filterUsingPredicate:bPredicate];
+    NSLog(@"%s  %@",__FUNCTION__,[anArray description]);
+    //=>[OOOAppDelegate method005] (bbb)
+}
+
+
+#pragma mark sortedArrayWithOptions:usingComparator:
+-(void)method006
+{
+    NSMutableArray *anArray = 
+    [[NSMutableArray alloc] initWithObjects:   @"bbb",@"ggg",@"jjj",
+     @"eee",@"fff",@"iii",
+     @"ddd",@"hhh",@"aaa",nil];
+    
+    NSLog(@"%s  %@",__FUNCTION__,[anArray description]);
+    //=>-[OOOAppDelegate method006]  (bbb,ggg,jjj,eee,fff,iii,ddd,hhh,aaa)
+    [anArray sortWithOptions:NSSortConcurrent//NSSortStable
+                                           usingComparator:^(id obj1,id obj2){
+                                               return [obj1 compare:obj2];
+                                           }];
+    //NSSortStableは元のソートが保持される
+    //NSSortConcurrentは元のソートが保持されない代わりに高速
+    NSLog(@"%s  %@",__FUNCTION__,[anArray description]);
+    //=>-[OOOAppDelegate method006]  (aaa,bbb,ddd,eee,fff,ggg,hhh,iii,jjj)
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self method001];
     [self method002];
     
     [self method003];
+    [self method004];
+    
+    [self method005];
+    
+    [self method006];
     
     return YES;
 }

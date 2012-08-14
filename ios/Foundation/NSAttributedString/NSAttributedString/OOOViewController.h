@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface OOOViewController : UIViewController
-
+{
+    CALayer *aLayer;
+}
 @end

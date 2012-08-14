@@ -235,7 +235,7 @@
                            change:(NSDictionary *)change 
                           context:(void *)context
 {
-    NSLog( @"key = %@,object = %@,change = %@" ,keyPath,[object description],[change description]);
+    NSLog( @"%s key = %@,object = %@,change = %@" ,__FUNCTION__,keyPath,[object description],[change description]);
 } 
 #pragma mark addObserver:toObjectsAtIndexes:forKeyPath:options:context:
 -(void)method013
@@ -500,7 +500,7 @@
 
 }
 
-#pragma mark enumerateObjectsUsingBlock:(void (^)(id obj, NSUInteger idx, BOOL *stop))block
+#pragma mark NSArray enumerateObjectsWithOptions:usingBlock:
 -(void)method024
 {
     
@@ -906,6 +906,153 @@ NSInteger intSort(id val1, id val2, void *context)
     
 }
 
+#pragma mark arrayWithObject
+-(void)method038
+{
+    
+    NSArray *anArray = [NSArray arrayWithObject:@"aaa"];
+    CFArrayRef cfArray = (__bridge CFArrayRef)anArray;
+    CFIndex index = CFArrayGetCount (cfArray);
+    
+    NSLog(@"%s %p",__FUNCTION__,cfArray);
+    
+    NSLog(@"%s %ld",__FUNCTION__,index);
+    
+    //=>(aaa)
+}
+
+#pragma mark KeyValue coding
+-(void)method039
+{
+    
+    NSArray *anArray = [NSArray arrayWithObjects:@"aaaaa",@"aaa",@"a",@"aa",@"aaaa",nil];
+    
+    NSArray *descs = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES]];
+    NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs] );
+    
+    //=>(a,aa,aaa,aaaa,aaaaa)
+}
+
+#pragma mark KeyValue coding
+-(void)method040
+{
+    
+    NSArray *anArray = [NSArray arrayWithObjects:@"ccccc",@"aaa",@"b",@"ee",@"dddd",nil];
+    
+    NSArray *descs = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES]];
+    NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs] );
+    
+    //=>(aaa,b,ccccc,dddd,ee)
+}
+
+#pragma mark KeyValue coding
+-(void)method041
+{
+    NSMutableArray *anArray = [NSMutableArray array];
+    [anArray addObject:[NSNumber numberWithInt:20]];
+    [anArray addObject:[NSNumber numberWithInt: 1]];
+    [anArray addObject:[NSNumber numberWithInt: 8]];
+    [anArray addObject:[NSNumber numberWithInt:31]];
+    [anArray addObject:[NSNumber numberWithInt:15]];
+    [anArray addObject:[NSNumber numberWithInt:10]];
+    
+    NSLog( @"Count %d", [[anArray valueForKeyPath:@"@count.self"] intValue] );
+    NSLog( @"Sum   %d", [[anArray valueForKeyPath:@"@sum.self"] intValue] );
+    NSLog( @"Ave   %d", [[anArray valueForKeyPath:@"@avg.self"] intValue] );
+    NSLog( @"Min   %d", [[anArray valueForKeyPath:@"@min.self"] intValue] );
+    NSLog( @"Max   %d", [[anArray valueForKeyPath:@"@max.self"] intValue] );
+    
+//    NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs] );
+    
+    //=>(aaa,b,ccccc,dddd,ee)
+}
+
+#pragma mark KVO
+-(void)method042
+{
+    
+    NSMutableArray *arr = [NSMutableArray arrayWithCapacity:0];
+    
+    NSMutableDictionary *dic1 = 
+    [NSMutableDictionary dictionaryWithObjectsAndKeys:
+     @"aaa4",@"key1",@"bbb1",@"key2",@"ccc1",@"key3",nil];
+    NSMutableDictionary *dic2 = 
+    [NSMutableDictionary dictionaryWithObjectsAndKeys:
+     @"aaa2",@"key1",@"bbb2",@"key2",@"ccc2",@"key3",nil];
+    NSMutableDictionary *dic3 = 
+    [NSMutableDictionary dictionaryWithObjectsAndKeys:
+     @"aaa1",@"key1",@"bbb3",@"key2",@"ccc3",@"key3",nil];
+    NSMutableDictionary *dic4 = 
+    [NSMutableDictionary dictionaryWithObjectsAndKeys:
+     @"aaa3",@"key1",@"bbb4",@"key2",@"ccc4",@"key3",nil];
+    
+    [arr addObject: dic1 ];
+    [arr addObject: dic2 ];
+    [arr addObject: dic3 ];
+    [arr addObject: dic4 ];
+
+    //KVO登録
+    NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
+    [indexSet addIndex:0];
+    [indexSet addIndex:1];
+    [indexSet addIndex:2];
+    [indexSet addIndex:3];
+    
+    //
+        [arr addObserver:self //(NSObject *)anObserver
+      toObjectsAtIndexes:indexSet //(NSIndexSet *)indexes
+              forKeyPath:@"key1" //key1が変わったら通知が来る　ここをkey2にしたら通知が飛んでこない（変更してないから）
+                 options:NSKeyValueObservingOptionInitial //(NSKeyValueObservingOptions )options
+                 context:nil //(void *)context
+         ];
+
+    
+    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[[arr objectAtIndex:0] valueForKey:@"key1"],
+          [[arr objectAtIndex:1] valueForKey:@"key1"],
+          [[arr objectAtIndex:2] valueForKey:@"key1"],
+          [[arr objectAtIndex:3] valueForKey:@"key1"]);
+    //=>-[OOOAppDelegate method035] aaa4,aaa2,aaa1,aaa3
+    [arr setValue:@"xxx" forKey:@"key1"];
+    
+    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[[arr objectAtIndex:0] valueForKey:@"key1"],
+          [[arr objectAtIndex:1] valueForKey:@"key1"],
+          [[arr objectAtIndex:2] valueForKey:@"key1"],
+          [[arr objectAtIndex:3] valueForKey:@"key1"]);
+    
+    //=>-[OOOAppDelegate method035] xxx,xxx,xxx,xxx
+    
+    
+
+
+    
+    
+    
+    
+    
+    
+}
+
+#pragma mark NSArray NSNumberなどを含むことができるか
+-(void)method043
+{
+    NSMutableString *aaa = [NSMutableString stringWithString:@"aaa"];
+    NSMutableString *bbb = [NSMutableString stringWithString:@"bbb"];
+    NSMutableString *ccc = [NSMutableString stringWithString:@"ccc"];
+    NSNumber *ddd = [NSNumber numberWithInt:10];
+    NSDate *eee = [NSDate date];
+    NSValue *fff = [NSValue valueWithCGPoint:CGPointMake(10.0, 10.0)];
+    NSSet *ggg = [NSSet setWithObjects:aaa,bbb,ccc,nil];
+    NSData *hhh = [NSData data];
+
+    
+    NSArray *anArray = [NSArray arrayWithObjects:aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,nil];
+    [anArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSLog(@"%s %p %@",__FUNCTION__, obj ,[obj description]);
+    }];
+    
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -924,6 +1071,7 @@ NSInteger intSort(id val1, id val2, void *context)
     [self method012];
     [self method013];
     //[self method014];
+    
     [self method015];  
     [self method016];
     [self method017];
@@ -947,6 +1095,13 @@ NSInteger intSort(id val1, id val2, void *context)
     [self method035];
     [self method036];
     [self method037];
+    [self method038];
+    [self method039];
+    [self method040];
+    [self method041];
+    [self method042];
+    [self method043];
+     
     return YES;
 }
 							

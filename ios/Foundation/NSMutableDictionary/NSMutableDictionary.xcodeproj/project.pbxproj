@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		744B4CAF15A1C6120038E8FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744B4CAE15A1C6120038E8FE /* UIKit.framework */; };
+		744B4CB115A1C6120038E8FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744B4CB015A1C6120038E8FE /* Foundation.framework */; };
+		744B4CB315A1C6120038E8FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744B4CB215A1C6120038E8FE /* CoreGraphics.framework */; };
+		744B4CB915A1C6120038E8FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 744B4CB715A1C6120038E8FE /* InfoPlist.strings */; };
+		744B4CBB15A1C6120038E8FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 744B4CBA15A1C6120038E8FE /* main.m */; };
+		744B4CBF15A1C6120038E8FE /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 744B4CBE15A1C6120038E8FE /* OOOAppDelegate.m */; };
+		744B4CC215A1C6120038E8FE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744B4CC015A1C6120038E8FE /* MainStoryboard_iPhone.storyboard */; };
+		744B4CC515A1C6120038E8FE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744B4CC315A1C6120038E8FE /* MainStoryboard_iPad.storyboard */; };
+		744B4CC815A1C6120038E8FE /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 744B4CC715A1C6120038E8FE /* OOOViewController.m */; };
+		744B4CD015A1C6130038E8FE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744B4CCF15A1C6130038E8FE /* SenTestingKit.framework */; };
+		744B4CD115A1C6130038E8FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744B4CAE15A1C6120038E8FE /* UIKit.framework */; };
+		744B4CD215A1C6130038E8FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744B4CB015A1C6120038E8FE /* Foundation.framework */; };
+		744B4CDA15A1C6130038E8FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 744B4CD815A1C6130038E8FE /* InfoPlist.strings */; };
+		744B4CDD15A1C6130038E8FE /* NSMutableDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 744B4CDC15A1C6130038E8FE /* NSMutableDictionaryTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		744B4CD315A1C6130038E8FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 744B4CA115A1C6120038E8FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 744B4CA915A1C6120038E8FE;
+			remoteInfo = NSMutableDictionary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		744B4CAA15A1C6120038E8FE /* NSMutableDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSMutableDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		744B4CAE15A1C6120038E8FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		744B4CB015A1C6120038E8FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		744B4CB215A1C6120038E8FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		744B4CB615A1C6120038E8FE /* NSMutableDictionary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSMutableDictionary-Info.plist"; sourceTree = "<group>"; };
+		744B4CB815A1C6120038E8FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		744B4CBA15A1C6120038E8FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		744B4CBC15A1C6120038E8FE /* NSMutableDictionary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary-Prefix.pch"; sourceTree = "<group>"; };
+		744B4CBD15A1C6120038E8FE /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
+		744B4CBE15A1C6120038E8FE /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
+		744B4CC115A1C6120038E8FE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		744B4CC415A1C6120038E8FE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		744B4CC615A1C6120038E8FE /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
+		744B4CC715A1C6120038E8FE /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
+		744B4CCE15A1C6130038E8FE /* NSMutableDictionaryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSMutableDictionaryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		744B4CCF15A1C6130038E8FE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		744B4CD715A1C6130038E8FE /* NSMutableDictionaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSMutableDictionaryTests-Info.plist"; sourceTree = "<group>"; };
+		744B4CD915A1C6130038E8FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		744B4CDB15A1C6130038E8FE /* NSMutableDictionaryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMutableDictionaryTests.h; sourceTree = "<group>"; };
+		744B4CDC15A1C6130038E8FE /* NSMutableDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSMutableDictionaryTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		744B4CA715A1C6120038E8FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744B4CAF15A1C6120038E8FE /* UIKit.framework in Frameworks */,
+				744B4CB115A1C6120038E8FE /* Foundation.framework in Frameworks */,
+				744B4CB315A1C6120038E8FE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744B4CCA15A1C6130038E8FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744B4CD015A1C6130038E8FE /* SenTestingKit.framework in Frameworks */,
+				744B4CD115A1C6130038E8FE /* UIKit.framework in Frameworks */,
+				744B4CD215A1C6130038E8FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		744B4C9F15A1C6120038E8FE = {
+			isa = PBXGroup;
+			children = (
+				744B4CB415A1C6120038E8FE /* NSMutableDictionary */,
+				744B4CD515A1C6130038E8FE /* NSMutableDictionaryTests */,
+				744B4CAD15A1C6120038E8FE /* Frameworks */,
+				744B4CAB15A1C6120038E8FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		744B4CAB15A1C6120038E8FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				744B4CAA15A1C6120038E8FE /* NSMutableDictionary.app */,
+				744B4CCE15A1C6130038E8FE /* NSMutableDictionaryTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		744B4CAD15A1C6120038E8FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				744B4CAE15A1C6120038E8FE /* UIKit.framework */,
+				744B4CB015A1C6120038E8FE /* Foundation.framework */,
+				744B4CB215A1C6120038E8FE /* CoreGraphics.framework */,
+				744B4CCF15A1C6130038E8FE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		744B4CB415A1C6120038E8FE /* NSMutableDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				744B4CBD15A1C6120038E8FE /* OOOAppDelegate.h */,
+				744B4CBE15A1C6120038E8FE /* OOOAppDelegate.m */,
+				744B4CC015A1C6120038E8FE /* MainStoryboard_iPhone.storyboard */,
+				744B4CC315A1C6120038E8FE /* MainStoryboard_iPad.storyboard */,
+				744B4CC615A1C6120038E8FE /* OOOViewController.h */,
+				744B4CC715A1C6120038E8FE /* OOOViewController.m */,
+				744B4CB515A1C6120038E8FE /* Supporting Files */,
+			);
+			path = NSMutableDictionary;
+			sourceTree = "<group>";
+		};
+		744B4CB515A1C6120038E8FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				744B4CB615A1C6120038E8FE /* NSMutableDictionary-Info.plist */,
+				744B4CB715A1C6120038E8FE /* InfoPlist.strings */,
+				744B4CBA15A1C6120038E8FE /* main.m */,
+				744B4CBC15A1C6120038E8FE /* NSMutableDictionary-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		744B4CD515A1C6130038E8FE /* NSMutableDictionaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				744B4CDB15A1C6130038E8FE /* NSMutableDictionaryTests.h */,
+				744B4CDC15A1C6130038E8FE /* NSMutableDictionaryTests.m */,
+				744B4CD615A1C6130038E8FE /* Supporting Files */,
+			);
+			path = NSMutableDictionaryTests;
+			sourceTree = "<group>";
+		};
+		744B4CD615A1C6130038E8FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				744B4CD715A1C6130038E8FE /* NSMutableDictionaryTests-Info.plist */,
+				744B4CD815A1C6130038E8FE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		744B4CA915A1C6120038E8FE /* NSMutableDictionary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 744B4CE015A1C6130038E8FE /* Build configuration list for PBXNativeTarget "NSMutableDictionary" */;
+			buildPhases = (
+				744B4CA615A1C6120038E8FE /* Sources */,
+				744B4CA715A1C6120038E8FE /* Frameworks */,
+				744B4CA815A1C6120038E8FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSMutableDictionary;
+			productName = NSMutableDictionary;
+			productReference = 744B4CAA15A1C6120038E8FE /* NSMutableDictionary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		744B4CCD15A1C6130038E8FE /* NSMutableDictionaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 744B4CE315A1C6130038E8FE /* Build configuration list for PBXNativeTarget "NSMutableDictionaryTests" */;
+			buildPhases = (
+				744B4CC915A1C6130038E8FE /* Sources */,
+				744B4CCA15A1C6130038E8FE /* Frameworks */,
+				744B4CCB15A1C6130038E8FE /* Resources */,
+				744B4CCC15A1C6130038E8FE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				744B4CD415A1C6130038E8FE /* PBXTargetDependency */,
+			);
+			name = NSMutableDictionaryTests;
+			productName = NSMutableDictionaryTests;
+			productReference = 744B4CCE15A1C6130038E8FE /* NSMutableDictionaryTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		744B4CA115A1C6120038E8FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OOO;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Satoshi Oomori";
+			};
+			buildConfigurationList = 744B4CA415A1C6120038E8FE /* Build configuration list for PBXProject "NSMutableDictionary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 744B4C9F15A1C6120038E8FE;
+			productRefGroup = 744B4CAB15A1C6120038E8FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				744B4CA915A1C6120038E8FE /* NSMutableDictionary */,
+				744B4CCD15A1C6130038E8FE /* NSMutableDictionaryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		744B4CA815A1C6120038E8FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744B4CB915A1C6120038E8FE /* InfoPlist.strings in Resources */,
+				744B4CC215A1C6120038E8FE /* MainStoryboard_iPhone.storyboard in Resources */,
+				744B4CC515A1C6120038E8FE /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744B4CCB15A1C6130038E8FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744B4CDA15A1C6130038E8FE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		744B4CCC15A1C6130038E8FE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		744B4CA615A1C6120038E8FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744B4CBB15A1C6120038E8FE /* main.m in Sources */,
+				744B4CBF15A1C6120038E8FE /* OOOAppDelegate.m in Sources */,
+				744B4CC815A1C6120038E8FE /* OOOViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744B4CC915A1C6130038E8FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744B4CDD15A1C6130038E8FE /* NSMutableDictionaryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		744B4CD415A1C6130038E8FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 744B4CA915A1C6120038E8FE /* NSMutableDictionary */;
+			targetProxy = 744B4CD315A1C6130038E8FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		744B4CB715A1C6120038E8FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				744B4CB815A1C6120038E8FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		744B4CC015A1C6120038E8FE /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				744B4CC115A1C6120038E8FE /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		744B4CC315A1C6120038E8FE /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				744B4CC415A1C6120038E8FE /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		744B4CD815A1C6130038E8FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				744B4CD915A1C6130038E8FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		744B4CDE15A1C6130038E8FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		744B4CDF15A1C6130038E8FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		744B4CE115A1C6130038E8FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMutableDictionary/NSMutableDictionary-Prefix.pch";
+				INFOPLIST_FILE = "NSMutableDictionary/NSMutableDictionary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		744B4CE215A1C6130038E8FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMutableDictionary/NSMutableDictionary-Prefix.pch";
+				INFOPLIST_FILE = "NSMutableDictionary/NSMutableDictionary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		744B4CE415A1C6130038E8FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSMutableDictionary.app/NSMutableDictionary";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMutableDictionary/NSMutableDictionary-Prefix.pch";
+				INFOPLIST_FILE = "NSMutableDictionaryTests/NSMutableDictionaryTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		744B4CE515A1C6130038E8FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSMutableDictionary.app/NSMutableDictionary";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMutableDictionary/NSMutableDictionary-Prefix.pch";
+				INFOPLIST_FILE = "NSMutableDictionaryTests/NSMutableDictionaryTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		744B4CA415A1C6120038E8FE /* Build configuration list for PBXProject "NSMutableDictionary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744B4CDE15A1C6130038E8FE /* Debug */,
+				744B4CDF15A1C6130038E8FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		744B4CE015A1C6130038E8FE /* Build configuration list for PBXNativeTarget "NSMutableDictionary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744B4CE115A1C6130038E8FE /* Debug */,
+				744B4CE215A1C6130038E8FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		744B4CE315A1C6130038E8FE /* Build configuration list for PBXNativeTarget "NSMutableDictionaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744B4CE415A1C6130038E8FE /* Debug */,
+				744B4CE515A1C6130038E8FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 744B4CA115A1C6120038E8FE /* Project object */;
+}

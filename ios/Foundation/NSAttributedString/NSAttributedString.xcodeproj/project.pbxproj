@@ -21,6 +21,7 @@
 		746C6183155422020077F6DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746C6161155422020077F6DE /* Foundation.framework */; };
 		746C618B155422020077F6DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 746C6189155422020077F6DE /* InfoPlist.strings */; };
 		746C618E155422020077F6DE /* NSAttributedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C618D155422020077F6DE /* NSAttributedStringTests.m */; };
+		74A11B6315A33247004E487A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A11B6215A33247004E487A /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		746C618A155422020077F6DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		746C618C155422020077F6DE /* NSAttributedStringTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAttributedStringTests.h; sourceTree = "<group>"; };
 		746C618D155422020077F6DE /* NSAttributedStringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAttributedStringTests.m; sourceTree = "<group>"; };
+		74A11B6215A33247004E487A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				746C6160155422020077F6DE /* UIKit.framework in Frameworks */,
 				746C6162155422020077F6DE /* Foundation.framework in Frameworks */,
 				746C6164155422020077F6DE /* CoreGraphics.framework in Frameworks */,
+				74A11B6315A33247004E487A /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +105,7 @@
 		746C615E155422020077F6DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74A11B6215A33247004E487A /* CoreText.framework */,
 				746C615F155422020077F6DE /* UIKit.framework */,
 				746C6161155422020077F6DE /* Foundation.framework */,
 				746C6163155422020077F6DE /* CoreGraphics.framework */,
@@ -444,6 +448,7 @@
 				746C6193155422020077F6DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		746C6194155422020077F6DE /* Build configuration list for PBXNativeTarget "NSAttributedStringTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +457,7 @@
 				746C6196155422020077F6DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

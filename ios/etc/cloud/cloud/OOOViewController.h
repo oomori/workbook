@@ -14,13 +14,18 @@
 {
     MyDocument *document;
     NSURL *documentURL;
-    UITextView *textView;    
+    UITextView *textView;
+    
+        NSMetadataQuery *query;
+    BOOL _isiCloudEnabled;
 }
 
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) NSURL *documentURL;
 @property (strong, nonatomic) MyDocument *document;
+@property (strong, nonatomic) NSMetadataQuery *query;
 
+- (IBAction)searchDocument:(id)sender;
 - (IBAction)saveDocument:(id)sender;
 - (IBAction)revertDocument:(id)sender;
 - (IBAction)testButton:(id)sender;

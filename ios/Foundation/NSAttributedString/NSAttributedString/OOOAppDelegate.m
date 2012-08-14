@@ -11,22 +11,13 @@
 @implementation OOOAppDelegate
 
 @synthesize window = _window;
-#pragma mark initWithString:
--(void)method001
-{
-    
 
-    NSAttributedString *aString = [[NSAttributedString alloc] initWithString:@"string"];
-                                   
-    NSLog(@"%@",[aString description]);
 
-    
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self method001];
+
     
     return YES;
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		740EEEFE15CCA9B900CE53B5 /* OOOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 740EEEFD15CCA9B900CE53B5 /* OOOView.m */; };
+		740EEEFF15CCA9B900CE53B5 /* OOOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 740EEEFD15CCA9B900CE53B5 /* OOOView.m */; };
 		7492414F155EB00E007A1C90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7492414E155EB00E007A1C90 /* UIKit.framework */; };
 		74924151155EB00E007A1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924150155EB00E007A1C90 /* Foundation.framework */; };
 		74924153155EB00E007A1C90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924152155EB00E007A1C90 /* CoreGraphics.framework */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		740EEEFC15CCA9B900CE53B5 /* OOOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOView.h; sourceTree = "<group>"; };
+		740EEEFD15CCA9B900CE53B5 /* OOOView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOView.m; sourceTree = "<group>"; };
 		7492414A155EB00E007A1C90 /* NSSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7492414E155EB00E007A1C90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74924150155EB00E007A1C90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,6 +122,8 @@
 			children = (
 				7492419D155EB55D007A1C90 /* CustomClass.h */,
 				7492419E155EB55D007A1C90 /* CustomClass.m */,
+				740EEEFC15CCA9B900CE53B5 /* OOOView.h */,
+				740EEEFD15CCA9B900CE53B5 /* OOOView.m */,
 				7492415D155EB00E007A1C90 /* OOOAppDelegate.h */,
 				7492415E155EB00E007A1C90 /* OOOAppDelegate.m */,
 				74924160155EB00E007A1C90 /* MainStoryboard_iPhone.storyboard */,
@@ -271,6 +277,7 @@
 				7492415F155EB00E007A1C90 /* OOOAppDelegate.m in Sources */,
 				74924168155EB00E007A1C90 /* OOOViewController.m in Sources */,
 				7492419F155EB55D007A1C90 /* CustomClass.m in Sources */,
+				740EEEFE15CCA9B900CE53B5 /* OOOView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7492417D155EB00F007A1C90 /* NSSetTests.m in Sources */,
+				740EEEFF15CCA9B900CE53B5 /* OOOView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +458,7 @@
 				74924182155EB00F007A1C90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74924183155EB00F007A1C90 /* Build configuration list for PBXNativeTarget "NSSetTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +467,7 @@
 				74924185155EB00F007A1C90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

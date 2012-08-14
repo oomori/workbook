@@ -17,7 +17,38 @@
 @implementation OOOViewController
 
 @synthesize textView, documentURL, document;
-
+@synthesize query = _query;
+//iCloudへ
+- (void)moveFileToiCloud:(NSURL *)destinationURL {
+    NSURL* aCloudUrl = 
+    [[NSFileManager defaultManager] URLForUbiquityContainerIdentifier:nil];
+    NSString *filename=nil;
+    [destinationURL getResourceValue:&filename forKey:NSURLNameKey error:nil];
+    
+    NSURL *cloudUrl = [aCloudUrl
+                       URLByAppendingPathComponent:filename];
+    
+    dispatch_queue_t q_default;
+    q_default = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(q_default, ^(void) {
+        NSFileManager *fileManager = [[NSFileManager alloc] init];
+        NSError *error = nil;
+        BOOL success = [fileManager setUbiquitous:YES itemAtURL:destinationURL
+                                   destinationURL:cloudUrl error:&error];
+        dispatch_queue_t q_main = dispatch_get_main_queue();
+        dispatch_async(q_main, ^(void) {
+            //NSLog(@"moved file to cloud: " );
+            if (success) {
+                NSLog(@"moved file to cloud: " );
+            }else {
+                NSLog(@"could not moved file to cloud: %@",[error description] );
+            }
+            //if (!success) {
+            //    NSLog(@"Couldn't move file to iCloud: %@", fileToMove);
+            //}
+        });
+    });
+}
 - (IBAction)saveDocument:(id)sender
 {
     self.document.userText = textView.text;
@@ -26,12 +57,18 @@
        forSaveOperation:UIDocumentSaveForOverwriting
       completionHandler:^(BOOL success) {
           if (success){
+              
               NSLog(@"Saved for overwriting");
+              [self moveFileToiCloud:documentURL];
+              
+              NSLog(@"moved file to cloud: " );
+              
           } else {
               NSLog(@"Not saved for overwriting");
           }
       }];
 
+    
 }
 
 - (IBAction)revertDocument:(id)sender
@@ -40,12 +77,87 @@
     [document revertToContentsOfURL:documentURL 
                   completionHandler:^(BOOL success){
         if (success){
-            NSLog(@"Delete");
+            NSLog(@"revert");
         } else {
-            NSLog(@"Not delete");
+            NSLog(@"Not revert");
         }
     }];
      textView.text = self.document.userText;
+}
+- (void)queryDidFinishGathering:(NSNotification *)notif {
+    NSMetadataQuery *aQuery = [notif object];
+    [aQuery disableUpdates];
+    [aQuery stopQuery];
+    //[self loadRemoteFile:query];
+    
+    NSLog(@"queryDidFinishGathering %d",[aQuery resultCount]);
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSMetadataQueryDidFinishGatheringNotification object:aQuery];
+}
+-(void)queryDidUpdate:(id)obj
+
+{
+    
+    /*
+     [[NSNotificationCenter defaultCenter] removeObserver:self
+     
+     name:nil
+     
+     object:_query];
+     */
+    //[_query stopQuery];
+    NSLog(@"! %d",[_query resultCount]);
+	
+    
+}
+- (void) startMonitoringUbiquitousDocumentsFolder
+{
+    //Check for iCloud
+    NSURL *ubiq = [[NSFileManager defaultManager] 
+                   URLForUbiquityContainerIdentifier:nil];
+    if (ubiq) {
+        NSLog(@"iCloud access at %@", ubiq);
+        self.query = [[NSMetadataQuery alloc] init] ;
+        [self.query setSearchScopes:[NSArray arrayWithObject:
+                                     NSMetadataQueryUbiquitousDocumentsScope]];
+        _isiCloudEnabled = YES;
+    } else {
+        NSLog(@"No iCloud access");
+        //Get the doc directory
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        self.query = [[NSMetadataQuery alloc] init] ;
+        [self.query setSearchScopes:[NSArray arrayWithObjects:
+                                     [NSURL fileURLWithPath:path],nil]];
+        _isiCloudEnabled = NO;
+    }
+    //NSPredicate *pred = [NSPredicate predicateWithFormat:@"%K.pathExtension = ''", NSMetadataItemFSNameKey];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"%K == %@", NSMetadataItemFSNameKey, @"document.doc"];
+
+    //NSPredicate *pred = [NSPredicate predicateWithFormat:@"%K ENDSWITH '.doc'", NSMetadataItemFSNameKey];
+    [self.query setPredicate:pred];
+    [[NSNotificationCenter defaultCenter] 
+     addObserver:self 
+     selector:@selector(queryDidFinishGathering:) 
+     name:NSMetadataQueryDidFinishGatheringNotification 
+     object:self.query];
+    
+    [self.query startQuery];
+}
+- (void) stopMonitoringUbiquitousDocumentsFolder
+{
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:NSMetadataQueryDidFinishGatheringNotification
+     object:nil];
+    [query stopQuery];
+    query = nil;
+}
+
+- (IBAction)searchDocument:(id)sender
+{
+    
+    [self startMonitoringUbiquitousDocumentsFolder ];
+    
+
 }
 - (IBAction)testButton:(id)sender
 {
@@ -97,7 +209,7 @@
                                 byAccessor:^(NSURL *newURL)
      {
          
-         NSError *writeErr;
+         //NSError *writeErr;
          NSData *wData = [writeStr dataUsingEncoding:NSUTF8StringEncoding];
          [wData writeToURL:newURL atomically:YES];
          /*
@@ -116,7 +228,37 @@
     
     
 }
-
+#pragma mark Read Data
+- (void)moveiCloudToLocal:(NSURL *)destinationURL {
+    NSURL* aCloudUrl = 
+    [[NSFileManager defaultManager] URLForUbiquityContainerIdentifier:nil];
+    NSString *filename=nil;
+    [destinationURL getResourceValue:&filename forKey:NSURLNameKey error:nil];
+    
+    NSURL *cloudUrl = [aCloudUrl
+                       URLByAppendingPathComponent:filename];
+    
+    dispatch_queue_t q_default;
+    q_default = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(q_default, ^(void) {
+        NSFileManager *fileManager = [[NSFileManager alloc] init];
+        NSError *error = nil;
+        BOOL success = [fileManager setUbiquitous:NO itemAtURL:destinationURL
+                                   destinationURL:cloudUrl error:&error];
+        dispatch_queue_t q_main = dispatch_get_main_queue();
+        dispatch_async(q_main, ^(void) {
+            NSLog(@"moved file to local " );
+            if (success) {
+                NSLog(@"moved file to local " );
+            }else {
+                NSLog(@"could not moved local: %@",[error description] );
+            }
+            //if (!success) {
+            //    NSLog(@"Couldn't move file to iCloud: %@", fileToMove);
+            //}
+        });
+    });
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -136,6 +278,8 @@
     self.document.userText = @"";
     NSFileManager *filemgr = [NSFileManager defaultManager];
     
+    //[self moveiCloudToLocal:documentURL];
+        
     if ([filemgr fileExistsAtPath: dataFile])
     {
         [document openWithCompletionHandler:

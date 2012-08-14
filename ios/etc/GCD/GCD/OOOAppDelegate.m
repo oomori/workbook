@@ -10,6 +10,26 @@
 
 #import <mach/mach_time.h>
 
+@interface Account : NSObject
+{
+    @public
+    dispatch_queue_t queue;
+        NSInteger     balance;
+}
+@end
+@implementation Account
+
+@end
+@interface Transaction : NSObject
+{
+    @public
+    NSInteger     amount;
+}
+@end
+@implementation Transaction
+
+@end
+
 @implementation OOOAppDelegate
 
 @synthesize window = _window;
@@ -21,10 +41,27 @@ UIBackgroundTaskIdentifier bgTask;
 #pragma mark GCD
 
 
-
+bool debit_account(Account *account,Transaction *transaction)
+{
+    dispatch_sync(account->queue, ^{
+        account->balance -= transaction->amount; 
+        NSLog(@"!");
+    });
+    return true;
+}
 -(void)method001
 {
-
+    //
+    dispatch_queue_t q = dispatch_queue_create("com.example", NULL);
+    
+    dispatch_retain(q);
+    NSLog(@"!!");
+    dispatch_release(q);
+    
+    Account *account = [[Account alloc] init];
+    Transaction *transaction = [[Transaction alloc] init];
+    bool b =  debit_account( account ,transaction);
+    
     
     
 }
@@ -42,24 +79,7 @@ UIBackgroundTaskIdentifier bgTask;
     
     
     [self method001];
-    
-    
-    
-    //ナノ秒レベルの時間計測
-    //<mach/mach_time.h>が必要
-    //Saki さん Thanks!
-    //http://blog.livedoor.jp/yousuke_saki/archives/51494672.html
-    uint64_t start, elapsed;
-    start = mach_absolute_time();
-    //↓計測対象
-    [self method001];
-    //↑計測対象
-    elapsed = mach_absolute_time() - start;
-    mach_timebase_info_data_t base;
-    mach_timebase_info(&base);
-    uint64_t nsec = elapsed * base.numer / base.denom;
-    NSLog(@"%llu nano second",nsec);
-    //時間計測終了
+
     
     //ローカル通知を受ける
     UILocalNotification *localNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];

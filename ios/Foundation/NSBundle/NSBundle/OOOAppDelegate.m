@@ -118,24 +118,383 @@
     
 }
 
-#pragma mark bundleForClass:
+#pragma mark bundleWithIdentifier:
 -(void)method006
 {
+    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.oomori.NSBundle" ];
+    NSLog(@"%s : %@",__FUNCTION__ ,[bundle resourcePath]);
+    //シミュレーターでの結果
+    //=>-[OOOAppDelegate method006] : /Users/satoshi/Library/Application Support/iPhone Simulator/5.1/Applications/7E173DDA-3184-4272-A297-DD7F863C3938/NSBundle.app
+}
+
+#pragma mark mainBundle:
+-(void)method007
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    
+    
+    NSLog(@"%s : %@",__FUNCTION__ ,[bundle description]);
+    //=>-[OOOAppDelegate method007] : NSBundle </Users/satoshi/Library/Application Support/iPhone Simulator/5.1/Applications/7E173DDA-3184-4272-A297-DD7F863C3938/NSBundle.app> (loaded)
+
+}
+
+#pragma mark NSBundle allBundles:
+-(void)method008
+{
+    NSArray *bundle = [NSBundle allBundles];
+    
+    
+    NSLog(@"%s : %@",__FUNCTION__ ,[bundle description]);
+    //=>-[OOOAppDelegate method008] : ("NSBundle </Users/satoshi/Library/Application Support/iPhone Simulator/5.1/Applications/7E173DDA-3184-4272-A297-DD7F863C3938/NSBundle.app> (loaded)")
 
     
 }
+
+#pragma mark NSBundle allFrameworks:
+-(void)method009
+{
+    NSArray *bundle = [NSBundle allFrameworks];
+    
+    
+    NSLog(@"%s : %@",__FUNCTION__ ,[bundle description]);
+    //=>
+    
+    
+}
+
+#pragma mark NSBundle classNamed:
+-(void)method010
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    Class c = [bundle classNamed:@"OOOAppDelegate"];
+    NSLog(@"%s : %@",__FUNCTION__ ,[c description]);
+    //=>
+}
+
+#pragma mark NSBundle principalClass
+-(void)method011
+{
+    Class exampleClass;
+    id newInstance;
+    
+    NSURL *bundleURL = [[NSBundle mainBundle] bundleURL];
+    //NSBundle *bundleToLoad = [NSBundle bundleWithURL:[bundleURL URLByAppendingPathComponent:@"Settings.bundle"]];
+    NSBundle *bundleToLoad = [NSBundle bundleWithURL:bundleURL];
+    [bundleToLoad load];
+    exampleClass = [bundleToLoad principalClass];
+    
+    if (exampleClass) {
+        newInstance = [[exampleClass alloc] init];
+        //[newInstance doSomething];
+    }
+    NSLog(@"%s : %@",__FUNCTION__ ,[exampleClass description]);
+    //=>
+}
+
+#pragma mark NSBundle bundleIdentifier
+-(void)method012
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSLog(@"%s : %@",__FUNCTION__ ,[bundle bundleIdentifier]);
+    //=>
+}
+
+#pragma mark NSBundle bundleIdentifier
+-(void)method013
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSDictionary *infoDic = [bundle infoDictionary];
+    NSLog(@"%s : %@",__FUNCTION__ ,[infoDic description]);
+    //=>
+}
+
+#pragma mark NSBundle bundleIdentifier
+-(void)method014
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    id obj = [bundle objectForInfoDictionaryKey:@"UIMainStoryboardFile"];
+    NSLog(@"%s : %@",__FUNCTION__ ,[obj description]);
+    //=>
+}
+
+#pragma mark NSBundle builtInPlugInsPath
+-(void)method015
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    id obj = [bundle builtInPlugInsPath];
+    NSLog(@"%s : %@",__FUNCTION__ ,[obj description]);
+    //=>
+}
+
+#pragma mark NSBundle executableURL
+-(void)method016
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    id obj = [bundle executableURL];
+    NSLog(@"%s : %@",__FUNCTION__ ,[obj description]);
+    //=>
+}
+
+
+#pragma mark NSBundle URLForAuxiliaryExecutable:
+-(void)method017
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    id obj = [bundle URLForAuxiliaryExecutable:@"NSBundle"];
+    NSLog(@"%s : %@",__FUNCTION__ ,[obj description]);
+    //=>
+}
+
+#pragma mark NSBundle privateFrameworksURL
+-(void)method018
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    id obj = [bundle privateFrameworksURL];
+    NSLog(@"%s : %@",__FUNCTION__ ,[obj description]);
+    //=>
+}
+
+#pragma mark NSBundle sharedFrameworksURL
+-(void)method019
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    id obj = [bundle sharedFrameworksURL];
+    NSLog(@"%s : %@",__FUNCTION__ ,[obj description]);
+    //=>
+}
+
+#pragma mark NSBundle resourceURL
+-(void)method020
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    id obj = [bundle resourceURL];
+    NSLog(@"%s : %@",__FUNCTION__ ,[obj description]);
+    //=>
+}
+
+#pragma mark NSBundle bundleIdentifier
+-(void)method021
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSDictionary *infoDic = [bundle localizedInfoDictionary];
+    NSLog(@"%s : %@",__FUNCTION__ ,[infoDic description]);
+    //=>
+}
+
+#pragma mark NSBundle URLForResource
+-(void)method022
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    //NSURL *aURL = [bundle URLForResource:@"en" withExtension:@"lproj" subdirectory:nil];
+    NSURL *aURL = [bundle URLForResource:@"MainStoryboard_iPad" withExtension:@"storyboardc" subdirectory:@"en.lproj"];
+    NSLog(@"%s : %@",__FUNCTION__ ,[aURL description]);
+    //=>
+}
+
+#pragma mark NSBundle – localizedStringForKey:value:table:
+-(void)method023
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *retStr = [bundle localizedStringForKey:@"cancel" value:@"Don't find" table:nil];
+    //table nilならLocalizable.stringsを使う
+    NSLog(@"%s : %@",__FUNCTION__ ,retStr);
+    
+    NSString *buttonStr = [bundle localizedStringForKey:@"Button1" value:@"Don't find" table:@"Button"];
+    //table @"Button"ならButton.stringsを使う
+    NSLog(@"%s : %@",__FUNCTION__ ,buttonStr);
+    //=>
+}
+
+#pragma mark NSBundle URLForResource
+-(void)method024
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSURL *aURL = [bundle URLForResource:@"MainStoryboard_iPad" withExtension:@"storyboardc"];
+    NSLog(@"%s : %@",__FUNCTION__ ,[aURL description]);
+    //=>
+}
+
+#pragma mark NSBundle URLForResource
+-(void)method025
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    //NSURL *aURL = [bundle URLForResource:@"en" withExtension:@"lproj" subdirectory:nil];
+    NSURL *aURL = [bundle URLForResource:@"MainStoryboard_iPad" withExtension:@"storyboardc" subdirectory:nil localization:@"ja"];
+    NSLog(@"%s : %@",__FUNCTION__ ,[aURL description]);
+    //=>
+}
+
+#pragma mark NSBundle URLForResource
+-(void)method026
+{
+    NSURL *bundleURL = [[NSBundle mainBundle] bundleURL];
+    NSURL *bURL = [NSBundle URLForResource:@"MainStoryboard_iPad"
+                             withExtension:@"storyboardc" 
+                              subdirectory:nil
+                           inBundleWithURL:bundleURL];
+    NSLog(@"%s : %@",__FUNCTION__ ,[bURL description]);
+    //=>
+}
+
+#pragma mark NSBundle URLForResource
+-(void)method027
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSArray *anArray1 = [bundle URLsForResourcesWithExtension:@"storyboardc" subdirectory:nil localization:@"ja"];
+    NSLog(@"%s : %@",__FUNCTION__ ,[anArray1 description]);
+    NSArray *anArray2 = [bundle URLsForResourcesWithExtension:@"storyboardc" subdirectory:nil];
+    NSLog(@"%s : %@",__FUNCTION__ ,[anArray2 description]);
+    //=>
+}
+
+
+#pragma mark NSBundle URLForResource
+-(void)method028
+{
+    NSArray *array = [NSBundle  preferredLocalizationsFromArray:[[NSBundle mainBundle]  localizations]];
+
+    NSLog(@"%s : %@",__FUNCTION__ ,[array description]);
+    //=>
+}
+
+#pragma mark NSBundle URLForResource
+-(void)method029
+{
+    NSArray *array = [[NSBundle mainBundle]  localizations];
+    
+    NSLog(@"%s : %@",__FUNCTION__ ,[array description]);
+    //=>
+}
+
+#pragma mark NSBundle URLForResource
+-(void)method030
+{
+    NSArray *array = [[NSBundle mainBundle]  preferredLocalizations];
+    
+    NSLog(@"%s : %@",__FUNCTION__ ,[array description]);
+    //=>
+}
+
+#pragma mark NSBundle URLForResource
+-(void)method031
+{
+    NSString *string = [[NSBundle mainBundle]  developmentLocalization];
+    
+    NSLog(@"%s : %@",__FUNCTION__ ,[string description]);
+    //=>
+}
+
+#pragma mark NSBundle URLForResource
+-(void)method032
+{
+    NSDictionary *aDictionary = [[NSBundle mainBundle]  localizedInfoDictionary];
+    
+    NSLog(@"%s : %@",__FUNCTION__ ,[aDictionary description]);
+    //=>
+}
+#pragma mark NSBundle principalClass
+-(void)method033
+{
+    Class exampleClass;
+    id newInstance;
+    
+    NSURL *bundleURL = [[NSBundle mainBundle] bundleURL];
+    //NSBundle *bundleToLoad = [NSBundle bundleWithURL:[bundleURL URLByAppendingPathComponent:@"Settings.bundle"]];
+    NSBundle *bundleToLoad = [NSBundle bundleWithURL:bundleURL];
+    NSError *error = nil;
+    [bundleToLoad loadAndReturnError:&error];
+    exampleClass = [bundleToLoad principalClass];
+    
+    if (exampleClass) {
+        newInstance = [[exampleClass alloc] init];
+        //[newInstance doSomething];
+    }
+    NSLog(@"%s : %@",__FUNCTION__ ,[error description]);
+    //=>
+}
+
+#pragma mark NSBundle URLForResource
+-(void)method034
+{
+    NSLog(@"%s : %@",__FUNCTION__ ,([[NSBundle mainBundle] isLoaded])?@"YES":@"NO");
+    //=>
+}
+
+#pragma mark NSBundle principalClass
+-(void)method035
+{
+    Class exampleClass;
+    id newInstance;
+    
+    NSURL *bundleURL = [[NSBundle mainBundle] bundleURL];
+    //NSBundle *bundleToLoad = [NSBundle bundleWithURL:[bundleURL URLByAppendingPathComponent:@"Settings.bundle"]];
+    NSBundle *bundleToLoad = [NSBundle bundleWithURL:bundleURL];
+    NSError *error = nil;
+    [bundleToLoad loadAndReturnError:&error];
+    exampleClass = [bundleToLoad principalClass];
+    
+    if (exampleClass) {
+        newInstance = [[exampleClass alloc] init];
+        //[newInstance doSomething];
+    }
+    NSLog(@"%s : %@",__FUNCTION__ ,([bundleToLoad isLoaded])?@"YES":@"NO");
+    [bundleToLoad unload];
+    NSLog(@"%s : %@",__FUNCTION__ ,([bundleToLoad isLoaded])?@"YES":@"NO");
+    
+    
+    //=>
+}
+
+#pragma mark NSBundle URLForResource
+-(void)method036
+{
+    NSError *error = nil;
+    NSLog(@"%s : %@",__FUNCTION__ ,([[NSBundle mainBundle]  preflightAndReturnError:&error])?@"YES":@"NO");
+    
+    //=>
+}
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self method001];
     [self method002];
-
     [self method003];
     [self method004];
     [self method005];
-    
-    [self method006];
+    [self method006];    
+    [self method007];
+    [self method008];
+    [self method009];
+    [self method010];    
+    [self method011];
+    [self method012];    
+    [self method013];
+    [self method014];
+    [self method015];
+    [self method016];    
+    [self method017];
+    [self method018];    
+    [self method019];
+    [self method020];    
+    [self method021];
+    [self method022];
+    [self method023];    
+    [self method024];
+    [self method025];    
+    [self method026];
+    [self method027];    
+    [self method028];
+    [self method029];
+    [self method030];
+    [self method031];
+    [self method032];
+    [self method033];
+    [self method034];
+    [self method035];
+    [self method036];
 return YES;
 }
 
