@@ -21,6 +21,7 @@
 		74EEEA1015DC2D90002ED0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE9EE15DC2D90002ED0E1 /* Foundation.framework */; };
 		74EEEA1815DC2D90002ED0E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EEEA1615DC2D90002ED0E1 /* InfoPlist.strings */; };
 		74EEEA1B15DC2D90002ED0E1 /* NSTimeZoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEEA1A15DC2D90002ED0E1 /* NSTimeZoneTests.m */; };
+		74EEEA2A15DC43DC002ED0E1 /* OOOUIview.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEEA2915DC43DC002ED0E1 /* OOOUIview.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		74EEEA1715DC2D90002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74EEEA1915DC2D90002ED0E1 /* NSTimeZoneTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTimeZoneTests.h; sourceTree = "<group>"; };
 		74EEEA1A15DC2D90002ED0E1 /* NSTimeZoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimeZoneTests.m; sourceTree = "<group>"; };
+		74EEEA2815DC43DC002ED0E1 /* OOOUIview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOUIview.h; sourceTree = "<group>"; };
+		74EEEA2915DC43DC002ED0E1 /* OOOUIview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOUIview.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 			children = (
 				74EEE9FB15DC2D90002ED0E1 /* OOOAppDelegate.h */,
 				74EEE9FC15DC2D90002ED0E1 /* OOOAppDelegate.m */,
+				74EEEA2815DC43DC002ED0E1 /* OOOUIview.h */,
+				74EEEA2915DC43DC002ED0E1 /* OOOUIview.m */,
 				74EEE9FE15DC2D90002ED0E1 /* MainStoryboard_iPhone.storyboard */,
 				74EEEA0115DC2D90002ED0E1 /* MainStoryboard_iPad.storyboard */,
 				74EEEA0415DC2D90002ED0E1 /* OOOViewController.h */,
@@ -266,6 +271,7 @@
 				74EEE9F915DC2D90002ED0E1 /* main.m in Sources */,
 				74EEE9FD15DC2D90002ED0E1 /* OOOAppDelegate.m in Sources */,
 				74EEEA0615DC2D90002ED0E1 /* OOOViewController.m in Sources */,
+				74EEEA2A15DC43DC002ED0E1 /* OOOUIview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

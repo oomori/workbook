@@ -16,7 +16,7 @@
 -(void)method001
 {
     NSError *aError = nil;
-	NSString *str = [NSString stringWithString:@"http://www.oomori.com?name=oomori&age=44" ];
+	NSString *str = @"http://www.oomori.com?name=oomori&age=44";
     NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"([\\w]+)=([\\w]+)" 
                                                                             options:NSRegularExpressionCaseInsensitive
                                                                               error:&aError];
@@ -37,13 +37,265 @@
      ];
     NSLog(@"%s%@",__FUNCTION__,[muDic description]);
     //=>-[OOOAppDelegate method001]{age = 44;name = oomori;}
+    NSLog(@"%s%@",__FUNCTION__,regExp.pattern);
+
+    
+    switch (regExp.options) {
+        case NSRegularExpressionCaseInsensitive: //大文字小文字無視
+            NSLog(@"%s %@",__FUNCTION__,@"NSRegularExpressionCaseInsensitive");
+            break;
+        case NSRegularExpressionAllowCommentsAndWhitespace: //コメントと空白無視
+            NSLog(@"%s %@",__FUNCTION__,@"NSRegularExpressionAllowCommentsAndWhitespace");
+            break;
+        case NSRegularExpressionIgnoreMetacharacters: //文字列リテラルとしてパターン全体を扱う
+            NSLog(@"%s %@",__FUNCTION__,@"NSRegularExpressionIgnoreMetacharacters");
+            break;
+        case NSRegularExpressionDotMatchesLineSeparators: //改行記号を含むことができる
+            NSLog(@"%s %@",__FUNCTION__,@"NSRegularExpressionDotMatchesLineSeparators");
+            break;
+        case NSRegularExpressionAnchorsMatchLines: //行の最初、最後
+            NSLog(@"%s %@",__FUNCTION__,@"NSRegularExpressionAnchorsMatchLines");
+            break;
+        case NSRegularExpressionUseUnixLineSeparators: //UNIX行分割
+            NSLog(@"%s %@",__FUNCTION__,@"NSRegularExpressionUseUnixLineSeparators");
+            break;
+        case NSRegularExpressionUseUnicodeWordBoundaries: //unicode 語区切り
+            NSLog(@"%s %@",__FUNCTION__,@"NSRegularExpressionUseUnicodeWordBoundaries");
+            break;
+            
+        default:
+            break;
+    }
+    NSLog(@"%s%u",__FUNCTION__,regExp.numberOfCaptureGroups);
+}
+#pragma mark NSRegularExpression  regularExpressionWithPattern:
+-(void)method002
+{
+
+	NSString *str = @"abcdefg555hijklmn8972opqrstu";
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"\\d+" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSUInteger result = [regExp numberOfMatchesInString:str
+                                    options:0
+                                      range:NSMakeRange(0, [str length])];
+
+    
+    NSLog(@"%s %u",__FUNCTION__,result);
+    //=>-[OOOAppDelegate method002] 2
+    
 }
 
+#pragma mark NSRegularExpression  regularExpressionWithPattern:
+-(void)method003
+{
+    
+	NSString *str = @"abcdefg555hijklmn8972opqrstu";
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"\\d+" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSArray *resultArray = [regExp matchesInString:str
+                                                options:0
+                                                  range:NSMakeRange(0, [str length])];
+    
+    [resultArray enumerateObjectsWithOptions:NSEnumerationConcurrent //並列
+                              usingBlock:^(id obj,NSUInteger idx,BOOL *stop){
+                                  NSTextCheckingResult *tcResult = (NSTextCheckingResult *)obj;
+                                  NSLog(@"%s %@ %u-%u",__FUNCTION__,tcResult.regularExpression,tcResult.range.location,tcResult.range.length );
+                                  return;
+                                  
+                              }];
+    //=><NSRegularExpression: 0x6d4e7c0> \d+ 0x1 7-3
+    //=><NSRegularExpression: 0x6d4e7c0> \d+ 0x1 17-4
+    
+}
 
+#pragma mark NSRegularExpression  firstMatchInString:
+-(void)method004
+{
+    
+	NSString *str = @"abcdefg555hijklmn8972opqrstu";
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"\\d+" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSTextCheckingResult *resultTCResult = [regExp firstMatchInString:str
+                                           options:0
+                                             range:NSMakeRange(0, [str length])];
+    
+
+    NSLog(@"%s %@ %u-%u",__FUNCTION__,resultTCResult.regularExpression,resultTCResult.range.location,resultTCResult.range.length );
+                                      
+    //=><NSRegularExpression: 0x6836600> \d+ 0x1 7-3
+
+    
+}
+
+#pragma mark NSRegularExpression  firstMatchInString:
+-(void)method005
+{
+    
+	NSString *str = @"1 12 123 1234 12345 123456";
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"\\d+" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSRange resultRange = [regExp rangeOfFirstMatchInString:str
+                                                              options:0
+                                                                range:NSMakeRange(0, [str length])];
+    
+    
+    NSLog(@"%s %u-%u",__FUNCTION__,resultRange.location,resultRange.length );
+    
+    //=>
+    
+    
+}
+#pragma mark NSRegularExpression  firstMatchInString:
+-(void)method006
+{
+    
+	NSMutableString *str = [@"1 12 123 1234 12345 123456" mutableCopy];
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"\\b\\d{2,5}\\b" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSString *template =
+    @"*$0*";
+    
+    NSUInteger result =  [regExp replaceMatchesInString:str
+                                        options:0
+                                          range:NSMakeRange(0, [str length])
+                                            withTemplate:template
+                           ];
+    
+    
+    NSLog(@"%s %u",__FUNCTION__,result  );
+    //=>4
+    NSLog(@"%s %@",__FUNCTION__,str  );
+    //=>1 *12* *123* *1234* *12345* 123456
+}
+
+#pragma mark NSRegularExpression  stringByReplacingMatchesInString:
+-(void)method007
+{
+    
+	NSString *str = @"1 12 123 1234 12345 123456" ;
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"\\b\\d{2,5}\\b" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSString *template =
+    @"*$0*";
+    
+    NSString *resultSring =  [regExp stringByReplacingMatchesInString:str
+                                                options:0
+                                                  range:NSMakeRange(0, [str length])
+                                           withTemplate:template
+                          ];
+    
+    NSLog(@"%s %@",__FUNCTION__,resultSring  );
+    //=>1 *12* *123* *1234* *12345* 123456
+    
+}
+
+#pragma mark NSRegularExpression  escapedPatternForString:,escapedPatternForString:
+-(void)method008
+{
+    
+    NSString * patternstring = [NSRegularExpression escapedPatternForString:@"a*m"];
+    NSLog(@"%s %@",__FUNCTION__,patternstring  );
+
+    NSString * templatestring = [NSRegularExpression escapedPatternForString:@"a$m"];
+    NSLog(@"%s %@",__FUNCTION__,templatestring  );
+
+
+    
+}
+
+#pragma mark NSRegularExpression  stringByReplacingMatchesInString:
+-(void)method009
+{
+    
+	NSError* error = nil;
+    NSRegularExpression* regularExpression = [NSRegularExpression
+                                  regularExpressionWithPattern:@"\\b[1-3]\\b"
+                                  options:NSRegularExpressionCaseInsensitive
+                                  error:&error];
+
+    NSString* aString = @"1  2  3";
+    
+    NSMutableString* mutableString = [aString mutableCopy];
+    NSInteger offset = 0;
+    
+    for (NSTextCheckingResult* result in [regularExpression matchesInString:aString
+                                                        options:0
+                                                          range:NSMakeRange(0, [aString length])]) {
+        
+        NSRange resultRange = [result range];
+        resultRange.location += offset; 
+        NSString* match = [regularExpression replacementStringForResult:result
+                                                   inString:mutableString
+                                                     offset:offset
+                                                   template:@"$0"];
+        NSString* replacement;
+        if ([match isEqualToString:@"1"]) {
+            replacement = @"Jan";
+        } else if ([match isEqualToString:@"2"]) {
+            replacement = @"Feb";
+        } else if ([match isEqualToString:@"3"]) {
+            replacement = @"Mar";
+        }
+        
+        [mutableString replaceCharactersInRange:resultRange withString:replacement];
+        
+        offset += ([replacement length] - resultRange.length);
+    }
+    
+    NSLog(@"%s %@",__FUNCTION__,mutableString  );
+    //=>
+    
+}
+
+#pragma mark NSRegularExpression  stringByReplacingMatchesInString:
+-(void)method010
+{
+    
+	NSString *str = @"yen bin yin yes" ;
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"\\by(e|i)(s|n)\\b" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSString *template =
+    @"*$0*";
+    
+    NSString *resultSring =  [regExp stringByReplacingMatchesInString:str
+                                                              options:0
+                                                                range:NSMakeRange(0, [str length])
+                                                         withTemplate:template
+                              ];
+    
+    NSLog(@"%s %@",__FUNCTION__,resultSring  );
+    //=>1 *12* *123* *1234* *12345* 123456
+    
+}
+
+#pragma mark NSRegularExpression  stringByReplacingMatchesInString:
+-(void)method011
+{
+    
+	NSString *str = @"yen ken key hen" ;
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"^y\\b" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSString *template =
+    @"*$0*";
+    
+    NSString *resultSring =  [regExp stringByReplacingMatchesInString:str
+                                                              options:0
+                                                                range:NSMakeRange(0, [str length])
+                                                         withTemplate:template
+                              ];
+    
+    NSLog(@"%s %@",__FUNCTION__,resultSring  );
+    //=>1 *12* *123* *1234* *12345* 123456
+    
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self method001];
+    [self method002];
+    [self method003];
+    [self method004];
+    [self method005];
+    [self method006];
+    
+    [self method007];
+    [self method008];
+    [self method009];
+    
+    [self method010];
+    [self method011];
     return YES;
 }
 							

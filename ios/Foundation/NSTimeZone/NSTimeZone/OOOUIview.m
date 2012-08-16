@@ -9,7 +9,23 @@
 #import "OOOUIview.h"
 
 @implementation OOOUIview
-
+-(void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
+{
+    
+    
+    NSLog(@"--%@",[NSTimeZone localTimeZone]);
+    //--Local Time Zone (GMT (GMT) offset 0)
+    //--Local Time Zone (GMT (GMT) offset 0)
+    NSLog(@"--%@",[NSTimeZone systemTimeZone]);
+    //--Asia/Tokyo (JST) offset 32400
+    //--Asia/Seoul (KST) offset 32400
+    
+}
+-(void)awakeFromNib
+{
+    
+    
+}
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

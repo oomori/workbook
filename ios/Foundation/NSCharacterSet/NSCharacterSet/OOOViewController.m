@@ -16,7 +16,7 @@
 
 @synthesize textView;
 
-#pragma mark alphanumericCharacterSet:
+#pragma mark NSCharacterSet alphanumericCharacterSet:
 -(void)method001
 {
     
@@ -689,7 +689,7 @@
         currentChar = (UTF32Char)i;
         if ([chrSet2 longCharacterIsMember:currentChar])
         {
-            NSString *str = [[NSString alloc] initWithBytes:&currentChar length:4 encoding:NSUTF32LittleEndianStringEncoding];
+            //NSString *str = [[NSString alloc] initWithBytes:&currentChar length:4 encoding:NSUTF32LittleEndianStringEncoding];
             //[mString appendString:str];
             //NSLog(@"%s code=0x%lX %@",__FUNCTION__,currentChar,str);
             u++;
@@ -737,7 +737,7 @@
         currentChar = (UTF32Char)i;
         if ([chrSet2 longCharacterIsMember:currentChar])
         {
-            NSString *str = [[NSString alloc] initWithBytes:&currentChar length:4 encoding:NSUTF32LittleEndianStringEncoding];
+            //NSString *str = [[NSString alloc] initWithBytes:&currentChar length:4 encoding:NSUTF32LittleEndianStringEncoding];
             //[mString appendString:str];
             //NSLog(@"%s code=0x%lX %@",__FUNCTION__,currentChar,str);
             u++;

@@ -10,9 +10,168 @@
 
 @implementation OOOAppDelegate
 
+#pragma mark NSDataDetector  regularExpressionWithPattern:
+-(void)method001
+{
+    
+	NSString *str = @"My phone number is 01234567890.";
+    NSError *error = nil;
+    
+    NSDataDetector *regExp = [NSDataDetector dataDetectorWithTypes:
+                              (NSTextCheckingTypeLink | NSTextCheckingTypePhoneNumber)
+                                                             error:&error];
+
+     NSUInteger result = [regExp numberOfMatchesInString:str
+                                                options:0
+                                                  range:NSMakeRange(0, [str length])];
+    NSLog(@"%s %u",__FUNCTION__,result);
+    //=>-[OOOAppDelegate method001] 1
+    
+     
+    
+}
+
+#pragma mark NSDataDetector　dataDetectorWithTypes　URL
+-(void)method002
+{
+    NSString *aString = @"My site's URL is http://d.hatena.ne.jp/jjj777/.";
+    NSDataDetector *aDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
+    NSArray *matches = [aDetector matchesInString:aString
+                                          options:0
+                                            range:NSMakeRange(0, [aString length])
+                                                    ];
+    
+    for (NSTextCheckingResult *match in matches) {
+        
+        if ([match resultType] == NSTextCheckingTypeLink) {
+            NSString *matchingString = [match description];
+            NSLog(@"found URL: %@", matchingString);
+        }
+    }
+    
+}
+#pragma mark NSDataDetector　matchesInString　URL
+-(void)method003
+{
+    NSString *aString = @"My site's URL is http://d.hatena.ne.jp/jjj777/.";
+    NSDataDetector *aDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
+    NSArray *resultArray = [aDetector matchesInString:aString
+                                           options:0
+                                             range:NSMakeRange(0, [aString length])];
+    
+    [resultArray enumerateObjectsWithOptions:NSEnumerationConcurrent //並列
+                                  usingBlock:^(id obj,NSUInteger idx,BOOL *stop){
+                                      NSTextCheckingResult *tcResult = (NSTextCheckingResult *)obj;
+                                      NSLog(@"%s %@ %u-%u",__FUNCTION__,[obj URL],tcResult.range.location,tcResult.range.length );
+                                      return;
+                                      
+                                  }];
+    
+}
+#pragma mark NSDataDetector　date
+-(void)method004
+{
+    NSString *aString = @"Today is 2012/8/15";
+    NSError *error = nil;
+    NSDataDetector *aDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeDate error:&error];
+    NSArray *resultArray = [aDetector matchesInString:aString
+                                              options:0
+                                                range:NSMakeRange(0, [aString length])];
+
+    [resultArray enumerateObjectsWithOptions:NSEnumerationConcurrent //並列
+                                  usingBlock:^(id obj,NSUInteger idx,BOOL *stop){
+                                      
+                                      if (obj) {
+                                          NSTextCheckingResult *tcResult = (NSTextCheckingResult *)obj;
+                                          NSLog(@"%s %@ %u-%u",__FUNCTION__,[obj date],tcResult.range.location,tcResult.range.length );
+                                      }
+                                      
+                                      return;
+                                      
+                                  }];
+    
+}
+#pragma mark NSDataDetector　date
+-(void)method005
+{
+    NSString *aString = @"Today is 2012年8月15日";
+    NSError *error = nil;
+    NSDataDetector *aDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeDate error:&error];
+    NSArray *resultArray = [aDetector matchesInString:aString
+                                              options:0
+                                                range:NSMakeRange(0, [aString length])];
+    
+    [resultArray enumerateObjectsWithOptions:NSEnumerationConcurrent //並列
+                                  usingBlock:^(id obj,NSUInteger idx,BOOL *stop){
+                                      
+                                      if (obj) {
+                                          NSTextCheckingResult *tcResult = (NSTextCheckingResult *)obj;
+                                          NSLog(@"%s %@ %u-%u",__FUNCTION__,[obj date],tcResult.range.location,tcResult.range.length );
+                                      }
+                                      
+                                      return;
+                                      
+                                  }];
+    //=>2012-08-15 03:00:00 +0000 9-10
+}
+#pragma mark NSDataDetector　phone
+-(void)method006
+{
+    NSString *aString = @"My phone number is 01234567890";
+    NSError *error = nil;
+    NSDataDetector *aDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypePhoneNumber error:&error];
+    NSArray *resultArray = [aDetector matchesInString:aString
+                                              options:0
+                                                range:NSMakeRange(0, [aString length])];
+        [resultArray enumerateObjectsWithOptions:NSEnumerationConcurrent //並列
+                                  usingBlock:^(id obj,NSUInteger idx,BOOL *stop){
+                                      
+                                      if (obj) {
+                                          NSTextCheckingResult *tcResult = (NSTextCheckingResult *)obj;
+                                          NSLog(@"%s %@ %u-%u",__FUNCTION__,[obj phoneNumber],tcResult.range.location,tcResult.range.length );
+                                      }
+                                      
+                                      return;
+                                      
+                                  }];
+    
+}
+
+#pragma mark NSOrthography orthographyWithDominantScript:
+-(void)method007
+{
+    NSString *aString = @"My phone number is 01234567890";
+    NSError *error = nil;
+    NSDataDetector *aDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeTransitInformation error:&error];
+
+    NSArray *resultArray = [aDetector matchesInString:aString
+                                              options:0
+                                                range:NSMakeRange(0, [aString length])];
+    [resultArray enumerateObjectsWithOptions:NSEnumerationConcurrent //並列
+                                  usingBlock:^(id obj,NSUInteger idx,BOOL *stop){
+                                      
+                                      if (obj) {
+                                          NSTextCheckingResult *tcResult = (NSTextCheckingResult *)obj;
+                                          NSLog(@"%s %@ %u-%u",__FUNCTION__,[obj phoneNumber],tcResult.range.location,tcResult.range.length );
+                                      }
+                                      
+                                      return;
+                                      
+                                  }];
+
+    
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self method001];
+    [self method002];
+    [self method003];
+    
+    [self method004];
+    [self method005];
+    [self method006];
+    [self method007];
     return YES;
 }
 							

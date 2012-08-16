@@ -9,10 +9,254 @@
 #import "OOOAppDelegate.h"
 
 @implementation OOOAppDelegate
+#pragma mark NSMutableCharacterSet addCharactersInRange:
+-(void)method001
+{
+    NSString *scanString;
+    NSString *sepaString;
+    
+    NSString *string = @"12=3  ,abc , def,ghi,jkl,mno";
+    
+    NSMutableCharacterSet *chSet = [NSMutableCharacterSet alphanumericCharacterSet];
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    
+    [scanner setCharactersToBeSkipped:[NSCharacterSet whitespaceCharacterSet] ];
+    NSCharacterSet *newCharacterSet1 = [chSet copy];
+    while(![scanner isAtEnd]) {
+        if([scanner scanUpToCharactersFromSet:chSet intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+            //NSLog(@"%s code=0x%lX %@",__FUNCTION__,(UTF32Char)'=',scanString);
+        }
+        [scanner scanCharactersFromSet:newCharacterSet1 intoString:&sepaString];
+    }
+    [chSet addCharactersInRange:NSMakeRange(0x3D, 1)];
+     NSLog(@"%s -add characterset -",__FUNCTION__);
+    NSScanner *scanner2 = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet2 = [chSet copy];
+    while(![scanner2 isAtEnd]) {
+        if([scanner2 scanUpToCharactersFromSet:newCharacterSet2 intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+            //NSLog(@"%s code=0x%lX %@",__FUNCTION__,(UTF32Char)'=',scanString);
+        }
+        [scanner2 scanCharactersFromSet:newCharacterSet2 intoString:&sepaString];
+    }
+    
+}
+#pragma mark NSMutableCharacterSet alphanumericCharacterSet:
+-(void)method002
+{
+    NSString *scanString;
+    NSString *sepaString;
+    
+    NSString *string = @"12=3  ,abc , def,ghi,jkl,mno";
+    
+    NSMutableCharacterSet *chSet = [NSMutableCharacterSet alphanumericCharacterSet];
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet1 = [chSet copy];
+    [scanner setCharactersToBeSkipped:[NSCharacterSet whitespaceCharacterSet] ];
+    while(![scanner isAtEnd]) {
+        if([scanner scanUpToCharactersFromSet:newCharacterSet1 intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+            //NSLog(@"%s code=0x%lX %@",__FUNCTION__,(UTF32Char)'=',scanString);
+        }
+        [scanner scanCharactersFromSet:newCharacterSet1 intoString:&sepaString];
+    }
+    [chSet removeCharactersInRange:NSMakeRange(0x30, 10)];
+    NSLog(@"%s -remove characterset -",__FUNCTION__);
+    NSScanner *scanner2 = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet2 = [chSet copy];
+    while(![scanner2 isAtEnd]) {
+        if([scanner2 scanUpToCharactersFromSet:newCharacterSet2 intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+            //NSLog(@"%s code=0x%lX %@",__FUNCTION__,(UTF32Char)'9',scanString);
+        }
+        [scanner2 scanCharactersFromSet:newCharacterSet2 intoString:&sepaString];
+    }
+    
+}
+#pragma mark NSMutableCharacterSet addCharactersInString:
+-(void)method003
+{
+    NSString *scanString;
+    NSString *sepaString;
+    
+    NSString *string = @"12=3  ,abc , def,ghi,jkl,mno";
+    
+    NSMutableCharacterSet *chSet = [NSMutableCharacterSet alphanumericCharacterSet];
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet1 = [chSet copy];
+    [scanner setCharactersToBeSkipped:[NSCharacterSet whitespaceCharacterSet] ];
+    while(![scanner isAtEnd]) {
+        if([scanner scanUpToCharactersFromSet:newCharacterSet1 intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+            //NSLog(@"%s code=0x%lX %@",__FUNCTION__,(UTF32Char)'=',scanString);
+        }
+        [scanner scanCharactersFromSet:newCharacterSet1 intoString:&sepaString];
+    }
+    [chSet addCharactersInString:@"="];
+    NSLog(@"%s -add characterset -",__FUNCTION__);
+    NSScanner *scanner2 = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet2 = [chSet copy];
+    while(![scanner2 isAtEnd]) {
+        if([scanner2 scanUpToCharactersFromSet:newCharacterSet2 intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+            //NSLog(@"%s code=0x%lX %@",__FUNCTION__,(UTF32Char)'=',scanString);
+        }
+        [scanner2 scanCharactersFromSet:newCharacterSet2 intoString:&sepaString];
+    }
+    
+}
+#pragma mark NSMutableCharacterSet removeCharactersInString:
+-(void)method004
+{
+    NSString *scanString;
+    NSString *sepaString;
+    
+    NSString *string = @"12=3  ,9abc , def,ghi,jkl,mno";
+    
+    NSMutableCharacterSet *chSet = [NSMutableCharacterSet alphanumericCharacterSet];
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet1 = [chSet copy];
+    [scanner setCharactersToBeSkipped:[NSCharacterSet whitespaceCharacterSet] ];
+    while(![scanner isAtEnd]) {
+        if([scanner scanUpToCharactersFromSet:newCharacterSet1 intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+        }
+        [scanner scanCharactersFromSet:newCharacterSet1 intoString:&sepaString];
+    }
+    
+    for (int i = 0x30; i <= 0x39; i++) {
+        UTF32Char currentChar = (UTF32Char)i;
+        NSString *str = [[NSString alloc] initWithBytes:&currentChar length:4 encoding:NSUTF32LittleEndianStringEncoding];
+        [chSet removeCharactersInString:str];
+        }
+    NSLog(@"%s -remove characterset -",__FUNCTION__);
+    NSScanner *scanner2 = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet2 = [chSet copy];
+    while(![scanner2 isAtEnd]) {
+        if([scanner2 scanUpToCharactersFromSet:newCharacterSet2 intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+        }
+        [scanner2 scanCharactersFromSet:newCharacterSet2 intoString:&sepaString];
+    }
+    
+}
+
+#pragma mark NSMutableCharacterSet formIntersectionWithCharacterSet:
+-(void)method005
+{
+    NSString *scanString;
+    NSString *sepaString;
+    
+    NSString *string = @"12=3  ,9abc , def,ghi,jkl,mno";
+    
+    NSMutableCharacterSet *chSet = [NSMutableCharacterSet alphanumericCharacterSet];
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet1 = [chSet copy];
+    [scanner setCharactersToBeSkipped:[NSCharacterSet whitespaceCharacterSet] ];
+    while(![scanner isAtEnd]) {
+        if([scanner scanUpToCharactersFromSet:newCharacterSet1 intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+        }
+        [scanner scanCharactersFromSet:newCharacterSet1 intoString:&sepaString];
+    }
+    
+    [chSet formIntersectionWithCharacterSet:[NSCharacterSet decimalDigitCharacterSet]];
+    
+    
+    NSLog(@"%s -formIntersectionWithCharacterSet -",__FUNCTION__);
+    NSScanner *scanner2 = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet2 = [chSet copy];
+    while(![scanner2 isAtEnd]) {
+        if([scanner2 scanUpToCharactersFromSet:newCharacterSet2 intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+        }
+        [scanner2 scanCharactersFromSet:newCharacterSet2 intoString:&sepaString];
+    }
+    
+}
+
+#pragma mark NSMutableCharacterSet formUnionWithCharacterSet:
+-(void)method006
+{
+    NSString *scanString;
+    NSString *sepaString;
+    
+    NSString *string = @"12=3  ,9AbC , dEF,ghi,jKl,MNO";
+    
+    NSMutableCharacterSet *chSet = [NSMutableCharacterSet lowercaseLetterCharacterSet];
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet1 = [chSet copy];
+    [scanner setCharactersToBeSkipped:[NSCharacterSet whitespaceCharacterSet] ];
+    while(![scanner isAtEnd]) {
+        if([scanner scanUpToCharactersFromSet:newCharacterSet1 intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+            //NSLog(@"%s code=0x%lX %@",__FUNCTION__,(UTF32Char)'=',scanString);
+        }
+        [scanner scanCharactersFromSet:newCharacterSet1 intoString:&sepaString];
+    }
+    
+    [chSet formUnionWithCharacterSet:[NSCharacterSet decimalDigitCharacterSet]];
+    
+    
+    NSLog(@"%s -formUnionWithCharacterSet -",__FUNCTION__);
+    NSScanner *scanner2 = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet2 = [chSet copy];
+    while(![scanner2 isAtEnd]) {
+        if([scanner2 scanUpToCharactersFromSet:newCharacterSet2 intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+            //NSLog(@"%s code=0x%lX %@",__FUNCTION__,(UTF32Char)'9',scanString);
+        }
+        [scanner2 scanCharactersFromSet:newCharacterSet2 intoString:&sepaString];
+    }
+    
+}
+#pragma mark NSMutableCharacterSet invert:
+-(void)method007
+{
+    NSString *scanString;
+    NSString *sepaString;
+    
+    NSString *string = @"12=3  ,9AbC , dEF,ghi,jKl,MNO";
+    
+    NSMutableCharacterSet *chSet = [NSMutableCharacterSet lowercaseLetterCharacterSet];
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet1 = [chSet copy];
+    [scanner setCharactersToBeSkipped:[NSCharacterSet whitespaceCharacterSet] ];
+    while(![scanner isAtEnd]) {
+        if([scanner scanUpToCharactersFromSet:chSet intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+            //NSLog(@"%s code=0x%lX %@",__FUNCTION__,(UTF32Char)'=',scanString);
+        }
+        [scanner scanCharactersFromSet:newCharacterSet1 intoString:&sepaString];
+    }
+    
+    [chSet formUnionWithCharacterSet:[NSCharacterSet decimalDigitCharacterSet]];
+    [chSet invert];
+    
+    NSLog(@"%s -formUnionWithCharacterSet invert -",__FUNCTION__);
+    NSScanner *scanner2 = [NSScanner scannerWithString:string];
+    NSCharacterSet *newCharacterSet2 = [chSet copy];
+    while(![scanner2 isAtEnd]) {
+        if([scanner2 scanUpToCharactersFromSet:chSet intoString:&scanString]) {
+            NSLog(@"%s -%@-",__FUNCTION__,scanString);
+            //NSLog(@"%s code=0x%lX %@",__FUNCTION__,(UTF32Char)'9',scanString);
+        }
+        [scanner2 scanCharactersFromSet:newCharacterSet2 intoString:&sepaString];
+    }
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self method001];
+    [self method002];
+    [self method003];
+    [self method004];
+    [self method005];
+    [self method006];
+    [self method007];
     return YES;
 }
 							

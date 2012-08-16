@@ -10,9 +10,88 @@
 
 @implementation OOOAppDelegate
 
+#pragma mark NSOrthography orthographyWithDominantScript:
+-(void)method001
+{
+    
+    NSString *textToAnalyse = @"That Japanese restaurant has a really authentic atmosphere.";
+    
+    //パースしたときの文字の要素の範囲
+    NSRange stringRange = NSMakeRange(0, textToAnalyse.length);
+    
+    // 言語マップの辞書
+    NSArray *language = [NSArray arrayWithObjects:@"en",@"de",@"fr",nil];
+    NSDictionary* languageMap = [NSDictionary dictionaryWithObject:language forKey:@"Latn"];
+    
+    NSOrthography *orthography = [NSOrthography orthographyWithDominantScript:@"Latn" languageMap:languageMap];
+    [textToAnalyse enumerateLinguisticTagsInRange:stringRange
+                                           scheme:NSLinguisticTagSchemeLexicalClass
+                                          options:(NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation)
+                                      orthography:orthography
+                                       usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
+                                           NSLog(@"\"%@\" is a %@, tokenRange (%d,%d), sentenceRange (%d-%d)",[textToAnalyse substringWithRange:tokenRange] ,tag,tokenRange.location,tokenRange.length, sentenceRange.location, sentenceRange.length);
+                                       }];
+    
+    //=>"That" is a Determiner, tokenRange (0,4), sentenceRange (0-59)
+    //=>"Japanese" is a Adjective, tokenRange (5,8), sentenceRange (0-59)
+    //=>"restaurant" is a Noun, tokenRange (14,10), sentenceRange (0-59)
+    // ...
+}
+
+#pragma mark NSOrthography property
+-(void)method002
+{
+    NSString *aString = @"This is iOS code. これは日本語です。";
+    
+    NSRange aRange = NSMakeRange (1, [aString length]-1);
+    
+    NSString *tagScheme = NSLinguisticTagSchemeNameType;
+    
+    NSLinguisticTaggerOptions opts = NSLinguisticTaggerOmitPunctuation;
+    
+    NSArray *supportedLanguage = [NSLinguisticTagger   availableTagSchemesForLanguage:@"en"];
+    
+    NSLinguisticTagger *t = [[NSLinguisticTagger alloc]  initWithTagSchemes:supportedLanguage options: NSLinguisticTaggerOmitPunctuation] ;
+    
+    [t setString:aString];
+    
+    
+    [t enumerateTagsInRange: aRange
+                     scheme: tagScheme
+                    options:(NSLinguisticTaggerOptions)opts
+                 usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange,  BOOL *stop)
+     
+     {
+         
+         NSLog(@"%@", tag);
+         
+         
+     }];
+    
+    [t enumerateTagsInRange: aRange scheme: NSLinguisticTagSchemeNameTypeOrLexicalClass options:(NSLinguisticTaggerOptions) opts usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange,  BOOL *stop)
+     
+     {
+         
+         NSLog(@"%@", tag);
+         
+     }];
+    NSRange effectiveRange;
+    NSOrthography *orthography = [t orthographyAtIndex:aRange.location effectiveRange:&effectiveRange];
+    NSLog(@"%u,%u,%@",effectiveRange.location,effectiveRange.length,orthography.allLanguages);
+    NSLog(@"%u,%u,%@",effectiveRange.location,effectiveRange.length,orthography.allScripts);
+    NSLog(@"%u,%u,%@",effectiveRange.location,effectiveRange.length,orthography.dominantLanguage);
+    NSLog(@"%u,%u,%@",effectiveRange.location,effectiveRange.length,orthography.dominantScript);
+    NSLog(@"%u,%u,%@",effectiveRange.location,effectiveRange.length,orthography.languageMap);
+    
+    NSLog(@"%s %@",__FUNCTION__,[orthography languagesForScript:@"Jpan"]);
+    NSLog(@"%s %@",__FUNCTION__,[orthography dominantLanguageForScript:@"Jpan"]);
+
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self method001];
+    [self method002];
     return YES;
 }
 							

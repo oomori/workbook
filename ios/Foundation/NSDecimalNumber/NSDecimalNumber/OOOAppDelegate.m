@@ -19,13 +19,13 @@
     NSDecimalNumber *dNum1 = [[NSDecimalNumber alloc]  initWithString:@"3.1415926535897932384626433832795028841971693993751058209749445923078164"];
     NSDecimalNumber *dNum = [NSDecimalNumber alloc] ;
     
-    NSDecimalNumberHandler* roundingBehavior =    [NSDecimalNumberHandler
-                                                   decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:4
-                                                   raiseOnExactness:NO
-                                                   
-                                                   raiseOnOverflow:NO 
-                                                   raiseOnUnderflow:NO
-                                                   raiseOnDivideByZero:NO];
+    NSDecimalNumberHandler* roundingBehavior =
+            [NSDecimalNumberHandler
+                        decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:4
+                                raiseOnExactness:NO
+                                raiseOnOverflow:NO
+                                raiseOnUnderflow:NO
+                                raiseOnDivideByZero:NO];
     
 
     dNum = [dNum1 decimalNumberByRoundingAccordingToBehavior:roundingBehavior];
@@ -35,11 +35,73 @@
     //-[OOOAppDelegate method001] 3.141600
 }
 
+#pragma mark NSDecimalNumber decimalNumberWithDecimal:
+-(void)method002
+{
+    NSNumber *integerNumber = [NSNumber numberWithInteger:123456];//32bit
+    NSDecimal decimalValue = [integerNumber decimalValue];
+    
+    NSDecimalNumber *dNum1 = [NSDecimalNumber decimalNumberWithDecimal:decimalValue];
+    NSLog(@"%s %@",__FUNCTION__,[dNum1 description]);
+    //-[OOOAppDelegate method002] 123456
+}
 
+#pragma mark NSDecimalNumber decimalNumberWithMantissa:exponent:isNegative:
+-(void)method003
+{
+    NSDecimalNumber *dNum1 =
+        [NSDecimalNumber decimalNumberWithMantissa:12345
+                                          exponent:5
+                                        isNegative:NO];
+    NSLog(@"%s %@",__FUNCTION__,[dNum1 description]);
+    //-[OOOAppDelegate method002] 1234500000
+}
+
+#pragma mark NSDecimalNumber decimalNumberWithString:
+-(void)method004
+{
+    NSDecimalNumber *dNum1 =
+    [NSDecimalNumber decimalNumberWithString:@"12345.12"];
+    NSLog(@"%s %@",__FUNCTION__,[dNum1 description]);
+    //-[OOOAppDelegate method002] 12345
+}
+#pragma mark NSDecimalNumber decimalNumberWithDecimal:
+-(void)method005
+{
+    NSLocale *frLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"];
+    NSDecimalNumber *dNum1 =
+    [NSDecimalNumber decimalNumberWithString:@"12345,12" locale:frLocale];
+    NSLog(@"%s %@",__FUNCTION__,[dNum1 description]);
+    //-[OOOAppDelegate method002] 12345
+}
+
+#pragma mark NSDecimalNumber decimalNumberWithDecimal:
+-(void)method006
+{
+    NSDecimalNumber *dNum1 =
+    [NSDecimalNumber one];
+    NSLog(@"%s %@",__FUNCTION__,[dNum1 description]);
+    //-[OOOAppDelegate method006] 1
+}
+
+#pragma mark NSDecimalNumber decimalNumberWithDecimal:
+-(void)method006
+{
+    NSDecimalNumber *dNum1 =
+    [NSDecimalNumber one];
+    NSLog(@"%s %@",__FUNCTION__,[dNum1 description]);
+    //-[OOOAppDelegate method006] 1
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self method001];
+    [self method002];
+    [self method003];
+    [self method004];
+    [self method005];
+    
+    [self method006];
     return YES;
 }
 							

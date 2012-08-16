@@ -35,7 +35,7 @@
     [aTagger setString:aString];
     [aTagger enumerateTagsInRange:NSMakeRange(0, [aString length]) 
                            scheme:targetScheme
-                          options:0 
+                          options:(NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation) 
                        usingBlock: ^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
                            NSString *token = [aString substringWithRange:tokenRange];
                            NSString *sentence = [aString substringWithRange:sentenceRange];
@@ -58,13 +58,210 @@
                                                     [tempDic objectForKey:@"token"],
                                                     [tempDic objectForKey:@"sentence"]);
     }
-    //=>[OOOAppDelegate method027] : (1,345,567,912,1233)
+    //=>
     
 }
+
+#pragma mark NSLinguisticTagger  initWithTagSchemes
+-(void)method002
+{
+    NSString *aString = @"My name is OOMORI satoshi.";
+    NSString *targetScheme = NSLinguisticTagSchemeLexicalClass;//品詞。英語のみ,Verb,Noun,SentenceTerminator
+    
+    
+    NSArray *aScheme = [NSArray arrayWithObject:targetScheme];
+    NSLinguisticTagger *aTagger = [[NSLinguisticTagger alloc] initWithTagSchemes:aScheme options:0];
+    
+    //ブロック内での結果を得るためにNSArrayを作っておく
+    __block NSMutableArray *tagArray =  [NSMutableArray arrayWithCapacity:0];
+    
+    [aTagger setString:aString];
+    [aTagger enumerateTagsInRange:NSMakeRange(0, [aString length])
+                           scheme:targetScheme
+                          options:(NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation)
+                       usingBlock: ^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
+                           NSString *token = [aString substringWithRange:tokenRange];
+                           NSString *sentence = [aString substringWithRange:sentenceRange];
+                           //あとで使うためにNSDictionaryにいれて
+                           NSDictionary *aDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                                        tag,@"tag",
+                                                        token,@"token",
+                                                        sentence,@"sentence",
+                                                        nil];
+                           //aDictionaryをNSArrayに入れる
+                           [tagArray addObject:aDictionary];
+                           
+                       }
+     ];
+    
+    
+    NSLog(@"%s", __FUNCTION__);
+    for (NSDictionary *tempDic in tagArray) {
+        NSLog(@"tag = %@,token = %@,sentence = %@",[tempDic objectForKey:@"tag"],
+              [tempDic objectForKey:@"token"],
+              [tempDic objectForKey:@"sentence"]);
+    }
+    //=>
+    
+}
+
+#pragma mark NSLinguisticTagger  initWithTagSchemes
+-(void)method003
+{
+    NSString *aString = @"My name is OOMORI satoshi.";
+    NSString *targetScheme = NSLinguisticTagSchemeTokenType;//品詞。英語のみ,Verb,Noun,SentenceTerminator
+
+     
+    NSArray *aScheme = [NSArray arrayWithObject:targetScheme];
+    NSLinguisticTagger *aTagger = [[NSLinguisticTagger alloc] initWithTagSchemes:aScheme options:0];
+    
+    //ブロック内での結果を得るためにNSArrayを作っておく
+    __block NSMutableArray *tagArray =  [NSMutableArray arrayWithCapacity:0];
+    
+    [aTagger setString:aString];
+    [aTagger enumerateTagsInRange:NSMakeRange(0, [aString length])
+                           scheme:targetScheme
+                          options:(NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation)
+                       usingBlock: ^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
+                           NSString *token = [aString substringWithRange:tokenRange];
+                           NSString *sentence = [aString substringWithRange:sentenceRange];
+                           //あとで使うためにNSDictionaryにいれて
+                           NSDictionary *aDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                                        tag,@"tag",
+                                                        token,@"token",
+                                                        sentence,@"sentence",
+                                                        nil];
+                           //aDictionaryをNSArrayに入れる
+                           [tagArray addObject:aDictionary];
+                           
+                       }
+     ];
+    
+    
+    NSLog(@"%s", __FUNCTION__);
+    for (NSDictionary *tempDic in tagArray) {
+        NSLog(@"tag = %@,token = %@,sentence = %@",[tempDic objectForKey:@"tag"],
+              [tempDic objectForKey:@"token"],
+              [tempDic objectForKey:@"sentence"]);
+    }
+
+    NSLog(@"%s %@", __FUNCTION__,[aTagger tagSchemes]);
+    //=>LexicalClass
+    NSLog(@"%s %@", __FUNCTION__,[NSLinguisticTagger availableTagSchemesForLanguage:@"FR"]);
+    //=>(TokenType,Language,Script,Lemma,LexicalClass,NameType,NameTypeOrLexicalClass)
+    
+    //jaだと(TokenType,Language,Script)のみ
+    //FRも(TokenType,Language,Script)のみ
+    NSLog(@"%s %@", __FUNCTION__,[aTagger string]);
+}
+#pragma mark NSLinguisticTagger  possibleTagsAtIndex:scheme:tokenRange:sentenceRange:scores:
+-(void)method004
+{
+    NSMutableString *aString = [@"My name is OOMORI satoshi." mutableCopy];
+    NSString *targetScheme = NSLinguisticTagSchemeNameTypeOrLexicalClass;
+    
+    
+    NSArray *aScheme = [NSArray arrayWithObject:targetScheme];
+    NSLinguisticTagger *aTagger = [[NSLinguisticTagger alloc] initWithTagSchemes:aScheme options:0];
+    
+    [aTagger setString:aString];
+    
+    NSInteger searchIndex = 0;
+    while (searchIndex < [aString length]) {
+     
+    NSRange tokenRange;
+    NSRange sentenceRange;
+        NSArray *scoreArray;
+    NSArray *anArray = [aTagger possibleTagsAtIndex:searchIndex
+                          scheme:targetScheme
+                      tokenRange:&tokenRange
+                   sentenceRange:&sentenceRange
+                          scores:&scoreArray];
+        [aTagger stringEditedInRange:tokenRange changeInLength:0];
+    for (NSString *tag in anArray) {
+        NSLog(@"tag = %@",tag);
+         
+    }
+    NSLog(@"(%u-%u)",tokenRange.location,tokenRange.length);
+    NSLog(@"%@",[scoreArray description]);
+        
+        searchIndex +=tokenRange.length;
+    }
+    NSLog(@"%@",[aTagger string]);
+}
+
+#pragma mark NSLinguisticTagger  possibleTagsAtIndex:scheme:tokenRange:sentenceRange:scores:
+-(void)method005
+{
+    NSMutableString *aString = [@"My name is OOMORI satoshi." mutableCopy];
+    NSString *targetScheme = NSLinguisticTagSchemeNameTypeOrLexicalClass;
+    
+    
+    NSArray *aScheme = [NSArray arrayWithObject:targetScheme];
+    NSLinguisticTagger *aTagger = [[NSLinguisticTagger alloc] initWithTagSchemes:aScheme options:0];
+    
+    [aTagger setString:aString];
+    
+    NSInteger searchIndex = 0;
+    while (searchIndex < [aString length]) {
+        
+        NSRange tokenRange;
+        NSRange sentenceRange;
+        NSArray *scoreArray;
+        NSString *tag = [aTagger tagAtIndex:searchIndex
+                                                 scheme:targetScheme
+                                             tokenRange:&tokenRange
+                                          sentenceRange:&sentenceRange
+                                                 ];
+        [aTagger stringEditedInRange:tokenRange changeInLength:0];
+        
+        NSLog(@"tag = %@",tag);
+            
+        
+        NSLog(@"(%u-%u)",tokenRange.location,tokenRange.length);
+        NSLog(@"%@",[scoreArray description]);
+        
+        searchIndex +=tokenRange.length;
+    }
+    NSLog(@"%@",[aTagger string]);
+}
+#pragma mark NSLinguisticTagger  possibleTagsAtIndex:scheme:tokenRange:sentenceRange:scores:
+-(void)method006
+{
+    NSMutableString *aString = [@"My name is OOMORI satoshi." mutableCopy];
+    NSString *targetScheme = NSLinguisticTagSchemeNameTypeOrLexicalClass;
+    
+    
+    NSArray *aScheme = [NSArray arrayWithObject:targetScheme];
+    NSLinguisticTagger *aTagger = [[NSLinguisticTagger alloc] initWithTagSchemes:aScheme options:0];
+    
+    [aTagger setString:aString];
+    
+        
+        NSArray *tokenRange;
+        NSArray *tagArray = [aTagger tagsInRange:NSMakeRange(0, 10)
+                                     scheme:targetScheme
+                                         options:0
+                                 tokenRanges:&tokenRange
+                         ];
+
+
+        NSLog(@"tag = %@",[tagArray description]);
+    NSRange sentenceRange = [aTagger sentenceRangeForRange:NSMakeRange(0, 3)];
+    NSLog(@"sentenceRange = %d-%d",sentenceRange.location,sentenceRange.length);
+    
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self method001];
+    [self method002];
+    [self method003];
+    [self method004];
+    [self method005];
+    [self method006];
     return YES;
 }
 							
