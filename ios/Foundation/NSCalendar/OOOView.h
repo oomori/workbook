@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface OOOView : UIView
-
+{
+    
+    NSCalendar *aCalendar;
+    NSCalendar *bCalendar;
+}
 @end

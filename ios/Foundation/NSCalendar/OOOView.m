@@ -9,7 +9,24 @@
 #import "OOOView.h"
 
 @implementation OOOView
+-(void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
+{
 
+    NSLog(@"--%@",[aCalendar calendarIdentifier]);
+    
+    //こちらは環境設定を変えたら自動的に反映される
+    NSLog(@"--%@",[bCalendar calendarIdentifier]);
+
+ }
+-(void)awakeFromNib
+{
+    aCalendar = [NSCalendar currentCalendar];
+    bCalendar = [NSCalendar autoupdatingCurrentCalendar];
+    NSLog(@"--%@",[aCalendar calendarIdentifier]);
+    NSLog(@"--%@",[bCalendar calendarIdentifier]);
+    
+    
+}
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
