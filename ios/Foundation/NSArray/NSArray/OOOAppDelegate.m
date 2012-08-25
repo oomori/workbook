@@ -444,7 +444,7 @@
     
     //普通に
     retArr = [ar sortedArrayUsingSelector:@selector(compare:)];
-    NSLog(@"021 compare: %@",[retArr description]);
+    NSLog(@"%s compare: %@",__FUNCTION__,[retArr description]);
     // 021 compare: (a,aaa,bbb,cccc)
     
     //NSString+Extractとしてカテゴリを作っている。comparePlus:というメソッドを作成済み。

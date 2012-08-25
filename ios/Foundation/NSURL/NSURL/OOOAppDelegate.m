@@ -540,14 +540,14 @@ didReceiveResponse:(NSURLResponse *)response
     NSLog(@"%s %@",__FUNCTION__,[aUrl relativeString]);
 
 }
-#pragma mark NSURL relativeString
+#pragma mark NSURL lastPathComponent
 -(void)method028
 {
     NSURL *aUrl = [NSURL URLWithString:@"http://www.oomori.com/index.html?name=oomori&age=44"];
     NSLog(@"%s %@",__FUNCTION__,[aUrl lastPathComponent]);
 }
 
-#pragma mark NSURL relativeString
+#pragma mark NSURL parameterString
 -(void)method029
 {
     NSURL *aUrl = [NSURL URLWithString:@"http://www.oomori.com/index.html;param?name=oomori&age=44"];
@@ -614,10 +614,16 @@ didReceiveResponse:(NSURLResponse *)response
     NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, @"aaa", nil]];
     
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL filePathURL]);
+    //=>-[OOOAppDelegate method035] file://localhost/Users/xxxxx/Library/Application%20Support/iPhone%20Simulator/5.1/Applications/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/Documents/aaa
+    
     NSURL *newURL = [absoluteURL URLByAppendingPathComponent:@"dir" isDirectory:YES];
     NSLog(@"%s %@",__FUNCTION__,[newURL filePathURL]);
+    //=>-[OOOAppDelegate method035] file://localhost/Users/xxxxxxx/Library/Application%20Support/iPhone%20Simulator/5.1/Applications/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/Documents/aaa/dir/
+    
     NSURL *newNewURL = [newURL URLByAppendingPathComponent:filename];
     NSLog(@"%s %@",__FUNCTION__,[newNewURL filePathURL]);
+    //=>-[OOOAppDelegate method035] file://localhost/Users/xxxxxxx/Library/Application%20Support/iPhone%20Simulator/5.1/Applications/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/Documents/aaa/dir/testWritecharset.bitmap
+    
 }
 
 #pragma mark NSURL URLByAppendingPathComponent
