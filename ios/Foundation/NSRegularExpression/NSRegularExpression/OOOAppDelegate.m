@@ -257,7 +257,7 @@
                               ];
     
     NSLog(@"%s %@",__FUNCTION__,resultSring  );
-    //=>1 *12* *123* *1234* *12345* 123456
+    //=>*yen* bin *yin* *yes*
     
 }
 
@@ -265,8 +265,8 @@
 -(void)method011
 {
     
-	NSString *str = @"yen ken key hen" ;
-    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"^y\\b" options:NSRegularExpressionCaseInsensitive error:nil];
+	NSString *str = @"こんにちは ken key こんにちは hen\nこんにちは ken" ;
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"^こんにちは\\b" options:(NSRegularExpressionCaseInsensitive | NSRegularExpressionAnchorsMatchLines) error:nil];
     NSString *template =
     @"*$0*";
     
@@ -277,9 +277,139 @@
                               ];
     
     NSLog(@"%s %@",__FUNCTION__,resultSring  );
-    //=>1 *12* *123* *1234* *12345* 123456
+    //=>-[OOOAppDelegate method011] *こんにちは* ken key こんにちは hen *こんにちは* ken
+    
+    NSRegularExpression *regExp2 = [NSRegularExpression regularExpressionWithPattern:@"^こんにちは\\b" options:(NSRegularExpressionCaseInsensitive ) error:nil];
+
+    
+    NSString *resultSring2 =  [regExp2 stringByReplacingMatchesInString:str
+                                                              options:0
+                                                                range:NSMakeRange(0, [str length])
+                                                         withTemplate:template
+                              ];
+    
+    NSLog(@"%s %@",__FUNCTION__,resultSring2  );
+    //=>-[OOOAppDelegate method011] *こんにちは* ken key こんにちは hen こんにちは ken
     
 }
+#pragma mark -enumerateMatchesInString:options:range:usingBlock:
+-(void)method012
+{
+    NSError *aError = nil;
+	NSString *str = @"http://www.oomori.com?name=oomori&age=44";
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"([\\w]+)=([\\w]+)"
+                                                                            options:NSRegularExpressionCaseInsensitive
+                                                                              error:&aError];
+    __block NSMutableDictionary *muDic =  [NSMutableDictionary dictionaryWithCapacity:0];
+    [regExp enumerateMatchesInString:str
+                             options:NSMatchingReportProgress
+                               range:NSMakeRange(0,[str length])
+                          usingBlock:
+     ^(NSTextCheckingResult *result ,NSMatchingFlags flags,BOOL *stop )
+     {
+         if (!(flags & NSMatchingProgress)) {
+             NSString *aKey = [str substringWithRange:[result rangeAtIndex:1]];
+             NSString *aValue = [str substringWithRange:[result rangeAtIndex:2]];
+             [muDic setObject:aValue forKey:aKey];
+             NSLog(@"%s %@,%@",__FUNCTION__,@"NSMatchingProgress",aKey);
+         
+             if (!(flags & NSMatchingCompleted)) {
+                 NSLog(@"%s %@%@",__FUNCTION__,@"NSMatchingCompleted",aKey);
+             }
+             if (!(flags & NSMatchingHitEnd)) {
+                 NSLog(@"%s %@%@",__FUNCTION__,@"NSMatchingHitEnd",aKey);
+             }
+             if (!(flags & NSMatchingRequiredEnd)) {
+                 NSLog(@"%s %@%@",__FUNCTION__,@"NSMatchingRequiredEnd",aKey);
+             }
+             if (!(flags & NSMatchingInternalError)) {
+                 NSLog(@"%s %@%@",__FUNCTION__,@"NSMatchingInternalError",aKey);
+             }
+            }
+     }
+     
+     ];
+    NSLog(@"%s%@",__FUNCTION__,[muDic description]);
+    //=>-[OOOAppDelegate method001]{age = 44;name = oomori;}
+}
+
+#pragma mark 定数NSMatchingAnchored
+-(void)method013
+{
+    NSString *str = @"こんにちは ken key こんにちは hen\nこんにちは ken" ;
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"^こんにちは\\b" options:(NSRegularExpressionCaseInsensitive | NSRegularExpressionAnchorsMatchLines) error:nil];
+    NSString *template =
+    @"*$0*";
+    
+    NSString *resultSring =  [regExp stringByReplacingMatchesInString:str
+                                                              options:0
+                                                                range:NSMakeRange(0, [str length])
+                                                         withTemplate:template
+                              ];
+    
+    NSLog(@"%s %@",__FUNCTION__,resultSring  );
+    //=>-[OOOAppDelegate method013] *こんにちは* ken key こんにちは hen*こんにちは* ken
+    
+    NSRegularExpression *regExp2 = [NSRegularExpression regularExpressionWithPattern:@"^こんにちは\\b" options:(NSRegularExpressionCaseInsensitive | NSRegularExpressionAnchorsMatchLines) error:nil];
+    
+    
+    NSString *resultSring2 =  [regExp2 stringByReplacingMatchesInString:str
+                                                                options:NSMatchingAnchored
+                                                                  range:NSMakeRange(0, [str length])
+                                                           withTemplate:template
+                               ];
+    
+    NSLog(@"%s %@",__FUNCTION__,resultSring2  );
+    //=>-[OOOAppDelegate method013] *こんにちは* ken key こんにちは henこんにちは ken
+}
+#pragma mark 定数NSMatchingWithoutAnchoringBounds
+-(void)method014
+{
+    NSString *str = @"こんにちは ken key こんにちは hen\nこんにちは\n ken こんにちは\n   " ;
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"^こんにちは\\b" options:(NSRegularExpressionCaseInsensitive | NSRegularExpressionAnchorsMatchLines) error:nil];
+    NSString *template =
+    @"*$0*";
+    
+    NSString *resultSring =  [regExp stringByReplacingMatchesInString:str
+                                                              options:0
+                                                                range:NSMakeRange(0, [str length]-2)
+                                                         withTemplate:template
+                              ];
+    
+    NSLog(@"%s %@",__FUNCTION__,resultSring  );
+    //=>*こんにちは* ken key こんにちは hen*こんにちは* ken
+    
+    NSRegularExpression *regExp2 = [NSRegularExpression regularExpressionWithPattern:@"^こんにちは\\b" options:(NSRegularExpressionCaseInsensitive | NSRegularExpressionAnchorsMatchLines) error:nil];
+    
+    
+    NSString *resultSring2 =  [regExp2 stringByReplacingMatchesInString:str
+                                                                options:NSMatchingWithTransparentBounds
+                                                                  range:NSMakeRange(0, [str length]-2)
+                                                           withTemplate:template
+                               ];
+    
+    NSLog(@"%s %@",__FUNCTION__,resultSring2  );
+    //=>*こんにちは* ken key こんにちは henこんにちは ken
+}
+
+#pragma mark 定数NSMatchingWithoutAnchoringBounds
+-(void)method015
+{
+    NSString *str = @"これはURLのサンプルです。http://www.oomori.comです。" ;
+    NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"http://" options:(NSRegularExpressionCaseInsensitive | NSRegularExpressionAnchorsMatchLines) error:nil];
+    NSString *template =
+    @"---";
+    
+    NSString *resultSring =  [regExp stringByReplacingMatchesInString:str
+                                                              options:NSMatchingWithTransparentBounds
+                                                                range:NSMakeRange(0, [str length]-1)
+                                                         withTemplate:template
+                              ];
+    
+    NSLog(@"%s %@",__FUNCTION__,resultSring  );
+    //=>-[OOOAppDelegate method013] *こんにちは* ken key こんにちは hen*こんにちは* ken
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -289,13 +419,16 @@
     [self method004];
     [self method005];
     [self method006];
-    
     [self method007];
     [self method008];
     [self method009];
-    
     [self method010];
     [self method011];
+    [self method012];
+    [self method013];
+    [self method014];
+    
+    [self method015];
     return YES;
 }
 							

@@ -7,6 +7,11 @@
 //
 
 #import "OOOAppDelegate.h"
+#import "OOOError.h"
+
+#import <CoreFoundation/CFError.h>
+
+#import <CFNetwork/CFNetworkErrors.h>
 
 @implementation OOOAppDelegate
 
@@ -99,10 +104,10 @@
 	}    
 }
 
-#pragma mark NSURL URLWithString:
+#pragma mark NSError
 -(void)method005
 {
-	NSError *anError;
+	NSError *anError = nil;
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *filename = @"testWritecharset2.bitmap";
     NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
@@ -118,7 +123,89 @@
         NSLog(@"%s localizedRecoveryOptions = %@",__FUNCTION__,[anError localizedRecoveryOptions]);
         NSLog(@"%s localizedRecoverySuggestion = %@",__FUNCTION__,[anError localizedRecoverySuggestion]);
         NSLog(@"%s localizedFailureReason = %@",__FUNCTION__,[anError localizedFailureReason]);
+        
     }
+}
+#pragma mark NSError
+-(void)method006
+{
+    for (int i=1; i<46; i++) {
+        
+        
+        NSError *anError = [NSError errorWithDomain:NSMachErrorDomain
+                                               code:i
+                                           userInfo:nil
+                            ];
+        
+        NSLog(@"%s %@",__FUNCTION__,[anError description]);
+    }
+}
+#pragma mark NSError
+-(void)method007
+{
+    for (int i=1; i<46; i++) {
+        
+        
+        NSError *anError = [NSError errorWithDomain:NSURLErrorDomain
+                                               code:i
+                                           userInfo:nil
+                            ];
+        
+        NSLog(@"%s %@",__FUNCTION__,[anError description]);
+    }
+}
+#pragma mark NSError
+-(void)method008
+{
+    for (int i=(250); i<(270); i++) {
+        
+        
+        OOOError *anError = [OOOError errorWithDomain:NSCocoaErrorDomain
+                                               code:i
+                                           userInfo:nil
+                            ];
+        
+        NSLog(@"%s %@",__FUNCTION__,[anError description]);
+    }
+}
+
+#pragma mark NSError
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"%d",buttonIndex);
+}
+-(void)method009
+{
+    NSError *anError = nil;
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *filename = @"testWritecharset2.bitmap";
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    
+    if ([absoluteURL checkResourceIsReachableAndReturnError:&anError]) {
+        NSLog(@"%s %@",__FUNCTION__,[anError description]);
+    }else {
+        UIAlertView *alert = [[UIAlertView alloc] init];
+        alert.delegate = self;
+        
+        
+        alert.title = [NSString stringWithFormat:@"%@\rcode=%d",[anError domain],[anError code]];
+        alert.tag = 1;                      
+        alert.message = [anError description];
+        [alert addButtonWithTitle:@"Cancel"];
+        [alert addButtonWithTitle:@"OK"];
+        [alert show];
+        
+        NSLog(@"%s %@",__FUNCTION__,[anError description]);
+        NSLog(@"%s code = %d",__FUNCTION__,[anError code]);
+        NSLog(@"%s domain = %@",__FUNCTION__,[anError domain]);
+        NSLog(@"%s userInfo = %@",__FUNCTION__,[[anError userInfo] description]);
+        NSLog(@"%s localizedDescription = %@",__FUNCTION__,[anError localizedDescription]);
+        NSLog(@"%s localizedRecoveryOptions = %@",__FUNCTION__,[anError localizedRecoveryOptions]);
+        NSLog(@"%s localizedRecoverySuggestion = %@",__FUNCTION__,[anError localizedRecoverySuggestion]);
+        NSLog(@"%s localizedFailureReason = %@",__FUNCTION__,[anError localizedFailureReason]);
+        
+    }
+
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -128,6 +215,10 @@
     [self method003];
     [self method004];
     [self method005];
+    //[self method006];
+    //[self method007];
+    [self method008];
+    [self method009];
     return YES;
 }
 							

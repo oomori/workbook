@@ -43,12 +43,11 @@
         NSLog(@"end");
     }];
     
+    
+    NSLog(@"%@",[operation executionBlocks]);
+    
     //実行
     [operation start];
-    
-    
-
-    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

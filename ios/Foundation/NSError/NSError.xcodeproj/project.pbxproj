@@ -21,6 +21,8 @@
 		740500A815B3900000BC84B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7405008615B3900000BC84B4 /* Foundation.framework */; };
 		740500B015B3900000BC84B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 740500AE15B3900000BC84B4 /* InfoPlist.strings */; };
 		740500B315B3900000BC84B4 /* NSErrorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 740500B215B3900000BC84B4 /* NSErrorTests.m */; };
+		7436320F15FB5F260094497F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7436320E15FB5F260094497F /* CoreFoundation.framework */; };
+		7436321515FB67110094497F /* OOOError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7436321415FB67110094497F /* OOOError.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		740500AF15B3900000BC84B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		740500B115B3900000BC84B4 /* NSErrorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSErrorTests.h; sourceTree = "<group>"; };
 		740500B215B3900000BC84B4 /* NSErrorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSErrorTests.m; sourceTree = "<group>"; };
+		7436320E15FB5F260094497F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		7436321315FB67110094497F /* OOOError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOError.h; sourceTree = "<group>"; };
+		7436321415FB67110094497F /* OOOError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOError.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,7 @@
 				7405008515B3900000BC84B4 /* UIKit.framework in Frameworks */,
 				7405008715B3900000BC84B4 /* Foundation.framework in Frameworks */,
 				7405008915B3900000BC84B4 /* CoreGraphics.framework in Frameworks */,
+				7436320F15FB5F260094497F /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +108,7 @@
 		7405008315B3900000BC84B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7436320E15FB5F260094497F /* CoreFoundation.framework */,
 				7405008415B3900000BC84B4 /* UIKit.framework */,
 				7405008615B3900000BC84B4 /* Foundation.framework */,
 				7405008815B3900000BC84B4 /* CoreGraphics.framework */,
@@ -113,6 +120,8 @@
 		7405008A15B3900000BC84B4 /* NSError */ = {
 			isa = PBXGroup;
 			children = (
+				7436321315FB67110094497F /* OOOError.h */,
+				7436321415FB67110094497F /* OOOError.m */,
 				7405009315B3900000BC84B4 /* OOOAppDelegate.h */,
 				7405009415B3900000BC84B4 /* OOOAppDelegate.m */,
 				7405009615B3900000BC84B4 /* MainStoryboard_iPhone.storyboard */,
@@ -265,6 +274,7 @@
 				7405009115B3900000BC84B4 /* main.m in Sources */,
 				7405009515B3900000BC84B4 /* OOOAppDelegate.m in Sources */,
 				7405009E15B3900000BC84B4 /* OOOViewController.m in Sources */,
+				7436321515FB67110094497F /* OOOError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +382,10 @@
 		740500B715B3900000BC84B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSError/NSError-Prefix.pch";
 				INFOPLIST_FILE = "NSError/NSError-Info.plist";
@@ -383,6 +397,10 @@
 		740500B815B3900000BC84B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSError/NSError-Prefix.pch";
 				INFOPLIST_FILE = "NSError/NSError-Info.plist";
@@ -444,6 +462,7 @@
 				740500B815B3900000BC84B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		740500B915B3900000BC84B4 /* Build configuration list for PBXNativeTarget "NSErrorTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +471,7 @@
 				740500BB15B3900000BC84B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

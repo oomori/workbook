@@ -252,6 +252,37 @@
     
 }
 
+#pragma mark NSLinguisticTagger
+-(void)method007
+{
+    UTF32Char currentChar = 0x2060;
+    NSString *astr = [[NSString alloc] initWithBytes:&currentChar length:4 encoding:NSUTF32LittleEndianStringEncoding];
+NSString *str = [NSString stringWithFormat:@"%@%@",@"My name is OOMORI satoshi.",astr ];
+
+NSLinguisticTagger *tagger = [[NSLinguisticTagger alloc] initWithTagSchemes:[NSArray arrayWithObject:NSLinguisticTagSchemeLexicalClass] options:~NSLinguisticTaggerOmitWords];
+[tagger setString:str];
+[tagger enumerateTagsInRange:NSMakeRange(0, [str length])
+                      scheme:NSLinguisticTagSchemeLexicalClass
+                     options:0//~NSLinguisticTaggerOmitWords
+                  usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
+                      NSLog(@"found: %@ (%@)", [str substringWithRange:tokenRange], tag);
+                  }];
+}
+
+#pragma mark NSLinguisticTagger
+-(void)method008
+{
+    NSString *question = @"What is the weather in San Jose?";
+    NSLinguisticTaggerOptions options = NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation | NSLinguisticTaggerJoinNames;
+    NSLinguisticTagger *tagger = [[NSLinguisticTagger alloc] initWithTagSchemes: [NSLinguisticTagger availableTagSchemesForLanguage:@"en"] options:options];
+    tagger.string = question;
+    [tagger enumerateTagsInRange:NSMakeRange(0, [question length]) scheme:NSLinguisticTagSchemeNameTypeOrLexicalClass options:options usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
+        NSString *token = [question substringWithRange:tokenRange];
+        NSLog(@"found: %@ (%@)", token, tag);
+    }];
+    
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -262,6 +293,8 @@
     [self method004];
     [self method005];
     [self method006];
+    [self method007];
+    //[self method008];
     return YES;
 }
 							

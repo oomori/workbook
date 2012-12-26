@@ -12,15 +12,15 @@
 
 @synthesize window = _window;
 
-#pragma mark NSInvocation invoke:
--(void) testSelector002:(NSString *)string
+#pragma mark NSMethodSignature methodSignatureForSelector
+-(void) testSelector001:(NSString *)string
 {
     NSLog(@"...call %s %@",__FUNCTION__,string);
     
 }
 -(void)method001
 {
-    SEL aSelector  = @selector( testSelector002: );//セレクタをセット
+    SEL aSelector  = @selector( testSelector001: );//セレクタをセット
     NSMethodSignature *aSignature = [ self methodSignatureForSelector:aSelector ];//セレクタのシグネチャをセット
 	
     NSInvocation *anInvocation = [ NSInvocation invocationWithMethodSignature:aSignature ];//起動オブジェクトをセット
@@ -35,12 +35,12 @@
     for (NSInteger i=0; i<counter; i++) {
         const char *argInfo = [methodSignature getArgumentTypeAtIndex:i];
         NSString *str = [NSString stringWithCString:argInfo encoding:NSASCIIStringEncoding];        
-        NSLog(@"%s %@",__FUNCTION__,str);
+        NSLog(@"%s %d = %@",__FUNCTION__,i,str);
 
     }
-    //-(void) testSelector002:(NSString **)stringについての情報
-    //=>-[OOOAppDelegate method001] @ //引数0  (void)返り値　@オブジェクト
-    //=>-[OOOAppDelegate method001] : //引数1  'self'       :セレクタ
+    //-(void) testSelector001:(NSString *)stringについての情報
+    //=>-[OOOAppDelegate method001] @ //引数0  self　@オブジェクト
+    //=>-[OOOAppDelegate method001] : //引数1  _cmd       :セレクタ
     //=>-[OOOAppDelegate method001] @ //引数2  (NSString *) @オブジェクト
     //@encode(@)などでタイプが表せる
     //NSString *  @
@@ -55,10 +55,50 @@
     
 }
 
+
+#pragma mark NSMethodSignature 
+-(void) testSelector002:(NSString *)string
+{
+    NSLog(@"...call %s %@",__FUNCTION__,string);
+    
+}
+-(void)method002
+{
+    NSString *types = [NSString stringWithFormat:@"%s%s%s%s",
+                       @encode(id),     // 返り値
+                       @encode(id),     // （隠れ）引数0 'self'
+                       @encode(SEL),     //　（隠れ）引数1  _cmd
+                       @encode(id)      //　引数2（見えてる引数の1番目）
+                       ];
+    NSLog(@"objcType: %s", @encode(NSRange));
+/*
+    NSLog(@"objcType: %s", @encode(NSNull));
+    NSString *string = @"hoge";
+    NSMethodSignature *sig = [string methodSignatureForSelector:@selector(compare:options:range:)];
+    NSLog(@"%@", [sig debugDescription]);//プライベートメソッド
+  */  
+    NSMethodSignature* aSignature = [NSMethodSignature signatureWithObjCTypes:[types UTF8String]];
+
+    NSInteger counter = [aSignature numberOfArguments];
+    
+    for (NSInteger i=0; i<counter; i++) {
+        const char *argInfo = [aSignature getArgumentTypeAtIndex:i];
+        NSString *str = [NSString stringWithCString:argInfo encoding:NSASCIIStringEncoding];
+        NSLog(@"%s %d = %@",__FUNCTION__,i,str);
+        
+    }
+    //=>-[OOOAppDelegate method002] 0 = @
+    //=>-[OOOAppDelegate method002] 1 = :
+    //=>-[OOOAppDelegate method002] 2 = @
+    NSLog(@"%s returntype = %s,%d",__FUNCTION__,[aSignature methodReturnType],[aSignature methodReturnLength]);
+    //=>-[OOOAppDelegate method002] returntype = @
+    
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self method001];
+    //[self method001];
+    [self method002];
     return YES;
 }
 							

@@ -9,6 +9,7 @@
 #import "OOOAppDelegate.h"
 #import <objc/runtime.h>
 #import "MyObject.h"
+#import "OOOProxy.h"
 
 @implementation OOOAppDelegate
 
@@ -219,13 +220,208 @@
     
 }
 
-#pragma mark methodSignatureForSelector
+#pragma mark description
 
 -(void)method016
 {
     NSLog(@"%s %@",__FUNCTION__,[MyObject description]);
     
 }
+
+#pragma mark autoContentAccessingProxy
+//NSDiscardableContentプロトコルが必要
+-(void)method017
+{
+    MyObject *obj = [[MyObject alloc] init];
+    NSProxy *proxy = [obj autoContentAccessingProxy];
+    
+    //beginContentAccessが呼ばれる
+    NSLog(@"%s %@",__FUNCTION__,[proxy description]);
+
+    [obj messageA];
+    //endContentAccessが呼ばれる
+
+}
+
+#pragma mark description
+//プロキシのテスト中
+-(void)method018
+{
+    MyObject *obj = [[MyObject alloc] init];
+    id proxy = [OOOProxy alloc];
+    [proxy setTargetObject:obj];
+    MyObject* proxiedDto = (MyObject*)proxy;
+    [proxiedDto messageA];
+}
+
+#pragma mark performSelector:withObject:afterDelay:
+-(void)method019
+{
+    MyObject *obj = [[MyObject alloc] init];
+    [obj performSelector:@selector(messageA)
+              withObject:nil
+              afterDelay:2
+     ];
+    [obj performSelector:@selector(messageWith:)
+              withObject:@"Happy new year!"
+              afterDelay:3
+     ];
+}
+
+
+#pragma mark performSelector:withObject:afterDelay:inModes:
+-(void)method020
+{
+    MyObject *obj = [[MyObject alloc] init];
+    [obj performSelector:@selector(messageWith:)
+              withObject:@"method020 message!"
+              afterDelay:3
+                 inModes:[NSArray arrayWithObjects:NSDefaultRunLoopMode, nil]
+     ];
+}
+
+#pragma mark performSelectorOnMainThread:withObject:waitUntilDone:
+-(void)method021
+{
+    MyObject *obj = [[MyObject alloc] init];
+    [obj performSelectorOnMainThread:@selector(messageWith:)
+                          withObject:@"method021 message!"
+                       waitUntilDone:YES
+     ];
+}
+
+#pragma mark performSelectorOnMainThread:withObject:waitUntilDone:modes:
+-(void)method022
+{
+    MyObject *obj = [[MyObject alloc] init];
+    [obj performSelectorOnMainThread:@selector(messageWith:)
+                          withObject:@"method022 message!"
+                       waitUntilDone:YES
+                             modes:[NSArray arrayWithObjects:@"kCFRunLoopCommonModes", nil]
+     ];
+}
+
+#pragma mark performSelector:onThread:withObject:waitUntilDone:
+-(void)method023
+{
+    MyObject *obj = [[MyObject alloc] init];
+    NSThread *thread = [NSThread mainThread];
+    [obj performSelector:@selector(messageWith:)
+                onThread:thread
+              withObject:@"method023 message!"
+           waitUntilDone:YES
+     ];
+}
+
+#pragma mark performSelector:onThread:withObject:waitUntilDone:modes:
+-(void)method024
+{
+    MyObject *obj = [[MyObject alloc] init];
+    NSThread *thread = [NSThread mainThread];
+    [obj performSelector:@selector(messageWith:)
+                onThread:thread
+              withObject:@"method024 message!"
+           waitUntilDone:YES
+     modes:[NSArray arrayWithObjects:@"kCFRunLoopCommonModes", nil]
+     ];
+}
+
+#pragma mark performSelectorInBackground:withObject:
+-(void)method025
+{
+    MyObject *obj = [[MyObject alloc] init];
+    [obj performSelectorInBackground:@selector(messageWith:)
+              withObject:@"method025 message!"
+               ];
+}
+
+#pragma mark cancelPreviousPerformRequestsWithTarget:
+-(void)method026
+{
+    MyObject *obj = [[MyObject alloc] init];
+    [obj performSelector:@selector(messageWith:)
+              withObject:@"method026 message!"
+              afterDelay:3
+                 inModes:[NSArray arrayWithObjects:NSDefaultRunLoopMode, nil]
+     ];
+    [MyObject cancelPreviousPerformRequestsWithTarget:obj];
+}
+
+#pragma mark cancelPreviousPerformRequestsWithTarget:selector:object:
+-(void)method027
+{
+    MyObject *obj = [[MyObject alloc] init];
+    [obj performSelector:@selector(messageWith:)
+              withObject:@"method027 message!"
+              afterDelay:3
+                 inModes:[NSArray arrayWithObjects:NSDefaultRunLoopMode, nil]
+     ];
+    [MyObject cancelPreviousPerformRequestsWithTarget:obj
+                                             selector:@selector(messageWith:)
+                                               object:@"method027 message!"];
+}
+
+#pragma mark cancelPreviousPerformRequestsWithTarget:selector:object:
+-(void)method028
+{
+    MyObject *obj = [[MyObject alloc] init];
+    //id target = [obj forwardingTargetForSelector:@selector(messageWith:)];
+    [obj performSelector:@selector(messageWith)
+              withObject:@"method028 message!"
+              afterDelay:3
+                 inModes:[NSArray arrayWithObjects:NSDefaultRunLoopMode, nil]
+     ];
+    //NSLog(@"%s %@",__FUNCTION__,[target description]);
+    
+    SEL aSelector  = @selector( messageWith: );//セレクタをセット
+    NSMethodSignature *aSignature = [ obj methodSignatureForSelector:aSelector ];//セレクタのシグネチャをセット
+	
+    NSInvocation *anInvocation = [ NSInvocation invocationWithMethodSignature:aSignature ];//起動オブジェクトをセット
+	
+	//起動オブジェクトにターゲットと引数をセットする
+    [ anInvocation setTarget: obj ];//ターゲットはself
+    [ anInvocation setSelector: aSelector ];//セレクタをセット
+    
+    [anInvocation invoke];
+
+
+}
+
+#pragma mark
+
+//動的にメソッドを作る
+-(void)method029
+{
+    MyObject *obj = [[MyObject alloc] init];
+    [obj performSelector:@selector(resolveThisMethodDynamically)
+              withObject:nil
+              afterDelay:3
+     ];
+}
+
+#pragma mark - (id)awakeAfterUsingCoder:(NSCoder *)aDecoder;
+//作成中
+-(void)method030
+{
+    MyObject *obj = [[MyObject alloc] init];
+    [obj setValue:@"!!!" forKey:@"string"];
+    NSLog(@"%s obj = %@",__FUNCTION__,[obj description]);
+    //アーカイブ
+    NSData *dat = [NSKeyedArchiver archivedDataWithRootObject:obj ];
+    
+    NSLog(@"%s %@",__FUNCTION__,[dat description]);
+
+
+    //アンアーカイブ
+    MyObject *unArchivedObj = [NSKeyedUnarchiver unarchiveObjectWithData:dat];
+    NSLog(@"%s unArchivedObj = %@",__FUNCTION__,[unArchivedObj description]);
+    //NSLog(@"%s unArchivedObj = %@",__FUNCTION__,[unArchivedObj valueForKey:@"string"]);
+    //NSCoder *aCoder = [[NSCoder alloc]init];
+    //[aCoder encodeRootObject:obj];
+    //id aObj = [obj awakeAfterUsingCoder:aCoder];
+
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -241,14 +437,33 @@
     [self method009];
     [self method010];
     [self method011];
-    
     [self method012];
     [self method013];
     [self method014];
     [self method015];
-    
     [self method016];
-    return YES;
+    [self method017];
+    //[self method018];
+    [self method019];
+    [self method020];
+    
+    [self method021];
+    [self method022];
+    [self method023];
+    
+    [self method024];
+    [self method025];
+    
+    //[self method026];
+    
+    [self method027];
+    
+    [self method028];
+    
+    [self method029];
+    [self method030];
+    
+     return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

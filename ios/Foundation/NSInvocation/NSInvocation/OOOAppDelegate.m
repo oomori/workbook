@@ -12,7 +12,7 @@
 
 @synthesize window = _window;
 
-#pragma mark filteredArrayUsingPredicate:
+#pragma mark :
 NSTimer *timer=nil;
 NSInvocation * invocation ;//起動オブジェクト
 
@@ -23,7 +23,8 @@ NSInvocation * invocation ;//起動オブジェクト
 	//やっぱり testSelector2:メソッドを呼び出すことにする
 	[invocation setSelector:@selector( testSelector2: )];
 	
-	//タイマーで1秒後にinvocationオブジェクを起動
+    
+    //タイマーで1秒後にinvocationオブジェクを起動
 	timer = [NSTimer scheduledTimerWithTimeInterval:1
                                          invocation:	invocation
                                             repeats:NO];
@@ -51,7 +52,11 @@ NSInvocation * invocation ;//起動オブジェクト
     aSignature = [ self methodSignatureForSelector:aSelector ];//セレクタのシグネチャをセット
 	
     invocation = [ NSInvocation invocationWithMethodSignature:aSignature ];//起動オブジェクトをセット
-	
+	//引数の保持
+    NSLog(@"argumentsRetained %@",([invocation argumentsRetained])?@"YES":@"NO");
+    [invocation retainArguments];
+	NSLog(@"argumentsRetained %@",([invocation argumentsRetained])?@"YES":@"NO");
+    
 	NSLog(@"%@",[aSignature description]);
 	
 	//起動オブジェクトにターゲットと引数をセットする
@@ -135,7 +140,7 @@ NSInvocation * invocation ;//起動オブジェクト
         NSLog(@"%s %@",__FUNCTION__,str);
         
     }
-    //-(void) testSelector003:(NSString **)stringについての情報
+    //-(void) testSelector003:(NSString *)stringについての情報
     //=>-[OOOAppDelegate method001] @ //引数0  self　@オブジェクト
     //=>-[OOOAppDelegate method001] : //引数1  _cmd       :セレクタ
     //=>-[OOOAppDelegate method001] @ //引数2  (NSString *) @オブジェクト
@@ -147,9 +152,6 @@ NSInvocation * invocation ;//起動オブジェクト
     //float       f
     //SEL         :
     //NSInteger   i
-    
-    
-    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

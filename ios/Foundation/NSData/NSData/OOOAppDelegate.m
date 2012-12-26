@@ -210,7 +210,38 @@
     //=>[OOOAppDelegate method010]　10796 bytes
 }
 
+#pragma mark NSData dataWithContentsOfFile:options:error:
+-(void)method011
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *filename = @"test.rtf";
+    NSString *bundlePath = [bundle resourcePath];
+    NSString *filePath = [bundlePath stringByAppendingPathComponent:filename];
+    NSError *anError = nil;
+    NSData *aData = [NSData dataWithContentsOfFile:filePath
+                                           options:NSDataReadingMappedIfSafe
+                                             error:&anError];
+    NSUInteger readPointer = 0;
+    
+    while(readPointer < [aData length])
+    {
+        NSUInteger distanceToEndOfData = [aData length] - readPointer;
+        
+        NSString *newPortion =
+        [[NSString alloc] initWithBytes:(uint8_t *)[aData bytes] + readPointer
+                                 length:distanceToEndOfData > 16384 ? 16384 : distanceToEndOfData
+                               encoding:NSUTF8StringEncoding];
+        
 
+        NSLog(@"%@",newPortion);
+
+        readPointer += [newPortion lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+        
+    }
+    
+    NSLog(@"%s %u bytes",__FUNCTION__,[aData length]);
+    //=>10796 bytes
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -228,6 +259,7 @@
     [self method009];
     
     [self method010];
+    [self method011];
     return YES;
 }
 							

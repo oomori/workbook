@@ -8,9 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MyObject : NSObject <NSCopying>
+@interface MyObject : NSObject <NSCopying,NSCoding,NSDiscardableContent>
+{
+    NSString *string;
+}
+- (id)initWithCoder:(NSCoder *)decoder;
+- (void)encodeWithCoder:(NSCoder *)encoder;
+- (NSString*)description;
+
 -(void)testMethod;
+-(void)messageWith:(NSString *)message;
 -(void)messageA;
 -(void)messageB;
+
+//NSDiscardableContent
+- (BOOL)beginContentAccess;
+- (void)endContentAccess;
+- (void)discardContentIfPossible;
+- (BOOL)isContentDiscarded;
+
 
 @end

@@ -287,11 +287,11 @@
 -(void)method013
 {
     
-    NSString *str1 = [[NSString alloc] initWithString:@"/tmp/scratch.tiff"];
+    NSString *str1 = @"/tmp/scratch.tiff";
     NSLog(@"%s %p \"%@\" = %@",__FUNCTION__,str1,str1,([str1 isAbsolutePath])?@"YES":@"NO");
     //=>-[OOOAppDelegate method013] 0x6850 "/tmp/scratch.tiff" = YES
     
-    NSString *str2 = [[NSString alloc] initWithString:@"../tmp/scratch.tiff"];
+    NSString *str2 = @"../tmp/scratch.tiff";
     NSLog(@"%s %p \"%@\" = %@",__FUNCTION__,str2,str2,([str2 isAbsolutePath])?@"YES":@"NO");
     //=>-[OOOAppDelegate method013] 0x6960 "../tmp/scratch.tiff" = NO
     
@@ -325,37 +325,37 @@
 -(void)method015
 {
     
-    NSString *str1 = [[NSString alloc] initWithString:@"/tmp/scratch.tiff"];
+    NSString *str1 = @"/tmp/scratch.tiff";
     NSArray *anArray1 = [str1 pathComponents];
     NSLog(@"%s %p , %@",__FUNCTION__,str1,anArray1);
     //=>-[OOOAppDelegate method015] 0x6880 , ("/",tmp,"scratch.tiff")
 
     
-    NSString *str2 = [[NSString alloc] initWithString:@"/tmp/"];
+    NSString *str2 = @"/tmp/";
     NSArray *anArray2 = [str2 pathComponents];
     NSLog(@"%s %p , %@",__FUNCTION__,str2,anArray2);
     //=>-[OOOAppDelegate method015] 0x68b0 , ("/",tmp,"/")
 
     
-    NSString *str3 = [[NSString alloc] initWithString:@"scratch.bundle/"];
+    NSString *str3 = @"scratch.bundle/";
     NSArray *anArray3 = [str3 pathComponents];
     NSLog(@"%s %p , %@",__FUNCTION__,str3,anArray3);
     //=>-[OOOAppDelegate method015] 0x6960 , ("scratch.bundle","/")
 
     
-    NSString *str4 = [[NSString alloc] initWithString:@"scratch..tiff"];
+    NSString *str4 = @"scratch..tiff";
     NSArray *anArray4 = [str4 pathComponents];
     NSLog(@"%s %p , %@",__FUNCTION__,str4,anArray4);
     //=>-[OOOAppDelegate method015] 0x6970 , ("scratch..tiff")
 
     
-    NSString *str5 = [[NSString alloc] initWithString:@".tiff"];
+    NSString *str5 = @".tiff";
     NSArray *anArray5 = [str5 pathComponents];
     NSLog(@"%s %p , %@",__FUNCTION__,str5,anArray5);
     //=>-[OOOAppDelegate method015] 0x6980 , (".tiff")
 
     
-    NSString *str6 = [[NSString alloc] initWithString:@"/"];
+    NSString *str6 = @"/";
     NSArray *anArray6 = [str6 pathComponents];
     NSLog(@"%s %p , %@",__FUNCTION__,str6,anArray6);
     //=>-[OOOAppDelegate method015] 0x68d0 , ("/")
@@ -541,6 +541,8 @@
     NSLog(@"%@", content);
     
 }
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

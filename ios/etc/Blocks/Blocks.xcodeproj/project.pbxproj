@@ -21,6 +21,7 @@
 		742FFDD01584D4D90013DBF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742FFDAE1584D4D90013DBF4 /* Foundation.framework */; };
 		742FFDD81584D4D90013DBF4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 742FFDD61584D4D90013DBF4 /* InfoPlist.strings */; };
 		742FFDDB1584D4D90013DBF4 /* BlocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 742FFDDA1584D4D90013DBF4 /* BlocksTests.m */; };
+		74E570631669E5C1001FB0F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E570621669E5C1001FB0F7 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		742FFDD71584D4D90013DBF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		742FFDD91584D4D90013DBF4 /* BlocksTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlocksTests.h; sourceTree = "<group>"; };
 		742FFDDA1584D4D90013DBF4 /* BlocksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocksTests.m; sourceTree = "<group>"; };
+		74E570621669E5C1001FB0F7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		742FFD9D1584D4D80013DBF4 = {
 			isa = PBXGroup;
 			children = (
+				74E570621669E5C1001FB0F7 /* Default-568h@2x.png */,
 				742FFDB21584D4D90013DBF4 /* Blocks */,
 				742FFDD31584D4D90013DBF4 /* BlocksTests */,
 				742FFDAB1584D4D90013DBF4 /* Frameworks */,
@@ -228,6 +231,7 @@
 				742FFDB71584D4D90013DBF4 /* InfoPlist.strings in Resources */,
 				742FFDC01584D4D90013DBF4 /* MainStoryboard_iPhone.storyboard in Resources */,
 				742FFDC31584D4D90013DBF4 /* MainStoryboard_iPad.storyboard in Resources */,
+				74E570631669E5C1001FB0F7 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +448,7 @@
 				742FFDE01584D4D90013DBF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		742FFDE11584D4D90013DBF4 /* Build configuration list for PBXNativeTarget "BlocksTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +457,7 @@
 				742FFDE31584D4D90013DBF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

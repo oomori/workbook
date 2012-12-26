@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+        <!--
+        <!ELEMENT dictionary (documentation?, suite+)>
+        <!ATTLIST dictionary title CDATA #IMPLIED >
+        <!ENTITY % OSType "CDATA">
+        <!ENTITY name SYSTEM “name.xml”>
+        <!NOTATION img PUBLIC “urn:mime:image/jpeg”>
+		
+        <!ENTITY corplogo SYSTEM “logo.jpg” NDATA img>
+        -->
+<plist version="1.0">
+<dict>
+	<!-- comment     -->
+        
+	<key>0_オーサリング</key>
+	<dict>
+		<key>jisyo</key>
+		<string>OW OW sAX rIY nn gUW </string>
+		<key>yomi</key>
+		<string>777</string>
+	</dict>
+	<key>0_オーダ</key>
+	<dict>
+		<key>jisyo</key>
+		<string>OW OW dAX </string>
+		<key>yomi</key>
+		<string>7778</string>
+	</dict>
+	<key>0_オーム</key>
+	<dict>
+		<key>jisyo</key>
+		<string>OW OW mUW </string>
+		<key>yomi</key>
+		<string>888</string>
+	</dict>
+	<key>0_カジュアル</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kAX JyUH AX rUW </string>
+		<key>yomi</key>
+		<string>666</string>
+	</dict>
+	<key>0_カメ</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kAX mEH </string>
+		<key>yomi</key>
+		<string>777</string>
+	</dict>
+	<key>0_カルチャーセンター</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kAX rUW CyAE AX sEH nn tAX AX </string>
+		<key>yomi</key>
+		<string>666</string>
+	</dict>
+	<key>0_ガイドブック</key>
+	<dict>
+		<key>jisyo</key>
+		<string>gAX IY dOW bUWX %kUW </string>
+		<key>yomi</key>
+		<string>555</string>
+	</dict>
+	<key>0_キス</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kIY sUW </string>
+		<key>yomi</key>
+		<string>888</string>
+	</dict>
+	<key>0_キャピタル</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kyAEpIY tAX rUW </string>
+		<key>yomi</key>
+		<string>444</string>
+	</dict>
+	<key>0_キャプチャー</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kyAEpUWX CyAE AX </string>
+		<key>yomi</key>
+		<string>1111</string>
+	</dict>
+	<key>0_キャラクタ</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kyAErAX kUW tAX </string>
+		<key>yomi</key>
+		<string>1111</string>
+	</dict>
+	<key>0_キャレット</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kyAErEH %tOW </string>
+		<key>yomi</key>
+		<string>5555</string>
+	</dict>
+	<key>0_キング</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kIY nn gUW </string>
+		<key>yomi</key>
+		<string>444</string>
+	</dict>
+	<key>0_クソ</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kUW sOW </string>
+		<key>yomi</key>
+		<string>777</string>
+	</dict>
+	<key>0_クロ</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kUW rOW </string>
+		<key>yomi</key>
+		<string>sss</string>
+	</dict>
+	<key>0_クロスワードパズル</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kUW rOW sUW wAX AX dOW pAX zUW rUW </string>
+		<key>yomi</key>
+		<string>777</string>
+	</dict>
+	<key>0_クロマキー</key>
+	<dict>
+		<key>jisyo</key>
+		<string>kUW rOW mAX kIY IY </string>
+		<key>yomi</key>
+		<string>aaa</string>
+	</dict>
+	<key>0_グラム</key>
+	<dict>
+		<key>jisyo</key>
+		<string>gUW rAX mUW </string>
+		<key>yomi</key>
+		<string>9999</string>
+	</dict>
+	<key>0_グレイ</key>
+	<dict>
+		<key>jisyo</key>
+		<string>gUW rEH EY </string>
+		<key>yomi</key>
+		<string>777</string>
+	</dict>
+	</dict>
+</plist>

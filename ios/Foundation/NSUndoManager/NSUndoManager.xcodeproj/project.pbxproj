@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		748C7E5C160EF13600ABE126 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E5B160EF13600ABE126 /* UIKit.framework */; };
+		748C7E5E160EF13600ABE126 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E5D160EF13600ABE126 /* Foundation.framework */; };
+		748C7E60160EF13600ABE126 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E5F160EF13600ABE126 /* CoreGraphics.framework */; };
+		748C7E66160EF13600ABE126 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 748C7E64160EF13600ABE126 /* InfoPlist.strings */; };
+		748C7E68160EF13600ABE126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 748C7E67160EF13600ABE126 /* main.m */; };
+		748C7E6C160EF13600ABE126 /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748C7E6B160EF13600ABE126 /* OOOAppDelegate.m */; };
+		748C7E6F160EF13600ABE126 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748C7E6D160EF13600ABE126 /* MainStoryboard_iPhone.storyboard */; };
+		748C7E72160EF13600ABE126 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748C7E70160EF13600ABE126 /* MainStoryboard_iPad.storyboard */; };
+		748C7E75160EF13600ABE126 /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748C7E74160EF13600ABE126 /* OOOViewController.m */; };
+		748C7E7D160EF13700ABE126 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E7C160EF13700ABE126 /* SenTestingKit.framework */; };
+		748C7E7E160EF13700ABE126 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E5B160EF13600ABE126 /* UIKit.framework */; };
+		748C7E7F160EF13700ABE126 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E5D160EF13600ABE126 /* Foundation.framework */; };
+		748C7E87160EF13700ABE126 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 748C7E85160EF13700ABE126 /* InfoPlist.strings */; };
+		748C7E8A160EF13700ABE126 /* NSUndoManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 748C7E89160EF13700ABE126 /* NSUndoManagerTests.m */; };
+		748C7EE8160EF8A400ABE126 /* OOOPresonList.m in Sources */ = {isa = PBXBuildFile; fileRef = 748C7EE7160EF8A400ABE126 /* OOOPresonList.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		748C7E80160EF13700ABE126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 748C7E4E160EF13600ABE126 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 748C7E56160EF13600ABE126;
+			remoteInfo = NSUndoManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		748C7E57160EF13600ABE126 /* NSUndoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSUndoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		748C7E5B160EF13600ABE126 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		748C7E5D160EF13600ABE126 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		748C7E5F160EF13600ABE126 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		748C7E63160EF13600ABE126 /* NSUndoManager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSUndoManager-Info.plist"; sourceTree = "<group>"; };
+		748C7E65160EF13600ABE126 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		748C7E67160EF13600ABE126 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		748C7E69160EF13600ABE126 /* NSUndoManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUndoManager-Prefix.pch"; sourceTree = "<group>"; };
+		748C7E6A160EF13600ABE126 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
+		748C7E6B160EF13600ABE126 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
+		748C7E6E160EF13600ABE126 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		748C7E71160EF13600ABE126 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		748C7E73160EF13600ABE126 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
+		748C7E74160EF13600ABE126 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
+		748C7E7B160EF13700ABE126 /* NSUndoManagerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSUndoManagerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		748C7E7C160EF13700ABE126 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		748C7E84160EF13700ABE126 /* NSUndoManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSUndoManagerTests-Info.plist"; sourceTree = "<group>"; };
+		748C7E86160EF13700ABE126 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		748C7E88160EF13700ABE126 /* NSUndoManagerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUndoManagerTests.h; sourceTree = "<group>"; };
+		748C7E89160EF13700ABE126 /* NSUndoManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUndoManagerTests.m; sourceTree = "<group>"; };
+		748C7EE6160EF8A400ABE126 /* OOOPresonList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOPresonList.h; sourceTree = "<group>"; };
+		748C7EE7160EF8A400ABE126 /* OOOPresonList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOPresonList.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		748C7E54160EF13600ABE126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748C7E5C160EF13600ABE126 /* UIKit.framework in Frameworks */,
+				748C7E5E160EF13600ABE126 /* Foundation.framework in Frameworks */,
+				748C7E60160EF13600ABE126 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748C7E77160EF13700ABE126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748C7E7D160EF13700ABE126 /* SenTestingKit.framework in Frameworks */,
+				748C7E7E160EF13700ABE126 /* UIKit.framework in Frameworks */,
+				748C7E7F160EF13700ABE126 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		748C7E4C160EF13600ABE126 = {
+			isa = PBXGroup;
+			children = (
+				748C7E61160EF13600ABE126 /* NSUndoManager */,
+				748C7E82160EF13700ABE126 /* NSUndoManagerTests */,
+				748C7E5A160EF13600ABE126 /* Frameworks */,
+				748C7E58160EF13600ABE126 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		748C7E58160EF13600ABE126 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				748C7E57160EF13600ABE126 /* NSUndoManager.app */,
+				748C7E7B160EF13700ABE126 /* NSUndoManagerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		748C7E5A160EF13600ABE126 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				748C7E5B160EF13600ABE126 /* UIKit.framework */,
+				748C7E5D160EF13600ABE126 /* Foundation.framework */,
+				748C7E5F160EF13600ABE126 /* CoreGraphics.framework */,
+				748C7E7C160EF13700ABE126 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		748C7E61160EF13600ABE126 /* NSUndoManager */ = {
+			isa = PBXGroup;
+			children = (
+				748C7E6A160EF13600ABE126 /* OOOAppDelegate.h */,
+				748C7E6B160EF13600ABE126 /* OOOAppDelegate.m */,
+				748C7E6D160EF13600ABE126 /* MainStoryboard_iPhone.storyboard */,
+				748C7E70160EF13600ABE126 /* MainStoryboard_iPad.storyboard */,
+				748C7E73160EF13600ABE126 /* OOOViewController.h */,
+				748C7E74160EF13600ABE126 /* OOOViewController.m */,
+				748C7EE6160EF8A400ABE126 /* OOOPresonList.h */,
+				748C7EE7160EF8A400ABE126 /* OOOPresonList.m */,
+				748C7E62160EF13600ABE126 /* Supporting Files */,
+			);
+			path = NSUndoManager;
+			sourceTree = "<group>";
+		};
+		748C7E62160EF13600ABE126 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				748C7E63160EF13600ABE126 /* NSUndoManager-Info.plist */,
+				748C7E64160EF13600ABE126 /* InfoPlist.strings */,
+				748C7E67160EF13600ABE126 /* main.m */,
+				748C7E69160EF13600ABE126 /* NSUndoManager-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		748C7E82160EF13700ABE126 /* NSUndoManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				748C7E88160EF13700ABE126 /* NSUndoManagerTests.h */,
+				748C7E89160EF13700ABE126 /* NSUndoManagerTests.m */,
+				748C7E83160EF13700ABE126 /* Supporting Files */,
+			);
+			path = NSUndoManagerTests;
+			sourceTree = "<group>";
+		};
+		748C7E83160EF13700ABE126 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				748C7E84160EF13700ABE126 /* NSUndoManagerTests-Info.plist */,
+				748C7E85160EF13700ABE126 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		748C7E56160EF13600ABE126 /* NSUndoManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 748C7E8D160EF13700ABE126 /* Build configuration list for PBXNativeTarget "NSUndoManager" */;
+			buildPhases = (
+				748C7E53160EF13600ABE126 /* Sources */,
+				748C7E54160EF13600ABE126 /* Frameworks */,
+				748C7E55160EF13600ABE126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSUndoManager;
+			productName = NSUndoManager;
+			productReference = 748C7E57160EF13600ABE126 /* NSUndoManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		748C7E7A160EF13700ABE126 /* NSUndoManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 748C7E90160EF13700ABE126 /* Build configuration list for PBXNativeTarget "NSUndoManagerTests" */;
+			buildPhases = (
+				748C7E76160EF13700ABE126 /* Sources */,
+				748C7E77160EF13700ABE126 /* Frameworks */,
+				748C7E78160EF13700ABE126 /* Resources */,
+				748C7E79160EF13700ABE126 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				748C7E81160EF13700ABE126 /* PBXTargetDependency */,
+			);
+			name = NSUndoManagerTests;
+			productName = NSUndoManagerTests;
+			productReference = 748C7E7B160EF13700ABE126 /* NSUndoManagerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		748C7E4E160EF13600ABE126 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OOO;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Satoshi Oomori";
+			};
+			buildConfigurationList = 748C7E51160EF13600ABE126 /* Build configuration list for PBXProject "NSUndoManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 748C7E4C160EF13600ABE126;
+			productRefGroup = 748C7E58160EF13600ABE126 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				748C7E56160EF13600ABE126 /* NSUndoManager */,
+				748C7E7A160EF13700ABE126 /* NSUndoManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		748C7E55160EF13600ABE126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748C7E66160EF13600ABE126 /* InfoPlist.strings in Resources */,
+				748C7E6F160EF13600ABE126 /* MainStoryboard_iPhone.storyboard in Resources */,
+				748C7E72160EF13600ABE126 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748C7E78160EF13700ABE126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748C7E87160EF13700ABE126 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		748C7E79160EF13700ABE126 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		748C7E53160EF13600ABE126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748C7E68160EF13600ABE126 /* main.m in Sources */,
+				748C7E6C160EF13600ABE126 /* OOOAppDelegate.m in Sources */,
+				748C7E75160EF13600ABE126 /* OOOViewController.m in Sources */,
+				748C7EE8160EF8A400ABE126 /* OOOPresonList.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748C7E76160EF13700ABE126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748C7E8A160EF13700ABE126 /* NSUndoManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		748C7E81160EF13700ABE126 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 748C7E56160EF13600ABE126 /* NSUndoManager */;
+			targetProxy = 748C7E80160EF13700ABE126 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		748C7E64160EF13600ABE126 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				748C7E65160EF13600ABE126 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		748C7E6D160EF13600ABE126 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				748C7E6E160EF13600ABE126 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		748C7E70160EF13600ABE126 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				748C7E71160EF13600ABE126 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		748C7E85160EF13700ABE126 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				748C7E86160EF13700ABE126 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		748C7E8B160EF13700ABE126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		748C7E8C160EF13700ABE126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		748C7E8E160EF13700ABE126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUndoManager/NSUndoManager-Prefix.pch";
+				INFOPLIST_FILE = "NSUndoManager/NSUndoManager-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		748C7E8F160EF13700ABE126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUndoManager/NSUndoManager-Prefix.pch";
+				INFOPLIST_FILE = "NSUndoManager/NSUndoManager-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		748C7E91160EF13700ABE126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSUndoManager.app/NSUndoManager";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUndoManager/NSUndoManager-Prefix.pch";
+				INFOPLIST_FILE = "NSUndoManagerTests/NSUndoManagerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		748C7E92160EF13700ABE126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSUndoManager.app/NSUndoManager";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUndoManager/NSUndoManager-Prefix.pch";
+				INFOPLIST_FILE = "NSUndoManagerTests/NSUndoManagerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		748C7E51160EF13600ABE126 /* Build configuration list for PBXProject "NSUndoManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				748C7E8B160EF13700ABE126 /* Debug */,
+				748C7E8C160EF13700ABE126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		748C7E8D160EF13700ABE126 /* Build configuration list for PBXNativeTarget "NSUndoManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				748C7E8E160EF13700ABE126 /* Debug */,
+				748C7E8F160EF13700ABE126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		748C7E90160EF13700ABE126 /* Build configuration list for PBXNativeTarget "NSUndoManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				748C7E91160EF13700ABE126 /* Debug */,
+				748C7E92160EF13700ABE126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 748C7E4E160EF13600ABE126 /* Project object */;
+}

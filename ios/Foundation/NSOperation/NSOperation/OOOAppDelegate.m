@@ -8,13 +8,17 @@
 
 #import "OOOAppDelegate.h"
 #import "MyOperation.h"
+#import "SyncOperation.h"
+
+#import "HTTPOperation.h"
+
 
 @implementation OOOAppDelegate
 
 @synthesize window = _window;
 
 #pragma mark addOperation:
-
+//
 -(void)method001
 {
     gQueue = [[NSOperationQueue alloc] init];
@@ -31,33 +35,63 @@
 }
 
 #pragma mark addOperation:
-
+//非並列
 -(void)method002
 {
-    //NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    __block MyOperation *aOperation1 = [[MyOperation alloc] init];
+    MyOperation *aOperation1 = [[MyOperation alloc] init];
+    __block id temp = aOperation1;
+    
     [aOperation1 setCompletionBlock:^{
-        NSLog(@"[DemoPoint completionBlock()]->finished: %d", [aOperation1 finished]);
+        NSLog(@"%s->finished: %@",__FUNCTION__, ([temp finished])?@"YES":@"NO");
+        temp= nil;
     }];
     [aOperation1 start];
     
-    gQueue = [[NSOperationQueue alloc] init];
+    oQueue = [[NSOperationQueue alloc] init];
     
     MyOperation *aOperation2 = [[MyOperation alloc] init];
     
     aOperation1.string = @"aaa";
     aOperation2.string = @"bbb";
     
-    [gQueue addOperation:aOperation1];
-    [gQueue addOperation:aOperation2];
+    //[oQueue addOperation:aOperation1];
+    //[oQueue addOperation:aOperation2];
     
 }
 
+#pragma mark 
+
+-(void)method003
+{
+    //同期型オペレーション startで起動
+    SyncOperation *aOperation1 = [[SyncOperation alloc] init];
+    SyncOperation *aOperation2 = [[SyncOperation alloc] init];
+    
+    aOperation1.string = @"ope 1";
+    aOperation2.string = @"ope 2";
+    
+    [aOperation2 start];
+    //[aOperation2 waitUntilFinished];
+    
+    
+    [aOperation1 start];
+    //[aOperation1 waitUntilFinished];
+}
+
+
+#pragma mark 
+
+-(void)method004
+{
+    
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self method001];
-    [self method002];
+    //[self method001];
+    //[self method002];
+    
+    //[self method003];
     return YES;
 }
 							

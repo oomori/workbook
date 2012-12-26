@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74B39CA316870CB800E69C75 /* test.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 74B39CA216870CB800E69C75 /* test.rtf */; };
 		74EEEB4C15DDBD96002ED0E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEEB4B15DDBD96002ED0E1 /* UIKit.framework */; };
 		74EEEB4E15DDBD96002ED0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEEB4D15DDBD96002ED0E1 /* Foundation.framework */; };
 		74EEEB5015DDBD96002ED0E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEEB4F15DDBD96002ED0E1 /* CoreGraphics.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74B39CA216870CB800E69C75 /* test.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = test.rtf; sourceTree = "<group>"; };
 		74EEEB4715DDBD96002ED0E1 /* NSData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EEEB4B15DDBD96002ED0E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74EEEB4D15DDBD96002ED0E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				74EEEB9315DDBF69002ED0E1 /* test.png */,
+				74B39CA216870CB800E69C75 /* test.rtf */,
 				74EEEB5A15DDBD96002ED0E1 /* OOOAppDelegate.h */,
 				74EEEB5B15DDBD96002ED0E1 /* OOOAppDelegate.m */,
 				74EEEB5D15DDBD96002ED0E1 /* MainStoryboard_iPhone.storyboard */,
@@ -233,6 +236,7 @@
 				74EEEB5F15DDBD96002ED0E1 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74EEEB6215DDBD96002ED0E1 /* MainStoryboard_iPad.storyboard in Resources */,
 				74EEEB9415DDBF69002ED0E1 /* test.png in Resources */,
+				74B39CA316870CB800E69C75 /* test.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +457,7 @@
 				74EEEB7F15DDBD96002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74EEEB8015DDBD96002ED0E1 /* Build configuration list for PBXNativeTarget "NSDataTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +466,7 @@
 				74EEEB8215DDBD96002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

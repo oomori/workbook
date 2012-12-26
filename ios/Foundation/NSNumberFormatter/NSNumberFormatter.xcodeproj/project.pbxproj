@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		744A03FE1628CDC7003B7805 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744A03FD1628CDC7003B7805 /* Default-568h@2x.png */; };
 		74E244CC15AB0158003F32AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E244CB15AB0158003F32AD /* UIKit.framework */; };
 		74E244CE15AB0158003F32AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E244CD15AB0158003F32AD /* Foundation.framework */; };
 		74E244D015AB0158003F32AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E244CF15AB0158003F32AD /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		744A03FD1628CDC7003B7805 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		74E244C715AB0158003F32AD /* NSNumberFormatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSNumberFormatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E244CB15AB0158003F32AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74E244CD15AB0158003F32AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +85,7 @@
 		74E244BC15AB0158003F32AD = {
 			isa = PBXGroup;
 			children = (
+				744A03FD1628CDC7003B7805 /* Default-568h@2x.png */,
 				74E244D115AB0158003F32AD /* NSNumberFormatter */,
 				74E244F215AB0158003F32AD /* NSNumberFormatterTests */,
 				74E244CA15AB0158003F32AD /* Frameworks */,
@@ -228,6 +231,7 @@
 				74E244D615AB0158003F32AD /* InfoPlist.strings in Resources */,
 				74E244DF15AB0158003F32AD /* MainStoryboard_iPhone.storyboard in Resources */,
 				74E244E215AB0158003F32AD /* MainStoryboard_iPad.storyboard in Resources */,
+				744A03FE1628CDC7003B7805 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +448,7 @@
 				74E244FF15AB0158003F32AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74E2450015AB0158003F32AD /* Build configuration list for PBXNativeTarget "NSNumberFormatterTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +457,7 @@
 				74E2450215AB0158003F32AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

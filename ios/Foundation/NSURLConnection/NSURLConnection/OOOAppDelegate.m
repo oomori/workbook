@@ -11,52 +11,10 @@
 @implementation OOOAppDelegate
 
 @synthesize window = _window;
-@synthesize receivedData;
 
-#pragma mark NSURLConnection initWithRequest:
--(void)method001
-{
-    // ここから追加
-    NSURL *theURL = [NSURL URLWithString:@"http://www.apple.com/"];
-    NSURLRequest *theRequest=[NSURLRequest requestWithURL:theURL];
-    NSURLConnection *theConnection=[[NSURLConnection alloc] 
-                                    initWithRequest:theRequest delegate:self];
-    if (theConnection) {
-        NSLog(@"start loading");
-        receivedData = [NSMutableData data] ;
-    }
 
-}
 
-#pragma mark NSArray indexOfObjectPassingTest:
-- (void)connection:(NSURLConnection *)connection 
-didReceiveResponse:(NSURLResponse *)response
-{
-    NSLog(@"didReceiveResponse");
-    [receivedData setLength:0];
-}
 
-- (void)connection:(NSURLConnection *)connection 
-    didReceiveData:(NSData *)data
-{
-    NSLog(@"didReceiveData");
-    [receivedData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection 
-  didFailWithError:(NSError *)error
-{
-    NSLog(@"didFailWithError Error - %@ %@",
-          [error localizedDescription],
-          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    NSLog(@"connectionDidFinishLoading Received %d bytes of data",[receivedData length]);
-    NSLog(@"%@", [[NSString alloc]initWithData:receivedData
-                                      encoding:NSUTF8StringEncoding]);
-}
 
 
 
@@ -64,7 +22,7 @@ didReceiveResponse:(NSURLResponse *)response
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self method001];
+    
     return YES;
 }
 							

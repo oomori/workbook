@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface OOOViewController : UIViewController
+{
+    NSString *searchString;
+    NSMetadataQuery *_query;
+}
+- (IBAction)method001:(id)sender;
+- (IBAction)method002:(id)sender;
 
 @end

@@ -295,6 +295,16 @@ va_list dynamicArgument(int arg_num , ...) {
     
 }
 
+#pragma mark NSPredicate evaluateWithObject
+-(void)method013
+{
+    
+    
+    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"abs(hg-%f)<0.000001",[@"123.45" floatValue]];
+    NSLog(@"%@",[predicate description]);
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -310,6 +320,8 @@ va_list dynamicArgument(int arg_num , ...) {
     [self method010];
     [self method011];
     [self method012];
+    
+    [self method013];
     return YES;
 }
 							

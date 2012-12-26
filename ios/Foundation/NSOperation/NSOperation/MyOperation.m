@@ -14,30 +14,42 @@
 @synthesize executing;
 @synthesize finished;
 
+//並列
+/*
 - (void) start {
-    NSLog(@"start");
-	if ([self isCancelled]) {
+    
+	[super start];
+    if ([self isCancelled]) {
 		self.finished = YES;
 		return;
 	}
 	[NSThread detachNewThreadSelector:@selector(main) toTarget:self withObject:nil];
 	self.executing = YES;
-
+    
+    //NSLog(@"start");
 }
+*/
+//非並列
 
 - (void)main
 {
-    NSLog(@"main");
+    NSLog(@"MyOperation %@ main",string);
     @try {
         @autoreleasepool {
-            NSLog(@"%@", self.string);
+            NSLog(@"%s %@", __FUNCTION__,self.string);
+            
+            for (int i = 0; i <100; i++) {
+                NSLog(@"%s %@ %d", __FUNCTION__,self.string,i);
+                //[NSThread sleepForTimeInterval:0.01];
+            }
+            
         }
     }
     @catch (NSException *exception) {
-        NSLog(@"%@", exception);
+        NSLog(@"%s %@", __FUNCTION__, exception);
     }
     @finally {
-        NSLog(@"@finally");
+        NSLog(@"MyOperation %@ finally",string);
     }
        
 }

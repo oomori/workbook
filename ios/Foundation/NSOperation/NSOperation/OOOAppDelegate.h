@@ -10,7 +10,9 @@
 
 @interface OOOAppDelegate : UIResponder <UIApplicationDelegate>
 {
-    NSOperationQueue *gQueue;    
+    NSOperationQueue *gQueue;
+    
+    NSOperationQueue *oQueue;
 }
 @property (strong, nonatomic) UIWindow *window;
 

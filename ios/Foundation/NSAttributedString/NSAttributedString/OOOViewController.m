@@ -69,6 +69,9 @@
     
     NSLog(@"%s %@",__FUNCTION__,[aString string]);
     
+
+     
+     
     
 }
 #pragma mark initWithString:
@@ -76,9 +79,43 @@
 -(void)method003
 {
     
-    NSAttributedString *aString = [[NSAttributedString alloc] initWithString:@"string"];    
+    NSMutableAttributedString *aString = [[NSMutableAttributedString alloc] initWithString:@"string"];
     
     NSLog(@"%s %@",__FUNCTION__,[aString description]);
+
+    [aString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 2)];
+    [aString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(3, 1)];
+    
+    [aString enumerateAttributesInRange:NSMakeRange(0, 5)
+                                options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired
+                             usingBlock:^(NSDictionary *attributes, NSRange range, BOOL *stop)
+     {
+         UIColor *fontColor = [attributes objectForKey:NSForegroundColorAttributeName];
+         NSLog(@"%@",[fontColor description]);
+     }
+     ];
+    
+    
+}
+-(void)method004
+{
+    
+    NSMutableAttributedString *aString = [[NSMutableAttributedString alloc] initWithString:@"string"];
+    
+    NSLog(@"%s %@",__FUNCTION__,[aString description]);
+    
+    [aString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 2)];
+    [aString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(3, 1)];
+    
+    [aString enumerateAttribute:NSForegroundColorAttributeName inRange:NSMakeRange(0, 5)
+     
+                                options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired
+                             usingBlock:^(id value, NSRange range, BOOL *stop)
+     {
+         UIColor *fontColor = value;
+         NSLog(@"%@",[fontColor description]);
+     }
+     ];
     
     
 }
@@ -90,7 +127,8 @@
     
      [self method001];
     [self method002];
-    //[self method003];
+    [self method003];
+    [self method004];
 }
 
 - (void)viewDidUnload

@@ -305,6 +305,53 @@
     
 }
 
+#pragma mark NSCalendar  dateFromComponents:
+-(void)method017
+{
+    NSCalendar *aCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss Z"];
+    
+    NSDate * aDate = [formatter dateFromString:@"2009-12-31 01:23:45 +0000"];
+    
+    NSUInteger unitFlags = (NSYearCalendarUnit | NSWeekCalendarUnit | NSMonthCalendarUnit| NSWeekOfYearCalendarUnit | NSDayCalendarUnit| NSHourCalendarUnit | NSMinuteCalendarUnit| NSSecondCalendarUnit |NSQuarterCalendarUnit | NSWeekOfMonthCalendarUnit | NSWeekdayOrdinalCalendarUnit|NSWeekOfYearCalendarUnit | NSYearForWeekOfYearCalendarUnit);
+    
+    //    
+    
+    NSDateComponents *comps =
+    [aCalendar components:unitFlags fromDate:aDate];
+    //[comps setQuarter:3];
+    NSLog(@"%s week : %d",__FUNCTION__ ,[comps yearForWeekOfYear]);
+    NSLog(@"%s week : %d",__FUNCTION__ ,[comps weekOfYear]);
+    //=>34
+    
+}
+
+#pragma mark NSCalendar  dateByAddingComponents:toDate:options:　NSWrapCalendarComponents
+-(void)method018
+{
+    NSCalendar *aCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss Z"];
+    
+    NSDate * aDate = [formatter dateFromString:@"2012-08-15 01:20:45 +0000"];
+    NSDate * bDate = [formatter dateFromString:@"2012-08-15 03:40:45 +0000"];
+    
+    NSDateComponents *aComps =
+    [aCalendar components:NSMinuteCalendarUnit fromDate:aDate];
+    NSDate *cDate =
+    [aCalendar dateByAddingComponents:aComps
+                               toDate:bDate
+                              options:0
+                                ];
+    
+    NSLog(@"%s %@",__FUNCTION__ ,[cDate description]);
+    //オプションなし
+    //=>2012-08-15 04:00:45 +0000
+    //オプションにNSWrapCalendarComponentsを与える
+    //=>2012-08-15 03:00:00 +0000
+    
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -327,7 +374,9 @@
     [self method014];
     
     [self method015];
-        [self method016];
+    [self method016];
+    [self method017];
+    [self method018];
     return YES;
 }
 							

@@ -21,6 +21,7 @@
 		740B87A415652AB600520CAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740B878215652AB600520CAB /* Foundation.framework */; };
 		740B87AC15652AB600520CAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 740B87AA15652AB600520CAB /* InfoPlist.strings */; };
 		740B87AF15652AB600520CAB /* NSMetadataQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 740B87AE15652AB600520CAB /* NSMetadataQueryTests.m */; };
+		746F44B51608A49A0016D99D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746F44B41608A49A0016D99D /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		740B87AB15652AB600520CAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		740B87AD15652AB600520CAB /* NSMetadataQueryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMetadataQueryTests.h; sourceTree = "<group>"; };
 		740B87AE15652AB600520CAB /* NSMetadataQueryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSMetadataQueryTests.m; sourceTree = "<group>"; };
+		746F44B41608A49A0016D99D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				740B878115652AB600520CAB /* UIKit.framework in Frameworks */,
 				740B878315652AB600520CAB /* Foundation.framework in Frameworks */,
 				740B878515652AB600520CAB /* CoreGraphics.framework in Frameworks */,
+				746F44B51608A49A0016D99D /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +105,7 @@
 		740B877F15652AB600520CAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				746F44B41608A49A0016D99D /* CoreData.framework */,
 				740B878015652AB600520CAB /* UIKit.framework */,
 				740B878215652AB600520CAB /* Foundation.framework */,
 				740B878415652AB600520CAB /* CoreGraphics.framework */,
@@ -444,6 +448,7 @@
 				740B87B415652AB600520CAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		740B87B515652AB600520CAB /* Build configuration list for PBXNativeTarget "NSMetadataQueryTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +457,7 @@
 				740B87B715652AB600520CAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

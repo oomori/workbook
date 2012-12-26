@@ -794,6 +794,63 @@
     //=>
     
 }
+
+#pragma mark NSNumberFormatter 
+-(void)method047
+{
+    float aValue = 1.85;
+    NSNumber *num = [NSNumber numberWithFloat:aValue];
+    NSNumberFormatter *numFormat = [[NSNumberFormatter alloc] init];
+    numFormat.minimumFractionDigits = 3;
+    numFormat.maximumFractionDigits = 1;
+    numFormat.roundingMode = NSNumberFormatterRoundCeiling;
+    NSLog(@"%s ,NSNumberFormatterRoundCeiling %@",__FUNCTION__,[numFormat stringFromNumber:
+                                   num]);
+    
+    numFormat.roundingMode = NSNumberFormatterRoundFloor;
+    NSLog(@"%s ,NSNumberFormatterRoundFloor %@",__FUNCTION__,[numFormat stringFromNumber:
+                                   num]);
+
+    numFormat.roundingMode = NSNumberFormatterRoundDown;
+    NSLog(@"%s ,NSNumberFormatterRoundDown %@",__FUNCTION__,[numFormat stringFromNumber:
+                                   num]);
+
+    numFormat.roundingMode = NSNumberFormatterRoundUp;
+    NSLog(@"%s ,NSNumberFormatterRoundUp %@",__FUNCTION__,[numFormat stringFromNumber:
+                                   num]);
+
+    numFormat.roundingMode = NSNumberFormatterRoundHalfEven;
+    NSLog(@"%s ,NSNumberFormatterRoundHalfEven %@",__FUNCTION__,[numFormat stringFromNumber:
+                                   num]);
+    
+    numFormat.roundingMode = NSNumberFormatterRoundHalfDown;
+    NSLog(@"%s ,NSNumberFormatterRoundHalfDown %@",__FUNCTION__,[numFormat stringFromNumber:
+                                   num]);
+    
+    numFormat.roundingMode = NSNumberFormatterRoundHalfUp;
+    NSLog(@"%s ,NSNumberFormatterRoundHalfUp %@",__FUNCTION__,[numFormat stringFromNumber:
+                                   num]);
+
+}
+
+#pragma mark NSNumberFormatter setPaddingPosition:
+-(void)method048
+{
+    NSNumberFormatter *numFormat = [[NSNumberFormatter alloc] init] ;
+    [numFormat setPositivePrefix:@"+"];
+    [numFormat setPositiveSuffix:@"円"];
+    [numFormat setPaddingPosition:NSNumberFormatterPadAfterPrefix];
+    [numFormat setPaddingCharacter:@"-"];
+    [numFormat setMinimumIntegerDigits:10];
+    NSLog(@"%s , %@",__FUNCTION__,[numFormat stringFromNumber:[NSNumber numberWithInteger:(-5)]]);
+
+    [numFormat setPaddingPosition:NSNumberFormatterPadBeforePrefix];
+
+    NSLog(@"%s , %@",__FUNCTION__,[numFormat stringFromNumber:[NSNumber numberWithInteger:(-5)]]);
+    
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -844,6 +901,8 @@
     [self method045];
     [self method046];
     
+    [self method047];
+        [self method048];
     return YES;
 }
 							

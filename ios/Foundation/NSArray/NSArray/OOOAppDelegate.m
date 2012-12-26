@@ -1053,6 +1053,63 @@ NSInteger intSort(id val1, id val2, void *context)
     
 }
 
+#pragma mark indexOfObject:inSortedRange:options:usingComparator:
+-(void)method044
+{
+    // テストデータの範囲
+    NSUInteger amount = 900000;
+    NSMutableArray* anArray = [NSMutableArray arrayWithCapacity:amount];
+    for (NSUInteger i = 0; i < amount; ++i) {;
+        CustomClass *customClass = [[CustomClass alloc] init];
+        NSMutableString *muStr = [[NSMutableString alloc] initWithCapacity:0];
+        [muStr appendFormat:@"string%d",i];
+        [customClass setCustomClassValue:muStr];
+        
+        [customClass setCustomNumber:[NSNumber numberWithUnsignedInteger:i]];
+        [anArray addObject:customClass];
+    }
+    
+    //もう一つ824242のデータを作る。名前はstring824242-2nd
+    CustomClass *customClass = [[CustomClass alloc] init];
+    NSMutableString *muStr0 = [[NSMutableString alloc] initWithCapacity:0];
+    [muStr0 appendFormat:@"string%d-2nd",824242];
+    [customClass setCustomClassValue:muStr0];
+    
+    [customClass setCustomNumber:[NSNumber numberWithUnsignedInteger:824242]];
+    [anArray addObject:customClass];
+    
+     // 探すデータ
+    NSNumber* number = [NSNumber numberWithInt:824242];
+    CustomClass *searchObj = [[CustomClass alloc] init];
+    NSMutableString *muStr = [[NSMutableString alloc] initWithCapacity:0];
+    [muStr appendFormat:@"string%d",[number integerValue]];
+    [searchObj setCustomClassValue:muStr];
+    [searchObj setCustomNumber:number];
+    
+    
+    //
+    NSUInteger index1 = [anArray indexOfObject:searchObj
+                                 inSortedRange:NSMakeRange(0, [anArray count])
+                                       options:NSBinarySearchingLastEqual
+                               usingComparator:^(id obj1,id obj2) {
+                                   NSInteger iVal1 = [[obj1 customNumber] integerValue];
+                                   NSInteger iVal2 = [[obj2 customNumber] integerValue];
+                                   if (iVal1 < iVal2)
+                                       return NSOrderedAscending;
+                                   else if (iVal1 > iVal2)
+                                       return NSOrderedDescending;
+                                   else
+                                       return NSOrderedSame;
+                               }];
+    //NSLog(@"%s %@",__FUNCTION__ ,[(CustomClass *)[anArray objectAtIndex:index1] customClassValue]);
+    NSLog(@"%s %u",__FUNCTION__ ,index1);
+    
+    //NSBinarySearchingFirstEqualの場合は
+    //-[OOOAppDelegate method044] string824242
+    //NSBinarySearchingLastEqualの場合は
+    //-[OOOAppDelegate method044] string824242-2nd
+    
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -1101,6 +1158,7 @@ NSInteger intSort(id val1, id val2, void *context)
     [self method041];
     [self method042];
     [self method043];
+    [self method044];
      
     return YES;
 }

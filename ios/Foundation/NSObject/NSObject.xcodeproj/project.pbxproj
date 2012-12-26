@@ -22,6 +22,8 @@
 		74FE46B115F1C04D0000F9D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74FE46AF15F1C04D0000F9D9 /* InfoPlist.strings */; };
 		74FE46B415F1C04D0000F9D9 /* NSObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FE46B315F1C04D0000F9D9 /* NSObjectTests.m */; };
 		74FE46C215F1C1580000F9D9 /* MyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FE46C115F1C1580000F9D9 /* MyObject.m */; };
+		74FE46C515F2E31A0000F9D9 /* OOOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FE46C415F2E31A0000F9D9 /* OOOProxy.m */; };
+		74FE46C815F2F8690000F9D9 /* MyObject2.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FE46C715F2F8690000F9D9 /* MyObject2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		74FE46B315F1C04D0000F9D9 /* NSObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObjectTests.m; sourceTree = "<group>"; };
 		74FE46C015F1C1580000F9D9 /* MyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyObject.h; path = ../MyObject.h; sourceTree = "<group>"; };
 		74FE46C115F1C1580000F9D9 /* MyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyObject.m; path = ../MyObject.m; sourceTree = "<group>"; };
+		74FE46C315F2E31A0000F9D9 /* OOOProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOProxy.h; sourceTree = "<group>"; };
+		74FE46C415F2E31A0000F9D9 /* OOOProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOProxy.m; sourceTree = "<group>"; };
+		74FE46C615F2F8690000F9D9 /* MyObject2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyObject2.h; sourceTree = "<group>"; };
+		74FE46C715F2F8690000F9D9 /* MyObject2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyObject2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,10 @@
 				74FE469515F1C04C0000F9D9 /* OOOAppDelegate.m */,
 				74FE46C015F1C1580000F9D9 /* MyObject.h */,
 				74FE46C115F1C1580000F9D9 /* MyObject.m */,
+				74FE46C615F2F8690000F9D9 /* MyObject2.h */,
+				74FE46C715F2F8690000F9D9 /* MyObject2.m */,
+				74FE46C315F2E31A0000F9D9 /* OOOProxy.h */,
+				74FE46C415F2E31A0000F9D9 /* OOOProxy.m */,
 				74FE469715F1C04C0000F9D9 /* MainStoryboard_iPhone.storyboard */,
 				74FE469A15F1C04C0000F9D9 /* MainStoryboard_iPad.storyboard */,
 				74FE469D15F1C04C0000F9D9 /* OOOViewController.h */,
@@ -272,6 +282,8 @@
 				74FE469615F1C04C0000F9D9 /* OOOAppDelegate.m in Sources */,
 				74FE469F15F1C04C0000F9D9 /* OOOViewController.m in Sources */,
 				74FE46C215F1C1580000F9D9 /* MyObject.m in Sources */,
+				74FE46C515F2E31A0000F9D9 /* OOOProxy.m in Sources */,
+				74FE46C815F2F8690000F9D9 /* MyObject2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
