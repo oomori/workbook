@@ -16,9 +16,9 @@
     
 }
 
-@property (retain) NSMutableString *customClassValue;
-@property (retain) NSNumber *customNumber;
-@property (retain) NSData *custonData;
+@property (strong) NSMutableString *customClassValue;
+@property (strong) NSNumber *customNumber;
+@property (strong) NSData *custonData;
 
 -(NSMutableString *)appendSomeString;
 

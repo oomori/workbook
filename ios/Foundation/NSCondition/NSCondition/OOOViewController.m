@@ -57,7 +57,7 @@
             
             val += 0.001;
             
-            [self performSelectorInBackground:@selector(progress:) withObject:[NSNumber numberWithFloat:val]];
+            [self performSelectorInBackground:@selector(progress:) withObject:@(val)];
             [NSThread sleepForTimeInterval:0.01f];
 
             NSLog(@"val:%f",val);
@@ -102,11 +102,8 @@
             //実行ストップ
             [cond wait];
             //[cond waitUntilDate:[NSDate dateWithTimeIntervalSinceNow:3]];
-
-            
         }
     }
-    
     [cond unlock];
 
 }
@@ -127,7 +124,7 @@
         NSLog(@"exit");
     }
 }
-- (IBAction)resume:(id)sender
+- (IBAction)threadStart:(id)sender
 {
     /*
     thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(threadTask:) object:self];
@@ -162,7 +159,7 @@
     NSLog(@"stop");
 
     [cond2 lock];
-                [cond2 signal];
+    [cond2 signal];
     [thread1 cancel];
     [cond2 unlock];
 
@@ -173,8 +170,7 @@
 - (IBAction)wait5second:(id)sender {
     [cond lock];
 
-            [cond waitUntilDate:[NSDate dateWithTimeIntervalSinceNow:5]];
-    
+    [cond waitUntilDate:[NSDate dateWithTimeIntervalSinceNow:5]];
    
     [cond unlock];
 }

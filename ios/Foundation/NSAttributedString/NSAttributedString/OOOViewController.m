@@ -56,12 +56,10 @@
         return (__bridge_transfer id)paragraphStyleRef;
         
     })());
-    NSDictionary *fontAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                     (__bridge id)aFont2, @"NSFont",
-                                     (__bridge id)darkGrayColor, @"CTForegroundColor",
-                                     [NSNumber numberWithBool:YES], @"CTVerticalForms",
-                                     paragraphStyleAttr, kCTParagraphStyleAttributeName,
-                                     nil];
+    NSDictionary *fontAttributes = @{@"NSFont": (__bridge id)aFont2,
+                                     @"CTForegroundColor": (__bridge id)darkGrayColor,
+                                     @"CTVerticalForms": @YES,
+                                     (id)kCTParagraphStyleAttributeName: paragraphStyleAttr};
     
     NSAttributedString *aString = [[NSAttributedString alloc] initWithString:@"string"  attributes:fontAttributes];
     
@@ -90,7 +88,7 @@
                                 options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired
                              usingBlock:^(NSDictionary *attributes, NSRange range, BOOL *stop)
      {
-         UIColor *fontColor = [attributes objectForKey:NSForegroundColorAttributeName];
+         UIColor *fontColor = attributes[NSForegroundColorAttributeName];
          NSLog(@"%@",[fontColor description]);
      }
      ];

@@ -13,7 +13,7 @@
 
 @synthesize window = _window;
 
-#pragma mark check
+#pragma mark NSFileManager URLForUbiquityContainerIdentifier:
 -(void)method001
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -26,13 +26,23 @@
     //=>[OOOAppDelegate method001] :YES file://localhost/private/var/mobile/Library/Mobile%20Documents/XXXXXXXXXX~com~oomori~cloud/
 }
 
-#pragma mark Key-Value Store
+#pragma mark cloud NSUbiquitousKeyValueStore Key-Value Store
 -(void)method002
 {
     //
     NSUbiquitousKeyValueStore *aStore = [NSUbiquitousKeyValueStore defaultStore];
     [aStore setString:@"oomori" forKey:@"name"];
     [aStore setDouble:44.0 forKey:@"age"];
+    
+    NSArray *anArray = @[@1,@2,@3];
+    [aStore setArray:anArray forKey:@"array"];
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSURL *aURL = [bundle URLForResource:@"Icon" withExtension:@"png" subdirectory:nil];
+    //NSURL *aURL = [bundle URLForResource:@"MainStoryboard_iPad" withExtension:@"storyboardc" subdirectory:@"en.lproj"];
+    NSData *aData = [NSData dataWithContentsOfURL:aURL];
+    [aStore setData:aData forKey:@"data"];
+    
     if ([aStore synchronize]) {
         NSLog(@"%s :sync OK", __FUNCTION__);
     }else {
@@ -40,9 +50,10 @@
     }
     
     //=>[OOOAppDelegate method002] :sync OK
+    NSLog(@"name %@",[aStore stringForKey:@"name"]);
     
 }
-#pragma mark Read Data
+#pragma  mark cloud NSUbiquitousKeyValueStore Read Data
 -(void)method003
 {
     
@@ -52,6 +63,8 @@
     if ([aStore synchronize]) {
         NSLog(@"%s :sync OK", __FUNCTION__);
         NSLog(@"name = %@ :age = %.0f", [aStore stringForKey:@"name"],[aStore doubleForKey:@"age"]);
+        NSLog(@"array = %@ ", [[aStore arrayForKey:@"array"] description]);
+        NSLog(@"data = %@ ", [[aStore dataForKey:@"data"] description]);
         
     }else {
         NSLog(@"NO");
@@ -61,16 +74,16 @@
     //name = oomori :age = 44
 }
 
-
+#pragma  mark cloud NSFileCoordinator Read Data
 -(void)method004
 {
-    NSArray *dirPaths = 
+    //ドキュメントディレクトリを探す
+    NSArray *dirPaths =
     NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                         NSUserDomainMask, YES);
     
     NSString *docsDir = [dirPaths objectAtIndex:0];
     NSString *dataFile = [docsDir stringByAppendingPathComponent:@"document.doc"];
-    
     NSURL *url = [NSURL fileURLWithPath:dataFile];
     
     //[self moveiCloudToLocal:url];
@@ -79,11 +92,13 @@
     //UIDocumentはFilePresenter準拠。
     UIDocument *doc = [[UIDocument alloc] initWithFileURL:url];
     NSFileCoordinator *coodinator = [[NSFileCoordinator alloc] initWithFilePresenter:doc];
-
-    //NSFileManager *syncFileManager = [[NSFileManager alloc] init];
-    //NSURL *ubiq = [syncFileManager URLForUbiquityContainerIdentifier:nil];
     
-    //NSLog(@"%s : OK %@", __FUNCTION__,[ubiq description]);
+    //通知が受けられるように登録
+    [NSFileCoordinator addFilePresenter:doc];
+    NSFileManager *syncFileManager = [[NSFileManager alloc] init];
+    NSURL *ubiq = [syncFileManager URLForUbiquityContainerIdentifier:nil];
+    
+    NSLog(@"%s : OK %@", __FUNCTION__,[ubiq description]);
     
     //__block NSError  *error = nil;
     __block NSString *readStr = nil;
@@ -109,8 +124,7 @@
                                      }];
     */
     // NSFileCoordinatorを使って、ファイルを読み込む
-    //NSFileCoordinator* file = [[NSFileCoordinator alloc] initWithFilePresenter:doc];
-    [coodinator coordinateReadingItemAtURL:url options:0 error:nil 
+    [coodinator coordinateReadingItemAtURL:ubiq options:0 error:nil 
                           byAccessor:^(NSURL* newUrl)
      {
 
@@ -131,8 +145,11 @@
 
 
      }];
-    NSLog(@"READ str = %@",readStr);
-    NSLog(@"READ coodinator = %@",[coodinator description]);
+    NSLog(@"%s READ str = %@",__FUNCTION__,readStr);
+    NSLog(@"%s READ coodinator = %@",__FUNCTION__,[coodinator description]);
+    
+    //通知が受けられるように登録されたもの
+    NSLog(@"%s READ coodinator = %@",__FUNCTION__,[[NSFileCoordinator filePresenters] description]);
     
         
 }
@@ -164,13 +181,14 @@
                                 byAccessor:^(NSURL *newURL)
      {
          
-         //NSError *readErr;
+         
          NSData *contents = [NSData dataWithContentsOfURL:newURL];
          readStr = [[NSString alloc] 
                     initWithBytes:[contents bytes] 
                     length:[contents length] 
                     encoding:NSUTF8StringEncoding];
          /*
+          //NSError *readErr;
          readStr = [NSString
                     stringWithContentsOfURL:newURL
                     encoding:NSUTF8StringEncoding
@@ -179,7 +197,7 @@
          
      }];
     
-    NSLog(@"READ str = %@",[readStr description]);
+    NSLog(@"%s READ str = %@",__FUNCTION__,[readStr description]);
     NSString *writeStr = [NSString stringWithFormat:@"%@%@",readStr,@"+"];
     /*
     [coodinator coordinateWritingItemAtURL:url 
@@ -190,7 +208,7 @@
                                 byAccessor:^(NSURL *newURL, NSURL *url) {
      */                               
     [coodinator coordinateWritingItemAtURL:url
-                                   options:NSFileCoordinatorWritingForMoving
+                                   options:NSFileCoordinatorWritingForReplacing
                                      error:&error
                                 byAccessor:^(NSURL *newURL)
      {
@@ -204,42 +222,47 @@
          //[self moveFileToiCloud:newURL];
          //[NSFileCoordinator addFilePresenter:doc]; 
          
-         /*
-         ^(){
+         
+         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                        ^(void){
             NSLog(@"locale to icloud");
-             NSURL* cloudUrl = 
-             [[NSFileManager defaultManager] URLForUbiquityContainerIdentifier:nil];
              
-             NSLog(@"locale to icloud %@",[cloudUrl description]);
-         NSLog(@"locale to icloud %@",[newURL description]);
+             NSURL* cloudUrl =
+             [[NSFileManager defaultManager] URLForUbiquityContainerIdentifier:nil];
+         
+            NSURL *newCloudUrl = [cloudUrl URLByAppendingPathComponent:@"document.doc"];
+             NSLog(@"locale to icloud %@",[newCloudUrl description]);
+             NSLog(@"locale to icloud %@",[newURL description]);
+         
              // テンポラリーからiCloudへファイルを移動（元の場所から削除される）
              [[NSFileManager defaultManager] 
-              setUbiquitous:YES itemAtURL:newURL destinationURL:cloudUrl error:nil];
+              setUbiquitous:YES itemAtURL:newURL destinationURL:newCloudUrl error:nil];
              
          
              // 操作対象のURLを設定して、NSFileCoordinatorに登録
              [NSFileCoordinator addFilePresenter:doc]; 
              
              
-         };
-          */
+         });
          
+         //指定したファイルの最新のバージョン
          NSFileVersion *localVersion = [NSFileVersion currentVersionOfItemAtURL:newURL];
-         
+         //指定したファイルの衝突を起こしているバージョン
          NSArray *remoteVersions = [NSFileVersion unresolvedConflictVersionsOfItemAtURL:newURL];
+         //指定したファイルの最新以外のバージョン
          NSArray *otherVersions = [NSFileVersion otherVersionsOfItemAtURL:newURL];
          
          
-         NSLog(@"local   = %@",[[localVersion modificationDate ]description]);
-         NSLog(@"%@",[remoteVersions description]);
+         NSLog(@"%s local   = %@",__FUNCTION__,[[localVersion modificationDate ]description]);
+         NSLog(@"%s remote  = %@",__FUNCTION__,[remoteVersions description]);
          
          NSFileVersion*  remote;
          for (remote in remoteVersions) {
-             NSLog(@"remote  = %@",[[remote modificationDate ]description]);
+             NSLog(@"%s remote  = %@",__FUNCTION__,[[remote modificationDate ]description]);
          }
          NSFileVersion*  other;
          for (other in otherVersions) {
-             NSLog(@"other  = %@",[[other modificationDate ]description]);
+             NSLog(@"%s other  = %@",__FUNCTION__,[[other modificationDate ]description]);
          }
          
      
@@ -295,8 +318,8 @@
     NSString *filename = @"testWritecharset.bitmap";
     NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
     
-    NSString *testFileName = @"testfile.alias";
-    NSURL *newURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, testFileName, nil]];
+    //NSString *testFileName = @"testfile.alias";
+    //NSURL *newURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, testFileName, nil]];
     
     NSError *anError = nil;
     NSLog(@"1%s %@",__FUNCTION__,[absoluteURL filePathURL]);
@@ -304,7 +327,7 @@
 
     
     
-    NSLog(@"2%s %@",__FUNCTION__,([NSURL writeBookmarkData:bData toURL:newURL options:NSURLBookmarkCreationSuitableForBookmarkFile error:&anError])?@"OK":@"NG");
+    //NSLog(@"2%s %@",__FUNCTION__,([NSURL writeBookmarkData:bData toURL:newURL options:NSURLBookmarkCreationSuitableForBookmarkFile error:&anError])?@"OK":@"NG");
     NSLog(@"2%s %@",__FUNCTION__,[anError description]);
     
     //NSURLBookmarkCreationMinimalBookmark
@@ -329,37 +352,43 @@
     //NSDocumentDirectory
     //NSDesktopDirectory
     NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *deskPath = [paths objectAtIndex:0];
+    //NSString *deskPath = [paths objectAtIndex:0];
     
-    NSURL *appURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] bundlePath]];
-    NSURL *aliasURL = [[NSURL alloc] initFileURLWithPath:[deskPath stringByAppendingPathComponent:@"AppName"]];
+    //NSURL *appURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] bundlePath]];
+    //NSURL *aliasURL = [[NSURL alloc] initFileURLWithPath:[deskPath stringByAppendingPathComponent:@"AppName"]];
     
-    NSError *err = nil;
-    NSData *bookmarkData = [appURL bookmarkDataWithOptions: NSURLBookmarkCreationSuitableForBookmarkFile includingResourceValuesForKeys:nil relativeToURL:nil error:&err];
-    
-    NSLog(@"4%s %@",__FUNCTION__,[aliasURL description]);
-    if(bookmarkData == nil) {
-        // Error
-        
-    } else {
-        if(![NSURL writeBookmarkData:bookmarkData toURL:aliasURL options:NSURLBookmarkCreationSuitableForBookmarkFile error:&err]) {
-            // Error
-        }
-        
-    }
+    //NSError *err = nil;
+//    NSData *bookmarkData = [appURL bookmarkDataWithOptions: NSURLBookmarkCreationSuitableForBookmarkFile includingResourceValuesForKeys:nil relativeToURL:nil error:&err];
+//    
+//    NSLog(@"4%s %@",__FUNCTION__,[aliasURL description]);
+//    if(bookmarkData == nil) {
+//        // Error
+//        
+//    } else {
+//        if(![NSURL writeBookmarkData:bookmarkData toURL:aliasURL options:NSURLBookmarkCreationSuitableForBookmarkFile error:&err]) {
+//            // Error
+//        }
+//        
+//    }
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self method001];
-    [self method002];
-    [self method003];
-    [self method004];
-    [self method005];
-    [self method006];
-    [self method007];
+    //NSFileManager
+    //[self method001];
     
-    [self method008];
+    //NSUbiquitousKeyValueStore
+    //[self method002];
+    //[self method003];
+    
+    //NSFileCoordinator
+    //[self method004];
+    //[self method005];
+    
+    //[self method006];
+    //[self method007];
+    
+    //[self method008];
 
     return YES;
 }

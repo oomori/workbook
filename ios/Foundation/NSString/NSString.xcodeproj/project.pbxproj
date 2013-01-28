@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		742FFD8B15849F600013DBF4 /* Textfile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 742FFD8A15849F600013DBF4 /* Textfile.txt */; };
+		74843AEA1699732D00FD5111 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74843AE91699732D00FD5111 /* Default-568h@2x.png */; };
 		74B8F0101575A51B00BF53A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B8F00F1575A51B00BF53A0 /* UIKit.framework */; };
 		74B8F0121575A51B00BF53A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B8F0111575A51B00BF53A0 /* Foundation.framework */; };
 		74B8F0141575A51B00BF53A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B8F0131575A51B00BF53A0 /* CoreGraphics.framework */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		742FFD8A15849F600013DBF4 /* Textfile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Textfile.txt; sourceTree = "<group>"; };
+		74843AE91699732D00FD5111 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		74B8F00B1575A51B00BF53A0 /* NSString.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSString.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B8F00F1575A51B00BF53A0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74B8F0111575A51B00BF53A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +87,7 @@
 		74B8F0001575A51B00BF53A0 = {
 			isa = PBXGroup;
 			children = (
+				74843AE91699732D00FD5111 /* Default-568h@2x.png */,
 				74B8F0151575A51B00BF53A0 /* NSString */,
 				74B8F0361575A51C00BF53A0 /* NSStringTests */,
 				74B8F00E1575A51B00BF53A0 /* Frameworks */,
@@ -232,6 +235,7 @@
 				74B8F0231575A51B00BF53A0 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74B8F0261575A51B00BF53A0 /* MainStoryboard_iPad.storyboard in Resources */,
 				742FFD8B15849F600013DBF4 /* Textfile.txt in Resources */,
+				74843AEA1699732D00FD5111 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

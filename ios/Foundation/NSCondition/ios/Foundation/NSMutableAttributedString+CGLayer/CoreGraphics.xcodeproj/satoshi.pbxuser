@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	1D3623250D0F684500981E51 /* CoreGraphicsAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1174}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 792}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* CoreGraphics */ = {
+		activeExec = 0;
+		executables = (
+			74CEFCAC129B4DC800F968E0 /* CoreGraphics */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* CoreGraphicsViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 245}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 244}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* CoreGraphicsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {782, 1044}}";
+			sepNavSelRange = "{1193, 0}";
+			sepNavVisRange = "{863, 759}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 74CEFCAC129B4DC800F968E0 /* CoreGraphics */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* CoreGraphics */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* CoreGraphics */,
+		);
+		codeSenseManager = 74CEFCBF129B4DD300F968E0 /* Code sense */;
+		executables = (
+			74CEFCAC129B4DC800F968E0 /* CoreGraphics */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					552,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 316765198;
+			PBXWorkspaceStateSaveDate = 316765198;
+		};
+		perUserProjectItems = {
+			7417BBD812DDDC75005F4184 /* PBXTextBookmark */ = 7417BBD812DDDC75005F4184 /* PBXTextBookmark */;
+			7417BDF012E14A99005F4184 /* PBXTextBookmark */ = 7417BDF012E14A99005F4184 /* PBXTextBookmark */;
+			7417BF1012E17427005F4184 /* PBXTextBookmark */ = 7417BF1012E17427005F4184 /* PBXTextBookmark */;
+			74630C5C12BB7B3D00BF7E83 /* PBXTextBookmark */ = 74630C5C12BB7B3D00BF7E83 /* PBXTextBookmark */;
+			74630C5D12BB7B3D00BF7E83 /* PBXTextBookmark */ = 74630C5D12BB7B3D00BF7E83 /* PBXTextBookmark */;
+			74CEFD0B129B537B00F968E0 /* PBXTextBookmark */ = 74CEFD0B129B537B00F968E0 /* PBXTextBookmark */;
+			74CEFD53129D5CF900F968E0 /* PBXTextBookmark */ = 74CEFD53129D5CF900F968E0 /* PBXTextBookmark */;
+			74CEFD55129D5CF900F968E0 /* PBXTextBookmark */ = 74CEFD55129D5CF900F968E0 /* PBXTextBookmark */;
+			74CEFDC4129E86EB00F968E0 /* PBXTextBookmark */ = 74CEFDC4129E86EB00F968E0 /* PBXTextBookmark */;
+			74CEFDCE129E87C900F968E0 /* PBXTextBookmark */ = 74CEFDCE129E87C900F968E0 /* PBXTextBookmark */;
+			74CEFE72129E8F8F00F968E0 /* PBXTextBookmark */ = 74CEFE72129E8F8F00F968E0 /* PBXTextBookmark */;
+			74CEFEDA129E990100F968E0 /* PBXTextBookmark */ = 74CEFEDA129E990100F968E0 /* PBXTextBookmark */;
+			74CEFEDF129E9A7E00F968E0 /* PBXTextBookmark */ = 74CEFEDF129E9A7E00F968E0 /* PBXTextBookmark */;
+			74CEFEE1129E9A7E00F968E0 /* PBXTextBookmark */ = 74CEFEE1129E9A7E00F968E0 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 74CEFCBE129B4DD300F968E0 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	7417BBD812DDDC75005F4184 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74CEFD13129B543600F968E0 /* CGTestView.h */;
+		name = "CGTestView.h: 13";
+		rLen = 0;
+		rLoc = 193;
+		rType = 0;
+		vrLen = 200;
+		vrLoc = 0;
+	};
+	7417BDF012E14A99005F4184 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74CEFD14129B543600F968E0 /* CGTestView.m */;
+		name = "CGTestView.m: 43";
+		rLen = 0;
+		rLoc = 887;
+		rType = 0;
+		vrLen = 1085;
+		vrLoc = 40;
+	};
+	7417BF1012E17427005F4184 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74CEFD14129B543600F968E0 /* CGTestView.m */;
+		name = "CGTestView.m: 43";
+		rLen = 0;
+		rLoc = 887;
+		rType = 0;
+		vrLen = 660;
+		vrLoc = 495;
+	};
+	74630C5C12BB7B3D00BF7E83 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* CoreGraphicsViewController.m */;
+		name = "CoreGraphicsViewController.m: 57";
+		rLen = 0;
+		rLoc = 1193;
+		rType = 0;
+		vrLen = 759;
+		vrLoc = 863;
+	};
+	74630C5D12BB7B3D00BF7E83 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* CoreGraphicsAppDelegate.m */;
+		name = "CoreGraphicsAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 792;
+		vrLoc = 0;
+	};
+	74CEFCAC129B4DC800F968E0 /* CoreGraphics */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = CoreGraphics;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	74CEFCBE129B4DD300F968E0 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	74CEFCBF129B4DD300F968E0 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	74CEFD0B129B537B00F968E0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* CoreGraphicsViewController.h */;
+		name = "CoreGraphicsViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 244;
+		vrLoc = 0;
+	};
+	74CEFD13129B543600F968E0 /* CGTestView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {782, 663}}";
+			sepNavSelRange = "{193, 0}";
+			sepNavVisRange = "{0, 200}";
+			sepNavWindowFrame = "{{61, 79}, {875, 652}}";
+		};
+	};
+	74CEFD14129B543600F968E0 /* CGTestView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {752, 1153}}";
+			sepNavSelRange = "{887, 0}";
+			sepNavVisRange = "{495, 660}";
+		};
+	};
+	74CEFD53129D5CF900F968E0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74CEFD54129D5CF900F968E0 /* CGColorSpace.h */;
+		name = "CGColorSpace.h: 8";
+		rLen = 46;
+		rLoc = 148;
+		rType = 0;
+		vrLen = 2199;
+		vrLoc = 4997;
+	};
+	74CEFD54129D5CF900F968E0 /* CGColorSpace.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CGColorSpace.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGColorSpace.h;
+		sourceTree = "<absolute>";
+	};
+	74CEFD55129D5CF900F968E0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74CEFD56129D5CF900F968E0 /* CGShading.h */;
+		name = "CGShading.h: 36";
+		rLen = 15;
+		rLoc = 1566;
+		rType = 0;
+		vrLen = 2044;
+		vrLoc = 139;
+	};
+	74CEFD56129D5CF900F968E0 /* CGShading.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CGShading.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGShading.h;
+		sourceTree = "<absolute>";
+	};
+	74CEFDC4129E86EB00F968E0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74CEFDC5129E86EB00F968E0 /* CGColor.h */;
+		name = "CGColor.h: 28";
+		rLen = 73;
+		rLoc = 839;
+		rType = 0;
+		vrLen = 1224;
+		vrLoc = 0;
+	};
+	74CEFDC5129E86EB00F968E0 /* CGColor.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CGColor.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGColor.h;
+		sourceTree = "<absolute>";
+	};
+	74CEFDCD129E87C900F968E0 /* CGGradient.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CGGradient.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGradient.h;
+		sourceTree = "<absolute>";
+	};
+	74CEFDCE129E87C900F968E0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74CEFDCF129E87C900F968E0 /* UIColor.h */;
+		name = "UIColor.h: 14";
+		rLen = 70;
+		rLoc = 211;
+		rType = 0;
+		vrLen = 1399;
+		vrLoc = 0;
+	};
+	74CEFDCF129E87C900F968E0 /* UIColor.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = UIColor.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIColor.h;
+		sourceTree = "<absolute>";
+	};
+	74CEFE3F129E8E3500F968E0 /* CGContext.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CGContext.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGContext.h;
+		sourceTree = "<absolute>";
+	};
+	74CEFE72129E8F8F00F968E0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74CEFE3F129E8E3500F968E0 /* CGContext.h */;
+		name = "CGContext.h: 740";
+		rLen = 80;
+		rLoc = 29666;
+		rType = 0;
+		vrLen = 1669;
+		vrLoc = 28958;
+	};
+	74CEFEDA129E990100F968E0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74CEFDCD129E87C900F968E0 /* CGGradient.h */;
+		name = "CGGradient.h: 14";
+		rLen = 48;
+		rLoc = 265;
+		rType = 0;
+		vrLen = 1145;
+		vrLoc = 0;
+	};
+	74CEFEDF129E9A7E00F968E0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74CEFEE0129E9A7E00F968E0 /* NSExpression.h */;
+		name = "NSExpression.h: 103";
+		rLen = 24;
+		rLoc = 8372;
+		rType = 0;
+		vrLen = 3145;
+		vrLoc = 6327;
+	};
+	74CEFEE0129E9A7E00F968E0 /* NSExpression.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSExpression.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSExpression.h;
+		sourceTree = "<absolute>";
+	};
+	74CEFEE1129E9A7E00F968E0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 74CEFEE2129E9A7E00F968E0 /* CGFunction.h */;
+		name = "CGFunction.h: 76";
+		rLen = 77;
+		rLoc = 3080;
+		rType = 0;
+		vrLen = 1629;
+		vrLoc = 2179;
+	};
+	74CEFEE2129E9A7E00F968E0 /* CGFunction.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CGFunction.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGFunction.h;
+		sourceTree = "<absolute>";
+	};
+}

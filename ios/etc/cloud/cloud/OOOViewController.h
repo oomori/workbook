@@ -29,4 +29,6 @@
 - (IBAction)saveDocument:(id)sender;
 - (IBAction)revertDocument:(id)sender;
 - (IBAction)testButton:(id)sender;
+- (IBAction)cloudToLocal:(id)sender;
+
 @end

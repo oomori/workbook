@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74DC27511697D35A007989A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC27501697D35A007989A5 /* UIKit.framework */; };
+		74DC27531697D35A007989A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC27521697D35A007989A5 /* Foundation.framework */; };
+		74DC27551697D35A007989A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC27541697D35A007989A5 /* CoreGraphics.framework */; };
+		74DC275B1697D35A007989A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74DC27591697D35A007989A5 /* InfoPlist.strings */; };
+		74DC275D1697D35A007989A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DC275C1697D35A007989A5 /* main.m */; };
+		74DC27611697D35A007989A5 /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DC27601697D35A007989A5 /* OOOAppDelegate.m */; };
+		74DC27631697D35A007989A5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 74DC27621697D35A007989A5 /* Default.png */; };
+		74DC27651697D35A007989A5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74DC27641697D35A007989A5 /* Default@2x.png */; };
+		74DC27671697D35A007989A5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74DC27661697D35A007989A5 /* Default-568h@2x.png */; };
+		74DC276A1697D35A007989A5 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DC27681697D35A007989A5 /* MainStoryboard_iPhone.storyboard */; };
+		74DC276D1697D35A007989A5 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DC276B1697D35A007989A5 /* MainStoryboard_iPad.storyboard */; };
+		74DC27701697D35A007989A5 /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DC276F1697D35A007989A5 /* OOOViewController.m */; };
+		74DC27781697D35A007989A5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC27771697D35A007989A5 /* SenTestingKit.framework */; };
+		74DC27791697D35A007989A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC27501697D35A007989A5 /* UIKit.framework */; };
+		74DC277A1697D35A007989A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC27521697D35A007989A5 /* Foundation.framework */; };
+		74DC27821697D35A007989A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74DC27801697D35A007989A5 /* InfoPlist.strings */; };
+		74DC27851697D35A007989A5 /* NSUbiquitousKeyValueStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DC27841697D35A007989A5 /* NSUbiquitousKeyValueStoreTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74DC277B1697D35A007989A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74DC27431697D35A007989A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74DC274B1697D35A007989A5;
+			remoteInfo = NSUbiquitousKeyValueStore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74DC274C1697D35A007989A5 /* NSUbiquitousKeyValueStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSUbiquitousKeyValueStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DC27501697D35A007989A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74DC27521697D35A007989A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74DC27541697D35A007989A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74DC27581697D35A007989A5 /* NSUbiquitousKeyValueStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSUbiquitousKeyValueStore-Info.plist"; sourceTree = "<group>"; };
+		74DC275A1697D35A007989A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74DC275C1697D35A007989A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74DC275E1697D35A007989A5 /* NSUbiquitousKeyValueStore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUbiquitousKeyValueStore-Prefix.pch"; sourceTree = "<group>"; };
+		74DC275F1697D35A007989A5 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
+		74DC27601697D35A007989A5 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
+		74DC27621697D35A007989A5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		74DC27641697D35A007989A5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		74DC27661697D35A007989A5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		74DC27691697D35A007989A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		74DC276C1697D35A007989A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		74DC276E1697D35A007989A5 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
+		74DC276F1697D35A007989A5 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
+		74DC27761697D35A007989A5 /* NSUbiquitousKeyValueStoreTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSUbiquitousKeyValueStoreTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DC27771697D35A007989A5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74DC277F1697D35A007989A5 /* NSUbiquitousKeyValueStoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSUbiquitousKeyValueStoreTests-Info.plist"; sourceTree = "<group>"; };
+		74DC27811697D35A007989A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74DC27831697D35A007989A5 /* NSUbiquitousKeyValueStoreTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUbiquitousKeyValueStoreTests.h; sourceTree = "<group>"; };
+		74DC27841697D35A007989A5 /* NSUbiquitousKeyValueStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUbiquitousKeyValueStoreTests.m; sourceTree = "<group>"; };
+		74DC27931697D488007989A5 /* NSUbiquitousKeyValueStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = NSUbiquitousKeyValueStore.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74DC27491697D35A007989A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DC27511697D35A007989A5 /* UIKit.framework in Frameworks */,
+				74DC27531697D35A007989A5 /* Foundation.framework in Frameworks */,
+				74DC27551697D35A007989A5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DC27721697D35A007989A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DC27781697D35A007989A5 /* SenTestingKit.framework in Frameworks */,
+				74DC27791697D35A007989A5 /* UIKit.framework in Frameworks */,
+				74DC277A1697D35A007989A5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74DC27411697D35A007989A5 = {
+			isa = PBXGroup;
+			children = (
+				74DC27561697D35A007989A5 /* NSUbiquitousKeyValueStore */,
+				74DC277D1697D35A007989A5 /* NSUbiquitousKeyValueStoreTests */,
+				74DC274F1697D35A007989A5 /* Frameworks */,
+				74DC274D1697D35A007989A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74DC274D1697D35A007989A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74DC274C1697D35A007989A5 /* NSUbiquitousKeyValueStore.app */,
+				74DC27761697D35A007989A5 /* NSUbiquitousKeyValueStoreTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74DC274F1697D35A007989A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74DC27501697D35A007989A5 /* UIKit.framework */,
+				74DC27521697D35A007989A5 /* Foundation.framework */,
+				74DC27541697D35A007989A5 /* CoreGraphics.framework */,
+				74DC27771697D35A007989A5 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74DC27561697D35A007989A5 /* NSUbiquitousKeyValueStore */ = {
+			isa = PBXGroup;
+			children = (
+				74DC27931697D488007989A5 /* NSUbiquitousKeyValueStore.entitlements */,
+				74DC275F1697D35A007989A5 /* OOOAppDelegate.h */,
+				74DC27601697D35A007989A5 /* OOOAppDelegate.m */,
+				74DC27681697D35A007989A5 /* MainStoryboard_iPhone.storyboard */,
+				74DC276B1697D35A007989A5 /* MainStoryboard_iPad.storyboard */,
+				74DC276E1697D35A007989A5 /* OOOViewController.h */,
+				74DC276F1697D35A007989A5 /* OOOViewController.m */,
+				74DC27571697D35A007989A5 /* Supporting Files */,
+			);
+			path = NSUbiquitousKeyValueStore;
+			sourceTree = "<group>";
+		};
+		74DC27571697D35A007989A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74DC27581697D35A007989A5 /* NSUbiquitousKeyValueStore-Info.plist */,
+				74DC27591697D35A007989A5 /* InfoPlist.strings */,
+				74DC275C1697D35A007989A5 /* main.m */,
+				74DC275E1697D35A007989A5 /* NSUbiquitousKeyValueStore-Prefix.pch */,
+				74DC27621697D35A007989A5 /* Default.png */,
+				74DC27641697D35A007989A5 /* Default@2x.png */,
+				74DC27661697D35A007989A5 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74DC277D1697D35A007989A5 /* NSUbiquitousKeyValueStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				74DC27831697D35A007989A5 /* NSUbiquitousKeyValueStoreTests.h */,
+				74DC27841697D35A007989A5 /* NSUbiquitousKeyValueStoreTests.m */,
+				74DC277E1697D35A007989A5 /* Supporting Files */,
+			);
+			path = NSUbiquitousKeyValueStoreTests;
+			sourceTree = "<group>";
+		};
+		74DC277E1697D35A007989A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74DC277F1697D35A007989A5 /* NSUbiquitousKeyValueStoreTests-Info.plist */,
+				74DC27801697D35A007989A5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74DC274B1697D35A007989A5 /* NSUbiquitousKeyValueStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74DC27881697D35A007989A5 /* Build configuration list for PBXNativeTarget "NSUbiquitousKeyValueStore" */;
+			buildPhases = (
+				74DC27481697D35A007989A5 /* Sources */,
+				74DC27491697D35A007989A5 /* Frameworks */,
+				74DC274A1697D35A007989A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSUbiquitousKeyValueStore;
+			productName = NSUbiquitousKeyValueStore;
+			productReference = 74DC274C1697D35A007989A5 /* NSUbiquitousKeyValueStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74DC27751697D35A007989A5 /* NSUbiquitousKeyValueStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74DC278B1697D35A007989A5 /* Build configuration list for PBXNativeTarget "NSUbiquitousKeyValueStoreTests" */;
+			buildPhases = (
+				74DC27711697D35A007989A5 /* Sources */,
+				74DC27721697D35A007989A5 /* Frameworks */,
+				74DC27731697D35A007989A5 /* Resources */,
+				74DC27741697D35A007989A5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74DC277C1697D35A007989A5 /* PBXTargetDependency */,
+			);
+			name = NSUbiquitousKeyValueStoreTests;
+			productName = NSUbiquitousKeyValueStoreTests;
+			productReference = 74DC27761697D35A007989A5 /* NSUbiquitousKeyValueStoreTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74DC27431697D35A007989A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OOO;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Satoshi Oomori";
+			};
+			buildConfigurationList = 74DC27461697D35A007989A5 /* Build configuration list for PBXProject "NSUbiquitousKeyValueStore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74DC27411697D35A007989A5;
+			productRefGroup = 74DC274D1697D35A007989A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74DC274B1697D35A007989A5 /* NSUbiquitousKeyValueStore */,
+				74DC27751697D35A007989A5 /* NSUbiquitousKeyValueStoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74DC274A1697D35A007989A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DC275B1697D35A007989A5 /* InfoPlist.strings in Resources */,
+				74DC27631697D35A007989A5 /* Default.png in Resources */,
+				74DC27651697D35A007989A5 /* Default@2x.png in Resources */,
+				74DC27671697D35A007989A5 /* Default-568h@2x.png in Resources */,
+				74DC276A1697D35A007989A5 /* MainStoryboard_iPhone.storyboard in Resources */,
+				74DC276D1697D35A007989A5 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DC27731697D35A007989A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DC27821697D35A007989A5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74DC27741697D35A007989A5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74DC27481697D35A007989A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DC275D1697D35A007989A5 /* main.m in Sources */,
+				74DC27611697D35A007989A5 /* OOOAppDelegate.m in Sources */,
+				74DC27701697D35A007989A5 /* OOOViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DC27711697D35A007989A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DC27851697D35A007989A5 /* NSUbiquitousKeyValueStoreTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74DC277C1697D35A007989A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74DC274B1697D35A007989A5 /* NSUbiquitousKeyValueStore */;
+			targetProxy = 74DC277B1697D35A007989A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74DC27591697D35A007989A5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74DC275A1697D35A007989A5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74DC27681697D35A007989A5 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74DC27691697D35A007989A5 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		74DC276B1697D35A007989A5 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74DC276C1697D35A007989A5 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		74DC27801697D35A007989A5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74DC27811697D35A007989A5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74DC27861697D35A007989A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74DC27871697D35A007989A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74DC27891697D35A007989A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NSUbiquitousKeyValueStore/NSUbiquitousKeyValueStore.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUbiquitousKeyValueStore/NSUbiquitousKeyValueStore-Prefix.pch";
+				INFOPLIST_FILE = "NSUbiquitousKeyValueStore/NSUbiquitousKeyValueStore-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74DC278A1697D35A007989A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NSUbiquitousKeyValueStore/NSUbiquitousKeyValueStore.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUbiquitousKeyValueStore/NSUbiquitousKeyValueStore-Prefix.pch";
+				INFOPLIST_FILE = "NSUbiquitousKeyValueStore/NSUbiquitousKeyValueStore-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		74DC278C1697D35A007989A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSUbiquitousKeyValueStore.app/NSUbiquitousKeyValueStore";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUbiquitousKeyValueStore/NSUbiquitousKeyValueStore-Prefix.pch";
+				INFOPLIST_FILE = "NSUbiquitousKeyValueStoreTests/NSUbiquitousKeyValueStoreTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		74DC278D1697D35A007989A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSUbiquitousKeyValueStore.app/NSUbiquitousKeyValueStore";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUbiquitousKeyValueStore/NSUbiquitousKeyValueStore-Prefix.pch";
+				INFOPLIST_FILE = "NSUbiquitousKeyValueStoreTests/NSUbiquitousKeyValueStoreTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74DC27461697D35A007989A5 /* Build configuration list for PBXProject "NSUbiquitousKeyValueStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DC27861697D35A007989A5 /* Debug */,
+				74DC27871697D35A007989A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74DC27881697D35A007989A5 /* Build configuration list for PBXNativeTarget "NSUbiquitousKeyValueStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DC27891697D35A007989A5 /* Debug */,
+				74DC278A1697D35A007989A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74DC278B1697D35A007989A5 /* Build configuration list for PBXNativeTarget "NSUbiquitousKeyValueStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DC278C1697D35A007989A5 /* Debug */,
+				74DC278D1697D35A007989A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74DC27431697D35A007989A5 /* Project object */;
+}

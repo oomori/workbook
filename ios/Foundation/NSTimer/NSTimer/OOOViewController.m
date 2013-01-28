@@ -73,10 +73,9 @@ NSTimer *timer = nil;
 
 - (IBAction)method004:(id)sender {
     //userInfoに使う辞書を作成
-	NSDictionary *userInfoDictionary =[NSDictionary dictionaryWithObjectsAndKeys:
-                                       @"value1",@"key1",
-                                       @"value2",@"key2",
-                                       @"value3",@"key3",nil];
+	NSDictionary *userInfoDictionary =@{@"key1": @"value1",
+                                       @"key2": @"value2",
+                                       @"key3": @"value3"};
     
 	//タイマースタート
 	timer = [NSTimer scheduledTimerWithTimeInterval:1.0
@@ -122,10 +121,9 @@ NSTimer *timer = nil;
 	//NSDate *theDate = [NSDate dateWithString:@"2015-09-02 13:31:00 +0900"];
 	
 	//userInfoに使う辞書を作成
-	NSDictionary *userInfoDictionary =[NSDictionary dictionaryWithObjectsAndKeys:
-                                       @"value1",@"key1",
-                                       @"value2",@"key2",
-                                       @"value3",@"key3",nil];
+	NSDictionary *userInfoDictionary =@{@"key1": @"value1",
+                                       @"key2": @"value2",
+                                       @"key3": @"value3"};
     
 	
 	timer = [[NSTimer alloc] initWithFireDate:theDate

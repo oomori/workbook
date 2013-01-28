@@ -13,6 +13,8 @@
 
 - (IBAction)method001:(id)sender;
 - (IBAction)method002:(id)sender;
+- (IBAction)method003:(id)sender;
+- (IBAction)method004:(id)sender;
 
 
 @end

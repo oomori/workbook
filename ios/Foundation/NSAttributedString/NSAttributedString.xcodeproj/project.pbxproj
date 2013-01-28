@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7423747116980BD000EE7A3E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7423747016980BD000EE7A3E /* Default-568h@2x.png */; };
 		746C6160155422020077F6DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746C615F155422020077F6DE /* UIKit.framework */; };
 		746C6162155422020077F6DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746C6161155422020077F6DE /* Foundation.framework */; };
 		746C6164155422020077F6DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746C6163155422020077F6DE /* CoreGraphics.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7423747016980BD000EE7A3E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		746C615B155422020077F6DE /* NSAttributedString.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSAttributedString.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		746C615F155422020077F6DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		746C6161155422020077F6DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +88,7 @@
 		746C6150155422020077F6DE = {
 			isa = PBXGroup;
 			children = (
+				7423747016980BD000EE7A3E /* Default-568h@2x.png */,
 				746C6165155422020077F6DE /* NSAttributedString */,
 				746C6186155422020077F6DE /* NSAttributedStringTests */,
 				746C615E155422020077F6DE /* Frameworks */,
@@ -232,6 +235,7 @@
 				746C616A155422020077F6DE /* InfoPlist.strings in Resources */,
 				746C6173155422020077F6DE /* MainStoryboard_iPhone.storyboard in Resources */,
 				746C6176155422020077F6DE /* MainStoryboard_iPad.storyboard in Resources */,
+				7423747116980BD000EE7A3E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

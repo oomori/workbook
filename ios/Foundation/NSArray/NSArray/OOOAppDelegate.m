@@ -19,7 +19,7 @@
 -(void)method001
 {
     NSArray *anArray = 
-    [[NSArray alloc] initWithObjects:@"aaa",@"bbb",@"ccc",nil];
+        [[NSArray alloc] initWithObjects:@"aaa",@"bbb",@"ccc",nil];
     
     NSLog(@"%s %@",__FUNCTION__,[anArray description]);
 }
@@ -377,7 +377,7 @@
     //比較用文字列作成
     NSMutableString *aaaMutable = [NSMutableString stringWithCapacity:1];
     [aaaMutable appendString:@"aaa"];
-    NSString *aaaImmutable = [NSString stringWithString:@"aaa"];
+    NSString *aaaImmutable = @"aaa";
     
     //NSMutableStringのaaaが含まれている配列か
     NSArray *array1 = [NSArray arrayWithObjects:aaaMutable,@"bbb",@"ccc",nil];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7423748516980D3700EE7A3E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7423748416980D3700EE7A3E /* Default-568h@2x.png */; };
 		74923F24155D3FAF007A1C90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74923F23155D3FAF007A1C90 /* UIKit.framework */; };
 		74923F26155D3FAF007A1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74923F25155D3FAF007A1C90 /* Foundation.framework */; };
 		74923F28155D3FAF007A1C90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74923F27155D3FAF007A1C90 /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7423748416980D3700EE7A3E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		74923F1F155D3FAF007A1C90 /* NSAutoreleasePool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSAutoreleasePool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74923F23155D3FAF007A1C90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74923F25155D3FAF007A1C90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +85,7 @@
 		74923F14155D3FAF007A1C90 = {
 			isa = PBXGroup;
 			children = (
+				7423748416980D3700EE7A3E /* Default-568h@2x.png */,
 				74923F29155D3FAF007A1C90 /* NSAutoreleasePool */,
 				74923F4A155D3FAF007A1C90 /* NSAutoreleasePoolTests */,
 				74923F22155D3FAF007A1C90 /* Frameworks */,
@@ -228,6 +231,7 @@
 				74923F2E155D3FAF007A1C90 /* InfoPlist.strings in Resources */,
 				74923F37155D3FAF007A1C90 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74923F3A155D3FAF007A1C90 /* MainStoryboard_iPad.storyboard in Resources */,
+				7423748516980D3700EE7A3E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +379,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSAutoreleasePool/NSAutoreleasePool-Prefix.pch";
 				INFOPLIST_FILE = "NSAutoreleasePool/NSAutoreleasePool-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,6 +391,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSAutoreleasePool/NSAutoreleasePool-Prefix.pch";
 				INFOPLIST_FILE = "NSAutoreleasePool/NSAutoreleasePool-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -444,6 +450,7 @@
 				74923F57155D3FAF007A1C90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74923F58155D3FAF007A1C90 /* Build configuration list for PBXNativeTarget "NSAutoreleasePoolTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +459,7 @@
 				74923F5A155D3FAF007A1C90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

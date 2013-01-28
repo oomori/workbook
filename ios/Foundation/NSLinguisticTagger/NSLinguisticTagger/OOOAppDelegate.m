@@ -17,6 +17,7 @@
 {
     NSString *aString = @"My name is OOMORI satoshi.";
     //iOS 5.1 現在実機では日本語は使えない
+    //iOS 6.0 現在日本語は使えない
     //NSString *targetScheme = NSLinguisticTagSchemeTokenType;//種類Word,Whitespace,Punctuationなど
     NSString *targetScheme = NSLinguisticTagSchemeLexicalClass;//品詞。英語のみ,Verb,Noun,SentenceTerminator
     
@@ -147,11 +148,11 @@
 
     NSLog(@"%s %@", __FUNCTION__,[aTagger tagSchemes]);
     //=>LexicalClass
-    NSLog(@"%s %@", __FUNCTION__,[NSLinguisticTagger availableTagSchemesForLanguage:@"FR"]);
+    NSLog(@"%s %@", __FUNCTION__,[NSLinguisticTagger availableTagSchemesForLanguage:@"en"]);
     //=>(TokenType,Language,Script,Lemma,LexicalClass,NameType,NameTypeOrLexicalClass)
-    
-    //jaだと(TokenType,Language,Script)のみ
-    //FRも(TokenType,Language,Script)のみ
+    //enだと（TokenType,Language,Script,Lemma,LexicalClass,NameType,   NameTypeOrLexicalClass）
+    //jaだと(TokenType,Language,Script)のみ iOS6.0現在
+    //FRも(TokenType,Language,Script)のみiOS6.0現在
     NSLog(@"%s %@", __FUNCTION__,[aTagger string]);
 }
 #pragma mark NSLinguisticTagger  possibleTagsAtIndex:scheme:tokenRange:sentenceRange:scores:

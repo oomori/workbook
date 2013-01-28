@@ -22,6 +22,7 @@
 		74EEEC4115DE448C002ED0E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EEEC3F15DE448C002ED0E1 /* InfoPlist.strings */; };
 		74EEEC4415DE448C002ED0E1 /* NSLocaleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEEC4315DE448C002ED0E1 /* NSLocaleTests.m */; };
 		74EEEC5B15DE4713002ED0E1 /* OOOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEEC5A15DE4713002ED0E1 /* OOOView.m */; };
+		74F2F5F216AF59CA00A59190 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F2F5F116AF59CA00A59190 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		74EEEC4315DE448C002ED0E1 /* NSLocaleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSLocaleTests.m; sourceTree = "<group>"; };
 		74EEEC5915DE4713002ED0E1 /* OOOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOView.h; sourceTree = "<group>"; };
 		74EEEC5A15DE4713002ED0E1 /* OOOView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOView.m; sourceTree = "<group>"; };
+		74F2F5F116AF59CA00A59190 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		74EEEC0615DE448C002ED0E1 = {
 			isa = PBXGroup;
 			children = (
+				74F2F5F116AF59CA00A59190 /* Default-568h@2x.png */,
 				74EEEC1B15DE448C002ED0E1 /* NSLocale */,
 				74EEEC3C15DE448C002ED0E1 /* NSLocaleTests */,
 				74EEEC1415DE448C002ED0E1 /* Frameworks */,
@@ -234,6 +237,7 @@
 				74EEEC2015DE448C002ED0E1 /* InfoPlist.strings in Resources */,
 				74EEEC2915DE448C002ED0E1 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74EEEC2C15DE448C002ED0E1 /* MainStoryboard_iPad.storyboard in Resources */,
+				74F2F5F216AF59CA00A59190 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +459,7 @@
 				74EEEC4915DE448C002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74EEEC4A15DE448C002ED0E1 /* Build configuration list for PBXNativeTarget "NSLocaleTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +468,7 @@
 				74EEEC4C15DE448C002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

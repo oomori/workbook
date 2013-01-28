@@ -11,20 +11,24 @@
 @implementation OOOAppDelegate
 
 @synthesize window = _window;
-#pragma mark initWithObjects:
+#pragma mark 
 -(void)method001
 {
-    if ([[NSFileManager defaultManager] respondsToSelector:@selector(URLForUbiquityContainerIdentifier:)]) {
-        
-        NSURL *icloudURL = [[NSFileManager defaultManager] URLForUbiquityContainerIdentifier:nil];
+    //iCloudの使用は設定が必要
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *url = [fileManager URLForUbiquityContainerIdentifier:nil];
+    if (url) {
+        NSLog(@"%s :YES %@", __FUNCTION__,[url description]);
+    }else {
+        NSLog(@"NO");
     }
-    
-    NSLog(@"%s %@",__FUNCTION__,[anArray description]);
+    //=>[OOOAppDelegate method001] :YES file://localhost/private/var/mobile/Library/Mobile%20Documents/XXXXXXXXXX~com~oomori~cloud/
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self method001];
     return YES;
 }
 							

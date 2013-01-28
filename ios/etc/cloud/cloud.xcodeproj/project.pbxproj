@@ -24,6 +24,7 @@
 		746C62321554FBB10077F6DE /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C62301554FBB10077F6DE /* Icon-72.png */; };
 		746C62331554FBB10077F6DE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C62311554FBB10077F6DE /* Icon.png */; };
 		746C6236155500FB0077F6DE /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C6235155500FB0077F6DE /* MyDocument.m */; };
+		74DC27991697D60E007989A5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74DC27981697D60E007989A5 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		746C62311554FBB10077F6DE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		746C6234155500FB0077F6DE /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
 		746C6235155500FB0077F6DE /* MyDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocument.m; sourceTree = "<group>"; };
+		74DC27981697D60E007989A5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		746C61DF1554F42A0077F6DE = {
 			isa = PBXGroup;
 			children = (
+				74DC27981697D60E007989A5 /* Default-568h@2x.png */,
 				746C61F41554F42A0077F6DE /* cloud */,
 				746C62151554F42A0077F6DE /* cloudTests */,
 				746C61ED1554F42A0077F6DE /* Frameworks */,
@@ -251,6 +254,7 @@
 				746C62051554F42A0077F6DE /* MainStoryboard_iPad.storyboard in Resources */,
 				746C62321554FBB10077F6DE /* Icon-72.png in Resources */,
 				746C62331554FBB10077F6DE /* Icon.png in Resources */,
+				74DC27991697D60E007989A5 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,8 +357,8 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Satoshi Oomori (7SGN977W7Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satoshi Oomori (7SGN977W7Q)";
+				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -367,8 +371,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PROVISIONING_PROFILE = "B7BD699F-64E7-45C2-8E59-D3CF5A377430";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "3D518AED-1797-4F2B-8952-C75DA9D11BDF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3D518AED-1797-4F2B-8952-C75DA9D11BDF";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -381,16 +386,17 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Satoshi Oomori (7SGN977W7Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Satoshi Oomori (7SGN977W7Q)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "B7BD699F-64E7-45C2-8E59-D3CF5A377430";
+				PROVISIONING_PROFILE = "3D518AED-1797-4F2B-8952-C75DA9D11BDF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3D518AED-1797-4F2B-8952-C75DA9D11BDF";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -406,9 +412,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cloud/cloud-Prefix.pch";
 				INFOPLIST_FILE = "cloud/cloud-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5753E4DA-5011-425D-B679-7002E0586E68";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5753E4DA-5011-425D-B679-7002E0586E68";
+				PROVISIONING_PROFILE = "3D518AED-1797-4F2B-8952-C75DA9D11BDF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3D518AED-1797-4F2B-8952-C75DA9D11BDF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -422,9 +429,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cloud/cloud-Prefix.pch";
 				INFOPLIST_FILE = "cloud/cloud-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5753E4DA-5011-425D-B679-7002E0586E68";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5753E4DA-5011-425D-B679-7002E0586E68";
+				PROVISIONING_PROFILE = "3D518AED-1797-4F2B-8952-C75DA9D11BDF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3D518AED-1797-4F2B-8952-C75DA9D11BDF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -473,7 +481,7 @@
 				746C621F1554F42A0077F6DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		746C62201554F42A0077F6DE /* Build configuration list for PBXNativeTarget "cloud" */ = {
 			isa = XCConfigurationList;
@@ -482,7 +490,7 @@
 				746C62221554F42A0077F6DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		746C62231554F42A0077F6DE /* Build configuration list for PBXNativeTarget "cloudTests" */ = {
 			isa = XCConfigurationList;
@@ -491,7 +499,7 @@
 				746C62251554F42A0077F6DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

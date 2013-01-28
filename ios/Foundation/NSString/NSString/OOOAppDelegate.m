@@ -84,14 +84,14 @@
 -(void)method005
 {
     //000-000-0000形式の文字列が最初に出現する位置を返す。
-    NSString *str1 = [[NSString alloc] initWithString:@"my telephone number is 012-345-6789 ."];
-    NSRange aRange = [str1 rangeOfString:@"[0-9]{3}+-[0-9]{3}+-[0-9]{4}+" 
+    NSString *str1 = @"my telephone number is 012-345-6789 .";
+    NSRange aRange = [str1 rangeOfString:@"[0-9]{3}+-[0-9]{3}+-[0-9]{4}+"
                                                         options:NSRegularExpressionSearch];
     
     
     NSLog(@"%s str2  = %u",__FUNCTION__,aRange.location);
     
-    NSString *str3 = [[NSString alloc] initWithString:@"If into in onto of often on and ON"];
+    NSString *str3 = @"If into in onto of often on and ON";
     NSString *str4 = [str3 stringByReplacingOccurrencesOfString:@"\\b(i|o)(f|n)\\b" //\\bはスペース(i|o)はiまたはo
                                                      withString:@"$2$1" //2番目の要素が前にきて、1番目の要素があとに来る
                                                         options:NSRegularExpressionSearch 
@@ -107,11 +107,11 @@
 -(void)method006
 {
 
-    NSString *str1 = [[NSString alloc] initWithString:@"t"];
+    NSString *str1 = @"t";
     NSLog(@"%s %p \"%@\" = %@",__FUNCTION__,str1,str1,([str1 boolValue])?@"YES":@"NO");
     //=>0x4750 "t" = YES
     
-    NSString *str2 = [[NSString alloc] initWithString:@"at"];
+    NSString *str2 = @"at";
     NSLog(@"%s %p \"%@\" = %@",__FUNCTION__,str2,str2,([str2 boolValue])?@"YES":@"NO");
     //=>0x4790 "at" = NO
     
@@ -302,19 +302,19 @@
 -(void)method014
 {
     
-    NSString *str1 = [NSString pathWithComponents:[NSArray arrayWithObjects:@"tmp",@"scratch.tiff", nil]];
+    NSString *str1 = [NSString pathWithComponents:@[@"tmp",@"scratch.tiff"]];
     NSLog(@"%s %p , %@",__FUNCTION__,str1,str1);
     //=>-[OOOAppDelegate method014] 0x6a401d0 , tmp/scratch.tiff
     
-    NSString *str2 = [NSString pathWithComponents:[NSArray arrayWithObjects:@"/",@"tmp",@"scratch.tiff", nil]];
+    NSString *str2 = [NSString pathWithComponents:@[@"/",@"tmp",@"scratch.tiff"]];
     NSLog(@"%s %p , %@",__FUNCTION__,str2,str2);
     //=>-[OOOAppDelegate method014] 0x6827900 , /tmp/scratch.tiff
     
-    NSString *str3 = [NSString pathWithComponents:[NSArray arrayWithObjects:@"tmp",@"scratch.tiff",@" ", nil]];
+    NSString *str3 = [NSString pathWithComponents:@[@"tmp",@"scratch.tiff",@" "]];
     NSLog(@"%s %p , %@",__FUNCTION__,str3,str3);
     //=>-[OOOAppDelegate method014] 0x6b3b600 , tmp/scratch.tiff/ 
     
-    NSString *str4 = [NSString pathWithComponents:[NSArray arrayWithObjects:@"tmp",@"scratch.tiff",@"", nil]];
+    NSString *str4 = [NSString pathWithComponents:@[@"tmp",@"scratch.tiff",@""]];
     NSLog(@"%s %p , %@",__FUNCTION__,str4,str4);
     //=>-[OOOAppDelegate method014] 0x687ad90 , tmp/scratch.tiff
     
@@ -527,7 +527,7 @@
     NSMutableString *eee = [NSMutableString stringWithString:@"eee"];
     NSMutableString *fff = [NSMutableString stringWithString:@"fff"];
     
-    NSArray *aArray = [NSArray arrayWithObjects:aaa,bbb,ccc,ddd,eee,fff, nil];
+    NSArray *aArray = @[aaa,bbb,ccc,ddd,eee,fff];
     NSOrderedSet *anOrderedSet = [[NSOrderedSet alloc]  initWithArray:aArray];
     
     NSRange range = NSMakeRange(0, [aArray count]);

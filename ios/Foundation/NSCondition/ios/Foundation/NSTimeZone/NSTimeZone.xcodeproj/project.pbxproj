@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74EEE9ED15DC2D90002ED0E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE9EC15DC2D90002ED0E1 /* UIKit.framework */; };
+		74EEE9EF15DC2D90002ED0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE9EE15DC2D90002ED0E1 /* Foundation.framework */; };
+		74EEE9F115DC2D90002ED0E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE9F015DC2D90002ED0E1 /* CoreGraphics.framework */; };
+		74EEE9F715DC2D90002ED0E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EEE9F515DC2D90002ED0E1 /* InfoPlist.strings */; };
+		74EEE9F915DC2D90002ED0E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEE9F815DC2D90002ED0E1 /* main.m */; };
+		74EEE9FD15DC2D90002ED0E1 /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEE9FC15DC2D90002ED0E1 /* OOOAppDelegate.m */; };
+		74EEEA0015DC2D90002ED0E1 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74EEE9FE15DC2D90002ED0E1 /* MainStoryboard_iPhone.storyboard */; };
+		74EEEA0315DC2D90002ED0E1 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74EEEA0115DC2D90002ED0E1 /* MainStoryboard_iPad.storyboard */; };
+		74EEEA0615DC2D90002ED0E1 /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEEA0515DC2D90002ED0E1 /* OOOViewController.m */; };
+		74EEEA0E15DC2D90002ED0E1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEEA0D15DC2D90002ED0E1 /* SenTestingKit.framework */; };
+		74EEEA0F15DC2D90002ED0E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE9EC15DC2D90002ED0E1 /* UIKit.framework */; };
+		74EEEA1015DC2D90002ED0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE9EE15DC2D90002ED0E1 /* Foundation.framework */; };
+		74EEEA1815DC2D90002ED0E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EEEA1615DC2D90002ED0E1 /* InfoPlist.strings */; };
+		74EEEA1B15DC2D90002ED0E1 /* NSTimeZoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEEA1A15DC2D90002ED0E1 /* NSTimeZoneTests.m */; };
+		74EEEA2A15DC43DC002ED0E1 /* OOOUIview.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEEA2915DC43DC002ED0E1 /* OOOUIview.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74EEEA1115DC2D90002ED0E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74EEE9DF15DC2D90002ED0E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74EEE9E715DC2D90002ED0E1;
+			remoteInfo = NSTimeZone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74EEE9E815DC2D90002ED0E1 /* NSTimeZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSTimeZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74EEE9EC15DC2D90002ED0E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74EEE9EE15DC2D90002ED0E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74EEE9F015DC2D90002ED0E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74EEE9F415DC2D90002ED0E1 /* NSTimeZone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSTimeZone-Info.plist"; sourceTree = "<group>"; };
+		74EEE9F615DC2D90002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74EEE9F815DC2D90002ED0E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74EEE9FA15DC2D90002ED0E1 /* NSTimeZone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimeZone-Prefix.pch"; sourceTree = "<group>"; };
+		74EEE9FB15DC2D90002ED0E1 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
+		74EEE9FC15DC2D90002ED0E1 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
+		74EEE9FF15DC2D90002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		74EEEA0215DC2D90002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		74EEEA0415DC2D90002ED0E1 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
+		74EEEA0515DC2D90002ED0E1 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
+		74EEEA0C15DC2D90002ED0E1 /* NSTimeZoneTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSTimeZoneTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74EEEA0D15DC2D90002ED0E1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74EEEA1515DC2D90002ED0E1 /* NSTimeZoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSTimeZoneTests-Info.plist"; sourceTree = "<group>"; };
+		74EEEA1715DC2D90002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74EEEA1915DC2D90002ED0E1 /* NSTimeZoneTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTimeZoneTests.h; sourceTree = "<group>"; };
+		74EEEA1A15DC2D90002ED0E1 /* NSTimeZoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimeZoneTests.m; sourceTree = "<group>"; };
+		74EEEA2815DC43DC002ED0E1 /* OOOUIview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOUIview.h; sourceTree = "<group>"; };
+		74EEEA2915DC43DC002ED0E1 /* OOOUIview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOUIview.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74EEE9E515DC2D90002ED0E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EEE9ED15DC2D90002ED0E1 /* UIKit.framework in Frameworks */,
+				74EEE9EF15DC2D90002ED0E1 /* Foundation.framework in Frameworks */,
+				74EEE9F115DC2D90002ED0E1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74EEEA0815DC2D90002ED0E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EEEA0E15DC2D90002ED0E1 /* SenTestingKit.framework in Frameworks */,
+				74EEEA0F15DC2D90002ED0E1 /* UIKit.framework in Frameworks */,
+				74EEEA1015DC2D90002ED0E1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74EEE9DD15DC2D90002ED0E1 = {
+			isa = PBXGroup;
+			children = (
+				74EEE9F215DC2D90002ED0E1 /* NSTimeZone */,
+				74EEEA1315DC2D90002ED0E1 /* NSTimeZoneTests */,
+				74EEE9EB15DC2D90002ED0E1 /* Frameworks */,
+				74EEE9E915DC2D90002ED0E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74EEE9E915DC2D90002ED0E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74EEE9E815DC2D90002ED0E1 /* NSTimeZone.app */,
+				74EEEA0C15DC2D90002ED0E1 /* NSTimeZoneTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74EEE9EB15DC2D90002ED0E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74EEE9EC15DC2D90002ED0E1 /* UIKit.framework */,
+				74EEE9EE15DC2D90002ED0E1 /* Foundation.framework */,
+				74EEE9F015DC2D90002ED0E1 /* CoreGraphics.framework */,
+				74EEEA0D15DC2D90002ED0E1 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74EEE9F215DC2D90002ED0E1 /* NSTimeZone */ = {
+			isa = PBXGroup;
+			children = (
+				74EEE9FB15DC2D90002ED0E1 /* OOOAppDelegate.h */,
+				74EEE9FC15DC2D90002ED0E1 /* OOOAppDelegate.m */,
+				74EEEA2815DC43DC002ED0E1 /* OOOUIview.h */,
+				74EEEA2915DC43DC002ED0E1 /* OOOUIview.m */,
+				74EEE9FE15DC2D90002ED0E1 /* MainStoryboard_iPhone.storyboard */,
+				74EEEA0115DC2D90002ED0E1 /* MainStoryboard_iPad.storyboard */,
+				74EEEA0415DC2D90002ED0E1 /* OOOViewController.h */,
+				74EEEA0515DC2D90002ED0E1 /* OOOViewController.m */,
+				74EEE9F315DC2D90002ED0E1 /* Supporting Files */,
+			);
+			path = NSTimeZone;
+			sourceTree = "<group>";
+		};
+		74EEE9F315DC2D90002ED0E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74EEE9F415DC2D90002ED0E1 /* NSTimeZone-Info.plist */,
+				74EEE9F515DC2D90002ED0E1 /* InfoPlist.strings */,
+				74EEE9F815DC2D90002ED0E1 /* main.m */,
+				74EEE9FA15DC2D90002ED0E1 /* NSTimeZone-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74EEEA1315DC2D90002ED0E1 /* NSTimeZoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				74EEEA1915DC2D90002ED0E1 /* NSTimeZoneTests.h */,
+				74EEEA1A15DC2D90002ED0E1 /* NSTimeZoneTests.m */,
+				74EEEA1415DC2D90002ED0E1 /* Supporting Files */,
+			);
+			path = NSTimeZoneTests;
+			sourceTree = "<group>";
+		};
+		74EEEA1415DC2D90002ED0E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74EEEA1515DC2D90002ED0E1 /* NSTimeZoneTests-Info.plist */,
+				74EEEA1615DC2D90002ED0E1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74EEE9E715DC2D90002ED0E1 /* NSTimeZone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74EEEA1E15DC2D90002ED0E1 /* Build configuration list for PBXNativeTarget "NSTimeZone" */;
+			buildPhases = (
+				74EEE9E415DC2D90002ED0E1 /* Sources */,
+				74EEE9E515DC2D90002ED0E1 /* Frameworks */,
+				74EEE9E615DC2D90002ED0E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSTimeZone;
+			productName = NSTimeZone;
+			productReference = 74EEE9E815DC2D90002ED0E1 /* NSTimeZone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74EEEA0B15DC2D90002ED0E1 /* NSTimeZoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74EEEA2115DC2D90002ED0E1 /* Build configuration list for PBXNativeTarget "NSTimeZoneTests" */;
+			buildPhases = (
+				74EEEA0715DC2D90002ED0E1 /* Sources */,
+				74EEEA0815DC2D90002ED0E1 /* Frameworks */,
+				74EEEA0915DC2D90002ED0E1 /* Resources */,
+				74EEEA0A15DC2D90002ED0E1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74EEEA1215DC2D90002ED0E1 /* PBXTargetDependency */,
+			);
+			name = NSTimeZoneTests;
+			productName = NSTimeZoneTests;
+			productReference = 74EEEA0C15DC2D90002ED0E1 /* NSTimeZoneTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74EEE9DF15DC2D90002ED0E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OOO;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Satoshi Oomori";
+			};
+			buildConfigurationList = 74EEE9E215DC2D90002ED0E1 /* Build configuration list for PBXProject "NSTimeZone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74EEE9DD15DC2D90002ED0E1;
+			productRefGroup = 74EEE9E915DC2D90002ED0E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74EEE9E715DC2D90002ED0E1 /* NSTimeZone */,
+				74EEEA0B15DC2D90002ED0E1 /* NSTimeZoneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74EEE9E615DC2D90002ED0E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EEE9F715DC2D90002ED0E1 /* InfoPlist.strings in Resources */,
+				74EEEA0015DC2D90002ED0E1 /* MainStoryboard_iPhone.storyboard in Resources */,
+				74EEEA0315DC2D90002ED0E1 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74EEEA0915DC2D90002ED0E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EEEA1815DC2D90002ED0E1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74EEEA0A15DC2D90002ED0E1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74EEE9E415DC2D90002ED0E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EEE9F915DC2D90002ED0E1 /* main.m in Sources */,
+				74EEE9FD15DC2D90002ED0E1 /* OOOAppDelegate.m in Sources */,
+				74EEEA0615DC2D90002ED0E1 /* OOOViewController.m in Sources */,
+				74EEEA2A15DC43DC002ED0E1 /* OOOUIview.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74EEEA0715DC2D90002ED0E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EEEA1B15DC2D90002ED0E1 /* NSTimeZoneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74EEEA1215DC2D90002ED0E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74EEE9E715DC2D90002ED0E1 /* NSTimeZone */;
+			targetProxy = 74EEEA1115DC2D90002ED0E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74EEE9F515DC2D90002ED0E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74EEE9F615DC2D90002ED0E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74EEE9FE15DC2D90002ED0E1 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74EEE9FF15DC2D90002ED0E1 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		74EEEA0115DC2D90002ED0E1 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74EEEA0215DC2D90002ED0E1 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		74EEEA1615DC2D90002ED0E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74EEEA1715DC2D90002ED0E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74EEEA1C15DC2D90002ED0E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74EEEA1D15DC2D90002ED0E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74EEEA1F15DC2D90002ED0E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSTimeZone/NSTimeZone-Prefix.pch";
+				INFOPLIST_FILE = "NSTimeZone/NSTimeZone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74EEEA2015DC2D90002ED0E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSTimeZone/NSTimeZone-Prefix.pch";
+				INFOPLIST_FILE = "NSTimeZone/NSTimeZone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		74EEEA2215DC2D90002ED0E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSTimeZone.app/NSTimeZone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSTimeZone/NSTimeZone-Prefix.pch";
+				INFOPLIST_FILE = "NSTimeZoneTests/NSTimeZoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		74EEEA2315DC2D90002ED0E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSTimeZone.app/NSTimeZone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSTimeZone/NSTimeZone-Prefix.pch";
+				INFOPLIST_FILE = "NSTimeZoneTests/NSTimeZoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74EEE9E215DC2D90002ED0E1 /* Build configuration list for PBXProject "NSTimeZone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74EEEA1C15DC2D90002ED0E1 /* Debug */,
+				74EEEA1D15DC2D90002ED0E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74EEEA1E15DC2D90002ED0E1 /* Build configuration list for PBXNativeTarget "NSTimeZone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74EEEA1F15DC2D90002ED0E1 /* Debug */,
+				74EEEA2015DC2D90002ED0E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74EEEA2115DC2D90002ED0E1 /* Build configuration list for PBXNativeTarget "NSTimeZoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74EEEA2215DC2D90002ED0E1 /* Debug */,
+				74EEEA2315DC2D90002ED0E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74EEE9DF15DC2D90002ED0E1 /* Project object */;
+}

@@ -24,8 +24,8 @@
     [[NSFileManager defaultManager] URLForUbiquityContainerIdentifier:nil];
     NSString *filename=nil;
     [destinationURL getResourceValue:&filename forKey:NSURLNameKey error:nil];
-    
-    NSURL *cloudUrl = [aCloudUrl
+
+    NSURL *cloudUrl = [[aCloudUrl URLByAppendingPathComponent:@"Documents"] 
                        URLByAppendingPathComponent:filename];
     
     dispatch_queue_t q_default;
@@ -33,13 +33,14 @@
     dispatch_async(q_default, ^(void) {
         NSFileManager *fileManager = [[NSFileManager alloc] init];
         NSError *error = nil;
-        BOOL success = [fileManager setUbiquitous:YES itemAtURL:destinationURL
+        BOOL success = NO;
+        success= [fileManager setUbiquitous:YES itemAtURL:destinationURL
                                    destinationURL:cloudUrl error:&error];
-        dispatch_queue_t q_main = dispatch_get_main_queue();
+        dispatch_queue_t q_main = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_async(q_main, ^(void) {
             //NSLog(@"moved file to cloud: " );
             if (success) {
-                NSLog(@"moved file to cloud: " );
+                NSLog(@"moved file to cloud: %@",[cloudUrl description] );
             }else {
                 NSLog(@"could not moved file to cloud: %@",[error description] );
             }
@@ -59,7 +60,7 @@
           if (success){
               
               NSLog(@"Saved for overwriting");
-              [self moveFileToiCloud:documentURL];
+              //[self moveFileToiCloud:documentURL];
               
               NSLog(@"moved file to cloud: " );
               
@@ -84,6 +85,14 @@
     }];
      textView.text = self.document.userText;
 }
+
+- (IBAction)cloudToLocal:(id)sender {
+    NSError *err = nil;
+    [document readFromURL:documentURL error:&err
+                      ];
+        textView.text = self.document.userText;
+}
+
 - (void)queryDidFinishGathering:(NSNotification *)notif {
     NSMetadataQuery *aQuery = [notif object];
     [aQuery disableUpdates];
@@ -151,6 +160,8 @@
     [query stopQuery];
     query = nil;
 }
+
+
 
 - (IBAction)searchDocument:(id)sender
 {
@@ -278,7 +289,7 @@
     self.document.userText = @"";
     NSFileManager *filemgr = [NSFileManager defaultManager];
     
-    //[self moveiCloudToLocal:documentURL];
+    [self moveiCloudToLocal:documentURL];
         
     if ([filemgr fileExistsAtPath: dataFile])
     {

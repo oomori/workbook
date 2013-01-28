@@ -37,7 +37,7 @@
     
     NSLog(@"%s %@",__FUNCTION__,[pInfo operatingSystemVersionString]);
     
-    NSLog(@"%s %llu",__FUNCTION__,([pInfo physicalMemory]/1024/1024));
+    NSLog(@"%s physicalMemory %llu",__FUNCTION__,([pInfo physicalMemory]/1024/1024));
     NSLog(@"%s %u",__FUNCTION__,[pInfo processorCount]);
     NSLog(@"%s %u",__FUNCTION__,[pInfo activeProcessorCount]);
     NSLog(@"%s %f",__FUNCTION__,[pInfo systemUptime]);

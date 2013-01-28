@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7423747816980C0600EE7A3E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7423747716980C0600EE7A3E /* Default-568h@2x.png */; };
 		74C603B8155FD8E90047301E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C603B7155FD8E90047301E /* UIKit.framework */; };
 		74C603BA155FD8E90047301E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C603B9155FD8E90047301E /* Foundation.framework */; };
 		74C603BC155FD8E90047301E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C603BB155FD8E90047301E /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7423747716980C0600EE7A3E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		74C603B3155FD8E90047301E /* NSAssertionHandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSAssertionHandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C603B7155FD8E90047301E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74C603B9155FD8E90047301E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +85,7 @@
 		74C603A8155FD8E90047301E = {
 			isa = PBXGroup;
 			children = (
+				7423747716980C0600EE7A3E /* Default-568h@2x.png */,
 				74C603BD155FD8E90047301E /* NSAssertionHandler */,
 				74C603DE155FD8EA0047301E /* NSAssertionHandlerTests */,
 				74C603B6155FD8E90047301E /* Frameworks */,
@@ -228,6 +231,7 @@
 				74C603C2155FD8E90047301E /* InfoPlist.strings in Resources */,
 				74C603CB155FD8EA0047301E /* MainStoryboard_iPhone.storyboard in Resources */,
 				74C603CE155FD8EA0047301E /* MainStoryboard_iPad.storyboard in Resources */,
+				7423747816980C0600EE7A3E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +448,7 @@
 				74C603EB155FD8EA0047301E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74C603EC155FD8EA0047301E /* Build configuration list for PBXNativeTarget "NSAssertionHandlerTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +457,7 @@
 				74C603EE155FD8EA0047301E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

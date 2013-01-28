@@ -87,11 +87,40 @@
     NSLog(@"%s %@",__FUNCTION__,[orthography dominantLanguageForScript:@"Jpan"]);
 
 }
+
+#pragma mark NSOrthography orthographyWithDominantScript:
+-(void)method003
+{
+    
+    NSString *textToAnalyse = @"皆さんお元気ですか。私は元気です。";
+    
+    //パースしたときの文字の要素の範囲
+    NSRange stringRange = NSMakeRange(0, textToAnalyse.length);
+    
+    // 言語マップの辞書
+    NSArray *language = [NSArray arrayWithObjects:@"ja",@"fr",nil];
+    NSDictionary* languageMap = [NSDictionary dictionaryWithObject:language forKey:@"Jpan"];
+    
+    NSOrthography *orthography = [NSOrthography orthographyWithDominantScript:@"Jpan" languageMap:languageMap];
+    [textToAnalyse enumerateLinguisticTagsInRange:stringRange
+                                           scheme:NSLinguisticTagSchemeLexicalClass
+                                          options:(NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation)
+                                      orthography:orthography
+                                       usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
+                                           NSLog(@"\"%@\" is a %@, tokenRange (%d,%d), sentenceRange (%d-%d)",[textToAnalyse substringWithRange:tokenRange] ,tag,tokenRange.location,tokenRange.length, sentenceRange.location, sentenceRange.length);
+                                       }];
+    
+    //=>"That" is a Determiner, tokenRange (0,4), sentenceRange (0-59)
+    //=>"Japanese" is a Adjective, tokenRange (5,8), sentenceRange (0-59)
+    //=>"restaurant" is a Noun, tokenRange (14,10), sentenceRange (0-59)
+    // ...
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self method001];
     [self method002];
+    [self method003];
     return YES;
 }
 							

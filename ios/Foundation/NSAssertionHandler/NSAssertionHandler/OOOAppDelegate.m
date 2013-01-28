@@ -20,7 +20,7 @@
     //NSAssert(NO, @"!!!");
     //Assertion failure in -[OOOAppDelegate method001], /Users/.../OOOAppDelegate.m:19
     
-    NSInteger value1=1, value2=2;
+    //NSInteger value1=1, value2=2;
     //NSAssert2(NO, @"!!! Value1: %i Value2: %i", value1, value2);
     //Assertion failure in -[OOOAppDelegate method001], /Users/.../OOOAppDelegate.m:22
     //*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '!!! Value1: 1 Value2: 2'

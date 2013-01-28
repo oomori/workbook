@@ -37,7 +37,7 @@ typedef enum {
 }
 - (IBAction)start:(id)sender;
 - (IBAction)stop:(id)sender;
-- (IBAction)resume:(id)sender;
+- (IBAction)threadStart:(id)sender;
 
 - (IBAction)wait5second:(id)sender;
 

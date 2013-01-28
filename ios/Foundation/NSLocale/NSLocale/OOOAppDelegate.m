@@ -140,6 +140,7 @@
 -(void)method004
 {
     NSLog(@"%s %@",__FUNCTION__,[NSLocale availableLocaleIdentifiers]);
+    NSLog(@"%s count %d",__FUNCTION__,[[NSLocale availableLocaleIdentifiers] count]);
     NSLog(@"%s %@",__FUNCTION__,[NSLocale ISOCountryCodes]);
     NSLog(@"%s %@",__FUNCTION__,[NSLocale ISOLanguageCodes]);
     NSLog(@"%s %@",__FUNCTION__,[NSLocale commonISOCurrencyCodes]);

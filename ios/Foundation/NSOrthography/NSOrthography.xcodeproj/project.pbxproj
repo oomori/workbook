@@ -21,6 +21,7 @@
 		74EEE86415DA900B002ED0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE84215DA900B002ED0E1 /* Foundation.framework */; };
 		74EEE86C15DA900B002ED0E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EEE86A15DA900B002ED0E1 /* InfoPlist.strings */; };
 		74EEE86F15DA900B002ED0E1 /* NSOrthographyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEE86E15DA900B002ED0E1 /* NSOrthographyTests.m */; };
+		74F2F5DC16AF4E9F00A59190 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F2F5DB16AF4E9F00A59190 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		74EEE86B15DA900B002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74EEE86D15DA900B002ED0E1 /* NSOrthographyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOrthographyTests.h; sourceTree = "<group>"; };
 		74EEE86E15DA900B002ED0E1 /* NSOrthographyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOrthographyTests.m; sourceTree = "<group>"; };
+		74F2F5DB16AF4E9F00A59190 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		74EEE83115DA900B002ED0E1 = {
 			isa = PBXGroup;
 			children = (
+				74F2F5DB16AF4E9F00A59190 /* Default-568h@2x.png */,
 				74EEE84615DA900B002ED0E1 /* NSOrthography */,
 				74EEE86715DA900B002ED0E1 /* NSOrthographyTests */,
 				74EEE83F15DA900B002ED0E1 /* Frameworks */,
@@ -229,6 +232,7 @@
 				74EEE84B15DA900B002ED0E1 /* InfoPlist.strings in Resources */,
 				74EEE85415DA900B002ED0E1 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74EEE85715DA900B002ED0E1 /* MainStoryboard_iPad.storyboard in Resources */,
+				74F2F5DC16AF4E9F00A59190 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +453,7 @@
 				74EEE87415DA900B002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74EEE87515DA900B002ED0E1 /* Build configuration list for PBXNativeTarget "NSOrthographyTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +462,7 @@
 				74EEE87715DA900B002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

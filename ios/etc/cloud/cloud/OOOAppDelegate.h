@@ -29,5 +29,4 @@
 //
 - (void)readFromCurrentURL;
 - (void)writeToCurrentURLWithNewVersion:(BOOL)flag;
-
 @end

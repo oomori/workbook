@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7423746A169809A500EE7A3E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74237469169809A500EE7A3E /* Default-568h@2x.png */; };
 		746C60F215538CC10077F6DE /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 746C60F115538CC10077F6DE /* image.jpg */; };
 		746C60F615538D3C0077F6DE /* plistfile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 746C60F515538D3C0077F6DE /* plistfile.plist */; };
 		746C60FC1553C2F80077F6DE /* NSString+Extract.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C60FB1553C2F80077F6DE /* NSString+Extract.m */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74237469169809A500EE7A3E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		746C60F115538CC10077F6DE /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		746C60F515538D3C0077F6DE /* plistfile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = plistfile.plist; sourceTree = "<group>"; };
 		746C60FA1553C2F80077F6DE /* NSString+Extract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Extract.h"; path = "../NSString+Extract.h"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		74F87A2C153A6C0B00CF0577 = {
 			isa = PBXGroup;
 			children = (
+				74237469169809A500EE7A3E /* Default-568h@2x.png */,
 				74F87A41153A6C0B00CF0577 /* NSArray */,
 				74F87A62153A6C0B00CF0577 /* NSArrayTests */,
 				74F87A3A153A6C0B00CF0577 /* Frameworks */,
@@ -254,6 +257,7 @@
 				74F87A52153A6C0B00CF0577 /* MainStoryboard_iPad.storyboard in Resources */,
 				746C60F215538CC10077F6DE /* image.jpg in Resources */,
 				746C60F615538D3C0077F6DE /* plistfile.plist in Resources */,
+				7423746A169809A500EE7A3E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +404,7 @@
 		74F87A6E153A6C0B00CF0577 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSArray/NSArray-Prefix.pch";
 				INFOPLIST_FILE = "NSArray/NSArray-Info.plist";
@@ -411,6 +416,7 @@
 		74F87A6F153A6C0B00CF0577 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSArray/NSArray-Prefix.pch";
 				INFOPLIST_FILE = "NSArray/NSArray-Info.plist";
