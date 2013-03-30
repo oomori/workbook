@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10640\viewh13700\viewkind0
+\deftab720
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 \
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab640\pardirnatural
+\cf0 #pragma mark NSError\
+-(void)method005\
+\{\
+	NSError *anError = nil;\
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];\
+    NSString *filename = @"testWritecharset2.bitmap";\
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];\
+    \
+    if ([absoluteURL checkResourceIsReachableAndReturnError:&anError]) \{\
+        NSLog(@"%s %@",__FUNCTION__,[anError description]);\
+    \}else \{\
+        NSLog(@"%s %@",__FUNCTION__,[anError description]);\
+        NSLog(@"%s code = %d",__FUNCTION__,[anError code]);\
+        NSLog(@"%s domain = %@",__FUNCTION__,[anError domain]);\
+        NSLog(@"%s userInfo = %@",__FUNCTION__,[[anError userInfo] description]);\
+        NSLog(@"%s localizedDescription = %@",__FUNCTION__,[anError localizedDescription]);\
+        NSLog(@"%s localizedRecoveryOptions = %@",__FUNCTION__,[anError localizedRecoveryOptions]);\
+        NSLog(@"%s localizedRecoverySuggestion = %@",__FUNCTION__,[anError localizedRecoverySuggestion]);\
+        NSLog(@"%s localizedFailureReason = %@",__FUNCTION__,[anError localizedFailureReason]);\
+        \
+    \}\
+\}\
+}

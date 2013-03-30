@@ -1,0 +1,55 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10640\viewh13700\viewkind0
+\deftab640
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab640\pardirnatural
+
+\f0\fs24 \cf0 #pragma mark NSDataDetector\'81\'40date\
+-(void)method005\
+\{\
+    NSString *aString = @"Today is 2012\'94\'4e8\'8c\'8e15\'93\'fa";\
+    NSError *error = nil;\
+    NSDataDetector *aDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeDate error:&error];\
+    NSArray *resultArray = [aDetector matchesInString:aString\
+                                              options:0\
+                                                range:NSMakeRange(0, [aString length])];\
+    \
+    [resultArray enumerateObjectsWithOptions:NSEnumerationConcurrent //\'95\'c0\'97\'f1\
+                                  usingBlock:^(id obj,NSUInteger idx,BOOL *stop)\{\
+                                      \
+                                      if (obj) \{\
+                                          NSTextCheckingResult *tcResult = (NSTextCheckingResult *)obj;\
+                                          NSLog(@"%s %@ %u-%u",__FUNCTION__,[obj date],tcResult.range.location,tcResult.range.length );\
+                                      \}\
+                                      \
+                                      return;\
+                                      \
+                                  \}];\
+    //=>2012-08-15 03:00:00 +0000 9-10\
+\}\
+\
+\
+\
+\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+\cf0 #pragma mark NSDataDetector\'81\'40dataDetectorWithTypes\'81\'40URL\
+-(void)method002\
+\{\
+    NSString *aString = @"My site's URL is http://d.hatena.ne.jp/jjj777/.";\
+    NSDataDetector *aDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];\
+    NSArray *matches = [aDetector matchesInString:aString\
+                                          options:0\
+                                            range:NSMakeRange(0, [aString length])\
+                                                    ];\
+    \
+    for (NSTextCheckingResult *match in matches) \{\
+        \
+        if ([match resultType] == NSTextCheckingTypeLink) \{\
+            NSString *matchingString = [match description];\
+            NSLog(@"found URL: %@", matchingString);\
+        \}\
+    \}\
+    \
+\}\
+}

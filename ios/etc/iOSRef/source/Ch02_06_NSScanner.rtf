@@ -1,0 +1,64 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10640\viewh13700\viewkind0
+\deftab720
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 #pragma mark NSScanner scannerWithString:\
+-(void)method001\
+\{\
+    NSCharacterSet* chSet = [NSCharacterSet characterSetWithCharactersInString:@","];\
+    NSString* aString= @"56.0,67.1,76.8,54,89.0";\
+    NSScanner* aScanner = [NSScanner scannerWithString:aString];\
+    NSMutableArray *mArray = [NSMutableArray arrayWithCapacity:6];\
+    NSString *retStr ;\
+    while(![aScanner isAtEnd]) \{\
+        if([aScanner scanUpToCharactersFromSet:chSet intoString:&retStr]) \{\
+            [mArray addObject:[NSNumber numberWithFloat:[retStr floatValue]]];\
+        \}\
+        [aScanner scanCharactersFromSet:chSet intoString:NULL];\
+    \}\
+    NSLog(@"%s %@",__FUNCTION__,[mArray description]);\
+\}\
+\pard\tx640\pardeftab640\pardirnatural
+\cf0 \
+\
+\
+\
+\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+\cf0 #pragma mark NSScanner scannerWithString:\
+-(void)method002\
+\{\
+    NSString *aString= @"http://www.oomori.com/test.php?name=oomori&id=1234";\
+    NSString *retStr;\
+    NSScanner *aScanner = [NSScanner scannerWithString:aString];\
+    while(![aScanner isAtEnd]) \{\
+        [aScanner scanUpToString:@"?" intoString:&retStr];\
+        \
+        NSString *str = @"name=";\
+        if([aScanner scanUpToString:str intoString:&retStr]) \{\
+            [aScanner setScanLocation: [aScanner scanLocation]+[str length] ];\
+            [aScanner scanUpToString:@"&" intoString:&retStr ];\
+            NSLog(@"%s %@",__FUNCTION__,retStr);\
+        \}\
+    \}\
+\}\
+//=>-[OOOAppDelegate method002] oomori\
+\
+\
+\
+\
+\
+\
+#pragma mark NSScanner :\
+-(void)method003\
+\{\
+    NSString* HEXString = @"0x1A57FE3C";\
+    NSScanner* aScanner = [NSScanner scannerWithString: HEXString];   \
+    unsigned int uiValue;\
+    [aScanner scanHexInt: &uiValue];\
+    NSLog(@"%s %u",__FUNCTION__,uiValue);   \
+\}\
+}

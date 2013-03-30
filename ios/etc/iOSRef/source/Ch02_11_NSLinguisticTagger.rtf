@@ -1,0 +1,94 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10640\viewh13700\viewkind0
+\deftab720
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 \
+#pragma mark NSLinguisticTagger  initWithTagSchemes\
+-(void)method002\
+\{\
+    NSString *aString = @"My name is OOMORI satoshi.";\
+    NSString *targetScheme = NSLinguisticTagSchemeLexicalClass;//\'95\'69\'8e\'8c\'81\'42\'89\'70\'8c\'ea\'82\'cc\'82\'dd,Verb,Noun,SentenceTerminator\
+    \
+    \
+    NSArray *aScheme = [NSArray arrayWithObject:targetScheme];\
+    NSLinguisticTagger *aTagger = [[NSLinguisticTagger alloc] initWithTagSchemes:aScheme options:0];\
+    \
+    //\'83\'75\'83\'8d\'83\'62\'83\'4e\'93\'e0\'82\'c5\'82\'cc\'8c\'8b\'89\'ca\'82\'f0\'93\'be\'82\'e9\'82\'bd\'82\'df\'82\'c9NSArray\'82\'f0\'8d\'ec\'82\'c1\'82\'c4\'82\'a8\'82\'ad\
+    __block NSMutableArray *tagArray =  [NSMutableArray arrayWithCapacity:0];\
+    \
+    [aTagger setString:aString];\
+    [aTagger enumerateTagsInRange:NSMakeRange(0, [aString length])\
+                           scheme:targetScheme\
+                          options:(NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation)\
+                       usingBlock: ^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) \{\
+                           NSString *token = [aString substringWithRange:tokenRange];\
+                           NSString *sentence = [aString substringWithRange:sentenceRange];\
+                           //\'82\'a0\'82\'c6\'82\'c5\'8e\'67\'82\'a4\'82\'bd\'82\'df\'82\'c9NSDictionary\'82\'c9\'82\'a2\'82\'ea\'82\'c4\
+                           NSDictionary *aDictionary = [NSDictionary dictionaryWithObjectsAndKeys:\
+                                                        tag,@"tag",\
+                                                        token,@"token",\
+                                                        sentence,@"sentence",\
+                                                        nil];\
+                           //aDictionary\'82\'f0NSArray\'82\'c9\'93\'fc\'82\'ea\'82\'e9\
+                           [tagArray addObject:aDictionary];\
+                           \
+                       \}\
+     ];\
+    \
+    \
+    NSLog(@"%s", __FUNCTION__);\
+    for (NSDictionary *tempDic in tagArray) \{\
+        NSLog(@"tag = %@,token = %@,sentence = %@",[tempDic objectForKey:@"tag"],\
+              [tempDic objectForKey:@"token"],\
+              [tempDic objectForKey:@"sentence"]);\
+    \}\
+    //=>\
+    \
+\}\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab640\pardirnatural
+\cf0 \
+\
+\
+\
+\
+\
+\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+\cf0 #pragma mark NSLinguisticTagger  possibleTagsAtIndex:scheme:tokenRange:sentenceRange:scores:\
+-(void)method004\
+\{\
+    NSMutableString *aString = [@"My name is OOMORI satoshi." mutableCopy];\
+    NSString *targetScheme = NSLinguisticTagSchemeNameTypeOrLexicalClass;\
+    \
+    \
+    NSArray *aScheme = [NSArray arrayWithObject:targetScheme];\
+    NSLinguisticTagger *aTagger = [[NSLinguisticTagger alloc] initWithTagSchemes:aScheme options:0];\
+    \
+    [aTagger setString:aString];\
+    \
+    NSInteger searchIndex = 0;\
+    while (searchIndex < [aString length]) \{\
+     \
+    NSRange tokenRange;\
+    NSRange sentenceRange;\
+        NSArray *scoreArray;\
+    NSArray *anArray = [aTagger possibleTagsAtIndex:searchIndex\
+                          scheme:targetScheme\
+                      tokenRange:&tokenRange\
+                   sentenceRange:&sentenceRange\
+                          scores:&scoreArray];\
+    for (NSString *tag in anArray) \{\
+        NSLog(@"tag = %@",tag);\
+         \
+    \}\
+    NSLog(@"(%u-%u)",tokenRange.location,tokenRange.length);\
+    NSLog(@"%@",[scoreArray description]);\
+        \
+        searchIndex +=tokenRange.length;\
+    \}\
+    NSLog(@"%@",[aTagger string]);\
+\}\
+}

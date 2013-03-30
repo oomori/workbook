@@ -1,0 +1,46 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10700\viewh13760\viewkind0
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 \
+#pragma mark NSFastEnumeration NSArray\
+-(void)method001\
+\{\
+    NSArray *array = [NSArray arrayWithObjects:\
+                      @"Jan", @"Feb", @"Mar", @"Apr", nil];\
+    \
+    for (NSString *element in array) \{\
+        NSLog(@"%s  %@", __FUNCTION__, element);\
+    \}\
+\}\
+\
+\
+\
+#pragma mark NSFastEnumeration NSDictionary\
+-(void)method002\
+\{\
+    NSDictionary *aDictionary = [NSDictionary dictionaryWithObjectsAndKeys:\
+                                @"Mutuki", @"January", @"Kisaragi", @"February", @"Yayoi", @"March", nil];\
+    \
+    NSString *key;\
+    for (key in aDictionary) \{\
+        NSLog(@"English: %@, Japanese: %@", key, [aDictionary objectForKey:key]);\
+    \}\
+\}\
+\
+\
+\
+#pragma mark NSFastEnumeration NSSet\
+-(void)method003\
+\{\
+    NSSet *aSet = [NSSet setWithObjects:\
+                      @"Jan", @"Feb", @"Mar", @"Apr", nil];\
+    \
+    for (NSString *element in aSet) \{\
+        NSLog(@"%s  %@", __FUNCTION__, element);\
+    \}\
+\}\
+}

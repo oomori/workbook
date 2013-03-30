@@ -1,0 +1,12 @@
+
+-(void)method002
+{
+    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"bbb",@"ccc",@"ddd",nil];
+	
+	id obj;
+	NSEnumerator *aEnumerator;
+    aEnumerator = [anArray objectEnumerator];
+    while ((obj = [aEnumerator nextObject]) != nil) {
+		NSLog(@"%@",(NSString *)obj);
+	}
+}

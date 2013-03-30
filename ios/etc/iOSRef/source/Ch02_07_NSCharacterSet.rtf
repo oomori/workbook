@@ -1,0 +1,19 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10640\viewh13700\viewkind0
+\deftab640
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab640\pardirnatural
+
+\f0\fs24 \cf0 #pragma mark NSCharacterSet isSupersetOfSet\
+-(void)method024\
+\{\
+    NSCharacterSet *decimalSet = [NSCharacterSet decimalDigitCharacterSet];\
+    NSCharacterSet *checkSet = [NSCharacterSet characterSetWithCharactersInString:@"a12345"];\
+    BOOL valid = [decimalSet isSupersetOfSet:checkSet];    \
+\
+    NSLog(@"%s is number? %@",__FUNCTION__,(valid)?@"YES":@"NO");\
+    //NSLog(@"%s %@",__FUNCTION__,mString);\
+    printf("unsigned short \'82\'cc\'8d\'c5\'91\'e5\'92\'6c: %u\\n", USHRT_MAX);\
+\}\
+}

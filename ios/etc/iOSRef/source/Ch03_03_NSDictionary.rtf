@@ -1,0 +1,80 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10700\viewh13800\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \
+#pragma mark NSDictionary valueForKey\
+-(void)method018\
+\{\
+    NSDictionary *aDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"aaa",@"key1",@"bbb",@"key2",@"ccc",@"key3", nil];\
+    NSLog(@"%s %p %@",__FUNCTION__,aDictionary,[aDictionary objectForKey:@"@count"]);\
+    NSLog(@"%s %p %@",__FUNCTION__,aDictionary,[aDictionary valueForKey:@"@count"]);\
+    NSLog(@"%s %p %@",__FUNCTION__,aDictionary,[aDictionary objectForKey:@"@allKeys"]);\
+    NSLog(@"%s %p %@",__FUNCTION__,aDictionary,[aDictionary valueForKey:@"@allKeys"]);\
+\pard\tx640\pardeftab640\pardirnatural
+\cf0    //=>-[OOOAppDelegate method018] 0x6a62d60 (null)\
+   //=>-[OOOAppDelegate method018] 0x6a62d60 3\
+   //=>-[OOOAppDelegate method018] 0x6a62d60 (null)\
+   //=>-[OOOAppDelegate method018] 0x6a62d60 (key2,key1,key3)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \}\
+\
+\
+\
+#pragma mark NSDictionary  enumerateKeysAndObjectsWithOptions:usingBlock:\
+-(void)method020\
+\{\
+    NSDictionary *aDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"aaa",@"key1",@"bbb",@"key2",@"ccc",@"key3", nil];\
+    [aDictionary enumerateKeysAndObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id key, id obj,BOOL *stop) \{\
+        NSLog(@"%s %p %@=%@",__FUNCTION__,aDictionary,key,obj);\
+        \
+        if ([obj isEqualToString:@"ccc"]) \{\
+            *stop = YES;   \
+        \}\
+    \}];\
+    //=> 0x6a4f7a0 key2=bbb\
+    //=> 0x6a4f7a0 key1=aaa\
+    //=> 0x6a4f7a0 key3=ccc\
+\}\
+||<\
+\
+\
+\
+\pard\tx640\pardeftab640\pardirnatural
+\cf0 #pragma mark sortedArrayWithOptions:usingComparator:\
+-(void)method022\
+\{\
+    NSDictionary *aDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"bbb",@"key2",@"ccc",@"key3",@"aaa",@"key1", nil];\
+    NSArray *sortedKeyArray = [aDictionary keysSortedByValueWithOptions:NSEnumerationConcurrent usingComparator:^(id obj1,id obj2)\{\
+        return [obj1 compare:obj2];\
+    \}];\
+    \
+    NSLog(@"%s %p %@",__FUNCTION__,sortedKeyArray,[sortedKeyArray description]);\
+    //=>-[OOOAppDelegate method021] 0x6a3a1e0 (key1,key2,key3)\
+    \
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\
+\
+#pragma mark indexOfObjectPassingTest:\
+-(void)method023\
+\{\
+    NSDictionary *aDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"obj",@"key2",@"obj",@"key3",@"aaa",@"key1", nil];\
+    \
+    NSSet *aSet = [aDictionary keysOfEntriesPassingTest:^ BOOL (id key ,id obj,  BOOL *stop)\
+                      \{\
+                         \
+                          if ([obj isEqualToString:@"obj"]) \{\
+                              return YES;    \
+                          \}else \{\
+                              return NO;\
+                          \}\
+                          \
+                      \}];\
+    NSLog(@"%s %p %@",__FUNCTION__,aSet,[aSet description]);\
+    \
+\}\
+}

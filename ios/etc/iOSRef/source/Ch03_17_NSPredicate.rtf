@@ -1,0 +1,86 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10700\viewh13760\viewkind0
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 #pragma mark NSPredicate predicateWithSubstitutionVariables\
+-(void)method007\
+\{\
+    //\'83\'5f\'83\'7e\'81\'5b\'82\'cc\'90\'6c\'83\'66\'81\'5b\'83\'5e\'82\'f0\'8d\'ec\'90\'ac\'81\'41\'95\'63\'8e\'9a\'81\'45\'96\'bc\'91\'4f\'81\'45\'94\'4e\'97\'ee\
+    NSDictionary *tanaka = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInt:30],@"age" ,\
+                            @"Tanaka",@"lastName",@"Taro",@"firstName",nil];\
+    NSDictionary *sato = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInt:43],@"age" ,\
+                          @"Sato",@"lastName",@"Satoko",@"firstName",nil];\
+    NSDictionary *suzuki = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInt:39],@"age" ,\
+                            @"Suzuki",@"lastName",@"Ichiro",@"firstName",nil];\
+    NSDictionary *yamada = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInt:12],@"age" ,\
+                            @"Yamada",@"lastName",@"Jiro",@"firstName",nil];\
+    NSArray *anArray =\
+    [[NSArray alloc] initWithObjects:tanaka,sato,suzuki,yamada,nil];\
+    \
+    \
+    //\'83\'65\'83\'93\'83\'76\'83\'8c\'81\'5b\'83\'67\'8d\'ec\'90\'ac\
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"$minAge <= age AND age < $maxAge"];\
+\
+    //\'94\'4e\'97\'ee\'8f\'f0\'8c\'8f\'8d\'ec\'90\'ac\
+    NSNumber *min = [NSNumber numberWithInteger:10];\
+    NSNumber *max = [NSNumber numberWithInteger:35];\
+    NSDictionary *variables = [NSDictionary dictionaryWithObjectsAndKeys:min, @"minAge", max, @"maxAge", nil];\
+    //\'83\'65\'83\'93\'83\'76\'83\'8c\'81\'5b\'83\'67\'82\'f0\'97\'98\'97\'70\'82\'b5\'82\'c4\'8f\'f0\'8c\'8f\'8e\'ae\'82\'f0\'8d\'ec\'90\'ac\
+    NSPredicate *bPredicate = [predicate predicateWithSubstitutionVariables:variables];\
+    //\'8c\'9f\'8d\'f5\
+    NSArray *bResult = [anArray filteredArrayUsingPredicate:bPredicate];\
+    NSLog(@"%s %@",__FUNCTION__,[bResult description]);\
+\}\
+\
+\
+#pragma mark NSPredicate  predicateWithBlock:\
+-(void)method009\
+\{\
+    NSArray *anArray =\
+    [[NSArray alloc] initWithObjects:   @"abc",@"def",@"ghi",\
+     @"ihg",@"fed",@"cba",\
+     @"aaa",@"bbb",@"ccc",nil];\
+\
+     NSPredicate* aPredicate = [NSPredicate predicateWithBlock:\
+                      ^BOOL(id obj, NSDictionary *d) \{\
+                          NSString* s = obj;\
+                          //NSLog(@"%s %@",__FUNCTION__,[d description]);\
+                          return ([s rangeOfString:@"a"\
+                                           options:NSCaseInsensitiveSearch].location != NSNotFound);\
+                      \}];\
+    \
+    \
+    NSArray *aResult = [anArray filteredArrayUsingPredicate:aPredicate];\
+    NSLog(@"%s %@",__FUNCTION__,[aResult description]);\
+    \
+\}\
+\
+\
+\
+#pragma mark NSPredicate evaluateWithObject\
+-(void)method011\
+\{\
+    NSString *string1 = @"bbb";\
+    \
+    //\'83\'65\'83\'93\'83\'76\'83\'8c\'81\'5b\'83\'67\'8d\'ec\'90\'ac\
+    NSPredicate *aPredicate = [NSPredicate predicateWithFormat:@"SELF matches  $string1"];\
+    \
+    //\'95\'cf\'90\'94\'8e\'ab\'8f\'91\'8d\'ec\'90\'ac\
+    NSDictionary *variables1 = [NSDictionary dictionaryWithObjectsAndKeys:@"bbb", @"minAge", @"aaa", @"string1", nil];\
+    NSDictionary *variables2 = [NSDictionary dictionaryWithObjectsAndKeys:@"bbb", @"minAge", @"bbb", @"string1", nil];\
+    \
+    //\'83\'65\'83\'93\'83\'76\'83\'8c\'81\'5b\'83\'67\'82\'f0\'97\'98\'97\'70\'82\'b5\'82\'c4\'8f\'f0\'8c\'8f\'8e\'ae\'82\'f0\'8d\'ec\'90\'ac\
+    NSPredicate *bPredicate = [aPredicate predicateWithSubstitutionVariables:variables1];\
+    NSPredicate *cPredicate = [aPredicate predicateWithSubstitutionVariables:variables2];\
+    \
+    //\'83\'60\'83\'46\'83\'62\'83\'4e\'97\'70\
+    NSLog(@" %s %@", __FUNCTION__,([aPredicate evaluateWithObject:string1 substitutionVariables:variables1])?@"YES":@"NO");\
+    NSLog(@" %s %@", __FUNCTION__,([aPredicate evaluateWithObject:string1 substitutionVariables:variables2])?@"YES":@"NO");\
+    //\'83\'66\'83\'6f\'83\'62\'83\'4f\'97\'70\
+    NSLog(@" %s %@", __FUNCTION__,[bPredicate predicateFormat]);\
+    NSLog(@" %s %@", __FUNCTION__,[cPredicate predicateFormat]);\
+\}\
+}

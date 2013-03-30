@@ -1,0 +1,85 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10640\viewh13700\viewkind0
+\deftab720
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 #pragma mark NSOrthography orthographyWithDominantScript:\
+-(void)method001\
+\{\
+    \
+    NSString *textToAnalyse = @"That Japanese restaurant has a really authentic atmosphere.";\
+    \
+    //\'83\'70\'81\'5b\'83\'58\'82\'b5\'82\'bd\'82\'c6\'82\'ab\'82\'cc\'95\'b6\'8e\'9a\'82\'cc\'97\'76\'91\'66\'82\'cc\'94\'cd\'88\'cd\
+    NSRange stringRange = NSMakeRange(0, textToAnalyse.length);\
+    \
+    // \'8c\'be\'8c\'ea\'83\'7d\'83\'62\'83\'76\'82\'cc\'8e\'ab\'8f\'91\
+    NSArray *language = [NSArray arrayWithObjects:@"en",@"de",@"fr",nil];\
+    NSDictionary* languageMap = [NSDictionary dictionaryWithObject:language forKey:@"Latn"];\
+    \
+    NSOrthography *orthography = [NSOrthography orthographyWithDominantScript:@"Latn" languageMap:languageMap];\
+    [textToAnalyse enumerateLinguisticTagsInRange:stringRange\
+                                           scheme:NSLinguisticTagSchemeLexicalClass\
+                                          options:(NSLinguisticTaggerOmitWhitespace | NSLinguisticTaggerOmitPunctuation)\
+                                      orthography:orthography\
+                                       usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) \{\
+                                           NSLog(@"\\"%@\\" is a %@, tokenRange (%d,%d), sentenceRange (%d-%d)",[textToAnalyse substringWithRange:tokenRange] ,tag,tokenRange.location,tokenRange.length, sentenceRange.location, sentenceRange.length);\
+                                       \}];\
+    \
+    //=>"That" is a Determiner, tokenRange (0,4), sentenceRange (0-59)\
+    //=>"Japanese" is a Adjective, tokenRange (5,8), sentenceRange (0-59)\
+    //=>"restaurant" is a Noun, tokenRange (14,10), sentenceRange (0-59)\
+    // ...\
+\}\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab640\pardirnatural
+\cf0 \
+\
+\
+\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+\cf0 #pragma mark NSOrthography property\
+-(void)method002\
+\{\
+    NSString *aString = @"This is iOS code. \'82\'b1\'82\'ea\'82\'cd\'93\'fa\'96\'7b\'8c\'ea\'82\'c5\'82\'b7\'81\'42";\
+    \
+    NSRange aRange = NSMakeRange (1, [aString length]-1);\
+    \
+    NSString *tagScheme = NSLinguisticTagSchemeNameType;\
+    \
+    NSLinguisticTaggerOptions opts = NSLinguisticTaggerOmitPunctuation;\
+    \
+    NSArray *supportedLanguage = [NSLinguisticTagger   availableTagSchemesForLanguage:@"en"];\
+    \
+    NSLinguisticTagger *t = [[NSLinguisticTagger alloc]  initWithTagSchemes:supportedLanguage options: NSLinguisticTaggerOmitPunctuation] ;\
+    \
+    [t setString:aString];\
+    \
+    \
+    [t enumerateTagsInRange: aRange\
+                     scheme: tagScheme\
+                    options:(NSLinguisticTaggerOptions)opts\
+                 usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange,  BOOL *stop)\
+     \
+     \{\
+         NSLog(@"%@", tag);   \
+     \}];\
+    \
+    [t enumerateTagsInRange: aRange scheme: NSLinguisticTagSchemeNameTypeOrLexicalClass options:(NSLinguisticTaggerOptions) opts usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange,  BOOL *stop)\
+     \
+     \{\
+         NSLog(@"%@", tag);   \
+     \}];\
+    NSRange effectiveRange;\
+    NSOrthography *orthography = [t orthographyAtIndex:aRange.location effectiveRange:&effectiveRange];\
+    NSLog(@"%u,%u,%@",effectiveRange.location,effectiveRange.length,orthography.allLanguages);\
+    NSLog(@"%u,%u,%@",effectiveRange.location,effectiveRange.length,orthography.allScripts);\
+    NSLog(@"%u,%u,%@",effectiveRange.location,effectiveRange.length,orthography.dominantLanguage);\
+    NSLog(@"%u,%u,%@",effectiveRange.location,effectiveRange.length,orthography.dominantScript);\
+    NSLog(@"%u,%u,%@",effectiveRange.location,effectiveRange.length,orthography.languageMap);\
+    \
+    NSLog(@"%s %@",__FUNCTION__,[orthography languagesForScript:@"Jpan"]);\
+    NSLog(@"%s %@",__FUNCTION__,[orthography dominantLanguageForScript:@"Jpan"]);\
+\
+\}\
+}

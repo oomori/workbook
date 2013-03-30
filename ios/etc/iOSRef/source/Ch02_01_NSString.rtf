@@ -1,0 +1,59 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh13800\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \
+NSString *encodedString = \
+    (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,\
+                                                                 (CFStringRef)@"target strings",\
+                                                                 NULL,\
+                                                                 (CFStringRef)@";,/?:@&=+$#",\
+                                                                 kCFStringEncodingUTF8);\
+\
+\
+CFStringRef cfString = CFStringCreateWithFormat(kCFAllocatorDefault, NULL,\
+                                                    CFSTR("%@ = %.2f \\n"),CFSTR("pi"),3.1415);\
+NSString *aString = (__bridge_transfer NSString *)cfString;\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+- (void)displayText062:(NSString *)text \{\
+	\
+    NSLog(@"text 062 %@",text);\
+\}\
+-(void)method062\
+\{\
+    __block BOOL found = NO;\
+	\
+	//find word\
+	NSString *multiLine = [NSString stringWithString:@"apple\\nbanana\\norange\\n" ];\
+	NSString *string = [NSString stringWithString:@"apple" ];\
+	\
+	[multiLine enumerateLinesUsingBlock:^(NSString *line, BOOL *stop) \{\
+		\
+		if ([line localizedCaseInsensitiveCompare:string] == NSOrderedSame) \{\
+			*stop = YES;\
+			found = YES;\
+			NSLog(@"myBlock class= %@",[line className]);\
+            \
+            [self performSelectorOnMainThread:@selector(displayText062:) withObject:string waitUntilDone:NO];\
+            \
+		\}else\{\
+            *stop = YES;\
+			found = NO;\
+            [self performSelectorOnMainThread:@selector(displayText062:) withObject:@"NO!" waitUntilDone:NO];\
+            \
+        \}\
+		\
+	\}];\
+	\
+\}\
+}

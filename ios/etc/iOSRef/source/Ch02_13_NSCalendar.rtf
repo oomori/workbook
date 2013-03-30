@@ -1,0 +1,101 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10640\viewh13700\viewkind0
+\deftab720
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 \
+#pragma mark NSCalendar  initWithCalendarIdentifier:\
+-(void)method001\
+\{\
+    NSCalendar *aCalendar = [[NSCalendar alloc]\
+                            initWithCalendarIdentifier:NSGregorianCalendar];\
+    NSLog(@"%@",[aCalendar description]);\
+\}\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab640\pardirnatural
+\cf0 \
+\
+\
+\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+\cf0 #pragma mark NSCalendar  ordinalityOfUnit:\
+-(void)method010\
+\{\
+    NSCalendar *aCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];\
+    \
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];\
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss Z"];\
+    \
+    NSDate * aDate = [formatter dateFromString:@"2012-08-15 01:23:45 +0900"];\
+    NSDate * bDate = [formatter dateFromString:@"2012-08-15 01:23:26 +0900"];\
+    \
+    NSUInteger aOrdinal =\
+    [aCalendar ordinalityOfUnit:NSSecondCalendarUnit\
+                                            inUnit:NSMonthCalendarUnit\
+                                           forDate:aDate];\
+    \
+    NSUInteger bOrdinal =\
+    [aCalendar ordinalityOfUnit:NSSecondCalendarUnit\
+                                            inUnit:NSMonthCalendarUnit\
+                                           forDate:bDate];\
+    \
+    NSLog(@"%s %d",__FUNCTION__, (aOrdinal - bOrdinal));\
+\}\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab640\pardirnatural
+\cf0 \
+\
+\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+\cf0 #pragma mark NSCalendar  rangeOfUnit:\
+-(void)method012\
+\{\
+    NSCalendar *aCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];\
+    \
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];\
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss Z"];\
+    \
+    NSDate * aDate = [formatter dateFromString:@"2012-08-15 01:23:45 +0000"];\
+    \
+\
+    NSDate *bDate ;\
+    NSTimeInterval bInt ;\
+    BOOL result = \
+    [aCalendar rangeOfUnit:NSHourCalendarUnit\
+                 startDate:&bDate\
+                  interval:&bInt\
+                   forDate:aDate];\
+    if (result) \{\
+        NSLog(@"%s %@ %f",__FUNCTION__, [bDate description],bInt);\
+    \}else\{\
+        NSLog(@"%s %@",__FUNCTION__,@"false");\
+    \}\
+    //=>2012-08-15 01:00:00 +0000 3600.000000\
+\}\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab640\pardirnatural
+\cf0 \
+\
+\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+\cf0 #pragma mark NSCalendar  dateByAddingComponents:toDate:options:\
+-(void)method016\
+\{\
+    NSCalendar *aCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];\
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];\
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss Z"];\
+    \
+    NSDate * aDate = [formatter dateFromString:@"2012-08-15 01:00:45 +0000"];\
+    NSDate * bDate = [formatter dateFromString:@"2012-08-15 03:23:45 +0000"];\
+    \
+    NSDateComponents *aComps =\
+    [aCalendar components:NSMinuteCalendarUnit fromDate:aDate];\
+    NSDate *cDate =\
+    [aCalendar dateByAddingComponents:aComps\
+                               toDate:bDate\
+                              options:0];\
+    \
+    NSLog(@"%s %@",__FUNCTION__ ,[cDate description]);\
+    //=>2012-08-15 03:23:45 +0000\
+    \
+\}\
+}

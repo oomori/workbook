@@ -1,0 +1,98 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10700\viewh13800\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf0 #pragma mark NSSet addObjectsFromArray:\
+-(void)method003\
+\{\
+    NSString *a1String = @"a";\
+    NSString *bString = @"b";\
+    NSString *cString = @"c";\
+    NSString *a2String = [NSString stringWithFormat:@"%@",@"a"];\
+    NSString *a3String = @"a";\
+    NSArray *anArray = [NSArray arrayWithObjects:a1String,bString,cString,a2String,a1String,a3String, nil];\
+    \
+    NSMutableSet *aSet = [NSMutableSet setWithCapacity:10];\
+    [aSet addObjectsFromArray:anArray];\
+    \
+    NSLog(@"%@",[aSet description]);\
+    //=>\{(c,a,b)\}\
+    [aSet enumerateObjectsUsingBlock:^(id obj,BOOL *stop) \{\
+        NSLog(@"%s %p %@",__FUNCTION__,obj,obj);\
+    \}];\
+    //=>0x572c c\
+    //=>0x570c a\
+    //=>0x571c b\
+    \
+\}\
+\
+#pragma mark NSSet filterUsingPredicate:\
+-(void)method006\
+\{\
+    \
+    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"bbb", @"ccc", @"aaa",@"abc",@"\'82\'b1\'82\'ea\'82\'aa",nil];\
+    NSMutableSet *aSet1 = [NSMutableSet setWithCapacity:10];\
+    NSMutableSet *aSet2 = [NSMutableSet setWithCapacity:10];\
+    NSMutableSet *aSet3 = [NSMutableSet setWithCapacity:10];\
+    NSMutableSet *aSet4 = [NSMutableSet setWithCapacity:10];\
+    NSMutableSet *aSet5 = [NSMutableSet setWithCapacity:10];\
+    [aSet1 addObjectsFromArray:anArray];\
+    [aSet2 addObjectsFromArray:anArray];\
+    [aSet3 addObjectsFromArray:anArray];\
+    [aSet4 addObjectsFromArray:anArray];\
+    [aSet5 addObjectsFromArray:anArray];\
+    \
+    NSPredicate *aPredicate1 = [NSPredicate predicateWithFormat:@"SELF IN %@",[NSArray arrayWithObjects:@"aaa", @"bbb", nil]];\
+    NSPredicate *aPredicate2 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"aaa"];\
+    NSPredicate *aPredicate3 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"s"];\
+	NSPredicate *aPredicate4 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"a*"];\
+    \
+	NSPredicate *aPredicate5 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"*\'82\'aa*"];\
+    [aSet1 filterUsingPredicate: aPredicate1 ];\
+    [aSet2 filterUsingPredicate: aPredicate2 ];\
+    [aSet3 filterUsingPredicate: aPredicate3 ];\
+    [aSet4 filterUsingPredicate: aPredicate4 ];\
+    [aSet5 filterUsingPredicate: aPredicate5 ];\
+    \
+    NSLog(@"%s 1 %@",__FUNCTION__,[aSet1 description]);\
+    //=>1 \{(aaa,bbb)\}\
+    NSLog(@"%s 2 %@",__FUNCTION__,[aSet2 description]);\
+    //=>2 \{(aaa)\}\
+    NSLog(@"%s 3 %@",__FUNCTION__,[aSet3 description]);\
+    //=>3 \{()\}\
+    NSLog(@"%s 4 %@",__FUNCTION__,[aSet4 description]);\
+    //=>4 \{(aaa,abc)\}\
+    NSLog(@"%s 5 %@",__FUNCTION__,[aSet5 description]);\
+    //=>5 \{("\\U3053\\U308c\\U304c")\}\
+\}\
+\
+\
+\
+#pragma mark NSSet unionSet:\
+-(void)method007\
+\{\
+    NSArray *aArray = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d", nil];\
+    NSMutableSet *aSet = [NSMutableSet setWithCapacity:10];\
+    [aSet addObjectsFromArray:aArray];\
+    NSLog(@"%s a %@",__FUNCTION__,[aSet description]);\
+    //=>a \{(c,d,a,b)\}\
+    \
+    NSArray *bArray = [NSArray arrayWithObjects:@"d",@"e",@"f", nil];\
+    NSMutableSet *bSet = [NSMutableSet setWithCapacity:10];\
+    [bSet addObjectsFromArray:bArray];\
+    NSLog(@"%s b %@",__FUNCTION__,[bSet description]);\
+    //=>b \{(d,e,f)\}\
+    \
+    [aSet unionSet:bSet];\
+    \
+    NSLog(@"%s a %@",__FUNCTION__,[aSet description]);\
+    //=>a \{(c,d,e,a,f,b)\}\
+    NSLog(@"%s b %@",__FUNCTION__,[bSet description]);\
+    //=>b \{(d,e,f)\}\
+    \
+\}\
+}

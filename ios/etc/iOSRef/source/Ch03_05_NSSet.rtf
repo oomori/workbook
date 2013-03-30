@@ -1,0 +1,113 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10700\viewh13800\viewkind0
+\deftab674
+\pard\tx674\pardeftab674\pardirnatural
+
+\f0\fs24 \cf0 #pragma mark NSSet setWithArray:count:\
+-(void)method004\
+\{\
+    NSString *strings[5];\
+    strings[0]=@"Jan";\
+    strings[1]=@"Feb";\
+    strings[2]=@"Mar";\
+    strings[3]=@"Apr";\
+    strings[4]=@"May";\
+        \
+    NSSet *aSet = [NSSet setWithObjects:strings count:3];\
+    NSLog(@"%@",[aSet description]);\
+    //=>\{(Jan,Feb,Mar)\}\
+    [aSet enumerateObjectsUsingBlock:^(id obj,BOOL *stop) \{\
+        NSLog(@"%s %p %@",__FUNCTION__,obj,[obj description]);\
+    \}];\
+    //=>0x6a70 Jan\
+    //=>0x6a80 Feb\
+    //=>0x6a90 Mar\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\
+\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab640\pardirnatural
+\cf0 #pragma mark NSSet setWithArray\
+-(void)method003\
+\{\
+    NSString *a1String = @"a";\
+    NSString *bString = @"b";\
+    NSString *cString = @"c";\
+    NSString *a2String = [NSString stringWithFormat:@"%@",@"a"];\
+    NSString *a3String = @"a";\
+    \
+    NSLog(@"%s %p",__FUNCTION__,a1String);  //=>0x6a10\
+    NSLog(@"%s %p",__FUNCTION__,bString);   //=>0x6a20\
+    NSLog(@"%s %p",__FUNCTION__,cString);   //=>0x6a30\
+    NSLog(@"%s %p",__FUNCTION__,a2String);  //=>0x6d6b1e0\
+    NSLog(@"%s %p",__FUNCTION__,a3String);   //=>0x6a30\
+        \
+    NSArray *anArray = [NSArray arrayWithObjects:a1String,bString,cString,a2String,a1String,a3String, nil];\
+    \
+    NSSet *aSet = [NSSet setWithArray:anArray];\
+    NSLog(@"%@",[aSet description]);\
+    //=>\
+    [aSet enumerateObjectsUsingBlock:^(id obj,BOOL *stop) \{\
+        NSLog(@"%s %p",__FUNCTION__,obj);\
+    \}];\
+    //=>0x6a20\
+    //=>0x6a30\
+    //=>0x6a10\
+    \
+\}\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 #pragma mark NSSet filteredSetUsingPredicate:\
+-(void)method010\
+\{\
+    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"bbb", @"ccc", @"aaa",@"abc",@"\'82\'b1\'82\'ea\'82\'aa",nil];\
+    NSSet *aSet = [NSSet setWithArray:anArray];\
+    \
+    NSPredicate *aPredicate1 = [NSPredicate predicateWithFormat:@"SELF IN %@",[NSArray arrayWithObjects:@"aaa", @"bbb", nil]];\
+    NSPredicate *aPredicate2 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"aaa"];\
+    NSPredicate *aPredicate3 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"s"];\
+	NSPredicate *aPredicate4 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"a*"];\
+    \
+	NSPredicate *aPredicate5 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"*\'82\'aa*"];\
+    \
+    NSLog(@"%s %@",__FUNCTION__,[[aSet filteredSetUsingPredicate: aPredicate1 ] description]);\
+    //=>\{(aaa, bbb)\}\
+    NSLog(@"%s %@",__FUNCTION__,[[aSet filteredSetUsingPredicate: aPredicate2 ] description]);\
+    //=>\{(aaa)\}\
+    NSLog(@"%s %@",__FUNCTION__,[[aSet filteredSetUsingPredicate: aPredicate3 ] description]);\
+    //=>\{()\}\
+    NSLog(@"%s %@",__FUNCTION__,[[aSet filteredSetUsingPredicate: aPredicate4 ] description]);\
+    //=>\{(aaa,abc)\}\
+    NSLog(@"%s %@",__FUNCTION__,[[aSet filteredSetUsingPredicate: aPredicate5 ] description]);\
+    //=>\{("\\U3053\\U308c\\U304c")\}\
+    \
+\}\
+\
+\
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf0 #pragma mark enumerateObjectsWithOptions:usingBlock:\
+-(void)method015\
+\{\
+    NSArray *anArray =\
+    [[NSArray alloc] initWithObjects:   @"aaa",@"bbb",@"ccc",\
+     @"ddd",@"eee",@"fff",\
+     @"ggg",@"hhh",@"iii",nil];\
+    \
+    NSSet *aSet = [NSSet setWithArray:anArray];\
+    [aSet enumerateObjectsWithOptions:(NSEnumerationConcurrent | NSEnumerationReverse)\
+                           usingBlock:^(id obj, BOOL *stop) \{\
+        NSLog(@"%s %@",__FUNCTION__ ,[obj description]);\
+        \
+        //if ([obj isEqualToString:@"ggg"]) \{\
+        //    *stop = YES;\
+        //\}\
+    \}];\
+    \
+\}\
+}

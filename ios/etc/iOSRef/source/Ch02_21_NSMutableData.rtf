@@ -1,0 +1,71 @@
+{\rtf1\ansi\ansicpg932\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10640\viewh13700\viewkind0
+\deftab720
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 \
+#pragma mark NSData increaseLengthBy:\
+-(void)method004\
+\{\
+    NSMutableData *aData = [NSMutableData dataWithLength:20];\
+    NSLog(@"%s %@",__FUNCTION__,[aData description]);\
+    //=><00000000 00000000 00000000 00000000 00000000>\
+    [aData increaseLengthBy:10];\
+    NSLog(@"%s %@",__FUNCTION__,[aData description]);\
+    //=><00000000 00000000 00000000 00000000 00000000 00000000 00000000 0000>\
+\
+\}\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab640\pardirnatural
+\cf0 \
+\
+\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+\cf0 #pragma mark NSData appendData\
+-(void)method007\
+\{\
+    unsigned char *pngBytes = malloc(sizeof(unsigned char)*5);\
+    pngBytes[0] = 0x01;\
+    pngBytes[1] = 0x02;\
+    pngBytes[2] = 0x03;\
+    pngBytes[3] = 0x04;\
+    pngBytes[4] = 0x05;\
+        \
+    NSMutableData *aData = [NSMutableData dataWithLength:20];\
+    NSLog(@"%s %@",__FUNCTION__,[aData description]);\
+    //=><00000000 00000000 00000000 00000000 00000000>\
+    [aData appendBytes:pngBytes length:5];\
+    NSLog(@"%s %@",__FUNCTION__,[aData description]);\
+    //=><00000000 00000000 00000000 00000000 00000000 01020304 05>\
+\}\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab640\pardirnatural
+\cf0 \
+\
+\
+\pard\tx0\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
+\cf0 #pragma mark NSData resetBytesInRange\
+-(void)method011\
+\{\
+    int elementCount = 20;\
+    unsigned char *pngBytes = malloc(sizeof(unsigned char)*elementCount);\
+    for (int i = 0; i < elementCount; i++) \{\
+        pngBytes[i] = 0xFF;\
+    \}\
+    NSData *data1 = [NSData dataWithBytesNoCopy:pngBytes length:5 freeWhenDone:YES];\
+  \
+    \
+    NSMutableData *aData = [NSMutableData data];\
+    NSLog(@"%s %@",__FUNCTION__,[aData description]);\
+    //=><>\
+    [aData setData:data1];\
+    NSLog(@"%s %@",__FUNCTION__,[aData description]);\
+    //=><ffffffff ffffffff ffffffff ffffffff ffffffff>\
+    \
+    [aData resetBytesInRange:NSMakeRange(5, 8)];\
+    NSLog(@"%s %@",__FUNCTION__,[aData description]);\
+    //=><ffffffff ff000000 00000000 00ffffff ffffffff>\
+    \
+    void *dataPointer = [aData mutableBytes];\
+    NSLog(@"%s %p",__FUNCTION__,dataPointer);\
+\}}
