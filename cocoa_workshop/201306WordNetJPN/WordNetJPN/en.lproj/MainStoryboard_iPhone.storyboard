@@ -15,7 +15,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="no4-Im-MEA">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="369" id="Avu-u1-3O9"/>
+                                    <constraint firstAttribute="height" constant="369" id="NcC-b0-Xvo"/>
                                     <constraint firstAttribute="width" constant="326" id="Pjo-Tp-jVT"/>
                                 </constraints>
                                 <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackOpaque" text="" id="IPP-MI-eju">
@@ -58,12 +58,25 @@
                                     <action selector="search:" destination="2" eventType="touchUpInside" id="fSI-H6-HpA"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJO-hi-FiT">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="231-ZV-p7d"/>
+                                    <constraint firstAttribute="height" constant="97" id="ws8-Iq-wcd"/>
+                                </constraints>
+                                <string key="text">日本語ワードネット （1.1版）© 情報通信研究機構, 2009-2010　 
+linked to http://nlpwww.nict.go.jp/wn-ja/</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BKM-i1-xko" firstAttribute="top" secondItem="16" secondAttribute="top" constant="467" id="4q2-cd-a0h"/>
                             <constraint firstItem="no4-Im-MEA" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="8ZM-KE-OT9"/>
-                            <constraint firstItem="BKM-i1-xko" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="14" id="Htl-pX-pSK"/>
-                            <constraint firstAttribute="bottom" secondItem="BKM-i1-xko" secondAttribute="bottom" constant="15" id="JQe-1n-IGJ"/>
+                            <constraint firstItem="hJO-hi-FiT" firstAttribute="top" secondItem="no4-Im-MEA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HhW-xO-eGH"/>
+                            <constraint firstItem="hJO-hi-FiT" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="14" id="JoZ-ZI-ge2"/>
+                            <constraint firstItem="hJO-hi-FiT" firstAttribute="leading" secondItem="BKM-i1-xko" secondAttribute="leading" type="default" id="NhH-BP-z2F"/>
                             <constraint firstItem="no4-Im-MEA" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="jbn-C7-ip7"/>
                         </constraints>
                     </view>
@@ -84,7 +97,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="653" y="-164"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yYY-Yq-tDd">
@@ -207,6 +220,25 @@
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="OOOFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OOOFirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="search:"/>
+                <relationship kind="outlet" name="searchField" candidateClass="UISearchBar"/>
+            </relationships>
+        </class>
+        <class className="OOOSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OOOSecondViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="search:"/>
+                <relationship kind="outlet" name="searchField" candidateClass="UISearchBar"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
