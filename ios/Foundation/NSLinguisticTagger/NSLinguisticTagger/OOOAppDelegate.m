@@ -15,7 +15,7 @@
 #pragma mark enumerateTagsInRange:scheme:options:usingBlock:
 -(void)method001
 {
-    NSString *aString = @"My name is OOMORI satoshi.";
+    NSString *aString = @"人間は考える葦である。";//@"My name is OOMORI satoshi.";
     //iOS 5.1 現在実機では日本語は使えない
     //iOS 6.0 現在日本語は使えない
     //NSString *targetScheme = NSLinguisticTagSchemeTokenType;//種類Word,Whitespace,Punctuationなど
@@ -66,7 +66,7 @@
 #pragma mark NSLinguisticTagger  initWithTagSchemes
 -(void)method002
 {
-    NSString *aString = @"My name is OOMORI satoshi.";
+    NSString *aString = @"人間は考える葦である。";//@"My name is OOMORI satoshi.";
     NSString *targetScheme = NSLinguisticTagSchemeLexicalClass;//品詞。英語のみ,Verb,Noun,SentenceTerminator
     
     
@@ -109,7 +109,7 @@
 #pragma mark NSLinguisticTagger  initWithTagSchemes
 -(void)method003
 {
-    NSString *aString = @"My name is OOMORI satoshi.";
+    NSString *aString = @"人間は考える葦である。";//@"My name is OOMORI satoshi.";
     NSString *targetScheme = NSLinguisticTagSchemeTokenType;//品詞。英語のみ,Verb,Noun,SentenceTerminator
 
      
