@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		743F2EE2171D717D0066798B /* sampleText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 743F2EE1171D717D0066798B /* sampleText.txt */; };
+		743F2EE6171D76EA0066798B /* WordNetJPN.m in Sources */ = {isa = PBXBuildFile; fileRef = 743F2EE5171D76EA0066798B /* WordNetJPN.m */; };
+		743F2EE8171D77A10066798B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 743F2EE7171D77A10066798B /* libsqlite3.dylib */; };
+		743F2EEA171D786E0066798B /* wnjpn.db in Resources */ = {isa = PBXBuildFile; fileRef = 743F2EE9171D786E0066798B /* wnjpn.db */; };
+		74C3473D171AF834004C1B96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3473C171AF834004C1B96 /* UIKit.framework */; };
+		74C3473F171AF834004C1B96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3473E171AF834004C1B96 /* Foundation.framework */; };
+		74C34741171AF834004C1B96 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C34740171AF834004C1B96 /* CoreGraphics.framework */; };
+		74C34747171AF834004C1B96 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C34745171AF834004C1B96 /* InfoPlist.strings */; };
+		74C34749171AF834004C1B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C34748171AF834004C1B96 /* main.m */; };
+		74C3474D171AF834004C1B96 /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3474C171AF834004C1B96 /* OOOAppDelegate.m */; };
+		74C3474F171AF834004C1B96 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 74C3474E171AF834004C1B96 /* Default.png */; };
+		74C34751171AF834004C1B96 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74C34750171AF834004C1B96 /* Default@2x.png */; };
+		74C34753171AF834004C1B96 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74C34752171AF834004C1B96 /* Default-568h@2x.png */; };
+		74C34756171AF834004C1B96 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C34754171AF834004C1B96 /* MainStoryboard_iPhone.storyboard */; };
+		74C34759171AF834004C1B96 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C34757171AF834004C1B96 /* MainStoryboard_iPad.storyboard */; };
+		74C3475C171AF834004C1B96 /* OOOFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3475B171AF834004C1B96 /* OOOFirstViewController.m */; };
+		74C3475E171AF834004C1B96 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 74C3475D171AF834004C1B96 /* first.png */; };
+		74C34760171AF834004C1B96 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74C3475F171AF834004C1B96 /* first@2x.png */; };
+		74C34763171AF834004C1B96 /* OOOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C34762171AF834004C1B96 /* OOOSecondViewController.m */; };
+		74C34765171AF834004C1B96 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 74C34764171AF834004C1B96 /* second.png */; };
+		74C34767171AF834004C1B96 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74C34766171AF834004C1B96 /* second@2x.png */; };
+		74C3476F171AF834004C1B96 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3476E171AF834004C1B96 /* SenTestingKit.framework */; };
+		74C34770171AF834004C1B96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3473C171AF834004C1B96 /* UIKit.framework */; };
+		74C34771171AF834004C1B96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3473E171AF834004C1B96 /* Foundation.framework */; };
+		74C34779171AF834004C1B96 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C34777171AF834004C1B96 /* InfoPlist.strings */; };
+		74C3477C171AF834004C1B96 /* WordNetJPNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3477B171AF834004C1B96 /* WordNetJPNTests.m */; };
+		74C34882171C4EBA004C1B96 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C34881171C4EBA004C1B96 /* DetailViewController.m */; };
+		74F24E8A17507F6B005E5EDB /* secondText.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74F24E8917507F6B005E5EDB /* secondText.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74C34772171AF834004C1B96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74C34731171AF833004C1B96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74C34738171AF834004C1B96;
+			remoteInfo = WordNetJPN;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		743F2EE1171D717D0066798B /* sampleText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleText.txt; sourceTree = "<group>"; };
+		743F2EE3171D76AE0066798B /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = usr/include/sqlite3.h; sourceTree = SDKROOT; };
+		743F2EE4171D76EA0066798B /* WordNetJPN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordNetJPN.h; sourceTree = "<group>"; };
+		743F2EE5171D76EA0066798B /* WordNetJPN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordNetJPN.m; sourceTree = "<group>"; };
+		743F2EE7171D77A10066798B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		743F2EE9171D786E0066798B /* wnjpn.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = wnjpn.db; sourceTree = "<group>"; };
+		74C34739171AF834004C1B96 /* WordNetJPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordNetJPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C3473C171AF834004C1B96 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74C3473E171AF834004C1B96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74C34740171AF834004C1B96 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74C34744171AF834004C1B96 /* WordNetJPN-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordNetJPN-Info.plist"; sourceTree = "<group>"; };
+		74C34746171AF834004C1B96 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74C34748171AF834004C1B96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74C3474A171AF834004C1B96 /* WordNetJPN-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WordNetJPN-Prefix.pch"; sourceTree = "<group>"; };
+		74C3474B171AF834004C1B96 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
+		74C3474C171AF834004C1B96 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
+		74C3474E171AF834004C1B96 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		74C34750171AF834004C1B96 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		74C34752171AF834004C1B96 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		74C34755171AF834004C1B96 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		74C34758171AF834004C1B96 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		74C3475A171AF834004C1B96 /* OOOFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOFirstViewController.h; sourceTree = "<group>"; };
+		74C3475B171AF834004C1B96 /* OOOFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOFirstViewController.m; sourceTree = "<group>"; };
+		74C3475D171AF834004C1B96 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		74C3475F171AF834004C1B96 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		74C34761171AF834004C1B96 /* OOOSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOSecondViewController.h; sourceTree = "<group>"; };
+		74C34762171AF834004C1B96 /* OOOSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOSecondViewController.m; sourceTree = "<group>"; };
+		74C34764171AF834004C1B96 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		74C34766171AF834004C1B96 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		74C3476D171AF834004C1B96 /* WordNetJPNTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordNetJPNTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C3476E171AF834004C1B96 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74C34776171AF834004C1B96 /* WordNetJPNTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordNetJPNTests-Info.plist"; sourceTree = "<group>"; };
+		74C34778171AF834004C1B96 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74C3477A171AF834004C1B96 /* WordNetJPNTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordNetJPNTests.h; sourceTree = "<group>"; };
+		74C3477B171AF834004C1B96 /* WordNetJPNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordNetJPNTests.m; sourceTree = "<group>"; };
+		74C34880171C4EBA004C1B96 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		74C34881171C4EBA004C1B96 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		74F24E8917507F6B005E5EDB /* secondText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = secondText.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74C34736171AF834004C1B96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C3473D171AF834004C1B96 /* UIKit.framework in Frameworks */,
+				74C3473F171AF834004C1B96 /* Foundation.framework in Frameworks */,
+				74C34741171AF834004C1B96 /* CoreGraphics.framework in Frameworks */,
+				743F2EE8171D77A10066798B /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C34769171AF834004C1B96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C3476F171AF834004C1B96 /* SenTestingKit.framework in Frameworks */,
+				74C34770171AF834004C1B96 /* UIKit.framework in Frameworks */,
+				74C34771171AF834004C1B96 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74C34730171AF833004C1B96 = {
+			isa = PBXGroup;
+			children = (
+				74C34742171AF834004C1B96 /* WordNetJPN */,
+				74C34774171AF834004C1B96 /* WordNetJPNTests */,
+				74C3473B171AF834004C1B96 /* Frameworks */,
+				74C3473A171AF834004C1B96 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74C3473A171AF834004C1B96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74C34739171AF834004C1B96 /* WordNetJPN.app */,
+				74C3476D171AF834004C1B96 /* WordNetJPNTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74C3473B171AF834004C1B96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74C3473C171AF834004C1B96 /* UIKit.framework */,
+				74C3473E171AF834004C1B96 /* Foundation.framework */,
+				74C34740171AF834004C1B96 /* CoreGraphics.framework */,
+				74C3476E171AF834004C1B96 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74C34742171AF834004C1B96 /* WordNetJPN */ = {
+			isa = PBXGroup;
+			children = (
+				743F2EE1171D717D0066798B /* sampleText.txt */,
+				74F24E8917507F6B005E5EDB /* secondText.txt */,
+				743F2EE4171D76EA0066798B /* WordNetJPN.h */,
+				743F2EE5171D76EA0066798B /* WordNetJPN.m */,
+				74C3474B171AF834004C1B96 /* OOOAppDelegate.h */,
+				74C3474C171AF834004C1B96 /* OOOAppDelegate.m */,
+				74C34754171AF834004C1B96 /* MainStoryboard_iPhone.storyboard */,
+				74C34757171AF834004C1B96 /* MainStoryboard_iPad.storyboard */,
+				74C3475A171AF834004C1B96 /* OOOFirstViewController.h */,
+				74C3475B171AF834004C1B96 /* OOOFirstViewController.m */,
+				74C34880171C4EBA004C1B96 /* DetailViewController.h */,
+				74C34881171C4EBA004C1B96 /* DetailViewController.m */,
+				74C3475D171AF834004C1B96 /* first.png */,
+				74C3475F171AF834004C1B96 /* first@2x.png */,
+				74C34761171AF834004C1B96 /* OOOSecondViewController.h */,
+				74C34762171AF834004C1B96 /* OOOSecondViewController.m */,
+				74C34764171AF834004C1B96 /* second.png */,
+				74C34766171AF834004C1B96 /* second@2x.png */,
+				743F2EE9171D786E0066798B /* wnjpn.db */,
+				743F2EE7171D77A10066798B /* libsqlite3.dylib */,
+				743F2EE3171D76AE0066798B /* sqlite3.h */,
+				74C34743171AF834004C1B96 /* Supporting Files */,
+			);
+			path = WordNetJPN;
+			sourceTree = "<group>";
+		};
+		74C34743171AF834004C1B96 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74C34744171AF834004C1B96 /* WordNetJPN-Info.plist */,
+				74C34745171AF834004C1B96 /* InfoPlist.strings */,
+				74C34748171AF834004C1B96 /* main.m */,
+				74C3474A171AF834004C1B96 /* WordNetJPN-Prefix.pch */,
+				74C3474E171AF834004C1B96 /* Default.png */,
+				74C34750171AF834004C1B96 /* Default@2x.png */,
+				74C34752171AF834004C1B96 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74C34774171AF834004C1B96 /* WordNetJPNTests */ = {
+			isa = PBXGroup;
+			children = (
+				74C3477A171AF834004C1B96 /* WordNetJPNTests.h */,
+				74C3477B171AF834004C1B96 /* WordNetJPNTests.m */,
+				74C34775171AF834004C1B96 /* Supporting Files */,
+			);
+			path = WordNetJPNTests;
+			sourceTree = "<group>";
+		};
+		74C34775171AF834004C1B96 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74C34776171AF834004C1B96 /* WordNetJPNTests-Info.plist */,
+				74C34777171AF834004C1B96 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74C34738171AF834004C1B96 /* WordNetJPN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C3477F171AF834004C1B96 /* Build configuration list for PBXNativeTarget "WordNetJPN" */;
+			buildPhases = (
+				74C34735171AF834004C1B96 /* Sources */,
+				74C34736171AF834004C1B96 /* Frameworks */,
+				74C34737171AF834004C1B96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WordNetJPN;
+			productName = WordNetJPN;
+			productReference = 74C34739171AF834004C1B96 /* WordNetJPN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74C3476C171AF834004C1B96 /* WordNetJPNTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C34782171AF834004C1B96 /* Build configuration list for PBXNativeTarget "WordNetJPNTests" */;
+			buildPhases = (
+				74C34768171AF834004C1B96 /* Sources */,
+				74C34769171AF834004C1B96 /* Frameworks */,
+				74C3476A171AF834004C1B96 /* Resources */,
+				74C3476B171AF834004C1B96 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74C34773171AF834004C1B96 /* PBXTargetDependency */,
+			);
+			name = WordNetJPNTests;
+			productName = WordNetJPNTests;
+			productReference = 74C3476D171AF834004C1B96 /* WordNetJPNTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74C34731171AF833004C1B96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OOO;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Satoshi Oomori";
+			};
+			buildConfigurationList = 74C34734171AF833004C1B96 /* Build configuration list for PBXProject "WordNetJPN" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74C34730171AF833004C1B96;
+			productRefGroup = 74C3473A171AF834004C1B96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74C34738171AF834004C1B96 /* WordNetJPN */,
+				74C3476C171AF834004C1B96 /* WordNetJPNTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74C34737171AF834004C1B96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C34747171AF834004C1B96 /* InfoPlist.strings in Resources */,
+				74C3474F171AF834004C1B96 /* Default.png in Resources */,
+				74C34751171AF834004C1B96 /* Default@2x.png in Resources */,
+				74C34753171AF834004C1B96 /* Default-568h@2x.png in Resources */,
+				74C34756171AF834004C1B96 /* MainStoryboard_iPhone.storyboard in Resources */,
+				74C34759171AF834004C1B96 /* MainStoryboard_iPad.storyboard in Resources */,
+				74C3475E171AF834004C1B96 /* first.png in Resources */,
+				74C34760171AF834004C1B96 /* first@2x.png in Resources */,
+				74C34765171AF834004C1B96 /* second.png in Resources */,
+				74C34767171AF834004C1B96 /* second@2x.png in Resources */,
+				743F2EE2171D717D0066798B /* sampleText.txt in Resources */,
+				743F2EEA171D786E0066798B /* wnjpn.db in Resources */,
+				74F24E8A17507F6B005E5EDB /* secondText.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C3476A171AF834004C1B96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C34779171AF834004C1B96 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74C3476B171AF834004C1B96 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74C34735171AF834004C1B96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C34749171AF834004C1B96 /* main.m in Sources */,
+				74C3474D171AF834004C1B96 /* OOOAppDelegate.m in Sources */,
+				74C3475C171AF834004C1B96 /* OOOFirstViewController.m in Sources */,
+				74C34763171AF834004C1B96 /* OOOSecondViewController.m in Sources */,
+				74C34882171C4EBA004C1B96 /* DetailViewController.m in Sources */,
+				743F2EE6171D76EA0066798B /* WordNetJPN.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C34768171AF834004C1B96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C3477C171AF834004C1B96 /* WordNetJPNTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74C34773171AF834004C1B96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74C34738171AF834004C1B96 /* WordNetJPN */;
+			targetProxy = 74C34772171AF834004C1B96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74C34745171AF834004C1B96 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C34746171AF834004C1B96 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74C34754171AF834004C1B96 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C34755171AF834004C1B96 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		74C34757171AF834004C1B96 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C34758171AF834004C1B96 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		74C34777171AF834004C1B96 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C34778171AF834004C1B96 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74C3477D171AF834004C1B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74C3477E171AF834004C1B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74C34780171AF834004C1B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WordNetJPN/WordNetJPN-Prefix.pch";
+				INFOPLIST_FILE = "WordNetJPN/WordNetJPN-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74C34781171AF834004C1B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WordNetJPN/WordNetJPN-Prefix.pch";
+				INFOPLIST_FILE = "WordNetJPN/WordNetJPN-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		74C34783171AF834004C1B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WordNetJPN.app/WordNetJPN";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WordNetJPN/WordNetJPN-Prefix.pch";
+				INFOPLIST_FILE = "WordNetJPNTests/WordNetJPNTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		74C34784171AF834004C1B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WordNetJPN.app/WordNetJPN";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WordNetJPN/WordNetJPN-Prefix.pch";
+				INFOPLIST_FILE = "WordNetJPNTests/WordNetJPNTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74C34734171AF833004C1B96 /* Build configuration list for PBXProject "WordNetJPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C3477D171AF834004C1B96 /* Debug */,
+				74C3477E171AF834004C1B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74C3477F171AF834004C1B96 /* Build configuration list for PBXNativeTarget "WordNetJPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C34780171AF834004C1B96 /* Debug */,
+				74C34781171AF834004C1B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74C34782171AF834004C1B96 /* Build configuration list for PBXNativeTarget "WordNetJPNTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C34783171AF834004C1B96 /* Debug */,
+				74C34784171AF834004C1B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74C34731171AF833004C1B96 /* Project object */;
+}
