@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74243EF1176C6EDC00A37179 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74243EF0176C6EDC00A37179 /* Default-568h@2x.png */; };
 		743CF4E715F3A0710042FACD /* ITunesXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 743CF4E615F3A0710042FACD /* ITunesXMLParser.m */; };
 		74FE46EA15F338A50000F9D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FE46E915F338A50000F9D9 /* UIKit.framework */; };
 		74FE46EC15F338A50000F9D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FE46EB15F338A50000F9D9 /* Foundation.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74243EF0176C6EDC00A37179 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		743CF4E515F3A0710042FACD /* ITunesXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesXMLParser.h; sourceTree = "<group>"; };
 		743CF4E615F3A0710042FACD /* ITunesXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITunesXMLParser.m; sourceTree = "<group>"; };
 		74FE46E515F338A50000F9D9 /* NSXMLParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSXMLParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 		74FE46DA15F338A50000F9D9 = {
 			isa = PBXGroup;
 			children = (
+				74243EF0176C6EDC00A37179 /* Default-568h@2x.png */,
 				74FE46EF15F338A50000F9D9 /* NSXMLParser */,
 				74FE471015F338A50000F9D9 /* NSXMLParserTests */,
 				74FE46E815F338A50000F9D9 /* Frameworks */,
@@ -251,6 +254,7 @@
 				74FE46FD15F338A50000F9D9 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74FE470015F338A50000F9D9 /* MainStoryboard_iPad.storyboard in Resources */,
 				74FE472915F33A980000F9D9 /* test2.xml in Resources */,
+				74243EF1176C6EDC00A37179 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

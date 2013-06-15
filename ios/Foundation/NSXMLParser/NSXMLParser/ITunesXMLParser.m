@@ -84,7 +84,7 @@
 {
     
     NSLog( @"contents : %@", m_value );
-    [m_elements addObject:[NSDictionary dictionaryWithObjectsAndKeys:elementName,@"elementName",[m_value copy],@"contents", nil] ];
+    [m_elements addObject:@{@"elementName": elementName,@"contents": [m_value copy]} ];
     [m_value setString:@""];
     /*
      [parser abortParsing];

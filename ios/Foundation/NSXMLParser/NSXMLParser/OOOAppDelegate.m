@@ -59,19 +59,19 @@
             int		i = 0, cnt = [ items count ];
             
             for ( i = 0; i < cnt; i++ ) {
-                NSDictionary    *itemDict = [ items objectAtIndex: i ];
+                NSDictionary    *itemDict = items[i];
                 id		    itemElem;
-                itemElem = [ itemDict objectForKey: @"title" ];
+                itemElem = itemDict[@"title"];
                 if ( itemElem ) {
                     [ str appendString: itemElem ];
                     [ str appendString: @"\r" ];
                 }
-                itemElem = [ itemDict objectForKey: @"link" ];
+                itemElem = itemDict[@"link"];
                 if ( itemElem ) {
                     [ str appendString: itemElem ];
                     [ str appendString: @"\r" ];
                 }
-                itemElem = [ itemDict objectForKey: @"description" ];
+                itemElem = itemDict[@"description"];
                 if ( itemElem ) {
                     [ str appendString: itemElem ];
                     [ str appendString: @"\r" ];
@@ -126,15 +126,15 @@
             
             for ( i = 0; i < cnt; i++ ) {
                 
-                NSDictionary    *itemDict = [ items objectAtIndex: i ];
+                NSDictionary    *itemDict = items[i];
                 id		    itemElem;
                 NSLog(@"!--------- %@",
-                      [itemDict objectForKey:@"elementName"]);
+                      itemDict[@"elementName"]);
                 
-                 itemElem = [ itemDict objectForKey: @"elementName" ];
+                 itemElem = itemDict[@"elementName"];
                 if ( [ itemElem isEqual:@"title" ] ) {
                     
-                    NSString *retString = [[ itemDict objectForKey: @"contents" ] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+                    NSString *retString = [itemDict[@"contents"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
                     
                     NSLog(@"---------- %@",retString);
                     [ str appendString: retString ];
@@ -217,19 +217,19 @@
             
             for ( i = 0; i < cnt; i++ ) {
                 
-                NSDictionary    *itemDict = [ items objectAtIndex: i ];
+                NSDictionary    *itemDict = items[i];
                 id		    itemElem;
-                itemElem = [ itemDict objectForKey: @"title" ];
+                itemElem = itemDict[@"title"];
                 if ( itemElem ) {
                     [ str appendString: itemElem ];
                     [ str appendString: @"\r" ];
                 }
-                itemElem = [ itemDict objectForKey: @"link" ];
+                itemElem = itemDict[@"link"];
                 if ( itemElem ) {
                     [ str appendString: itemElem ];
                     [ str appendString: @"\r" ];
                 }
-                itemElem = [ itemDict objectForKey: @"description" ];
+                itemElem = itemDict[@"description"];
                 if ( itemElem ) {
                     [ str appendString: itemElem ];
                     [ str appendString: @"\r" ];
@@ -420,8 +420,9 @@
     
     switch (eventCode) {
         case NSStreamEventHasBytesAvailable: {
+            
             unsigned char buf[1024];
-            NSUInteger len = [(NSInputStream*)aStream read:buf maxLength:1024];
+            //NSUInteger len = [(NSInputStream*)aStream read:buf maxLength:1024];
             NSString *str = [[NSString alloc] initWithBytes:buf length:1024 encoding:NSUTF8StringEncoding];
             NSLog(@"%@", str);
         }
