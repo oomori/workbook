@@ -21,6 +21,7 @@
 		7405015715BA0AA100BC84B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7405013515BA0AA100BC84B4 /* Foundation.framework */; };
 		7405015F15BA0AA100BC84B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7405015D15BA0AA100BC84B4 /* InfoPlist.strings */; };
 		7405016215BA0AA100BC84B4 /* NSScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7405016115BA0AA100BC84B4 /* NSScannerTests.m */; };
+		74243EED176C6D0800A37179 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74243EEC176C6D0800A37179 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		7405015E15BA0AA100BC84B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7405016015BA0AA100BC84B4 /* NSScannerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSScannerTests.h; sourceTree = "<group>"; };
 		7405016115BA0AA100BC84B4 /* NSScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSScannerTests.m; sourceTree = "<group>"; };
+		74243EEC176C6D0800A37179 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		7405012415BA0AA100BC84B4 = {
 			isa = PBXGroup;
 			children = (
+				74243EEC176C6D0800A37179 /* Default-568h@2x.png */,
 				7405013915BA0AA100BC84B4 /* NSScanner */,
 				7405015A15BA0AA100BC84B4 /* NSScannerTests */,
 				7405013215BA0AA100BC84B4 /* Frameworks */,
@@ -200,7 +203,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 7405012915BA0AA100BC84B4 /* Build configuration list for PBXProject "NSScanner" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -228,6 +231,7 @@
 				7405013E15BA0AA100BC84B4 /* InfoPlist.strings in Resources */,
 				7405014715BA0AA100BC84B4 /* MainStoryboard_iPhone.storyboard in Resources */,
 				7405014A15BA0AA100BC84B4 /* MainStoryboard_iPad.storyboard in Resources */,
+				74243EED176C6D0800A37179 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +332,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -354,6 +362,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -375,6 +387,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSScanner/NSScanner-Prefix.pch";
 				INFOPLIST_FILE = "NSScanner/NSScanner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,6 +399,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSScanner/NSScanner-Prefix.pch";
 				INFOPLIST_FILE = "NSScanner/NSScanner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -444,6 +458,7 @@
 				7405016715BA0AA100BC84B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7405016815BA0AA100BC84B4 /* Build configuration list for PBXNativeTarget "NSScannerTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +467,7 @@
 				7405016A15BA0AA100BC84B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

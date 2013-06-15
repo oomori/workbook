@@ -21,7 +21,7 @@
     NSString *retStr ;
     while(![aScanner isAtEnd]) {
         if([aScanner scanUpToCharactersFromSet:chSet intoString:&retStr]) {
-            [mArray addObject:[NSNumber numberWithFloat:[retStr floatValue]]];
+            [mArray addObject:@([retStr floatValue])];
         }
         [aScanner scanCharactersFromSet:chSet intoString:NULL];
     }
