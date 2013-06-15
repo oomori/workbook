@@ -82,7 +82,7 @@
     NSLog(@"%s %p",__FUNCTION__,a3String);   //=>0x6a30
     
     
-    NSArray *anArray = [NSArray arrayWithObjects:a1String,bString,cString,a2String,a1String,a3String, nil];
+    NSArray *anArray = @[a1String,bString,cString,a2String,a1String,a3String];
     
     NSSet *aSet = [NSSet setWithArray:anArray];
     NSLog(@"%@",[aSet description]);
@@ -124,7 +124,7 @@
     NSString *bString = @"b";
     NSString *cString = @"c";
     
-    NSArray *anArray = [NSArray arrayWithObjects:aString,bString,cString, nil];
+    NSArray *anArray = @[aString,bString,cString];
     NSSet *aSet = [NSSet setWithArray:anArray];
     NSLog(@"%@",[aSet description]);
     //=>{(a,b,c)}
@@ -145,7 +145,7 @@
     NSString *bString = @"b";
     NSString *cString = @"c";
     
-    NSArray *anArray = [NSArray arrayWithObjects:aString,bString,cString, nil];
+    NSArray *anArray = @[aString,bString,cString];
     NSSet *aSet = [NSSet setWithArray:anArray];
     NSLog(@"%d",[aSet count]);
     //=>3
@@ -159,7 +159,7 @@
     NSString *bString = @"b";
     NSString *cString = @"c";
     
-    NSArray *anArray = [NSArray arrayWithObjects:aString,bString,cString, nil];
+    NSArray *anArray = @[aString,bString,cString];
     NSSet *aSet = [NSSet setWithArray:anArray];
     NSLog(@"%@",[[aSet allObjects] description]);
     //=>(a,b,c)
@@ -173,7 +173,7 @@
     NSString *bString = @"b";
     NSString *cString = @"c";
     
-    NSArray *anArray = [NSArray arrayWithObjects:aString,bString,cString, nil];
+    NSArray *anArray = @[aString,bString,cString];
     NSSet *aSet = [NSSet setWithArray:anArray];
     NSLog(@"%@",[[aSet anyObject] description]);
     //=>a //毎回変わる
@@ -187,7 +187,7 @@
     NSString *bString = @"b";
     NSString *cString = @"c";
     
-    NSArray *anArray = [NSArray arrayWithObjects:aString,bString,cString, nil];
+    NSArray *anArray = @[aString,bString,cString];
     NSSet *aSet = [NSSet setWithArray:anArray];
     NSLog(@"%@",([aSet containsObject:@"b"])?@"YES":@"NO");
     //=>a //毎回変わる
@@ -197,10 +197,10 @@
 #pragma mark NSSet filteredSetUsingPredicate:
 -(void)method010
 {
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"bbb", @"ccc", @"aaa",@"abc",@"これが",nil];
+    NSArray *anArray = @[@"aaa",@"bbb", @"ccc", @"aaa",@"abc",@"これが"];
     NSSet *aSet = [NSSet setWithArray:anArray];
     
-    NSPredicate *aPredicate1 = [NSPredicate predicateWithFormat:@"SELF IN %@",[NSArray arrayWithObjects:@"aaa", @"bbb", nil]];
+    NSPredicate *aPredicate1 = [NSPredicate predicateWithFormat:@"SELF IN %@",@[@"aaa", @"bbb"]];
     NSPredicate *aPredicate2 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"aaa"];
     NSPredicate *aPredicate3 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"s"];
 	NSPredicate *aPredicate4 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"a*"];
@@ -237,10 +237,9 @@
     [muStr3 appendString:@"ccc"];
     [customClass3 setCustomClassValue:muStr3];
     
-    NSArray *anArray =[[NSArray alloc] initWithObjects:customClass1,
+    NSArray *anArray =@[customClass1,
                    customClass2,
-                   customClass3,
-                   nil];
+                   customClass3];
     NSSet *aSet = [NSSet setWithArray:anArray];
     
     [aSet enumerateObjectsUsingBlock:^(id obj,BOOL *stop) {
@@ -274,7 +273,7 @@
     NSString *bString = [NSString stringWithFormat:@"b"];
     NSString *cString = [NSString stringWithFormat:@"c"];
     
-    NSArray *anArray = [NSArray arrayWithObjects:aString,bString,cString, nil];
+    NSArray *anArray = @[aString,bString,cString];
     NSSet *aSet = [NSSet setWithArray:anArray];
     NSLog(@"%@",[aSet member:@"a"]);
     
@@ -288,7 +287,7 @@
     NSString *bString = [NSString stringWithFormat:@"b"];
     NSString *cString = [NSString stringWithFormat:@"c"];
     
-    NSArray *anArray = [NSArray arrayWithObjects:aString,bString,cString, nil];
+    NSArray *anArray = @[aString,bString,cString];
     NSSet *aSet = [NSSet setWithArray:anArray];
     
     NSEnumerator *aEnumerator = [aSet objectEnumerator];
@@ -304,9 +303,9 @@
 -(void)method014
 {
     NSArray *anArray =
-    [[NSArray alloc] initWithObjects:   @"aaa",@"bbb",@"ccc",
+    @[@"aaa",@"bbb",@"ccc",
      @"ddd",@"eee",@"fff",
-     @"ggg",@"hhh",@"iii",nil];
+     @"ggg",@"hhh",@"iii"];
     
     NSSet *aSet = [NSSet setWithArray:anArray];
     [aSet enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
@@ -323,9 +322,9 @@
 -(void)method015
 {
     NSArray *anArray =
-    [[NSArray alloc] initWithObjects:   @"aaa",@"bbb",@"ccc",
+    @[@"aaa",@"bbb",@"ccc",
      @"ddd",@"eee",@"fff",
-     @"ggg",@"hhh",@"iii",nil];
+     @"ggg",@"hhh",@"iii"];
     
     NSSet *aSet = [NSSet setWithArray:anArray];
     [aSet enumerateObjectsWithOptions:(NSEnumerationConcurrent | NSEnumerationReverse)
@@ -343,9 +342,9 @@
 -(void)method016
 {
     NSArray *anArray =
-    [[NSArray alloc] initWithObjects:   @"aaa",@"bbb",@"ccc",
+    @[@"aaa",@"bbb",@"ccc",
      @"aaa",@"bbb",@"ccc",
-     @"aaa",@"bbb",@"ccc",nil];
+     @"aaa",@"bbb",@"ccc"];
     
     NSSet *aSet = [NSSet setWithArray:anArray];
     NSSet *newSet = [aSet objectsPassingTest:
@@ -367,9 +366,9 @@
 -(void)method017
 {
     NSArray *anArray =
-    [[NSArray alloc] initWithObjects:   @"aaa",@"bbb",@"ccc",
+    @[@"aaa",@"bbb",@"ccc",
      @"aaa",@"bbb",@"ccc",
-     @"aaa",@"bbb",@"ccc",nil];
+     @"aaa",@"bbb",@"ccc"];
     
     NSSet *aSet = [NSSet setWithArray:anArray];
     NSSet *newSet = [aSet objectsWithOptions:NSEnumerationConcurrent
@@ -394,9 +393,9 @@
     NSString *bString = [NSString stringWithFormat:@"b"];
     NSString *cString = [NSString stringWithFormat:@"c"];
     NSString *dString = [NSString stringWithFormat:@"d"];
-    NSArray *aArray = [NSArray arrayWithObjects:aString,bString,cString,dString, nil];
+    NSArray *aArray = @[aString,bString,cString,dString];
     
-    NSArray *bArray = [NSArray arrayWithObjects:@"a",@"b",@"c", nil];
+    NSArray *bArray = @[@"a",@"b",@"c"];
 
     NSSet *aSet = [NSSet setWithArray:aArray];
     NSSet *bSet = [NSSet setWithArray:bArray];
@@ -413,10 +412,10 @@
     NSString *bString = [NSString stringWithFormat:@"b"];
     NSString *cString = [NSString stringWithFormat:@"c"];
     NSString *dString = [NSString stringWithFormat:@"d"];
-    NSArray *aArray = [NSArray arrayWithObjects:aString,bString,cString,dString, nil];
+    NSArray *aArray = @[aString,bString,cString,dString];
     
-    NSArray *bArray = [NSArray arrayWithObjects:@"d",@"e",@"f", nil];
-    NSArray *cArray = [NSArray arrayWithObjects:@"e",@"f",@"g", nil];
+    NSArray *bArray = @[@"d",@"e",@"f"];
+    NSArray *cArray = @[@"e",@"f",@"g"];
     
     NSSet *aSet = [NSSet setWithArray:aArray];
     NSSet *bSet = [NSSet setWithArray:bArray];
@@ -434,10 +433,10 @@
     NSString *bString = [NSString stringWithFormat:@"b"];
     NSString *cString = [NSString stringWithFormat:@"c"];
     NSString *dString = [NSString stringWithFormat:@"d"];
-    NSArray *aArray = [NSArray arrayWithObjects:aString,bString,cString,dString, nil];
+    NSArray *aArray = @[aString,bString,cString,dString];
     
-    NSArray *bArray = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d", nil];
-    NSArray *cArray = [NSArray arrayWithObjects:@"a",@"b",@"c", nil];
+    NSArray *bArray = @[@"a",@"b",@"c",@"d"];
+    NSArray *cArray = @[@"a",@"b",@"c"];
     
     NSSet *aSet = [NSSet setWithArray:aArray];
     NSSet *bSet = [NSSet setWithArray:bArray];
@@ -451,10 +450,10 @@
 #pragma mark NSSet
 -(void)method021
 {
-    NSDictionary *aDic = [NSDictionary dictionaryWithObjectsAndKeys:@"aaa",@"key1", nil];
-    NSDictionary *bDic = [NSDictionary dictionaryWithObjectsAndKeys:@"bbb",@"key2", nil];
-    NSDictionary *cDic = [NSDictionary dictionaryWithObjectsAndKeys:@"ccc",@"key3", nil];
-    NSArray *aArray = [NSArray arrayWithObjects:aDic,bDic,cDic, nil];
+    NSDictionary *aDic = @{@"key1": @"aaa"};
+    NSDictionary *bDic = @{@"key2": @"bbb"};
+    NSDictionary *cDic = @{@"key3": @"ccc"};
+    NSArray *aArray = @[aDic,bDic,cDic];
     NSSet *aSet = [NSSet setWithArray:aArray];
     NSLog(@"%s %@",__FUNCTION__,[[aSet valueForKey:@"key3"] description]);
 }
@@ -465,7 +464,7 @@
     NSMutableDictionary *aDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"aaa",@"key1", nil];
     NSMutableDictionary *bDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"bbb",@"key2", nil];
     NSMutableDictionary *cDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"ccc",@"key3", nil];
-    NSArray *aArray = [NSArray arrayWithObjects:aDic,bDic,cDic, nil];
+    NSArray *aArray = @[aDic,bDic,cDic];
     NSSet *aSet = [NSSet setWithArray:aArray];
     NSLog(@"%s %@",__FUNCTION__,[[aSet valueForKey:@"key3"] description]);
     [aSet setValue:@"xxx" forKey:@"key1"];
@@ -487,7 +486,7 @@
                                                              ascending:YES];
     NSSet *aSet = [NSSet setWithArray:arr];
     
-    NSArray *sortedArray = [aSet sortedArrayUsingDescriptors:[NSArray arrayWithObject:descriptor]] ;
+    NSArray *sortedArray = [aSet sortedArrayUsingDescriptors:@[descriptor]] ;
     
     NSLog(@"%s %@",__FUNCTION__,[arr description]);
     //=>-[OOOAppDelegate method003] (aaa4,aaa2,aaa3,aaa1)
@@ -509,7 +508,7 @@
 {
     NSMutableString *aString = [NSMutableString stringWithCapacity:1];
     [aString appendString:@"aString"];
-    NSMutableArray *anArray = [NSMutableArray arrayWithObjects:@"aaa",[NSNumber numberWithFloat:2.0],@"bbb",@"ccc",@"ddd",@"eee",@"fff",@"ggg",@"hhh",nil];
+    NSMutableArray *anArray = [NSMutableArray arrayWithObjects:@"aaa",@2.0f,@"bbb",@"ccc",@"ddd",@"eee",@"fff",@"ggg",@"hhh",nil];
     
     [anArray addObject:aString];
     NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
@@ -535,7 +534,7 @@
     NSMutableString *aaa = [NSMutableString stringWithString:@"aaa"];
     NSMutableString *bbb = [NSMutableString stringWithString:@"bbb"];
     NSMutableString *ccc = [NSMutableString stringWithString:@"ccc"];
-    NSNumber *ddd = [NSNumber numberWithInt:10];
+    NSNumber *ddd = @10;
     NSDate *eee = [NSDate date];
     NSValue *fff = [NSValue valueWithCGPoint:CGPointMake(10.0, 10.0)];
     NSSet *ggg = [NSSet setWithObjects:aaa,bbb,ccc,nil];

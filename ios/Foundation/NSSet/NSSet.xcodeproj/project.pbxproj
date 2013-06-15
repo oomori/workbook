@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		740EEEFE15CCA9B900CE53B5 /* OOOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 740EEEFD15CCA9B900CE53B5 /* OOOView.m */; };
 		740EEEFF15CCA9B900CE53B5 /* OOOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 740EEEFD15CCA9B900CE53B5 /* OOOView.m */; };
+		74243EEF176C6E3400A37179 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74243EEE176C6E3400A37179 /* Default-568h@2x.png */; };
 		7492414F155EB00E007A1C90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7492414E155EB00E007A1C90 /* UIKit.framework */; };
 		74924151155EB00E007A1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924150155EB00E007A1C90 /* Foundation.framework */; };
 		74924153155EB00E007A1C90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924152155EB00E007A1C90 /* CoreGraphics.framework */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		740EEEFC15CCA9B900CE53B5 /* OOOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOView.h; sourceTree = "<group>"; };
 		740EEEFD15CCA9B900CE53B5 /* OOOView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOView.m; sourceTree = "<group>"; };
+		74243EEE176C6E3400A37179 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7492414A155EB00E007A1C90 /* NSSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7492414E155EB00E007A1C90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74924150155EB00E007A1C90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +92,7 @@
 		7492413F155EB00E007A1C90 = {
 			isa = PBXGroup;
 			children = (
+				74243EEE176C6E3400A37179 /* Default-568h@2x.png */,
 				74924154155EB00E007A1C90 /* NSSet */,
 				74924175155EB00F007A1C90 /* NSSetTests */,
 				7492414D155EB00E007A1C90 /* Frameworks */,
@@ -211,7 +214,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 74924144155EB00E007A1C90 /* Build configuration list for PBXProject "NSSet" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -239,6 +242,7 @@
 				74924159155EB00E007A1C90 /* InfoPlist.strings in Resources */,
 				74924162155EB00E007A1C90 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74924165155EB00E007A1C90 /* MainStoryboard_iPad.storyboard in Resources */,
+				74243EEF176C6E3400A37179 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +346,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -368,6 +376,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
