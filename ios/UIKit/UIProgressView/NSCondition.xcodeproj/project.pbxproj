@@ -21,6 +21,7 @@
 		74B399A61606D6BE0055972D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B399841606D6BD0055972D /* Foundation.framework */; };
 		74B399AE1606D6BE0055972D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74B399AC1606D6BE0055972D /* InfoPlist.strings */; };
 		74B399B11606D6BE0055972D /* NSConditionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B399B01606D6BE0055972D /* NSConditionTests.m */; };
+		74FFC79517748C2F002EC79B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FFC79417748C2F002EC79B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		74B399AD1606D6BE0055972D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74B399AF1606D6BE0055972D /* NSConditionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSConditionTests.h; sourceTree = "<group>"; };
 		74B399B01606D6BE0055972D /* NSConditionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSConditionTests.m; sourceTree = "<group>"; };
+		74FFC79417748C2F002EC79B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		74B399731606D6BD0055972D = {
 			isa = PBXGroup;
 			children = (
+				74FFC79417748C2F002EC79B /* Default-568h@2x.png */,
 				74B399881606D6BD0055972D /* NSCondition */,
 				74B399A91606D6BE0055972D /* NSConditionTests */,
 				74B399811606D6BD0055972D /* Frameworks */,
@@ -229,6 +232,7 @@
 				74B3998D1606D6BD0055972D /* InfoPlist.strings in Resources */,
 				74B399961606D6BD0055972D /* MainStoryboard_iPhone.storyboard in Resources */,
 				74B399991606D6BD0055972D /* MainStoryboard_iPad.storyboard in Resources */,
+				74FFC79517748C2F002EC79B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

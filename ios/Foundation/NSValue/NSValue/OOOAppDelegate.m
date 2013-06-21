@@ -20,10 +20,10 @@
     [aDictionary setValue:@"ddd" forKey:@"stringKey"];
     
     NSRange aRange = NSMakeRange(0, 10);
-    [aDictionary setObject:[NSValue valueWithRange:aRange] forKey:@"rangeKey"];
+    aDictionary[@"rangeKey"] = [NSValue valueWithRange:aRange];
     
     
-    [aDictionary setObject:[NSValue value:&aRange withObjCType:@encode(NSRange)] forKey:@"objcKey"];
+    aDictionary[@"objcKey"] = [NSValue value:&aRange withObjCType:@encode(NSRange)];
     
     NSLog(@"%s %p %@",__FUNCTION__,aDictionary,[aDictionary valueForKey:@"@allValues"]);
     //=>-[OOOAppDelegate method001] 0x6a2ac10 (ddd,"NSRange: {0, 10}","NSRange: {0, 10}")
@@ -42,18 +42,18 @@ typedef struct {
     [aDictionary setValue:@"ddd" forKey:@"key4"];
     
     NSRange aRange = NSMakeRange(0, 10);
-    [aDictionary setObject:[NSValue valueWithRange:aRange] forKey:@"keyNSRange"];
+    aDictionary[@"keyNSRange"] = [NSValue valueWithRange:aRange];
     
     MYStruct myStruct;
     myStruct.point = 0;
     myStruct.length = 10;
     
     
-    [aDictionary setObject:[NSValue value:&myStruct withObjCType:@encode(MYStruct)] forKey:@"keyMYStruct"];
+    aDictionary[@"keyMYStruct"] = [NSValue value:&myStruct withObjCType:@encode(MYStruct)];
     
     NSLog(@"%s %p %@",__FUNCTION__,aDictionary,[aDictionary valueForKey:@"@allValues"]);
     
-    NSValue *structValue = [aDictionary objectForKey:@"keyMYStruct"];
+    NSValue *structValue = aDictionary[@"keyMYStruct"];
     MYStruct myStruct2;
 	
     [structValue getValue:&myStruct2];
@@ -70,7 +70,7 @@ typedef struct {
     [aDictionary setValue:@"ddd" forKey:@"stringKey"];
     
     NSRange aRange = NSMakeRange(0, 10);
-    [aDictionary setObject:[NSValue valueWithRange:aRange] forKey:@"rangeKey"];
+    aDictionary[@"rangeKey"] = [NSValue valueWithRange:aRange];
     
     
     NSLog(@"%s %p %@",__FUNCTION__,aDictionary,[aDictionary valueForKey:@"@allValues"]);
@@ -85,7 +85,7 @@ typedef struct {
     
     CGPoint aPoint = CGPointMake(0, 200);
     
-    [aDictionary setObject:[NSValue value:&aPoint withObjCType:@encode(CGPoint)] forKey:@"objcKey"];
+    aDictionary[@"objcKey"] = [NSValue value:&aPoint withObjCType:@encode(CGPoint)];
     
     NSLog(@"%s %p %@",__FUNCTION__,aDictionary,[aDictionary valueForKey:@"@allValues"]);
     //=>-[OOOAppDelegate method001] 0x6a2ac10 (ddd,"NSPoint: {0, 200}")
@@ -101,7 +101,7 @@ typedef struct {
     
     CGPoint aPoint = CGPointMake(0, 200);
     NSValue *aValue = [NSValue value:&aPoint withObjCType:@encode(CGPoint)];
-    [aDictionary setObject:aValue forKey:@"objcKey"];
+    aDictionary[@"objcKey"] = aValue;
     
     NSLog(@"%s %s",__FUNCTION__,[aValue objCType]);
     //=>-[OOOAppDelegate method001] 0x6a2ac10 (ddd,"NSPoint: {0, 200}")
@@ -115,7 +115,7 @@ typedef struct {
     
     char *cString = "My name is OOMORI.";
     NSValue *aValue = [NSValue value:cString withObjCType:@encode(char *)];
-    [aDictionary setObject:aValue forKey:@"objcKey"];
+    aDictionary[@"objcKey"] = aValue;
     
     NSLog(@"%s %s",__FUNCTION__,[aValue objCType]);
     NSLog(@"%s %@",__FUNCTION__,[aDictionary description]);
@@ -135,7 +135,7 @@ typedef struct {
     char *cString = "My name is OOMORI.";
     NSValue *aValue = [NSValue valueWithBytes:cString objCType:@encode(char *) ];
                        
-    [aDictionary setObject:aValue forKey:@"objcKey"];
+    aDictionary[@"objcKey"] = aValue;
     
     NSLog(@"%s %s",__FUNCTION__,[aValue objCType]);
     NSLog(@"%s %@",__FUNCTION__,[aDictionary description]);
@@ -157,7 +157,7 @@ typedef struct {
     
     NSValue *aValue = [NSValue valueWithNonretainedObject:@"TEST" ];
     
-    [aDictionary setObject:aValue forKey:@"objcKey"];
+    aDictionary[@"objcKey"] = aValue;
     
     NSLog(@"%s %s",__FUNCTION__,[aValue objCType]);
     NSLog(@"%s %@",__FUNCTION__,[aDictionary description]);
@@ -174,7 +174,7 @@ typedef struct {
     
     char *localString = "My name is OOMORI.";
 	NSValue *theValue = [NSValue valueWithPointer: localString ];
-	[aDictionary setObject:theValue forKey:@"objcKey"];
+	aDictionary[@"objcKey"] = theValue;
     
     char *theCString;
     theCString = [[aDictionary valueForKey:@"objcKey"] pointerValue];

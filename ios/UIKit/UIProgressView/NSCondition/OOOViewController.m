@@ -51,7 +51,7 @@
             
             val += 0.001;
             
-            [self performSelectorInBackground:@selector(progress:) withObject:[NSNumber numberWithFloat:val]];
+            [self performSelectorInBackground:@selector(progress:) withObject:@(val)];
             [NSThread sleepForTimeInterval:0.01f];
 
             

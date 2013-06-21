@@ -83,10 +83,10 @@ NSDictionary *userDefaultsForUser(int uid, NSString *domain) {
     [defaults setInteger:10 forKey:@"integerKey"];
     [defaults setDouble:9000000000 forKey:@"doubleKey"];
     [defaults setURL:[NSURL URLWithString:@"http://www.apple.com"] forKey:@"urlKey"];
-    NSArray *array = [NSArray arrayWithObjects:@"aaa",@"bbb",[NSNumber numberWithInt:3], nil ];
+    NSArray *array = @[@"aaa",@"bbb",@3];
     [defaults setObject:array forKey:@"arrayKey"];
     
-    NSDictionary *aDic = [NSDictionary dictionaryWithObjectsAndKeys:@"aaa",@"key1",@"bbb",@"key2",@"ccc",@"key3", nil];
+    NSDictionary *aDic = @{@"key1": @"aaa",@"key2": @"bbb",@"key3": @"ccc"};
     [defaults setObject:aDic forKey:@"dictionaryKey"];
     
     BOOL boolValue = [defaults boolForKey:@"boolKey"];
@@ -116,7 +116,7 @@ NSDictionary *userDefaultsForUser(int uid, NSString *domain) {
 {
     NSUserDefaults* defaults = [[NSUserDefaults alloc] init];
     
-    NSArray *array = [NSArray arrayWithObjects:@"aaa",@"bbb",[NSNumber numberWithInt:3], nil ];
+    NSArray *array = @[@"aaa",@"bbb",@3];
     [defaults setObject:array forKey:@"arrayKey"];
     NSArray *bArray = [defaults arrayForKey:@"arrayKey"];
     NSLog(@"%s %@",__FUNCTION__,bArray);
@@ -135,7 +135,7 @@ NSDictionary *userDefaultsForUser(int uid, NSString *domain) {
 {
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     
-    [defaults setPersistentDomain:[NSDictionary dictionaryWithObject:@"value1" forKey:@"key1"] forName:@"com.oomori.DefaultsTest"];
+    [defaults setPersistentDomain:@{@"key1": @"value1"} forName:@"com.oomori.DefaultsTest"];
     [defaults synchronize];
     
     NSLog(@"%s %@",__FUNCTION__,[defaults persistentDomainNames]);
@@ -156,7 +156,7 @@ NSDictionary *userDefaultsForUser(int uid, NSString *domain) {
     
     
     
-    NSArray *array = [NSArray arrayWithObjects:@"aaa",@"bbb",[NSNumber numberWithInt:3], nil ];
+    NSArray *array = @[@"aaa",@"bbb",@3];
     [defaults setObject:array forKey:@"arrayKey"];
     NSArray *bArray = [defaults arrayForKey:@"arrayKey"];
     NSLog(@"%s %@",__FUNCTION__,bArray);
@@ -172,8 +172,7 @@ NSDictionary *userDefaultsForUser(int uid, NSString *domain) {
 + (void)initialize{
  
  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
- NSDictionary *appDefaults = [NSDictionary
-                              dictionaryWithObject:@"default value" forKey:@"KEY0"];
+ NSDictionary *appDefaults = @{@"KEY0": @"default value"};
  
  [defaults registerDefaults:appDefaults];
 }
