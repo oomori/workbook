@@ -18,8 +18,8 @@
 #pragma mark initWithObjects:
 -(void)method001
 {
-    NSArray *anArray = 
-        [[NSArray alloc] initWithObjects:@"aaa",@"bbb",@"ccc",nil];
+    NSArray *anArray =
+    @[@"aaa",@"bbb",@"ccc"];
     
     NSLog(@"%s %@",__FUNCTION__,[anArray description]);
 }
@@ -27,11 +27,11 @@
 #pragma mark indexOfObjectPassingTest:
 -(void)method002
 {
-    NSArray *anArray = 
-    [[NSArray alloc] initWithObjects:   @"aaa",@"bbb",@"ccc",
-                                        @"aaa",@"bbb",@"ccc",
-                                        @"aaa",@"bbb",@"ccc",nil];
-
+    NSArray *anArray =
+    @[@"aaa",@"bbb",@"ccc",
+      @"aaa",@"bbb",@"ccc",
+      @"aaa",@"bbb",@"ccc"];
+    
     
     NSUInteger idx = [anArray indexOfObjectPassingTest:
                       ^ BOOL (id obj, NSUInteger idx, BOOL *stop)
@@ -43,7 +43,7 @@
                           }
                           
                           if ([obj isEqualToString:@"bbb"]) {
-                              return YES;    
+                              return YES;
                           }else {
                               return NO;
                           }
@@ -55,32 +55,33 @@
     }else {
         NSLog(@"002 index = %u",idx);
     }
-
+    
 }
+
 #pragma mark enumerateObjectsUsingBlock:
 -(void)method003
 {
-    NSArray *anArray = 
-    [[NSArray alloc] initWithObjects:   @"aaa",@"bbb",@"ccc",
-     @"ddd",@"eee",@"fff",
-     @"ggg",@"hhh",@"iii",nil];
+    NSArray *anArray =
+    @[@"aaa",@"bbb",@"ccc",
+      @"ddd",@"eee",@"fff",
+      @"ggg",@"hhh",@"iii"];
     
     [anArray enumerateObjectsUsingBlock:^(id obj, NSUInteger  idx, BOOL *stop) {
         NSLog(@"003==>%@", [obj description]);
         
         if ([obj isEqualToString:@"ggg"]) {
-            *stop = YES;   
+            *stop = YES;
         }
     }];
-
+    
 }
 #pragma mark sortedArrayUsingComparator:
 -(void)method004
 {
-    NSArray *anArray = 
-    [[NSArray alloc] initWithObjects:   @"bbb",@"ggg",@"jjj",
-     @"eee",@"fff",@"iii",
-     @"ddd",@"hhh",@"aaa",nil];
+    NSArray *anArray =
+    @[@"bbb",@"ggg",@"jjj",
+      @"eee",@"fff",@"iii",
+      @"ddd",@"hhh",@"aaa"];
     
     NSLog(@"004 %@",[anArray description]);
     
@@ -97,17 +98,17 @@
 #pragma mark sortedArrayWithOptions:usingComparator:
 -(void)method005
 {
-    NSArray *anArray = 
-    [[NSArray alloc] initWithObjects:   @"bbb",@"ggg",@"jjj",
-     @"eee",@"fff",@"iii",
-     @"ddd",@"hhh",@"aaa",nil];
+    NSArray *anArray =
+    @[@"bbb",@"ggg",@"jjj",
+      @"eee",@"fff",@"iii",
+      @"ddd",@"hhh",@"aaa"];
     
     NSLog(@"005 %@",[anArray description]);
     
     NSArray *sortedArray = [anArray sortedArrayWithOptions:NSSortConcurrent//NSSortStable
                                            usingComparator:^(id obj1,id obj2){
-                                return [obj1 compare:obj2];
-                            }];
+                                               return [obj1 compare:obj2];
+                                           }];
     //NSSortStableは元のソートが保持される
     //NSSortConcurrentは元のソートが保持されない代わりに高速
     NSLog(@"005 %@",[sortedArray description]);
@@ -119,10 +120,10 @@
 #pragma mark filteredArrayUsingPredicate:
 -(void)method006
 {
-    NSArray *anArray = 
-    [[NSArray alloc] initWithObjects:   @"abc",@"def",@"ghi",
-     @"ihg",@"fed",@"cba",
-     @"aaa",@"bbb",@"ccc",nil];
+    NSArray *anArray =
+    @[@"abc",@"def",@"ghi",
+      @"ihg",@"fed",@"cba",
+      @"aaa",@"bbb",@"ccc"];
     
     NSPredicate *aPredicate = [NSPredicate predicateWithFormat:@"SELF LIKE '*a*'"];
     NSArray *aResult = [anArray filteredArrayUsingPredicate:aPredicate];
@@ -152,9 +153,9 @@
 -(void)method008
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",[NSNumber numberWithFloat:2.0],@"bbb",@"ccc",nil];
+    NSArray *anArray = @[@"aaa",@2.0f,@"bbb",@"ccc"];
     NSLog(@"%@",[anArray description]);
-
+    
     //=>(aaa,2,bbb,ccc)
 }
 
@@ -163,10 +164,10 @@
 -(void)method009
 {
     
-    NSArray *anArray = [NSArray arrayWithObject:@"aaa"];
+    NSArray *anArray = @[@"aaa"];
     NSLog(@"%@",[anArray description]);
-
-     //=>(aaa)
+    
+    //=>(aaa)
 }
 
 #pragma mark arrayWithContentsOfURL:
@@ -186,18 +187,23 @@
 -(void)method011
 {
     //書き込み用のNSArrayを作成
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",[NSNumber numberWithFloat:2.0],@"bbb",@"ccc",nil];
-
+    NSArray *anArray = @[@"aaa",@2.0f,@"bbb",@"ccc"];
    //メインバンドル内のResourceにplistfile2.plistファイルを作成
     NSFileManager *myFile = [ NSFileManager defaultManager];
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+    /*NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
                          [NSDate date],NSFileModificationDate,
                          @"owner",@"NSFileOwnerAccountName",
                          @"group",@"NSFileGroupOwnerAccountName",
                          nil,@"NSFilePosixPermissions",
                          [NSNumber numberWithBool:YES],@"NSFileExtensionHidden",
                          nil];
-
+    */
+     NSDictionary *dic = @{NSFileModificationDate: [NSDate date],
+                          @"NSFileOwnerAccountName": @"owner",
+                          @"NSFileGroupOwnerAccountName": @"group",
+                          @"NSFilePosixPermissions":@0777 ,
+                          @"NSFileExtensionHidden": @YES};
+    
     NSMutableData *dat1 = [[NSMutableData alloc] initWithCapacity:1];
     
     [myFile changeCurrentDirectoryPath:[[[NSBundle mainBundle] resourcePath] stringByExpandingTildeInPath]];
@@ -242,7 +248,7 @@
 {
     NSMutableString *aString = [NSMutableString stringWithCapacity:1];
     [aString appendString:@"aString"];
-    NSMutableArray *anArray = [NSMutableArray arrayWithObjects:@"aaa",[NSNumber numberWithFloat:2.0],@"bbb",@"ccc",@"ddd",@"eee",@"fff",@"ggg",@"hhh",nil];
+    NSMutableArray *anArray = [NSMutableArray arrayWithObjects:@"aaa",@2.0f,@"bbb",@"ccc",@"ddd",@"eee",@"fff",@"ggg",@"hhh",nil];
     
     [anArray addObject:aString];
     NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
@@ -274,7 +280,7 @@
     NSMutableString *aString = [NSMutableString stringWithCapacity:1];
     [aString appendString:@"aString"];
     
-    NSMutableArray *anArray = [NSMutableArray arrayWithObjects:@"aaa",[NSNumber numberWithFloat:2.0],@"bbb",@"ccc",@"ddd",@"eee",@"fff",@"ggg",@"hhh",nil];
+    NSMutableArray *anArray = [NSMutableArray arrayWithObjects:@"aaa",@2.0f,@"bbb",@"ccc",@"ddd",@"eee",@"fff",@"ggg",@"hhh",nil];
     
     [anArray addObject:aString];
     NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
@@ -303,7 +309,7 @@
 -(void)method015
 {
     
-    NSArray *oldArray = [NSArray arrayWithObjects:@"aaa",[NSNumber numberWithFloat:2.0],@"bbb",@"ccc",nil];
+    NSArray *oldArray = @[@"aaa",@2.0f,@"bbb",@"ccc"];
     
     NSMutableString *aString = [NSMutableString stringWithCapacity:1];
     [aString appendString:@"aString"];
@@ -322,17 +328,17 @@
     
     //新しい配列(newArray)は古い配列(oldArray)をコピーしたので含まれる要素は同じもの
     //個々の要素が複製されているわけではない。
-    NSLog(@"015 index0 of oldArray= <0x%08x>,%@",(unsigned int)[oldArray objectAtIndex:0],[oldArray objectAtIndex:0]);
-    NSLog(@"015 index0 of newArray= <0x%08x>,%@",(unsigned int)[newArray objectAtIndex:0],[newArray objectAtIndex:0]);
+    NSLog(@"015 index0 of oldArray= <0x%08x>,%@",(unsigned int)oldArray[0],oldArray[0]);
+    NSLog(@"015 index0 of newArray= <0x%08x>,%@",(unsigned int)newArray[0],newArray[0]);
     //=>015 index0 of oldArray= <0x0000671c>,aaa
     //=>015 index0 of newArray= <0x0000671c>,aaa
 
     //配列は変更不可でも、5番目の要素(indexは4)は変更可能文字列なので、変更できる
-    NSLog(@"015 index4 of newArray= <0x%08x>,%@",(unsigned int)[newArray objectAtIndex:4],[newArray objectAtIndex:4]);
+    NSLog(@"015 index4 of newArray= <0x%08x>,%@",(unsigned int)newArray[4],newArray[4]);
     //=>015 index4 of newArray= <0x068718d0>,aaa
     
     [aString appendString:@"+fff"];
-    NSLog(@"015 index4 of newArray= <0x%08x>,%@",(unsigned int)[newArray objectAtIndex:4],[newArray objectAtIndex:4]);
+    NSLog(@"015 index4 of newArray= <0x%08x>,%@",(unsigned int)newArray[4],newArray[4]);
     //=>015 index4 of newArray= <0x068718d0>,aString+fff
 }
 
@@ -340,9 +346,9 @@
 -(void)method016
 {
     
-    NSArray *oldArray = [NSArray arrayWithObjects:@"aaa",[NSNumber numberWithFloat:2.0],@"bbb",@"ccc",nil];
+    NSArray *oldArray = @[@"aaa",@2.0f,@"bbb",@"ccc"];
     
-    NSArray *otherArray = [NSArray arrayWithObjects:@"ddd",@"eee",@"fff",nil];
+    NSArray *otherArray = @[@"ddd",@"eee",@"fff"];
     
     NSLog(@"016 oldArray= <0x%08x>,%@",(unsigned int)oldArray,[oldArray description]);
     
@@ -364,7 +370,7 @@
 -(void)method017
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"bbb",@"ccc",nil];
+    NSArray *anArray = @[@"aaa",@"bbb",@"ccc"];
     NSString *aString = [anArray componentsJoinedByString:@":"];
     
     NSLog(@"017 %@",aString);
@@ -380,18 +386,18 @@
     NSString *aaaImmutable = @"aaa";
     
     //NSMutableStringのaaaが含まれている配列か
-    NSArray *array1 = [NSArray arrayWithObjects:aaaMutable,@"bbb",@"ccc",nil];
+    NSArray *array1 = @[aaaMutable,@"bbb",@"ccc"];
     NSLog(@"018 aaa contain ? = %@",[array1 containsObject:@"aaa"]?@"YES":@"NO");
     //=>018 aaa contain ? = YES
 
     //NSStringのaaaが含まれている配列か
-    NSArray *array2 = [NSArray arrayWithObjects:aaaImmutable,@"bbb",@"ccc",nil];
+    NSArray *array2 = @[aaaImmutable,@"bbb",@"ccc"];
     NSLog(@"018 aaa contain ? = %@",[array2 containsObject:@"aaa"]?@"YES":@"NO");
     //=>018 aaa contain ? = YES
     
     //NSNumberのint 3が含まれている配列か
-    NSArray *array3 = [NSArray arrayWithObjects:[NSNumber numberWithInt:3],@"bbb",@"ccc",nil];
-    NSLog(@"018 3 contain ? = %@",[array3 containsObject:[NSNumber numberWithInt:3]]?@"YES":@"NO");
+    NSArray *array3 = @[@3,@"bbb",@"ccc"];
+    NSLog(@"018 3 contain ? = %@",[array3 containsObject:@3]?@"YES":@"NO");
     //=>018 3 contain ? = YES
     
 }
@@ -400,7 +406,7 @@
 -(void)method019
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"bbb",@"ccc",nil];
+    NSArray *anArray = @[@"aaa",@"bbb",@"ccc"];
     
     NSLog(@"019 %d",[anArray count]);
     //=>019 3
@@ -410,9 +416,9 @@
 -(void)method020
 {
     
-    NSArray *aArray = [NSArray arrayWithObjects:@"aaa",@"bbb", @"ccc", @"aaa",@"abc",@"これが",nil];
+    NSArray *aArray = @[@"aaa",@"bbb", @"ccc", @"aaa",@"abc",@"これが"];
     
-    NSPredicate *aPredicate1 = [NSPredicate predicateWithFormat:@"SELF IN %@",[NSArray arrayWithObjects:@"aaa", @"bbb", nil]];						
+    NSPredicate *aPredicate1 = [NSPredicate predicateWithFormat:@"SELF IN %@",@[@"aaa", @"bbb"]];						
     NSPredicate *aPredicate2 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"aaa"];
     NSPredicate *aPredicate3 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"s"];
 	NSPredicate *aPredicate4 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"a*"];
@@ -438,7 +444,7 @@
 -(void)method021
 {
     
-    NSArray *ar =[[NSArray alloc] initWithObjects:@"aaa",@"cccc",@"bbb",@"a",nil] ;
+    NSArray *ar =@[@"aaa",@"cccc",@"bbb",@"a"] ;
     
     NSArray *retArr = [NSArray alloc] ;
     
@@ -459,7 +465,7 @@
 -(void)method022
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"bbb",@"ccc",nil];
+    NSArray *anArray = @[@"aaa",@"bbb",@"ccc"];
 
     NSLog(@"%s : %@", __FUNCTION__,[anArray description]);
     //=>[OOOAppDelegate method022]  : (aaa,bbb,ccc)
@@ -470,17 +476,22 @@
 -(void)method023
 {
     //書き込み用のNSArrayを作成
-    NSArray *anArray = [NSArray arrayWithObjects:@"file",[NSNumber numberWithFloat:3.0],@"bbb",@"ccc",nil];
+    NSArray *anArray = @[@"file",@3.0f,@"bbb",@"ccc"];
     
     //メインバンドル内のResourceにplistfile2.plistファイルを作成
     NSFileManager *myFile = [ NSFileManager defaultManager];
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
-                         [NSDate date],NSFileModificationDate,
-                         @"owner",@"NSFileOwnerAccountName",
-                         @"group",@"NSFileGroupOwnerAccountName",
-                         nil,@"NSFilePosixPermissions",
-                         [NSNumber numberWithBool:YES],@"NSFileExtensionHidden",
-                         nil];
+    /*
+     NSDictionary *dic = @{NSFileModificationDate: [NSDate date],
+                         @"NSFileOwnerAccountName": @"owner",
+                         @"NSFileGroupOwnerAccountName": @"group",
+                         (id)@"NSFilePosixPermissions": (id)nil,
+                         @"NSFileExtensionHidden": @YES};
+    */
+    NSDictionary *dic = @{NSFileModificationDate: [NSDate date],
+                          @"NSFileOwnerAccountName": @"owner",
+                          @"NSFileGroupOwnerAccountName": @"group",
+                          @"NSFilePosixPermissions":@0777 ,
+                          @"NSFileExtensionHidden": @YES};
     
     NSMutableData *dat1 = [[NSMutableData alloc] initWithCapacity:1];
     
@@ -504,7 +515,7 @@
 -(void)method024
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"bbb",@"ccc",nil];
+    NSArray *anArray = @[@"aaa",@"bbb",@"ccc"];
     NSString *itemToFind = @"ccc";
     __block BOOL foundIt = NO;//ブロック内で変更できるように__blockを付ける
     //配列anArrayにcccが含まれるかどうかを探す。
@@ -528,7 +539,7 @@
 -(void)method025
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"bbb",@"ccc",nil];
+    NSArray *anArray = @[@"aaa",@"bbb",@"ccc"];
     NSString *itemToFind = @"ccc";
     __block BOOL foundIt = NO;//ブロック内で変更できるように__blockを付ける
     //配列anArrayにcccが含まれるかどうかを探す。
@@ -551,7 +562,7 @@
 -(void)method026
 {
 
-    NSArray *anArray = [NSArray arrayWithObjects:@"ccc",@"aaa",@"bbb",nil];    
+    NSArray *anArray = @[@"ccc",@"aaa",@"bbb"];    
     NSArray *sortedArray =[anArray sortedArrayUsingComparator:^(id obj1, id obj2) {
         return (NSComparisonResult)[obj1 compare:obj2];
         }
@@ -577,13 +588,11 @@ NSInteger intSort(id val1, id val2, void *context)
 -(void)method027
 {
     
-    NSArray *anArray =[[NSArray alloc] initWithObjects:
-                       [NSNumber numberWithInteger:345],
-                       [NSNumber numberWithInteger:1233],
-                       [NSNumber numberWithInteger:567],
-                       [NSNumber numberWithInteger:912],
-                       [NSNumber numberWithInteger:1],
-                       nil] ;
+    NSArray *anArray =@[@345,
+                       @1233,
+                       @567,
+                       @912,
+                       @1] ;
     NSArray *retArr = [anArray sortedArrayUsingFunction:intSort context:NULL];
     
     NSLog(@"%s : %@", __FUNCTION__,[retArr description]);
@@ -599,14 +608,14 @@ NSInteger intSort(id val1, id val2, void *context)
     NSMutableString *ccc = [NSMutableString stringWithString:@"ccc"];
     
     NSArray *anArray = 
-    [[NSArray alloc] initWithObjects:aaa,bbb,ccc,nil];
+    @[aaa,bbb,ccc];
     
     NSArray *anotherArray = 
     [[NSArray alloc] initWithArray:anArray];
     
-    id obj1 = [anArray objectAtIndex:1];
+    id obj1 = anArray[1];
     NSLog(@"028 newArray= <0x%08x>,%@",(NSUInteger)obj1,obj1);
-    id obj2 = [anotherArray objectAtIndex:1];
+    id obj2 = anotherArray[1];
     NSLog(@"028 newArray= <0x%08x>,%@",(NSUInteger)obj2,obj2);
     //=>028 newArray= <0x06868170>,bbb
     //=>028 newArray= <0x06868170>,bbb
@@ -629,14 +638,14 @@ NSInteger intSort(id val1, id val2, void *context)
     NSMutableString *ccc = [NSMutableString stringWithString:@"ccc"];
     
     NSArray *anArray = 
-    [[NSArray alloc] initWithObjects:aaa,bbb,ccc,nil];
+    @[aaa,bbb,ccc];
     
     NSArray *anotherArray = 
     [[NSArray alloc] initWithArray:anArray copyItems:YES];
     
-    id obj1 = [anArray objectAtIndex:1];
+    id obj1 = anArray[1];
     NSLog(@"029 obj1= <0x%08x>,%@",(NSUInteger)obj1,obj1);
-    id obj2 = [anotherArray objectAtIndex:1];
+    id obj2 = anotherArray[1];
     NSLog(@"029 obj2= <0x%08x>,%@",(NSUInteger)obj2,obj2);
     //コピーされているので違うオブジェクトを含んでいる
     //=>029 obj1= <0x06838ee0>,bbb
@@ -688,7 +697,7 @@ NSInteger intSort(id val1, id val2, void *context)
 #pragma mark NSArray:高速列挙は高速か？
 -(void)method032
 {
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",nil];
+    NSArray *anArray = @[@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd",@"aaa",@"bbb",@"ccc",@"ddd"];
 	
 	//Enumeratorを使う場合	
 	id obj;
@@ -752,7 +761,7 @@ NSInteger intSort(id val1, id val2, void *context)
     NSSortDescriptor *descriptor=[[NSSortDescriptor alloc] initWithKey:nil
                                                              ascending:YES];
     
-    NSArray *sortedArray = [arr sortedArrayUsingDescriptors:[NSArray arrayWithObject:descriptor]] ;
+    NSArray *sortedArray = [arr sortedArrayUsingDescriptors:@[descriptor]] ;
     
     NSLog(@"%s %@",__FUNCTION__,[arr description]);
     //=>-[OOOAppDelegate method003] (aaa4,aaa2,aaa3,aaa1)
@@ -779,16 +788,15 @@ NSInteger intSort(id val1, id val2, void *context)
         [muStr3 appendString:@"ccc"];
         [customClass3 setCustomClassValue:muStr3];
     
-    NSArray *arr =[[NSArray alloc] initWithObjects:customClass1,
+    NSArray *arr =@[customClass1,
                                                     customClass2,
-                                                    customClass3,
-                   nil];
-    NSLog(@"%s %@,%@,%@",__FUNCTION__,[arr objectAtIndex:0],[arr objectAtIndex:1],[arr objectAtIndex:2]);
+                                                    customClass3];
+    NSLog(@"%s %@,%@,%@",__FUNCTION__,arr[0],arr[1],arr[2]);
     //=>-[OOOAppDelegate method034] aaa,bbb,ccc
     [arr makeObjectsPerformSelector: @selector(appendSomeString)];
     //appendSomeStringは末尾に ! を付けるだけのメソッド
     
-    NSLog(@"%s %@,%@,%@",__FUNCTION__,[arr objectAtIndex:0],[arr objectAtIndex:1],[arr objectAtIndex:2]);
+    NSLog(@"%s %@,%@,%@",__FUNCTION__,arr[0],arr[1],arr[2]);
     //=>-[OOOAppDelegate method034] aaa!,bbb!,ccc!
     
 }
@@ -817,17 +825,17 @@ NSInteger intSort(id val1, id val2, void *context)
     [arr addObject: dic3 ];
     [arr addObject: dic4 ];
     
-    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[[arr objectAtIndex:0] valueForKey:@"key1"],
-          [[arr objectAtIndex:1] valueForKey:@"key1"],
-          [[arr objectAtIndex:2] valueForKey:@"key1"],
-          [[arr objectAtIndex:3] valueForKey:@"key1"]);
+    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[arr[0] valueForKey:@"key1"],
+          [arr[1] valueForKey:@"key1"],
+          [arr[2] valueForKey:@"key1"],
+          [arr[3] valueForKey:@"key1"]);
     //=>-[OOOAppDelegate method035] aaa4,aaa2,aaa1,aaa3
     [arr setValue:@"xxx" forKey:@"key1"];
     
-    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[[arr objectAtIndex:0] valueForKey:@"key1"],
-          [[arr objectAtIndex:1] valueForKey:@"key1"],
-          [[arr objectAtIndex:2] valueForKey:@"key1"],
-          [[arr objectAtIndex:3] valueForKey:@"key1"]);
+    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[arr[0] valueForKey:@"key1"],
+          [arr[1] valueForKey:@"key1"],
+          [arr[2] valueForKey:@"key1"],
+          [arr[3] valueForKey:@"key1"]);
     
     //=>-[OOOAppDelegate method035] xxx,xxx,xxx,xxx
     
@@ -838,12 +846,12 @@ NSInteger intSort(id val1, id val2, void *context)
     // テストデータの範囲
     NSUInteger amount = 900000;
     // 探すデータ
-    NSNumber* number = [NSNumber numberWithInt:724242];
+    NSNumber* number = @724242;
     
     // Create some array.
     NSMutableArray* anArray = [NSMutableArray arrayWithCapacity:amount];
     for (NSUInteger i = 0; i < amount; ++i) {;
-        [anArray addObject:[NSNumber numberWithUnsignedInteger:i]];
+        [anArray addObject:@(i)];
     }
 
     //
@@ -875,12 +883,12 @@ NSInteger intSort(id val1, id val2, void *context)
         [muStr appendFormat:@"string%d",i];
         [customClass setCustomClassValue:muStr];
         
-        [customClass setCustomNumber:[NSNumber numberWithUnsignedInteger:i]];
+        [customClass setCustomNumber:@(i)];
         [anArray addObject:customClass];
     }
     // 探すデータ
     
-    NSNumber* number = [NSNumber numberWithInt:824242];
+    NSNumber* number = @824242;
     CustomClass *searchObj = [[CustomClass alloc] init];
     NSMutableString *muStr = [[NSMutableString alloc] initWithCapacity:0];
     [muStr appendFormat:@"string%d",[number integerValue]];
@@ -902,7 +910,7 @@ NSInteger intSort(id val1, id val2, void *context)
                                    else
                                        return NSOrderedSame;
                                }];
-    NSLog(@"%s %@",__FUNCTION__ ,[(CustomClass *)[anArray objectAtIndex:index1] customClassValue]);
+    NSLog(@"%s %@",__FUNCTION__ ,[(CustomClass *)anArray[index1] customClassValue]);
     
 }
 
@@ -910,7 +918,7 @@ NSInteger intSort(id val1, id val2, void *context)
 -(void)method038
 {
     
-    NSArray *anArray = [NSArray arrayWithObject:@"aaa"];
+    NSArray *anArray = @[@"aaa"];
     CFArrayRef cfArray = (__bridge CFArrayRef)anArray;
     CFIndex index = CFArrayGetCount (cfArray);
     
@@ -925,9 +933,9 @@ NSInteger intSort(id val1, id val2, void *context)
 -(void)method039
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaaaa",@"aaa",@"a",@"aa",@"aaaa",nil];
+    NSArray *anArray = @[@"aaaaa",@"aaa",@"a",@"aa",@"aaaa"];
     
-    NSArray *descs = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES]];
+    NSArray *descs = @[[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES]];
     NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs] );
     
     //=>(a,aa,aaa,aaaa,aaaaa)
@@ -937,9 +945,9 @@ NSInteger intSort(id val1, id val2, void *context)
 -(void)method040
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"ccccc",@"aaa",@"b",@"ee",@"dddd",nil];
+    NSArray *anArray = @[@"ccccc",@"aaa",@"b",@"ee",@"dddd"];
     
-    NSArray *descs = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES]];
+    NSArray *descs = @[[NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES]];
     NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs] );
     
     //=>(aaa,b,ccccc,dddd,ee)
@@ -949,12 +957,12 @@ NSInteger intSort(id val1, id val2, void *context)
 -(void)method041
 {
     NSMutableArray *anArray = [NSMutableArray array];
-    [anArray addObject:[NSNumber numberWithInt:20]];
-    [anArray addObject:[NSNumber numberWithInt: 1]];
-    [anArray addObject:[NSNumber numberWithInt: 8]];
-    [anArray addObject:[NSNumber numberWithInt:31]];
-    [anArray addObject:[NSNumber numberWithInt:15]];
-    [anArray addObject:[NSNumber numberWithInt:10]];
+    [anArray addObject:@20];
+    [anArray addObject:@1];
+    [anArray addObject:@8];
+    [anArray addObject:@31];
+    [anArray addObject:@15];
+    [anArray addObject:@10];
     
     NSLog( @"Count %d", [[anArray valueForKeyPath:@"@count.self"] intValue] );
     NSLog( @"Sum   %d", [[anArray valueForKeyPath:@"@sum.self"] intValue] );
@@ -1007,17 +1015,17 @@ NSInteger intSort(id val1, id val2, void *context)
          ];
 
     
-    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[[arr objectAtIndex:0] valueForKey:@"key1"],
-          [[arr objectAtIndex:1] valueForKey:@"key1"],
-          [[arr objectAtIndex:2] valueForKey:@"key1"],
-          [[arr objectAtIndex:3] valueForKey:@"key1"]);
+    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[arr[0] valueForKey:@"key1"],
+          [arr[1] valueForKey:@"key1"],
+          [arr[2] valueForKey:@"key1"],
+          [arr[3] valueForKey:@"key1"]);
     //=>-[OOOAppDelegate method035] aaa4,aaa2,aaa1,aaa3
     [arr setValue:@"xxx" forKey:@"key1"];
     
-    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[[arr objectAtIndex:0] valueForKey:@"key1"],
-          [[arr objectAtIndex:1] valueForKey:@"key1"],
-          [[arr objectAtIndex:2] valueForKey:@"key1"],
-          [[arr objectAtIndex:3] valueForKey:@"key1"]);
+    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[arr[0] valueForKey:@"key1"],
+          [arr[1] valueForKey:@"key1"],
+          [arr[2] valueForKey:@"key1"],
+          [arr[3] valueForKey:@"key1"]);
     
     //=>-[OOOAppDelegate method035] xxx,xxx,xxx,xxx
     
@@ -1038,14 +1046,14 @@ NSInteger intSort(id val1, id val2, void *context)
     NSMutableString *aaa = [NSMutableString stringWithString:@"aaa"];
     NSMutableString *bbb = [NSMutableString stringWithString:@"bbb"];
     NSMutableString *ccc = [NSMutableString stringWithString:@"ccc"];
-    NSNumber *ddd = [NSNumber numberWithInt:10];
+    NSNumber *ddd = @10;
     NSDate *eee = [NSDate date];
     NSValue *fff = [NSValue valueWithCGPoint:CGPointMake(10.0, 10.0)];
     NSSet *ggg = [NSSet setWithObjects:aaa,bbb,ccc,nil];
     NSData *hhh = [NSData data];
 
     
-    NSArray *anArray = [NSArray arrayWithObjects:aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,nil];
+    NSArray *anArray = @[aaa,bbb,ccc,ddd,eee,fff,ggg,hhh];
     [anArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSLog(@"%s %p %@",__FUNCTION__, obj ,[obj description]);
     }];
@@ -1065,7 +1073,7 @@ NSInteger intSort(id val1, id val2, void *context)
         [muStr appendFormat:@"string%d",i];
         [customClass setCustomClassValue:muStr];
         
-        [customClass setCustomNumber:[NSNumber numberWithUnsignedInteger:i]];
+        [customClass setCustomNumber:@(i)];
         [anArray addObject:customClass];
     }
     
@@ -1075,11 +1083,11 @@ NSInteger intSort(id val1, id val2, void *context)
     [muStr0 appendFormat:@"string%d-2nd",824242];
     [customClass setCustomClassValue:muStr0];
     
-    [customClass setCustomNumber:[NSNumber numberWithUnsignedInteger:824242]];
+    [customClass setCustomNumber:@824242U];
     [anArray addObject:customClass];
     
      // 探すデータ
-    NSNumber* number = [NSNumber numberWithInt:824242];
+    NSNumber* number = @824242;
     CustomClass *searchObj = [[CustomClass alloc] init];
     NSMutableString *muStr = [[NSMutableString alloc] initWithCapacity:0];
     [muStr appendFormat:@"string%d",[number integerValue]];
