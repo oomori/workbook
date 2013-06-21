@@ -43,9 +43,7 @@
 #pragma mark TOOL FREE BRIDGE
 -(void)method003
 {
-    NSDictionary *localeDic= [[NSDictionary alloc] initWithObjectsAndKeys:
-                              @",",@"NSDecimalSeparator",//小数点区切りフランスでは,が小数点らしい
-                              nil];
+    NSDictionary *localeDic= @{@"NSDecimalSeparator": @","};
     NSLocale *frLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"];
     NSLocale *gbLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_GB"];
     NSLocale *jpLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
@@ -115,11 +113,11 @@
     NSLog(@"%s %p \"%@\" = %@",__FUNCTION__,str2,str2,([str2 boolValue])?@"YES":@"NO");
     //=>0x4790 "at" = NO
     
-    NSString *str3 = [[NSString alloc] initWithString:@"0"];
+    NSString *str3 = @"0";
     NSLog(@"%s %p \"%@\" = %@",__FUNCTION__,str3,str3,([str3 boolValue])?@"YES":@"NO");
     //=>0x47a0 "0" = NO
     
-    NSString *str4 = [[NSString alloc] initWithString:@"01"];
+    NSString *str4 = @"01";
     NSLog(@"%s %p \"%@\" = %@",__FUNCTION__,str4,str4,([str4 boolValue])?@"YES":@"NO");
     //=>0x47b0 "01" = YES
     
@@ -129,23 +127,23 @@
 -(void)method007
 {
     
-    NSString *str1 = [[NSString alloc] initWithString:@"/tmp/scratch.tiff"];
+    NSString *str1 = @"/tmp/scratch.tiff";
     NSLog(@"%s %p , %@",__FUNCTION__,str1,[str1 lastPathComponent]);
     //=>0x57d8 , scratch.tiff
     
-    NSString *str2 = [[NSString alloc] initWithString:@"/tmp/scratch"];
+    NSString *str2 = @"/tmp/scratch";
     NSLog(@"%s %p , %@",__FUNCTION__,str2,[str2 lastPathComponent]);
     //=>0x57f8 , scratch
     
-    NSString *str3 = [[NSString alloc] initWithString:@"/tmp/"];
+    NSString *str3 = @"/tmp/";
     NSLog(@"%s %p , %@",__FUNCTION__,str3,[str3 lastPathComponent]);
     //=>0x5808 , tmp
     
-    NSString *str4 = [[NSString alloc] initWithString:@"scratch"];
+    NSString *str4 = @"scratch";
     NSLog(@"%s %p , %@",__FUNCTION__,str4,[str4 lastPathComponent]);
     //=>0x5818 , scratch
 
-    NSString *str5 = [[NSString alloc] initWithString:@"/"];
+    NSString *str5 = @"/";
     NSLog(@"%s %p , %@",__FUNCTION__,str5,[str5 lastPathComponent]);
     //=>0x5828 , /
     
@@ -155,19 +153,19 @@
 -(void)method008
 {
     
-    NSString *str1 = [[NSString alloc] initWithString:@"/tmp"];
+    NSString *str1 = @"/tmp";
     NSLog(@"%s %p , %@",__FUNCTION__,str1,[str1 stringByAppendingPathComponent:@"scratch.tiff"]);
     //=>0x5848 , /tmp/scratch.tiff
     
-    NSString *str2 = [[NSString alloc] initWithString:@"/tmp/"];
+    NSString *str2 = @"/tmp/";
     NSLog(@"%s %p , %@",__FUNCTION__,str2,[str2 stringByAppendingPathComponent:@"scratch.tiff"]);
     //=>0x5818 , /tmp/scratch.tiff
     
-    NSString *str3 = [[NSString alloc] initWithString:@"/"];
+    NSString *str3 = @"/";
     NSLog(@"%s %p , %@",__FUNCTION__,str3,[str3 stringByAppendingPathComponent:@"scratch.tiff"]);
     //=>0x5838 , /scratch.tiff
     
-    NSString *str4 = [[NSString alloc] initWithString:@""];
+    NSString *str4 = @"";
     NSLog(@"%s %p , %@",__FUNCTION__,str4,[str4 stringByAppendingPathComponent:@"scratch.tiff"]);
     //=>0x5868 , scratch.tiff
 
@@ -179,27 +177,27 @@
 -(void)method009
 {
     
-    NSString *str1 = [[NSString alloc] initWithString:@"/tmp/scratch.tiff"];
+    NSString *str1 = @"/tmp/scratch.tiff";
     NSLog(@"%s %p , %@",__FUNCTION__,str1,[str1 stringByDeletingLastPathComponent]);
     //=>-[OOOAppDelegate method009] 0x5800 , /tmp
     
-    NSString *str2 = [[NSString alloc] initWithString:@"/tmp/lock/"];
+    NSString *str2 = @"/tmp/lock/";
     NSLog(@"%s %p , %@",__FUNCTION__,str2,[str2 stringByDeletingLastPathComponent]);
     //=>-[OOOAppDelegate method009] 0x5890 , /tmp
     
-    NSString *str3 = [[NSString alloc] initWithString:@"/tmp/"];
+    NSString *str3 = @"/tmp/";
     NSLog(@"%s %p , %@",__FUNCTION__,str3,[str3 stringByDeletingLastPathComponent]);
     //=>-[OOOAppDelegate method009] 0x5830 , /
     
-    NSString *str4 = [[NSString alloc] initWithString:@"/tmp"];
+    NSString *str4 = @"/tmp";
     NSLog(@"%s %p , %@",__FUNCTION__,str4,[str4 stringByDeletingLastPathComponent]);
     //=>-[OOOAppDelegate method009] 0x5860 , /
     
-    NSString *str5 = [[NSString alloc] initWithString:@"/"];
+    NSString *str5 = @"/";
     NSLog(@"%s %p , %@",__FUNCTION__,str5,[str5 stringByDeletingLastPathComponent]);
     //=>-[OOOAppDelegate method009] 0x5850 , /
 
-    NSString *str6 = [[NSString alloc] initWithString:@"scratch.tiff"];
+    NSString *str6 = @"scratch.tiff";
     NSLog(@"%s %p , %@",__FUNCTION__,str6,[str6 stringByDeletingLastPathComponent]);
     //=>-[OOOAppDelegate method009] 0x5870 , 　　　(空の文字列)
 
@@ -210,19 +208,19 @@
 -(void)method010
 {
     
-    NSString *str1 = [[NSString alloc] initWithString:@"/tmp/scratch.tiff"];
+    NSString *str1 = @"/tmp/scratch.tiff";
     NSLog(@"%s %p , %@",__FUNCTION__,str1,[str1 pathExtension]);
     //=>-[OOOAppDelegate method010] 0x5810 , tiff
     
-    NSString *str2 = [[NSString alloc] initWithString:@"/tmp/scratch"];
+    NSString *str2 = @"/tmp/scratch";
     NSLog(@"%s %p , %@",__FUNCTION__,str2,[str2 pathExtension]);
-    //=>-[OOOAppDelegate method010] 0x5830 , 
+    //=>-[OOOAppDelegate method010] 0x5830 ,
     
-    NSString *str3 = [[NSString alloc] initWithString:@"/tmp/"];
+    NSString *str3 = @"/tmp/";
     NSLog(@"%s %p , %@",__FUNCTION__,str3,[str3 pathExtension]);
     //=>-[OOOAppDelegate method010] 0x5840 , 
     
-    NSString *str4 = [[NSString alloc] initWithString:@"/tmp/scratch..tiff"];
+    NSString *str4 = @"/tmp/scratch..tiff";
     NSLog(@"%s %p , %@",__FUNCTION__,str4,[str4 pathExtension]);
     //=>-[OOOAppDelegate method010] 0x58b0 , tiff
     
@@ -233,19 +231,19 @@
 -(void)method011
 {
     
-    NSString *str1 = [[NSString alloc] initWithString:@"/tmp/scratch.old"];
+    NSString *str1 = @"/tmp/scratch.old";
     NSLog(@"%s %p , %@",__FUNCTION__,str1,[str1 stringByAppendingPathExtension:@"tiff"]);
     //=>-[OOOAppDelegate method011] 0x58d8 , /tmp/scratch.old.tiff
     
-    NSString *str2 = [[NSString alloc] initWithString:@"/tmp/scratch."];
+    NSString *str2 = @"/tmp/scratch.";
     NSLog(@"%s %p , %@",__FUNCTION__,str2,[str2 stringByAppendingPathExtension:@"tiff"]);
     //=>-[OOOAppDelegate method011] 0x58f8 , /tmp/scratch..tiff
     
-    NSString *str3 = [[NSString alloc] initWithString:@"/tmp/"];
+    NSString *str3 = @"/tmp/";
     NSLog(@"%s %p , %@",__FUNCTION__,str3,[str3 stringByAppendingPathExtension:@"tiff"]);
     //=>-[OOOAppDelegate method011] 0x5858 , /tmp.tiff
     
-    NSString *str4 = [[NSString alloc] initWithString:@"scratch"];
+    NSString *str4 = @"scratch";
     NSLog(@"%s %p , %@",__FUNCTION__,str4,[str4 stringByAppendingPathExtension:@"tiff"]);
     //=>-[OOOAppDelegate method011] 0x5868 , scratch.tiff
     
@@ -256,27 +254,27 @@
 -(void)method012
 {
     
-    NSString *str1 = [[NSString alloc] initWithString:@"/tmp/scratch.tiff"];
+    NSString *str1 = @"/tmp/scratch.tiff";
     NSLog(@"%s %p , %@",__FUNCTION__,str1,[str1 stringByDeletingPathExtension]);
     //=>-[OOOAppDelegate method012] 0x6838 , /tmp/scratch
     
-    NSString *str2 = [[NSString alloc] initWithString:@"/tmp/"];
+    NSString *str2 = @"/tmp/";
     NSLog(@"%s %p , %@",__FUNCTION__,str2,[str2 stringByDeletingPathExtension]);
     //=>-[OOOAppDelegate method012] 0x6868 , /tmp
     
-    NSString *str3 = [[NSString alloc] initWithString:@"scratch.bundle/"];
+    NSString *str3 = @"scratch.bundle/";
     NSLog(@"%s %p , %@",__FUNCTION__,str3,[str3 stringByDeletingPathExtension]);
     //=>-[OOOAppDelegate method012] 0x6918 , scratch
     
-    NSString *str4 = [[NSString alloc] initWithString:@"scratch..tiff"];
+    NSString *str4 = @"scratch..tiff";
     NSLog(@"%s %p , %@",__FUNCTION__,str4,[str4 stringByDeletingPathExtension]);
     //=>-[OOOAppDelegate method012] 0x6928 , scratch.
     
-    NSString *str5 = [[NSString alloc] initWithString:@".tiff"];
+    NSString *str5 = @".tiff";
     NSLog(@"%s %p , %@",__FUNCTION__,str5,[str5 stringByDeletingPathExtension]);
     //=> -[OOOAppDelegate method012] 0x6938 , .tiff
     
-    NSString *str6 = [[NSString alloc] initWithString:@"/"];
+    NSString *str6 = @"/";
     NSLog(@"%s %p , %@",__FUNCTION__,str6,[str6 stringByDeletingPathExtension]);
     //=>-[OOOAppDelegate method012] 0x6888 , /
     
@@ -368,11 +366,11 @@
 -(void)method016
 {
     
-    NSString *str1 = [[NSString alloc] initWithString:@"~/tmp/scratch.tiff"];
+    NSString *str1 = @"~/tmp/scratch.tiff";
     NSLog(@"%s %p , %@",__FUNCTION__,str1,[str1 stringByExpandingTildeInPath]);
     //=>-[OOOAppDelegate method016] 0x399d0 , /var/mobile/Applications/00000000-0000-0000-0000-000000000000/tmp/scratch.tiff
     
-    NSString *str2 = [[NSString alloc] initWithString:@"/tmp/scratch.tiff"];
+    NSString *str2 = @"/tmp/scratch.tiff";
     NSLog(@"%s %p , %@",__FUNCTION__,str2,[str2 stringByExpandingTildeInPath]);
     //=>-[OOOAppDelegate method016] 0x39890 , /tmp/scratch.tiff
     
@@ -382,7 +380,7 @@
 -(void)method017
 {
     
-    NSString *str1 = [[NSString alloc] initWithString:@"~/tmp/scratch.tiff"];
+    NSString *str1 = @"~/tmp/scratch.tiff";
     const char *str = [str1 fileSystemRepresentation];
     NSLog(@"%s %p , %s",__FUNCTION__,str1,str);
     //=>-[OOOAppDelegate method017] 0x539e8 , ~/tmp/scratch.tiff
@@ -501,7 +499,7 @@
     NSString *resourcePath = [bundle resourcePath];
     NSString *filePath1 = [resourcePath stringByAppendingPathComponent:@"Documents/writeTest.txt"];
     NSError *error;
-    NSString *fileContents1 = [[NSString alloc] initWithString:@"This is write test file."];
+    NSString *fileContents1 = @"This is write test file.";
     [fileContents1 writeToFile:filePath1 atomically:YES encoding:NSUTF8StringEncoding error:&error];
     
     

@@ -22,6 +22,7 @@
 		7436325115FB72280094497F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7436324F15FB72280094497F /* InfoPlist.strings */; };
 		7436325415FB72280094497F /* NSTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7436325315FB72280094497F /* NSTimerTests.m */; };
 		7436326315FB92AC0094497F /* OOOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7436326215FB92AC0094497F /* OOOView.m */; };
+		74FFC78F17748AD4002EC79B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FFC78E17748AD4002EC79B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		7436325315FB72280094497F /* NSTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimerTests.m; sourceTree = "<group>"; };
 		7436326115FB92AC0094497F /* OOOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOView.h; sourceTree = "<group>"; };
 		7436326215FB92AC0094497F /* OOOView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOView.m; sourceTree = "<group>"; };
+		74FFC78E17748AD4002EC79B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		7436321615FB72280094497F = {
 			isa = PBXGroup;
 			children = (
+				74FFC78E17748AD4002EC79B /* Default-568h@2x.png */,
 				7436322B15FB72280094497F /* NSTimer */,
 				7436324C15FB72280094497F /* NSTimerTests */,
 				7436322415FB72280094497F /* Frameworks */,
@@ -205,7 +208,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Satoshi Oomori";
 			};
 			buildConfigurationList = 7436321B15FB72280094497F /* Build configuration list for PBXProject "NSTimer" */;
@@ -234,6 +237,7 @@
 				7436323015FB72280094497F /* InfoPlist.strings in Resources */,
 				7436323915FB72280094497F /* MainStoryboard_iPhone.storyboard in Resources */,
 				7436323C15FB72280094497F /* MainStoryboard_iPad.storyboard in Resources */,
+				74FFC78F17748AD4002EC79B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +340,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -364,6 +371,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74243EF51774891200A37179 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74243EF41774891200A37179 /* Default-568h@2x.png */; };
 		74EEEAF915DD3E60002ED0E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEEAF815DD3E60002ED0E1 /* UIKit.framework */; };
 		74EEEAFB15DD3E60002ED0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEEAFA15DD3E60002ED0E1 /* Foundation.framework */; };
 		74EEEAFD15DD3E60002ED0E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEEAFC15DD3E60002ED0E1 /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74243EF41774891200A37179 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		74EEEAF415DD3E60002ED0E1 /* NSNull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSNull.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EEEAF815DD3E60002ED0E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74EEEAFA15DD3E60002ED0E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +85,7 @@
 		74EEEAE915DD3E60002ED0E1 = {
 			isa = PBXGroup;
 			children = (
+				74243EF41774891200A37179 /* Default-568h@2x.png */,
 				74EEEAFE15DD3E60002ED0E1 /* NSNull */,
 				74EEEB1F15DD3E60002ED0E1 /* NSNullTests */,
 				74EEEAF715DD3E60002ED0E1 /* Frameworks */,
@@ -200,7 +203,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Satoshi Oomori";
 			};
 			buildConfigurationList = 74EEEAEE15DD3E60002ED0E1 /* Build configuration list for PBXProject "NSNull" */;
@@ -229,6 +232,7 @@
 				74EEEB0315DD3E60002ED0E1 /* InfoPlist.strings in Resources */,
 				74EEEB0C15DD3E60002ED0E1 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74EEEB0F15DD3E60002ED0E1 /* MainStoryboard_iPad.storyboard in Resources */,
+				74243EF51774891200A37179 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +334,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -358,6 +365,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;

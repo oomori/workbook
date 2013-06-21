@@ -13,14 +13,14 @@
 #pragma mark NSNull null
 -(void)method001
 {
-    NSArray *anArray =[[NSArray alloc] initWithObjects:@"aaa",[NSNull null],@"bbb",@"a",nil] ;
+    NSArray *anArray =@[@"aaa",[NSNull null],@"bbb",@"a"] ;
     NSLog(@"%s %@",__FUNCTION__,[anArray description]);
 }
 
 #pragma mark NSNull nullの判定
 -(void)method002
 {
-    NSArray *anArray =[[NSArray alloc] initWithObjects:@"aaa",[NSNull null],@"bbb",@"a",nil] ;
+    NSArray *anArray =@[@"aaa",[NSNull null],@"bbb",@"a"] ;
     NSLog(@"%s %@",__FUNCTION__,[anArray description]);
     [anArray enumerateObjectsWithOptions:NSEnumerationConcurrent
                     usingBlock:^(id obj,NSUInteger idx,BOOL *stop){
