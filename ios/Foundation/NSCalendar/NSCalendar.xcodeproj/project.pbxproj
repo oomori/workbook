@@ -22,6 +22,7 @@
 		74EEE96D15DB99B1002ED0E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EEE96B15DB99B1002ED0E1 /* InfoPlist.strings */; };
 		74EEE97015DB99B1002ED0E1 /* NSCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEE96F15DB99B1002ED0E1 /* NSCalendarTests.m */; };
 		74EEE98915DBA5CF002ED0E1 /* OOOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEE98815DBA5CF002ED0E1 /* OOOView.m */; };
+		74FFC7AD177522EE002EC79B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FFC7AC177522EE002EC79B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		74EEE96F15DB99B1002ED0E1 /* NSCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSCalendarTests.m; sourceTree = "<group>"; };
 		74EEE98715DBA5CF002ED0E1 /* OOOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OOOView.h; path = ../OOOView.h; sourceTree = "<group>"; };
 		74EEE98815DBA5CF002ED0E1 /* OOOView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OOOView.m; path = ../OOOView.m; sourceTree = "<group>"; };
+		74FFC7AC177522EE002EC79B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		74EEE93215DB99B1002ED0E1 = {
 			isa = PBXGroup;
 			children = (
+				74FFC7AC177522EE002EC79B /* Default-568h@2x.png */,
 				74EEE94715DB99B1002ED0E1 /* NSCalendar */,
 				74EEE96815DB99B1002ED0E1 /* NSCalendarTests */,
 				74EEE94015DB99B1002ED0E1 /* Frameworks */,
@@ -205,7 +208,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Satoshi Oomori";
 			};
 			buildConfigurationList = 74EEE93715DB99B1002ED0E1 /* Build configuration list for PBXProject "NSCalendar" */;
@@ -234,6 +237,7 @@
 				74EEE94C15DB99B1002ED0E1 /* InfoPlist.strings in Resources */,
 				74EEE95515DB99B1002ED0E1 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74EEE95815DB99B1002ED0E1 /* MainStoryboard_iPad.storyboard in Resources */,
+				74FFC7AD177522EE002EC79B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +340,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -364,6 +371,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -455,6 +465,7 @@
 				74EEE97515DB99B1002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74EEE97615DB99B1002ED0E1 /* Build configuration list for PBXNativeTarget "NSCalendarTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +474,7 @@
 				74EEE97815DB99B1002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

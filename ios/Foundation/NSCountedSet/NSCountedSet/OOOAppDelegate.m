@@ -12,13 +12,13 @@
 
 -(void)method001
 {
-    NSArray *aArray = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d", nil];
+    NSArray *aArray = @[@"a",@"b",@"c",@"d"];
     NSCountedSet *aSet = [NSCountedSet setWithCapacity:10];
     [aSet addObjectsFromArray:aArray];
     NSLog(@"%s a %@",__FUNCTION__,[aSet description]);
     //=>a {(c,d,a,b)}
     
-    NSArray *bArray = [NSArray arrayWithObjects:@"d",@"e",@"f", nil];
+    NSArray *bArray = @[@"d",@"e",@"f"];
     NSCountedSet *bSet = [NSCountedSet setWithCapacity:10];
     [bSet addObjectsFromArray:bArray];
     NSLog(@"%s b %@",__FUNCTION__,[bSet description]);
@@ -35,13 +35,13 @@
 #pragma mark NSSet setSet:
 -(void)method002
 {
-    NSArray *aArray = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d", nil];
+    NSArray *aArray = @[@"a",@"b",@"c",@"d"];
     NSCountedSet *aSet = [NSCountedSet setWithCapacity:10];
     [aSet addObjectsFromArray:aArray];
     NSLog(@"%s a %@",__FUNCTION__,[aSet description]);
     //=>a {(c,d,a,b)}
     
-    NSArray *bArray = [NSArray arrayWithObjects:@"d",@"e",@"f", nil];
+    NSArray *bArray = @[@"d",@"e",@"f"];
     NSCountedSet *bSet = [NSCountedSet setWithCapacity:10];
     [bSet addObjectsFromArray:bArray];
     NSLog(@"%s b %@",__FUNCTION__,[bSet description]);
@@ -63,7 +63,7 @@
     NSString *cString = @"c";
     NSString *a2String = [NSString stringWithFormat:@"%@",@"a"];
     NSString *a3String = @"a";
-    NSArray *anArray = [NSArray arrayWithObjects:a1String,bString,cString,a2String,a1String,a3String, nil];
+    NSArray *anArray = @[a1String,bString,cString,a2String,a1String,a3String];
     
     NSCountedSet *aSet = [NSCountedSet setWithCapacity:10];
     [aSet addObjectsFromArray:anArray];
@@ -87,7 +87,7 @@
 -(void)method004
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"bbb", @"ccc", @"aaa",@"abc",@"これが",nil];
+    NSArray *anArray = @[@"aaa",@"bbb", @"ccc", @"aaa",@"abc",@"これが"];
     NSCountedSet *aSet1 = [NSCountedSet setWithCapacity:10];
     NSCountedSet *aSet2 = [NSCountedSet setWithCapacity:10];
     NSCountedSet *aSet3 = [NSCountedSet setWithCapacity:10];
@@ -99,7 +99,7 @@
     [aSet4 addObjectsFromArray:anArray];
     [aSet5 addObjectsFromArray:anArray];
     
-    NSPredicate *aPredicate1 = [NSPredicate predicateWithFormat:@"SELF IN %@",[NSArray arrayWithObjects:@"aaa", @"bbb", nil]];
+    NSPredicate *aPredicate1 = [NSPredicate predicateWithFormat:@"SELF IN %@",@[@"aaa", @"bbb"]];
     NSPredicate *aPredicate2 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"aaa"];
     NSPredicate *aPredicate3 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"s"];
 	NSPredicate *aPredicate4 = [NSPredicate predicateWithFormat:@"SELF LIKE %@",@"a*"];
@@ -126,12 +126,12 @@
 #pragma mark NSSet unionSet:
 -(void)method005
 {
-    NSArray *aArray = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d", nil];
+    NSArray *aArray = @[@"a",@"b",@"c",@"d"];
     NSCountedSet *aSet = [[NSCountedSet alloc] initWithArray:aArray];
     NSLog(@"%s a %@",__FUNCTION__,[aSet description]);
     //=>a {(c,d,a,b)}
     
-    NSArray *bArray = [NSArray arrayWithObjects:@"d",@"e",@"f", nil];
+    NSArray *bArray = @[@"d",@"e",@"f"];
     NSCountedSet *bSet = [[NSCountedSet alloc] initWithArray:bArray];
 
     NSLog(@"%s b %@",__FUNCTION__,[bSet description]);
@@ -151,13 +151,13 @@
 #pragma mark NSSet minusSet:
 -(void)method006
 {
-    NSArray *aArray = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d", nil];
+    NSArray *aArray = @[@"a",@"b",@"c",@"d"];
     NSCountedSet *aSet = [[NSCountedSet alloc] initWithCapacity:10];
     [aSet addObjectsFromArray:aArray];
     NSLog(@"%s a %@",__FUNCTION__,[aSet description]);
     //=>a {(c,d,a,b)}
     
-    NSArray *bArray = [NSArray arrayWithObjects:@"d",@"e",@"f", nil];
+    NSArray *bArray = @[@"d",@"e",@"f"];
     NSCountedSet *bSet = [NSCountedSet setWithCapacity:10];
     [bSet addObjectsFromArray:bArray];
     NSLog(@"%s b %@",__FUNCTION__,[bSet description]);
@@ -175,13 +175,13 @@
 #pragma mark NSCountedSet minusSet:
 -(void)method007
 {
-    NSArray *aArray = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d", nil];
+    NSArray *aArray = @[@"a",@"b",@"c",@"d"];
     NSCountedSet *aSet = [[NSCountedSet alloc] initWithCapacity:10];
     [aSet addObjectsFromArray:aArray];
     NSLog(@"%s a %@",__FUNCTION__,[aSet description]);
     //=>a {(c,d,a,b)}
     
-    NSArray *bArray = [NSArray arrayWithObjects:@"d",@"e",@"f", nil];
+    NSArray *bArray = @[@"d",@"e",@"f"];
     NSCountedSet *bSet = [NSCountedSet setWithCapacity:10];
     [bSet addObjectsFromArray:bArray];
     NSLog(@"%s b %@",__FUNCTION__,[bSet description]);
@@ -195,7 +195,7 @@
     //=> d 2
     //=> b 1
     //...
-    NSArray *cArray = [NSArray arrayWithObjects:@"d", nil];
+    NSArray *cArray = @[@"d"];
     NSCountedSet *cSet = [NSCountedSet setWithCapacity:10];
     [cSet addObjectsFromArray:cArray];
     [aSet minusSet:cSet];
@@ -211,7 +211,7 @@
 #pragma mark NSCountedSet minusSet:
 -(void)method008
 {
-    NSArray *aArray = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d", nil];
+    NSArray *aArray = @[@"a",@"b",@"c",@"d"];
     NSCountedSet *aSet = [[NSCountedSet alloc] initWithCapacity:10];
     [aSet addObjectsFromArray:aArray];
     NSLog(@"%s a %@",__FUNCTION__,[aSet description]);
@@ -237,7 +237,7 @@
 #pragma mark NSCountedSet minusSet:
 -(void)method009
 {
-    NSArray *aArray = [NSArray arrayWithObjects:@"a",@"b",@"c",@"d", nil];
+    NSArray *aArray = @[@"a",@"b",@"c",@"d"];
     NSCountedSet *aSet = [[NSCountedSet alloc] initWithCapacity:10];
     [aSet addObjectsFromArray:aArray];
     NSLog(@"%s a %@",__FUNCTION__,[aSet description]);

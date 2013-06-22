@@ -21,6 +21,7 @@
 		740EEFE915CDE3D700CE53B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740EEFC715CDE3D600CE53B5 /* Foundation.framework */; };
 		740EEFF115CDE3D700CE53B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 740EEFEF15CDE3D700CE53B5 /* InfoPlist.strings */; };
 		740EEFF415CDE3D700CE53B5 /* NSCountedSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 740EEFF315CDE3D700CE53B5 /* NSCountedSetTests.m */; };
+		74FFC7B51775244F002EC79B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FFC7B41775244F002EC79B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		740EEFF015CDE3D700CE53B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		740EEFF215CDE3D700CE53B5 /* NSCountedSetTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSCountedSetTests.h; sourceTree = "<group>"; };
 		740EEFF315CDE3D700CE53B5 /* NSCountedSetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSCountedSetTests.m; sourceTree = "<group>"; };
+		74FFC7B41775244F002EC79B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		740EEFB615CDE3D600CE53B5 = {
 			isa = PBXGroup;
 			children = (
+				74FFC7B41775244F002EC79B /* Default-568h@2x.png */,
 				740EEFCB15CDE3D600CE53B5 /* NSCountedSet */,
 				740EEFEC15CDE3D700CE53B5 /* NSCountedSetTests */,
 				740EEFC415CDE3D600CE53B5 /* Frameworks */,
@@ -229,6 +232,7 @@
 				740EEFD015CDE3D600CE53B5 /* InfoPlist.strings in Resources */,
 				740EEFD915CDE3D600CE53B5 /* MainStoryboard_iPhone.storyboard in Resources */,
 				740EEFDC15CDE3D700CE53B5 /* MainStoryboard_iPad.storyboard in Resources */,
+				74FFC7B51775244F002EC79B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +453,7 @@
 				740EEFF915CDE3D700CE53B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		740EEFFA15CDE3D700CE53B5 /* Build configuration list for PBXNativeTarget "NSCountedSetTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +462,7 @@
 				740EEFFC15CDE3D700CE53B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

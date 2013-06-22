@@ -21,6 +21,7 @@
 		74B64AA71556461A00ED8E35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B64A851556461A00ED8E35 /* Foundation.framework */; };
 		74B64AAF1556461A00ED8E35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74B64AAD1556461A00ED8E35 /* InfoPlist.strings */; };
 		74B64AB21556461A00ED8E35 /* NSCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B64AB11556461A00ED8E35 /* NSCacheTests.m */; };
+		74FFC7A91775229E002EC79B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FFC7A81775229E002EC79B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		74B64AAE1556461A00ED8E35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74B64AB01556461A00ED8E35 /* NSCacheTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSCacheTests.h; sourceTree = "<group>"; };
 		74B64AB11556461A00ED8E35 /* NSCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSCacheTests.m; sourceTree = "<group>"; };
+		74FFC7A81775229E002EC79B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		74B64A741556461A00ED8E35 = {
 			isa = PBXGroup;
 			children = (
+				74FFC7A81775229E002EC79B /* Default-568h@2x.png */,
 				74B64A891556461A00ED8E35 /* NSCache */,
 				74B64AAA1556461A00ED8E35 /* NSCacheTests */,
 				74B64A821556461A00ED8E35 /* Frameworks */,
@@ -228,6 +231,7 @@
 				74B64A8E1556461A00ED8E35 /* InfoPlist.strings in Resources */,
 				74B64A971556461A00ED8E35 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74B64A9A1556461A00ED8E35 /* MainStoryboard_iPad.storyboard in Resources */,
+				74FFC7A91775229E002EC79B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +448,7 @@
 				74B64AB71556461A00ED8E35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74B64AB81556461A00ED8E35 /* Build configuration list for PBXNativeTarget "NSCacheTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +457,7 @@
 				74B64ABA1556461A00ED8E35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

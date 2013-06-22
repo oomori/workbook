@@ -26,6 +26,7 @@
 		74E243E015A904CB003F32AD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74E243DF15A904CB003F32AD /* Settings.bundle */; };
 		74E244AA15A92516003F32AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74E244AC15A92516003F32AD /* Localizable.strings */; };
 		74E244B015A9932F003F32AD /* Button.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74E244B215A9932F003F32AD /* Button.strings */; };
+		74FFC7A717752244002EC79B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FFC7A617752244002EC79B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		74E244AD15A9251E003F32AD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		74E244B115A9932F003F32AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Button.strings; sourceTree = "<group>"; };
 		74E244B315A99339003F32AD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Button.strings; sourceTree = "<group>"; };
+		74FFC7A617752244002EC79B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		74B64AC3155664D600ED8E35 = {
 			isa = PBXGroup;
 			children = (
+				74FFC7A617752244002EC79B /* Default-568h@2x.png */,
 				74B64AD8155664D600ED8E35 /* NSBundle */,
 				74B64AF9155664D600ED8E35 /* NSBundleTests */,
 				74B64AD1155664D600ED8E35 /* Frameworks */,
@@ -219,7 +222,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 74B64AC8155664D600ED8E35 /* Build configuration list for PBXProject "NSBundle" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -253,6 +256,7 @@
 				74E243E015A904CB003F32AD /* Settings.bundle in Resources */,
 				74E244AA15A92516003F32AD /* Localizable.strings in Resources */,
 				74E244B015A9932F003F32AD /* Button.strings in Resources */,
+				74FFC7A717752244002EC79B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +377,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -401,6 +409,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;

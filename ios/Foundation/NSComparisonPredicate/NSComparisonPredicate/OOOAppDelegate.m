@@ -16,7 +16,7 @@
     NSExpression *lhs = [NSExpression expressionForKeyPath:@"age"];
     
     //20
-    NSExpression *greaterThanRhs = [NSExpression expressionForConstantValue:[NSNumber numberWithInt:20]];
+    NSExpression *greaterThanRhs = [NSExpression expressionForConstantValue:@20];
     
     //age >= 20
     NSPredicate *greaterThanPredicate = [NSComparisonPredicate
@@ -27,7 +27,7 @@
                                          options:0];
     
     //40
-    NSExpression *lessThanRhs = [NSExpression expressionForConstantValue:[NSNumber numberWithInt:40]];
+    NSExpression *lessThanRhs = [NSExpression expressionForConstantValue:@40];
     //age < 40
     NSPredicate *lessThanPredicate = [NSComparisonPredicate
                                       predicateWithLeftExpression:lhs
@@ -37,23 +37,19 @@
                                       options:0];
     //age >= 20 AND age < 40
     NSPredicate *comPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:
-                                      [NSArray arrayWithObjects:greaterThanPredicate, lessThanPredicate, nil]];
+                                      @[greaterThanPredicate, lessThanPredicate]];
 
-    NSDictionary *tanaka = [[NSDictionary alloc] initWithObjectsAndKeys:
-                            [NSNumber numberWithInt:30],@"age" ,
-                            @"Tanaka",@"lastName",@"Taro",@"firstName",nil];
-    NSDictionary *sato = [[NSDictionary alloc] initWithObjectsAndKeys:
-                          [NSNumber numberWithInt:43],@"age" ,
-                          @"Sato",@"lastName",@"Satoko",@"firstName",nil];
-    NSDictionary *suzuki = [[NSDictionary alloc] initWithObjectsAndKeys:
-                            [NSNumber numberWithInt:39],@"age" ,
-                            @"Suzuki",@"lastName",@"Ichiro",@"firstName",nil];
-    NSDictionary *yamada = [[NSDictionary alloc] initWithObjectsAndKeys:
-                            [NSNumber numberWithInt:12],@"age" ,
-                            @"Yamada",@"lastName",@"Jiro",@"firstName",nil];
+    NSDictionary *tanaka = @{@"age": @30 ,
+                            @"lastName": @"Tanaka",@"firstName": @"Taro"};
+    NSDictionary *sato = @{@"age": @43 ,
+                          @"lastName": @"Sato",@"firstName": @"Satoko"};
+    NSDictionary *suzuki = @{@"age": @39 ,
+                            @"lastName": @"Suzuki",@"firstName": @"Ichiro"};
+    NSDictionary *yamada = @{@"age": @12 ,
+                            @"lastName": @"Yamada",@"firstName": @"Jiro"};
     
     NSArray *anArray =
-    [[NSArray alloc] initWithObjects:tanaka,sato,suzuki,yamada,nil];
+    @[tanaka,sato,suzuki,yamada];
     
     NSArray *aResult = [anArray filteredArrayUsingPredicate:comPredicate];
     
@@ -68,7 +64,7 @@
     NSExpression *lhs = [NSExpression expressionForKeyPath:@"age"];
     
     //20
-    NSExpression *greaterThanRhs = [NSExpression expressionForConstantValue:[NSNumber numberWithInt:20]];
+    NSExpression *greaterThanRhs = [NSExpression expressionForConstantValue:@20];
     
     //age = 20
     NSPredicate *greaterThanPredicate = [NSComparisonPredicate
@@ -78,7 +74,7 @@
                                          ];
     
     //40
-    NSExpression *lessThanRhs = [NSExpression expressionForConstantValue:[NSNumber numberWithInt:40]];
+    NSExpression *lessThanRhs = [NSExpression expressionForConstantValue:@40];
     //age < 40
     NSPredicate *lessThanPredicate = [NSComparisonPredicate
                                       predicateWithLeftExpression:lhs
@@ -88,23 +84,19 @@
                                       options:0];
     //age >= 20 AND age < 40
     NSPredicate *comPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:
-                                 [NSArray arrayWithObjects:greaterThanPredicate, lessThanPredicate, nil]];
+                                 @[greaterThanPredicate, lessThanPredicate]];
     
-    NSDictionary *tanaka = [[NSDictionary alloc] initWithObjectsAndKeys:
-                            [NSNumber numberWithInt:30],@"age" ,
-                            @"Tanaka",@"lastName",@"Taro",@"firstName",nil];
-    NSDictionary *sato = [[NSDictionary alloc] initWithObjectsAndKeys:
-                          [NSNumber numberWithInt:43],@"age" ,
-                          @"Sato",@"lastName",@"Satoko",@"firstName",nil];
-    NSDictionary *suzuki = [[NSDictionary alloc] initWithObjectsAndKeys:
-                            [NSNumber numberWithInt:39],@"age" ,
-                            @"Suzuki",@"lastName",@"Ichiro",@"firstName",nil];
-    NSDictionary *yamada = [[NSDictionary alloc] initWithObjectsAndKeys:
-                            [NSNumber numberWithInt:12],@"age" ,
-                            @"Yamada",@"lastName",@"Jiro",@"firstName",nil];
+    NSDictionary *tanaka = @{@"age": @30 ,
+                            @"lastName": @"Tanaka",@"firstName": @"Taro"};
+    NSDictionary *sato = @{@"age": @43 ,
+                          @"lastName": @"Sato",@"firstName": @"Satoko"};
+    NSDictionary *suzuki = @{@"age": @39 ,
+                            @"lastName": @"Suzuki",@"firstName": @"Ichiro"};
+    NSDictionary *yamada = @{@"age": @12 ,
+                            @"lastName": @"Yamada",@"firstName": @"Jiro"};
     
     NSArray *anArray =
-    [[NSArray alloc] initWithObjects:tanaka,sato,suzuki,yamada,nil];
+    @[tanaka,sato,suzuki,yamada];
     
     NSArray *aResult = [anArray filteredArrayUsingPredicate:comPredicate];
     
@@ -122,7 +114,7 @@
     NSExpression *lhs = [NSExpression expressionForKeyPath:@"age"];
     
     //20
-    NSExpression *greaterThanRhs = [NSExpression expressionForConstantValue:[NSNumber numberWithInt:20]];
+    NSExpression *greaterThanRhs = [NSExpression expressionForConstantValue:@20];
     
     //age = 20
     NSPredicate *greaterThanPredicate = [NSComparisonPredicate
@@ -132,7 +124,7 @@
                                          ];
     
     //40
-    NSExpression *lessThanRhs = [NSExpression expressionForConstantValue:[NSNumber numberWithInt:40]];
+    NSExpression *lessThanRhs = [NSExpression expressionForConstantValue:@40];
     //age < 40
     NSComparisonPredicate *lessThanPredicate = [[NSComparisonPredicate alloc]
                                       initWithLeftExpression:lhs
@@ -142,23 +134,19 @@
                                       options:(NSNormalizedPredicateOption)];
     //age >= 20 AND age < 40
     NSPredicate *comPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:
-                                 [NSArray arrayWithObjects:greaterThanPredicate, lessThanPredicate, nil]];
+                                 @[greaterThanPredicate, lessThanPredicate]];
     
-    NSDictionary *tanaka = [[NSDictionary alloc] initWithObjectsAndKeys:
-                            [NSNumber numberWithInt:30],@"age" ,
-                            @"Tanaka",@"lastName",@"Taro",@"firstName",nil];
-    NSDictionary *sato = [[NSDictionary alloc] initWithObjectsAndKeys:
-                          [NSNumber numberWithInt:43],@"age" ,
-                          @"Sato",@"lastName",@"Satoko",@"firstName",nil];
-    NSDictionary *suzuki = [[NSDictionary alloc] initWithObjectsAndKeys:
-                            [NSNumber numberWithInt:39],@"age" ,
-                            @"Suzuki",@"lastName",@"Ichiro",@"firstName",nil];
-    NSDictionary *yamada = [[NSDictionary alloc] initWithObjectsAndKeys:
-                            [NSNumber numberWithInt:12],@"age" ,
-                            @"Yamada",@"lastName",@"Jiro",@"firstName",nil];
+    NSDictionary *tanaka = @{@"age": @30 ,
+                            @"lastName": @"Tanaka",@"firstName": @"Taro"};
+    NSDictionary *sato = @{@"age": @43 ,
+                          @"lastName": @"Sato",@"firstName": @"Satoko"};
+    NSDictionary *suzuki = @{@"age": @39 ,
+                            @"lastName": @"Suzuki",@"firstName": @"Ichiro"};
+    NSDictionary *yamada = @{@"age": @12 ,
+                            @"lastName": @"Yamada",@"firstName": @"Jiro"};
     
     NSArray *anArray =
-    [[NSArray alloc] initWithObjects:tanaka,sato,suzuki,yamada,nil];
+    @[tanaka,sato,suzuki,yamada];
     
     NSArray *aResult = [anArray filteredArrayUsingPredicate:comPredicate];
     

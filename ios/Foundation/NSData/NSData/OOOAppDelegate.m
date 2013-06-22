@@ -198,9 +198,9 @@
     NSData *aData = [NSData dataWithContentsOfURL:newURL];
     
     //ユーザーのドキュメントフォルダにnew.pngとしてに書き込み
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
      NSString *writefilename = @"new.png";
-     NSURL *bUrl = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, writefilename, nil]];
+     NSURL *bUrl = [NSURL fileURLWithPathComponents:@[documentsDirectory, writefilename]];
     [aData writeToURL:bUrl atomically:YES];
     
     //検証
