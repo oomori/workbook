@@ -27,7 +27,7 @@
 
 -(void)method001
 {
-	TWRequest *postRequest = [[TWRequest alloc] initWithURL:[NSURL URLWithString:@"http://api.twitter.com/1/statuses/public_timeline.json"] parameters:nil requestMethod:TWRequestMethodGET];
+	TWRequest *postRequest = [[TWRequest alloc] initWithURL:[NSURL URLWithString:@"http://weather.livedoor.com/forecast/webservice/json/v1?city=400040"] parameters:nil requestMethod:TWRequestMethodGET];
 	
 	[postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
 		NSString *output;
@@ -36,7 +36,7 @@
 			NSError *jsonParsingError = nil;
             
 			NSDictionary *publicTimeline = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonParsingError];
-			output = [NSString stringWithFormat:@"HTTP response status: %i\nPublic timeline:\n%@", [urlResponse statusCode], publicTimeline];
+			output = [NSString stringWithFormat:@"HTTP response status: %i\n%@", [urlResponse statusCode], publicTimeline];
 		}
 		else {
 			output = [NSString stringWithFormat:@"HTTP response status: %i\n", [urlResponse statusCode]];
@@ -164,11 +164,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    //[self method001];
+    [self method001];
     //[self method002];
     //[self method003];
     //[self method004];
-    [self method005];
+    //[self method005];
     return YES;
 }
 							

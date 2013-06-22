@@ -35,7 +35,7 @@ didReceiveResponse:(NSURLResponse *)response
 {
     NSLog(@"didFailWithError Error - %@ %@",
           [error localizedDescription],
-          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+          [error userInfo][NSURLErrorFailingURLStringErrorKey]);
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
@@ -222,9 +222,9 @@ didReceiveResponse:(NSURLResponse *)response
     bData = [chrSet bitmapRepresentation] ;
 
     //
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *aURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *aURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
 
     
     
@@ -274,9 +274,9 @@ didReceiveResponse:(NSURLResponse *)response
     //NSHTTPURLResponse *aResponse;
 	//NSError *anError;
     
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     NSLog(@"aurl: %@", [absoluteURL description]);
     NSData *bookmark = [absoluteURL bookmarkDataWithOptions:NSURLBookmarkCreationSuitableForBookmarkFile
                              
@@ -373,9 +373,9 @@ didReceiveResponse:(NSURLResponse *)response
 -(void)method010
 {
 	NSError *anError;
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     if ([absoluteURL checkResourceIsReachableAndReturnError:&anError]) {
         NSLog(@"%s %@",__FUNCTION__,[anError description]);
@@ -387,9 +387,9 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURL URLWithString:
 -(void)method011
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
 
     
     NSLog(@"%s %@",__FUNCTION__,([absoluteURL isFileReferenceURL])?@"YES":@"NO");
@@ -398,9 +398,9 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURL isFileURL
 -(void)method012
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     NSLog(@"%s %@",__FUNCTION__,([absoluteURL isFileURL])?@"YES":@"NO");
 }
@@ -408,9 +408,9 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURL absoluteURL
 -(void)method013
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *aUrl = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *aUrl = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     NSLog(@"%s %@",__FUNCTION__,[aUrl absoluteURL]);
 }
@@ -418,9 +418,9 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURL absoluteString
 -(void)method014
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *aUrl = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *aUrl = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     NSLog(@"%s %@",__FUNCTION__,[aUrl absoluteString]);
 }
 
@@ -571,9 +571,9 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURL filePathURL
 -(void)method032
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL filePathURL]);
     
@@ -585,9 +585,9 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURL filePathURL
 -(void)method033
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL fileReferenceURL]);
     NSURL *bURL = [NSURL URLWithString:@"http://www.oomori.com/index.html?name=oomori&age=44"];
@@ -597,9 +597,9 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURL URLByAppendingPathComponent
 -(void)method034
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, @"aaa", nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, @"aaa"]];
 
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL filePathURL]);
     NSURL *newURL = [absoluteURL URLByAppendingPathComponent:filename];
@@ -609,9 +609,9 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURL URLByAppendingPathComponent
 -(void)method035
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, @"aaa", nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, @"aaa"]];
     
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL filePathURL]);
     //=>-[OOOAppDelegate method035] file://localhost/Users/xxxxx/Library/Application%20Support/iPhone%20Simulator/5.1/Applications/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/Documents/aaa
@@ -629,9 +629,9 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURL URLByAppendingPathComponent
 -(void)method036
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL filePathURL]);
     NSURL *newURL = [absoluteURL URLByAppendingPathExtension:@"bitmap"];
@@ -641,9 +641,9 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURL URLByDeletingLastPathComponent
 -(void)method037
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL filePathURL]);
     NSURL *newURL = [absoluteURL URLByDeletingLastPathComponent];
@@ -653,9 +653,9 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURL URLByDeletingLastPathComponent
 -(void)method038
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL filePathURL]);
     NSURL *newURL = [absoluteURL URLByDeletingPathExtension];
@@ -666,9 +666,9 @@ didReceiveResponse:(NSURLResponse *)response
 -(void)method039
 {
     //作成中
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL filePathURL]);
     NSURL *newURL = [absoluteURL URLByResolvingSymlinksInPath];
@@ -679,9 +679,9 @@ didReceiveResponse:(NSURLResponse *)response
 -(void)method040
 {
     //作成中
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL filePathURL]);
     NSURL *newURL = [absoluteURL URLByStandardizingPath];
@@ -693,9 +693,9 @@ didReceiveResponse:(NSURLResponse *)response
 {
     //作成中
     NSError *anError;
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     NSURL *resultURL;
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL filePathURL]);
     
@@ -746,12 +746,12 @@ didReceiveResponse:(NSURLResponse *)response
 {
     //作成中
     
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     NSString *testFileName = @"testfile.alias";
-    NSURL *newURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, testFileName, nil]];
+    NSURL *newURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, testFileName]];
     
     NSLog(@"%s %@",__FUNCTION__,[absoluteURL filePathURL]);
     NSData *bData = [self bookmarkFromURL:absoluteURL];
@@ -807,7 +807,7 @@ didReceiveResponse:(NSURLResponse *)response
     
     NSError *error = nil;
     NSNumber *fileSizeBytes;
-    NSDictionary *dic = [aURL resourceValuesForKeys:[NSArray arrayWithObjects:NSURLFileSizeKey,NSURLFileAllocatedSizeKey, nil]  error:&error];
+    NSDictionary *dic = [aURL resourceValuesForKeys:@[NSURLFileSizeKey,NSURLFileAllocatedSizeKey]  error:&error];
     NSLog(@"Error===%@",error); 
     NSLog(@"size of file in bytes ===%@",fileSizeBytes);
     NSLog(@"%s %@",__FUNCTION__,[dic description]);
@@ -819,9 +819,9 @@ didReceiveResponse:(NSURLResponse *)response
 {
     //作成中
     
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     
     //NSString *testFileName = @"testfile.alias";
     
@@ -829,7 +829,7 @@ didReceiveResponse:(NSURLResponse *)response
     NSData *bData = [self bookmarkFromURL:absoluteURL];
 
     
-    NSDictionary *dic =[NSURL resourceValuesForKeys:[NSArray arrayWithObjects:NSURLNameKey,NSURLLocalizedNameKey,NSURLTypeIdentifierKey, nil] fromBookmarkData:bData];
+    NSDictionary *dic =[NSURL resourceValuesForKeys:@[NSURLNameKey,NSURLLocalizedNameKey,NSURLTypeIdentifierKey] fromBookmarkData:bData];
     
     NSLog(@"%s %@",__FUNCTION__,[dic description]);
 }
@@ -848,13 +848,13 @@ didReceiveResponse:(NSURLResponse *)response
     NSLog(([bData writeToURL:aURL atomically:YES])?@"write YES":@"write NO");
     
     NSError *error = nil;
-    NSDictionary *dic = [aURL resourceValuesForKeys:[NSArray arrayWithObjects:NSURLFileSizeKey,NSURLFileAllocatedSizeKey,NSURLNameKey, nil]  error:&error];
+    NSDictionary *dic = [aURL resourceValuesForKeys:@[NSURLFileSizeKey,NSURLFileAllocatedSizeKey,NSURLNameKey]  error:&error];
     NSLog(@"%s %@",__FUNCTION__,[dic description]);
     
     
     NSLog(([aURL setResourceValue:@"テスト" forKey:NSURLLocalizedNameKey error:&error])?@"YES":@"NO");
 
-    NSDictionary *dic2 = [aURL resourceValuesForKeys:[NSArray arrayWithObjects:NSURLFileSizeKey,NSURLFileAllocatedSizeKey,NSURLNameKey, nil]  error:&error];
+    NSDictionary *dic2 = [aURL resourceValuesForKeys:@[NSURLFileSizeKey,NSURLFileAllocatedSizeKey,NSURLNameKey]  error:&error];
     NSLog(@"%s %@",__FUNCTION__,[dic2 description]);
 
 }
@@ -873,13 +873,13 @@ didReceiveResponse:(NSURLResponse *)response
     NSLog(([bData writeToURL:aURL atomically:YES])?@"writeToURL YES":@"writeToURLNO");
     
     NSError *error = nil;
-    NSDictionary *dic = [aURL resourceValuesForKeys:[NSArray arrayWithObjects:NSURLFileSizeKey,NSURLFileAllocatedSizeKey,NSURLNameKey, nil]  error:&error];
+    NSDictionary *dic = [aURL resourceValuesForKeys:@[NSURLFileSizeKey,NSURLFileAllocatedSizeKey,NSURLNameKey]  error:&error];
     NSLog(@"%s %@",__FUNCTION__,[dic description]);
     
-    NSDictionary *propDic = [NSDictionary dictionaryWithObjectsAndKeys:@"テスト",NSURLLocalizedNameKey, nil];
+    NSDictionary *propDic = @{NSURLLocalizedNameKey: @"テスト"};
     NSLog(([aURL setResourceValues:propDic error:&error])?@"setResourceValues YES":@"setResourceValues NO");
     
-    NSDictionary *dic2 = [aURL resourceValuesForKeys:[NSArray arrayWithObjects:NSURLFileSizeKey,NSURLFileAllocatedSizeKey,NSURLNameKey, nil]  error:&error];
+    NSDictionary *dic2 = [aURL resourceValuesForKeys:@[NSURLFileSizeKey,NSURLFileAllocatedSizeKey,NSURLNameKey]  error:&error];
     NSLog(@"%s %@",__FUNCTION__,[dic2 description]);
     
 }
@@ -888,9 +888,9 @@ didReceiveResponse:(NSURLResponse *)response
 -(void)method048
 {
 
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *bUrl = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *bUrl = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     NSLog(@"%s %@",__FUNCTION__,[bUrl relativeString]);
 }
 
@@ -899,9 +899,9 @@ didReceiveResponse:(NSURLResponse *)response
 -(void)method049
 {
     //作成中
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     NSLog(@"aurl: %@", [absoluteURL description]);
     NSData *bookmark = [absoluteURL bookmarkDataWithOptions:NSURLBookmarkCreationSuitableForBookmarkFile
                         
@@ -955,9 +955,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLTotalFileAllocatedSizeKey
 -(void)method050
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* totalFileAllocatedSize = nil;
@@ -972,9 +972,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method051
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSString* URLNameKey = nil;
@@ -988,9 +988,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method052
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSString* URLLocalizedNameKey = nil;
@@ -1004,9 +1004,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method053
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* isRegularFileKey = nil;
@@ -1021,9 +1021,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method054
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* isDirectoryKey = nil;
@@ -1038,9 +1038,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method055
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* isSymbolicLinkKey = nil;
@@ -1054,9 +1054,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method056
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLIsVolumeKey = nil;
@@ -1070,9 +1070,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method057
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSDate* URLCreationDateKey = nil;
@@ -1087,9 +1087,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method058
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSDate* URLContentAccessDateKey = nil;
@@ -1104,9 +1104,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method059
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSDate* URLContentAccessDateKey = nil;
@@ -1120,9 +1120,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method060
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSDate* URLContentModificationDateKey = nil;
@@ -1136,9 +1136,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method061
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSDate* URLAttributeModificationDateKey = nil;
@@ -1153,9 +1153,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method062
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLLinkCountKey = nil;
@@ -1170,9 +1170,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method063
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSURL* URLParentDirectoryURLKey = nil;
@@ -1187,9 +1187,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method064
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSURL* URLVolumeURLKey = nil;
@@ -1203,9 +1203,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method065
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSURL* URLTypeIdentifierKey = nil;
@@ -1220,9 +1220,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method066
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSURL* URLLocalizedTypeDescriptionKey = nil;
@@ -1237,9 +1237,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method067
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLLabelNumberKey = nil;
@@ -1254,9 +1254,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method068
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     BOOL result = NO;
@@ -1275,9 +1275,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method069
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSString* URLLocalizedLabelKey = nil;
@@ -1292,9 +1292,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method070
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     UIImage *anImage= [UIImage imageNamed:@"iconimage"];
     NSError* error = nil;
@@ -1316,9 +1316,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method071
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     UIImage *anImage= [UIImage imageNamed:@"iconimage"];
     NSError* error = nil;
@@ -1338,9 +1338,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method072
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSData* URLFileResourceIdentifierKey = nil;
@@ -1355,9 +1355,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method073
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSData* URLVolumeIdentifierKey = nil;
@@ -1372,9 +1372,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method074
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLPreferredIOBlockSizeKey = nil;
@@ -1389,9 +1389,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method075
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLIsReadableKey = nil;
@@ -1406,9 +1406,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method076
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLIsWritableKey = nil;
@@ -1422,9 +1422,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method077
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLIsExecutableKey = nil;
@@ -1439,9 +1439,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method078
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLIsMountTriggerKey = nil;
@@ -1456,9 +1456,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method079
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLFileSecurityKey = nil;
@@ -1475,9 +1475,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method080
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLIsExcludedFromBackupKey = nil;
@@ -1492,9 +1492,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method081
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLFileResourceTypeKey = nil;
@@ -1510,9 +1510,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method082
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLFileResourceTypeKey = nil;
@@ -1528,9 +1528,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method083
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLIsUbiquitousItemKey = nil;
@@ -1546,9 +1546,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method084
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLVolumeIsEjectableKey = nil;
@@ -1563,9 +1563,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method085
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSNumber* URLVolumeIsInternalKey = nil;
@@ -1580,9 +1580,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method086
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSString* URLVolumeUUIDStringKey = nil;
@@ -1597,9 +1597,9 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method087
 {
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:[NSArray arrayWithObjects:documentsDirectory, filename, nil]];
+    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSString* URLUbiquitousItemPercentUploadedKey = nil;

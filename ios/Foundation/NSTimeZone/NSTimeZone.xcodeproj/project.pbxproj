@@ -22,6 +22,7 @@
 		74EEEA1815DC2D90002ED0E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EEEA1615DC2D90002ED0E1 /* InfoPlist.strings */; };
 		74EEEA1B15DC2D90002ED0E1 /* NSTimeZoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEEA1A15DC2D90002ED0E1 /* NSTimeZoneTests.m */; };
 		74EEEA2A15DC43DC002ED0E1 /* OOOUIview.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEEA2915DC43DC002ED0E1 /* OOOUIview.m */; };
+		74FFC7A117751B2D002EC79B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FFC7A017751B2D002EC79B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		74EEEA1A15DC2D90002ED0E1 /* NSTimeZoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimeZoneTests.m; sourceTree = "<group>"; };
 		74EEEA2815DC43DC002ED0E1 /* OOOUIview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOUIview.h; sourceTree = "<group>"; };
 		74EEEA2915DC43DC002ED0E1 /* OOOUIview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOUIview.m; sourceTree = "<group>"; };
+		74FFC7A017751B2D002EC79B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		74EEE9DD15DC2D90002ED0E1 = {
 			isa = PBXGroup;
 			children = (
+				74FFC7A017751B2D002EC79B /* Default-568h@2x.png */,
 				74EEE9F215DC2D90002ED0E1 /* NSTimeZone */,
 				74EEEA1315DC2D90002ED0E1 /* NSTimeZoneTests */,
 				74EEE9EB15DC2D90002ED0E1 /* Frameworks */,
@@ -234,6 +237,7 @@
 				74EEE9F715DC2D90002ED0E1 /* InfoPlist.strings in Resources */,
 				74EEEA0015DC2D90002ED0E1 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74EEEA0315DC2D90002ED0E1 /* MainStoryboard_iPad.storyboard in Resources */,
+				74FFC7A117751B2D002EC79B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +459,7 @@
 				74EEEA2015DC2D90002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74EEEA2115DC2D90002ED0E1 /* Build configuration list for PBXNativeTarget "NSTimeZoneTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +468,7 @@
 				74EEEA2315DC2D90002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

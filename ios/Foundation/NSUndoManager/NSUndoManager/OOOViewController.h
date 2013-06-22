@@ -14,10 +14,10 @@
         IBOutlet UIButton *button;
         IBOutlet UIButton *removebutton;
         int i;
-        NSUndoManager *undoManager;
+        NSUndoManager *theUndoManager;
         OOOPresonList *persons;
     }
-@property (nonatomic,retain) NSUndoManager *undoManager;
+@property (nonatomic,retain) NSUndoManager *theUndoManager;
 
 -(IBAction)addButton;
 - (IBAction)removeButton:(id)sender;

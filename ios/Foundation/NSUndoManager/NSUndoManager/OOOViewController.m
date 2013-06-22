@@ -16,7 +16,7 @@
 @implementation OOOViewController
 
 
-@synthesize undoManager;
+@synthesize theUndoManager;
 
 -(IBAction)addButton {
 	[self addATruck];
@@ -30,15 +30,15 @@
 //増加
 -(void)addATruck {
 	i += 1;
-	[[undoManager prepareWithInvocationTarget:self] removeATruck];
-	[undoManager setActionName:@"Add A Truck"];
+	[[theUndoManager prepareWithInvocationTarget:self] removeATruck];
+	[theUndoManager setActionName:@"Add A Truck"];
 	[self updateTitle];
 }
 
 //減少
 -(void)removeATruck {
 	i -= 1;
-	[[undoManager prepareWithInvocationTarget:self] addATruck];
+	[[theUndoManager prepareWithInvocationTarget:self] addATruck];
 	[self updateTitle];
 }
 
@@ -53,7 +53,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	i = 0;
-	undoManager = [[NSUndoManager alloc] init];
+	theUndoManager = [[NSUndoManager alloc] init];
     persons = [[OOOPresonList alloc] init];
 }
 

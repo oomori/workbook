@@ -9,11 +9,14 @@
 #import "OOOPresonList.h"
 
 @implementation OOOPresonList
+
+@synthesize theUndoManager;
+
 //増加
 -(void)addATruck {
 	i += 1;
-	[[undoManager prepareWithInvocationTarget:self] removeATruck];
-	[undoManager setActionName:@"Add A Truck"];
+	[[theUndoManager prepareWithInvocationTarget:self] removeATruck];
+	[theUndoManager setActionName:@"Add A Truck"];
 	//[self updateTitle];
     
     NSLog(@"%d",i);
@@ -22,7 +25,7 @@
 //減少
 -(void)removeATruck {
 	i -= 1;
-	[[undoManager prepareWithInvocationTarget:self] addATruck];
+	[[theUndoManager prepareWithInvocationTarget:self] addATruck];
     NSLog(@"%d",i);
 	//[self updateTitle];
 }
@@ -37,7 +40,7 @@
 }
 
 - (void)initialize {
-	undoManager = [[NSUndoManager alloc] init];
+	theUndoManager = [[NSUndoManager alloc] init];
 }
 
 @end

@@ -22,6 +22,7 @@
 		74C7739E15BBD82300AF2DC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C7737C15BBD82300AF2DC0 /* Foundation.framework */; };
 		74C773A615BBD82400AF2DC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C773A415BBD82400AF2DC0 /* InfoPlist.strings */; };
 		74C773A915BBD82400AF2DC0 /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C773A815BBD82400AF2DC0 /* NSURLTests.m */; };
+		74FFC79D17751967002EC79B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FFC79C17751967002EC79B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		74C773A515BBD82400AF2DC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74C773A715BBD82400AF2DC0 /* NSURLTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLTests.h; sourceTree = "<group>"; };
 		74C773A815BBD82400AF2DC0 /* NSURLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSURLTests.m; sourceTree = "<group>"; };
+		74FFC79C17751967002EC79B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		74C7736B15BBD82300AF2DC0 = {
 			isa = PBXGroup;
 			children = (
+				74FFC79C17751967002EC79B /* Default-568h@2x.png */,
 				74C7738015BBD82300AF2DC0 /* NSURL */,
 				74C773A115BBD82300AF2DC0 /* NSURLTests */,
 				74C7737915BBD82300AF2DC0 /* Frameworks */,
@@ -205,7 +208,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 74C7737015BBD82300AF2DC0 /* Build configuration list for PBXProject "NSURL" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -234,6 +237,7 @@
 				74C7738E15BBD82300AF2DC0 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74C7739115BBD82300AF2DC0 /* MainStoryboard_iPad.storyboard in Resources */,
 				740EEEDE15CC89BB00CE53B5 /* iconimage.png in Resources */,
+				74FFC79D17751967002EC79B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +338,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Satoshi Oomori (7SGN977W7Q)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -362,6 +370,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Satoshi Oomori (7SGN977W7Q)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;

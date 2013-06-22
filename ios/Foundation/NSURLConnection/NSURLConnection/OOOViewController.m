@@ -219,7 +219,7 @@ didReceiveResponse:(NSURLResponse *)response
 {
     NSLog(@"didFailWithError Error - %@ %@",
           [error localizedDescription],
-          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+          [error userInfo][NSURLErrorFailingURLStringErrorKey]);
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection

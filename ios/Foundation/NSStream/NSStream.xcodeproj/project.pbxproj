@@ -22,6 +22,7 @@
 		74FE476A15F38F250000F9D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FE474815F38F250000F9D9 /* Foundation.framework */; };
 		74FE477215F38F250000F9D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74FE477015F38F250000F9D9 /* InfoPlist.strings */; };
 		74FE477515F38F250000F9D9 /* NSStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FE477415F38F250000F9D9 /* NSStreamTests.m */; };
+		74FFC7A317751B68002EC79B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FFC7A217751B68002EC79B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		74FE477115F38F250000F9D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74FE477315F38F250000F9D9 /* NSStreamTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSStreamTests.h; sourceTree = "<group>"; };
 		74FE477415F38F250000F9D9 /* NSStreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStreamTests.m; sourceTree = "<group>"; };
+		74FFC7A217751B68002EC79B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		74FE473715F38F250000F9D9 = {
 			isa = PBXGroup;
 			children = (
+				74FFC7A217751B68002EC79B /* Default-568h@2x.png */,
 				74FE474C15F38F250000F9D9 /* NSStream */,
 				74FE476D15F38F250000F9D9 /* NSStreamTests */,
 				74FE474515F38F250000F9D9 /* Frameworks */,
@@ -234,6 +237,7 @@
 				74FE475115F38F250000F9D9 /* InfoPlist.strings in Resources */,
 				74FE475A15F38F250000F9D9 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74FE475D15F38F250000F9D9 /* MainStoryboard_iPad.storyboard in Resources */,
+				74FFC7A317751B68002EC79B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

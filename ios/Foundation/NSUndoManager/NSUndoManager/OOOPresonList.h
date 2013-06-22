@@ -12,10 +12,10 @@
 {
     NSMutableArray* _persons;
     
-    NSUndoManager *undoManager;
+    NSUndoManager *theUndoManager;
     int i;
 }
-@property (nonatomic,retain) NSUndoManager *undoManager;
+@property (nonatomic,retain) NSUndoManager *theUndoManager;
 -(void)addATruck;
 -(void)removeATruck;
 

@@ -52,6 +52,7 @@
 {
     
     NSData *tweets = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.search.twitter.com/search.json?q=from:oogon"]];
+    if (tweets) {
     NSInputStream *twitterStream = [[NSInputStream alloc] initWithData:tweets];
     [twitterStream open];
     
@@ -66,7 +67,8 @@
     } else {
         NSLog(@"NG");
     }
-    
+        NSLog(@"NO DATA");
+    }
     
 }
 

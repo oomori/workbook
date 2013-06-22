@@ -93,7 +93,7 @@
     
     NSLog(@"%s %@",__FUNCTION__ ,[NSTimeZone abbreviationDictionary]);
     
-    NSDictionary *aDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"Asia/Tokyo",@"JST", nil];
+    NSDictionary *aDictionary = @{@"JST": @"Asia/Tokyo"};
     //NSLog(@"%s %@",__FUNCTION__ ,[NSTimeZone knownTimeZoneNames]);
     
     [NSTimeZone setAbbreviationDictionary:aDictionary];

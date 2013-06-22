@@ -43,18 +43,18 @@
     NSSortDescriptor *descriptor=[[NSSortDescriptor alloc] initWithKey:@"key1" 
                                                               ascending:YES];
     
-    NSArray *sortedArray = [arr sortedArrayUsingDescriptors:[NSArray arrayWithObject:descriptor]] ;
+    NSArray *sortedArray = [arr sortedArrayUsingDescriptors:@[descriptor]] ;
 
-    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[[arr objectAtIndex:0] objectForKey:@"key1"],
-                                [[arr objectAtIndex:1] objectForKey:@"key1"],
-                                [[arr objectAtIndex:2] objectForKey:@"key1"],
-                                [[arr objectAtIndex:3] objectForKey:@"key1"]);
+    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,arr[0][@"key1"],
+                                arr[1][@"key1"],
+                                arr[2][@"key1"],
+                                arr[3][@"key1"]);
     //=>-[OOOAppDelegate method001] aaa4,aaa2,aaa1,aaa3
     
-    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,[[sortedArray objectAtIndex:0] objectForKey:@"key1"],
-                                [[sortedArray objectAtIndex:1] objectForKey:@"key1"],
-                                [[sortedArray objectAtIndex:2] objectForKey:@"key1"],
-                                [[sortedArray objectAtIndex:3] objectForKey:@"key1"]);
+    NSLog(@"%s %@,%@,%@,%@",__FUNCTION__,sortedArray[0][@"key1"],
+                                sortedArray[1][@"key1"],
+                                sortedArray[2][@"key1"],
+                                sortedArray[3][@"key1"]);
     
     //=>-[OOOAppDelegate method001] aaa1,aaa2,aaa3,aaa4
 
@@ -109,7 +109,7 @@ NSString *customClassValue;
     NSSortDescriptor *descriptor=[[NSSortDescriptor alloc] initWithKey:@"customClassValue" 
                                                              ascending:YES];
     
-    NSArray *sortedArray = [arr sortedArrayUsingDescriptors:[NSArray arrayWithObject:descriptor]] ;
+    NSArray *sortedArray = [arr sortedArrayUsingDescriptors:@[descriptor]] ;
     NSLog(@"%s %@",__FUNCTION__,[arr description]);
     //=>-[OOOAppDelegate method002] (aaa4,aaa2,aaa1,aaa3)
     NSLog(@"%s %@",__FUNCTION__,[sortedArray description]);
@@ -132,7 +132,7 @@ NSString *customClassValue;
     NSSortDescriptor *descriptor=[[NSSortDescriptor alloc] initWithKey:nil
                                                              ascending:YES];
     
-    NSArray *sortedArray = [arr sortedArrayUsingDescriptors:[NSArray arrayWithObject:descriptor]] ;
+    NSArray *sortedArray = [arr sortedArrayUsingDescriptors:@[descriptor]] ;
     
     NSLog(@"%s %@",__FUNCTION__,[arr description]);
     //=>-[OOOAppDelegate method003] (aaa4,aaa2,aaa3,aaa1)
@@ -148,9 +148,9 @@ NSString *customClassValue;
 -(void)method004
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaaaa",@"aaa",@"a",@"aa",@"aaaa",nil];
+    NSArray *anArray = @[@"aaaaa",@"aaa",@"a",@"aa",@"aaaa"];
     
-    NSArray *descs = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES]];
+    NSArray *descs = @[[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES]];
     NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs] );
     
     //=>(a,aa,aaa,aaaa,aaaaa)
@@ -160,9 +160,9 @@ NSString *customClassValue;
 -(void)method005
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaaaa",@"aaa",@"a",@"aa",@"aaaa",nil];
+    NSArray *anArray = @[@"aaaaa",@"aaa",@"a",@"aa",@"aaaa"];
     
-    NSArray *descs = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES]];
+    NSArray *descs = @[[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES]];
     NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs] );
     
     //=>(a,aa,aaa,aaaa,aaaaa)
@@ -172,16 +172,16 @@ NSString *customClassValue;
 -(void)method006
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"cccc",@"bbb",@"a",nil];
+    NSArray *anArray = @[@"aaa",@"cccc",@"bbb",@"a"];
     
-    NSArray *descs = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES selector:@selector(compare:)]];
+    NSArray *descs = @[[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES selector:@selector(compare:)]];
     NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs] );
     
     //=>(a,aaa,bbb,cccc)
 
     //NSString+Extractとしてカテゴリを作っている。comparePlus:というメソッドを作成済み。
     //これは単に文字の長さが長いかを比べるメソッド
-    NSArray *descs2 = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES selector:@selector(compareLength:)]];
+    NSArray *descs2 = @[[NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES selector:@selector(compareLength:)]];
     NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs2] );
     //=>(cccc,aaa,bbb,a)
 }
@@ -190,14 +190,14 @@ NSString *customClassValue;
 -(void)method007
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"cccc",@"bbb",@"a",nil];
+    NSArray *anArray = @[@"aaa",@"cccc",@"bbb",@"a"];
     
-    NSArray *descs = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES selector:@selector(compare:)]];
+    NSArray *descs = @[[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES selector:@selector(compare:)]];
     NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs] );
     
     //=>(a,aaa,bbb,cccc)
     
-    NSArray *descs2 = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES comparator:^(id obj1, id obj2) {
+    NSArray *descs2 = @[[NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES comparator:^(id obj1, id obj2) {
         return (NSComparisonResult)[obj1 compare:obj2];
         }]];
     
@@ -210,10 +210,10 @@ NSString *customClassValue;
 -(void)method008
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaaaa",@"aaa",@"a",@"aa",@"aaaa",nil];
+    NSArray *anArray = @[@"aaaaa",@"aaa",@"a",@"aa",@"aaaa"];
     
     NSSortDescriptor *desc = [NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES];
-    NSArray *descs = [NSArray arrayWithObject:desc];
+    NSArray *descs = @[desc];
     NSArray *sortedArray = [anArray sortedArrayUsingDescriptors:descs] ;
     NSLog( @"%s %@ %@",__FUNCTION__,([desc ascending])?@"YES":@"NO",sortedArray );
     
@@ -224,10 +224,10 @@ NSString *customClassValue;
 -(void)method009
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaaaa",@"aaa",@"a",@"aa",@"aaaa",nil];
+    NSArray *anArray = @[@"aaaaa",@"aaa",@"a",@"aa",@"aaaa"];
     
     NSSortDescriptor *desc = [NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES];
-    NSArray *descs = [NSArray arrayWithObject:desc];
+    NSArray *descs = @[desc];
     NSArray *sortedArray = [anArray sortedArrayUsingDescriptors:descs] ;
     NSLog( @"%s %@ %@",__FUNCTION__,[desc key],sortedArray );
     
@@ -237,10 +237,10 @@ NSString *customClassValue;
 -(void)method010
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaaaa",@"aaa",@"a",@"aa",@"aaaa",nil];
+    NSArray *anArray = @[@"aaaaa",@"aaa",@"a",@"aa",@"aaaa"];
     
     NSSortDescriptor *desc = [NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES];
-    NSArray *descs = [NSArray arrayWithObject:desc];
+    NSArray *descs = @[desc];
     NSArray *sortedArray = [anArray sortedArrayUsingDescriptors:descs] ;
     NSLog( @"%s %@ %@",__FUNCTION__,NSStringFromSelector([desc selector]),sortedArray );
   
@@ -250,10 +250,10 @@ NSString *customClassValue;
 -(void)method011
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaaaa",@"aaa",@"a",@"aa",@"aaaa",nil];
+    NSArray *anArray = @[@"aaaaa",@"aaa",@"a",@"aa",@"aaaa"];
     
     NSSortDescriptor *desc = [NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES];
-    NSArray *descs = [NSArray arrayWithObject:desc];
+    NSArray *descs = @[desc];
     NSArray *sortedArray = [anArray sortedArrayUsingDescriptors:descs] ;
     NSLog( @"%s %@ %@",__FUNCTION__,NSStringFromSelector([desc selector]),sortedArray );
     
@@ -278,12 +278,12 @@ NSString *customClassValue;
 -(void)method012
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaaaa",@"aaa",@"a",@"aa",@"aaaa",nil];
+    NSArray *anArray = @[@"aaaaa",@"aaa",@"a",@"aa",@"aaaa"];
     
     NSSortDescriptor *baseDesc = [NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES];
     NSSortDescriptor *desc = [baseDesc reversedSortDescriptor];
     
-    NSArray *descs = [NSArray arrayWithObject:desc];
+    NSArray *descs = @[desc];
     NSArray *sortedArray = [anArray sortedArrayUsingDescriptors:descs] ;
     NSLog( @"%s %@ %@",__FUNCTION__,NSStringFromSelector([desc selector]),sortedArray );
     
@@ -308,15 +308,15 @@ NSString *customClassValue;
 -(void)method013
 {
     
-    NSArray *anArray = [NSArray arrayWithObjects:@"aaa",@"cccc",@"bbb",@"a",nil];
+    NSArray *anArray = @[@"aaa",@"cccc",@"bbb",@"a"];
     
-    NSArray *descs = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES selector:@selector(compare:)]];
+    NSArray *descs = @[[NSSortDescriptor sortDescriptorWithKey:@"length" ascending:YES selector:@selector(compare:)]];
     NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs] );
     
     //=>(a,aaa,bbb,cccc)
     NSSortDescriptor *desc = [NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES comparator:^(id obj1, id obj2) {
         return (NSComparisonResult)[obj1 compare:obj2];}];
-    NSArray *descs2 = [NSArray arrayWithObject:desc];
+    NSArray *descs2 = @[desc];
     
     
     NSLog( @"%s %@",__FUNCTION__,[anArray sortedArrayUsingDescriptors:descs2] );
