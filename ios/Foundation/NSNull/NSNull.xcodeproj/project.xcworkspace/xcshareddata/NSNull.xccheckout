@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EBDA2B3A-1BE2-4553-B206-572D73E269B4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NSNull</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>91E64FB3-DEBE-440F-AB98-A20C8252A3FD</key>
+		<string>https://github.com/oomori/workbook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/Foundation/NSNull/NSNull.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>91E64FB3-DEBE-440F-AB98-A20C8252A3FD</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/oomori/workbook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>91E64FB3-DEBE-440F-AB98-A20C8252A3FD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>91E64FB3-DEBE-440F-AB98-A20C8252A3FD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>workbook</string>
+		</dict>
+	</array>
+</dict>
+</plist>
