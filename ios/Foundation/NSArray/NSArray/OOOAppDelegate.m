@@ -129,8 +129,7 @@
     NSArray *aResult = [anArray filteredArrayUsingPredicate:aPredicate];
     
     NSLog(@"006 %@",[aResult description]);
-    
-    
+
 }
 
 #pragma mark arrayWithObjects:count:
@@ -144,7 +143,7 @@
     strings[4]=@"May";
     
     NSArray *anArray = [NSArray arrayWithObjects:strings count:3];
-    NSLog(@"%@",[anArray description]);
+    NSLog(@"007 %@",[anArray description]);
     
     //=>(Jan,Feb,Mar)
 }
@@ -154,13 +153,13 @@
 {
     
     NSArray *anArray = @[@"aaa",@2.0f,@"bbb",@"ccc"];
-    NSLog(@"%@",[anArray description]);
+    NSLog(@"008 %@",[anArray description]);
     
     //=>(aaa,2,bbb,ccc)
 }
 
 
-#pragma mark arrayWithObject
+#pragma mark arrayWithObject:
 -(void)method009
 {
     
@@ -190,14 +189,7 @@
     NSArray *anArray = @[@"aaa",@2.0f,@"bbb",@"ccc"];
    //メインバンドル内のResourceにplistfile2.plistファイルを作成
     NSFileManager *myFile = [ NSFileManager defaultManager];
-    /*NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
-                         [NSDate date],NSFileModificationDate,
-                         @"owner",@"NSFileOwnerAccountName",
-                         @"group",@"NSFileGroupOwnerAccountName",
-                         nil,@"NSFilePosixPermissions",
-                         [NSNumber numberWithBool:YES],@"NSFileExtensionHidden",
-                         nil];
-    */
+
      NSDictionary *dic = @{NSFileModificationDate: [NSDate date],
                           @"NSFileOwnerAccountName": @"owner",
                           @"NSFileGroupOwnerAccountName": @"group",
@@ -208,7 +200,7 @@
     
     [myFile changeCurrentDirectoryPath:[[[NSBundle mainBundle] resourcePath] stringByExpandingTildeInPath]];
     [myFile createFileAtPath:@"plistfile2.plist" contents:dat1 attributes:dic];
-    NSLog(@"myFile path = %@",[myFile currentDirectoryPath]);
+    NSLog(@"011 myFile path = %@",[myFile currentDirectoryPath]);
     
     NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"plistfile2" ofType:@"plist"];
     NSURL *url = [NSURL fileURLWithPath:resourcePath];
@@ -236,14 +228,15 @@
     //=>(aaa,2,bbb,ccc)
 }
 
+#pragma mark addObserver:toObjectsAtIndexes:forKeyPath:options:context:
 //監視対象のオブジェクト通知
 -(void )observeValueForKeyPath:(NSString *)keyPath ofObject:( id )object 
                            change:(NSDictionary *)change 
                           context:(void *)context
 {
-    NSLog( @"%s key = %@,object = %@,change = %@" ,__FUNCTION__,keyPath,[object description],[change description]);
+    NSLog( @"013 %s key = %@,object = %@,change = %@" ,__FUNCTION__,keyPath,[object description],[change description]);
 } 
-#pragma mark addObserver:toObjectsAtIndexes:forKeyPath:options:context:
+
 -(void)method013
 {
     NSMutableString *aString = [NSMutableString stringWithCapacity:1];
@@ -274,7 +267,7 @@
     //=>
 }
 
-#pragma mark addObserver:toObjectsAtIndexes:forKeyPath:options:context:
+#pragma mark addObserver:forKeyPath:options:context:
 -(void)method014
 {
     NSMutableString *aString = [NSMutableString stringWithCapacity:1];
@@ -745,7 +738,7 @@ NSInteger intSort(id val1, id val2, void *context)
     
 }
 
-#pragma mark initWithKey:
+#pragma mark NSSortDescriptor initWithKey:
 //NSArrayをソートする
 -(void)method033
 {
@@ -914,7 +907,7 @@ NSInteger intSort(id val1, id val2, void *context)
     
 }
 
-#pragma mark arrayWithObject
+#pragma mark arrayWithObject:
 -(void)method038
 {
     
@@ -1132,7 +1125,7 @@ NSInteger intSort(id val1, id val2, void *context)
     [self method008];
     [self method009];
     [self method010];
-    //[self method011];
+    [self method011];
     [self method012];
     [self method013];
     //[self method014];
@@ -1199,3 +1192,95 @@ NSInteger intSort(id val1, id val2, void *context)
 }
 
 @end
+
+
+
+//iOS 7.0 checked
+//Creating an Array
+//+ array
+//+ arrayWithArray:
+//012   + arrayWithContentsOfFile:
+//010   + arrayWithContentsOfURL:
+//009,038   + arrayWithObject:
+//008   + arrayWithObjects:
+//007   + arrayWithObjects:count:
+//Initializing an Array
+//– init
+//028   – initWithArray:
+//029   – initWithArray:copyItems:
+//031   – initWithContentsOfFile:
+//030   – initWithContentsOfURL:
+//001   – initWithObjects:
+//– initWithObjects:count:
+//Querying an Array
+//018   – containsObject:
+//019   – count
+//– getObjects:range:
+//– firstObject
+//– lastObject
+//– objectAtIndex:
+//– objectAtIndexedSubscript:
+//– objectsAtIndexes:
+//– objectEnumerator
+//– reverseObjectEnumerator
+//– getObjects: Deprecated in iOS 4.0
+//Finding Objects in an Array
+//– indexOfObject:
+//– indexOfObject:inRange:
+//– indexOfObjectIdenticalTo:
+//– indexOfObjectIdenticalTo:inRange:
+//002   – indexOfObjectPassingTest:
+//– indexOfObjectWithOptions:passingTest:
+//– indexOfObjectAtIndexes:options:passingTest:
+//– indexesOfObjectsPassingTest:
+//– indexesOfObjectsWithOptions:passingTest:
+//– indexesOfObjectsAtIndexes:options:passingTest:
+//036,037   – indexOfObject:inSortedRange:options:usingComparator:
+//Sending Messages to Elements
+//034   – makeObjectsPerformSelector:
+//– makeObjectsPerformSelector:withObject:
+//003,025   – enumerateObjectsUsingBlock:
+//024   – enumerateObjectsWithOptions:usingBlock:
+//– enumerateObjectsAtIndexes:options:usingBlock:
+//Comparing Arrays
+//– firstObjectCommonWithArray:
+//– isEqualToArray:
+//Deriving New Arrays
+//015   – arrayByAddingObject:
+//016   – arrayByAddingObjectsFromArray:
+//006,020   – filteredArrayUsingPredicate:
+//– subarrayWithRange:
+//Sorting
+//– sortedArrayHint
+//027   – sortedArrayUsingFunction:context:
+//– sortedArrayUsingFunction:context:hint:
+//– sortedArrayUsingDescriptors:
+//021   – sortedArrayUsingSelector:
+//004,026   – sortedArrayUsingComparator:
+//005   – sortedArrayWithOptions:usingComparator:
+//Working with String Elements
+//017   – componentsJoinedByString:
+//Creating a Description
+//022   – description
+//– descriptionWithLocale:
+//– descriptionWithLocale:indent:
+//023   – writeToFile:atomically:
+//011   – writeToURL:atomically:
+//Collecting Paths
+//– pathsMatchingExtensions:
+//Key-Value Observing
+//014   – addObserver:forKeyPath:options:context:
+//– removeObserver:forKeyPath:
+//– removeObserver:forKeyPath:context:
+//– removeObserver:fromObjectsAtIndexes:forKeyPath:context:
+//013   – addObserver:toObjectsAtIndexes:forKeyPath:options:context:
+//– removeObserver:fromObjectsAtIndexes:forKeyPath:
+//Key-Value Coding
+//035   – setValue:forKey:
+//– valueForKey:
+//
+//032   NSArray:高速列挙は高速か？
+//033   NSArrayをソートする
+//039〜041   KeyValue coding
+//042   KVO
+//043   NSArray NSNumberなどを含むことができるか
