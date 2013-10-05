@@ -11,6 +11,7 @@
 @implementation OOOAppDelegate
 
 #import <Accelerate/Accelerate.h>
+#import <mach/mach_time.h>
 
 #pragma mark vsinf サイン
 -(void)method001
@@ -21,13 +22,24 @@
         printf("%f,",resultArray[i]);
     //=>0.000000,0.841471,0.909297,0.141120,
     }
+    printf("\n");
+}
+-(void)method002
+{
+    vFloat valueArray = {0.0f,1.0f,2.0f,3.0f};
+    vFloat resultArray = vcosf(valueArray);
+    for (int i=0; i<4; i++) {
+        printf("%f,",resultArray[i]);
+        //=>1.000000,0.540302,-0.416147,-0.989992,
+    }
 }
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [self method001];
     
+    [self method001];
+    [self method002];
     
     
     return YES;

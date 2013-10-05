@@ -98,6 +98,7 @@
 				744F47FD14CA786000201B19 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		744F47FD14CA786000201B19 /* Products */ = {
 			isa = PBXGroup;
