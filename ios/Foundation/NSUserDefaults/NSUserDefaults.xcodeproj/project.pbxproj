@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45DD770D17FFD5C10017F3B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DD770C17FFD5C10017F3B0 /* Images.xcassets */; };
 		743630E015F624D40094497F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743630DF15F624D40094497F /* UIKit.framework */; };
 		743630E215F624D40094497F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743630E115F624D40094497F /* Foundation.framework */; };
 		743630E415F624D40094497F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743630E315F624D40094497F /* CoreGraphics.framework */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45DD770C17FFD5C10017F3B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		45DD770E17FFD6C80017F3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		45DD770F17FFD6C80017F3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		743630DB15F624D40094497F /* NSUserDefaults.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSUserDefaults.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		743630DF15F624D40094497F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		743630E115F624D40094497F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,8 +49,6 @@
 		743630ED15F624D40094497F /* NSUserDefaults-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults-Prefix.pch"; sourceTree = "<group>"; };
 		743630EE15F624D40094497F /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
 		743630EF15F624D40094497F /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
-		743630F215F624D40094497F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		743630F515F624D40094497F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		743630F715F624D40094497F /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		743630F815F624D40094497F /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
 		743630FF15F624D40094497F /* NSUserDefaultsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSUserDefaultsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				743630F415F624D40094497F /* MainStoryboard_iPad.storyboard */,
 				743630F715F624D40094497F /* OOOViewController.h */,
 				743630F815F624D40094497F /* OOOViewController.m */,
+				45DD770C17FFD5C10017F3B0 /* Images.xcassets */,
 				743630E615F624D40094497F /* Supporting Files */,
 			);
 			path = NSUserDefaults;
@@ -212,6 +215,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 743630D015F624D40094497F;
 			productRefGroup = 743630DC15F624D40094497F /* Products */;
@@ -230,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				743630EA15F624D40094497F /* InfoPlist.strings in Resources */,
+				45DD770D17FFD5C10017F3B0 /* Images.xcassets in Resources */,
 				743630F315F624D40094497F /* MainStoryboard_iPhone.storyboard in Resources */,
 				743630F615F624D40094497F /* MainStoryboard_iPad.storyboard in Resources */,
 				74FFC79917748CF9002EC79B /* Default-568h@2x.png in Resources */,
@@ -303,7 +308,7 @@
 		743630F115F624D40094497F /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				743630F215F624D40094497F /* en */,
+				45DD770E17FFD6C80017F3B0 /* Base */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -311,7 +316,7 @@
 		743630F415F624D40094497F /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				743630F515F624D40094497F /* en */,
+				45DD770F17FFD6C80017F3B0 /* Base */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
@@ -349,7 +354,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -370,7 +375,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -381,9 +386,12 @@
 		7436311215F624D40094497F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSUserDefaults/NSUserDefaults-Prefix.pch";
 				INFOPLIST_FILE = "NSUserDefaults/NSUserDefaults-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,9 +400,12 @@
 		7436311315F624D40094497F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSUserDefaults/NSUserDefaults-Prefix.pch";
 				INFOPLIST_FILE = "NSUserDefaults/NSUserDefaults-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

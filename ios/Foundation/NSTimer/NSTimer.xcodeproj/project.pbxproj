@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450B836B17FFE758005D5A03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450B836A17FFE758005D5A03 /* Images.xcassets */; };
 		7436322615FB72280094497F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7436322515FB72280094497F /* UIKit.framework */; };
 		7436322815FB72280094497F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7436322715FB72280094497F /* Foundation.framework */; };
 		7436322A15FB72280094497F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7436322915FB72280094497F /* CoreGraphics.framework */; };
@@ -36,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450B836A17FFE758005D5A03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		450B836C17FFE762005D5A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		450B836D17FFE762005D5A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		450B836E17FFE767005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPhone.strings; sourceTree = "<group>"; };
+		450B836F17FFE767005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
+		450B837017FFE767005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		450B837117FFE767005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7436322115FB72280094497F /* NSTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7436322515FB72280094497F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7436322715FB72280094497F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -46,8 +54,6 @@
 		7436323315FB72280094497F /* NSTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer-Prefix.pch"; sourceTree = "<group>"; };
 		7436323415FB72280094497F /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
 		7436323515FB72280094497F /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
-		7436323815FB72280094497F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		7436323B15FB72280094497F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		7436323D15FB72280094497F /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		7436323E15FB72280094497F /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
 		7436324515FB72280094497F /* NSTimerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSTimerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +133,7 @@
 				7436323E15FB72280094497F /* OOOViewController.m */,
 				7436326115FB92AC0094497F /* OOOView.h */,
 				7436326215FB92AC0094497F /* OOOView.m */,
+				450B836A17FFE758005D5A03 /* Images.xcassets */,
 				7436322C15FB72280094497F /* Supporting Files */,
 			);
 			path = NSTimer;
@@ -217,6 +224,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				ja,
 			);
 			mainGroup = 7436321615FB72280094497F;
 			productRefGroup = 7436322215FB72280094497F /* Products */;
@@ -235,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7436323015FB72280094497F /* InfoPlist.strings in Resources */,
+				450B836B17FFE758005D5A03 /* Images.xcassets in Resources */,
 				7436323915FB72280094497F /* MainStoryboard_iPhone.storyboard in Resources */,
 				7436323C15FB72280094497F /* MainStoryboard_iPad.storyboard in Resources */,
 				74FFC78F17748AD4002EC79B /* Default-568h@2x.png in Resources */,
@@ -302,6 +312,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7436322F15FB72280094497F /* en */,
+				450B837017FFE767005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -309,7 +320,8 @@
 		7436323715FB72280094497F /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7436323815FB72280094497F /* en */,
+				450B836C17FFE762005D5A03 /* Base */,
+				450B836E17FFE767005D5A03 /* ja */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -317,7 +329,8 @@
 		7436323A15FB72280094497F /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7436323B15FB72280094497F /* en */,
+				450B836D17FFE762005D5A03 /* Base */,
+				450B836F17FFE767005D5A03 /* ja */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
@@ -326,6 +339,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7436325015FB72280094497F /* en */,
+				450B837117FFE767005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -358,7 +372,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,7 +396,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -393,9 +407,12 @@
 		7436325815FB72280094497F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSTimer/NSTimer-Prefix.pch";
 				INFOPLIST_FILE = "NSTimer/NSTimer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -404,9 +421,12 @@
 		7436325915FB72280094497F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSTimer/NSTimer-Prefix.pch";
 				INFOPLIST_FILE = "NSTimer/NSTimer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

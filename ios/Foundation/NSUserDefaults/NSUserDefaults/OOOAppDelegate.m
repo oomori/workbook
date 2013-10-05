@@ -138,7 +138,11 @@ NSDictionary *userDefaultsForUser(int uid, NSString *domain) {
     [defaults setPersistentDomain:@{@"key1": @"value1"} forName:@"com.oomori.DefaultsTest"];
     [defaults synchronize];
     
-    NSLog(@"%s %@",__FUNCTION__,[defaults persistentDomainNames]);
+    //NSLog(@"%s %@",__FUNCTION__,[defaults persistentDomainNames]);
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    NSLog(@"%s %@",__FUNCTION__,[defaults persistentDomainForName:appDomain]);
+    
+    
     
     NSDictionary *dic = [defaults persistentDomainForName:@"com.oomori.DefaultsTest"];
     
@@ -150,7 +154,9 @@ NSDictionary *userDefaultsForUser(int uid, NSString *domain) {
     
     [defaults setPersistentDomain:aDict forName:@"com.oomori.DefaultsTest"];
     
-    NSLog(@"%s %@",__FUNCTION__,[defaults persistentDomainNames]);
+    //NSLog(@"%s %@",__FUNCTION__,[defaults persistentDomainNames]);
+    NSLog(@"%s %@",__FUNCTION__,[defaults persistentDomainForName:appDomain]);
+    
     
     NSLog(@"%s %@",__FUNCTION__,[defaults volatileDomainNames]);
     

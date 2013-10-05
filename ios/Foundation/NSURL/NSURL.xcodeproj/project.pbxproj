@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45DD772517FFDD760017F3B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DD772417FFDD760017F3B0 /* Images.xcassets */; };
 		740EEEDE15CC89BB00CE53B5 /* iconimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 740EEEDD15CC89BB00CE53B5 /* iconimage.png */; };
 		74C7737B15BBD82300AF2DC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C7737A15BBD82300AF2DC0 /* UIKit.framework */; };
 		74C7737D15BBD82300AF2DC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C7737C15BBD82300AF2DC0 /* Foundation.framework */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45DD772417FFDD760017F3B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		45DD772617FFDD870017F3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		45DD772717FFDD870017F3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		740EEEDD15CC89BB00CE53B5 /* iconimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconimage.png; sourceTree = "<group>"; };
 		742D0E4915BD7D9E00D44B4D /* NSURL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = NSURL.entitlements; sourceTree = "<group>"; };
 		74C7737615BBD82300AF2DC0 /* NSURL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSURL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,8 +52,6 @@
 		74C7738815BBD82300AF2DC0 /* NSURL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL-Prefix.pch"; sourceTree = "<group>"; };
 		74C7738915BBD82300AF2DC0 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
 		74C7738A15BBD82300AF2DC0 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
-		74C7738D15BBD82300AF2DC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		74C7739015BBD82300AF2DC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		74C7739215BBD82300AF2DC0 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		74C7739315BBD82300AF2DC0 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
 		74C7739A15BBD82300AF2DC0 /* NSURLTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSURLTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 				74C7738F15BBD82300AF2DC0 /* MainStoryboard_iPad.storyboard */,
 				74C7739215BBD82300AF2DC0 /* OOOViewController.h */,
 				74C7739315BBD82300AF2DC0 /* OOOViewController.m */,
+				45DD772417FFDD760017F3B0 /* Images.xcassets */,
 				74C7738115BBD82300AF2DC0 /* Supporting Files */,
 			);
 			path = NSURL;
@@ -216,6 +219,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 74C7736B15BBD82300AF2DC0;
 			productRefGroup = 74C7737715BBD82300AF2DC0 /* Products */;
@@ -236,6 +240,7 @@
 				74C7738515BBD82300AF2DC0 /* InfoPlist.strings in Resources */,
 				74C7738E15BBD82300AF2DC0 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74C7739115BBD82300AF2DC0 /* MainStoryboard_iPad.storyboard in Resources */,
+				45DD772517FFDD760017F3B0 /* Images.xcassets in Resources */,
 				740EEEDE15CC89BB00CE53B5 /* iconimage.png in Resources */,
 				74FFC79D17751967002EC79B /* Default-568h@2x.png in Resources */,
 			);
@@ -308,7 +313,7 @@
 		74C7738C15BBD82300AF2DC0 /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				74C7738D15BBD82300AF2DC0 /* en */,
+				45DD772617FFDD870017F3B0 /* Base */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -316,7 +321,7 @@
 		74C7738F15BBD82300AF2DC0 /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				74C7739015BBD82300AF2DC0 /* en */,
+				45DD772717FFDD870017F3B0 /* Base */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
@@ -357,7 +362,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PROVISIONING_PROFILE = "15A13796-3547-4297-8EBF-A54EFD3B3167";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -382,7 +387,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "15A13796-3547-4297-8EBF-A54EFD3B3167";
 				SDKROOT = iphoneos;
@@ -394,10 +399,13 @@
 		74C773AD15BBD82400AF2DC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = NSURL/NSURL.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSURL/NSURL-Prefix.pch";
 				INFOPLIST_FILE = "NSURL/NSURL-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -406,10 +414,13 @@
 		74C773AE15BBD82400AF2DC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = NSURL/NSURL.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSURL/NSURL-Prefix.pch";
 				INFOPLIST_FILE = "NSURL/NSURL-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

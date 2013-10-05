@@ -35,7 +35,7 @@
     - (void)myAction;
     //POP3ÉRÉ}ÉìÉhëóêM
     
-    -(NSString *)convertOpenSSL:(NSString *)key;
+    //-(NSString *)convertOpenSSL:(NSString *)key;
     
     - (void)sendAPOP:(NSString *)userNameString hash:(NSString *)hash;
     - (void)sendUser:(NSString *)userName;
@@ -56,7 +56,7 @@
     - (void)handleInputStreamEvent:(NSStreamEvent)eventCode  stream:(NSStream *)aStream ;
     - (void)handleOutputStreamEvent:(NSStreamEvent)eventCode  stream:(NSStream *)aStream ;
     
-    -(void)pop3RecieveComplete:(id)sender;
+    //-(void)pop3RecieveComplete:(id)sender;
     
     //ëóêM
     -(void)outputCommand:(NSString *)command commandCode:(int)commandCode;

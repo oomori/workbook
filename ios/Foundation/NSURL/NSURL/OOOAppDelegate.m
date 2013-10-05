@@ -1597,17 +1597,24 @@ didReceiveResponse:(NSURLResponse *)response
 //NSURLNameKey
 -(void)method087
 {
+    /*
     NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filename = @"testWritecharset.bitmap";
-    NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
+    
+     NSURL *absoluteURL = [NSURL fileURLWithPathComponents:@[documentsDirectory, filename]];
     //
     NSError* error = nil;
     NSString* URLUbiquitousItemPercentUploadedKey = nil;
+    
     [absoluteURL getResourceValue:&URLUbiquitousItemPercentUploadedKey
                            forKey:NSURLUbiquitousItemPercentUploadedKey
                             error:&error];
     
+    //NSURLUbiquitousItemPercentUploadedKey（転送率）はiOS6.0で非推奨です。
+    //NSMetadataItemでは NSMetadataQuery と NSMetadataUbiquitousItemPercentUploadedKey を使います。
+    
     NSLog(@"%s %@,%@",__FUNCTION__,[URLUbiquitousItemPercentUploadedKey class],[URLUbiquitousItemPercentUploadedKey description]);
+     */
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

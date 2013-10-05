@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45DD76F117FFD1060017F3B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DD76F017FFD1060017F3B0 /* Images.xcassets */; };
 		74B64AD3155664D600ED8E35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B64AD2155664D600ED8E35 /* UIKit.framework */; };
 		74B64AD5155664D600ED8E35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B64AD4155664D600ED8E35 /* Foundation.framework */; };
 		74B64AD7155664D600ED8E35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B64AD6155664D600ED8E35 /* CoreGraphics.framework */; };
@@ -40,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45DD76F017FFD1060017F3B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		45DD76F217FFD1770017F3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		45DD76F317FFD1770017F3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		74B64ACE155664D600ED8E35 /* NSBundle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSBundle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B64AD2155664D600ED8E35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74B64AD4155664D600ED8E35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,8 +54,6 @@
 		74B64AE0155664D600ED8E35 /* NSBundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle-Prefix.pch"; sourceTree = "<group>"; };
 		74B64AE1155664D600ED8E35 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
 		74B64AE2155664D600ED8E35 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
-		74B64AE5155664D600ED8E35 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		74B64AE8155664D600ED8E35 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		74B64AEA155664D600ED8E35 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		74B64AEB155664D600ED8E35 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
 		74B64AF2155664D600ED8E35 /* NSBundleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSBundleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 				74B64AE7155664D600ED8E35 /* MainStoryboard_iPad.storyboard */,
 				74B64AEA155664D600ED8E35 /* OOOViewController.h */,
 				74B64AEB155664D600ED8E35 /* OOOViewController.m */,
+				45DD76F017FFD1060017F3B0 /* Images.xcassets */,
 				74B64AD9155664D600ED8E35 /* Supporting Files */,
 			);
 			path = NSBundle;
@@ -231,6 +234,7 @@
 			knownRegions = (
 				en,
 				ja,
+				Base,
 			);
 			mainGroup = 74B64AC3155664D600ED8E35;
 			productRefGroup = 74B64ACF155664D600ED8E35 /* Products */;
@@ -249,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74B64ADD155664D600ED8E35 /* InfoPlist.strings in Resources */,
+				45DD76F117FFD1060017F3B0 /* Images.xcassets in Resources */,
 				74B64AE6155664D600ED8E35 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74B64AE9155664D600ED8E35 /* MainStoryboard_iPad.storyboard in Resources */,
 				74E2439D15A871A8003F32AD /* MyAppIcon.png in Resources */,
@@ -327,8 +332,8 @@
 		74B64AE4155664D600ED8E35 /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				74B64AE5155664D600ED8E35 /* en */,
 				74E244A015A91D63003F32AD /* ja */,
+				45DD76F217FFD1770017F3B0 /* Base */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -336,8 +341,8 @@
 		74B64AE7155664D600ED8E35 /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				74B64AE8155664D600ED8E35 /* en */,
 				74E244A115A91D77003F32AD /* ja */,
+				45DD76F317FFD1770017F3B0 /* Base */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
@@ -433,9 +438,12 @@
 		74B64B05155664D600ED8E35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSBundle/NSBundle-Prefix.pch";
 				INFOPLIST_FILE = "NSBundle/NSBundle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -444,9 +452,12 @@
 		74B64B06155664D600ED8E35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSBundle/NSBundle-Prefix.pch";
 				INFOPLIST_FILE = "NSBundle/NSBundle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

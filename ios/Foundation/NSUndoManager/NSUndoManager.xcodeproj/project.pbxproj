@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45DD772917FFE1A10017F3B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DD772817FFE1A10017F3B0 /* Images.xcassets */; };
 		748C7E5C160EF13600ABE126 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E5B160EF13600ABE126 /* UIKit.framework */; };
 		748C7E5E160EF13600ABE126 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E5D160EF13600ABE126 /* Foundation.framework */; };
 		748C7E60160EF13600ABE126 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E5F160EF13600ABE126 /* CoreGraphics.framework */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45DD772817FFE1A10017F3B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		45DD772A17FFE1B20017F3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		45DD772B17FFE1B20017F3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		748C7E57160EF13600ABE126 /* NSUndoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSUndoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748C7E5B160EF13600ABE126 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		748C7E5D160EF13600ABE126 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -46,8 +50,6 @@
 		748C7E69160EF13600ABE126 /* NSUndoManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUndoManager-Prefix.pch"; sourceTree = "<group>"; };
 		748C7E6A160EF13600ABE126 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
 		748C7E6B160EF13600ABE126 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
-		748C7E6E160EF13600ABE126 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		748C7E71160EF13600ABE126 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		748C7E73160EF13600ABE126 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		748C7E74160EF13600ABE126 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
 		748C7E7B160EF13700ABE126 /* NSUndoManagerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSUndoManagerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 				748C7E74160EF13600ABE126 /* OOOViewController.m */,
 				748C7EE6160EF8A400ABE126 /* OOOPresonList.h */,
 				748C7EE7160EF8A400ABE126 /* OOOPresonList.m */,
+				45DD772817FFE1A10017F3B0 /* Images.xcassets */,
 				748C7E62160EF13600ABE126 /* Supporting Files */,
 			);
 			path = NSUndoManager;
@@ -217,6 +220,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 748C7E4C160EF13600ABE126;
 			productRefGroup = 748C7E58160EF13600ABE126 /* Products */;
@@ -235,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				748C7E66160EF13600ABE126 /* InfoPlist.strings in Resources */,
+				45DD772917FFE1A10017F3B0 /* Images.xcassets in Resources */,
 				748C7E6F160EF13600ABE126 /* MainStoryboard_iPhone.storyboard in Resources */,
 				748C7E72160EF13600ABE126 /* MainStoryboard_iPad.storyboard in Resources */,
 				74FFC79F177519AF002EC79B /* Default-568h@2x.png in Resources */,
@@ -309,7 +314,7 @@
 		748C7E6D160EF13600ABE126 /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				748C7E6E160EF13600ABE126 /* en */,
+				45DD772A17FFE1B20017F3B0 /* Base */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -317,7 +322,7 @@
 		748C7E70160EF13600ABE126 /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				748C7E71160EF13600ABE126 /* en */,
+				45DD772B17FFE1B20017F3B0 /* Base */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
@@ -355,7 +360,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -376,7 +381,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -387,9 +392,12 @@
 		748C7E8E160EF13700ABE126 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSUndoManager/NSUndoManager-Prefix.pch";
 				INFOPLIST_FILE = "NSUndoManager/NSUndoManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -398,9 +406,12 @@
 		748C7E8F160EF13700ABE126 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSUndoManager/NSUndoManager-Prefix.pch";
 				INFOPLIST_FILE = "NSUndoManager/NSUndoManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
