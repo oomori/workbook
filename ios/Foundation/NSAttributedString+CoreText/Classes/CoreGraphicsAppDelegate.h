@@ -11,11 +11,11 @@
 @class CoreGraphicsViewController;
 
 @interface CoreGraphicsAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *__weak window;
+    UIWindow *window;
     CoreGraphicsViewController *__weak viewController;
 }
 
-@property (weak, nonatomic) IBOutlet UIWindow *window;
+@property (retain, nonatomic) IBOutlet UIWindow *window;
 @property (weak, nonatomic) IBOutlet CoreGraphicsViewController *viewController;
 
 @end

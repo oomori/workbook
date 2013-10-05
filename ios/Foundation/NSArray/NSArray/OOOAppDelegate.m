@@ -3,8 +3,9 @@
 //  NSArray
 //
 //  Created by 大森 智史 on 12/04/15.
-//  Copyright (c) 2012年 Satoshi Oomori. All rights reserved.
+//  Copyright (c) 2012-2013 Satoshi Oomori. All rights reserved.
 //  ARC ON
+// 2013.10.4 7.0 update
 
 #import <mach/mach_time.h>
 #import "OOOAppDelegate.h"

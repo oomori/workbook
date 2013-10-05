@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B0599943-245C-42DB-8F89-8BA4100EAE98</string>
+	<string>64F370AB-28DE-4F96-B5AA-55451A416EF1</string>
 	<key>IDESourceControlProjectName</key>
-	<string>NSAttributedString</string>
+	<string>CoreGraphics</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E53E2FC9-8C09-4015-A1A4-3DE7E0FC2D99</key>
 		<string>https://github.com/oomori/workbook.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ios/Foundation/NSAttributedString/NSAttributedString.xcodeproj/project.xcworkspace</string>
+	<string>ios/Foundation/NSAttributedString+CoreText/CoreGraphics.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E53E2FC9-8C09-4015-A1A4-3DE7E0FC2D99</key>

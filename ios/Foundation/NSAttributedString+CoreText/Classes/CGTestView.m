@@ -107,21 +107,21 @@
     
     NSRange bRange; 
     NSLog(@"%@",[[amText attributesAtIndex:93 effectiveRange:&bRange] description]);
-    NSLog(@"%d,%d",bRange.location,bRange.length);
+    NSLog(@"%lu,%lu",(unsigned long)bRange.location,(unsigned long)bRange.length);
     
     NSLog(@"%@",[[amText attributesAtIndex:1 
                 longestEffectiveRange:&bRange
                               inRange:NSMakeRange(0,100)
             ]
            description]);
-    NSLog(@"%d,%d",bRange.location,bRange.length);
+    NSLog(@"%lu,%lu",(unsigned long)bRange.location,(unsigned long)bRange.length);
     //------------------------------------------------------
     NSLog(@"%@",[[amText attribute:@"NSFont" 
                       atIndex:1 
                effectiveRange:&bRange
             ]
            description]);
-    NSLog(@"%d,%d",bRange.location,bRange.length);
+    NSLog(@"%lu,%lu",(unsigned long)bRange.location,(unsigned long)bRange.length);
     
     NSLog(([grayString isEqualToAttributedString:redString])?@"YES":@"NO");
     

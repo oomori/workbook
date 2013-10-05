@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45DD76A317FFA8FD0017F3B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DD76A217FFA8FD0017F3B0 /* Images.xcassets */; };
 		74243EF31774886B00A37179 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74243EF21774886B00A37179 /* Default-568h@2x.png */; };
 		74C60355155F55EA0047301E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60354155F55EA0047301E /* UIKit.framework */; };
 		74C60357155F55EA0047301E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60356155F55EA0047301E /* Foundation.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45DD76A217FFA8FD0017F3B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		74243EF21774886B00A37179 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		74C60350155F55EA0047301E /* NSBlockOperation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSBlockOperation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C60354155F55EA0047301E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -122,6 +124,7 @@
 				74C60369155F55EA0047301E /* MainStoryboard_iPad.storyboard */,
 				74C6036C155F55EA0047301E /* OOOViewController.h */,
 				74C6036D155F55EA0047301E /* OOOViewController.m */,
+				45DD76A217FFA8FD0017F3B0 /* Images.xcassets */,
 				74C6035B155F55EA0047301E /* Supporting Files */,
 			);
 			path = NSBlockOperation;
@@ -204,6 +207,11 @@
 			attributes = {
 				CLASSPREFIX = OOO;
 				LastUpgradeCheck = 0460;
+				TargetAttributes = {
+					74C6034F155F55EA0047301E = {
+						DevelopmentTeam = GNEUW459LJ;
+					};
+				};
 			};
 			buildConfigurationList = 74C6034A155F55EA0047301E /* Build configuration list for PBXProject "NSBlockOperation" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -229,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74C6035F155F55EA0047301E /* InfoPlist.strings in Resources */,
+				45DD76A317FFA8FD0017F3B0 /* Images.xcassets in Resources */,
 				74C60368155F55EA0047301E /* MainStoryboard_iPhone.storyboard in Resources */,
 				74C6036B155F55EA0047301E /* MainStoryboard_iPad.storyboard in Resources */,
 				74243EF31774886B00A37179 /* Default-568h@2x.png in Resources */,
@@ -384,11 +393,16 @@
 		74C60387155F55EA0047301E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSBlockOperation/NSBlockOperation-Prefix.pch";
 				INFOPLIST_FILE = "NSBlockOperation/NSBlockOperation-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -396,11 +410,16 @@
 		74C60388155F55EA0047301E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSBlockOperation/NSBlockOperation-Prefix.pch";
 				INFOPLIST_FILE = "NSBlockOperation/NSBlockOperation-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

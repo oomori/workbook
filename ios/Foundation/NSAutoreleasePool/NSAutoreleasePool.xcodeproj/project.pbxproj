@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45DD76A117FFA7C20017F3B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DD76A017FFA7C20017F3B0 /* Images.xcassets */; };
 		7423748516980D3700EE7A3E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7423748416980D3700EE7A3E /* Default-568h@2x.png */; };
 		74923F24155D3FAF007A1C90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74923F23155D3FAF007A1C90 /* UIKit.framework */; };
 		74923F26155D3FAF007A1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74923F25155D3FAF007A1C90 /* Foundation.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45DD76A017FFA7C20017F3B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7423748416980D3700EE7A3E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		74923F1F155D3FAF007A1C90 /* NSAutoreleasePool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSAutoreleasePool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74923F23155D3FAF007A1C90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -122,6 +124,7 @@
 				74923F38155D3FAF007A1C90 /* MainStoryboard_iPad.storyboard */,
 				74923F3B155D3FAF007A1C90 /* OOOViewController.h */,
 				74923F3C155D3FAF007A1C90 /* OOOViewController.m */,
+				45DD76A017FFA7C20017F3B0 /* Images.xcassets */,
 				74923F2A155D3FAF007A1C90 /* Supporting Files */,
 			);
 			path = NSAutoreleasePool;
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74923F2E155D3FAF007A1C90 /* InfoPlist.strings in Resources */,
+				45DD76A117FFA7C20017F3B0 /* Images.xcassets in Resources */,
 				74923F37155D3FAF007A1C90 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74923F3A155D3FAF007A1C90 /* MainStoryboard_iPad.storyboard in Resources */,
 				7423748516980D3700EE7A3E /* Default-568h@2x.png in Resources */,
@@ -384,6 +388,8 @@
 		74923F56155D3FAF007A1C90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSAutoreleasePool/NSAutoreleasePool-Prefix.pch";
 				INFOPLIST_FILE = "NSAutoreleasePool/NSAutoreleasePool-Info.plist";
@@ -396,6 +402,8 @@
 		74923F57155D3FAF007A1C90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSAutoreleasePool/NSAutoreleasePool-Prefix.pch";
 				INFOPLIST_FILE = "NSAutoreleasePool/NSAutoreleasePool-Info.plist";

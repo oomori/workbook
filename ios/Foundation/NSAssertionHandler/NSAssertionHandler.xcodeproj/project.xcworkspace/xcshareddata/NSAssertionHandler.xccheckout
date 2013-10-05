@@ -2,20 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6CE13F99-81C2-4770-A964-A3F62C47D99D</string>
+	<string>2D5A07BD-0572-4679-9FE3-797671178DCD</string>
 	<key>IDESourceControlProjectName</key>
 	<string>NSAssertionHandler</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E62DC74A-A854-42DB-B023-EE5DB2853037</key>
+		<key>E53E2FC9-8C09-4015-A1A4-3DE7E0FC2D99</key>
 		<string>https://github.com/oomori/workbook.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ios/Foundation/NSAssertionHandler/NSAssertionHandler.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E62DC74A-A854-42DB-B023-EE5DB2853037</key>
+		<key>E53E2FC9-8C09-4015-A1A4-3DE7E0FC2D99</key>
 		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -23,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E62DC74A-A854-42DB-B023-EE5DB2853037</string>
+	<string>E53E2FC9-8C09-4015-A1A4-3DE7E0FC2D99</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E62DC74A-A854-42DB-B023-EE5DB2853037</string>
+			<string>E53E2FC9-8C09-4015-A1A4-3DE7E0FC2D99</string>
 			<key>IDESourceControlWCCName</key>
 			<string>workbook</string>
 		</dict>
