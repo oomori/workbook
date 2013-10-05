@@ -14,6 +14,43 @@
 
 @implementation OOOViewController
 
+
+
+-(IBAction)button001:(id)sender
+{
+    NSAttributedString *aString;
+        aString = [[NSAttributedString alloc] initWithString:@"string"
+              attributes:@{NSFontAttributeName:[UIFont fontWithName:@"HiraKakuProN-W6" size:12.0f],
+                            NSForegroundColorAttributeName:[UIColor redColor]}
+                                                                                ];
+    
+    _label.attributedText = aString;
+    
+}
+
+-(IBAction)button002:(id)sender
+{
+    
+    //段落スタイル
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 20.f;
+    paragraphStyle.minimumLineHeight = 10.f;
+    paragraphStyle.maximumLineHeight = 100.f;
+    
+    NSDictionary *fontAttributes = @{NSFontAttributeName:[UIFont fontWithName:@"HiraKakuProN-W6" size:12.0f],
+        NSForegroundColorAttributeName:[UIColor blueColor],
+        NSParagraphStyleAttributeName:paragraphStyle
+                                     };
+    
+    NSAttributedString *aString = [[NSAttributedString alloc] initWithString:@"この文字列は002のメソッドから書いています。行間が通常とは違っていると思いますが、これは段落設定をしているからです。"  attributes:fontAttributes];
+    
+    _textView.attributedText = aString;
+    
+}
+-(IBAction)button003:(id)sender
+{
+    
+}
 #pragma mark initWithString:
 -(void)method001
 {
@@ -21,6 +58,7 @@
     
     NSAttributedString *aString = [[NSAttributedString alloc] initWithString:@"string"];
     
+    _label.attributedText = aString;
     NSLog(@"%s %@",__FUNCTION__,[aString description]);
     
     

@@ -11,5 +11,9 @@
 @interface OOOViewController : UIViewController
 {
     CALayer *aLayer;
+    IBOutlet UILabel *_label;
+    IBOutlet UIButton *_button;
+    IBOutlet UITextView *_textView;
 }
+-(IBAction)button003:(id)sender;
 @end

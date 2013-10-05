@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E712D823-1E48-45F1-A161-041D57E00FE1</string>
+	<string>52E3E4FF-4BDD-4511-A079-2622B5FA53F8</string>
 	<key>IDESourceControlProjectName</key>
-	<string>NSBlockOperation</string>
+	<string>Accelerate</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E53E2FC9-8C09-4015-A1A4-3DE7E0FC2D99</key>
 		<string>https://github.com/oomori/workbook.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ios/Foundation/NSBlockOperation/NSBlockOperation.xcodeproj/project.xcworkspace</string>
+	<string>ios/Accelerate/Accelerate/Accelerate.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E53E2FC9-8C09-4015-A1A4-3DE7E0FC2D99</key>
