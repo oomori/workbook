@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450B83A317FFEDCE005D5A03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450B83A217FFEDCE005D5A03 /* Images.xcassets */; };
 		74B64A2D155637A900ED8E35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B64A2C155637A900ED8E35 /* UIKit.framework */; };
 		74B64A2F155637A900ED8E35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B64A2E155637A900ED8E35 /* Foundation.framework */; };
 		74B64A31155637A900ED8E35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B64A30155637A900ED8E35 /* CoreGraphics.framework */; };
@@ -34,6 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450B83A217FFEDCE005D5A03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		450B83A417FFEDDD005D5A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		450B83A517FFEDDD005D5A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		450B83A617FFEDE2005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPhone.strings; sourceTree = "<group>"; };
+		450B83A717FFEDE2005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
+		450B83A817FFEDE2005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		450B83A917FFEDE2005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74B64A28155637A900ED8E35 /* NSRegularExpression.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSRegularExpression.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B64A2C155637A900ED8E35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74B64A2E155637A900ED8E35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,8 +52,6 @@
 		74B64A3A155637A900ED8E35 /* NSRegularExpression-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression-Prefix.pch"; sourceTree = "<group>"; };
 		74B64A3B155637A900ED8E35 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
 		74B64A3C155637A900ED8E35 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
-		74B64A3F155637A900ED8E35 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		74B64A42155637A900ED8E35 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		74B64A44155637A900ED8E35 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		74B64A45155637A900ED8E35 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
 		74B64A4C155637A900ED8E35 /* NSRegularExpressionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSRegularExpressionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +125,7 @@
 				74B64A41155637A900ED8E35 /* MainStoryboard_iPad.storyboard */,
 				74B64A44155637A900ED8E35 /* OOOViewController.h */,
 				74B64A45155637A900ED8E35 /* OOOViewController.m */,
+				450B83A217FFEDCE005D5A03 /* Images.xcassets */,
 				74B64A33155637A900ED8E35 /* Supporting Files */,
 			);
 			path = NSRegularExpression;
@@ -208,6 +215,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				ja,
 			);
 			mainGroup = 74B64A1D155637A900ED8E35;
 			productRefGroup = 74B64A29155637A900ED8E35 /* Products */;
@@ -226,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74B64A37155637A900ED8E35 /* InfoPlist.strings in Resources */,
+				450B83A317FFEDCE005D5A03 /* Images.xcassets in Resources */,
 				74B64A40155637A900ED8E35 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74B64A43155637A900ED8E35 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
@@ -291,6 +301,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				74B64A36155637A900ED8E35 /* en */,
+				450B83A817FFEDE2005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -298,7 +309,8 @@
 		74B64A3E155637A900ED8E35 /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				74B64A3F155637A900ED8E35 /* en */,
+				450B83A417FFEDDD005D5A03 /* Base */,
+				450B83A617FFEDE2005D5A03 /* ja */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -306,7 +318,8 @@
 		74B64A41155637A900ED8E35 /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				74B64A42155637A900ED8E35 /* en */,
+				450B83A517FFEDDD005D5A03 /* Base */,
+				450B83A717FFEDE2005D5A03 /* ja */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
@@ -315,6 +328,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				74B64A57155637A900ED8E35 /* en */,
+				450B83A917FFEDE2005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -342,7 +356,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -361,7 +375,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,9 +386,12 @@
 		74B64A5F155637A900ED8E35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSRegularExpression/NSRegularExpression-Prefix.pch";
 				INFOPLIST_FILE = "NSRegularExpression/NSRegularExpression-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -383,9 +400,12 @@
 		74B64A60155637A900ED8E35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSRegularExpression/NSRegularExpression-Prefix.pch";
 				INFOPLIST_FILE = "NSRegularExpression/NSRegularExpression-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -444,6 +464,7 @@
 				74B64A60155637A900ED8E35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74B64A61155637A900ED8E35 /* Build configuration list for PBXNativeTarget "NSRegularExpressionTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +473,7 @@
 				74B64A63155637A900ED8E35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
