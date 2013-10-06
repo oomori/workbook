@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--First View Controller - First-->
         <scene sceneID="11">
             <objects>
                 <viewController title="First" id="2" customClass="OOOFirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pTd-zy-JGK"/>
+                        <viewControllerLayoutGuide type="bottom" id="svJ-qe-re0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="16">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="no4-Im-MEA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="no4-Im-MEA">
+                                <rect key="frame" x="0.0" y="0.0" width="326" height="369"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="369" id="NcC-b0-Xvo"/>
                                     <constraint firstAttribute="width" constant="326" id="Pjo-Tp-jVT"/>
                                 </constraints>
-                                <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackOpaque" text="" id="IPP-MI-eju">
+                                <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" text="" id="IPP-MI-eju">
                                     <rect key="frame" x="0.0" y="0.0" width="326" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -30,11 +36,10 @@
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" id="1qx-wC-Csa">
                                         <rect key="frame" x="0.0" y="66" width="326" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="306" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1qx-wC-Csa" id="x7v-DV-mhD">
+                                            <rect key="frame" x="0.0" y="0.0" width="293" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -46,19 +51,16 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKM-i1-xko">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="14" y="467" width="46" height="30"/>
                                 <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="search:" destination="2" eventType="touchUpInside" id="fSI-H6-HpA"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJO-hi-FiT">
+                                <rect key="frame" x="14" y="377" width="295" height="97"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="295" id="231-ZV-p7d"/>
@@ -73,11 +75,11 @@ linked to http://nlpwww.nict.go.jp/wn-ja/</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BKM-i1-xko" firstAttribute="top" secondItem="16" secondAttribute="top" constant="467" id="4q2-cd-a0h"/>
-                            <constraint firstItem="no4-Im-MEA" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="8ZM-KE-OT9"/>
-                            <constraint firstItem="hJO-hi-FiT" firstAttribute="top" secondItem="no4-Im-MEA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HhW-xO-eGH"/>
+                            <constraint firstItem="no4-Im-MEA" firstAttribute="top" secondItem="16" secondAttribute="top" id="8ZM-KE-OT9"/>
+                            <constraint firstItem="hJO-hi-FiT" firstAttribute="top" secondItem="no4-Im-MEA" secondAttribute="bottom" constant="8" symbolic="YES" id="HhW-xO-eGH"/>
                             <constraint firstItem="hJO-hi-FiT" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="14" id="JoZ-ZI-ge2"/>
-                            <constraint firstItem="hJO-hi-FiT" firstAttribute="leading" secondItem="BKM-i1-xko" secondAttribute="leading" type="default" id="NhH-BP-z2F"/>
-                            <constraint firstItem="no4-Im-MEA" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="jbn-C7-ip7"/>
+                            <constraint firstItem="hJO-hi-FiT" firstAttribute="leading" secondItem="BKM-i1-xko" secondAttribute="leading" id="NhH-BP-z2F"/>
+                            <constraint firstItem="no4-Im-MEA" firstAttribute="leading" secondItem="16" secondAttribute="leading" id="jbn-C7-ip7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="first" id="7"/>
@@ -103,8 +105,12 @@ linked to http://nlpwww.nict.go.jp/wn-ja/</string>
         <scene sceneID="yYY-Yq-tDd">
             <objects>
                 <viewController id="dX6-PI-d4i" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NrK-rw-lty"/>
+                        <viewControllerLayoutGuide type="bottom" id="wMh-7Q-LsW"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="usi-o1-lLR">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -118,30 +124,31 @@ linked to http://nlpwww.nict.go.jp/wn-ja/</string>
         <scene sceneID="13">
             <objects>
                 <viewController title="Second" id="3" customClass="OOOSecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xl7-8k-Ose"/>
+                        <viewControllerLayoutGuide type="bottom" id="aWN-xY-vow"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="17">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBb-sO-kaf">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="14" y="524" width="46" height="30"/>
                                 <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="search:" destination="3" eventType="touchUpInside" id="LaA-qc-Bag"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yU6-P6-GuO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yU6-P6-GuO">
+                                <rect key="frame" x="0.0" y="0.0" width="326" height="369"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="369" id="Ypa-gc-Acz"/>
                                     <constraint firstAttribute="width" constant="326" id="fqg-KF-Mra"/>
                                 </constraints>
-                                <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackOpaque" text="" id="naC-Im-q2h">
+                                <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" text="" id="naC-Im-q2h">
                                     <rect key="frame" x="0.0" y="0.0" width="326" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -153,11 +160,10 @@ linked to http://nlpwww.nict.go.jp/wn-ja/</string>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" id="vQx-vy-gFW">
                                         <rect key="frame" x="0.0" y="66" width="326" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="306" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vQx-vy-gFW" id="R7Y-xq-bHd">
+                                            <rect key="frame" x="0.0" y="0.0" width="293" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -171,10 +177,10 @@ linked to http://nlpwww.nict.go.jp/wn-ja/</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yU6-P6-GuO" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="5Pg-iu-0om"/>
+                            <constraint firstItem="yU6-P6-GuO" firstAttribute="top" secondItem="17" secondAttribute="top" id="5Pg-iu-0om"/>
                             <constraint firstItem="sBb-sO-kaf" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="14" id="MXa-Iv-ygt"/>
                             <constraint firstAttribute="bottom" secondItem="sBb-sO-kaf" secondAttribute="bottom" constant="14" id="Mmr-vA-eM1"/>
-                            <constraint firstItem="yU6-P6-GuO" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="tUu-uy-Qey"/>
+                            <constraint firstItem="yU6-P6-GuO" firstAttribute="leading" secondItem="17" secondAttribute="leading" id="tUu-uy-Qey"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Synset" image="second" id="6"/>
@@ -220,25 +226,6 @@ linked to http://nlpwww.nict.go.jp/wn-ja/</string>
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="OOOFirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OOOFirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="search:"/>
-                <relationship kind="outlet" name="searchField" candidateClass="UISearchBar"/>
-            </relationships>
-        </class>
-        <class className="OOOSecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OOOSecondViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="search:"/>
-                <relationship kind="outlet" name="searchField" candidateClass="UISearchBar"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
