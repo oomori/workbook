@@ -30,6 +30,8 @@
     [mapView setRegion:MKCoordinateRegionMake(mapView.userLocation.coordinate, MKCoordinateSpanMake(15, 5)) animated:YES];
     
 }
+- (IBAction)method002:(id)sender {
+}
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {  
     mapView.centerCoordinate = mapView.userLocation.location.coordinate;  

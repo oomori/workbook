@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450B83BB1800DD78005D5A03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450B83BA1800DD78005D5A03 /* Images.xcassets */; };
 		74EEE94215DB99B1002ED0E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE94115DB99B1002ED0E1 /* UIKit.framework */; };
 		74EEE94415DB99B1002ED0E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE94315DB99B1002ED0E1 /* Foundation.framework */; };
 		74EEE94615DB99B1002ED0E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE94515DB99B1002ED0E1 /* CoreGraphics.framework */; };
@@ -36,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450B83BA1800DD78005D5A03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		450B83BC1800DD8F005D5A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		450B83BD1800DD8F005D5A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		450B83BE1800DD95005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPhone.strings; sourceTree = "<group>"; };
+		450B83BF1800DD95005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
+		450B83C01800DD95005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		450B83C11800DD95005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74EEE93D15DB99B1002ED0E1 /* NSCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EEE94115DB99B1002ED0E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74EEE94315DB99B1002ED0E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -46,8 +54,6 @@
 		74EEE94F15DB99B1002ED0E1 /* NSCalendar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCalendar-Prefix.pch"; sourceTree = "<group>"; };
 		74EEE95015DB99B1002ED0E1 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
 		74EEE95115DB99B1002ED0E1 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
-		74EEE95415DB99B1002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		74EEE95715DB99B1002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		74EEE95915DB99B1002ED0E1 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		74EEE95A15DB99B1002ED0E1 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
 		74EEE96115DB99B1002ED0E1 /* NSCalendarTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSCalendarTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +133,7 @@
 				74EEE95615DB99B1002ED0E1 /* MainStoryboard_iPad.storyboard */,
 				74EEE95915DB99B1002ED0E1 /* OOOViewController.h */,
 				74EEE95A15DB99B1002ED0E1 /* OOOViewController.m */,
+				450B83BA1800DD78005D5A03 /* Images.xcassets */,
 				74EEE94815DB99B1002ED0E1 /* Supporting Files */,
 			);
 			path = NSCalendar;
@@ -217,6 +224,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				ja,
 			);
 			mainGroup = 74EEE93215DB99B1002ED0E1;
 			productRefGroup = 74EEE93E15DB99B1002ED0E1 /* Products */;
@@ -235,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74EEE94C15DB99B1002ED0E1 /* InfoPlist.strings in Resources */,
+				450B83BB1800DD78005D5A03 /* Images.xcassets in Resources */,
 				74EEE95515DB99B1002ED0E1 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74EEE95815DB99B1002ED0E1 /* MainStoryboard_iPad.storyboard in Resources */,
 				74FFC7AD177522EE002EC79B /* Default-568h@2x.png in Resources */,
@@ -302,6 +312,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				74EEE94B15DB99B1002ED0E1 /* en */,
+				450B83C01800DD95005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -309,7 +320,8 @@
 		74EEE95315DB99B1002ED0E1 /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				74EEE95415DB99B1002ED0E1 /* en */,
+				450B83BC1800DD8F005D5A03 /* Base */,
+				450B83BE1800DD95005D5A03 /* ja */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -317,7 +329,8 @@
 		74EEE95615DB99B1002ED0E1 /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				74EEE95715DB99B1002ED0E1 /* en */,
+				450B83BD1800DD8F005D5A03 /* Base */,
+				450B83BF1800DD95005D5A03 /* ja */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
@@ -326,6 +339,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				74EEE96C15DB99B1002ED0E1 /* en */,
+				450B83C11800DD95005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -358,7 +372,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,7 +396,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -393,9 +407,12 @@
 		74EEE97415DB99B1002ED0E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSCalendar/NSCalendar-Prefix.pch";
 				INFOPLIST_FILE = "NSCalendar/NSCalendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -404,9 +421,12 @@
 		74EEE97515DB99B1002ED0E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSCalendar/NSCalendar-Prefix.pch";
 				INFOPLIST_FILE = "NSCalendar/NSCalendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

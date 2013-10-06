@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450B844B1800FBEC005D5A03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450B844A1800FBEC005D5A03 /* Images.xcassets */; };
 		7481DB6214DD52D200705779 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7481DB6114DD52D200705779 /* UIKit.framework */; };
 		7481DB6414DD52D200705779 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7481DB6314DD52D200705779 /* Foundation.framework */; };
 		7481DB6A14DD52D200705779 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7481DB6814DD52D200705779 /* InfoPlist.strings */; };
@@ -34,6 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450B844A1800FBEC005D5A03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		450B844C1800FBF7005D5A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		450B844D1800FBF7005D5A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		450B844E1800FBFC005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPhone.strings; sourceTree = "<group>"; };
+		450B844F1800FBFC005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
+		450B84501800FBFC005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		450B84511800FBFC005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7481DB5D14DD52D200705779 /* UIFont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIFont.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7481DB6114DD52D200705779 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7481DB6314DD52D200705779 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -43,8 +51,6 @@
 		7481DB6D14DD52D200705779 /* UIFont-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont-Prefix.pch"; sourceTree = "<group>"; };
 		7481DB6E14DD52D200705779 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
 		7481DB6F14DD52D200705779 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
-		7481DB7214DD52D200705779 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		7481DB7514DD52D200705779 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		7481DB7714DD52D200705779 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		7481DB7814DD52D200705779 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
 		7481DB7F14DD52D300705779 /* UIFontTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIFontTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +124,7 @@
 				7481DB7414DD52D200705779 /* MainStoryboard_iPad.storyboard */,
 				7481DB7714DD52D200705779 /* OOOViewController.h */,
 				7481DB7814DD52D200705779 /* OOOViewController.m */,
+				450B844A1800FBEC005D5A03 /* Images.xcassets */,
 				7481DB6614DD52D200705779 /* Supporting Files */,
 			);
 			path = UIFont;
@@ -198,7 +205,7 @@
 		7481DB5414DD52D200705779 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 7481DB5714DD52D200705779 /* Build configuration list for PBXProject "UIFont" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -206,6 +213,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				ja,
 			);
 			mainGroup = 7481DB5214DD52D200705779;
 			productRefGroup = 7481DB5E14DD52D200705779 /* Products */;
@@ -224,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7481DB6A14DD52D200705779 /* InfoPlist.strings in Resources */,
+				450B844B1800FBEC005D5A03 /* Images.xcassets in Resources */,
 				7481DB7314DD52D200705779 /* MainStoryboard_iPhone.storyboard in Resources */,
 				7481DB7614DD52D200705779 /* MainStoryboard_iPad.storyboard in Resources */,
 				74FFC79317748C01002EC79B /* Default-568h@2x.png in Resources */,
@@ -290,6 +300,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7481DB6914DD52D200705779 /* en */,
+				450B84501800FBFC005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -297,7 +308,8 @@
 		7481DB7114DD52D200705779 /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7481DB7214DD52D200705779 /* en */,
+				450B844C1800FBF7005D5A03 /* Base */,
+				450B844E1800FBFC005D5A03 /* ja */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -305,7 +317,8 @@
 		7481DB7414DD52D200705779 /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7481DB7514DD52D200705779 /* en */,
+				450B844D1800FBF7005D5A03 /* Base */,
+				450B844F1800FBFC005D5A03 /* ja */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
@@ -314,6 +327,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7481DB8A14DD52D300705779 /* en */,
+				450B84511800FBFC005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -325,9 +339,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -343,11 +358,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "5355ADFD-1FFA-4121-AFB6-2A736CE37327";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -358,9 +377,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -369,11 +389,14 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "5355ADFD-1FFA-4121-AFB6-2A736CE37327";
 				SDKROOT = iphoneos;
@@ -385,9 +408,12 @@
 		7481DB9214DD52D300705779 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIFont/UIFont-Prefix.pch";
 				INFOPLIST_FILE = "UIFont/UIFont-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -396,9 +422,12 @@
 		7481DB9314DD52D300705779 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIFont/UIFont-Prefix.pch";
 				INFOPLIST_FILE = "UIFont/UIFont-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

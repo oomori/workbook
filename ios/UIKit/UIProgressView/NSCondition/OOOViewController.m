@@ -103,4 +103,13 @@
     [cond unlock];
 
 }
+
+#pragma mark UIProgressView initWithProgressViewStyle:
+- (IBAction)method001:(id)sender {
+    UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+    CGRect frame = CGRectMake(self.view.center.x-100.0, self.view.center.y-16.0, 200.0, 32.0);
+    progressView.frame = frame;
+    
+    [self.view addSubview:progressView];
+}
 @end
