@@ -140,8 +140,11 @@
     [controller.displayDataDic removeAllObjects];
     controller.displayDataDic = [NSMutableDictionary dictionaryWithCapacity:1];
     
-    [controller.displayDataDic setObject:[words objectAtIndex:indexPath.row] forKey:@"word"];
-    
+    if (selectedWords.count) {
+        [controller.displayDataDic setObject:[selectedWords objectAtIndex:indexPath.row] forKey:@"word"];
+    }else{
+        [controller.displayDataDic setObject:[words objectAtIndex:indexPath.row] forKey:@"word"];
+    }
     [controller setupDisplay];
     /*
     DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:nil bundle:nil];

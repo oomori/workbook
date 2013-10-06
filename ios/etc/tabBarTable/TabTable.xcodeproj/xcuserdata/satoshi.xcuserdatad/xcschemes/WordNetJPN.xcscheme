@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "74C34738171AF834004C1B96"
-               BuildableName = "WordNetJPN.app"
-               BlueprintName = "WordNetJPN"
-               ReferencedContainer = "container:WordNetJPN.xcodeproj">
+               BuildableName = "TabTable.app"
+               BlueprintName = "TabTable"
+               ReferencedContainer = "container:TabTable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "74C3476C171AF834004C1B96"
-               BuildableName = "WordNetJPNTests.octest"
-               BlueprintName = "WordNetJPNTests"
-               ReferencedContainer = "container:WordNetJPN.xcodeproj">
+               BuildableName = "TabTableTests.octest"
+               BlueprintName = "TabTableTests"
+               ReferencedContainer = "container:TabTable.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "74C34738171AF834004C1B96"
-            BuildableName = "WordNetJPN.app"
-            BlueprintName = "WordNetJPN"
-            ReferencedContainer = "container:WordNetJPN.xcodeproj">
+            BuildableName = "TabTable.app"
+            BlueprintName = "TabTable"
+            ReferencedContainer = "container:TabTable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "74C34738171AF834004C1B96"
-            BuildableName = "WordNetJPN.app"
-            BlueprintName = "WordNetJPN"
-            ReferencedContainer = "container:WordNetJPN.xcodeproj">
+            BuildableName = "TabTable.app"
+            BlueprintName = "TabTable"
+            ReferencedContainer = "container:TabTable.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "74C34738171AF834004C1B96"
-            BuildableName = "WordNetJPN.app"
-            BlueprintName = "WordNetJPN"
-            ReferencedContainer = "container:WordNetJPN.xcodeproj">
+            BuildableName = "TabTable.app"
+            BlueprintName = "TabTable"
+            ReferencedContainer = "container:TabTable.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

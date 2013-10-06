@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8186F542-442C-49D0-9F56-F52FB878382B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TabTable</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ACAD7AC4-69A0-4F50-AF7C-862E5912971B</key>
+		<string>ssh://github.com/oomori/workbook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/etc/tabBarTable/TabTable.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ACAD7AC4-69A0-4F50-AF7C-862E5912971B</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/oomori/workbook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ACAD7AC4-69A0-4F50-AF7C-862E5912971B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ACAD7AC4-69A0-4F50-AF7C-862E5912971B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>workbook</string>
+		</dict>
+	</array>
+</dict>
+</plist>

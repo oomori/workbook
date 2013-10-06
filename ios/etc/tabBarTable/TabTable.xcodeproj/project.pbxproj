@@ -30,7 +30,7 @@
 		74C34770171AF834004C1B96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3473C171AF834004C1B96 /* UIKit.framework */; };
 		74C34771171AF834004C1B96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3473E171AF834004C1B96 /* Foundation.framework */; };
 		74C34779171AF834004C1B96 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C34777171AF834004C1B96 /* InfoPlist.strings */; };
-		74C3477C171AF834004C1B96 /* WordNetJPNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3477B171AF834004C1B96 /* WordNetJPNTests.m */; };
+		74C3477C171AF834004C1B96 /* TabTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C3477B171AF834004C1B96 /* TabTableTests.m */; };
 		74C34882171C4EBA004C1B96 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C34881171C4EBA004C1B96 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -53,14 +53,14 @@
 		745AD835180153B8001F1D9D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
 		745AD836180153B8001F1D9D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		745AD837180153B8001F1D9D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		74C34739171AF834004C1B96 /* WordNetJPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordNetJPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C34739171AF834004C1B96 /* TabTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C3473C171AF834004C1B96 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74C3473E171AF834004C1B96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74C34740171AF834004C1B96 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		74C34744171AF834004C1B96 /* WordNetJPN-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordNetJPN-Info.plist"; sourceTree = "<group>"; };
+		74C34744171AF834004C1B96 /* TabTable-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TabTable-Info.plist"; sourceTree = "<group>"; };
 		74C34746171AF834004C1B96 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74C34748171AF834004C1B96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		74C3474A171AF834004C1B96 /* WordNetJPN-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WordNetJPN-Prefix.pch"; sourceTree = "<group>"; };
+		74C3474A171AF834004C1B96 /* TabTable-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TabTable-Prefix.pch"; sourceTree = "<group>"; };
 		74C3474B171AF834004C1B96 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
 		74C3474C171AF834004C1B96 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
 		74C3474E171AF834004C1B96 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -74,12 +74,12 @@
 		74C34762171AF834004C1B96 /* OOOSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOSecondViewController.m; sourceTree = "<group>"; };
 		74C34764171AF834004C1B96 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		74C34766171AF834004C1B96 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		74C3476D171AF834004C1B96 /* WordNetJPNTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordNetJPNTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C3476D171AF834004C1B96 /* TabTableTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabTableTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C3476E171AF834004C1B96 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		74C34776171AF834004C1B96 /* WordNetJPNTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordNetJPNTests-Info.plist"; sourceTree = "<group>"; };
+		74C34776171AF834004C1B96 /* TabTableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TabTableTests-Info.plist"; sourceTree = "<group>"; };
 		74C34778171AF834004C1B96 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		74C3477A171AF834004C1B96 /* WordNetJPNTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordNetJPNTests.h; sourceTree = "<group>"; };
-		74C3477B171AF834004C1B96 /* WordNetJPNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordNetJPNTests.m; sourceTree = "<group>"; };
+		74C3477A171AF834004C1B96 /* TabTableTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabTableTests.h; sourceTree = "<group>"; };
+		74C3477B171AF834004C1B96 /* TabTableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabTableTests.m; sourceTree = "<group>"; };
 		74C34880171C4EBA004C1B96 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		74C34881171C4EBA004C1B96 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,8 +111,8 @@
 		74C34730171AF833004C1B96 = {
 			isa = PBXGroup;
 			children = (
-				74C34742171AF834004C1B96 /* WordNetJPN */,
-				74C34774171AF834004C1B96 /* WordNetJPNTests */,
+				74C34742171AF834004C1B96 /* TabTable */,
+				74C34774171AF834004C1B96 /* TabTableTests */,
 				74C3473B171AF834004C1B96 /* Frameworks */,
 				74C3473A171AF834004C1B96 /* Products */,
 			);
@@ -121,8 +121,8 @@
 		74C3473A171AF834004C1B96 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74C34739171AF834004C1B96 /* WordNetJPN.app */,
-				74C3476D171AF834004C1B96 /* WordNetJPNTests.octest */,
+				74C34739171AF834004C1B96 /* TabTable.app */,
+				74C3476D171AF834004C1B96 /* TabTableTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,7 +138,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		74C34742171AF834004C1B96 /* WordNetJPN */ = {
+		74C34742171AF834004C1B96 /* TabTable */ = {
 			isa = PBXGroup;
 			children = (
 				743F2EE1171D717D0066798B /* sampleText.txt */,
@@ -159,16 +159,17 @@
 				745AD830180153A7001F1D9D /* Images.xcassets */,
 				74C34743171AF834004C1B96 /* Supporting Files */,
 			);
+			name = TabTable;
 			path = WordNetJPN;
 			sourceTree = "<group>";
 		};
 		74C34743171AF834004C1B96 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				74C34744171AF834004C1B96 /* WordNetJPN-Info.plist */,
+				74C34744171AF834004C1B96 /* TabTable-Info.plist */,
 				74C34745171AF834004C1B96 /* InfoPlist.strings */,
 				74C34748171AF834004C1B96 /* main.m */,
-				74C3474A171AF834004C1B96 /* WordNetJPN-Prefix.pch */,
+				74C3474A171AF834004C1B96 /* TabTable-Prefix.pch */,
 				74C3474E171AF834004C1B96 /* Default.png */,
 				74C34750171AF834004C1B96 /* Default@2x.png */,
 				74C34752171AF834004C1B96 /* Default-568h@2x.png */,
@@ -176,20 +177,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		74C34774171AF834004C1B96 /* WordNetJPNTests */ = {
+		74C34774171AF834004C1B96 /* TabTableTests */ = {
 			isa = PBXGroup;
 			children = (
-				74C3477A171AF834004C1B96 /* WordNetJPNTests.h */,
-				74C3477B171AF834004C1B96 /* WordNetJPNTests.m */,
+				74C3477A171AF834004C1B96 /* TabTableTests.h */,
+				74C3477B171AF834004C1B96 /* TabTableTests.m */,
 				74C34775171AF834004C1B96 /* Supporting Files */,
 			);
+			name = TabTableTests;
 			path = WordNetJPNTests;
 			sourceTree = "<group>";
 		};
 		74C34775171AF834004C1B96 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				74C34776171AF834004C1B96 /* WordNetJPNTests-Info.plist */,
+				74C34776171AF834004C1B96 /* TabTableTests-Info.plist */,
 				74C34777171AF834004C1B96 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -198,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74C34738171AF834004C1B96 /* WordNetJPN */ = {
+		74C34738171AF834004C1B96 /* TabTable */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74C3477F171AF834004C1B96 /* Build configuration list for PBXNativeTarget "WordNetJPN" */;
+			buildConfigurationList = 74C3477F171AF834004C1B96 /* Build configuration list for PBXNativeTarget "TabTable" */;
 			buildPhases = (
 				74C34735171AF834004C1B96 /* Sources */,
 				74C34736171AF834004C1B96 /* Frameworks */,
@@ -210,14 +212,14 @@
 			);
 			dependencies = (
 			);
-			name = WordNetJPN;
+			name = TabTable;
 			productName = WordNetJPN;
-			productReference = 74C34739171AF834004C1B96 /* WordNetJPN.app */;
+			productReference = 74C34739171AF834004C1B96 /* TabTable.app */;
 			productType = "com.apple.product-type.application";
 		};
-		74C3476C171AF834004C1B96 /* WordNetJPNTests */ = {
+		74C3476C171AF834004C1B96 /* TabTableTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74C34782171AF834004C1B96 /* Build configuration list for PBXNativeTarget "WordNetJPNTests" */;
+			buildConfigurationList = 74C34782171AF834004C1B96 /* Build configuration list for PBXNativeTarget "TabTableTests" */;
 			buildPhases = (
 				74C34768171AF834004C1B96 /* Sources */,
 				74C34769171AF834004C1B96 /* Frameworks */,
@@ -229,9 +231,9 @@
 			dependencies = (
 				74C34773171AF834004C1B96 /* PBXTargetDependency */,
 			);
-			name = WordNetJPNTests;
+			name = TabTableTests;
 			productName = WordNetJPNTests;
-			productReference = 74C3476D171AF834004C1B96 /* WordNetJPNTests.octest */;
+			productReference = 74C3476D171AF834004C1B96 /* TabTableTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +246,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Satoshi Oomori";
 			};
-			buildConfigurationList = 74C34734171AF833004C1B96 /* Build configuration list for PBXProject "WordNetJPN" */;
+			buildConfigurationList = 74C34734171AF833004C1B96 /* Build configuration list for PBXProject "TabTable" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -258,8 +260,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74C34738171AF834004C1B96 /* WordNetJPN */,
-				74C3476C171AF834004C1B96 /* WordNetJPNTests */,
+				74C34738171AF834004C1B96 /* TabTable */,
+				74C3476C171AF834004C1B96 /* TabTableTests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,7 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C3477C171AF834004C1B96 /* WordNetJPNTests.m in Sources */,
+				74C3477C171AF834004C1B96 /* TabTableTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +338,7 @@
 /* Begin PBXTargetDependency section */
 		74C34773171AF834004C1B96 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 74C34738171AF834004C1B96 /* WordNetJPN */;
+			target = 74C34738171AF834004C1B96 /* TabTable */;
 			targetProxy = 74C34772171AF834004C1B96 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -445,10 +447,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WordNetJPN/WordNetJPN-Prefix.pch";
-				INFOPLIST_FILE = "WordNetJPN/WordNetJPN-Info.plist";
+				GCC_PREFIX_HEADER = "WordNetJPN/TabTable-Prefix.pch";
+				INFOPLIST_FILE = "WordNetJPN/TabTable-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TabTable;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -459,10 +461,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WordNetJPN/WordNetJPN-Prefix.pch";
-				INFOPLIST_FILE = "WordNetJPN/WordNetJPN-Info.plist";
+				GCC_PREFIX_HEADER = "WordNetJPN/TabTable-Prefix.pch";
+				INFOPLIST_FILE = "WordNetJPN/TabTable-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TabTable;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -477,8 +479,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WordNetJPN/WordNetJPN-Prefix.pch";
-				INFOPLIST_FILE = "WordNetJPNTests/WordNetJPNTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "WordNetJPNTests/TabTableTests-Info.plist";
+				PRODUCT_NAME = TabTableTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -494,8 +496,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WordNetJPN/WordNetJPN-Prefix.pch";
-				INFOPLIST_FILE = "WordNetJPNTests/WordNetJPNTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "WordNetJPNTests/TabTableTests-Info.plist";
+				PRODUCT_NAME = TabTableTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -504,7 +506,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74C34734171AF833004C1B96 /* Build configuration list for PBXProject "WordNetJPN" */ = {
+		74C34734171AF833004C1B96 /* Build configuration list for PBXProject "TabTable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74C3477D171AF834004C1B96 /* Debug */,
@@ -513,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74C3477F171AF834004C1B96 /* Build configuration list for PBXNativeTarget "WordNetJPN" */ = {
+		74C3477F171AF834004C1B96 /* Build configuration list for PBXNativeTarget "TabTable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74C34780171AF834004C1B96 /* Debug */,
@@ -522,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74C34782171AF834004C1B96 /* Build configuration list for PBXNativeTarget "WordNetJPNTests" */ = {
+		74C34782171AF834004C1B96 /* Build configuration list for PBXNativeTarget "TabTableTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74C34783171AF834004C1B96 /* Debug */,

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:WordNetJPN.xcodeproj">
+      location = "self:TabTable.xcodeproj">
    </FileRef>
 </Workspace>
