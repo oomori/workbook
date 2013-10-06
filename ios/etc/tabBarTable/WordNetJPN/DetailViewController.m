@@ -15,7 +15,19 @@
 
 @implementation DetailViewController
 
+@synthesize textView;
 @synthesize backController;
+@synthesize displayDataDic;
+
+-(void)setupDisplay{
+    
+    
+    NSLog(@"!! %@",[displayDataDic objectForKey:@"word"]);
+    
+    self.textView.text = [displayDataDic objectForKey:@"word"];
+
+     //setText:[displayDataDic objectForKey:@"word"]];
+}
 - (IBAction)returnToTable:(id)sender {
     
     NSLog(@"!!%@",self.backController.description);
@@ -42,6 +54,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -49,7 +62,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

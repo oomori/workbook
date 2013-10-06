@@ -9,6 +9,7 @@
 #import "OOOFirstViewController.h"
 #import "DetailViewController.h"
 
+
 @interface OOOFirstViewController ()
 
 @end
@@ -18,14 +19,16 @@
 @synthesize words;
 @synthesize selectedWords;
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
+    //setup word array
     words = [NSMutableArray arrayWithCapacity:10];
     selectedWords = [NSMutableArray arrayWithCapacity:10];
     
-    //read file
+    //read default file
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"sampleText" withExtension:@"txt"];
     
     //add object
@@ -113,17 +116,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
        [tableView deselectRowAtIndexPath:indexPath animated:YES];
-     
-     NSLog(@"%@",[self.tabBarController description]);
-    //self.tabBarController.selectedIndex = 1;
-    //[self performSegueWithIdentifier:@"detail" sender:self];
-     //特別な画面遷移
-
+    
     //タブ内入れ替え
     NSMutableArray *tabs = [NSMutableArray arrayWithArray:self.tabBarController.viewControllers];
     DetailViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"detail"];
     
     controller.backController = self;
+    
+    //NSLog(@"%@",[controller.displayDataDic description]);
     //showDetail
     UIViewController *tmpController = [tabs objectAtIndex:0];
     controller.tabBarItem = tmpController.tabBarItem;
@@ -136,6 +136,13 @@
         [tmpController.view removeFromSuperview];
     }];
     
+    
+    [controller.displayDataDic removeAllObjects];
+    controller.displayDataDic = [NSMutableDictionary dictionaryWithCapacity:1];
+    
+    [controller.displayDataDic setObject:[words objectAtIndex:indexPath.row] forKey:@"word"];
+    
+    [controller setupDisplay];
     /*
     DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:nil bundle:nil];
      detailViewController.view.frame = self.view.bounds;
@@ -176,9 +183,9 @@
     NSUInteger row = [indexPath row];
     
     if ([self.selectedWords count]>0){
-    aCell.textLabel.text = (self.selectedWords)[row];
+        aCell.textLabel.text = (self.selectedWords)[row];
     }else{
-      aCell.textLabel.text = (self.words)[row];
+        aCell.textLabel.text = (self.words)[row];
         
     }
 

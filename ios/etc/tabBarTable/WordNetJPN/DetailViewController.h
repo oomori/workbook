@@ -11,9 +11,15 @@
 @interface DetailViewController : UIViewController
 {
     UIViewController *backController;
+    NSMutableDictionary *displayDataDic;
 }
 
+-(void)setupDisplay;
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic,retain) UIViewController *backController;
+@property (nonatomic,retain) NSMutableDictionary *displayDataDic;
+
 
 
 @end
