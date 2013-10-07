@@ -58,6 +58,11 @@
 		450B84941802165A005D5A03 /* UIStoryboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIStoryboardTests.m; sourceTree = "<group>"; };
 		450B849E18021782005D5A03 /* OOOEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOEditViewController.h; sourceTree = "<group>"; };
 		450B849F18021782005D5A03 /* OOOEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOEditViewController.m; sourceTree = "<group>"; };
+		450B84A11802D56A005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		450B84A21802D56A005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
+		450B84A31802D56A005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main_iPad.strings; sourceTree = "<group>"; };
+		450B84A41802D56A005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		450B84A61802D665005D5A03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +225,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 450B845A1802165A005D5A03;
 			productRefGroup = 450B84641802165A005D5A03 /* Products */;
@@ -289,6 +295,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				450B84701802165A005D5A03 /* en */,
+				450B84A11802D56A005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -297,6 +304,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				450B84791802165A005D5A03 /* Base */,
+				450B84A21802D56A005D5A03 /* ja */,
+				450B84A61802D665005D5A03 /* en */,
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -305,6 +314,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				450B847C1802165A005D5A03 /* Base */,
+				450B84A31802D56A005D5A03 /* ja */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
@@ -313,6 +323,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				450B84921802165A005D5A03 /* en */,
+				450B84A41802D56A005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -481,6 +492,7 @@
 				450B849A1802165A005D5A03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		450B849B1802165A005D5A03 /* Build configuration list for PBXNativeTarget "UIStoryboardTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +501,7 @@
 				450B849D1802165A005D5A03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
