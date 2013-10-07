@@ -1,0 +1,24 @@
+
+/* Class = "IBUILabel"; text = "Editor"; ObjectID = "1aB-cL-7TE"; */
+"1aB-cL-7TE.text" = "Editor";
+
+/* Class = "IBUIButton"; normalTitle = "001"; ObjectID = "63C-tS-pbx"; */
+"63C-tS-pbx.normalTitle" = "001";
+
+/* Class = "IBUIViewController"; title = "Second"; ObjectID = "EqQ-RF-lxu"; */
+"EqQ-RF-lxu.title" = "Second";
+
+/* Class = "IBUIButton"; normalTitle = "dismiss"; ObjectID = "T59-4K-ijR"; */
+"T59-4K-ijR.normalTitle" = "dismiss";
+
+/* Class = "IBUITextView"; text = "Sample of basic Storyboard."; ObjectID = "eYP-c4-AmW"; */
+"eYP-c4-AmW.text" = "Sample of basic Storyboard.";
+
+/* Class = "IBUILabel"; text = "Main"; ObjectID = "eYs-Dk-bkA"; */
+"eYs-Dk-bkA.text" = "Main";
+
+/* Class = "IBUIButton"; normalTitle = "to Editor"; ObjectID = "vVy-ff-TIb"; */
+"vVy-ff-TIb.normalTitle" = "to Editor";
+
+/* Class = "IBUIViewController"; title = "First"; ObjectID = "vXZ-lx-hvc"; */
+"vXZ-lx-hvc.title" = "First";
