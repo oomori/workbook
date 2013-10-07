@@ -115,7 +115,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-       [tableView deselectRowAtIndexPath:indexPath animated:YES];
+       //[tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     //タブ内入れ替え
     NSMutableArray *tabs = [NSMutableArray arrayWithArray:self.tabBarController.viewControllers];
@@ -128,11 +128,11 @@
     UIViewController *tmpController = [tabs objectAtIndex:0];
     controller.tabBarItem = tmpController.tabBarItem;
     [tabs replaceObjectAtIndex:0 withObject:controller];
-    [self.tabBarController setViewControllers:tabs animated:NO];
+    [self.tabBarController setViewControllers:tabs animated:YES];
     [UIView transitionWithView:tmpController.view duration:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^(void) {
         tmpController.view.alpha = 1.0;
     } completion:^(BOOL finished) {
-        [self.navigationController pushViewController:tmpController animated:NO];
+        [self.navigationController pushViewController:tmpController animated:YES];
         [tmpController.view removeFromSuperview];
     }];
     
