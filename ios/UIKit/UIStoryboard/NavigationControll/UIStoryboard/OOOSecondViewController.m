@@ -7,6 +7,7 @@
 //
 
 #import "OOOSecondViewController.h"
+#import "OOONavigationViewController.h"
 
 @interface OOOSecondViewController ()
 
@@ -17,8 +18,15 @@
 - (IBAction)popView:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
     
+    NSLog(@"SecondView before=%ld",(long)((OOONavigationViewController *)self.navigationController).counter);
+    ((OOONavigationViewController *)self.navigationController).counter = 2;
+    
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    NSLog(@"2nd viewWillAppear");
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

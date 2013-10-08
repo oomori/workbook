@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>502C1253-FB7C-4756-8F63-F218BB90C061</string>
+	<string>C6CB5D9A-B676-4D90-8E76-E9CE8DAAA14A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>UIStoryboard</string>
+	<string>NSLayoutConstraint</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E53E2FC9-8C09-4015-A1A4-3DE7E0FC2D99</key>
 		<string>https://github.com/oomori/workbook.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ios/UIKit/UIStoryboard/NavigationControll/UIStoryboard.xcodeproj/project.xcworkspace</string>
+	<string>ios/UIKit/NSLayoutConstraint/NSLayoutConstraint.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E53E2FC9-8C09-4015-A1A4-3DE7E0FC2D99</key>
-		<string>../../../../../..</string>
+		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/oomori/workbook.git</string>

@@ -1,32 +1,25 @@
 //
-//  OOOThirdViewController.m
+//  OOONavigationControllerViewController.m
 //  UIStoryboard
 //
-//  Created by 大森 智史 on 2013/10/07.
+//  Created by air on 2013/10/08.
 //  Copyright (c) 2013年 oomori. All rights reserved.
 //
 
-#import "OOOThirdViewController.h"
 #import "OOONavigationViewController.h"
 
-@interface OOOThirdViewController ()
+@interface OOONavigationViewController ()
 
 @end
 
-@implementation OOOThirdViewController
-- (IBAction)popView:(id)sender {
-    
-    [self.navigationController popViewControllerAnimated:YES];
-    
-    NSLog(@"ThirdView before=%ld",(long)((OOONavigationViewController *)self.navigationController).counter);
-    ((OOONavigationViewController *)self.navigationController).counter = 3;
-    
-}
+@implementation OOONavigationViewController
+@synthesize counter;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }

@@ -7,6 +7,7 @@
 //
 
 #import "OOOFirstViewController.h"
+#import "OOONavigationViewController.h"
 
 @interface OOOFirstViewController ()
 
@@ -18,11 +19,16 @@
 #pragma mark UIStoryboard performSegueWithIdentifier
 - (IBAction)method001:(id)sender {
     [self performSegueWithIdentifier:@"toEditor" sender:self];
-}
+    
+    }
 - (IBAction)popView:(id)sender {
     NSLog(@"%@",((OOOFirstViewController *)self.presentingViewController));
-    [self.navigationController popViewControllerAnimated:YES];
     
+    [self.navigationController popViewControllerAnimated:YES];
+
+    NSLog(@"FirstView before=%ld",(long)((OOONavigationViewController *)self.navigationController).counter);
+    ((OOONavigationViewController *)self.navigationController).counter = 1;
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

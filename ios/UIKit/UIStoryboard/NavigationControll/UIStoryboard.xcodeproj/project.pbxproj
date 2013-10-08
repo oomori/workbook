@@ -23,6 +23,7 @@
 		450B84931802165A005D5A03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 450B84911802165A005D5A03 /* InfoPlist.strings */; };
 		450B84951802165A005D5A03 /* UIStoryboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 450B84941802165A005D5A03 /* UIStoryboardTests.m */; };
 		450B84A018021782005D5A03 /* OOOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450B849F18021782005D5A03 /* OOOSecondViewController.m */; };
+		450B84A9180369D1005D5A03 /* OOONavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450B84A8180369D1005D5A03 /* OOONavigationViewController.m */; };
 		742D84F31802E64D00FA8A57 /* OOOThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742D84F21802E64D00FA8A57 /* OOOThirdViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,8 @@
 		450B84A31802D56A005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main_iPad.strings; sourceTree = "<group>"; };
 		450B84A41802D56A005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		450B84A61802D665005D5A03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
+		450B84A7180369D1005D5A03 /* OOONavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOONavigationViewController.h; sourceTree = "<group>"; };
+		450B84A8180369D1005D5A03 /* OOONavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOONavigationViewController.m; sourceTree = "<group>"; };
 		742D84F11802E64D00FA8A57 /* OOOThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOThirdViewController.h; sourceTree = "<group>"; };
 		742D84F21802E64D00FA8A57 /* OOOThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +131,8 @@
 				450B84751802165A005D5A03 /* OOOAppDelegate.h */,
 				450B84761802165A005D5A03 /* OOOAppDelegate.m */,
 				450B84781802165A005D5A03 /* Main_iPhone.storyboard */,
+				450B84A7180369D1005D5A03 /* OOONavigationViewController.h */,
+				450B84A8180369D1005D5A03 /* OOONavigationViewController.m */,
 				450B847B1802165A005D5A03 /* Main_iPad.storyboard */,
 				450B847E1802165A005D5A03 /* OOOFirstViewController.h */,
 				450B847F1802165A005D5A03 /* OOOFirstViewController.m */,
@@ -274,6 +279,7 @@
 				450B84771802165A005D5A03 /* OOOAppDelegate.m in Sources */,
 				742D84F31802E64D00FA8A57 /* OOOThirdViewController.m in Sources */,
 				450B84801802165A005D5A03 /* OOOFirstViewController.m in Sources */,
+				450B84A9180369D1005D5A03 /* OOONavigationViewController.m in Sources */,
 				450B84731802165A005D5A03 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
