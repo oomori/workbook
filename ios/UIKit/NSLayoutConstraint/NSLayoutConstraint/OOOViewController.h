@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface OOOViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *object1;
+@property (weak, nonatomic) IBOutlet UIButton *object2;
 
 @end

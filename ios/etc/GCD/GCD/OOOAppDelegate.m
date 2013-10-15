@@ -54,9 +54,9 @@ bool debit_account(Account *account,Transaction *transaction)
     //
     dispatch_queue_t q = dispatch_queue_create("com.example", NULL);
     
-    dispatch_retain(q);
+    //dispatch_retain(q);
     NSLog(@"!!");
-    dispatch_release(q);
+    //dispatch_release(q);
     
     Account *account = [[Account alloc] init];
     Transaction *transaction = [[Transaction alloc] init];

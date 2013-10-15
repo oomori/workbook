@@ -15,11 +15,11 @@
 
 -(void)method001
 {
-    int countNumber = 0;
+    //int countNumber = 0;
     _aNumber = 10;
     NSLog(@"%d",_aNumber);
     
-    NSString *aString = [[NSString alloc] initWithString:@"the string"];
+    //NSString *aString = @"the string";
     
     int intNumber = 3;
     float floatNumber = 0.5;
@@ -38,9 +38,14 @@
     
     //int intNumber = 3;
     //float floatNumber = 0.5;
-    NSString *str1 = [[NSString alloc] initWithFormat:@"int%d",10];
-    NSLog(@"%d,%d,%d,%d",intNumber,++intNumber, intNumber++,intNumber);
-
+    //NSString *str1 = [[NSString alloc] initWithFormat:@"int%d",10];
+    NSLog(@"%d",intNumber);
+    ++intNumber;
+    NSLog(@"%d",intNumber);
+    intNumber++;
+    NSLog(@"%d",intNumber);
+    
+    
     int counter = 1;
     if (counter > 0) {
         NSLog(@"カウンターは0より大きいです。");

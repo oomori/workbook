@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450B84EF1808D3DA005D5A03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450B84EE1808D3DA005D5A03 /* Images.xcassets */; };
 		744AB08F1658FABB00E5273A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744AB08E1658FABB00E5273A /* UIKit.framework */; };
 		744AB0911658FABB00E5273A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744AB0901658FABB00E5273A /* Foundation.framework */; };
 		744AB0931658FABB00E5273A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744AB0921658FABB00E5273A /* CoreGraphics.framework */; };
@@ -37,6 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450B84EE1808D3DA005D5A03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		450B84F01808D3E5005D5A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		450B84F11808D3E5005D5A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		450B84F21808D3EB005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPhone.strings; sourceTree = "<group>"; };
+		450B84F31808D3EB005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard_iPad.strings; sourceTree = "<group>"; };
+		450B84F41808D3EB005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		450B84F51808D3EB005D5A03 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		744AB08A1658FABB00E5273A /* AboutiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		744AB08E1658FABB00E5273A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		744AB0901658FABB00E5273A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,8 +58,6 @@
 		744AB0A01658FABB00E5273A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		744AB0A21658FABB00E5273A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		744AB0A41658FABB00E5273A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		744AB0A71658FABB00E5273A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		744AB0AA1658FABB00E5273A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		744AB0AC1658FABB00E5273A /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		744AB0AD1658FABB00E5273A /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
 		744AB0B41658FABC00E5273A /* AboutiOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AboutiOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +131,7 @@
 				744AB0A91658FABB00E5273A /* MainStoryboard_iPad.storyboard */,
 				744AB0AC1658FABB00E5273A /* OOOViewController.h */,
 				744AB0AD1658FABB00E5273A /* OOOViewController.m */,
+				450B84EE1808D3DA005D5A03 /* Images.xcassets */,
 				744AB0951658FABB00E5273A /* Supporting Files */,
 			);
 			path = AboutiOS;
@@ -218,6 +225,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				ja,
 			);
 			mainGroup = 744AB07F1658FABB00E5273A;
 			productRefGroup = 744AB08B1658FABB00E5273A /* Products */;
@@ -237,6 +246,7 @@
 			files = (
 				744AB0991658FABB00E5273A /* InfoPlist.strings in Resources */,
 				744AB0A11658FABB00E5273A /* Default.png in Resources */,
+				450B84EF1808D3DA005D5A03 /* Images.xcassets in Resources */,
 				744AB0A31658FABB00E5273A /* Default@2x.png in Resources */,
 				744AB0A51658FABB00E5273A /* Default-568h@2x.png in Resources */,
 				744AB0A81658FABB00E5273A /* MainStoryboard_iPhone.storyboard in Resources */,
@@ -304,6 +314,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				744AB0981658FABB00E5273A /* en */,
+				450B84F41808D3EB005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -311,7 +322,8 @@
 		744AB0A61658FABB00E5273A /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				744AB0A71658FABB00E5273A /* en */,
+				450B84F01808D3E5005D5A03 /* Base */,
+				450B84F21808D3EB005D5A03 /* ja */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -319,7 +331,8 @@
 		744AB0A91658FABB00E5273A /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				744AB0AA1658FABB00E5273A /* en */,
+				450B84F11808D3E5005D5A03 /* Base */,
+				450B84F31808D3EB005D5A03 /* ja */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
@@ -328,6 +341,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				744AB0BF1658FABC00E5273A /* en */,
+				450B84F51808D3EB005D5A03 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -357,7 +371,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -379,7 +393,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -390,9 +404,12 @@
 		744AB0C71658FABC00E5273A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AboutiOS/AboutiOS-Prefix.pch";
 				INFOPLIST_FILE = "AboutiOS/AboutiOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -401,9 +418,12 @@
 		744AB0C81658FABC00E5273A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AboutiOS/AboutiOS-Prefix.pch";
 				INFOPLIST_FILE = "AboutiOS/AboutiOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -462,6 +482,7 @@
 				744AB0C81658FABC00E5273A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		744AB0C91658FABC00E5273A /* Build configuration list for PBXNativeTarget "AboutiOSTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +491,7 @@
 				744AB0CB1658FABC00E5273A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
