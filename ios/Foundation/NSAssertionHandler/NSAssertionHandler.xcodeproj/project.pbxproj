@@ -17,7 +17,6 @@
 		74C603CB155FD8EA0047301E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C603C9155FD8E90047301E /* MainStoryboard_iPhone.storyboard */; };
 		74C603CE155FD8EA0047301E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C603CC155FD8EA0047301E /* MainStoryboard_iPad.storyboard */; };
 		74C603D1155FD8EA0047301E /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C603D0155FD8EA0047301E /* OOOViewController.m */; };
-		74C603D9155FD8EA0047301E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C603D8155FD8EA0047301E /* SenTestingKit.framework */; };
 		74C603DA155FD8EA0047301E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C603B7155FD8E90047301E /* UIKit.framework */; };
 		74C603DB155FD8EA0047301E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C603B9155FD8E90047301E /* Foundation.framework */; };
 		74C603E3155FD8EA0047301E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C603E1155FD8EA0047301E /* InfoPlist.strings */; };
@@ -50,8 +49,7 @@
 		74C603CD155FD8EA0047301E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		74C603CF155FD8EA0047301E /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		74C603D0155FD8EA0047301E /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
-		74C603D7155FD8EA0047301E /* NSAssertionHandlerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSAssertionHandlerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74C603D8155FD8EA0047301E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74C603D7155FD8EA0047301E /* NSAssertionHandlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSAssertionHandlerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C603E0155FD8EA0047301E /* NSAssertionHandlerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSAssertionHandlerTests-Info.plist"; sourceTree = "<group>"; };
 		74C603E2155FD8EA0047301E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74C603E4155FD8EA0047301E /* NSAssertionHandlerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAssertionHandlerTests.h; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C603D9155FD8EA0047301E /* SenTestingKit.framework in Frameworks */,
 				74C603DA155FD8EA0047301E /* UIKit.framework in Frameworks */,
 				74C603DB155FD8EA0047301E /* Foundation.framework in Frameworks */,
 			);
@@ -97,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				74C603B3155FD8E90047301E /* NSAssertionHandler.app */,
-				74C603D7155FD8EA0047301E /* NSAssertionHandlerTests.octest */,
+				74C603D7155FD8EA0047301E /* NSAssertionHandlerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,7 +105,6 @@
 				74C603B7155FD8E90047301E /* UIKit.framework */,
 				74C603B9155FD8E90047301E /* Foundation.framework */,
 				74C603BB155FD8E90047301E /* CoreGraphics.framework */,
-				74C603D8155FD8EA0047301E /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -193,8 +189,8 @@
 			);
 			name = NSAssertionHandlerTests;
 			productName = NSAssertionHandlerTests;
-			productReference = 74C603D7155FD8EA0047301E /* NSAssertionHandlerTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 74C603D7155FD8EA0047301E /* NSAssertionHandlerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -411,14 +407,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSAssertionHandler.app/NSAssertionHandler";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSAssertionHandler/NSAssertionHandler-Prefix.pch";
 				INFOPLIST_FILE = "NSAssertionHandlerTests/NSAssertionHandlerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -428,14 +423,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSAssertionHandler.app/NSAssertionHandler";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSAssertionHandler/NSAssertionHandler-Prefix.pch";
 				INFOPLIST_FILE = "NSAssertionHandlerTests/NSAssertionHandlerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

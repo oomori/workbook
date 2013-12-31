@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		45DD76A317FFA8FD0017F3B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DD76A217FFA8FD0017F3B0 /* Images.xcassets */; };
 		74243EF31774886B00A37179 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74243EF21774886B00A37179 /* Default-568h@2x.png */; };
+		747B67DF187304E5003F3E2A /* OOOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B67DE187304E5003F3E2A /* OOOModel.m */; };
+		747B67E0187304E5003F3E2A /* OOOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B67DE187304E5003F3E2A /* OOOModel.m */; };
 		74C60355155F55EA0047301E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60354155F55EA0047301E /* UIKit.framework */; };
 		74C60357155F55EA0047301E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60356155F55EA0047301E /* Foundation.framework */; };
 		74C60359155F55EA0047301E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60358155F55EA0047301E /* CoreGraphics.framework */; };
@@ -18,7 +20,6 @@
 		74C60368155F55EA0047301E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C60366155F55EA0047301E /* MainStoryboard_iPhone.storyboard */; };
 		74C6036B155F55EA0047301E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C60369155F55EA0047301E /* MainStoryboard_iPad.storyboard */; };
 		74C6036E155F55EA0047301E /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C6036D155F55EA0047301E /* OOOViewController.m */; };
-		74C60376155F55EA0047301E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60375155F55EA0047301E /* SenTestingKit.framework */; };
 		74C60377155F55EA0047301E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60354155F55EA0047301E /* UIKit.framework */; };
 		74C60378155F55EA0047301E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C60356155F55EA0047301E /* Foundation.framework */; };
 		74C60380155F55EA0047301E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C6037E155F55EA0047301E /* InfoPlist.strings */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		45DD76A217FFA8FD0017F3B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		74243EF21774886B00A37179 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		747B67DD187304E5003F3E2A /* OOOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOModel.h; sourceTree = "<group>"; };
+		747B67DE187304E5003F3E2A /* OOOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOModel.m; sourceTree = "<group>"; };
 		74C60350155F55EA0047301E /* NSBlockOperation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSBlockOperation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C60354155F55EA0047301E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74C60356155F55EA0047301E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,8 +55,7 @@
 		74C6036A155F55EA0047301E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		74C6036C155F55EA0047301E /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		74C6036D155F55EA0047301E /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
-		74C60374155F55EA0047301E /* NSBlockOperationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSBlockOperationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74C60375155F55EA0047301E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74C60374155F55EA0047301E /* NSBlockOperationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSBlockOperationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C6037D155F55EA0047301E /* NSBlockOperationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSBlockOperationTests-Info.plist"; sourceTree = "<group>"; };
 		74C6037F155F55EA0047301E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74C60381155F55EA0047301E /* NSBlockOperationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSBlockOperationTests.h; sourceTree = "<group>"; };
@@ -75,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C60376155F55EA0047301E /* SenTestingKit.framework in Frameworks */,
 				74C60377155F55EA0047301E /* UIKit.framework in Frameworks */,
 				74C60378155F55EA0047301E /* Foundation.framework in Frameworks */,
 			);
@@ -99,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				74C60350155F55EA0047301E /* NSBlockOperation.app */,
-				74C60374155F55EA0047301E /* NSBlockOperationTests.octest */,
+				74C60374155F55EA0047301E /* NSBlockOperationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,7 +111,6 @@
 				74C60354155F55EA0047301E /* UIKit.framework */,
 				74C60356155F55EA0047301E /* Foundation.framework */,
 				74C60358155F55EA0047301E /* CoreGraphics.framework */,
-				74C60375155F55EA0047301E /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,6 +120,8 @@
 			children = (
 				74C60363155F55EA0047301E /* OOOAppDelegate.h */,
 				74C60364155F55EA0047301E /* OOOAppDelegate.m */,
+				747B67DD187304E5003F3E2A /* OOOModel.h */,
+				747B67DE187304E5003F3E2A /* OOOModel.m */,
 				74C60366155F55EA0047301E /* MainStoryboard_iPhone.storyboard */,
 				74C60369155F55EA0047301E /* MainStoryboard_iPad.storyboard */,
 				74C6036C155F55EA0047301E /* OOOViewController.h */,
@@ -196,8 +198,8 @@
 			);
 			name = NSBlockOperationTests;
 			productName = NSBlockOperationTests;
-			productReference = 74C60374155F55EA0047301E /* NSBlockOperationTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 74C60374155F55EA0047301E /* NSBlockOperationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -278,6 +280,7 @@
 				74C60361155F55EA0047301E /* main.m in Sources */,
 				74C60365155F55EA0047301E /* OOOAppDelegate.m in Sources */,
 				74C6036E155F55EA0047301E /* OOOViewController.m in Sources */,
+				747B67DF187304E5003F3E2A /* OOOModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74C60383155F55EA0047301E /* NSBlockOperationTests.m in Sources */,
+				747B67E0187304E5003F3E2A /* OOOModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,14 +434,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSBlockOperation.app/NSBlockOperation";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSBlockOperation/NSBlockOperation-Prefix.pch";
 				INFOPLIST_FILE = "NSBlockOperationTests/NSBlockOperationTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -447,14 +450,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSBlockOperation.app/NSBlockOperation";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSBlockOperation/NSBlockOperation-Prefix.pch";
 				INFOPLIST_FILE = "NSBlockOperationTests/NSBlockOperationTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

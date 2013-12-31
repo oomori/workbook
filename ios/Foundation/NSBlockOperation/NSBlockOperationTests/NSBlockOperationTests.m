@@ -7,6 +7,7 @@
 //
 
 #import "NSBlockOperationTests.h"
+#import "OOOModel.h"
 
 @implementation NSBlockOperationTests
 
@@ -26,7 +27,13 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in NSBlockOperationTests");
+    //STFail(@"Unit tests are not implemented yet in NSBlockOperationTests");
+    OOOModel *model = [[OOOModel alloc] init];
+    
+
+    
+    XCTAssertTrue([model method001]);
+
 }
 
 @end

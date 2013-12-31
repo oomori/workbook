@@ -10,54 +10,15 @@
 #import <mach/mach_time.h>
 #import "OOOAppDelegate.h"
 
+
+
+
 #import "CustomClass.h"
 
 @implementation OOOAppDelegate
 
 @synthesize window = _window;
 
-#pragma mark initWithObjects:
--(void)method001
-{
-    NSArray *anArray =
-    @[@"aaa",@"bbb",@"ccc"];
-    
-    NSLog(@"%s %@",__FUNCTION__,[anArray description]);
-}
-
-#pragma mark indexOfObjectPassingTest:
--(void)method002
-{
-    NSArray *anArray =
-    @[@"aaa",@"bbb",@"ccc",
-      @"aaa",@"bbb",@"ccc",
-      @"aaa",@"bbb",@"ccc"];
-    
-    
-    NSUInteger idx = [anArray indexOfObjectPassingTest:
-                      ^ BOOL (id obj, NSUInteger idx, BOOL *stop)
-                      {
-                          //NSLog(@"002 %u,%@",idx,[obj description]);
-                          
-                          if (idx > 4) {
-                              *stop = YES;
-                          }
-                          
-                          if ([obj isEqualToString:@"bbb"]) {
-                              return YES;
-                          }else {
-                              return NO;
-                          }
-                          
-                      }];
-    
-    if (idx == NSNotFound) {
-        NSLog(@"Not Found");
-    }else {
-        NSLog(@"002 index = %u",idx);
-    }
-    
-}
 
 #pragma mark enumerateObjectsUsingBlock:
 -(void)method003
@@ -1115,9 +1076,18 @@ NSInteger intSort(id val1, id val2, void *context)
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    model = [[OOOModel alloc] init];
     
-    [self method001];
-    [self method002];
+    NSLog(@"%s %@",__FUNCTION__,[[model method001] description]);
+    
+    NSUInteger uindex = [model method002];
+    if (uindex == NSNotFound) {
+        NSLog(@"Not Found");
+    }else {
+        NSLog(@"002 index = %u",uindex);
+    }
+    
+    
     [self method003];
     [self method004];
     [self method005];

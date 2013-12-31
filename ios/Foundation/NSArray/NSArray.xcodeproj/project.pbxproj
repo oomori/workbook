@@ -11,6 +11,7 @@
 		746C60F215538CC10077F6DE /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 746C60F115538CC10077F6DE /* image.jpg */; };
 		746C60F615538D3C0077F6DE /* plistfile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 746C60F515538D3C0077F6DE /* plistfile.plist */; };
 		746C60FC1553C2F80077F6DE /* NSString+Extract.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C60FB1553C2F80077F6DE /* NSString+Extract.m */; };
+		747B67D81872998A003F3E2A /* OOOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B67D71872998A003F3E2A /* OOOModel.m */; };
 		74924052155DFDF2007A1C90 /* CustomClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 74924051155DFDF2007A1C90 /* CustomClass.m */; };
 		74F87A3C153A6C0B00CF0577 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F87A3B153A6C0B00CF0577 /* UIKit.framework */; };
 		74F87A3E153A6C0B00CF0577 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F87A3D153A6C0B00CF0577 /* Foundation.framework */; };
@@ -21,7 +22,6 @@
 		74F87A4F153A6C0B00CF0577 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F87A4D153A6C0B00CF0577 /* MainStoryboard_iPhone.storyboard */; };
 		74F87A52153A6C0B00CF0577 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F87A50153A6C0B00CF0577 /* MainStoryboard_iPad.storyboard */; };
 		74F87A55153A6C0B00CF0577 /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F87A54153A6C0B00CF0577 /* OOOViewController.m */; };
-		74F87A5D153A6C0B00CF0577 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F87A5C153A6C0B00CF0577 /* SenTestingKit.framework */; };
 		74F87A5E153A6C0B00CF0577 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F87A3B153A6C0B00CF0577 /* UIKit.framework */; };
 		74F87A5F153A6C0B00CF0577 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F87A3D153A6C0B00CF0577 /* Foundation.framework */; };
 		74F87A67153A6C0B00CF0577 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74F87A65153A6C0B00CF0577 /* InfoPlist.strings */; };
@@ -44,6 +44,8 @@
 		746C60F515538D3C0077F6DE /* plistfile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = plistfile.plist; sourceTree = "<group>"; };
 		746C60FA1553C2F80077F6DE /* NSString+Extract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Extract.h"; path = "../NSString+Extract.h"; sourceTree = "<group>"; };
 		746C60FB1553C2F80077F6DE /* NSString+Extract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Extract.m"; path = "../NSString+Extract.m"; sourceTree = "<group>"; };
+		747B67D61872998A003F3E2A /* OOOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOModel.h; sourceTree = "<group>"; };
+		747B67D71872998A003F3E2A /* OOOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOOModel.m; sourceTree = "<group>"; };
 		74924050155DFDF2007A1C90 /* CustomClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomClass.h; sourceTree = "<group>"; };
 		74924051155DFDF2007A1C90 /* CustomClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomClass.m; sourceTree = "<group>"; };
 		74F87A37153A6C0B00CF0577 /* NSArray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSArray.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,8 +62,7 @@
 		74F87A51153A6C0B00CF0577 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		74F87A53153A6C0B00CF0577 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		74F87A54153A6C0B00CF0577 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
-		74F87A5B153A6C0B00CF0577 /* NSArrayTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSArrayTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74F87A5C153A6C0B00CF0577 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74F87A5B153A6C0B00CF0577 /* NSArrayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSArrayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F87A64153A6C0B00CF0577 /* NSArrayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSArrayTests-Info.plist"; sourceTree = "<group>"; };
 		74F87A66153A6C0B00CF0577 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74F87A68153A6C0B00CF0577 /* NSArrayTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSArrayTests.h; sourceTree = "<group>"; };
@@ -83,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74F87A5D153A6C0B00CF0577 /* SenTestingKit.framework in Frameworks */,
 				74F87A5E153A6C0B00CF0577 /* UIKit.framework in Frameworks */,
 				74F87A5F153A6C0B00CF0577 /* Foundation.framework in Frameworks */,
 			);
@@ -116,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				74F87A37153A6C0B00CF0577 /* NSArray.app */,
-				74F87A5B153A6C0B00CF0577 /* NSArrayTests.octest */,
+				74F87A5B153A6C0B00CF0577 /* NSArrayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,7 +127,6 @@
 				74F87A3B153A6C0B00CF0577 /* UIKit.framework */,
 				74F87A3D153A6C0B00CF0577 /* Foundation.framework */,
 				74F87A3F153A6C0B00CF0577 /* CoreGraphics.framework */,
-				74F87A5C153A6C0B00CF0577 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,6 +137,8 @@
 				746C60F415538CFC0077F6DE /* Resources */,
 				74F87A4A153A6C0B00CF0577 /* OOOAppDelegate.h */,
 				74F87A4B153A6C0B00CF0577 /* OOOAppDelegate.m */,
+				747B67D61872998A003F3E2A /* OOOModel.h */,
+				747B67D71872998A003F3E2A /* OOOModel.m */,
 				74924050155DFDF2007A1C90 /* CustomClass.h */,
 				74924051155DFDF2007A1C90 /* CustomClass.m */,
 				746C60FA1553C2F80077F6DE /* NSString+Extract.h */,
@@ -217,8 +218,8 @@
 			);
 			name = NSArrayTests;
 			productName = NSArrayTests;
-			productReference = 74F87A5B153A6C0B00CF0577 /* NSArrayTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 74F87A5B153A6C0B00CF0577 /* NSArrayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -227,7 +228,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 74F87A31153A6C0B00CF0577 /* Build configuration list for PBXProject "NSArray" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -293,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74F87A48153A6C0B00CF0577 /* main.m in Sources */,
+				747B67D81872998A003F3E2A /* OOOModel.m in Sources */,
 				74F87A4C153A6C0B00CF0577 /* OOOAppDelegate.m in Sources */,
 				74F87A55153A6C0B00CF0577 /* OOOViewController.m in Sources */,
 				746C60FC1553C2F80077F6DE /* NSString+Extract.m in Sources */,
@@ -358,9 +360,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -376,10 +379,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -389,9 +396,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -400,8 +408,11 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -442,14 +453,13 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSArray/NSArray-Prefix.pch";
 				INFOPLIST_FILE = "NSArrayTests/NSArrayTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -460,14 +470,13 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSArray/NSArray-Prefix.pch";
 				INFOPLIST_FILE = "NSArrayTests/NSArrayTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

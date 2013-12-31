@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OOOModel.h"
 
 @interface OOOAppDelegate : UIResponder <UIApplicationDelegate>
+{
+    
+    OOOModel *model;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

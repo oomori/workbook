@@ -7,6 +7,7 @@
 //
 
 #import "OOOViewController.h"
+#import "OOOModel.h"
 
 @interface OOOViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    OOOModel *model = [[OOOModel alloc] init];
+    [model method001];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

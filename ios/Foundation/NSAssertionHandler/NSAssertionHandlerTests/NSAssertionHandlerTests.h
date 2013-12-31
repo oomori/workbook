@@ -6,8 +6,8 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface NSAssertionHandlerTests : SenTestCase
+@interface NSAssertionHandlerTests : XCTestCase
 
 @end

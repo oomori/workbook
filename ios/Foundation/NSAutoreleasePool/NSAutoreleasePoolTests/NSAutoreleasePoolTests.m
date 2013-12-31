@@ -7,6 +7,7 @@
 //
 
 #import "NSAutoreleasePoolTests.h"
+#import "OOOModel.h"
 
 @implementation NSAutoreleasePoolTests
 
@@ -26,7 +27,13 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in NSAutoreleasePoolTests");
+    OOOModel *model = [[OOOModel alloc] init];
+    
+    //XCTAssertTrue([[[del method001] class] isSubclassOfClass:[NSArray class]]);
+    
+    XCTAssertTrue([model method001]);
+
+    //XCTFail(@"Unit tests are not implemented yet in NSAutoreleasePoolTests");
 }
 
 @end

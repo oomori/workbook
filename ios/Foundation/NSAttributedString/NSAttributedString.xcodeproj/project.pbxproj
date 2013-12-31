@@ -18,7 +18,6 @@
 		746C6173155422020077F6DE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746C6171155422020077F6DE /* MainStoryboard_iPhone.storyboard */; };
 		746C6176155422020077F6DE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 746C6174155422020077F6DE /* MainStoryboard_iPad.storyboard */; };
 		746C6179155422020077F6DE /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C6178155422020077F6DE /* OOOViewController.m */; };
-		746C6181155422020077F6DE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746C6180155422020077F6DE /* SenTestingKit.framework */; };
 		746C6182155422020077F6DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746C615F155422020077F6DE /* UIKit.framework */; };
 		746C6183155422020077F6DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746C6161155422020077F6DE /* Foundation.framework */; };
 		746C618B155422020077F6DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 746C6189155422020077F6DE /* InfoPlist.strings */; };
@@ -57,8 +56,7 @@
 		746C616F155422020077F6DE /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
 		746C6177155422020077F6DE /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		746C6178155422020077F6DE /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
-		746C617F155422020077F6DE /* NSAttributedStringTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSAttributedStringTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		746C6180155422020077F6DE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		746C617F155422020077F6DE /* NSAttributedStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSAttributedStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		746C6188155422020077F6DE /* NSAttributedStringTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSAttributedStringTests-Info.plist"; sourceTree = "<group>"; };
 		746C618A155422020077F6DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		746C618C155422020077F6DE /* NSAttributedStringTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAttributedStringTests.h; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				746C6181155422020077F6DE /* SenTestingKit.framework in Frameworks */,
 				746C6182155422020077F6DE /* UIKit.framework in Frameworks */,
 				746C6183155422020077F6DE /* Foundation.framework in Frameworks */,
 			);
@@ -106,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				746C615B155422020077F6DE /* NSAttributedString.app */,
-				746C617F155422020077F6DE /* NSAttributedStringTests.octest */,
+				746C617F155422020077F6DE /* NSAttributedStringTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,7 +115,6 @@
 				746C615F155422020077F6DE /* UIKit.framework */,
 				746C6161155422020077F6DE /* Foundation.framework */,
 				746C6163155422020077F6DE /* CoreGraphics.framework */,
-				746C6180155422020077F6DE /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,8 +200,8 @@
 			);
 			name = NSAttributedStringTests;
 			productName = NSAttributedStringTests;
-			productReference = 746C617F155422020077F6DE /* NSAttributedStringTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 746C617F155422020077F6DE /* NSAttributedStringTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -442,14 +438,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSAttributedString.app/NSAttributedString";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSAttributedString/NSAttributedString-Prefix.pch";
 				INFOPLIST_FILE = "NSAttributedStringTests/NSAttributedStringTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -459,14 +454,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSAttributedString.app/NSAttributedString";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSAttributedString/NSAttributedString-Prefix.pch";
 				INFOPLIST_FILE = "NSAttributedStringTests/NSAttributedStringTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
