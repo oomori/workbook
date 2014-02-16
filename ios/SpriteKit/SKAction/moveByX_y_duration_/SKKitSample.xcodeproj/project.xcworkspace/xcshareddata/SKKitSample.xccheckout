@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6C540D6E-CD2B-41A4-867E-EB2D7E76DC96</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SKKitSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>077F8D2E-E594-4E36-A67C-F59FDC67A620</key>
+		<string>https://github.com/oomori/workbook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/SpriteKit/SKAction/moveBy_duration_ 2/SKKitSample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>077F8D2E-E594-4E36-A67C-F59FDC67A620</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/oomori/workbook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>077F8D2E-E594-4E36-A67C-F59FDC67A620</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>077F8D2E-E594-4E36-A67C-F59FDC67A620</string>
+			<key>IDESourceControlWCCName</key>
+			<string>workbook</string>
+		</dict>
+	</array>
+</dict>
+</plist>
