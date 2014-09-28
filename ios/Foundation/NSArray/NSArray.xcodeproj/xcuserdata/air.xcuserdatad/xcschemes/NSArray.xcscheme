@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "74F87A5A153A6C0B00CF0577"
-               BuildableName = "NSArrayTests.octest"
+               BuildableName = "NSArrayTests.xctest"
                BlueprintName = "NSArrayTests"
                ReferencedContainer = "container:NSArray.xcodeproj">
             </BuildableReference>

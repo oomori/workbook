@@ -34,7 +34,7 @@ CGPoint getPointCB(t,x1,y1,x2,y2,x3,y3,x4,y4) {
     if (self) {
         // Initialization code
      
-        
+        selectPointNumber = 0;
 
     }
     return self;
@@ -143,8 +143,10 @@ CGPoint getPointCB(t,x1,y1,x2,y2,x3,y3,x4,y4) {
          currentPosition = CGPointMake([obj locationInView:self].x,[obj locationInView:self].y);
          OOOAppDelegate *appDelegate = (OOOAppDelegate *)[[UIApplication sharedApplication] delegate];
          NSMutableArray *pathObjects = [appDelegate pathObjects];
-         OOOPathObject *pathObj = [pathObjects objectAtIndex:0];
-         OOOPointObject *pointObj = [pathObj.pointArray objectAtIndex:0];
+         
+         //一つ目の場所移動
+         OOOPathObject *pathObj = [pathObjects objectAtIndex: selectPointNumber ];
+         OOOPointObject *pointObj = [pathObj.pointArray objectAtIndex: selectPointNumber ];
          pointObj.startPoint = CGPointMake([obj locationInView:self].x,[obj locationInView:self].y);
          pathObj.startPoint = CGPointMake([obj locationInView:self].x,[obj locationInView:self].y);
          
@@ -210,10 +212,11 @@ CGPoint getPointCB(t,x1,y1,x2,y2,x3,y3,x4,y4) {
          
          OOOAppDelegate *appDelegate = (OOOAppDelegate *)[[UIApplication sharedApplication] delegate];
          NSMutableArray *pathObjects = [appDelegate pathObjects];
-         OOOPathObject *pathObj = [pathObjects objectAtIndex:0];
-         OOOPointObject *pointObj = [pathObj.pointArray objectAtIndex:0];
+
+         //一つ目の場所移動
+         OOOPathObject *pathObj = [pathObjects objectAtIndex: selectPointNumber ];
+         OOOPointObject *pointObj = [pathObj.pointArray objectAtIndex: selectPointNumber ];
          pointObj.startPoint = CGPointMake(pointObj.startPoint.x,pointObj.startPoint.y);
-         //pathObj.startPoint = CGPointMake(pointObj.startPoint.x+currentPosition.x,pointObj.startPoint.y+currentPosition.y);
          
          [self setNeedsDisplay];
          

@@ -17,7 +17,7 @@
 
     float t;
     CGPoint hitPoint;
-    
+    int selectPointNumber;
     UIBezierPath *glyphBezierPath;
 }
 @end

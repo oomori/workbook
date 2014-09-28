@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A8583EBA-41F2-4F31-9BE5-299C12D6351B</string>
+	<string>AE379BC5-BC34-4A33-BDA3-E43BEB65DEBA</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SKKitSample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,7 +14,7 @@
 		<string>https://github.com/oomori/workbook.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ios/SpriteKit/SKScene/spriteNodeWithImageNamed_/SKKitSample.xcodeproj/project.xcworkspace</string>
+	<string>ios/SpriteKit/SKScene/backgroundColor/SKKitSample.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>077F8D2E-E594-4E36-A67C-F59FDC67A620</key>
