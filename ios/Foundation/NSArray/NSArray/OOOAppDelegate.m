@@ -363,7 +363,7 @@
     
     NSArray *anArray = @[@"aaa",@"bbb",@"ccc"];
     
-    NSLog(@"019 %d",[anArray count]);
+    NSLog(@"019 %lu",(unsigned long)[anArray count]);
     //=>019 3
 }
 
@@ -569,17 +569,17 @@ NSInteger intSort(id val1, id val2, void *context)
     [[NSArray alloc] initWithArray:anArray];
     
     id obj1 = anArray[1];
-    NSLog(@"028 newArray= <0x%08x>,%@",(NSUInteger)obj1,obj1);
+    NSLog(@"028 newArray= <0x%08lx>,%@",(unsigned long)obj1,obj1);
     id obj2 = anotherArray[1];
-    NSLog(@"028 newArray= <0x%08x>,%@",(NSUInteger)obj2,obj2);
+    NSLog(@"028 newArray= <0x%08lx>,%@",(unsigned long)obj2,obj2);
     //=>028 newArray= <0x06868170>,bbb
     //=>028 newArray= <0x06868170>,bbb
     
     //bbbに+を追加してみる
     [bbb appendString:@"+"];
     
-    NSLog(@"028 newArray= <0x%08x>,%@",(NSUInteger)obj1,obj1);
-    NSLog(@"028 newArray= <0x%08x>,%@",(NSUInteger)obj2,obj2);
+    NSLog(@"028 newArray= <0x%08lx>,%@",(unsigned long)obj1,obj1);
+    NSLog(@"028 newArray= <0x%08lx>,%@",(unsigned long)obj2,obj2);
     //obj1もobj2も同じbbbを示しているのでbbb+に変わっている
     //=>028 newArray= <0x06868170>,bbb+
     //=>028 newArray= <0x06868170>,bbb+
@@ -599,7 +599,7 @@ NSInteger intSort(id val1, id val2, void *context)
     [[NSArray alloc] initWithArray:anArray copyItems:YES];
     
     id obj1 = anArray[1];
-    NSLog(@"029 obj1= <0x%08x>,%@",(NSUInteger)obj1,obj1);
+    NSLog(@"029 obj1= <0x%08lx>,%@",(unsigned long)obj1,obj1);
     id obj2 = anotherArray[1];
     NSLog(@"029 obj2= <0x%08x>,%@",(NSUInteger)obj2,obj2);
     //コピーされているので違うオブジェクトを含んでいる
@@ -609,7 +609,7 @@ NSInteger intSort(id val1, id val2, void *context)
     //bbbに+を追加してみる
     [bbb appendString:@"+"];
     
-    NSLog(@"029 obj1= <0x%08x>,%@",(NSUInteger)obj1,obj1);
+    NSLog(@"029 obj1= <0x%08lx>,%@",(unsigned long)obj1,obj1);
     NSLog(@"029 obj2= <0x%08x>,%@",(NSUInteger)obj2,obj2);
     //obj1とobj2は違うNSString示しているのでobj2はbbbのまま
     //=>029 obj1= <0x06838ee0>,bbb+

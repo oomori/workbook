@@ -13,7 +13,6 @@
 		74C7740E15BD76D800AF2DC0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 74C7740C15BD76D800AF2DC0 /* Credits.rtf */; };
 		74C7741115BD76D800AF2DC0 /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C7741015BD76D800AF2DC0 /* OOOAppDelegate.m */; };
 		74C7741415BD76D800AF2DC0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74C7741215BD76D800AF2DC0 /* MainMenu.xib */; };
-		74C7741C15BD76D800AF2DC0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C7741B15BD76D800AF2DC0 /* SenTestingKit.framework */; };
 		74C7741D15BD76D800AF2DC0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C773FD15BD76D800AF2DC0 /* Cocoa.framework */; };
 		74C7742515BD76D800AF2DC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C7742315BD76D800AF2DC0 /* InfoPlist.strings */; };
 		74C7742815BD76D800AF2DC0 /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C7742715BD76D800AF2DC0 /* NSURLTests.m */; };
@@ -43,8 +42,7 @@
 		74C7740F15BD76D800AF2DC0 /* OOOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOAppDelegate.h; sourceTree = "<group>"; };
 		74C7741015BD76D800AF2DC0 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
 		74C7741315BD76D800AF2DC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		74C7741A15BD76D800AF2DC0 /* NSURLTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSURLTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74C7741B15BD76D800AF2DC0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74C7741A15BD76D800AF2DC0 /* NSURLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSURLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C7742215BD76D800AF2DC0 /* NSURLTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSURLTests-Info.plist"; sourceTree = "<group>"; };
 		74C7742415BD76D800AF2DC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74C7742615BD76D800AF2DC0 /* NSURLTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLTests.h; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C7741C15BD76D800AF2DC0 /* SenTestingKit.framework in Frameworks */,
 				74C7741D15BD76D800AF2DC0 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				74C773F915BD76D800AF2DC0 /* NSURL.app */,
-				74C7741A15BD76D800AF2DC0 /* NSURLTests.octest */,
+				74C7741A15BD76D800AF2DC0 /* NSURLTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				74C773FD15BD76D800AF2DC0 /* Cocoa.framework */,
-				74C7741B15BD76D800AF2DC0 /* SenTestingKit.framework */,
 				74C773FF15BD76D800AF2DC0 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -191,8 +187,8 @@
 			);
 			name = NSURLTests;
 			productName = NSURLTests;
-			productReference = 74C7741A15BD76D800AF2DC0 /* NSURLTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 74C7741A15BD76D800AF2DC0 /* NSURLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -201,7 +197,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0430;
+				LastTestingUpgradeCheck = 0610;
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = 74C773F315BD76D800AF2DC0 /* Build configuration list for PBXProject "NSURL" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -326,9 +323,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -341,9 +345,11 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -353,18 +359,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -373,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSURL/NSURL-Prefix.pch";
 				INFOPLIST_FILE = "NSURL/NSURL-Info.plist";
@@ -385,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSURL/NSURL-Prefix.pch";
 				INFOPLIST_FILE = "NSURL/NSURL-Info.plist";
@@ -397,13 +414,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSURL.app/Contents/MacOS/NSURL";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSURL/NSURL-Prefix.pch";
 				INFOPLIST_FILE = "NSURLTests/NSURLTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -411,13 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSURL.app/Contents/MacOS/NSURL";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSURL/NSURL-Prefix.pch";
 				INFOPLIST_FILE = "NSURLTests/NSURLTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -440,6 +457,7 @@
 				74C7742D15BD76D800AF2DC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74C7742E15BD76D800AF2DC0 /* Build configuration list for PBXNativeTarget "NSURLTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +466,7 @@
 				74C7743015BD76D800AF2DC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

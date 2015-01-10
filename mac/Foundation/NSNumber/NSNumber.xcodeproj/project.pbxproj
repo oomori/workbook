@@ -13,7 +13,6 @@
 		74EEEA9E15DCB33E002ED0E1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 74EEEA9C15DCB33E002ED0E1 /* Credits.rtf */; };
 		74EEEAA115DCB33E002ED0E1 /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEEAA015DCB33E002ED0E1 /* OOOAppDelegate.m */; };
 		74EEEAA415DCB33E002ED0E1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74EEEAA215DCB33E002ED0E1 /* MainMenu.xib */; };
-		74EEEAAC15DCB33E002ED0E1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEEAAB15DCB33E002ED0E1 /* SenTestingKit.framework */; };
 		74EEEAAD15DCB33E002ED0E1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEEA8D15DCB33E002ED0E1 /* Cocoa.framework */; };
 		74EEEAB515DCB33E002ED0E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EEEAB315DCB33E002ED0E1 /* InfoPlist.strings */; };
 		74EEEAB815DCB33E002ED0E1 /* NSNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEEAB715DCB33E002ED0E1 /* NSNumberTests.m */; };
@@ -44,7 +43,6 @@
 		74EEEAA015DCB33E002ED0E1 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
 		74EEEAA315DCB33E002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		74EEEAAA15DCB33E002ED0E1 /* NSNumberTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSNumberTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74EEEAAB15DCB33E002ED0E1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		74EEEAB215DCB33E002ED0E1 /* NSNumberTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSNumberTests-Info.plist"; sourceTree = "<group>"; };
 		74EEEAB415DCB33E002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74EEEAB615DCB33E002ED0E1 /* NSNumberTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSNumberTests.h; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74EEEAAC15DCB33E002ED0E1 /* SenTestingKit.framework in Frameworks */,
 				74EEEAAD15DCB33E002ED0E1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				74EEEA8D15DCB33E002ED0E1 /* Cocoa.framework */,
-				74EEEAAB15DCB33E002ED0E1 /* SenTestingKit.framework */,
 				74EEEA8F15DCB33E002ED0E1 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -190,7 +186,7 @@
 			name = NSNumberTests;
 			productName = NSNumberTests;
 			productReference = 74EEEAAA15DCB33E002ED0E1 /* NSNumberTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -199,7 +195,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0440;
+				LastTestingUpgradeCheck = 0610;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Satoshi Oomori";
 			};
 			buildConfigurationList = 74EEEA8315DCB33E002ED0E1 /* Build configuration list for PBXProject "NSNumber" */;
@@ -325,7 +322,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -343,7 +339,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -353,7 +349,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -365,7 +360,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -399,13 +394,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSNumber.app/Contents/MacOS/NSNumber";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSNumber/NSNumber-Prefix.pch";
 				INFOPLIST_FILE = "NSNumberTests/NSNumberTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -414,13 +411,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSNumber.app/Contents/MacOS/NSNumber";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSNumber/NSNumber-Prefix.pch";
 				INFOPLIST_FILE = "NSNumberTests/NSNumberTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -443,6 +442,7 @@
 				74EEEABD15DCB33E002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74EEEABE15DCB33E002ED0E1 /* Build configuration list for PBXNativeTarget "NSNumberTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +451,7 @@
 				74EEEAC015DCB33E002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

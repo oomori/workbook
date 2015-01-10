@@ -6,8 +6,8 @@
 //  Copyright (c) 2012年 Satoshi Oomori. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface NSNumberTests : SenTestCase
+@interface NSNumberTests : XCTestCase
 
 @end

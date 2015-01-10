@@ -13,7 +13,6 @@
 		74EEE89C15DA9C9E002ED0E1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 74EEE89A15DA9C9E002ED0E1 /* Credits.rtf */; };
 		74EEE89F15DA9C9E002ED0E1 /* OOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEE89E15DA9C9E002ED0E1 /* OOOAppDelegate.m */; };
 		74EEE8A215DA9C9E002ED0E1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74EEE8A015DA9C9E002ED0E1 /* MainMenu.xib */; };
-		74EEE8AA15DA9C9E002ED0E1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE8A915DA9C9E002ED0E1 /* SenTestingKit.framework */; };
 		74EEE8AB15DA9C9E002ED0E1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EEE88B15DA9C9E002ED0E1 /* Cocoa.framework */; };
 		74EEE8B315DA9C9E002ED0E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EEE8B115DA9C9E002ED0E1 /* InfoPlist.strings */; };
 		74EEE8B615DA9C9E002ED0E1 /* NSOrthographyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EEE8B515DA9C9E002ED0E1 /* NSOrthographyTests.m */; };
@@ -44,7 +43,6 @@
 		74EEE89E15DA9C9E002ED0E1 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
 		74EEE8A115DA9C9E002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		74EEE8A815DA9C9E002ED0E1 /* NSOrthographyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSOrthographyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74EEE8A915DA9C9E002ED0E1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		74EEE8B015DA9C9E002ED0E1 /* NSOrthographyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSOrthographyTests-Info.plist"; sourceTree = "<group>"; };
 		74EEE8B215DA9C9E002ED0E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74EEE8B415DA9C9E002ED0E1 /* NSOrthographyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOrthographyTests.h; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74EEE8AA15DA9C9E002ED0E1 /* SenTestingKit.framework in Frameworks */,
 				74EEE8AB15DA9C9E002ED0E1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				74EEE88B15DA9C9E002ED0E1 /* Cocoa.framework */,
-				74EEE8A915DA9C9E002ED0E1 /* SenTestingKit.framework */,
 				74EEE88D15DA9C9E002ED0E1 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -190,7 +186,7 @@
 			name = NSOrthographyTests;
 			productName = NSOrthographyTests;
 			productReference = 74EEE8A815DA9C9E002ED0E1 /* NSOrthographyTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -199,7 +195,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0440;
+				LastTestingUpgradeCheck = 0610;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Satoshi Oomori";
 			};
 			buildConfigurationList = 74EEE88115DA9C9E002ED0E1 /* Build configuration list for PBXProject "NSOrthography" */;
@@ -325,7 +322,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -343,7 +339,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -353,7 +349,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -365,7 +360,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -399,13 +394,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSOrthography.app/Contents/MacOS/NSOrthography";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSOrthography/NSOrthography-Prefix.pch";
 				INFOPLIST_FILE = "NSOrthographyTests/NSOrthographyTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -414,13 +411,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSOrthography.app/Contents/MacOS/NSOrthography";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSOrthography/NSOrthography-Prefix.pch";
 				INFOPLIST_FILE = "NSOrthographyTests/NSOrthographyTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -443,6 +442,7 @@
 				74EEE8BB15DA9C9E002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74EEE8BC15DA9C9E002ED0E1 /* Build configuration list for PBXNativeTarget "NSOrthographyTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +451,7 @@
 				74EEE8BE15DA9C9E002ED0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
