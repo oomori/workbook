@@ -197,6 +197,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         newWindow.orderOut(self)
     }
     
+    
     //NSApplication orderFrontColorPanel
     @IBAction func function012(sender: AnyObject) {
         NSLog("orderFrontColorPanel")
@@ -208,6 +209,172 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSLog("orderFrontStandardAboutPanel")
         let anApplication = MyApplication.sharedApplication()
         anApplication.orderFrontStandardAboutPanel(self)
+    }
+    
+    //NSApplication beginModalSessionForWindow runModalSession　endModalSession
+    @IBAction func function014(sender: AnyObject) {
+        NSLog("beginModalSessionForWindow")
+        var modalCode:NSInteger;
+        NSApp.stopModal()
+        let anApplication = MyApplication.sharedApplication()
+        var session:NSModalSession = anApplication.beginModalSessionForWindow(newWindow)
+        
+        do{
+            modalCode = NSApp.runModalSession(session)
+             NSLog("loop")
+        }while (modalCode == NSRunContinuesResponse)
+        NSLog("end %@",anApplication.modalWindow!)
+        anApplication.endModalSession(session)
+    }
+    
+    
+    //NSApplication orderFrontStandardAboutPanelWithOptions
+    @IBAction func function015(sender: AnyObject) {
+        NSLog("orderFrontStandardAboutPanelWithOptions")
+        let anApplication = MyApplication.sharedApplication()
+        //アバウトパネルの情報表示用NSDictionaryを設定
+        let panelDic:Dictionary<String, String> = ["Version" : "1.1", "Copyright" : "satoshi oomori"];
+        //表示用
+        for key in panelDic.keys{
+            println("\(key) : \(panelDic[key])");
+        }
+        //アバウトパネルを表示
+        anApplication.orderFrontStandardAboutPanelWithOptions(panelDic)
+    }
+    
+    //NSApplication extendStateRestoration
+    //調査中
+    @IBAction func function016(sender: AnyObject) {
+        let anApplication = MyApplication.sharedApplication()
+        anApplication.extendStateRestoration()
+    }
+    
+    //NSApplication orderFrontCharacterPalette
+    //文字パレットを表示
+    @IBAction func functtion017(sender: AnyObject) {
+        //共有アプリケーションインスタンスを取得
+        let anApplication = MyApplication.sharedApplication()
+        //文字パレットを表示
+        anApplication.orderFrontCharacterPalette(self)
+    }
+    //NSApplication runPageLayout
+    //ページ設定パネルを表示
+    @IBAction func function018(sender: AnyObject) {
+        //共有アプリケーションインスタンスを取得
+        let anApplication = MyApplication.sharedApplication()
+        //ページ設定パネルを表示
+        anApplication.runPageLayout(self)
+    }
+    
+    //NSApplication enabledRemoteNotificationTypes
+    //リモート通知の管理
+    @IBAction func function019(sender: AnyObject) {
+        //共有アプリケーションインスタンスを取得
+        let anApplication = MyApplication.sharedApplication()
+        //リモート通知の取得
+        var types:NSRemoteNotificationType = anApplication.enabledRemoteNotificationTypes
+        
+       //ifで判定
+        if (types == NSRemoteNotificationType.None)
+        {
+            NSLog("None")
+        }
+        
+        //switchで分岐
+        //remoteStateTextFieldは表示用のNSTextField
+        switch types {
+        case NSRemoteNotificationType.None :
+            remoteStateTextField.stringValue = "None"
+            NSLog("None")
+        case NSRemoteNotificationType.Badge :
+            remoteStateTextField.stringValue = "Badge"
+            NSLog("Badge")
+        case NSRemoteNotificationType.Sound :
+            remoteStateTextField.stringValue = "Sound"
+            NSLog("Sound")
+        case NSRemoteNotificationType.Alert :
+            remoteStateTextField.stringValue = "Alert"
+            NSLog("Alert")
+        default :
+            break
+        }
+        
+        
+    }
+    //リモート状態を表示するTextField
+    @IBOutlet weak var remoteStateTextField: NSTextField!
+    
+    //NSApplication registerForRemoteNotificationTypes
+    //
+    @IBAction func function020(sender: AnyObject) {
+        //共有アプリケーションインスタンスを取得
+        let anApplication = MyApplication.sharedApplication()
+        //バッジに設定
+        anApplication.registerForRemoteNotificationTypes(NSRemoteNotificationType.Badge)
+    }
+    //NSApplication registerForRemoteNotificationTypes
+    //
+    @IBAction func function021(sender: AnyObject) {
+        //共有アプリケーションインスタンスを取得
+        let anApplication = MyApplication.sharedApplication()
+        //バッジに設定
+        anApplication.registerForRemoteNotificationTypes(NSRemoteNotificationType.Sound)
+    }
+    //NSApplication unregisterForRemoteNotifications
+    //
+    @IBAction func function022(sender: AnyObject) {
+        //共有アプリケーションインスタンスを取得
+        let anApplication = MyApplication.sharedApplication()
+        //登録解除
+        anApplication.unregisterForRemoteNotifications()
+    }
+    
+    //NSApplication modalWindow
+    @IBAction func function023(sender: AnyObject) {
+        //共有アプリケーションインスタンスを取得
+        let anApplication = MyApplication.sharedApplication()
+        //
+        NSLog("%@",anApplication.modalWindow!)
+        
+    }
+    
+    //NSApplication userInterfaceLayoutDirection
+    @IBAction func function024(sender: AnyObject) {
+        //共有アプリケーションインスタンスを取得
+        let anApplication = MyApplication.sharedApplication()
+        //UI方向を取得
+        var direction : NSUserInterfaceLayoutDirection = anApplication.userInterfaceLayoutDirection
+        
+        //switchで分岐
+        switch direction {
+        case NSUserInterfaceLayoutDirection.LeftToRight :
+            NSLog("LeftToRight")
+        case NSUserInterfaceLayoutDirection.RightToLeft :
+            NSLog("RightToLeft")
+        default :
+            break
+        }
+    }
+    //NSApplication keyWindow
+    @IBAction func function025(sender: AnyObject) {
+        //共有アプリケーションインスタンスを取得
+        let anApplication = MyApplication.sharedApplication()
+        NSLog(anApplication.keyWindow!.title!)
+    }
+    
+    //NSApplication mainWindow
+    @IBAction func function026(sender: AnyObject) {
+        //共有アプリケーションインスタンスを取得
+        let anApplication = MyApplication.sharedApplication()
+        NSLog(anApplication.mainWindow!.title!)
+    }
+    
+    //NSApplication windowWithWindowNumber()
+    @IBAction func function027(sender: AnyObject) {
+        //共有アプリケーションインスタンスを取得
+        let anApplication = MyApplication.sharedApplication()
+        let mainWindow :NSWindow = anApplication.mainWindow!
+        NSLog("window number = %d",anApplication.windowWithWindowNumber(mainWindow.windowNumber)!)
     }
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
