@@ -13,6 +13,8 @@
 		450685E91A527D48000617B2 /* NSApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450685E81A527D48000617B2 /* NSApplicationTests.swift */; };
 		450685F31A528334000617B2 /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450685F21A528334000617B2 /* MyApplication.swift */; };
 		450686691A53EEEA000617B2 /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450686681A53EEEA000617B2 /* MyImageView.swift */; };
+		459BCED91A7DB84600CB5947 /* ClickThroughButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459BCED81A7DB84600CB5947 /* ClickThroughButton.swift */; };
+		459BCEDE1A7E4A3800CB5947 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 459BCEDD1A7E4A3800CB5947 /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		450685E81A527D48000617B2 /* NSApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSApplicationTests.swift; sourceTree = "<group>"; };
 		450685F21A528334000617B2 /* MyApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyApplication.swift; sourceTree = "<group>"; };
 		450686681A53EEEA000617B2 /* MyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImageView.swift; sourceTree = "<group>"; };
+		459BCED81A7DB84600CB5947 /* ClickThroughButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickThroughButton.swift; sourceTree = "<group>"; };
+		459BCEDD1A7E4A3800CB5947 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,10 @@
 				450685D71A527D48000617B2 /* AppDelegate.swift */,
 				450685F21A528334000617B2 /* MyApplication.swift */,
 				450686681A53EEEA000617B2 /* MyImageView.swift */,
+				459BCED81A7DB84600CB5947 /* ClickThroughButton.swift */,
 				450685D91A527D48000617B2 /* Images.xcassets */,
 				450685DB1A527D48000617B2 /* MainMenu.xib */,
+				459BCEDC1A7E4A3800CB5947 /* Help */,
 				450685D51A527D48000617B2 /* Supporting Files */,
 			);
 			path = NSApplication;
@@ -110,6 +116,14 @@
 				450685E71A527D48000617B2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		459BCEDC1A7E4A3800CB5947 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				459BCEDD1A7E4A3800CB5947 /* index.html */,
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459BCEDE1A7E4A3800CB5947 /* index.html in Resources */,
 				450685DA1A527D48000617B2 /* Images.xcassets in Resources */,
 				450685DD1A527D48000617B2 /* MainMenu.xib in Resources */,
 			);
@@ -213,6 +228,7 @@
 			files = (
 				450685F31A528334000617B2 /* MyApplication.swift in Sources */,
 				450685D81A527D48000617B2 /* AppDelegate.swift in Sources */,
+				459BCED91A7DB84600CB5947 /* ClickThroughButton.swift in Sources */,
 				450686691A53EEEA000617B2 /* MyImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

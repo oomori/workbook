@@ -14,7 +14,8 @@ class MyImageView: NSImageView {
     override func mouseDown(theEvent: NSEvent) {
         var newEvent: NSEvent!
         NSLog("start")
-        
+        //NSApp.preventWindowOrdering()
+
         let maskUp = NSEventMask.LeftMouseUpMask.rawValue
         let maskDragged = NSEventMask.LeftMouseDraggedMask.rawValue
         let mask = Int( maskUp | maskDragged ) // cast from UInt
