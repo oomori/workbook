@@ -11,6 +11,8 @@
 		452F58AD1A871B3500EC2AC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452F58AC1A871B3500EC2AC4 /* Images.xcassets */; };
 		452F58B01A871B3500EC2AC4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452F58AE1A871B3500EC2AC4 /* MainMenu.xib */; };
 		452F58BC1A871B3500EC2AC4 /* NSAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F58BB1A871B3500EC2AC4 /* NSAlertTests.swift */; };
+		45A2BFD01A8971C600A8A592 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45A2BFD21A8971C600A8A592 /* Localizable.strings */; };
+		45E2AA801A8B8AD700056F26 /* anIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E2AA7F1A8B8AD700056F26 /* anIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +30,14 @@
 		452F58A91A871B3500EC2AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		452F58AA1A871B3500EC2AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		452F58AC1A871B3500EC2AC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		452F58AF1A871B3500EC2AC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		452F58B51A871B3500EC2AC4 /* NSAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		452F58BA1A871B3500EC2AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		452F58BB1A871B3500EC2AC4 /* NSAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAlertTests.swift; sourceTree = "<group>"; };
+		45A2BFCB1A89703100A8A592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		45A2BFCD1A89708400A8A592 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		45A2BFD11A8971C600A8A592 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		45A2BFD31A8971DF00A8A592 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		45E2AA7F1A8B8AD700056F26 /* anIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,8 @@
 		452F58A71A871B3500EC2AC4 /* NSAlert */ = {
 			isa = PBXGroup;
 			children = (
+				45E2AA7F1A8B8AD700056F26 /* anIcon.png */,
+				45A2BFD21A8971C600A8A592 /* Localizable.strings */,
 				452F58AA1A871B3500EC2AC4 /* AppDelegate.swift */,
 				452F58AC1A871B3500EC2AC4 /* Images.xcassets */,
 				452F58AE1A871B3500EC2AC4 /* MainMenu.xib */,
@@ -187,6 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				452F58AD1A871B3500EC2AC4 /* Images.xcassets in Resources */,
+				45E2AA801A8B8AD700056F26 /* anIcon.png in Resources */,
+				45A2BFD01A8971C600A8A592 /* Localizable.strings in Resources */,
 				452F58B01A871B3500EC2AC4 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,9 +241,20 @@
 		452F58AE1A871B3500EC2AC4 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				452F58AF1A871B3500EC2AC4 /* Base */,
+				45A2BFCB1A89703100A8A592 /* Base */,
+				45A2BFCD1A89708400A8A592 /* ja */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		45A2BFD21A8971C600A8A592 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45A2BFD11A8971C600A8A592 /* ja */,
+				45A2BFD31A8971DF00A8A592 /* en */,
+			);
+			name = Localizable.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -393,6 +414,7 @@
 				452F58C11A871B3500EC2AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		452F58C21A871B3500EC2AC4 /* Build configuration list for PBXNativeTarget "NSAlertTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +423,7 @@
 				452F58C41A871B3500EC2AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

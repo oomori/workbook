@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  NSAlert
+
+  Created by air on 2015/02/10.
+  Copyright (c) 2015年 oomori. All rights reserved.
+*/
+"Stop" = "停止" ;
+
+"Second" = "二番目" ;
+
+"First" = "一番目" ;
+
+"Third" = "三番目" ;
