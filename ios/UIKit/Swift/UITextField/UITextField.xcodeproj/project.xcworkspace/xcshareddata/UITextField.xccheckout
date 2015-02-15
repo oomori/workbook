@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>3F279282-991C-47EA-8E77-B99D6DE7AD90</string>
+	<string>DF525FC6-E0FF-435C-B083-D8D25AE17F1D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>UIFont</string>
+	<string>UITextField</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>FA87E5C01DE0C43ED06500D3A5EF03513B982E9C</key>
 		<string>https://github.com/oomori/workbook.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ios/UIKit/UIFont/UIFont/UIFont.xcodeproj</string>
+	<string>ios/UIKit/Swift/UITextField/UITextField.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>FA87E5C01DE0C43ED06500D3A5EF03513B982E9C</key>
