@@ -11,6 +11,7 @@ import Cocoa
 class ViewController: NSViewController {
 
     //NSData getBytes:length:
+    //NSData dataWithBytes:length:
     @IBAction func function001(sender: AnyObject) {
         var char : [Byte]
         char = [0x10 , 0x1A, 0xBF , 0x00 , 0xAA , 0xFF]
@@ -18,9 +19,11 @@ class ViewController: NSViewController {
         println("\(dat1)")
         //-><101abf00 aaff>
     }
-    //NSData
+    //NSData data
     @IBAction func function002(sender: AnyObject) {
-        
+        let dat1 = NSData()
+        println("\(dat1)")
+        //-><>
     }
     //NSData
     @IBAction func function003(sender: AnyObject) {

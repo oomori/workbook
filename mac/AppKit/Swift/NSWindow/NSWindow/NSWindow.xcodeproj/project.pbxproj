@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452EEC511A954F2500A767F9 /* MyPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EEC501A954F2500A767F9 /* MyPanel.swift */; };
+		452EEC531A97751900A767F9 /* IMG_6698.png in Resources */ = {isa = PBXBuildFile; fileRef = 452EEC521A97751900A767F9 /* IMG_6698.png */; };
+		452EEC5A1A977BC300A767F9 /* TransView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EEC591A977BC300A767F9 /* TransView.swift */; };
 		452F58821A87170100EC2AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F58811A87170100EC2AC4 /* AppDelegate.swift */; };
 		452F58841A87170100EC2AC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452F58831A87170100EC2AC4 /* Images.xcassets */; };
 		452F58871A87170100EC2AC4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452F58851A87170100EC2AC4 /* MainMenu.xib */; };
 		452F58931A87170100EC2AC4 /* NSWindowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F58921A87170100EC2AC4 /* NSWindowTests.swift */; };
+		45CB92D71A9992C800A3C3AC /* TransPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB92D61A9992C800A3C3AC /* TransPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,9 +25,19 @@
 			remoteGlobalIDString = 452F587B1A87170100EC2AC4;
 			remoteInfo = NSWindow;
 		};
+		45CC3C0B1AA2D40F001513FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 452F58741A87170100EC2AC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45CC3BF81AA2D40F001513FD;
+			remoteInfo = NSView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		452EEC501A954F2500A767F9 /* MyPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPanel.swift; sourceTree = "<group>"; };
+		452EEC521A97751900A767F9 /* IMG_6698.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6698.png; sourceTree = "<group>"; };
+		452EEC591A977BC300A767F9 /* TransView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransView.swift; sourceTree = "<group>"; };
 		452F587C1A87170100EC2AC4 /* NSWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452F58801A87170100EC2AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		452F58811A87170100EC2AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +46,9 @@
 		452F588C1A87170100EC2AC4 /* NSWindowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSWindowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		452F58911A87170100EC2AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		452F58921A87170100EC2AC4 /* NSWindowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWindowTests.swift; sourceTree = "<group>"; };
+		45CB92D61A9992C800A3C3AC /* TransPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransPanel.swift; sourceTree = "<group>"; };
+		45CC3BF91AA2D40F001513FD /* NSView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45CC3C0A1AA2D40F001513FD /* NSViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		452F58891A87170100EC2AC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45CC3BF61AA2D40F001513FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45CC3C071AA2D40F001513FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -66,6 +97,8 @@
 			children = (
 				452F587C1A87170100EC2AC4 /* NSWindow.app */,
 				452F588C1A87170100EC2AC4 /* NSWindowTests.xctest */,
+				45CC3BF91AA2D40F001513FD /* NSView.app */,
+				45CC3C0A1AA2D40F001513FD /* NSViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,7 +106,11 @@
 		452F587E1A87170100EC2AC4 /* NSWindow */ = {
 			isa = PBXGroup;
 			children = (
+				452EEC521A97751900A767F9 /* IMG_6698.png */,
 				452F58811A87170100EC2AC4 /* AppDelegate.swift */,
+				452EEC501A954F2500A767F9 /* MyPanel.swift */,
+				45CB92D61A9992C800A3C3AC /* TransPanel.swift */,
+				452EEC591A977BC300A767F9 /* TransView.swift */,
 				452F58831A87170100EC2AC4 /* Images.xcassets */,
 				452F58851A87170100EC2AC4 /* MainMenu.xib */,
 				452F587F1A87170100EC2AC4 /* Supporting Files */,
@@ -144,6 +181,41 @@
 			productReference = 452F588C1A87170100EC2AC4 /* NSWindowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		45CC3BF81AA2D40F001513FD /* NSView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45CC3C161AA2D40F001513FD /* Build configuration list for PBXNativeTarget "NSView" */;
+			buildPhases = (
+				45CC3BF51AA2D40F001513FD /* Sources */,
+				45CC3BF61AA2D40F001513FD /* Frameworks */,
+				45CC3BF71AA2D40F001513FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSView;
+			productName = NSView;
+			productReference = 45CC3BF91AA2D40F001513FD /* NSView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45CC3C091AA2D40F001513FD /* NSViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45CC3C171AA2D40F001513FD /* Build configuration list for PBXNativeTarget "NSViewTests" */;
+			buildPhases = (
+				45CC3C061AA2D40F001513FD /* Sources */,
+				45CC3C071AA2D40F001513FD /* Frameworks */,
+				45CC3C081AA2D40F001513FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45CC3C0C1AA2D40F001513FD /* PBXTargetDependency */,
+			);
+			name = NSViewTests;
+			productName = NSViewTests;
+			productReference = 45CC3C0A1AA2D40F001513FD /* NSViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -159,6 +231,13 @@
 					452F588B1A87170100EC2AC4 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 452F587B1A87170100EC2AC4;
+					};
+					45CC3BF81AA2D40F001513FD = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					45CC3C091AA2D40F001513FD = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 45CC3BF81AA2D40F001513FD;
 					};
 				};
 			};
@@ -177,6 +256,8 @@
 			targets = (
 				452F587B1A87170100EC2AC4 /* NSWindow */,
 				452F588B1A87170100EC2AC4 /* NSWindowTests */,
+				45CC3BF81AA2D40F001513FD /* NSView */,
+				45CC3C091AA2D40F001513FD /* NSViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -186,12 +267,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452EEC531A97751900A767F9 /* IMG_6698.png in Resources */,
 				452F58841A87170100EC2AC4 /* Images.xcassets in Resources */,
 				452F58871A87170100EC2AC4 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		452F588A1A87170100EC2AC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45CC3BF71AA2D40F001513FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45CC3C081AA2D40F001513FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,7 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452EEC5A1A977BC300A767F9 /* TransView.swift in Sources */,
+				452EEC511A954F2500A767F9 /* MyPanel.swift in Sources */,
 				452F58821A87170100EC2AC4 /* AppDelegate.swift in Sources */,
+				45CB92D71A9992C800A3C3AC /* TransPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +316,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45CC3BF51AA2D40F001513FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45CC3C061AA2D40F001513FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -224,6 +337,11 @@
 			isa = PBXTargetDependency;
 			target = 452F587B1A87170100EC2AC4 /* NSWindow */;
 			targetProxy = 452F588D1A87170100EC2AC4 /* PBXContainerItemProxy */;
+		};
+		45CC3C0C1AA2D40F001513FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45CC3BF81AA2D40F001513FD /* NSView */;
+			targetProxy = 45CC3C0B1AA2D40F001513FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -374,6 +492,72 @@
 			};
 			name = Release;
 		};
+		45CC3C121AA2D40F001513FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NSView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		45CC3C131AA2D40F001513FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NSView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		45CC3C141AA2D40F001513FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NSViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSView.app/Contents/MacOS/NSView";
+			};
+			name = Debug;
+		};
+		45CC3C151AA2D40F001513FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NSViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSView.app/Contents/MacOS/NSView";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -393,12 +577,30 @@
 				452F58981A87170100EC2AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		452F58991A87170100EC2AC4 /* Build configuration list for PBXNativeTarget "NSWindowTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				452F589A1A87170100EC2AC4 /* Debug */,
 				452F589B1A87170100EC2AC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45CC3C161AA2D40F001513FD /* Build configuration list for PBXNativeTarget "NSView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45CC3C121AA2D40F001513FD /* Debug */,
+				45CC3C131AA2D40F001513FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		45CC3C171AA2D40F001513FD /* Build configuration list for PBXNativeTarget "NSViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45CC3C141AA2D40F001513FD /* Debug */,
+				45CC3C151AA2D40F001513FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
