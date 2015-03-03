@@ -34,7 +34,6 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function001(sender: AnyObject) {
-        windowArray.removeAllObjects()
         var aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
@@ -63,9 +62,7 @@ class ViewController: NSViewController {
         //実験ウインドウにUIパーツを渡す
         self.aButton001 = theButton    //ボタン
         self.aView001 = theView        //テストビュー
-        
-        var viewDictionary:Dictionary<NSObject, NSObject> = ["view": theView,"button":theButton]
-        
+
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
     }
