@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74029DC91931684E000C4DAB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74029DC81931684E000C4DAB /* Default-568h@2x.png */; };
 		748C7E5C160EF13600ABE126 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E5B160EF13600ABE126 /* UIKit.framework */; };
 		748C7E5E160EF13600ABE126 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E5D160EF13600ABE126 /* Foundation.framework */; };
 		748C7E60160EF13600ABE126 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748C7E5F160EF13600ABE126 /* CoreGraphics.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74029DC81931684E000C4DAB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		748C7E57160EF13600ABE126 /* NSUndoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSUndoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748C7E5B160EF13600ABE126 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		748C7E5D160EF13600ABE126 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +88,7 @@
 		748C7E4C160EF13600ABE126 = {
 			isa = PBXGroup;
 			children = (
+				74029DC81931684E000C4DAB /* Default-568h@2x.png */,
 				748C7E61160EF13600ABE126 /* NSUndoManager */,
 				748C7E82160EF13700ABE126 /* NSUndoManagerTests */,
 				748C7E5A160EF13600ABE126 /* Frameworks */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				748C7E66160EF13600ABE126 /* InfoPlist.strings in Resources */,
+				74029DC91931684E000C4DAB /* Default-568h@2x.png in Resources */,
 				748C7E6F160EF13600ABE126 /* MainStoryboard_iPhone.storyboard in Resources */,
 				748C7E72160EF13600ABE126 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
@@ -455,6 +459,7 @@
 				748C7E8F160EF13700ABE126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		748C7E90160EF13700ABE126 /* Build configuration list for PBXNativeTarget "NSUndoManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +468,7 @@
 				748C7E92160EF13700ABE126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
