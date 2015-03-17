@@ -956,8 +956,40 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
 
 
     }
-    //NSWindow
+    //NSWindow drawers
+    var theDrawer040 : NSDrawer = NSDrawer(contentSize: NSMakeSize(100.0, 100.0),
+    preferredEdge: 1 )
+    //preferredEdge 1=下、2=右、3=上、4=右
+    func buttonAction040(sender: AnyObject){
+        
+        var theWindow : NSWindow = (sender as NSButton).window!
+        
+        if ((theWindow.drawers) != nil){
+        NSLog("%@", theWindow.drawers!.description)
+        }
+        //drawerを表示／非表示
+        theDrawer040.toggle(theWindow)
+
+    }
     @IBAction func function040(sender: AnyObject) {
+        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
+        
+        //ボタンを作成
+        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        theButton.title = "Toggle"
+        theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        theButton.action = Selector("buttonAction040:")
+        aWindow.contentView.addSubview(theButton)
+        
+        //引き出しのウインドウを設定
+        theDrawer040.parentWindow = aWindow
+        
+        //ウインドウの表示
+        aWindow.center()//ウインドウをスクリーンの中心に
+        aWindow.title = "ウインドウタイトル"//タイトル設定
+        aWindow.orderFront(self)//前面に
+        aWindow.makeKeyAndOrderFront(self)//表示
     }
     //NSWindow
     @IBAction func function041(sender: AnyObject) {

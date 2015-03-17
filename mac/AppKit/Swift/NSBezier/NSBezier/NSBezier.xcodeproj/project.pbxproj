@@ -12,6 +12,13 @@
 		451F516E1AA2E5C100F15C8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451F516D1AA2E5C100F15C8F /* Images.xcassets */; };
 		451F51711AA2E5C100F15C8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451F516F1AA2E5C100F15C8F /* Main.storyboard */; };
 		451F517D1AA2E5C100F15C8F /* NSBezierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F517C1AA2E5C100F15C8F /* NSBezierTests.swift */; };
+		452EFC6E1AAE5A970056E2D9 /* TestView029.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EFC6D1AAE5A970056E2D9 /* TestView029.swift */; };
+		452EFC721AB3D8520056E2D9 /* TestView035.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EFC711AB3D8520056E2D9 /* TestView035.swift */; };
+		452EFC741AB3F8BB0056E2D9 /* TestView037.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EFC731AB3F8BB0056E2D9 /* TestView037.swift */; };
+		452EFC761AB420AE0056E2D9 /* TestView038.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EFC751AB420AE0056E2D9 /* TestView038.swift */; };
+		4547A12F1AAA80F600F098D0 /* TestView041.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4547A12E1AAA80F600F098D0 /* TestView041.swift */; };
+		45E778091AA9171400C8C0F2 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E778081AA9171400C8C0F2 /* TestView.swift */; };
+		45E7780B1AAA6A0B00C8C0F2 /* TestView040.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E7780A1AAA6A0B00C8C0F2 /* TestView040.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,13 @@
 		451F51761AA2E5C100F15C8F /* NSBezierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSBezierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		451F517B1AA2E5C100F15C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		451F517C1AA2E5C100F15C8F /* NSBezierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSBezierTests.swift; sourceTree = "<group>"; };
+		452EFC6D1AAE5A970056E2D9 /* TestView029.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView029.swift; sourceTree = "<group>"; };
+		452EFC711AB3D8520056E2D9 /* TestView035.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestView035.swift; path = ../TestView035.swift; sourceTree = "<group>"; };
+		452EFC731AB3F8BB0056E2D9 /* TestView037.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView037.swift; sourceTree = "<group>"; };
+		452EFC751AB420AE0056E2D9 /* TestView038.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView038.swift; sourceTree = "<group>"; };
+		4547A12E1AAA80F600F098D0 /* TestView041.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView041.swift; sourceTree = "<group>"; };
+		45E778081AA9171400C8C0F2 /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		45E7780A1AAA6A0B00C8C0F2 /* TestView040.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView040.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,13 @@
 			children = (
 				451F51691AA2E5C100F15C8F /* AppDelegate.swift */,
 				451F516B1AA2E5C100F15C8F /* ViewController.swift */,
+				452EFC751AB420AE0056E2D9 /* TestView038.swift */,
+				452EFC731AB3F8BB0056E2D9 /* TestView037.swift */,
+				45E778081AA9171400C8C0F2 /* TestView.swift */,
+				452EFC6D1AAE5A970056E2D9 /* TestView029.swift */,
+				452EFC711AB3D8520056E2D9 /* TestView035.swift */,
+				45E7780A1AAA6A0B00C8C0F2 /* TestView040.swift */,
+				4547A12E1AAA80F600F098D0 /* TestView041.swift */,
 				451F516D1AA2E5C100F15C8F /* Images.xcassets */,
 				451F516F1AA2E5C100F15C8F /* Main.storyboard */,
 				451F51671AA2E5C100F15C8F /* Supporting Files */,
@@ -208,8 +229,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452EFC761AB420AE0056E2D9 /* TestView038.swift in Sources */,
+				45E778091AA9171400C8C0F2 /* TestView.swift in Sources */,
+				452EFC741AB3F8BB0056E2D9 /* TestView037.swift in Sources */,
 				451F516C1AA2E5C100F15C8F /* ViewController.swift in Sources */,
+				452EFC6E1AAE5A970056E2D9 /* TestView029.swift in Sources */,
 				451F516A1AA2E5C100F15C8F /* AppDelegate.swift in Sources */,
+				45E7780B1AAA6A0B00C8C0F2 /* TestView040.swift in Sources */,
+				452EFC721AB3D8520056E2D9 /* TestView035.swift in Sources */,
+				4547A12F1AAA80F600F098D0 /* TestView041.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +425,7 @@
 				451F51821AA2E5C100F15C8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		451F51831AA2E5C100F15C8F /* Build configuration list for PBXNativeTarget "NSBezierTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +434,7 @@
 				451F51851AA2E5C100F15C8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
