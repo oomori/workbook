@@ -14,6 +14,7 @@
 		452F58841A87170100EC2AC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452F58831A87170100EC2AC4 /* Images.xcassets */; };
 		452F58871A87170100EC2AC4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452F58851A87170100EC2AC4 /* MainMenu.xib */; };
 		452F58931A87170100EC2AC4 /* NSWindowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F58921A87170100EC2AC4 /* NSWindowTests.swift */; };
+		4537920F1AB8698900D434FD /* TestWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4537920E1AB8698900D434FD /* TestWindow.xib */; };
 		45CB92D71A9992C800A3C3AC /* TransPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB92D61A9992C800A3C3AC /* TransPanel.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		452F588C1A87170100EC2AC4 /* NSWindowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSWindowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		452F58911A87170100EC2AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		452F58921A87170100EC2AC4 /* NSWindowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWindowTests.swift; sourceTree = "<group>"; };
+		4537920E1AB8698900D434FD /* TestWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestWindow.xib; sourceTree = "<group>"; };
 		45CB92D61A9992C800A3C3AC /* TransPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransPanel.swift; sourceTree = "<group>"; };
 		45CC3BF91AA2D40F001513FD /* NSView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CC3C0A1AA2D40F001513FD /* NSViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 				45CB92D61A9992C800A3C3AC /* TransPanel.swift */,
 				452EEC591A977BC300A767F9 /* TransView.swift */,
 				452F58831A87170100EC2AC4 /* Images.xcassets */,
+				4537920E1AB8698900D434FD /* TestWindow.xib */,
 				452F58851A87170100EC2AC4 /* MainMenu.xib */,
 				452F587F1A87170100EC2AC4 /* Supporting Files */,
 			);
@@ -270,6 +273,7 @@
 				452EEC531A97751900A767F9 /* IMG_6698.png in Resources */,
 				452F58841A87170100EC2AC4 /* Images.xcassets in Resources */,
 				452F58871A87170100EC2AC4 /* MainMenu.xib in Resources */,
+				4537920F1AB8698900D434FD /* TestWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +599,7 @@
 				45CC3C131AA2D40F001513FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45CC3C171AA2D40F001513FD /* Build configuration list for PBXNativeTarget "NSViewTests" */ = {
 			isa = XCConfigurationList;
@@ -603,6 +608,7 @@
 				45CC3C151AA2D40F001513FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -991,8 +991,35 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
     }
-    //NSWindow
+    //NSWindow setWindowController: 
+    //調査中
+    func buttonAction041(sender: AnyObject){
+        
+        //TestWindow.xibからウインドウコントローラーを作成
+        let windowController : NSWindowController = NSWindowController(windowNibName: "TestWindow")
+        //ウインドウをロード
+        windowController.loadWindow()
+        //表示
+        windowController.showWindow(self)
+
+    }
     @IBAction func function041(sender: AnyObject) {
+        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
+        
+        //ボタンを作成
+        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        theButton.title = "Toggle"
+        theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        theButton.action = Selector("buttonAction041:")
+        aWindow.contentView.addSubview(theButton)
+        
+        
+        //ウインドウの表示
+        aWindow.center()//ウインドウをスクリーンの中心に
+        aWindow.title = "ウインドウタイトル"//タイトル設定
+        aWindow.orderFront(self)//前面に
+        aWindow.makeKeyAndOrderFront(self)//表示
     }
     //NSWindow
     @IBAction func function042(sender: AnyObject) {

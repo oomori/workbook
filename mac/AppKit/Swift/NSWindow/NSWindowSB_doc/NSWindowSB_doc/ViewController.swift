@@ -20,7 +20,7 @@ class ViewController: NSViewController {
         window.orderFront(self)
         window.makeKeyAndOrderFront(self)
     }
-    //NSWindowSB_doc
+    //NSWindowSB_doc windowController()
     @IBAction func function002(sender: AnyObject) {
         var window : NSWindow = NSWindow(contentRect: NSMakeRect(0, 0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask, backing: .Buffered, defer: false)
         windowArray.addObject(window)
@@ -30,9 +30,14 @@ class ViewController: NSViewController {
         window.makeKeyAndOrderFront(self)
         
         //ウインドウのNSWinodowControllerを取得
-        var contoroller : NSWindowController = sender.window.windowController() as NSWindowController
+        var windowContoroller : NSWindowController = sender.window.windowController() as NSWindowController
         
-        NSLog("%@",contoroller.description )
+        NSLog("%@",windowContoroller.description )
+
+        windowContoroller.close()
+        
+        
+        
         
     }
     //NSWindowSB_doc
