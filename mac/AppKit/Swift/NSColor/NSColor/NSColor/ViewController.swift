@@ -55,7 +55,7 @@ class ViewController: NSViewController {
         
         aWindow.contentView.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 180.0))
+        var theView : NSView = NSView(frame: NSMakeRect(0.0, 30.0, 300.0, 180.0))
                 theView.wantsLayer = true
         aWindow.contentView.addSubview(theView)
         

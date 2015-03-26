@@ -19,8 +19,18 @@ class ViewController: NSViewController {
         NSLog("%@", string)
         //->テストファイルです。
     }
-    //NSString mac
+    //NSString mac stringByExpandingTildeInPath
     @IBAction func function002(sender: AnyObject) {
+        let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
+        let theFilePath : NSString = NSString(string: "~/Desktop/textured.gif")
+        //チルダ付きのファイルパスをフルパスに変換する
+        let fileFullPath : NSString = theFilePath.stringByExpandingTildeInPath
+        NSLog(fileFullPath)
+        if theWorkspace.openFile(fileFullPath, withApplication:"Safari") {
+            NSLog("OK")
+        }else{
+            NSLog("NO")
+        }
     }
     //NSString mac
     @IBAction func function003(sender: AnyObject) {

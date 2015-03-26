@@ -1021,11 +1021,195 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
     }
-    //NSWindow
-    @IBAction func function042(sender: AnyObject) {
+    
+    //NSWindow beginSheet:completionHandler:
+    //NSWindow attachedSheet
+    //NSWindow endSheet:returnCode:
+    //NSWindow sheetParent
+    func buttonAction042_2(sender: AnyObject){
+        //シートの親ウインドウ
+        let parentWindow : NSWindow = (sender as NSButton).window!.sheetParent!
+        
+        if (parentWindow.attachedSheet != nil){
+            NSLog("attachedSheet %@", parentWindow.attachedSheet!)
+            //->attachedSheet <NSWindow: 0x6080001e0900>
+        }
+        //シートの親ウインドウに対して、シートの終了
+        parentWindow.endSheet((sender as NSButton).window!, returnCode: NSModalResponseStop )
+//            NSModalResponseStop                 = (-1000),
+//            NSModalResponseAbort                = (-1001),
+//            NSModalResponseContinue             = (-1002),
+        
+        
     }
-    //NSWindow
+    func buttonAction042(sender: AnyObject){
+        
+        var theWindow : NSWindow = (sender as NSButton).window!
+        var sheetWindow : NSWindow = NSWindow(
+            contentRect: NSMakeRect(0.0, 0.0, 200, 150),
+            styleMask: NSBorderlessWindowMask,
+            backing: .Buffered,
+            defer: false)
+        sheetWindow.backgroundColor = NSColor.redColor()
+        //ボタンを作成
+        var sheetButton : NSButton = NSButton(frame: NSMakeRect(50.0, 2.0, 80.0, 30.0))
+        sheetButton.title = "Close"
+        sheetButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        sheetButton.action = Selector("buttonAction042_2:")
+        sheetWindow.contentView.addSubview(sheetButton)
+        
+        theWindow.beginSheet(sheetWindow, completionHandler:{responseCode  in
+                if (responseCode == NSModalResponseStop) {
+                    NSLog("NSModalResponseStop")
+                }else{
+                    NSLog("Other")
+                }
+            })
+
+    }
+    @IBAction func function042(sender: AnyObject) {
+        var aWindow : NSWindow = NSWindow(
+            contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+            styleMask: NSTitledWindowMask |
+                        NSClosableWindowMask |
+                        NSMiniaturizableWindowMask |
+                        NSResizableWindowMask,
+            backing: .Buffered,
+            defer: false)
+        windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
+        
+        //ボタンを作成
+        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        theButton.title = "Sheet"
+        theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        theButton.action = Selector("buttonAction042:")
+        aWindow.contentView.addSubview(theButton)
+        
+        
+        
+        //ウインドウの表示
+        aWindow.center()//ウインドウをスクリーンの中心に
+        aWindow.title = "ウインドウタイトル"//タイトル設定
+        aWindow.orderFront(self)//前面に
+     
+    }
+    //NSWindow beginCriticalSheet
+    //NSWindow sheets
+    func buttonAction043_2(sender: AnyObject){
+        //シートの親ウインドウ
+        let parentWindow : NSWindow = (sender as NSButton).window!.sheetParent!
+
+        if (parentWindow.sheets.count > 0 ){
+            for value in parentWindow.sheets {
+                NSLog("sheets = %@", (value.description))
+            }
+        }
+        
+        if (parentWindow.attachedSheet != nil){
+            NSLog("attachedSheet %@", parentWindow.attachedSheet!)
+            //->attachedSheet <NSWindow: 0x6080001e0900>
+        }
+        //シートの親ウインドウに対して、シートの終了
+        parentWindow.endSheet((sender as NSButton).window!)
+
+    }
+    func buttonAction043(sender: AnyObject){
+        
+        var theWindow : NSWindow = (sender as NSButton).window!
+        var sheetWindow1 : NSWindow = NSWindow(
+            contentRect: NSMakeRect(0.0, 0.0, 200, 150),
+            styleMask: NSBorderlessWindowMask,
+            backing: .Buffered,
+            defer: false)
+        sheetWindow1.backgroundColor = NSColor.blueColor()
+        //ボタンを作成
+        var sheetButton1 : NSButton = NSButton(frame: NSMakeRect(50.0, 2.0, 80.0, 30.0))
+        sheetButton1.title = "Close"
+        sheetButton1.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        sheetButton1.action = Selector("buttonAction043_2:")
+        sheetWindow1.contentView.addSubview(sheetButton1)
+        
+        var sheetWindow2 : NSWindow = NSWindow(
+            contentRect: NSMakeRect(0.0, 0.0, 200, 150),
+            styleMask: NSBorderlessWindowMask,
+            backing: .Buffered,
+            defer: false)
+        sheetWindow2.backgroundColor = NSColor.yellowColor()
+        //ボタンを作成
+        var sheetButton2 : NSButton = NSButton(frame: NSMakeRect(50.0, 2.0, 80.0, 30.0))
+        sheetButton2.title = "Close"
+        sheetButton2.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        sheetButton2.action = Selector("buttonAction043_2:")
+        sheetWindow2.contentView.addSubview(sheetButton2)
+        
+        var sheetWindow3 : NSWindow = NSWindow(
+            contentRect: NSMakeRect(0.0, 0.0, 150, 100),
+            styleMask: NSBorderlessWindowMask,
+            backing: .Buffered,
+            defer: false)
+        sheetWindow3.backgroundColor = NSColor.redColor()
+        //ボタンを作成
+        var sheetButton3 : NSButton = NSButton(frame: NSMakeRect(50.0, 2.0, 80.0, 30.0))
+        sheetButton3.title = "Close"
+        sheetButton3.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        sheetButton3.action = Selector("buttonAction043_2:")
+        sheetWindow3.contentView.addSubview(sheetButton3)
+        
+        var sheetWindow4 : NSWindow = NSWindow(
+            contentRect: NSMakeRect(0.0, 0.0, 200, 150),
+            styleMask: NSBorderlessWindowMask,
+            backing: .Buffered,
+            defer: false)
+        sheetWindow4.backgroundColor = NSColor.greenColor()
+        //ボタンを作成
+        var sheetButton4 : NSButton = NSButton(frame: NSMakeRect(50.0, 2.0, 80.0, 30.0))
+        sheetButton4.title = "Close"
+        sheetButton4.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        sheetButton4.action = Selector("buttonAction043_2:")
+        sheetWindow4.contentView.addSubview(sheetButton4)
+        
+        theWindow.beginSheet(sheetWindow1, completionHandler:{responseCode  in
+            NSLog("sheet1")
+        })
+        
+        theWindow.beginSheet(sheetWindow4, completionHandler:{responseCode  in
+            NSLog("sheet4")
+        })
+        
+        theWindow.beginCriticalSheet(sheetWindow3, completionHandler:{responseCode  in
+            NSLog("sheet3")
+        })
+
+        theWindow.beginSheet(sheetWindow2, completionHandler:{responseCode  in
+            NSLog("sheet2")
+        })
+
+    }
     @IBAction func function043(sender: AnyObject) {
+        var aWindow : NSWindow = NSWindow(
+            contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+            styleMask: NSTitledWindowMask |
+                NSClosableWindowMask |
+                NSMiniaturizableWindowMask |
+            NSResizableWindowMask,
+            backing: .Buffered,
+            defer: false)
+        windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
+        
+        //ボタンを作成
+        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        theButton.title = "Sheet"
+        theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        theButton.action = Selector("buttonAction043:")
+        aWindow.contentView.addSubview(theButton)
+        
+        
+        
+        //ウインドウの表示
+        aWindow.center()//ウインドウをスクリーンの中心に
+        aWindow.title = "ウインドウタイトル"//タイトル設定
+        aWindow.orderFront(self)//前面に
+
     }
     //NSWindow
     @IBAction func function044(sender: AnyObject) {
