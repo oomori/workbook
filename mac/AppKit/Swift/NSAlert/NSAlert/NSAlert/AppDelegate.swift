@@ -4,7 +4,7 @@
 //
 //  Created by air on 2015/02/08.
 //  Copyright (c) 2015年 oomori. All rights reserved.
-//
+//  Swift1.2検証済み
 
 import Cocoa
 
@@ -168,7 +168,8 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         alert.messageText = messageText
         alert.informativeText = informativeText
         alert.delegate = self
-        var delegateObj  = alert.delegate?
+        var delegateObj  = alert.delegate//Swift 1.2
+        //var delegateObj  = alert.delegate?
         if (delegateObj != nil) {
             if (delegateObj!.conformsToProtocol(NSAlertDelegate)) {
                 NSLog("YES")
@@ -388,7 +389,8 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
             }
         }
         for (index, button) in enumerate(alert.buttons) {
-            NSLog("SecondButton %d %@",index,(button as NSButton).title )
+            NSLog("SecondButton %d %@",index,(button as! NSButton).title ) //Swift 1.2
+            //NSLog("SecondButton %d %@",index,(button as NSButton).title )
         }
         
     }
@@ -447,10 +449,13 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         
         
     }
-    
-    func alertShowHelp(alert: NSAlert)  {
+
+    func alertShowHelps(alert: NSAlert)  { //Swift 1.2
         NSLog("!!")
     }
+//    func alertShowHelp(alert: NSAlert)  {
+//        NSLog("!!")
+//    }
     //NSAlert Button Return Values
     @IBAction func function018(sender: AnyObject) {
         NSLog("function018 called")

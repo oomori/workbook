@@ -15,6 +15,7 @@
 		45CC3BF41AA2118F001513FD /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC3BF31AA2118F001513FD /* MyButton.swift */; };
 		45CF12BD1AA17F700064578D /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 45CF12BC1AA17F700064578D /* face.png */; };
 		45CF12BF1AA18D5A0064578D /* face_alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = 45CF12BE1AA18D5A0064578D /* face_alternate.png */; };
+		45ECC83C1AD0A45A00B564E0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ECC83B1AD0A45A00B564E0 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		45CC3BF31AA2118F001513FD /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		45CF12BC1AA17F700064578D /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face.png; sourceTree = "<group>"; };
 		45CF12BE1AA18D5A0064578D /* face_alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face_alternate.png; sourceTree = "<group>"; };
+		45ECC83B1AD0A45A00B564E0 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				455CB07D1A90B3B9009171E3 /* AppDelegate.swift */,
 				455CB07F1A90B3B9009171E3 /* ViewController.swift */,
 				45CC3BF31AA2118F001513FD /* MyButton.swift */,
+				45ECC83B1AD0A45A00B564E0 /* CustomButton.swift */,
 				455CB0811A90B3B9009171E3 /* Images.xcassets */,
 				455CB0831A90B3B9009171E3 /* Main.storyboard */,
 				455CB07B1A90B3B9009171E3 /* Supporting Files */,
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45ECC83C1AD0A45A00B564E0 /* CustomButton.swift in Sources */,
 				455CB0801A90B3B9009171E3 /* ViewController.swift in Sources */,
 				455CB07E1A90B3B9009171E3 /* AppDelegate.swift in Sources */,
 				45CC3BF41AA2118F001513FD /* MyButton.swift in Sources */,

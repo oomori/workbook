@@ -28,7 +28,7 @@ class TransPanel: NSWindow {
         while keepOn {
             newEvent = anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as NSDate),
+                untilDate:(NSDate.distantPast() as! NSDate),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true)
             //NSLog("loop %d",mask)

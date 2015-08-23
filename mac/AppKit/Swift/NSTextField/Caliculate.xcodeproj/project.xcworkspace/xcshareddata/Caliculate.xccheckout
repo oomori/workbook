@@ -14,7 +14,7 @@
 		<string>https://github.com/oomori/workbook.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>mac/Foundation/Swift/Caliculate/Caliculate.xcodeproj</string>
+	<string>mac/AppKit/Swift/NSTextField/Caliculate.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>FA87E5C01DE0C43ED06500D3A5EF03513B982E9C</key>

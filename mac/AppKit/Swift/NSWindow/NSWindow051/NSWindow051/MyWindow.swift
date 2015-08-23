@@ -9,9 +9,12 @@
 import Cocoa
 
 class MyWindow: NSWindow {
+
     override func constrainFrameRect(frameRect: NSRect, toScreen screen: NSScreen?) -> NSRect {
+        
         NSLog("constrainFrameRect call")
+        
         return NSMakeRect(100.0, 100.0, 300.0, 200.0)
     }
-
+    
 }

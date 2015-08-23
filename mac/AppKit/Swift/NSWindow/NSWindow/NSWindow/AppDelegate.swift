@@ -86,12 +86,13 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
     }
     
     //NSWindow worksWhenModal
+    //Swift1.2
     //windowがモーダルでも、panelに文字入力ができる
     //サブクラスのworksWhenModal() で trueを返しているから
     func abortTimer(timer:NSTimer!) {
         NSLog("abort modal")
         let anApplication = NSApplication.sharedApplication()
-        var p :MyPanel = timer.userInfo?.objectForKey("panel") as MyPanel
+        var p :MyPanel = timer.userInfo?.objectForKey("panel") as! MyPanel
         if (p.worksWhenModal){
             NSLog("panel worksWhenModal YES")
         }else{
@@ -230,8 +231,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
         aWindow.makeKeyAndOrderFront(self)//表示
     }
     //NSWindow canHide
+    //Swift1.2
     func buttonAction010(sender: AnyObject){
-        var theWindow : NSWindow = (sender as NSButton).window!
+        var theWindow : NSWindow = (sender as! NSButton).window!
         let anApplication = NSApplication.sharedApplication()
         if (theWindow.canHide){
             NSLog("can hide")
@@ -308,8 +310,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
         aPanel.makeKeyAndOrderFront(self)//表示
     }
     //NSWindow collectionBehavior
+    //Swift1.2
     func buttonAction012(sender: AnyObject){
-        var theWindow : NSWindow = (sender as NSButton).window!
+        var theWindow : NSWindow = (sender as! NSButton).window!
         theWindow.toggleFullScreen(self)
     }
     @IBAction func function012(sender: AnyObject) {
@@ -485,10 +488,11 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
         aWindow.makeKeyAndOrderFront(self)//表示
     }
     //NSWindow　preventsApplicationTerminationWhenModal
+    //Swift1.2
     func abortTimer019(timer:NSTimer!) {
         NSLog("abort modal")
         let anApplication = NSApplication.sharedApplication()
-        var p :MyPanel = timer.userInfo?.objectForKey("panel") as MyPanel
+        var p :MyPanel = timer.userInfo?.objectForKey("panel") as! MyPanel
         if (p.worksWhenModal){
             NSLog("panel worksWhenModal YES")
         }else{
@@ -957,12 +961,13 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
 
     }
     //NSWindow drawers
+    //Swift1.2
     var theDrawer040 : NSDrawer = NSDrawer(contentSize: NSMakeSize(100.0, 100.0),
     preferredEdge: 1 )
     //preferredEdge 1=下、2=右、3=上、4=右
     func buttonAction040(sender: AnyObject){
         
-        var theWindow : NSWindow = (sender as NSButton).window!
+        var theWindow : NSWindow = (sender as! NSButton).window!
         
         if ((theWindow.drawers) != nil){
         NSLog("%@", theWindow.drawers!.description)
@@ -1026,16 +1031,17 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
     //NSWindow attachedSheet
     //NSWindow endSheet:returnCode:
     //NSWindow sheetParent
+    //Swift1.2
     func buttonAction042_2(sender: AnyObject){
         //シートの親ウインドウ
-        let parentWindow : NSWindow = (sender as NSButton).window!.sheetParent!
+        let parentWindow : NSWindow = (sender as! NSButton).window!.sheetParent!
         
         if (parentWindow.attachedSheet != nil){
             NSLog("attachedSheet %@", parentWindow.attachedSheet!)
             //->attachedSheet <NSWindow: 0x6080001e0900>
         }
         //シートの親ウインドウに対して、シートの終了
-        parentWindow.endSheet((sender as NSButton).window!, returnCode: NSModalResponseStop )
+        parentWindow.endSheet((sender as! NSButton).window!, returnCode: NSModalResponseStop )
 //            NSModalResponseStop                 = (-1000),
 //            NSModalResponseAbort                = (-1001),
 //            NSModalResponseContinue             = (-1002),
@@ -1044,7 +1050,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
     }
     func buttonAction042(sender: AnyObject){
         
-        var theWindow : NSWindow = (sender as NSButton).window!
+        var theWindow : NSWindow = (sender as! NSButton).window!
         var sheetWindow : NSWindow = NSWindow(
             contentRect: NSMakeRect(0.0, 0.0, 200, 150),
             styleMask: NSBorderlessWindowMask,
@@ -1095,9 +1101,10 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
     }
     //NSWindow beginCriticalSheet
     //NSWindow sheets
+    //Swift1.2
     func buttonAction043_2(sender: AnyObject){
         //シートの親ウインドウ
-        let parentWindow : NSWindow = (sender as NSButton).window!.sheetParent!
+        let parentWindow : NSWindow = (sender as! NSButton).window!.sheetParent!
 
         if (parentWindow.sheets.count > 0 ){
             for value in parentWindow.sheets {
@@ -1110,12 +1117,12 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
             //->attachedSheet <NSWindow: 0x6080001e0900>
         }
         //シートの親ウインドウに対して、シートの終了
-        parentWindow.endSheet((sender as NSButton).window!)
+        parentWindow.endSheet((sender as!NSButton).window!)
 
     }
     func buttonAction043(sender: AnyObject){
         
-        var theWindow : NSWindow = (sender as NSButton).window!
+        var theWindow : NSWindow = (sender as! NSButton).window!
         var sheetWindow1 : NSWindow = NSWindow(
             contentRect: NSMakeRect(0.0, 0.0, 200, 150),
             styleMask: NSBorderlessWindowMask,

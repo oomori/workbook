@@ -11,6 +11,7 @@ import AppKit
 
 class MyImageView: NSImageView {
     
+    //Swift1.2
     override func mouseDown(theEvent: NSEvent) {
         var newEvent: NSEvent!
         NSLog("start")
@@ -27,7 +28,7 @@ class MyImageView: NSImageView {
         while keepOn {
             newEvent = anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as NSDate),
+                untilDate:(NSDate.distantPast() as! NSDate),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true)            
             NSLog("loop")

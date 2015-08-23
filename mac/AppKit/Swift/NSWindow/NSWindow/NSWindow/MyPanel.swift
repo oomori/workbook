@@ -9,12 +9,16 @@
 import Cocoa
 
 class MyPanel: NSPanel {
-    func worksWhenModal() ->Bool{
-        
-        //windowがモーダルでも、panelに文字入力ができる
-        //サブクラスのworksWhenModal() で trueを返しているから
-        return true 
-    }
+    
+    
+    
+   //Swift1.1->1.2でエラー 
+//    func worksWhenModal() ->Bool{
+//        
+//        //windowがモーダルでも、panelに文字入力ができる
+//        //サブクラスのworksWhenModal() で trueを返しているから
+//        return true 
+//    }
 
     
 }

@@ -13,12 +13,13 @@ import AppKit
 
 
 //作業中
+
 class ClickThroughButton: NSButton {
     override func shouldDelayWindowOrderingForEvent(theEvent: NSEvent) -> Bool {
         let anApplication = MyApplication.sharedApplication()
         return anApplication.active
     }
-    
+    //Swift1.2
     override func mouseDown(theEvent: NSEvent) {
         let anApplication = MyApplication.sharedApplication()
         if (!anApplication.active){
@@ -26,13 +27,13 @@ class ClickThroughButton: NSButton {
             anApplication.preventWindowOrdering()
             
             self.highlight(true )
-            let theDate:NSDate = NSDate.distantFuture() as NSDate
+            let theDate:NSDate = NSDate.distantFuture() as! NSDate
             let maskUp = NSEventMask.LeftMouseUpMask.rawValue
             let mask = Int( maskUp  ) // cast from UInt
         
         var mouseUpEvent = (anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as NSDate),
+                untilDate:(NSDate.distantPast() as! NSDate),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true))as NSEvent?
         

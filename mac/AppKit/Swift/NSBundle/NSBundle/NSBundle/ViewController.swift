@@ -4,7 +4,7 @@
 //
 //  Created by air on 2015/03/20.
 //  Copyright (c) 2015年 oomori. All rights reserved.
-//
+//  Swift1.2
 
 import Cocoa
 

@@ -4,26 +4,27 @@
 //
 //  Created by air on 2015/02/11.
 //  Copyright (c) 2015年 oomori. All rights reserved.
-//
+//  Swift 1.2対応
 
 import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
 
+    //Swift 1.2
     @IBOutlet weak var window: NSWindow!
-    var theAnim001: NSAnimation!
-    var theAnim002: NSAnimation!
-    var theAnim003: NSAnimation!
-    var theAnim004: NSAnimation!
-    var theAnim005: NSAnimation!
-    var theAnim006: NSAnimation!
-    var theAnim007: NSAnimation!
-    var theAnim008: NSAnimation!
-    var theAnim009: NSAnimation!
-    var theAnim010: NSAnimation!
-    var theAnim011: NSAnimation!
-    var theAnim012: NSAnimation!
+    var theAnim001: NSAnimation?
+    var theAnim002: NSAnimation?
+    var theAnim003: NSAnimation?
+    var theAnim004: NSAnimation?
+    var theAnim005: NSAnimation?
+    var theAnim006: NSAnimation?
+    var theAnim007: NSAnimation?
+    var theAnim008: NSAnimation?
+    var theAnim009: NSAnimation?
+    var theAnim010: NSAnimation?
+    var theAnim011: NSAnimation?
+    var theAnim012: NSAnimation?
     var theAnim012sub: NSAnimation!
     
     //NSAnimation init
@@ -38,94 +39,94 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim001 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim001.frameRate = 20.0
-        theAnim001.delegate = self
+        theAnim001!.frameRate = 20.0
+        theAnim001!.delegate = self
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim001.addProgressMark(progMarks[i])
+            theAnim001!.addProgressMark(progMarks[i])
             NSLog("bbb %f",progMarks[i])
         }
         dispatch_async(dispatch_get_main_queue()) {
-            self.theAnim001.startAnimation()
+            self.theAnim001!.startAnimation()
         }
     }
     //アニメーション
     func animation(animation: NSAnimation, didReachProgressMark progress: NSAnimationProgress) {
         
-        if (animation == theAnim001?){
+        if (animation == theAnim001){ //Swift1.2修正
             NSLog("theAnim001")
         }
-        if (animation == theAnim002?){
+        if (animation == theAnim002){ //Swift1.2修正
             NSLog("theAnim002")
         }
-        if (animation == theAnim003?){
+        if (animation == theAnim003){ //Swift1.2修正
             NSLog("theAnim003")
-            var returnValue = theAnim003.runLoopModesForAnimating?
-            if ((returnValue) != nil){
-                for mode : AnyObject in returnValue! {
-                    NSLog("!! %@",mode as NSString)
-                }
-            }
+//            var returnValue : [AnyObject]? = theAnim003.runLoopModesForAnimating　 //Swift1.2修正
+//            if ((returnValue) != nil){
+//                for mode : AnyObject in returnValue! {
+//                    NSLog("!! %@",mode as! NSString) //Swift1.2修正
+//                }
+//            }
         }
-        if (animation == theAnim004?){
+        if (animation == theAnim004){ //Swift1.2修正
             NSLog("theAnim004")
         }
-        if (animation == theAnim005?){
+        if (animation == theAnim005){ //Swift1.2修正
             NSLog("theAnim005")
         }
-        if (animation == theAnim006?){
+        if (animation == theAnim006){ //Swift1.2修正
             NSLog("theAnim006")
         }
-        if (animation == theAnim007?){
+        if (animation == theAnim007){ //Swift1.2修正
             NSLog("theAnim007")
         }
-        if (animation == theAnim008?){
+        if (animation == theAnim008){ //Swift1.2修正
             NSLog("theAnim008")
         }
-        if (animation == theAnim008?){
+        if (animation == theAnim008){ //Swift1.2修正
             NSLog("theAnim008")
         }
-        if (animation == theAnim009?){
-            NSLog("theAnim009 %.1f",theAnim009.currentProgress)
-            if (theAnim009.currentProgress > 0.5){
-                theAnim009.stopAnimation()
+        if (animation == theAnim009){ //Swift1.2修正
+            NSLog("theAnim009 %.1f",theAnim009!.currentProgress)
+            if (theAnim009!.currentProgress > 0.5){
+                theAnim009!.stopAnimation()
                 NSLog("end")
             }
         }
-        if (animation == theAnim010?){
-            NSLog("theAnim010 %.1f",theAnim010.currentProgress)
-            if (theAnim010.currentProgress > 0.5){
-                theAnim010.stopAnimation()
+        if (animation == theAnim010){ //Swift1.2修正
+            NSLog("theAnim010 %.1f",theAnim010!.currentProgress)
+            if (theAnim010!.currentProgress > 0.5){
+                theAnim010!.stopAnimation()
                 NSLog("end")
             }
         }
-        if (animation == theAnim011?){
-            NSLog("theAnim011 %.2f %.2f ",theAnim011.currentValue,progress)
-            if (theAnim011.currentProgress > 0.8){
-                theAnim011.stopAnimation()
+        if (animation == theAnim011){ //Swift1.2修正
+            NSLog("theAnim011 %.2f %.2f ",theAnim011!.currentValue,progress)
+            if (theAnim011!.currentProgress > 0.8){
+                theAnim011!.stopAnimation()
                 NSLog("end")
             }
         }
-        if (animation == theAnim012?){
-            NSLog("theAnim012 %.2f",theAnim012.currentValue,progress)
+        if (animation == theAnim012){ //Swift1.2修正
+            NSLog("theAnim012 %.2f",theAnim012!.currentValue,progress)
         }
-        if (animation == theAnim012sub?){
-            NSLog("theAnim012sub %.2f",theAnim012sub.currentValue,progress)
-        }
+//        if (animation == theAnim012sub){ //Swift1.2修正
+//            NSLog("theAnim012sub %.2f",theAnim012sub.currentValue,progress)
+//        }
         
-        if (animation == theAnim014?){
-            NSLog("theAnim014 %.2f",theAnim014.currentValue,progress)
-            indicator014.doubleValue = Double( theAnim014.currentValue*100.0 )
-            self.window.update()
-            label014.floatValue =   theAnim014.currentValue*100.0
-            NSLog("theAnim014 %.2f",indicator014.doubleValue)
-        }
-        if (animation == theAnim014sub?){
-            NSLog("theAnim014sub %.2f",theAnim014sub.currentValue,progress)
-            label014sub.floatValue =   theAnim014sub.currentValue*100.0
-            
-        }
-        
+//        if (animation == theAnim014){ //Swift1.2修正
+//            NSLog("theAnim014 %.2f",theAnim014.currentValue,progress)
+//            indicator014.doubleValue = Double( theAnim014.currentValue*100.0 )
+//            self.window.update()
+//            label014.floatValue =   theAnim014.currentValue*100.0
+//            NSLog("theAnim014 %.2f",indicator014.doubleValue)
+//        }
+//        if (animation == theAnim014sub){ //Swift1.2修正
+//            NSLog("theAnim014sub %.2f",theAnim014sub.currentValue,progress)
+//            label014sub.floatValue =   theAnim014sub.currentValue*100.0
+//            
+//        }
+//        
     }
 
     //NSAnimation animationBlockingMode
@@ -139,17 +140,17 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim002 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim002.frameRate = 20.0
-        theAnim002.delegate = self
-        theAnim002.animationBlockingMode = NSAnimationBlockingMode.Blocking
+        theAnim002!.frameRate = 20.0
+        theAnim002!.delegate = self
+        theAnim002!.animationBlockingMode = NSAnimationBlockingMode.Blocking
 
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim002.addProgressMark(progMarks[i])
+            theAnim002!.addProgressMark(progMarks[i])
             NSLog("bbb %f",progMarks[i])
         }
         dispatch_async(dispatch_get_main_queue()) {
-            self.theAnim002.startAnimation()
+            self.theAnim002!.startAnimation()
         }
 
         
@@ -165,17 +166,17 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim003 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim003.frameRate = 20.0
-        theAnim003.delegate = self
-        theAnim003.animationBlockingMode = NSAnimationBlockingMode.Blocking
+        theAnim003!.frameRate = 20.0
+        theAnim003!.delegate = self
+        theAnim003!.animationBlockingMode = NSAnimationBlockingMode.Blocking
         
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim003.addProgressMark(progMarks[i])
+            theAnim003!.addProgressMark(progMarks[i])
             NSLog("bbb %f",progMarks[i])
         }
         dispatch_async(dispatch_get_main_queue()) {
-            self.theAnim003.startAnimation()
+            self.theAnim003!.startAnimation()
         }
         
     }
@@ -190,18 +191,18 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim004 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim004.frameRate = 20.0
-        theAnim004.delegate = self
-        theAnim004.animationBlockingMode = NSAnimationBlockingMode.Blocking
-        theAnim004.animationCurve = NSAnimationCurve.EaseInOut
+        theAnim004!.frameRate = 20.0
+        theAnim004!.delegate = self
+        theAnim004!.animationBlockingMode = NSAnimationBlockingMode.Blocking
+        theAnim004!.animationCurve = NSAnimationCurve.EaseInOut
         
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim004.addProgressMark(progMarks[i])
+            theAnim004!.addProgressMark(progMarks[i])
             NSLog("theAnim004 %f",progMarks[i])
         }
         dispatch_async(dispatch_get_main_queue()) {
-            self.theAnim004.startAnimation()
+            self.theAnim004!.startAnimation()
         }
     }
     //NSAnimation duration
@@ -215,18 +216,18 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim005 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim005.frameRate = 20.0
-        theAnim005.delegate = self
-        theAnim005.animationBlockingMode = NSAnimationBlockingMode.Blocking
-        theAnim005.animationCurve = NSAnimationCurve.EaseInOut
-        theAnim005.duration = 5.0
+        theAnim005!.frameRate = 20.0
+        theAnim005!.delegate = self
+        theAnim005!.animationBlockingMode = NSAnimationBlockingMode.Blocking
+        theAnim005!.animationCurve = NSAnimationCurve.EaseInOut
+        theAnim005!.duration = 5.0
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim005.addProgressMark(progMarks[i])
+            theAnim005!.addProgressMark(progMarks[i])
             NSLog("theAnim005 %f",progMarks[i])
         }
         dispatch_async(dispatch_get_main_queue()) {
-            self.theAnim005.startAnimation()
+            self.theAnim005!.startAnimation()
         }
     }
     //NSAnimation frameRate
@@ -240,18 +241,18 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim006 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim006.frameRate = 20.0
-        theAnim006.delegate = self
-        theAnim006.animationBlockingMode = NSAnimationBlockingMode.Blocking
-        theAnim006.animationCurve = NSAnimationCurve.EaseInOut
-        theAnim006.duration = 5.0
+        theAnim006!.frameRate = 20.0
+        theAnim006!.delegate = self
+        theAnim006!.animationBlockingMode = NSAnimationBlockingMode.Blocking
+        theAnim006!.animationCurve = NSAnimationCurve.EaseInOut
+        theAnim006!.duration = 5.0
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim006.addProgressMark(progMarks[i])
+            theAnim006!.addProgressMark(progMarks[i])
             NSLog("theAnim006 %f",progMarks[i])
         }
         dispatch_async(dispatch_get_main_queue()) {
-            self.theAnim006.startAnimation()
+            self.theAnim006!.startAnimation()
         }
     }
     //NSAnimation　delegate
@@ -265,18 +266,18 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim007 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim007.frameRate = 20.0
-        theAnim007.delegate = self
-        theAnim007.animationBlockingMode = NSAnimationBlockingMode.Blocking
-        theAnim007.animationCurve = NSAnimationCurve.EaseInOut
-        theAnim007.duration = 5.0
+        theAnim007!.frameRate = 20.0
+        theAnim007!.delegate = self
+        theAnim007!.animationBlockingMode = NSAnimationBlockingMode.Blocking
+        theAnim007!.animationCurve = NSAnimationCurve.EaseInOut
+        theAnim007!.duration = 5.0
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim007.addProgressMark(progMarks[i])
+            theAnim007!.addProgressMark(progMarks[i])
             NSLog("theAnim006 %f",progMarks[i])
         }
         dispatch_async(dispatch_get_main_queue()) {
-            self.theAnim007.startAnimation()
+            self.theAnim007!.startAnimation()
         }
 
     }
@@ -291,18 +292,18 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim008 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim008.frameRate = 20.0
-        theAnim008.delegate = self
-        theAnim008.animationBlockingMode = NSAnimationBlockingMode.Blocking
-        theAnim008.animationCurve = NSAnimationCurve.EaseInOut
-        theAnim008.duration = 5.0
+        theAnim008!.frameRate = 20.0
+        theAnim008!.delegate = self
+        theAnim008!.animationBlockingMode = NSAnimationBlockingMode.Blocking
+        theAnim008!.animationCurve = NSAnimationCurve.EaseInOut
+        theAnim008!.duration = 5.0
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim008.addProgressMark(progMarks[i])
+            theAnim008!.addProgressMark(progMarks[i])
             NSLog("theAnim006 %f",progMarks[i])
         }
         dispatch_async(dispatch_get_main_queue()) {
-            self.theAnim008.startAnimation()
+            self.theAnim008!.startAnimation()
         }
     }
     //NSAnimation stopAnimation
@@ -316,18 +317,18 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim009 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim009.frameRate = 20.0
-        theAnim009.delegate = self
-        theAnim009.animationBlockingMode = NSAnimationBlockingMode.Blocking
-        theAnim009.animationCurve = NSAnimationCurve.EaseInOut
-        theAnim009.duration = 5.0
+        theAnim009!.frameRate = 20.0
+        theAnim009!.delegate = self
+        theAnim009!.animationBlockingMode = NSAnimationBlockingMode.Blocking
+        theAnim009!.animationCurve = NSAnimationCurve.EaseInOut
+        theAnim009!.duration = 5.0
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim009.addProgressMark(progMarks[i])
+            theAnim009!.addProgressMark(progMarks[i])
             NSLog("theAnim006 %f",progMarks[i])
         }
         dispatch_async(dispatch_get_main_queue()) {
-            self.theAnim009.startAnimation()
+            self.theAnim009!.startAnimation()
         }
         
     }
@@ -342,18 +343,18 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim010 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim010.frameRate = 20.0
-        theAnim010.delegate = self
-        theAnim010.animationBlockingMode = NSAnimationBlockingMode.Blocking
-        theAnim010.animationCurve = NSAnimationCurve.EaseInOut
-        theAnim010.duration = 5.0
+        theAnim010!.frameRate = 20.0
+        theAnim010!.delegate = self
+        theAnim010!.animationBlockingMode = NSAnimationBlockingMode.Blocking
+        theAnim010!.animationCurve = NSAnimationCurve.EaseInOut
+        theAnim010!.duration = 5.0
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim010.addProgressMark(progMarks[i])
+            theAnim010!.addProgressMark(progMarks[i])
             NSLog("theAnim006 %f",progMarks[i])
         }
         dispatch_async(dispatch_get_main_queue()) {
-            self.theAnim010.startAnimation()
+            self.theAnim010!.startAnimation()
         }
     }
     //NSAnimation currentValue
@@ -367,18 +368,18 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim011 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim011.frameRate = 20.0
-        theAnim011.delegate = self
-        theAnim011.animationBlockingMode = NSAnimationBlockingMode.Blocking
-        theAnim011.animationCurve = NSAnimationCurve.EaseInOut
-        theAnim011.duration = 5.0
+        theAnim011!.frameRate = 20.0
+        theAnim011!.delegate = self
+        theAnim011!.animationBlockingMode = NSAnimationBlockingMode.Blocking
+        theAnim011!.animationCurve = NSAnimationCurve.EaseInOut
+        theAnim011!.duration = 5.0
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim011.addProgressMark(progMarks[i])
+            theAnim011!.addProgressMark(progMarks[i])
             NSLog("theAnim006 %f",progMarks[i])
         }
         dispatch_async(dispatch_get_main_queue()) {
-            self.theAnim011.startAnimation()
+            self.theAnim011!.startAnimation()
         }
     }
     //NSAnimation　startWhenAnimation:reachesProgress
@@ -394,16 +395,16 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         //アニメーション設定
         theAnim012 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
-        theAnim012.frameRate = 20.0
-        theAnim012.delegate = self
+        theAnim012!.frameRate = 20.0
+        theAnim012!.delegate = self
         
-        theAnim012.animationBlockingMode = NSAnimationBlockingMode.Blocking
+        theAnim012!.animationBlockingMode = NSAnimationBlockingMode.Blocking
         //theAnim012.animationBlockingMode = NSAnimationBlockingMode.Nonblocking
         
-        theAnim012.animationCurve = NSAnimationCurve.EaseInOut
-        theAnim012.duration = 5.0
+        theAnim012!.animationCurve = NSAnimationCurve.EaseInOut
+        theAnim012!.duration = 5.0
         var mark:NSAnimationProgress = 0.3
-        theAnim012.addProgressMark(mark)
+        theAnim012!.addProgressMark(mark)
         
         //
         theAnim012sub = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
@@ -417,7 +418,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         
         //登録
         for (i = 0 ; i<count ; i++){
-            theAnim012.addProgressMark(progMarks[i])
+            theAnim012!.addProgressMark(progMarks[i])
             //NSLog("theAnim012 %f",progMarks[i])
         }
         for (i = 0 ; i<count ; i++){
@@ -426,8 +427,8 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         }
         dispatch_async(dispatch_get_main_queue()) {
             //theAnim012のアニメーションが進捗状況0.3まで来たらtheAnim012subをスタート
-            self.theAnim012sub.startWhenAnimation(self.theAnim012,reachesProgress:mark)
-            self.theAnim012.startAnimation()
+            self.theAnim012sub.startWhenAnimation(self.theAnim012!,reachesProgress:mark)
+            self.theAnim012!.startAnimation()
             //self.theAnim012sub.startAnimation()
         }
     }

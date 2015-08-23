@@ -40,6 +40,7 @@ class TestView041: NSView {
     }
     
     //マウスダウンイベント。面倒なのでマウスダウンの後ドラッグやマウスアップの処理もここで行う
+    //Swift1.2
     override func mouseDown(theEvent: NSEvent) {
         var newEvent: NSEvent!
         
@@ -57,7 +58,7 @@ class TestView041: NSView {
             //マウスダウンして以降、左マウスアップするまでのイベントを取得
             newEvent = anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as NSDate),
+                untilDate:(NSDate.distantPast() as! NSDate),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true)
             

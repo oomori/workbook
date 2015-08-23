@@ -611,12 +611,13 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     
     
     //NSApplication servicesMenu
+    //Swift1.2
     @IBAction func function046(sender: AnyObject) {
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
         //
-        var aMenu  =  anApplication.servicesMenu?
-        if ((aMenu?) != nil) {
+        var aMenu  =  anApplication.servicesMenu
+        if ((aMenu) != nil) {
         NSLog("NSApplication aMenu %@",aMenu!)
         }
     }
@@ -698,12 +699,13 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         anApplication.activateContextHelpMode(self )
     }
     //NSApplication　helpMenu
+    //Swift1.2
     @IBAction func function053(sender: AnyObject) {
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
         //
         var helpMenu = anApplication.helpMenu
-        if ((helpMenu?) != nil){
+        if ((helpMenu) != nil){
         NSLog("%@", helpMenu!)
         }
     }
@@ -908,7 +910,8 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         
         var result : Bool = anApplication.searchString(searchString,
             inUserInterfaceItemString: "quit",
-            searchRange: NSMakeRange(0, searchString.utf16Count),
+            searchRange: NSMakeRange(0, count(searchString.utf16)), //Swift1.2
+            //searchRange: NSMakeRange(0, searchString.utf16Count), //Swift1.1
             foundRange: &afterRange  )
         NSLog("%d,%d",afterRange.location,afterRange.length)
         if result {
@@ -925,6 +928,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     //NSUserInterfaceItemSearchingプロトコルのメソッド　終了
     
     //NSApplication
+    //Swift1.2
     @IBAction func function066(sender: AnyObject) {
         //文字列検索
         //共有アプリケーションインスタンスを取得
@@ -934,7 +938,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         
         var result : Bool = anApplication.searchString("検索",
             inUserInterfaceItemString: "検索される文字列",
-            searchRange: NSMakeRange(0, "検索される文字列".utf16Count),
+            searchRange: NSMakeRange(0, count("検索される文字列".utf16)), //Swift1.2
+            //searchRange: NSMakeRange(0, "検索される文字列".utf16Count), //Swift1.1
+            
             foundRange: &afterRange  )
         NSLog("%d,%d",afterRange.location,afterRange.length)
         if result {
@@ -1041,7 +1047,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         
     }
     //NSApplication
-    func applicationShouldTerminate(sender: NSApplication!) -> NSApplicationTerminateReply {
+    func applicationShouldTerminate(sender: NSApplication) -> NSApplicationTerminateReply {
         NSLog("applicationShouldTerminate")
         
         //return .TerminateCancel //アプリケーション終了をキャンセル
@@ -1123,6 +1129,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     }
     //アプリケーションがファイルドロップでOpenされた
     //ターゲット　アプリケーション設定　書類のタイプ　役割Editer 拡張子"*** *" OSタイプ"*** *"を設定してある
+    //Swift1.2
     func application(sender: NSApplication, openFiles filenames: [AnyObject]) {
         remoteStateTextField.stringValue = "File drop open"
         
@@ -1131,8 +1138,8 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         var i : Int
         var count :Int = filenames.count
         for (i = 0 ; i < count ; ++i){
-            var name : NSString = (filenames as NSArray).objectAtIndex(i) as NSString
-            if (NSFileManager.defaultManager().fileExistsAtPath(name)){
+            var name : NSString = (filenames as NSArray).objectAtIndex(i) as! NSString
+            if (NSFileManager.defaultManager().fileExistsAtPath(name as String)){
                 files.addObject(name)
             }else if ( firstMissingFile != nil ){
                firstMissingFile = name
@@ -1152,7 +1159,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
                 alert.messageText = "Multiple files not found"
                 text = "Could not open file with"
             }
-            alert.informativeText = text
+            alert.informativeText = text as String
             alert.alertStyle = NSAlertStyle.CriticalAlertStyle
             
             alert.runModal()

@@ -90,7 +90,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSLog("applicationWillFinishLaunching")
         
     }
-    func applicationShouldTerminate(sender: NSApplication!) -> NSApplicationTerminateReply {
+    func applicationShouldTerminate(sender: NSApplication) -> NSApplicationTerminateReply {
         NSLog("applicationShouldTerminate")
         
         //return .TerminateCancel //アプリケーション終了をキャンセル

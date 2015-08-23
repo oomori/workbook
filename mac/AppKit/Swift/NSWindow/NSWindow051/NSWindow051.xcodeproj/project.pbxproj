@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4526358E1AC66CF20083617B /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526358D1AC66CF20083617B /* CustomTableView.swift */; };
+		452635901AC6888A0083617B /* MyWindow067.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526358F1AC6888A0083617B /* MyWindow067.swift */; };
 		4537921F1AB9AFBB00D434FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537921E1AB9AFBB00D434FD /* AppDelegate.swift */; };
 		453792211AB9AFBB00D434FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453792201AB9AFBB00D434FD /* ViewController.swift */; };
 		453792231AB9AFBB00D434FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453792221AB9AFBB00D434FD /* Images.xcassets */; };
 		453792261AB9AFBB00D434FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453792241AB9AFBB00D434FD /* Main.storyboard */; };
 		453792321AB9AFBB00D434FD /* NSWindow051Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453792311AB9AFBB00D434FD /* NSWindow051Tests.swift */; };
 		4537923C1AB9C07A00D434FD /* MyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537923B1AB9C07A00D434FD /* MyWindow.swift */; };
+		454709141AC82C2C00749C6A /* MyWindow082.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454709131AC82C2C00749C6A /* MyWindow082.swift */; };
+		454709161AC832E600749C6A /* toolbarImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 454709151AC832E600749C6A /* toolbarImage.png */; };
+		454709181AC83B6A00749C6A /* MyToolbar083.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454709171AC83B6A00749C6A /* MyToolbar083.swift */; };
+		45523A3B1AC68C6700829D8C /* testImage.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 45523A3A1AC68C6700829D8C /* testImage.JPG */; };
+		45523A3D1AC68D0000829D8C /* MyWindow068.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45523A3C1AC68D0000829D8C /* MyWindow068.swift */; };
+		45523A3F1AC68EB700829D8C /* MyImageView068.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45523A3E1AC68EB700829D8C /* MyImageView068.swift */; };
 		4564A25C1AC44111008366B7 /* TableData066.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564A25B1AC44111008366B7 /* TableData066.swift */; };
+		459E26891AC7D85C00BC98E7 /* MyWindow077.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E26881AC7D85C00BC98E7 /* MyWindow077.swift */; };
+		459E268B1AC8053200BC98E7 /* MyWindow078.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E268A1AC8053200BC98E7 /* MyWindow078.swift */; };
+		459E268D1AC81C1E00BC98E7 /* MyWindow081.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E268C1AC81C1E00BC98E7 /* MyWindow081.swift */; };
+		45ECC80D1ACB563900B564E0 /* MyView086.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ECC80C1ACB563900B564E0 /* MyView086.swift */; };
+		45ECC80F1ACF4EDC00B564E0 /* MyTextField089.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ECC80E1ACF4EDC00B564E0 /* MyTextField089.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4526358D1AC66CF20083617B /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		4526358F1AC6888A0083617B /* MyWindow067.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWindow067.swift; sourceTree = "<group>"; };
 		453792191AB9AFBB00D434FD /* NSWindow051.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSWindow051.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4537921D1AB9AFBB00D434FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4537921E1AB9AFBB00D434FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +52,18 @@
 		453792301AB9AFBB00D434FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		453792311AB9AFBB00D434FD /* NSWindow051Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWindow051Tests.swift; sourceTree = "<group>"; };
 		4537923B1AB9C07A00D434FD /* MyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWindow.swift; sourceTree = "<group>"; };
+		454709131AC82C2C00749C6A /* MyWindow082.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWindow082.swift; sourceTree = "<group>"; };
+		454709151AC832E600749C6A /* toolbarImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolbarImage.png; sourceTree = "<group>"; };
+		454709171AC83B6A00749C6A /* MyToolbar083.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyToolbar083.swift; sourceTree = "<group>"; };
+		45523A3A1AC68C6700829D8C /* testImage.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.JPG; sourceTree = "<group>"; };
+		45523A3C1AC68D0000829D8C /* MyWindow068.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWindow068.swift; sourceTree = "<group>"; };
+		45523A3E1AC68EB700829D8C /* MyImageView068.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImageView068.swift; sourceTree = "<group>"; };
 		4564A25B1AC44111008366B7 /* TableData066.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableData066.swift; sourceTree = "<group>"; };
+		459E26881AC7D85C00BC98E7 /* MyWindow077.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyWindow077.swift; path = ../MyWindow077.swift; sourceTree = "<group>"; };
+		459E268A1AC8053200BC98E7 /* MyWindow078.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWindow078.swift; sourceTree = "<group>"; };
+		459E268C1AC81C1E00BC98E7 /* MyWindow081.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWindow081.swift; sourceTree = "<group>"; };
+		45ECC80C1ACB563900B564E0 /* MyView086.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView086.swift; sourceTree = "<group>"; };
+		45ECC80E1ACF4EDC00B564E0 /* MyTextField089.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextField089.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +107,12 @@
 			children = (
 				4537921E1AB9AFBB00D434FD /* AppDelegate.swift */,
 				453792201AB9AFBB00D434FD /* ViewController.swift */,
-				4564A25B1AC44111008366B7 /* TableData066.swift */,
+				45523A401AC68EDA00829D8C /* CustomClass */,
+				4526358D1AC66CF20083617B /* CustomTableView.swift */,
 				4537923B1AB9C07A00D434FD /* MyWindow.swift */,
 				453792221AB9AFBB00D434FD /* Images.xcassets */,
+				45523A3A1AC68C6700829D8C /* testImage.JPG */,
+				454709151AC832E600749C6A /* toolbarImage.png */,
 				453792241AB9AFBB00D434FD /* Main.storyboard */,
 				4537921C1AB9AFBB00D434FD /* Supporting Files */,
 			);
@@ -113,6 +142,24 @@
 				453792301AB9AFBB00D434FD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45523A401AC68EDA00829D8C /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				4564A25B1AC44111008366B7 /* TableData066.swift */,
+				4526358F1AC6888A0083617B /* MyWindow067.swift */,
+				45523A3C1AC68D0000829D8C /* MyWindow068.swift */,
+				45523A3E1AC68EB700829D8C /* MyImageView068.swift */,
+				459E26881AC7D85C00BC98E7 /* MyWindow077.swift */,
+				459E268A1AC8053200BC98E7 /* MyWindow078.swift */,
+				459E268C1AC81C1E00BC98E7 /* MyWindow081.swift */,
+				454709131AC82C2C00749C6A /* MyWindow082.swift */,
+				454709171AC83B6A00749C6A /* MyToolbar083.swift */,
+				45ECC80C1ACB563900B564E0 /* MyView086.swift */,
+				45ECC80E1ACF4EDC00B564E0 /* MyTextField089.swift */,
+			);
+			name = CustomClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +242,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45523A3B1AC68C6700829D8C /* testImage.JPG in Resources */,
+				454709161AC832E600749C6A /* toolbarImage.png in Resources */,
 				453792231AB9AFBB00D434FD /* Images.xcassets in Resources */,
 				453792261AB9AFBB00D434FD /* Main.storyboard in Resources */,
 			);
@@ -214,10 +263,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4526358E1AC66CF20083617B /* CustomTableView.swift in Sources */,
+				45523A3F1AC68EB700829D8C /* MyImageView068.swift in Sources */,
 				4537923C1AB9C07A00D434FD /* MyWindow.swift in Sources */,
+				459E26891AC7D85C00BC98E7 /* MyWindow077.swift in Sources */,
+				454709141AC82C2C00749C6A /* MyWindow082.swift in Sources */,
 				453792211AB9AFBB00D434FD /* ViewController.swift in Sources */,
 				4537921F1AB9AFBB00D434FD /* AppDelegate.swift in Sources */,
+				459E268D1AC81C1E00BC98E7 /* MyWindow081.swift in Sources */,
 				4564A25C1AC44111008366B7 /* TableData066.swift in Sources */,
+				45ECC80D1ACB563900B564E0 /* MyView086.swift in Sources */,
+				454709181AC83B6A00749C6A /* MyToolbar083.swift in Sources */,
+				45ECC80F1ACF4EDC00B564E0 /* MyTextField089.swift in Sources */,
+				452635901AC6888A0083617B /* MyWindow067.swift in Sources */,
+				45523A3D1AC68D0000829D8C /* MyWindow068.swift in Sources */,
+				459E268B1AC8053200BC98E7 /* MyWindow078.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

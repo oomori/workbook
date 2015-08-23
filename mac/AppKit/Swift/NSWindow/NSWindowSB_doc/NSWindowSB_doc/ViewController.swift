@@ -21,6 +21,7 @@ class ViewController: NSViewController {
         window.makeKeyAndOrderFront(self)
     }
     //NSWindowSB_doc windowController()
+    //Swift1.2
     @IBAction func function002(sender: AnyObject) {
         var window : NSWindow = NSWindow(contentRect: NSMakeRect(0, 0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask, backing: .Buffered, defer: false)
         windowArray.addObject(window)
@@ -30,7 +31,7 @@ class ViewController: NSViewController {
         window.makeKeyAndOrderFront(self)
         
         //ウインドウのNSWinodowControllerを取得
-        var windowContoroller : NSWindowController = sender.window.windowController() as NSWindowController
+        var windowContoroller : NSWindowController = sender.window.windowController() as! NSWindowController
         
         NSLog("%@",windowContoroller.description )
 

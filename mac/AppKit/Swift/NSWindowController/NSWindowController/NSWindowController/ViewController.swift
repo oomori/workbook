@@ -13,10 +13,10 @@ class ViewController: NSViewController {
     var windowArray : NSMutableArray = []
     
     //NSWindowContoroller window
-    //
+    ////Swift1.2
     @IBAction func function001(sender: AnyObject) {
         //ウインドウのNSWinodowControllerを取得
-        var theWindowContoroller : NSWindowController = sender.window.windowController() as NSWindowController
+        var theWindowContoroller : NSWindowController = sender.window.windowController() as! NSWindowController
         
         NSLog("windowContoroller = %@",theWindowContoroller.description )
         
@@ -24,7 +24,7 @@ class ViewController: NSViewController {
         //if (window.title != nil){
         NSLog("window %@",theWindow.title! )
         //}
-        let theDocument : NSDocument = theWindowContoroller.document! as NSDocument
+        let theDocument : NSDocument = theWindowContoroller.document! as! NSDocument
         NSLog("window %@",theDocument.description )
         theWindowContoroller.close()
         
@@ -69,7 +69,7 @@ class ViewController: NSViewController {
         let nibPath : NSString = nibBundle.pathForResource("TestWindow", ofType: "nib")!
         
         //TestWindow.xibからウインドウコントローラーを作成
-        let newWindowController : NSWindowController = NSWindowController(windowNibPath: nibPath, owner: self )
+        let newWindowController : NSWindowController = NSWindowController(windowNibPath: nibPath as String, owner: self )
         //ウインドウをロード
         newWindowController.loadWindow()
         //表示
@@ -82,7 +82,7 @@ class ViewController: NSViewController {
     @IBAction func function005(sender: AnyObject) {
         let document : Document = Document()
         let storyboard = NSStoryboard(name: "Main", bundle: nil)!
-        let windowController = storyboard.instantiateControllerWithIdentifier("Document Window Controller") as NSWindowController
+        let windowController = storyboard.instantiateControllerWithIdentifier("Document Window Controller") as! NSWindowController
 
         document.addWindowController(windowController)
         

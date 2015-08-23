@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSWindow/AppDelegate.swift"
-            timestampString = "446271406.515869"
+            timestampString = "450487235.950837"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "abortTimer(_:)"
             landmarkType = "5">
          </BreakpointContent>

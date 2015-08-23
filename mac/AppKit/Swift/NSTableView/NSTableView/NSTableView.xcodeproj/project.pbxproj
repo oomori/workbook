@@ -13,6 +13,7 @@
 		4510B5ED1AC43CFE0066F936 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4510B5EB1AC43CFE0066F936 /* Main.storyboard */; };
 		4510B5F91AC43CFF0066F936 /* NSTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4510B5F81AC43CFF0066F936 /* NSTableViewTests.swift */; };
 		4564A25E1AC44AB2008366B7 /* TableData001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564A25D1AC44AB2008366B7 /* TableData001.swift */; };
+		45B1EE481AC4C194005E9542 /* TableData002.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B1EE471AC4C194005E9542 /* TableData002.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		4510B5F71AC43CFF0066F936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4510B5F81AC43CFF0066F936 /* NSTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTableViewTests.swift; sourceTree = "<group>"; };
 		4564A25D1AC44AB2008366B7 /* TableData001.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableData001.swift; sourceTree = "<group>"; };
+		45B1EE471AC4C194005E9542 /* TableData002.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableData002.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				4510B5E51AC43CFE0066F936 /* AppDelegate.swift */,
 				4510B5E71AC43CFE0066F936 /* ViewController.swift */,
 				4564A25D1AC44AB2008366B7 /* TableData001.swift */,
+				45B1EE471AC4C194005E9542 /* TableData002.swift */,
 				4510B5E91AC43CFE0066F936 /* Images.xcassets */,
 				4510B5EB1AC43CFE0066F936 /* Main.storyboard */,
 				4510B5E31AC43CFE0066F936 /* Supporting Files */,
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4564A25E1AC44AB2008366B7 /* TableData001.swift in Sources */,
+				45B1EE481AC4C194005E9542 /* TableData002.swift in Sources */,
 				4510B5E81AC43CFE0066F936 /* ViewController.swift in Sources */,
 				4510B5E61AC43CFE0066F936 /* AppDelegate.swift in Sources */,
 			);

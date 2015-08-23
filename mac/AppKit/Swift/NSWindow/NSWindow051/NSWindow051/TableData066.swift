@@ -10,23 +10,24 @@ import Cocoa
 
 class TableData066: NSObject , NSApplicationDelegate , NSTableViewDelegate,NSTableViewDataSource {
 
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
     }
     
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
     
-    func numberOfRowsInTableView(aTableView: NSTableView!) -> Int
+    func numberOfRowsInTableView(aTableView: NSTableView) -> Int
     {
         let numberOfRows:Int = getDataArray().count
         return numberOfRows
     }
     
-    func tableView(tableView: NSTableView!, objectValueForTableColumn tableColumn: NSTableColumn!, row: Int) -> AnyObject!
+    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject?
     {
-        var newString: (AnyObject?) = getDataArray().objectAtIndex(row).objectForKey(tableColumn.identifier)
+        var newString: (AnyObject?) = getDataArray().objectAtIndex(row).objectForKey(tableColumn!.identifier)
         return newString
     }
     

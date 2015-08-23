@@ -19,7 +19,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let itemPrototype = self.storyboard?.instantiateControllerWithIdentifier("collectionViewItem")
-            as NSCollectionViewItem
+            as! NSCollectionViewItem
         hogeCollectionView.itemPrototype = itemPrototype
         hoge = Hoge()
         hogeArray = NSMutableArray(array:[hoge, hoge, hoge])

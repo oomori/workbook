@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSTableViewwithNSArrayController/AppDelegate.swift"
+            timestampString = "449285802.952399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSTableViewwithNSArrayController.AppDelegate.__deallocating_deinit"
+                  moduleName = "NSTableViewwithNSArrayController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/air/Documents/GitRepo/workbook/mac/AppKit/Swift/NSTableView/NSTableViewwithNSArrayController/NSTableViewwithNSArrayController/AppDelegate.swift"
+                  timestampString = "449285883.007249"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "top_level_code"
+                  moduleName = "NSTableViewwithNSArrayController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/air/Documents/GitRepo/workbook/mac/AppKit/Swift/NSTableView/NSTableViewwithNSArrayController/NSTableViewwithNSArrayController/AppDelegate.swift"
+                  timestampString = "449285883.012929"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSTableViewwithNSArrayController/ViewController.swift"
+            timestampString = "453854110.511966"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSTableViewwithNSArrayController.ViewController.__deallocating_deinit"
+                  moduleName = "NSTableViewwithNSArrayController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/air/Documents/GitRepo/workbook/mac/AppKit/Swift/NSTableView/NSTableViewwithNSArrayController/NSTableViewwithNSArrayController/ViewController.swift"
+                  timestampString = "449289787.574748"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc NSTableViewwithNSArrayController.ViewController.__ivar_destroyer"
+                  moduleName = "NSTableViewwithNSArrayController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/air/Documents/GitRepo/workbook/mac/AppKit/Swift/NSTableView/NSTableViewwithNSArrayController/NSTableViewwithNSArrayController/ViewController.swift"
+                  timestampString = "449289787.575085"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

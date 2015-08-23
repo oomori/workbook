@@ -1,22 +1,35 @@
 //
 //  ViewController.swift
-//  NSTableView
+//  NSTableViewwithNSArrayController
 //
-//  Created by air on 2015/03/26.
+//  Created by air on 2015/03/29.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
 
 import Cocoa
+//モデル
+class TheModel: NSObject {
+    var name : String = ""
+    var col1 : String = ""
+    var col2 : String = ""
+}
 
-class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NSTableViewDataSource {
+class ViewController: NSViewController {
+
 
     var windowArray : NSMutableArray = []
     var dataArray : NSMutableArray = []
+    var theArray : NSMutableArray = []
     
-    //NSWindow
+    //NSTableView
+    //Swift1.2
+    //まだ出来てない
+    //ウインドウのボタン
     func buttonAction001(sender: AnyObject){
-        var theWindow : NSWindow = (sender as NSButton).window!
+        var theWindow : NSWindow = (sender as! NSButton).window!
+        //NSLog("!!!")
     }
+    var arrayController001 = NSArrayController(content: nil)
     @IBAction func function001(sender: AnyObject) {
         var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
@@ -35,6 +48,23 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         theButton.target = self
         aWindow.contentView.addSubview(theButton)
         
+        //アレイコントローラー
+        
+        //arrayController.addObject("aaa")
+        //arrayController.addObject("bbb")
+        //arrayController.insert("ccc")
+        
+        
+        //arrayController.content = theArray
+        //エンティティ名を設定
+        arrayController001.entityName = "Entity1"
+        var error : NSError? = nil
+//        if (arrayController.fetchWithRequest(nil , merge: true , error: error)){
+//            
+//        }
+
+        //arrayController.managedObjectContext = NSManagedObjectContext()
+        
         //テーブルビューを作成
         //まずはスクロールビュー
         var scrollView : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
@@ -48,14 +78,47 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         //列をテーブルにセット
         theTableView.addTableColumn(tableColumn1)
         theTableView.addTableColumn(tableColumn2)
+    
+
+        
+        var theArray:[NSDictionary] = [["col1": "和蘭陀", "col2": "おらんだ"],
+            ["col1": "西班牙", "col2": "すぺいん"],
+            ["col1": "亜米利加", "col2": "あめりか"],
+            ["col1": "独逸", "col2": "どいつ"],
+            ["col1": "露西亜", "col2": "ろしあ"] ]
+        
+        //arrayController.addObjects(theArray)
+        
+        var objects : NSMutableArray = []
+        
+        for (var i = 0; i < 30; i++) {
+            var model : TheModel = TheModel()
+            model.name = NSString(format: "name %d", i) as String
+            model.col1 = NSString(format: "name %d", i) as String
+            model.col2 = NSString(format: "name %d", i) as String
+            objects.addObject(model)
+        }
+        arrayController001.addObjects(objects as [AnyObject])
+        NSLog("controller %@", arrayController001.description)
+        //NSLog("%@", arrayController.selectedObjects.description)
+
+
+        //theTableView.bind("col1", toObject: arrayController, withKeyPath: "selection", options: nil )
+        //theTableView.bind("col1", toObject: arrayController, withKeyPath: "selection.col2", options: nil )
+
         //データソースとデリゲートをセット
         var dataObj : TableData001 = TableData001()
+        dataObj.dataArray = [["col1": "和蘭陀", "col2": "おらんだ"],
+            ["col1": "西班牙", "col2": "すぺいん"],
+            ["col1": "亜米利加", "col2": "あめりか"],
+            ["col1": "独逸", "col2": "どいつ"],
+            ["col1": "露西亜", "col2": "ろしあ"]]
         dataArray.addObject(dataObj)
         
         theTableView.setDataSource(dataObj )
         theTableView.setDelegate(dataObj )
         theTableView.reloadData()
-        
+         //テーブルの入ったスクロールビューをウインドウに配置
         scrollView.documentView = theTableView
         scrollView.hasVerticalRuler = true
         aWindow.contentView.addSubview(scrollView)
@@ -66,7 +129,6 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

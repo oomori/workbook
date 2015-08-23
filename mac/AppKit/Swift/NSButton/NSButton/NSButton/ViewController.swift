@@ -23,12 +23,13 @@ class ViewController: NSViewController {
         // OnOffButton
         // MomentaryPushInButton // was NSMomentaryLight
     }
-    //NSButton
+    //NSButton title
+    //Swift1.2
     func buttonAction002(sender: AnyObject?){
-        var theWindow : NSWindow = (sender as NSButton).window!
+        var theWindow : NSWindow = (sender as! NSButton).window!
         NSLog("!!!")
     }
-    //NSButton title
+    
     @IBAction func function002(sender: AnyObject) {
         var aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
@@ -92,10 +93,11 @@ class ViewController: NSViewController {
         aWindow.makeKeyAndOrderFront(self)//表示
     }
     //NSButton setPeriodicDelay
+    //Swift1.2
     var counter004 : Int = 0
     func buttonAction004(sender: AnyObject?){
-        var theWindow : NSWindow = (sender as NSButton).window!
-        (sender as NSButton).title = String(counter004++)
+        var theWindow : NSWindow = (sender as! NSButton).window!
+        (sender as! NSButton).title = String(counter004++)
     }
     @IBAction func function004(sender: AnyObject) {
         //ウインドウ作成
@@ -511,9 +513,10 @@ class ViewController: NSViewController {
         
     }
     //NSButton setNextState
+    //Swift1.2
     var switchButton: NSButton!
     func buttonAction016(sender: AnyObject?){
-        var theWindow : NSWindow = (sender as NSButton).window!
+        var theWindow : NSWindow = (sender as! NSButton).window!
         switchButton.setNextState()
         NSLog("!!!")
     }
@@ -556,9 +559,10 @@ class ViewController: NSViewController {
         
     }
     //NSButton highlight
+    //Swift1.2
     var hilightButton: NSButton!
     func buttonAction017(sender: AnyObject?){
-        var theWindow : NSWindow = (sender as NSButton).window!
+        var theWindow : NSWindow = (sender as! NSButton).window!
         
         hilightButton.highlight( true )
 
