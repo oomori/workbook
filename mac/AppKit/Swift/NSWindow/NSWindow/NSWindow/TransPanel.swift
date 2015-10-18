@@ -5,6 +5,7 @@
 //  Created by air on 2015/02/22.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
+//  Swift2.0 2015/10/17
 
 import Cocoa
 
@@ -28,7 +29,7 @@ class TransPanel: NSWindow {
         while keepOn {
             newEvent = anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as! NSDate),
+                untilDate:(NSDate.distantPast() ),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true)
             //NSLog("loop %d",mask)
@@ -48,11 +49,13 @@ class TransPanel: NSWindow {
                     //NSLog("---- %f",Float(tempEvent.locationInWindow.x))
                     
                     
-                    var beforePositionX : CGFloat = CGFloat(beforeLocation.x)
-                    //NSLog("beforePositionX %f",beforePositionX)
-                    var positionX : CGFloat = CGFloat(tempEvent.locationInWindow.x )
-                    var positionY : CGFloat = CGFloat(tempEvent.locationInWindow.y )
+                    let beforePositionX : CGFloat = CGFloat(beforeLocation.x)
+                    NSLog("beforePositionX %f",beforePositionX)
+                    let positionX : CGFloat = CGFloat(tempEvent.locationInWindow.x )
+                    let positionY : CGFloat = CGFloat(tempEvent.locationInWindow.y )
                     self.setFrame(NSMakeRect(positionX , positionY, 300, 200), display: false  )
+                    
+                    
                     
                 }
                 if tempEvent.type == .LeftMouseUp {
@@ -61,8 +64,8 @@ class TransPanel: NSWindow {
                     newLocation = NSMakePoint(newEvent.locationInWindow.x,tempEvent.locationInWindow.y)
                     //NSLog("---- %f",Float(tempEvent.locationInWindow.x))
                     NSLog("newLocation %f",Float(newLocation.x))
-                    var positionX : CGFloat = CGFloat(tempEvent.locationInWindow.x )
-                    var positionY : CGFloat = CGFloat(tempEvent.locationInWindow.y )
+                    let positionX : CGFloat = CGFloat(tempEvent.locationInWindow.x )
+                    let positionY : CGFloat = CGFloat(tempEvent.locationInWindow.y )
                     self.setFrame(NSMakeRect(positionX , positionY, 300, 200), display: false  )
                 }
                 

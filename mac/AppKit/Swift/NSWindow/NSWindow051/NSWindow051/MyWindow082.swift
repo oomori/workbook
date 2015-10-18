@@ -13,12 +13,12 @@ import Cocoa
 class MyWindow082: NSWindow {
     override func resignMainWindow() {
         super.resignMainWindow()
-        NSLog("resignMainWindow %@",self.title!)
+        NSLog("resignMainWindow %@",self.title)
     }
 
     override func becomeMainWindow() {
         super.becomeMainWindow()
-        NSLog("becomeMainWindow %@",self.title!)
+        NSLog("becomeMainWindow %@",self.title)
     }
 
 }

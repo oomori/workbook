@@ -12,6 +12,7 @@
 		45F63BBD1B8965AF00D669DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F63BBC1B8965AF00D669DC /* Images.xcassets */; };
 		45F63BC01B8965AF00D669DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F63BBE1B8965AF00D669DC /* Main.storyboard */; };
 		45F63BCC1B8965AF00D669DC /* NSControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F63BCB1B8965AF00D669DC /* NSControlTests.swift */; };
+		45F63BD61B897F9E00D669DC /* TableData002.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F63BD51B897F9E00D669DC /* TableData002.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		45F63BC51B8965AF00D669DC /* NSControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F63BCA1B8965AF00D669DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45F63BCB1B8965AF00D669DC /* NSControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSControlTests.swift; sourceTree = "<group>"; };
+		45F63BD51B897F9E00D669DC /* TableData002.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableData002.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				45F63BB81B8965AF00D669DC /* AppDelegate.swift */,
 				45F63BBA1B8965AF00D669DC /* ViewController.swift */,
+				45F63BD51B897F9E00D669DC /* TableData002.swift */,
 				45F63BBC1B8965AF00D669DC /* Images.xcassets */,
 				45F63BBE1B8965AF00D669DC /* Main.storyboard */,
 				45F63BB61B8965AF00D669DC /* Supporting Files */,
@@ -153,7 +156,9 @@
 		45F63BAB1B8965AF00D669DC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = oomori;
 				TargetAttributes = {
 					45F63BB21B8965AF00D669DC = {
@@ -208,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F63BD61B897F9E00D669DC /* TableData002.swift in Sources */,
 				45F63BBB1B8965AF00D669DC /* ViewController.swift in Sources */,
 				45F63BB91B8965AF00D669DC /* AppDelegate.swift in Sources */,
 			);
@@ -264,6 +270,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -330,6 +337,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = NSControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.workshop.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -341,6 +349,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = NSControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.workshop.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -360,6 +369,7 @@
 				);
 				INFOPLIST_FILE = NSControlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.workshop.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSControl.app/Contents/MacOS/NSControl";
 			};
@@ -376,6 +386,7 @@
 				);
 				INFOPLIST_FILE = NSControlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.workshop.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSControl.app/Contents/MacOS/NSControl";
 			};
@@ -400,6 +411,7 @@
 				45F63BD11B8965AF00D669DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45F63BD21B8965AF00D669DC /* Build configuration list for PBXNativeTarget "NSControlTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +420,7 @@
 				45F63BD41B8965AF00D669DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

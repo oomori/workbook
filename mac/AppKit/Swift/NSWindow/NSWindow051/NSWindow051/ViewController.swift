@@ -14,7 +14,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     var dataArray : NSMutableArray = []
     //NSWindow  frame
     @IBAction func function051(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow.center()//ウインドウをスクリーンの中心に
         theWindow.title = "ウインドウタイトル"//タイトル設定
@@ -29,7 +29,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow setFrameOrigin
     func buttonAction052(sender: AnyObject){
         
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        let theWindow : NSWindow = (sender as! NSButton).window!
         NSLog("!!")
         theWindow.setFrameOrigin(NSMakePoint(100.0, 200.0))
         
@@ -40,22 +40,22 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         
     }
     @IBAction func function052(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
                             styleMask:  NSTitledWindowMask |
                                         NSClosableWindowMask |
                                         NSMiniaturizableWindowMask |
                                         NSResizableWindowMask,
                             backing:    .Buffered,
-                            defer:      false)
+                            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction052:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -67,7 +67,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //Swift1.2
     func buttonAction053(sender: AnyObject){
         
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        let theWindow : NSWindow = (sender as! NSButton).window!
         NSLog("!!")
         theWindow.setFrameTopLeftPoint(NSMakePoint(100.0, 200.0))
         
@@ -78,22 +78,22 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         
     }
     @IBAction func function053(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction053:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -104,7 +104,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow constrainFrameRect:toScreen:
     //サブクラスでオーバーライド
     @IBAction func function054(sender: AnyObject) {
-        var theWindow : MyWindow = MyWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow : MyWindow = MyWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow.center()//ウインドウをスクリーンの中心に
         theWindow.title = "ウインドウタイトル"//タイトル設定
@@ -119,9 +119,9 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     }
     //NSWindow cascadeTopLeftFromPoint()
     @IBAction func function055(sender: AnyObject) {
-        var theWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow1) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
-        var theWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow2) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         theWindow1.center()//ウインドウをスクリーンの中心に
@@ -142,7 +142,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //Swift1.2
     func buttonAction056(sender: AnyObject){
         
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        let theWindow : NSWindow = (sender as! NSButton).window!
         
         theWindow.setFrame(NSMakeRect(100.0, 100.0, 500.0, 300.0), display: true)
         
@@ -153,22 +153,22 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         
     }
     @IBAction func function056(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction056:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -181,8 +181,8 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //Swift1.2
     func buttonAction057(sender: AnyObject){
         
-        var theWindow : NSWindow = (sender as! NSButton).window!
-        var animeTime : NSTimeInterval = theWindow.animationResizeTime(NSMakeRect(100.0, 100.0, 500.0, 300.0))
+        let theWindow : NSWindow = (sender as! NSButton).window!
+        let animeTime : NSTimeInterval = theWindow.animationResizeTime(NSMakeRect(100.0, 100.0, 500.0, 300.0))
         NSLog("animeTime = %.2f sec",animeTime)
         theWindow.setFrame(NSMakeRect(100.0, 100.0, 500.0, 300.0), display: true ,animate: true)
         NSLog("x = %.2f,y = %.2f,w = %.2f,h = %.2f", Float(theWindow.frame.origin.x ),
@@ -191,22 +191,22 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
             Float(theWindow.frame.size.height))
     }
     @IBAction func function057(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction057:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -218,27 +218,27 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //Swift1.2
     func buttonAction058(sender: AnyObject){
         
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        let theWindow : NSWindow = (sender as! NSButton).window!
         theWindow.aspectRatio = NSMakeSize(1.78,1.0)//(16:9)
     
     }
     @IBAction func function058(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "set"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction058:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -249,27 +249,27 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow　minSize
     func buttonAction059(sender: AnyObject){
         
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        let theWindow : NSWindow = (sender as! NSButton).window!
         //ウインドウの最小サイズを(400.0,300.0)にする
         theWindow.minSize = NSMakeSize(400.0,300.0)
     }
     @IBAction func function059(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "set"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction059:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -279,27 +279,27 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     }
     //NSWindow maxSize
     func buttonAction060(sender: AnyObject){
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        let theWindow : NSWindow = (sender as! NSButton).window!
         //ウインドウの最大サイズを(400.0,300.0)にする
         theWindow.maxSize = NSMakeSize(400.0,300.0)
     }
     @IBAction func function060(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "set"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction060:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -310,26 +310,26 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow performZoom()
     //Swift1.2
     func buttonAction061(sender: AnyObject){
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        let theWindow : NSWindow = (sender as! NSButton).window!
         theWindow.performZoom(self)
     }
     @IBAction func function061(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Zoom"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction061:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -340,26 +340,26 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow zoom()
     //Swift1.2
     func buttonAction062(sender: AnyObject){
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        let theWindow : NSWindow = (sender as! NSButton).window!
         theWindow.zoom(self)
     }
     @IBAction func function062(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Zoom"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction062:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -370,26 +370,26 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow
     //Swift1.2
     func buttonAction063(sender: AnyObject){
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        let theWindow : NSWindow = (sender as! NSButton).window!
         theWindow.zoom(self)
     }
     @IBAction func function063(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Zoom"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction063:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.delegate = self
@@ -402,7 +402,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow showsResizeIndicator
     //Swift1.2
     func buttonAction064(sender: AnyObject){
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        let theWindow : NSWindow = (sender as! NSButton).window!
         if (theWindow.showsResizeIndicator) {
             theWindow.showsResizeIndicator = false
         }else{
@@ -410,22 +410,22 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         }
     }
     @IBAction func function064(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Set"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction064:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -435,7 +435,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     }
     //NSWindow resizeIncrements
     func buttonAction065(sender: AnyObject){
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        let theWindow : NSWindow = (sender as! NSButton).window!
         if (theWindow.resizeIncrements.width > 1.0) {
             theWindow.resizeIncrements = NSMakeSize(1.3, 1.0)
         }else{
@@ -443,22 +443,22 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         }
     }
     @IBAction func function065(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Set"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction065:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -470,7 +470,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow preservesContentDuringLiveResize
     //Swift1.2
     func buttonAction066(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         
         if (aWindow.preservesContentDuringLiveResize) {
             aWindow.preservesContentDuringLiveResize = false
@@ -481,55 +481,55 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         }
     }
     @IBAction func function066(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Set"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction066:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //ボタンの制約設定
         //falseを設定する
         theButton.translatesAutoresizingMaskIntoConstraints = false
         
         //先にaddSubviewする
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
-        var viewDictionary:Dictionary = ["theButton": theButton]
+        let viewDictionary:Dictionary = ["theButton": theButton]
         
-        var constraints:NSMutableArray = NSMutableArray()
+        let constraints:NSMutableArray = NSMutableArray()
         
         //横方向の制限
         //ボタン真ん中に
-        var constraintFormat1:[AnyObject] =
+        let constraintFormat1:[AnyObject] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-[theButton]-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary)
         constraints.addObjectsFromArray(constraintFormat1)
         
-        aWindow.contentView.addConstraints(constraints as [AnyObject])
+        aWindow.contentView!.addConstraints(constraints as [AnyObject])
         
         
         //テーブルビューを作成
         //まずはスクロールビュー
-        var scrollView : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
+        let scrollView : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
         //中身のテーブルビュー
-        var theTableView : CustomTableView = CustomTableView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
+        let theTableView : CustomTableView = CustomTableView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
         //列
-        var tableColumn1 : NSTableColumn = NSTableColumn(identifier: "col1")
-        var tableColumn2 : NSTableColumn = NSTableColumn(identifier: "col2")
+        let tableColumn1 : NSTableColumn = NSTableColumn(identifier: "col1")
+        let tableColumn2 : NSTableColumn = NSTableColumn(identifier: "col2")
         tableColumn1.width = 170
         tableColumn2.width = 130
         //列をテーブルにセット
@@ -538,7 +538,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         
         
         //データソースとデリゲートをセット
-        var dataObj : TableData066 = TableData066()
+        let dataObj : TableData066 = TableData066()
         dataArray.addObject(dataObj)
         
         theTableView.setDataSource(dataObj )
@@ -548,7 +548,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
 
         scrollView.documentView = theTableView
         scrollView.hasVerticalRuler = true
-        aWindow.contentView.addSubview(scrollView)
+        aWindow.contentView!.addSubview(scrollView)
         
         
         
@@ -557,26 +557,26 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         //ウインドウに対するスクロールビューの制約
-        var scrollViewConstraints : NSMutableArray = NSMutableArray()
-        var viewDictionary3 : Dictionary = ["scrollView": scrollView]
-        var scrollViewConstraintV:[AnyObject] =
+        let scrollViewConstraints : NSMutableArray = NSMutableArray()
+        let viewDictionary3 : Dictionary = ["scrollView": scrollView]
+        let scrollViewConstraintV:[AnyObject] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-(11)-[scrollView]-(20)-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary3)
         scrollViewConstraints.addObjectsFromArray(scrollViewConstraintV)
         //横の制約　スクロールビューが親ビューに対して
-        var scrollViewConstraintH:[AnyObject] =
+        let scrollViewConstraintH:[AnyObject] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-(11)-[scrollView]-(20)-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary3)
         scrollViewConstraints.addObjectsFromArray(scrollViewConstraintH)
         
         //ウインドウに対するスクロールビューの制約の追加
-        aWindow.contentView.addConstraints(scrollViewConstraints as [AnyObject])
+        aWindow.contentView!.addConstraints(scrollViewConstraints as [AnyObject])
 
         
         
@@ -591,21 +591,21 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow
     //Swift1.2
     func buttonAction067(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         
         aWindow.setFrame(NSMakeRect(100.0, 100.0, 100.0, 100.0), display: true )
     }
     @IBAction func function067(sender: AnyObject) {
-        var theWindow : MyWindow067 = MyWindow067(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow : MyWindow067 = MyWindow067(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Set"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction067:")
         theButton.target = self
-        theWindow.contentView.addSubview(theButton)
+        theWindow.contentView!.addSubview(theButton)
         
         theWindow.center()//ウインドウをスクリーンの中心に
         theWindow.title = "ウインドウタイトル"//タイトル設定
@@ -621,7 +621,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow
     //Swift1.2
     func buttonAction068(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         
         if (aWindow.preservesContentDuringLiveResize) {
             aWindow.preservesContentDuringLiveResize = false
@@ -633,22 +633,22 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         //aWindow.setFrame(NSMakeRect(100.0, 100.0, 100.0, 100.0), display: true )
     }
     @IBAction func function068(sender: AnyObject) {
-        var aWindow : MyWindow068 = MyWindow068(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : MyWindow068 = MyWindow068(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Set"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction068:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         
         //ボタンの制約設定
@@ -656,31 +656,31 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         theButton.translatesAutoresizingMaskIntoConstraints = false
         
         //先にaddSubviewする
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
-        var viewDictionary:Dictionary = ["theButton": theButton]
+        let viewDictionary:Dictionary = ["theButton": theButton]
         
-        var constraints:NSMutableArray = NSMutableArray()
+        let constraints:NSMutableArray = NSMutableArray()
         
         //横方向の制限
         //ボタン真ん中に
-        var constraintFormat1:[AnyObject] =
+        let constraintFormat1:[AnyObject] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-[theButton]-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary)
         constraints.addObjectsFromArray(constraintFormat1)
         
-        aWindow.contentView.addConstraints(constraints as [AnyObject])
+        aWindow.contentView!.addConstraints(constraints as [AnyObject])
         
         
         
         //テーブルビューを作成
         //まずはスクロールビュー
-        var scrollView : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
+        let scrollView : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
         //中身のイメージビュー
-        var theImageView : MyImageView068 = MyImageView068(frame: NSMakeRect(0.0,30.0,1000.0,1000.0))
+        let theImageView : MyImageView068 = MyImageView068(frame: NSMakeRect(0.0,30.0,1000.0,1000.0))
         
         theImageView.image = NSImage(named: "testImage")
         
@@ -689,31 +689,31 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         scrollView.hasHorizontalScroller = true
         scrollView.hasVerticalScroller = true
         scrollView.hasHorizontalRuler = true
-        aWindow.contentView.addSubview(scrollView)
+        aWindow.contentView!.addSubview(scrollView)
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         //ウインドウに対するスクロールビューの制約
-        var scrollViewConstraints : NSMutableArray = NSMutableArray()
-        var viewDictionary3 : Dictionary = ["scrollView": scrollView]
-        var scrollViewConstraintV:[AnyObject] =
+        let scrollViewConstraints : NSMutableArray = NSMutableArray()
+        let viewDictionary3 : Dictionary = ["scrollView": scrollView]
+        let scrollViewConstraintV:[AnyObject] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-(5)-[scrollView]-(30)-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary3)
         scrollViewConstraints.addObjectsFromArray(scrollViewConstraintV)
         //横の制約　スクロールビューが親ビューに対して
-        var scrollViewConstraintH:[AnyObject] =
+        let scrollViewConstraintH:[AnyObject] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-(5)-[scrollView]-(5)-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary3)
         scrollViewConstraints.addObjectsFromArray(scrollViewConstraintH)
         
         //ウインドウに対するスクロールビューの制約の追加
-        aWindow.contentView.addConstraints(scrollViewConstraints as [AnyObject])
+        aWindow.contentView!.addConstraints(scrollViewConstraints as [AnyObject])
         
         
         //ウインドウの表示
@@ -730,12 +730,12 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     }
     //NSWindow contentAspectRatio
     func buttonAction069(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         
         aWindow.contentAspectRatio = NSMakeSize(100.0, 200.0)
     }
     @IBAction func function069(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         
@@ -746,12 +746,12 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         
 
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction069:")
         theButton.target = self
-        theWindow.contentView.addSubview(theButton)
+        theWindow.contentView!.addSubview(theButton)
         
         
         NSLog("x = %.2f,y = %.2f,w = %.2f,h = %.2f", Float(theWindow.frame.origin.x ),
@@ -763,13 +763,13 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow contentMaxSize
     //Swift1.2
     func buttonAction070(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         
         aWindow.contentMinSize = NSMakeSize(200.0, 100.0)
         aWindow.contentMaxSize = NSMakeSize(500.0, 300.0)
     }
     @IBAction func function070(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         
@@ -780,12 +780,12 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction070:")
         theButton.target = self
-        theWindow.contentView.addSubview(theButton)
+        theWindow.contentView!.addSubview(theButton)
         
         
         NSLog("x = %.2f,y = %.2f,w = %.2f,h = %.2f", Float(theWindow.frame.origin.x ),
@@ -796,13 +796,13 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow contentResizeIncrements
     //Swift1.2
     func buttonAction071(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         
         aWindow.contentResizeIncrements = NSSize(width: 10.0,height: 10.0)
         
     }
     @IBAction func function071(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         
@@ -813,12 +813,12 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction071:")
         theButton.target = self
-        theWindow.contentView.addSubview(theButton)
+        theWindow.contentView!.addSubview(theButton)
         
         
         NSLog("x = %.2f,y = %.2f,w = %.2f,h = %.2f", Float(theWindow.frame.origin.x ),
@@ -829,113 +829,113 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow orderOut()
     //Swift1.2
     func buttonAction072(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         aWindow.orderOut(self)
     }
     @IBAction func function072(sender: AnyObject) {
-        var theWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect(100.0, 100.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect(100.0, 100.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow1) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow1.title = "ウインドウタイトル1"//タイトル設定
         theWindow1.orderFront(self)//前面に
         theWindow1.makeKeyAndOrderFront(self)//表示
         //ボタンを作成
-        var theButton1 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton1 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton1.title = "Action"
         theButton1.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton1.action = Selector("buttonAction072:")
         theButton1.target = self
-        theWindow1.contentView.addSubview(theButton1)
+        theWindow1.contentView!.addSubview(theButton1)
         
-        var theWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect(140.0, 140.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect(140.0, 140.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow2) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow2.title = "ウインドウタイトル2"//タイトル設定
         theWindow2.orderFront(self)//前面に
         theWindow2.makeKeyAndOrderFront(self)//表示
         //ボタンを作成
-        var theButton2 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton2 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton2.title = "Action"
         theButton2.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton2.action = Selector("buttonAction072:")
         theButton2.target = self
-        theWindow2.contentView.addSubview(theButton2)
+        theWindow2.contentView!.addSubview(theButton2)
         
-        var theWindow3 : NSWindow = NSWindow(contentRect: NSMakeRect(180.0, 180.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow3 : NSWindow = NSWindow(contentRect: NSMakeRect(180.0, 180.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow3) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow3.title = "ウインドウタイトル3"//タイトル設定
         theWindow3.orderFront(self)//前面に
         theWindow3.makeKeyAndOrderFront(self)//表示
         //ボタンを作成
-        var theButton3 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton3 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton3.title = "Action"
         theButton3.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton3.action = Selector("buttonAction072:")
         theButton3.target = self
-        theWindow3.contentView.addSubview(theButton3)
+        theWindow3.contentView!.addSubview(theButton3)
         
     }
     //NSWindow orderBack
     //Swift1.2
     func buttonAction073(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         aWindow.orderBack(self )
     }
     @IBAction func function073(sender: AnyObject) {
-        var theWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect(100.0, 100.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect(100.0, 100.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow1) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow1.title = "ウインドウタイトル1"//タイトル設定
         theWindow1.orderFront(self)//前面に
         theWindow1.makeKeyAndOrderFront(self)//表示
         //ボタンを作成
-        var theButton1 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton1 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton1.title = "Action"
         theButton1.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton1.action = Selector("buttonAction073:")
         theButton1.target = self
-        theWindow1.contentView.addSubview(theButton1)
+        theWindow1.contentView!.addSubview(theButton1)
         
-        var textField1 : NSTextField = NSTextField(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
-        theWindow1.contentView.addSubview(textField1)
+        let textField1 : NSTextField = NSTextField(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
+        theWindow1.contentView!.addSubview(textField1)
         
-        var theWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect(140.0, 140.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect(140.0, 140.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow2) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow2.title = "ウインドウタイトル2"//タイトル設定
         theWindow2.orderFront(self)//前面に
         theWindow2.makeKeyAndOrderFront(self)//表示
         //ボタンを作成
-        var theButton2 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton2 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton2.title = "Action"
         theButton2.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton2.action = Selector("buttonAction073:")
         theButton2.target = self
-        theWindow2.contentView.addSubview(theButton2)
+        theWindow2.contentView!.addSubview(theButton2)
         
-        var textField2 : NSTextField = NSTextField(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
-        theWindow2.contentView.addSubview(textField2)
+        let textField2 : NSTextField = NSTextField(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
+        theWindow2.contentView!.addSubview(textField2)
         
-        var theWindow3 : NSWindow = NSWindow(contentRect: NSMakeRect(180.0, 180.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let theWindow3 : NSWindow = NSWindow(contentRect: NSMakeRect(180.0, 180.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow3) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow3.title = "ウインドウタイトル3"//タイトル設定
         theWindow3.orderFront(self)//前面に
         theWindow3.makeKeyAndOrderFront(self)//表示
         //ボタンを作成
-        var theButton3 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton3 : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton3.title = "Action"
         theButton3.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton3.action = Selector("buttonAction073:")
         theButton3.target = self
-        theWindow3.contentView.addSubview(theButton3)
+        theWindow3.contentView!.addSubview(theButton3)
         
-        var textField3 : NSTextField = NSTextField(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
-        theWindow3.contentView.addSubview(textField3)
+        let textField3 : NSTextField = NSTextField(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
+        theWindow3.contentView!.addSubview(textField3)
     }
     //NSWindow orderFront
     //Swift1.2
     func buttonAction074(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         aWindow.orderFront(self)
     }
     @IBAction func function074(sender: AnyObject) {
-        var theWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect(100.0, 100.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect(100.0, 100.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow1) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow1.title = "ウインドウタイトル1"//タイトル設定
         theWindow1.orderFront(self)//前面に
@@ -946,12 +946,12 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         theButton1.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton1.action = Selector("buttonAction074:")
         theButton1.target = self
-        theWindow1.contentView.addSubview(theButton1)
+        theWindow1.contentView!.addSubview(theButton1)
         
         var textField1 : NSTextField = NSTextField(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
-        theWindow1.contentView.addSubview(textField1)
+        theWindow1.contentView!.addSubview(textField1)
         
-        var theWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect(140.0, 140.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect(140.0, 140.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow2) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow2.title = "ウインドウタイトル2"//タイトル設定
         theWindow2.orderFront(self)//前面に
@@ -962,12 +962,12 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         theButton2.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton2.action = Selector("buttonAction074:")
         theButton2.target = self
-        theWindow2.contentView.addSubview(theButton2)
+        theWindow2.contentView!.addSubview(theButton2)
         
         var textField2 : NSTextField = NSTextField(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
-        theWindow2.contentView.addSubview(textField2)
+        theWindow2.contentView!.addSubview(textField2)
         
-        var theWindow3 : NSWindow = NSWindow(contentRect: NSMakeRect(180.0, 180.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow3 : NSWindow = NSWindow(contentRect: NSMakeRect(180.0, 180.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow3) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow3.title = "ウインドウタイトル3"//タイトル設定
         theWindow3.orderFront(self)//前面に
@@ -986,11 +986,11 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow orderWindow
     //Swift1.2
     func buttonAction075(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         aWindow.orderWindow( NSWindowOrderingMode.Above , relativeTo: 2)
     }
     @IBAction func function075(sender: AnyObject) {
-        var theWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect(100.0, 100.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect(100.0, 100.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow1) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow1.title = "ウインドウタイトル1"//タイトル設定
         theWindow1.orderFront(self)//前面に
@@ -1006,7 +1006,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         var textField1 : NSTextField = NSTextField(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
         theWindow1.contentView.addSubview(textField1)
         
-        var theWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect(140.0, 140.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect(140.0, 140.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow2) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow2.title = "ウインドウタイトル2"//タイトル設定
         theWindow2.orderFront(self)//前面に
@@ -1022,7 +1022,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         var textField2 : NSTextField = NSTextField(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
         theWindow2.contentView.addSubview(textField2)
         
-        var theWindow3 : NSWindow = NSWindow(contentRect: NSMakeRect(180.0, 180.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow3 : NSWindow = NSWindow(contentRect: NSMakeRect(180.0, 180.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow3) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow3.title = "ウインドウタイトル3"//タイトル設定
         theWindow3.orderFront(self)//前面に
@@ -1042,7 +1042,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //Swift1.2
     func buttonAction076(sender: AnyObject){
         var aWindow : NSWindow = (sender as! NSButton).window!
-        aWindow.level = Int(CGWindowLevelForKey(Int32(kCGNumberOfWindowLevelKeys)))
+        aWindow.level = Int(CGWindowLevelForKey(Int32(CGWindowLevelKey.NumberOfWindowLevelKeys)))
         NSLog("%d",Float(aWindow.level))
 
         /*
@@ -1071,7 +1071,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         */
     }
     @IBAction func function076(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         theWindow.center()//ウインドウをスクリーンの中心に
@@ -1096,7 +1096,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     }
     func timer077(timer:NSTimer!) {
         
-        var aWindow : NSWindow = (timer.userInfo as! NSWindow)
+        let aWindow : NSWindow = (timer.userInfo as! NSWindow)
 
         //NSLog("default %u",NSWindowOcclusionState.Visible.rawValue)
         //NSLog("default %u",aWindow.occlusionState.rawValue)
@@ -1110,7 +1110,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         }
     }
     @IBAction func function077(sender: AnyObject) {
-        var theWindow : MyWindow077 = MyWindow077(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : MyWindow077 = MyWindow077(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         theWindow.center()//ウインドウをスクリーンの中心に
@@ -1142,14 +1142,14 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow setFrameFromString
     //Swift1.2
     func buttonAction078_save(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         aWindow.setFrameAutosaveName("")//自動保存中止
         aWindow.saveFrameUsingName("window078")
         aWindow.title = "フレームを保存しました"
         NSLog("stringWithSavedFrame %@", aWindow.stringWithSavedFrame)
     }
     func buttonAction078_set(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         if (aWindow.setFrameUsingName("window078")){
             aWindow.title = "保存したフレームにしました"
         }else{
@@ -1160,19 +1160,19 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         var aWindow : NSWindow = (sender as! NSButton).window!
         aWindow.setFrameAutosaveName("window078")
         aWindow.title = "自動保存"
-        NSLog("frameAutosaveName %@", aWindow.frameAutosaveName()!)
+        NSLog("frameAutosaveName %@", aWindow.frameAutosaveName)
     }
     func buttonAction078_remove(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         NSWindow.removeFrameUsingName("window078")
         aWindow.title = "フレームを保存をクリア"
     }
     func buttonAction078_string(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
        aWindow.setFrameFromString("293 426 300 222 0 0 1366 745")
     }
     @IBAction func function078(sender: AnyObject) {
-        var theWindow : MyWindow078 = MyWindow078(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : MyWindow078 = MyWindow078(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         theWindow.center()//ウインドウをスクリーンの中心に
@@ -1225,7 +1225,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow makeKeyWindow
     //Swift1.2
     func buttonAction079(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         if (aWindow.canBecomeKeyWindow){
             NSLog("YES")
             aWindow.makeKeyWindow()
@@ -1234,7 +1234,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         }
     }
     @IBAction func function079(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         
@@ -1259,7 +1259,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow makeKeyAndOrderFront
     //Swift1.2
     func buttonAction080(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         if (aWindow.canBecomeKeyWindow){
             NSLog("YES")
             aWindow.makeKeyAndOrderFront(self)
@@ -1268,7 +1268,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         }
     }
     @IBAction func function080(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         
@@ -1296,7 +1296,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         var aWindow : NSWindow = (sender as! NSButton).window!
     }
     @IBAction func function081(sender: AnyObject) {
-        var theWindow : MyWindow081 = MyWindow081(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : MyWindow081 = MyWindow081(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         theWindow.center()//ウインドウをスクリーンの中心に
@@ -1316,7 +1316,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         var textField1 : NSTextField = NSTextField(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
         theWindow.contentView.addSubview(textField1)
         
-        var theWindow2 : MyWindow081 = MyWindow081(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow2 : MyWindow081 = MyWindow081(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow2) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         theWindow2.center()//ウインドウをスクリーンの中心に
@@ -1341,7 +1341,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow makeMainWindow
     //Swift1.2
     func buttonAction082(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         if (aWindow.canBecomeMainWindow){
             NSLog("YES")
             aWindow.makeMainWindow()
@@ -1350,7 +1350,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         }
     }
     @IBAction func function082(sender: AnyObject) {
-        var theWindow : MyWindow082 = MyWindow082(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : MyWindow082 = MyWindow082(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         
@@ -1376,11 +1376,11 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow runToolbarCustomizationPalette
     //Swift1.2
     func buttonAction083_toggle(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         aWindow.toggleToolbarShown(self)
     }
     func buttonAction083_custom(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         aWindow.runToolbarCustomizationPalette(self)
         NSLog("custom")
     }
@@ -1390,10 +1390,10 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     
     //NSToolbarDelegate にはこの3つのメソッドが必要
     var toolBarArray : [String] = ["toolBarItem1",NSToolbarSeparatorItemIdentifier,"SearchDocToolbarItemIdentifier"]
-    func toolbarAllowedItemIdentifiers(toolbar: NSToolbar) -> [AnyObject] {
+    func toolbarAllowedItemIdentifiers(toolbar: NSToolbar) -> [String] {
         return toolBarArray
     }
-    func toolbarDefaultItemIdentifiers(toolbar: NSToolbar) -> [AnyObject] {
+    func toolbarDefaultItemIdentifiers(toolbar: NSToolbar) -> [String] {
         return toolBarArray
     }
     func toolbar(toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: String, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
@@ -1425,7 +1425,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     }
 
     @IBAction func function083(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
@@ -1474,18 +1474,18 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         var aWindow : NSWindow = (sender as! NSButton).window!
         if (aWindow.childWindows != nil) {
             for value  in aWindow.childWindows! {
-                NSLog("title = %@", ((value as! NSWindow).title)!)
+                NSLog("title = %@", ((value as! NSWindow).title))
                 
-                let pWindow : NSWindow = value as! NSWindow
+                let pWindow : NSWindow = value 
                 
-                NSLog("parent window = %@", pWindow.parentWindow!.title!)
+                NSLog("parent window = %@", pWindow.parentWindow!.title)
                 
                 
             }
         }
     }
     @IBAction func function084(sender: AnyObject) {
-        var parentWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var parentWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(parentWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         parentWindow.center()//ウインドウをスクリーンの中心に
         parentWindow.title = "親ウインドウ"//タイトル設定
@@ -1501,14 +1501,14 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         parentWindow.contentView.addSubview(theButton1)
         
         //子ウインドウを作成
-        var childWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect( parentWindow.frame.origin.x+310.0, parentWindow.frame.origin.y+20.0, 200, 100), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var childWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect( parentWindow.frame.origin.x+310.0, parentWindow.frame.origin.y+20.0, 200, 100), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(childWindow1) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         childWindow1.title = "子ウインドウ1"//タイトル設定
         childWindow1.orderFront(self)//前面に
         childWindow1.makeKeyAndOrderFront(self)//表示
         
         //子ウインドウを作成
-        var childWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect( parentWindow.frame.origin.x-210.0, parentWindow.frame.origin.y+20.0, 200, 100), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var childWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect( parentWindow.frame.origin.x-210.0, parentWindow.frame.origin.y+20.0, 200, 100), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(childWindow1) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         childWindow2.title = "子ウインドウ2"//タイトル設定
         childWindow2.orderFront(self)//前面に
@@ -1528,9 +1528,9 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
 
             (sender as! NSButton).title = "Set child"
             for value  in parentWindow.childWindows! {
-                NSLog("title = %@", ((value as! NSWindow).title)!)
+                NSLog("title = %@", ((value as! NSWindow).title))
 
-                parentWindow.removeChildWindow(value as! NSWindow)
+                parentWindow.removeChildWindow(value )
   
             }
         }else{
@@ -1541,7 +1541,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         }
     }
     @IBAction func function085(sender: AnyObject) {
-        var parentWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var parentWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(parentWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         parentWindow.center()//ウインドウをスクリーンの中心に
         parentWindow.title = "親ウインドウ"//タイトル設定
@@ -1557,14 +1557,14 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         parentWindow.contentView.addSubview(theButton1)
         
         //子ウインドウを作成
-        var childWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect( parentWindow.frame.origin.x+310.0, parentWindow.frame.origin.y+20.0, 200, 100), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var childWindow1 : NSWindow = NSWindow(contentRect: NSMakeRect( parentWindow.frame.origin.x+310.0, parentWindow.frame.origin.y+20.0, 200, 100), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(childWindow1) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         childWindow1.title = "子ウインドウ1"//タイトル設定
         childWindow1.orderFront(self)//前面に
         childWindow1.makeKeyAndOrderFront(self)//表示
         
         //子ウインドウを作成
-        var childWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect( parentWindow.frame.origin.x-210.0, parentWindow.frame.origin.y+20.0, 200, 100), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var childWindow2 : NSWindow = NSWindow(contentRect: NSMakeRect( parentWindow.frame.origin.x-210.0, parentWindow.frame.origin.y+20.0, 200, 100), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(childWindow2) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         childWindow2.title = "子ウインドウ2"//タイトル設定
         childWindow2.orderFront(self)//前面に
@@ -1613,7 +1613,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     }
 
     @IBAction func function086(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         theWindow.center()//ウインドウをスクリーンの中心に
         theWindow.title = "ウインドウタイトル"//タイトル設定
@@ -1650,7 +1650,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //画面書き換え停止
     var textFieldArray : [NSTextField] = []
     func buttonAction087_noflush(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         aWindow.disableFlushWindow()
             for textField in textFieldArray {
                 aWindow.makeFirstResponder(textField)
@@ -1663,7 +1663,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     }
     //画面書き換えする
     func buttonAction087_flush(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         //aWindow.disableFlushWindow()
         for textField in textFieldArray {
             aWindow.makeFirstResponder(textField)
@@ -1680,7 +1680,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         }
     }
     @IBAction func function087(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         
@@ -1736,7 +1736,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         NSLog("type B")
     }
     @IBAction func function088(sender: AnyObject) {
-        var theWindow : MyWindow082 = MyWindow082(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : MyWindow082 = MyWindow082(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         
@@ -1763,8 +1763,8 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         theWindow.contentView.addSubview(theButton2)
         
         //デフォルトボタンにする
-        theWindow.setDefaultButtonCell(theButton2.cell() as? NSButtonCell)
-        let aCell : NSButtonCell = theWindow.defaultButtonCell()!
+        theWindow.setDefaultButtonCell = theButton2.cell as? NSButtonCell
+        let aCell : NSButtonCell = theWindow.defaultButtonCell!
 
         NSLog("%@",aCell.title)
         
@@ -1786,7 +1786,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         NSLog("type B")
     }
     @IBAction func function089(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         
@@ -1814,7 +1814,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         theWindow.contentView.addSubview(theButton2)
         
         //デフォルトボタンにする
-        theWindow.setDefaultButtonCell(theButton1.cell() as? NSButtonCell)
+        theWindow.setDefaultButtonCell = theButton1.cell as? NSButtonCell
 
         var textField1 : MyTextField089 = MyTextField089(frame: NSMakeRect(100.0, 100.0, 100.0, 30.0))
         theWindow.contentView.addSubview(textField1)
@@ -1826,7 +1826,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow
     //Swift1.2
     func buttonAction090(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         
         //aWindow.flushBufferedKeyEvents()
         aWindow.disableKeyEquivalentForDefaultButtonCell()
@@ -1843,7 +1843,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         NSLog("type B")
     }
     @IBAction func function090(sender: AnyObject) {
-        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         
@@ -1871,7 +1871,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         theWindow.contentView.addSubview(theButton2)
         
         //デフォルトボタンにする
-        theWindow.setDefaultButtonCell(theButton1.cell() as? NSButtonCell)
+        theWindow.setDefaultButtonCell = theButton1.cell as? NSButtonCell
         
         
         for (var u = 0 ; u < 15 ; u++ ){
@@ -1889,7 +1889,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
     //NSWindow
     var textField091 : NSTextField?
     func buttonAction091(sender: AnyObject){
-        var aWindow : NSWindow = (sender as! NSButton).window!
+        let aWindow : NSWindow = (sender as! NSButton).window!
         let aText : NSText =  aWindow.fieldEditor(true , forObject: nil)!
         NSLog("%@",aText.description);
         
@@ -1903,7 +1903,7 @@ class ViewController: NSViewController , NSWindowDelegate,NSTableViewDelegate,NS
         
     }
     @IBAction func function091(sender: AnyObject) {
-        var theWindow : MyWindow082 = MyWindow082(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        var theWindow : MyWindow082 = MyWindow082(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(theWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         

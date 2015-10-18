@@ -16,6 +16,8 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var theView: NSView!
     
+    //NSWorkspace sharedWorkspace()
+    //Swift2.0
     @IBAction func function001(sender: AnyObject) {
         let workspace : NSWorkspace = NSWorkspace.sharedWorkspace()
         NSLog("workspace %@",workspace.description)
@@ -23,7 +25,9 @@ class ViewController: NSViewController {
         let notificationcenter : NSNotificationCenter = workspace.notificationCenter
         NSLog("notificationcenter %@",notificationcenter.description)
     }
+    
     //NSWorkspace openURL()
+    //Swift2.0
     @IBAction func function002(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
         let theURL : NSURL = NSURL(string: "http://cocoaapi.hatenablog.com/")!
@@ -35,6 +39,7 @@ class ViewController: NSViewController {
         }
     }
     //NSWorkspace openFile()
+    //Swift2.0
     @IBAction func function003(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
         if theWorkspace.openFile("/Applications/Font Book.app") {
@@ -44,6 +49,7 @@ class ViewController: NSViewController {
         }
     }
     //NSWorkspace　openFile:withApplication:
+    //Swift2.0
     @IBAction func function004(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
         let theFilePath : NSString = NSString(string: "~/Desktop/textured.gif")
@@ -56,7 +62,9 @@ class ViewController: NSViewController {
             NSLog("NO")
         }
     }
+    
     //NSWorkspace openFile:withApplication:andDeactivate:
+    //Swift2.0
     @IBAction func function005(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
         let theFilePath : NSString = NSString(string: "~/Desktop/textured.gif")
@@ -70,6 +78,7 @@ class ViewController: NSViewController {
         }
     }
     //NSWorkspace　openFile:fromImage:at:inView:
+    //Swift2.0
     //このメソッドは非推奨　openFile:と同じ動作をする
     @IBAction func function006(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
@@ -93,6 +102,7 @@ class ViewController: NSViewController {
         }
     }
     //NSWorkspace launchApplication:
+    //Swift2.0
     @IBAction func function007(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
         if theWorkspace.launchApplication("iTunes"){
@@ -101,7 +111,9 @@ class ViewController: NSViewController {
             NSLog("NO")
         }
     }
+    
     //NSWorkspace launchApplication:showIcon:autolaunch:
+    //Swift2.0
     @IBAction func function008(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
         if theWorkspace.launchApplication("iTunes", showIcon: true, autolaunch: true ){
@@ -110,44 +122,48 @@ class ViewController: NSViewController {
             NSLog("NO")
         }
     }
+    
     //NSWorkspace　launchApplicationAtURL:options:configuration:error:
     //047に追加テスト中あり
+    //Swift2.0
     @IBAction func function009(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
-        var anError: NSError?
-        let andPrint = NSWorkspaceLaunchOptions.AndPrint.rawValue
-        let mask = Int( andPrint ) // cast from UInt
+        //var anError: NSError?
+        //let andPrint = NSWorkspaceLaunchOptions.AndPrint.rawValue
+        //let mask = Int( andPrint ) // cast from UInt
         
-        let theURL : NSURL = NSURL(fileURLWithPath: "/Applications/iTunes.app")!
-        let theOption : NSNumber = NSNumber(integer: 0)
+        let theURL : NSURL = NSURL(fileURLWithPath: "/Applications/iTunes.app")
+        //let theOption : NSNumber = NSNumber(integer: 0)
         //32ビットモードで起動
         let theArc : NSNumber = NSNumber(integer: NSBundleExecutableArchitectureI386)
         //64ビットモードで起動
         //let theArc : NSNumber = NSNumber(integer: NSBundleExecutableArchitectureX86_64)
         
-        let theConfig : [NSObject : AnyObject] = [NSWorkspaceLaunchConfigurationArchitecture : theArc]
-        if (theWorkspace.launchApplicationAtURL(theURL,
-            options: NSWorkspaceLaunchOptions.Async,
-            configuration: theConfig,
-            error: &anError) != nil){
-                NSLog("YES")
+        let theConfig : [String : AnyObject] = [NSWorkspaceLaunchConfigurationArchitecture : theArc]
+
+        
+
+        let runningApp = try! theWorkspace.launchApplicationAtURL(theURL, options: NSWorkspaceLaunchOptions.Async, configuration: theConfig)
+        
+        if runningApp.active {
+            NSLog("OK")
         }else{
             NSLog("NO")
         }
 
-        
-
     }
     //NSWorkspace hideOtherApplications()
+    //Swift2.0
     @IBAction func function010(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
         theWorkspace.hideOtherApplications()
     }
     
     //NSWorkspace duplicateURLs
+    //Swift2.0
     @IBAction func function011(sender: AnyObject) {
         //複製するファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -158,22 +174,26 @@ class ViewController: NSViewController {
                 //選択したファイルを複製
                 let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
                 theWorkspace.duplicateURLs(openPanel.URLs, completionHandler: {
-                    (dic : [ NSObject : AnyObject]!, err) in
+                    (dic : [ NSURL : NSURL], err) in
                     NSLog("%@", (dic as Dictionary).description)
                     //let values: Array = Array(dic.keys)
                     let values: Array = Array(dic.values)
-                    for (index, value) in enumerate(values) {
-                        println("index: \(index), value: \(value)")
+                    for (index, value) in values.enumerate() {
+                        print("index: \(index), value: \(value)")
                     }
                 })
             }//if result
         }//openPanel.beginWithCompletionHandler
     }
+    
+    
+    
     //NSWorkspace　recycleURLs
+    //Swift2.0
     @IBAction func function012(sender: AnyObject) {
         //警告なしに選んだファイルがゴミ箱に入るので注意！！！
         //ゴミ箱へいれるファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -184,12 +204,12 @@ class ViewController: NSViewController {
                 //選択したファイルをゴミ箱へ
                 let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
                 theWorkspace.recycleURLs(openPanel.URLs, completionHandler: {
-                    (dic : [ NSObject : AnyObject]!, err) in
+                    (dic : [ NSURL : NSURL], err) in
                     NSLog("%@", (dic as Dictionary).description)
                     //let values: Array = Array(dic.keys)
                     let values: Array = Array(dic.values)
-                    for (index, value) in enumerate(values) {
-                        println("index: \(index), value: \(value)")
+                    for (index, value) in values.enumerate() {
+                        print("index: \(index), value: \(value)")
                     }
                 })
             }//if result
@@ -198,13 +218,14 @@ class ViewController: NSViewController {
     
     //NSWorkspace　performFileOperation
     //NSWorkspace　ファイル操作
+    //Swift2.0
     @IBAction func function013(sender: AnyObject) {
         //デスクトップの「testFilename」というファイルを
         //Documentsに移動する
         var tagCount : Int = 0
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
-        let sourcePath : NSString = "~/Desktop/".stringByExpandingTildeInPath
-        let destiPath : NSString = "~/Documents/".stringByExpandingTildeInPath
+        let sourcePath : NSString = ("~/Desktop/" as NSString).stringByExpandingTildeInPath
+        let destiPath : NSString = ("~/Documents/" as NSString).stringByExpandingTildeInPath
         let result : Bool = theWorkspace.performFileOperation(NSWorkspaceMoveOperation,
                     source: sourcePath as String,
                     destination: destiPath as String,
@@ -225,9 +246,11 @@ class ViewController: NSViewController {
     }
     
     //NSWorkspace　activateFileViewerSelectingURLs
+    //指定のファイルをFinderで選択する
+    //Swift2.0
     @IBAction func function015(sender: AnyObject) {
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -243,9 +266,10 @@ class ViewController: NSViewController {
     }
     
     //NSWorkspace selectFile:inFileViewerRootedAtPath:
+    //Swift2.0
     @IBAction func function016(sender: AnyObject) {
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -264,9 +288,11 @@ class ViewController: NSViewController {
     }
     
     //NSWorkspace typeOfFile
+    //ファイルのファイルタイプ「com.adobe.pdf」などを返す
+    //Swift2.0
     @IBAction func function017(sender: AnyObject) {
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -278,8 +304,19 @@ class ViewController: NSViewController {
                 let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
                 let theURL : NSURL =  openPanel.URL!
                 let filepath : NSString = theURL.path!
-                var anError : NSError?
-                let utiType : NSString? = theWorkspace.typeOfFile(filepath as String, error: &anError)
+                //let anError : NSError?
+                let utiType : NSString?
+                do {
+                    utiType = try theWorkspace.typeOfFile(filepath as String)
+                } catch let error as NSError {
+                    
+                        NSLog("error %@",error.description)
+                    
+                    utiType = nil
+                } catch {
+                    
+                    fatalError()
+                }
                 if utiType != nil {
                 NSLog("%@", utiType!)
                 //Ex.->  public.png , public.data
@@ -289,9 +326,11 @@ class ViewController: NSViewController {
     }
     
     //NSWorkspace localizedDescriptionForType
+    //ファイルのファイルタイプ「Portable Document Format (PDF)」などを返す
+    //Swift2.0
     @IBAction func function018(sender: AnyObject) {
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -303,8 +342,16 @@ class ViewController: NSViewController {
                 let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
                 let theURL : NSURL =  openPanel.URL!
                 let filepath : NSString = theURL.path!
-                var anError : NSError?
-                let utiType : NSString? = theWorkspace.typeOfFile(filepath as String, error: &anError)
+                //var anError : NSError?
+                let utiType : NSString?
+                do {
+                    utiType = try theWorkspace.typeOfFile(filepath as String)
+                } catch let error as NSError {
+                    NSLog("error %@", error.description)
+                    utiType = nil
+                } catch {
+                    fatalError()
+                }
                 if utiType != nil {
                     NSLog("%@", utiType!)
                     //Ex.->  public.png , public.data
@@ -316,9 +363,11 @@ class ViewController: NSViewController {
     }
     
     //NSWorkspace preferredFilenameExtensionForType:
+    //ファイルの拡張子「pdf」などを返す
+    //Swift2.0
     @IBAction func function019(sender: AnyObject) {
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -330,8 +379,16 @@ class ViewController: NSViewController {
                 let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
                 let theURL : NSURL =  openPanel.URL!
                 let filepath : NSString = theURL.path!
-                var anError : NSError?
-                let utiType : NSString? = theWorkspace.typeOfFile(filepath as String, error: &anError)
+                //var anError : NSError?
+                let utiType : NSString?
+                do {
+                    utiType = try theWorkspace.typeOfFile(filepath as String)
+                } catch let error as NSError {
+                    NSLog("error %@",error.description)
+                    utiType = nil
+                } catch {
+                    fatalError()
+                }
                 if utiType != nil {
                     NSLog("%@", utiType!)
                     //Ex.->com.apple.web-internet-location , com.compuserve.gif
@@ -402,7 +459,7 @@ class ViewController: NSViewController {
     //作成中
     @IBAction func function023(sender: AnyObject) {
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -414,10 +471,10 @@ class ViewController: NSViewController {
                 let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
                 let theURL : NSURL =  openPanel.URL!
                 let filepath : NSString = theURL.path!
-                var applicationName: AutoreleasingUnsafeMutablePointer<NSString?> = nil
-                var typeName: AutoreleasingUnsafeMutablePointer<NSString?> = nil
+                let applicationName: AutoreleasingUnsafeMutablePointer<NSString?> = nil
+                let typeName: AutoreleasingUnsafeMutablePointer<NSString?> = nil
 
-                var itemResult : NSString?
+                //var itemResult : NSString?
                 
                 
                 if (theWorkspace.getInfoForFile(filepath as String, application: applicationName , type: typeName) ){
@@ -442,7 +499,7 @@ class ViewController: NSViewController {
     //NSWorkspace getFileSystemInfoForPath:isRemovable:isWritable:isUnmountable:description:type:
     @IBAction func function025(sender: AnyObject) {
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -460,7 +517,7 @@ class ViewController: NSViewController {
                 var unmountable = ObjCBool(false)
                 var description = NSString?()
                 var type = NSString?()
-                if (theWorkspace.getFileSystemInfoForPath( filepath as! String,
+                if (theWorkspace.getFileSystemInfoForPath( filepath as String,
                     isRemovable: &removable,
                     isWritable: &writable,
                     isUnmountable: &unmountable,
@@ -487,7 +544,7 @@ class ViewController: NSViewController {
     //NSWorkspace isFilePackageAtPath
     @IBAction func function026(sender: AnyObject) {
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -525,7 +582,7 @@ class ViewController: NSViewController {
         //アプリケーションを隠す
         anApplication.hide(self)
         //タイマー作成
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timer027:"), userInfo: nil, repeats: true )
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timer027:"), userInfo: nil, repeats: true )
     }
     //NSWorkspace runningApplications
     @IBAction func function028(sender: AnyObject) {
@@ -597,16 +654,16 @@ class ViewController: NSViewController {
         //アプリケーションを隠す
         anApplication.hide(self)
         //タイマー作成
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timer029:"), userInfo: nil, repeats: true )
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timer029:"), userInfo: nil, repeats: true )
         
     }
     //NSWorkspace iconForFile
     @IBAction func function030(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false , screen: NSScreen.mainScreen())
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false , screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -619,9 +676,9 @@ class ViewController: NSViewController {
                 let theURL : NSURL =  openPanel.URL!
                 let filepath : NSString = theURL.path!
                 
-                var theView : NSImageView = NSImageView(frame: NSMakeRect(0.0, 0.0, 100.0, 100.0))
+                let theView : NSImageView = NSImageView(frame: NSMakeRect(0.0, 0.0, 100.0, 100.0))
                 theView.image = theWorkspace.iconForFile(filepath as String)
-                aWindow.contentView.addSubview(theView)
+                aWindow.contentView!.addSubview(theView)
                 aWindow.center()//ウインドウをスクリーンの中心に
                 aWindow.orderFront(self)//前面に
                 aWindow.makeKeyAndOrderFront(self)//表示
@@ -633,11 +690,11 @@ class ViewController: NSViewController {
         }
     //NSWorkspace　iconForFiles
     @IBAction func function031(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false , screen: NSScreen.mainScreen())
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false , screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //複数ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = true
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -649,9 +706,9 @@ class ViewController: NSViewController {
                 let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
                 let theURLs : [AnyObject] = openPanel.URLs
                 
-                var theView : NSImageView = NSImageView(frame: NSMakeRect(0.0, 0.0, 100.0, 100.0))
-                theView.image = theWorkspace.iconForFiles(theURLs)
-                aWindow.contentView.addSubview(theView)
+                let theView : NSImageView = NSImageView(frame: NSMakeRect(0.0, 0.0, 100.0, 100.0))
+                theView.image = theWorkspace.iconForFiles(theURLs as! [String])
+                aWindow.contentView!.addSubview(theView)
                 aWindow.center()//ウインドウをスクリーンの中心に
                 aWindow.orderFront(self)//前面に
                 aWindow.makeKeyAndOrderFront(self)//表示
@@ -664,11 +721,11 @@ class ViewController: NSViewController {
     //NSWorkspace Workspace icon creation options
     //選択したファイルのアイコンが変更されるので注意すること
     @IBAction func function032(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false , screen: NSScreen.mainScreen())
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false , screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -682,12 +739,17 @@ class ViewController: NSViewController {
                 let filepath : NSString = theURL.path!
                 let newImage : NSImage = NSImage(named: "IconImage")!
                 
-                var theView : NSImageView = NSImageView(frame: NSMakeRect(0.0, 0.0, 100.0, 100.0))
+                let theView : NSImageView = NSImageView(frame: NSMakeRect(0.0, 0.0, 100.0, 100.0))
                 let result : Bool  = theWorkspace.setIcon(newImage,
                     forFile: filepath as String,
-                    options: NSWorkspaceIconCreationOptions.allZeros)
-
-                aWindow.contentView.addSubview(theView)
+                    options: NSWorkspaceIconCreationOptions())
+                if result {
+                    NSLog("result YES")
+                }else{
+                    NSLog("result NO")
+                }
+                
+                aWindow.contentView!.addSubview(theView)
                 aWindow.center()//ウインドウをスクリーンの中心に
                 aWindow.orderFront(self)//前面に
                 aWindow.makeKeyAndOrderFront(self)//表示
@@ -711,25 +773,25 @@ class ViewController: NSViewController {
         
     }
     @IBAction func function033(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false , screen: NSScreen.mainScreen())
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false , screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction033:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         let theLabel : NSTextField = NSTextField(frame: NSMakeRect(10.0, 100.0, 280.0, 30.0))
         theLabel.stringValue = "指定したディスクがアンマウントされますので、アンマウントしてもいいディスクを選んでください。（ディスクイメージをマウントしたものなど）"
         theLabel.bordered = false
         theLabel.canBecomeKeyView
         
-        aWindow.contentView.addSubview(theLabel)
+        aWindow.contentView!.addSubview(theLabel)
         
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
@@ -739,39 +801,47 @@ class ViewController: NSViewController {
     func buttonAction034(sender: AnyObject){
         
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
-        let theURL : NSURL = NSURL(fileURLWithPath: "/Volumes/ディスクイメージ")!
-        var theError : NSError? = NSError()
-        let result : Bool  = theWorkspace.unmountAndEjectDeviceAtURL(theURL, error: &theError)
+        let theURL : NSURL = NSURL(fileURLWithPath: "/Volumes/ディスクイメージ")
+        //var theError : NSError? = NSError()
+        let result : Bool
+        do {
+            try theWorkspace.unmountAndEjectDeviceAtURL(theURL)
+            result = true
+        } catch let error as NSError {
+            NSLog("error %@",error.description)
+            NSLog("NG %@",(error.description as String?)!)
+            NSLog("NG %d",(error.code as Int?)! )
+            NSLog("NG %@",(error.domain as String?)! )
+            result = false
+        }
         
         if result {
             NSLog("OK")
         }else{
-            NSLog("NG %@",(theError?.description as String?)!)
-            NSLog("NG %d",(theError?.code as Int?)! )
-            NSLog("NG %@",(theError?.domain as String?)! )
+            
         }
 
     }
     @IBAction func function034(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false , screen: NSScreen.mainScreen())
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false , screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction034:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         let theLabel : NSTextField = NSTextField(frame: NSMakeRect(10.0, 100.0, 280.0, 30.0))
         theLabel.stringValue = "指定したディスクがアンマウントされますので、アンマウントしてもいいディスクを選んでください。（ディスクイメージをマウントしたものなど）"
         theLabel.bordered = false
         theLabel.canBecomeKeyView
         
-        aWindow.contentView.addSubview(theLabel)
+        aWindow.contentView!.addSubview(theLabel)
         
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
@@ -791,14 +861,14 @@ class ViewController: NSViewController {
     {
         var n: UInt32 = 0
         var r: String = ""
-        if (count(s) > 4)
+        if (s.characters.count > 4)
         {
-            r = s.substringToIndex(advance(s.startIndex, 4))
+            r = s.substringToIndex(s.startIndex.advancedBy(4))
         }
         else
         {
             r = s + "    "
-            r = r.substringToIndex(advance(r.startIndex, 4))
+            r = r.substringToIndex(r.startIndex.advancedBy(4))
         }
         for UniCodeChar in r.unicodeScalars
         {
@@ -810,16 +880,16 @@ class ViewController: NSViewController {
     @IBAction func function036(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
         //var asDescriptor : NSAppleEventDescriptor? = NSAppleEventDescriptor.nullDescriptor()
-        var urlDescriptor : NSAppleEventDescriptor? = NSAppleEventDescriptor(string: "http://www.apple.com/")
+        let urlDescriptor : NSAppleEventDescriptor? = NSAppleEventDescriptor(string: "http://www.apple.com/")
 
-        var asDescriptor : NSAppleEventDescriptor? = NSAppleEventDescriptor.recordDescriptor()
+        let asDescriptor : NSAppleEventDescriptor? = NSAppleEventDescriptor.recordDescriptor()
         
         let aeKeyword : AEKeyword = val4("pURL")
         asDescriptor?.setParamDescriptor(urlDescriptor!, forKeyword: aeKeyword )
         
 
         var launchID : NSNumber? = NSNumber()
-        var result : Bool = theWorkspace.launchAppWithBundleIdentifier("com.apple.safari",
+        let result : Bool = theWorkspace.launchAppWithBundleIdentifier("com.apple.safari",
             options: NSWorkspaceLaunchOptions.Default,
             additionalEventParamDescriptor: asDescriptor,
             launchIdentifier: &launchID )
@@ -834,7 +904,7 @@ class ViewController: NSViewController {
     //launchIdentifiers の戻し方が不明
     @IBAction func function037(sender: AnyObject) {
         //複製するファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = true
         openPanel.canChooseDirectories = true
         openPanel.canCreateDirectories = false
@@ -844,13 +914,13 @@ class ViewController: NSViewController {
             if result == NSFileHandlingPanelOKButton {
                 //選択したファイルを複製
                 let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
-                var asDescriptor : NSAppleEventDescriptor? = NSAppleEventDescriptor.nullDescriptor()
+                let asDescriptor : NSAppleEventDescriptor? = NSAppleEventDescriptor.nullDescriptor()
                 
-                var retID : [AnyObject?] = []
-                var anError: NSError?
+                //var retID : [AnyObject?] = []
+                //var anError: NSError?
                 let options: NSWorkspaceLaunchOptions = .Async
                 
-                var result : Bool =
+                let result : Bool =
                 theWorkspace.openURLs(openPanel.URLs,
                     withAppBundleIdentifier: "com.apple.Finder",
                     options: options,
@@ -867,13 +937,13 @@ class ViewController: NSViewController {
     }
     //NSWorkspace　desktopImageURLForScreen
     @IBAction func function038(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         
@@ -881,14 +951,14 @@ class ViewController: NSViewController {
         
         //テーブルビューを作成
         //まずはスクロールビュー
-        var scrollView : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
+        let scrollView : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
         //中身のイメージビュー
-        var theImageView : NSImageView = NSImageView(frame: NSMakeRect(0.0,30.0,1000.0,1000.0))
+        let theImageView : NSImageView = NSImageView(frame: NSMakeRect(0.0,30.0,1000.0,1000.0))
         
         
         //デスクトップ画像を取得
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
-        var theURL : NSURL = theWorkspace.desktopImageURLForScreen(NSScreen.mainScreen()!)!
+        let theURL : NSURL = theWorkspace.desktopImageURLForScreen(NSScreen.mainScreen()!)!
         
         let img : NSImage = NSImage(contentsOfURL: theURL)!
         theImageView.image  = img
@@ -901,31 +971,32 @@ class ViewController: NSViewController {
         scrollView.hasHorizontalScroller = true
         scrollView.hasVerticalScroller = true
         scrollView.hasHorizontalRuler = true
-        aWindow.contentView.addSubview(scrollView)
+        aWindow.contentView!.addSubview(scrollView)
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
         //ウインドウに対するスクロールビューの制約
-        var scrollViewConstraints : NSMutableArray = NSMutableArray()
-        var viewDictionary3 : Dictionary = ["scrollView": scrollView]
-        var scrollViewConstraintV:[AnyObject] =
+        let scrollViewConstraints : NSMutableArray = NSMutableArray()
+        let viewDictionary3 : Dictionary = ["scrollView": scrollView]
+        let scrollViewConstraintV:[AnyObject] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-(5)-[scrollView]-(30)-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary3)
         scrollViewConstraints.addObjectsFromArray(scrollViewConstraintV)
         //横の制約　スクロールビューが親ビューに対して
-        var scrollViewConstraintH:[AnyObject] =
+        let scrollViewConstraintH:[NSLayoutConstraint] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-(5)-[scrollView]-(5)-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary3)
-        scrollViewConstraints.addObjectsFromArray(scrollViewConstraintH)
+        //scrollViewConstraints.addObjectsFromArray(scrollViewConstraintH)
         
         //ウインドウに対するスクロールビューの制約の追加
-        aWindow.contentView.addConstraints(scrollViewConstraints as [AnyObject])
+        aWindow.contentView!.addConstraints(scrollViewConstraintH)
+        //aWindow.contentView!.addConstraints(scrollViewConstraints as [AnyObject])
         
         
         //ウインドウの表示
@@ -942,7 +1013,7 @@ class ViewController: NSViewController {
     //引き伸ばし設定のみ実装、他のオプション未設定
     @IBAction func function039(sender: AnyObject) {
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -953,11 +1024,11 @@ class ViewController: NSViewController {
                 //選択したファイルを
                 let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
                 let theURL : NSURL =  openPanel.URL!
-                let filepath : NSString = theURL.path!
-                var theError : NSError
+                //let filepath : NSString = theURL.path!
+                //var theError : NSError
                 
                 
-                let num : NSNumber = NSNumber(unsignedLong:NSImageScaling.ImageScaleAxesIndependently.rawValue)
+                let num : NSNumber = NSNumber(unsignedLong:NSImageScaling.ScaleAxesIndependently.rawValue)
                 
                 //let num : NSNumber = NSNumber(unsignedLong:NSImageScaling.ImageScaleProportionallyUpOrDown.rawValue)
                 
@@ -966,11 +1037,13 @@ class ViewController: NSViewController {
                 //let num : NSNumber = NSNumber(unsignedLong:NSImageScaling.ImageScaleNone.rawValue)
                 
                 
-                let dic : [ NSObject : AnyObject] = ["NSWorkspaceDesktopImageScalingKey" : num ]
-                theWorkspace.setDesktopImageURL(theURL,
-                    forScreen: NSScreen.mainScreen()!,
-                    options: dic,
-                    error: nil )
+                let dic : [ String : AnyObject] = ["NSWorkspaceDesktopImageScalingKey" : num ]
+                do {
+                    try theWorkspace.setDesktopImageURL(theURL,
+                        forScreen: NSScreen.mainScreen()!,
+                        options: dic)
+                } catch _ {
+                }
 
             }//if result
         }//openPanel.beginWithCompletionHandler
@@ -980,7 +1053,7 @@ class ViewController: NSViewController {
     //値が返ってきませんね
     @IBAction func function040(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
-        var theDic : [ NSObject : AnyObject]? =
+        let theDic : [ NSObject : AnyObject]? =
         theWorkspace.desktopImageOptionsForScreen(NSScreen.mainScreen()!)
         if (theDic != nil) {
             let theKeys: Array = Array(theDic!.keys)
@@ -1002,7 +1075,7 @@ class ViewController: NSViewController {
     //NSWorkspace fileLabelColors
     @IBAction func function042(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
-        var theLabels : [AnyObject] =
+        let theLabels : [AnyObject] =
         theWorkspace.fileLabelColors
         
         for colorObj in theLabels {
@@ -1012,7 +1085,7 @@ class ViewController: NSViewController {
     //NSWorkspace fileLabels
     @IBAction func function043(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
-        var theLabels : [AnyObject] =
+        let theLabels : [AnyObject] =
         theWorkspace.fileLabels
         
         for theObj in theLabels {
@@ -1022,7 +1095,7 @@ class ViewController: NSViewController {
     //NSWorkspace noteFileSystemChanged
     @IBAction func function044(sender: AnyObject) {
         //ファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -1042,7 +1115,7 @@ class ViewController: NSViewController {
     //NSWorkspace extendPowerOffBy
     @IBAction func function045(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
-        var miliseconds : Int =
+        let miliseconds : Int =
         theWorkspace.extendPowerOffBy(2000)
         
             NSLog("time = %d",miliseconds)
@@ -1073,12 +1146,12 @@ class ViewController: NSViewController {
     //テスト中　動くのは009
     @IBAction func function047(sender: AnyObject) {
         let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
-        var anError: NSError?
-        let andPrint = NSWorkspaceLaunchOptions.AndPrint.rawValue
-        let mask = Int( andPrint ) // cast from UInt
+        //var anError: NSError?
+        //let andPrint = NSWorkspaceLaunchOptions.AndPrint.rawValue
+        //let mask = Int( andPrint ) // cast from UInt
         
-        let theURL : NSURL = NSURL(fileURLWithPath: "/Applications/iTunes.app")!
-        let theOption : NSNumber = NSNumber(integer: 0)
+        let theURL : NSURL = NSURL(fileURLWithPath: "/Applications/iTunes.app")
+        //let theOption : NSNumber = NSNumber(integer: 0)
         //32ビットモードで起動
         let theArc : NSNumber = NSNumber(integer: NSBundleExecutableArchitectureI386)
         //64ビットモードで起動
@@ -1094,15 +1167,14 @@ class ViewController: NSViewController {
         var theConfig: Dictionary<String,AnyObject> = [NSWorkspaceLaunchConfigurationArchitecture: theArc]
         //追加　環境変数
         theConfig[NSWorkspaceLaunchConfigurationEnvironment] = env
+        let runningApp = try! theWorkspace.launchApplicationAtURL(theURL, options: NSWorkspaceLaunchOptions.Async, configuration: theConfig)
         
-        if (theWorkspace.launchApplicationAtURL(theURL,
-            options: NSWorkspaceLaunchOptions.Async,
-            configuration: theConfig as [NSObject : AnyObject],
-            error: &anError) != nil){
-                NSLog("YES")
+        if runningApp.active {
+            NSLog("OK")
         }else{
             NSLog("NO")
         }
+        
     }
 
     
@@ -1203,7 +1275,7 @@ class ViewController: NSViewController {
         NSLog("runningApp = %@",runningApp.launchDate!.description)
         // ->runningApp = 2015-04-29 09:18:27 +0000
         
-        let exitStatus : NSNumber = (notify.userInfo! as Dictionary)["NSWorkspaceExitStatusKey"]! as! NSNumber
+        //let exitStatus : NSNumber = (notify.userInfo! as Dictionary)["NSWorkspaceExitStatusKey"]! as! NSNumber
         NSLog("exit status = %d",appProcessSerialNumberHigh.integerValue)
         // ->exit status = = 0
         
@@ -1534,16 +1606,16 @@ class ViewController: NSViewController {
         }
     }
     @IBAction func function055(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false , screen: NSScreen.mainScreen())
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false , screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
 
         theLabel055.stringValue = "通知欄"
         theLabel055.bordered = false
         theLabel055.canBecomeKeyView
         
-        aWindow.contentView.addSubview(theLabel055)
+        aWindow.contentView!.addSubview(theLabel055)
         
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
@@ -1600,16 +1672,16 @@ class ViewController: NSViewController {
         }
     }
     @IBAction func function056(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false , screen: NSScreen.mainScreen())
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false , screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         theLabel056.stringValue = "通知欄"
         theLabel056.bordered = false
         theLabel056.canBecomeKeyView
         
-        aWindow.contentView.addSubview(theLabel056)
+        aWindow.contentView!.addSubview(theLabel056)
         
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示

@@ -27,12 +27,12 @@ class TableData066: NSObject , NSApplicationDelegate , NSTableViewDelegate,NSTab
     
     func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject?
     {
-        var newString: (AnyObject?) = getDataArray().objectAtIndex(row).objectForKey(tableColumn!.identifier)
+        let newString: (AnyObject?) = getDataArray().objectAtIndex(row).objectForKey(tableColumn!.identifier)
         return newString
     }
     
     func getDataArray () -> NSArray{
-        var dataArray:[NSDictionary] = [["col1": "和蘭陀", "col2": "おらんだ"],
+        let dataArray:[NSDictionary] = [["col1": "和蘭陀", "col2": "おらんだ"],
             ["col1": "西班牙", "col2": "すぺいん"],
             ["col1": "亜米利加", "col2": "あめりか"],
             ["col1": "独逸", "col2": "どいつ"],

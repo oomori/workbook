@@ -19,12 +19,12 @@ class MyWindow068: NSWindow {
             var count : NSInteger = 0
 
 
-            self.contentView.getRectsExposedDuringLiveResize( &rects[0] , count: &count)
+            self.contentView!.getRectsExposedDuringLiveResize( &rects[0] , count: &count)
             
 
             NSLog("%d",count)
             while (count-- > 0){
-                self.contentView.setNeedsDisplayInRect(rects[count])
+                self.contentView!.setNeedsDisplayInRect(rects[count])
                 NSLog("(%.2f,%.2f-%.2f,%.2f)",Float(rects[count].origin.x),
                     Float(rects[count].origin.y),
                     Float(rects[count].size.width),

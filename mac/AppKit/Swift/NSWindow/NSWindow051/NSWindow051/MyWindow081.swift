@@ -14,11 +14,11 @@ import Cocoa
 class MyWindow081: NSWindow {
     override func resignKeyWindow() {
         super.resignKeyWindow()
-        NSLog("resignKeyWindow %@",self.title!)
+        NSLog("resignKeyWindow %@",self.title)
     }
     
     override func becomeKeyWindow() {
         super.becomeKeyWindow()
-        NSLog("becomeKeyWindow %@",self.title!)
+        NSLog("becomeKeyWindow %@",self.title)
     }
 }
