@@ -15,7 +15,7 @@ class MyWindow068: NSWindow {
         super.setFrame(frameRect, display: flag )
         if (self.inLiveResize){
  
-            var rects : NSRectArray = UnsafeMutablePointer<NSRect>.alloc(5)
+            let rects : NSRectArray = UnsafeMutablePointer<NSRect>.alloc(5)
             var count : NSInteger = 0
 
 
@@ -33,7 +33,8 @@ class MyWindow068: NSWindow {
 
             
         }else{
-            self.contentView.setNeedsDisplay()
+            self.contentView?.needsDisplay = true
+            //self.contentView.setNeedsDisplay()
         }
         
     }

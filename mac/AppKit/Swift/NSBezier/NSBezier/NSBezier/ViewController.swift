@@ -5,6 +5,7 @@
 //  Created by air on 2015/03/01.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
+//  convert Swift 1.1 -> 2.0 2015/10/21
 
 import Cocoa
 
@@ -24,9 +25,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction001(sender : AnyObject?){
         //準備
-        let aButton = aButton001
+        //let aButton = aButton001
         let aView   = aView001
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -58,31 +59,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function001(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction001:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton001 = theButton    //ボタン
@@ -97,9 +98,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction002(sender : AnyObject?){
         //準備
-        let aButton = aButton002
+        //let aButton = aButton002
         let aView   = aView002
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -124,31 +125,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function002(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction002:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton002 = theButton    //ボタン
@@ -162,9 +163,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction003(sender : AnyObject?){
         //準備
-        let aButton = aButton003
+        //let aButton = aButton003
         let aView   = aView003
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -188,31 +189,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function003(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction003:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton003 = theButton    //ボタン
@@ -226,9 +227,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction004(sender : AnyObject?){
         //準備
-        let aButton = aButton004
+        //let aButton = aButton004
         let aView   = aView004
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -254,31 +255,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function004(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction004:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton004 = theButton    //ボタン
@@ -295,9 +296,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction005(sender : AnyObject?){
         //準備
-        let aButton = aButton005
+        //let aButton = aButton005
         let aView   = aView005
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -334,31 +335,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function005(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction005:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton005 = theButton    //ボタン
@@ -372,9 +373,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction006(sender : AnyObject?){
         //準備
-        let aButton = aButton006
+        //let aButton = aButton006
         let aView   = aView006
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -415,31 +416,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function006(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction006:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton006 = theButton    //ボタン
@@ -453,9 +454,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction007(sender : AnyObject?){
         //準備
-        let aButton = aButton007
+        //let aButton = aButton007
         let aView   = aView007
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -495,31 +496,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function007(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction007:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton007 = theButton    //ボタン
@@ -533,9 +534,9 @@ class ViewController: NSViewController {
     //実験用ウインドウのボタンを押した時に実行されるところ
     func viewAction008(sender : AnyObject?){
         //準備
-        let aButton = aButton008
+        //let aButton = aButton008
         let aView   = aView008
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -562,31 +563,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function008(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction008:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton008 = theButton    //ボタン
@@ -601,9 +602,9 @@ class ViewController: NSViewController {
     //実験用ウインドウのボタンを押した時に実行されるところ
     func viewAction009(sender : AnyObject?){
         //準備
-        let aButton = aButton009
+        //let aButton = aButton009
         let aView   = aView009
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -635,31 +636,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function009(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction009:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton009 = theButton    //ボタン
@@ -674,9 +675,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction010(sender : AnyObject?){
         //準備
-        let aButton = aButton010
+        //let aButton = aButton010
         let aView   = aView010
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -713,31 +714,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function010(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction010:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton010 = theButton    //ボタン
@@ -749,17 +750,17 @@ class ViewController: NSViewController {
     var aButton011 : NSButton?
     var aView011 : NSView?
     func blankof<T>(type:T.Type) -> T {
-        var ptr = UnsafeMutablePointer<T>.alloc(sizeof(T))
-        var val = ptr.memory
+        let ptr = UnsafeMutablePointer<T>.alloc(sizeof(T))
+        let val = ptr.memory
         ptr.destroy()
         return val
     }
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction011(sender : AnyObject?){
         //準備
-        let aButton = aButton011
+        //let aButton = aButton011
         let aView   = aView011
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -794,31 +795,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function011(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction011:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton011 = theButton    //ボタン
@@ -832,9 +833,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction012(sender : AnyObject?){
         //準備
-        let aButton = aButton012
+        //let aButton = aButton012
         let aView   = aView012
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -869,31 +870,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function012(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction012:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton012 = theButton    //ボタン
@@ -908,9 +909,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction013(sender : AnyObject?){
         //準備
-        let aButton = aButton013
+        //let aButton = aButton013
         let aView   = aView013
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -947,31 +948,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function013(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction013:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton013 = theButton    //ボタン
@@ -986,9 +987,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction014(sender : AnyObject?){
         //準備
-        let aButton = aButton014
+        //let aButton = aButton014
         let aView   = aView014
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1017,31 +1018,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function014(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction014:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton014 = theButton    //ボタン
@@ -1056,9 +1057,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction015(sender : AnyObject?){
         //準備
-        let aButton = aButton015
+        //let aButton = aButton015
         let aView   = aView015
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1088,31 +1089,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function015(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction015:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton015 = theButton    //ボタン
@@ -1126,9 +1127,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction016(sender : AnyObject?){
         //準備
-        let aButton = aButton016
+        //let aButton = aButton016
         let aView   = aView016
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1159,31 +1160,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function016(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction016:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton016 = theButton    //ボタン
@@ -1197,9 +1198,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction017(sender : AnyObject?){
         //準備
-        let aButton = aButton017
+        //let aButton = aButton017
         let aView   = aView017
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1228,31 +1229,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function017(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction017:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton017 = theButton    //ボタン
@@ -1267,9 +1268,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction018(sender : AnyObject?){
         //準備
-        let aButton = aButton018
+        //let aButton = aButton018
         let aView   = aView018
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1282,17 +1283,17 @@ class ViewController: NSViewController {
         NSColor.redColor().setStroke()
         NSColor.magentaColor().setFill()
 
-        var my_s_pointer :UnsafeMutablePointer<NSGlyph> = UnsafeMutablePointer<NSGlyph>.alloc(1)
-        var val = my_s_pointer.memory
+        let my_s_pointer :UnsafeMutablePointer<NSGlyph> = UnsafeMutablePointer<NSGlyph>.alloc(1)
+        //var val = my_s_pointer.memory
         //var val : NSGlyph = NSGlyph(4546)
-        let myFont : NSFont = NSFont(name: "HiraMaruPro-W4", size: 69.0)!
+        //let myFont : NSFont = NSFont(name: "HiraMaruPro-W4", size: 69.0)!
 
         //空のベジェパスを作成
         let aBezier : NSBezierPath = NSBezierPath()
         //var aGlyphs : [NSGlyph] = [myFont.glyphWithName("gid1800"),myFont.glyphWithName("gid1801")]
         //var aGlyph : NSGlyph = myFont.glyphWithName("gid1800")
-        var aGlyph : UnsafeMutablePointer<NSGlyph> = UnsafeMutablePointer<NSGlyph>.alloc(4*1+1) // allocate
-        var packedGlyphs : CChar
+        //var aGlyph : UnsafeMutablePointer<NSGlyph> = UnsafeMutablePointer<NSGlyph>.alloc(4*1+1) // allocate
+        //var packedGlyphs : CChar
 //        let ret : Int = NSConvertGlyphsToPackedGlyphs(glBuf: &aGlyph,
 //            count: Int(1),
 //            packing:Int(1) , //.NSNativeShortGlyphPacking
@@ -1315,31 +1316,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function018(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction018:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton018 = theButton    //ボタン
@@ -1353,9 +1354,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction019(sender : AnyObject?){
         //準備
-        let aButton = aButton019
+        //let aButton = aButton019
         let aView   = aView019
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1389,31 +1390,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function019(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction019:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton019 = theButton    //ボタン
@@ -1428,9 +1429,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction020(sender : AnyObject?){
         //準備
-        let aButton = aButton020
+        //let aButton = aButton020
         let aView   = aView020
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1467,31 +1468,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function020(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction020:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton020 = theButton    //ボタン
@@ -1507,9 +1508,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction021(sender : AnyObject?){
         //準備
-        let aButton = aButton021
+        //let aButton = aButton021
         let aView   = aView021
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1540,8 +1541,8 @@ class ViewController: NSViewController {
             NSLog("defaultWindingRule EvenOdd")
         case .NonZeroWindingRule:
             NSLog("defaultWindingRule Non Zero")
-        default:
-            NSLog("default")
+        //default:
+          //  NSLog("default")
         }
         //->defaultWindingRule Non Zero
 
@@ -1551,8 +1552,8 @@ class ViewController: NSViewController {
             NSLog("defaultWindingRule EvenOdd")
         case .NonZeroWindingRule:
             NSLog("defaultWindingRule Non Zero")
-        default:
-            NSLog("default")
+        //default:
+          //  NSLog("default")
         }
         //->defaultWindingRule EvenOdd
         
@@ -1562,31 +1563,31 @@ class ViewController: NSViewController {
         //NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function021(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction021:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton021 = theButton    //ボタン
@@ -1600,9 +1601,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction022(sender : AnyObject?){
         //準備
-        let aButton = aButton022
+        //let aButton = aButton022
         let aView   = aView022
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1640,8 +1641,8 @@ class ViewController: NSViewController {
             NSLog("windingRule EvenOdd")
         case .NonZeroWindingRule:
             NSLog("windingRule Non Zero")
-        default:
-            NSLog("default")
+        //default:
+          //  NSLog("default")
         }
         
         aBezier.fill()
@@ -1652,31 +1653,31 @@ class ViewController: NSViewController {
         //NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function022(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction022:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton022 = theButton    //ボタン
@@ -1690,9 +1691,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction023(sender : AnyObject?){
         //準備
-        let aButton = aButton023
+        //let aButton = aButton023
         let aView   = aView023
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1728,31 +1729,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function023(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction023:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton023 = theButton    //ボタン
@@ -1767,9 +1768,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction024(sender : AnyObject?){
         //準備
-        let aButton = aButton024
+        //let aButton = aButton024
         let aView   = aView024
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1805,31 +1806,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function024(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction024:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton024 = theButton    //ボタン
@@ -1843,9 +1844,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction025(sender : AnyObject?){
         //準備
-        let aButton = aButton025
+        //let aButton = aButton025
         let aView   = aView025
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1890,39 +1891,39 @@ class ViewController: NSViewController {
             NSLog("RoundLineCapStyle")
         case .SquareLineCapStyle:
             NSLog("SquareLineCapStyle")
-        default:
-            NSLog("default")
+        //default:
+          //  NSLog("default")
         }
         
         NSLog("!!! %@",aBezier.description)
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function025(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction025:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton025 = theButton    //ボタン
@@ -1936,9 +1937,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction026(sender : AnyObject?){
         //準備
-        let aButton = aButton026
+        //let aButton = aButton026
         let aView   = aView026
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -1986,39 +1987,39 @@ class ViewController: NSViewController {
             NSLog("RoundLineJoinStyle")
         case .BevelLineJoinStyle:
             NSLog("BevelLineJoinStyle")
-        default:
-            NSLog("default")
+        //default:
+          //  NSLog("default")
         }
         
         NSLog("!!! %@",aBezier.description)
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function026(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction026:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton026 = theButton    //ボタン
@@ -2032,9 +2033,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction027(sender : AnyObject?){
         //準備
-        let aButton = aButton027
+        //let aButton = aButton027
         let aView   = aView027
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -2077,38 +2078,38 @@ class ViewController: NSViewController {
             NSLog("RoundLineJoinStyle")
         case .BevelLineJoinStyle:
             NSLog("BevelLineJoinStyle")
-        default:
-            NSLog("default")
+        //default:
+          //  NSLog("default")
         }
         
         //NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function027(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction027:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton027 = theButton    //ボタン
@@ -2124,9 +2125,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction028(sender : AnyObject?){
         //準備
-        let aButton = aButton028
+        //let aButton = aButton028
         let aView   = aView028
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -2163,31 +2164,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function028(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction028:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton028 = theButton    //ボタン
@@ -2203,31 +2204,31 @@ class ViewController: NSViewController {
         NSLog("!!!")
     }
     @IBAction func function029(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction029:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : TestView029 = TestView029(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
+        let theView : TestView029 = TestView029(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton029 = theButton    //ボタン
@@ -2244,9 +2245,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction030(sender : AnyObject?){
         //準備
-        let aButton = aButton030
+        //let aButton = aButton030
         let aView   = aView030
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -2281,31 +2282,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function030(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction030:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton030 = theButton    //ボタン
@@ -2319,9 +2320,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction031(sender : AnyObject?){
         //準備
-        let aButton = aButton031
+        //let aButton = aButton031
         let aView   = aView031
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -2371,8 +2372,8 @@ class ViewController: NSViewController {
         aBezier.getLineDash(&resultLineDashArray, count: &resultCount, phase: &resultPhase)
 // MARK: - FIX　値が入ってこない
         NSLog("Count %d Phase=%.2f %@",resultCount,Float(resultPhase),resultLineDashArray.description)
-        for (index, value) in enumerate(resultLineDashArray) {
-            println("index: \(index), value: \(value)")
+        for (index, value) in resultLineDashArray.enumerate() {
+            print("index: \(index), value: \(value)")
         }
 //        for (var i = 0; i<resultCount; i++){
 //            NSLog("%d LineDash=%.2f",i,resultLineDashArray[1])
@@ -2381,31 +2382,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function031(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction031:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton031 = theButton    //ボタン
@@ -2420,9 +2421,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction032(sender : AnyObject?){
         //準備
-        let aButton = aButton032
+        //let aButton = aButton032
         let aView   = aView032
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -2441,31 +2442,31 @@ class ViewController: NSViewController {
         aView?.unlockFocus()
     }
     @IBAction func function032(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction032:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton032 = theButton    //ボタン
@@ -2479,9 +2480,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction033(sender : AnyObject?){
         //準備
-        let aButton = aButton033
+        //let aButton = aButton033
         let aView   = aView033
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -2501,31 +2502,31 @@ class ViewController: NSViewController {
         aView?.unlockFocus()
     }
     @IBAction func function033(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction033:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton033 = theButton    //ボタン
@@ -2539,9 +2540,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction034(sender : AnyObject?){
         //準備
-        let aButton = aButton034
+        //let aButton = aButton034
         let aView   = aView034
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -2574,31 +2575,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function034(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction034:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton034 = theButton    //ボタン
@@ -2614,31 +2615,31 @@ class ViewController: NSViewController {
         NSLog("!!!")
     }
     @IBAction func function035(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction035:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : TestView035 = TestView035(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
+        let theView : TestView035 = TestView035(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton035 = theButton    //ボタン
@@ -2654,9 +2655,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction036(sender : AnyObject?){
         //準備
-        let aButton = aButton036
+        //let aButton = aButton036
         let aView   = aView036
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -2686,31 +2687,31 @@ class ViewController: NSViewController {
         NSLog("!!! %@",aBezier.description)
     }
     @IBAction func function036(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction036:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton036 = theButton    //ボタン
@@ -2726,31 +2727,31 @@ class ViewController: NSViewController {
         NSLog("!!!")
     }
     @IBAction func function037(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction035:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : TestView037 = TestView037(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
+        let theView : TestView037 = TestView037(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton037 = theButton    //ボタン
@@ -2766,31 +2767,31 @@ class ViewController: NSViewController {
         NSLog("!!!")
     }
     @IBAction func function038(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction038:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : TestView038 = TestView038(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
+        let theView : TestView038 = TestView038(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton038 = theButton    //ボタン
@@ -2810,9 +2811,9 @@ class ViewController: NSViewController {
     }
     func viewAction040(sender : AnyObject?){
         //準備
-        let aButton = aButton040
+        //let aButton = aButton040
         let aView   = aView040
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -2845,31 +2846,31 @@ class ViewController: NSViewController {
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
 
     @IBAction func function040(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction040:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : TestView040 = TestView040(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
+        let theView : TestView040 = TestView040(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton040 = theButton    //ボタン
@@ -2885,14 +2886,14 @@ class ViewController: NSViewController {
     var aButton041 : NSButton?
     var aView041 : NSView?
     @IBAction func function041(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -2906,11 +2907,11 @@ class ViewController: NSViewController {
         
 //       aWindow.contentView.addSubview(theButton)
         //ビュー
-        var theView : TestView041 = TestView041(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
+        let theView : TestView041 = TestView041(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
         theView.layer?.delegate = theView
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
 //        self.aButton041 = theButton    //ボタン
@@ -2927,9 +2928,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction042(sender : AnyObject?){
         //準備
-        let aButton = aButton042
+        //let aButton = aButton042
         let aView   = aView042
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         //ビューにフォーカスを当てる
@@ -2952,7 +2953,7 @@ class ViewController: NSViewController {
             controlPoint2: CGPoint(x: 276.83,y: 95.98))
         aBezier.closePath()
         
-        var affine : NSAffineTransform = NSAffineTransform()
+        let affine : NSAffineTransform = NSAffineTransform()
         affine.scaleXBy(1.0, yBy: 0.5)
         aBezier.transformUsingAffineTransform(affine)
 
@@ -2967,31 +2968,31 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function042(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction042:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 20.0, 300.0, 100.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton042 = theButton    //ボタン

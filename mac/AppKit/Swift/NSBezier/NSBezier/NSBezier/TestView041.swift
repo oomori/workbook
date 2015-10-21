@@ -15,11 +15,11 @@ class TestView041: NSView {
     var mouselocation : NSPoint = NSZeroPoint
     
     //描画
-    override func drawLayer(layer: CALayer!, inContext ctx: CGContext!) {
+    override func drawLayer(layer: CALayer, inContext ctx: CGContext) {
         
         
         CGContextSetRGBFillColor(ctx, 0.5, 0.0, 0.0, 1.0)
-        var rect = CGRectInset(self.bounds, 40, 40)
+        let rect = CGRectInset(self.bounds, 40, 40)
         let endAngle:CGFloat =  CGFloat(2.0 * M_PI)
         CGContextFillRect(ctx, rect)
 
@@ -58,7 +58,7 @@ class TestView041: NSView {
             //マウスダウンして以降、左マウスアップするまでのイベントを取得
             newEvent = anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as! NSDate),
+                untilDate:(NSDate.distantPast() ),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true)
             

@@ -5,6 +5,8 @@
 //  Created by air on 2015/03/07.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
+//
+//  convert Swift 1.1 -> 2.0 2015/10/21
 
 import Cocoa
 
@@ -39,7 +41,7 @@ class TestView038: NSView {
         
         
         //説明 bounds
-        var boundsPathBounds : NSRect = aBezier.bounds
+        let boundsPathBounds : NSRect = aBezier.bounds
         NSColor.blueColor().setStroke()
         let bBezier : NSBezierPath = NSBezierPath()
         NSBezierPath.strokeRect(boundsPathBounds)
@@ -47,17 +49,17 @@ class TestView038: NSView {
         bBezier.stroke()
         
         //説明 controlPointBounds
-        var controlPointBounds : NSRect = aBezier.controlPointBounds
+        let controlPointBounds : NSRect = aBezier.controlPointBounds
         NSColor.greenColor().setStroke()
         let cBezier : NSBezierPath = NSBezierPath()
         NSBezierPath.strokeRect(controlPointBounds)
         cBezier.lineWidth = 2.0
         cBezier.stroke()
 
-        var elementCount : Int = aBezier.elementCount
+        let elementCount : Int = aBezier.elementCount
         for (var i = 1 ; i < elementCount ; i++){
             var elementPoint : [NSPoint] = [NSMakePoint(0.0,0.0),NSMakePoint(0.0,0.0),NSMakePoint(0.0,0.0)]
-            var element : NSBezierPathElement = aBezier.elementAtIndex(i , associatedPoints: &elementPoint)
+            let element : NSBezierPathElement = aBezier.elementAtIndex(i , associatedPoints: &elementPoint)
             let aPoint0 : NSPoint = elementPoint[0]  //動かしている点のコントロールポイント2
             let aPoint1 : NSPoint = elementPoint[1]  //動かしている点のコントロールポイント1
             let aPoint2 : NSPoint = elementPoint[2]  //動かしている点のアンカーポイント
@@ -91,8 +93,8 @@ class TestView038: NSView {
                 
             case .ClosePathBezierPathElement:
                 NSLog("ClosePathBezierPathElement")
-            default:
-                NSLog("default")
+            //default:
+              //  NSLog("default")
             }
             
             
@@ -126,7 +128,7 @@ class TestView038: NSView {
             //マウスダウンして以降、左マウスアップするまでのイベントを取得
             newEvent = anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as! NSDate),
+                untilDate:(NSDate.distantPast() ),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true)
             

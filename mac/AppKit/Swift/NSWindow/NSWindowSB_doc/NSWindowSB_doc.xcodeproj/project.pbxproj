@@ -156,7 +156,9 @@
 		452EEC241A93826000A767F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = oomori;
 				TargetAttributes = {
 					452EEC2B1A93826000A767F9 = {
@@ -267,6 +269,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -331,6 +334,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = NSWindowSB_doc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.workshop.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -342,6 +346,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = NSWindowSB_doc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.workshop.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -361,6 +366,7 @@
 				);
 				INFOPLIST_FILE = NSWindowSB_docTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.workshop.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSWindowSB_doc.app/Contents/MacOS/NSWindowSB_doc";
 			};
@@ -377,6 +383,7 @@
 				);
 				INFOPLIST_FILE = NSWindowSB_docTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.workshop.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSWindowSB_doc.app/Contents/MacOS/NSWindowSB_doc";
 			};
@@ -401,6 +408,7 @@
 				452EEC4C1A93826000A767F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		452EEC4D1A93826000A767F9 /* Build configuration list for PBXNativeTarget "NSWindowSB_docTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +417,7 @@
 				452EEC4F1A93826000A767F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

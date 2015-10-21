@@ -40,9 +40,9 @@ class TestView029: NSView {
         NSLog("miterLimit %f",Float(aBezier.miterLimit))
         //説明用
         //角度　上が0°
-        var radian = atan2(Double(mouselocation.x - 80.0 ),
+        let radian = atan2(Double(mouselocation.x - 80.0 ),
             Double(mouselocation.y - 40.0 ))
-        var teihen = ((Double(20.0)) / Double(tan( Double(radian -  3.14159265359/2) )))
+        let teihen = ((Double(20.0)) / Double(tan( Double(radian -  3.14159265359/2) )))
         NSLog("!!! %f,%f",radian * 180 / 3.14159265359,teihen)
         //NSLog("!!! %f,%f",radian,teihen)
         
@@ -87,7 +87,7 @@ class TestView029: NSView {
             //マウスダウンして以降、左マウスアップするまでのイベントを取得
             newEvent = anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as! NSDate),
+                untilDate:(NSDate.distantPast() ),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true)
             
