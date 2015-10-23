@@ -5,7 +5,7 @@
 //  Created by air on 2015/03/21.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
-
+//Swift2.0
 import Cocoa
 
 class ViewController: NSViewController {
@@ -14,7 +14,7 @@ class ViewController: NSViewController {
     //NSOpenPanel
     @IBAction func function001(sender: AnyObject) {
         //複製するファイルを選択
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -25,12 +25,12 @@ class ViewController: NSViewController {
                 //選択したファイルを複製
                 let theWorkspace : NSWorkspace = NSWorkspace.sharedWorkspace()
                 theWorkspace.duplicateURLs(openPanel.URLs, completionHandler: {
-                    (dic : [ NSObject : AnyObject]!, err) in
+                    (dic : [ NSURL : NSURL], err) in
                     NSLog("%@", (dic as Dictionary).description)
                     //let values: Array = Array(dic.keys)
                     let values: Array = Array(dic.values)
-                    for (index, value) in enumerate(values) {
-                        println("index: \(index), value: \(value)")
+                    for (index, value) in values.enumerate() {
+                        print("index: \(index), value: \(value)")
                     }
                 })
             }//if result

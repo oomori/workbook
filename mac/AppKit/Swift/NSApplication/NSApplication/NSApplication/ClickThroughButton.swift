@@ -27,20 +27,20 @@ class ClickThroughButton: NSButton {
             anApplication.preventWindowOrdering()
             
             self.highlight(true )
-            let theDate:NSDate = NSDate.distantFuture() as! NSDate
+            //let theDate:NSDate = NSDate.distantFuture()
             let maskUp = NSEventMask.LeftMouseUpMask.rawValue
             let mask = Int( maskUp  ) // cast from UInt
         
-        var mouseUpEvent = (anApplication.nextEventMatchingMask(
+        let mouseUpEvent = (anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as! NSDate),
+                untilDate:(NSDate.distantPast() ),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true))as NSEvent?
         
         if(mouseUpEvent != nil){
-        var aPoint :NSPoint = mouseUpEvent!.locationInWindow //NSMakePoint(10.0, 10.0)
-        var mouseLocation : NSPoint = self.convertPoint(aPoint, fromView: self)
-        var mouseUpInside = self.mouse(mouseLocation, inRect: self.bounds)
+        //let aPoint :NSPoint = mouseUpEvent!.locationInWindow //NSMakePoint(10.0, 10.0)
+        //let mouseLocation : NSPoint = self.convertPoint(aPoint, fromView: self)
+        //var mouseUpInside = self.mouse(mouseLocation, inRect: self.bounds)
         }
         
         self.highlight(false  )

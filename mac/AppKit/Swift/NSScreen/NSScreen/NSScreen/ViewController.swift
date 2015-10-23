@@ -5,6 +5,7 @@
 //  Created by air on 2015/04/06.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
+//Swift2.0
 
 import Cocoa
 
@@ -97,14 +98,14 @@ class ViewController: NSViewController {
 
         
         
-        var window : NSWindow
+        let window : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: theScreen )
         windowArray.addObject(window) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         window.center()//ウインドウをスクリーンの中心に
@@ -114,7 +115,7 @@ class ViewController: NSViewController {
     }
     
     //NSScreen
-    //Swift1.2
+    //Swift2.0
     //作成中
     func calc002(sender:AnyObject){
         NSLog("!!!")
@@ -124,32 +125,32 @@ class ViewController: NSViewController {
     }
 
     @IBAction func function002(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen()! )
         
         //text field
         let textFieldTopInput : NSTextField = NSTextField(frame: NSMakeRect(50.0, 100.0, 50.0, 30.0))
         textFieldTopInput.action = Selector("calc002:")
-        aWindow.contentView.addSubview(textFieldTopInput)
+        aWindow.contentView!.addSubview(textFieldTopInput)
         
         let textFieldLeftInput : NSTextField = NSTextField(frame: NSMakeRect(0.0, 50.0, 50.0, 30.0))
         textFieldLeftInput.action = Selector("calc002:")
-        aWindow.contentView.addSubview(textFieldLeftInput)
+        aWindow.contentView!.addSubview(textFieldLeftInput)
         
         let textFieldRightInput : NSTextField = NSTextField(frame: NSMakeRect(100.0, 50.0, 50.0, 30.0))
         textFieldRightInput.action = Selector("calc002:")
-        aWindow.contentView.addSubview(textFieldRightInput)
+        aWindow.contentView!.addSubview(textFieldRightInput)
         
         let textFieldBottomInput : NSTextField = NSTextField(frame: NSMakeRect(50.0, 0.0, 50.0, 30.0))
         textFieldBottomInput.action = Selector("calc002:")
-        aWindow.contentView.addSubview(textFieldBottomInput)
+        aWindow.contentView!.addSubview(textFieldBottomInput)
         
         //popup top
         let popupButtonTop : NSPopUpButton = NSPopUpButton(frame: NSMakeRect(0.0, 0.0, 100.0, 30.0), pullsDown: true)
@@ -160,7 +161,7 @@ class ViewController: NSViewController {
         popupMenuTop.addItem(popupMenuTopItem2)
         popupButtonTop.menu = popupMenuTop
         popupMenuTopItem1.target = self
-        aWindow.contentView.addSubview(popupButtonTop)
+        aWindow.contentView!.addSubview(popupButtonTop)
         
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
@@ -186,8 +187,7 @@ class ViewController: NSViewController {
         //それぞれ設定
         let aligneRect002 : NSRect = theScreen.backingAlignedRect(
             NSMakeRect(0.3, 0.0, 100.3, 123.5),
-            options: NSAlignmentOptions.AlignMinXInward | .AlignMinYNearest |
-                .AlignMaxXInward | .AlignMaxYNearest )
+            options: [NSAlignmentOptions.AlignMinXInward, .AlignMinYNearest, .AlignMaxXInward, .AlignMaxYNearest] )
         
         NSLog("aligneRect002 = (x=%.1f,y=%.1f,w=%.1f,h=%.1f)",
             Float(aligneRect002.origin.x),
@@ -205,8 +205,7 @@ class ViewController: NSViewController {
         //Flip?
         let aligneRect003 : NSRect = theScreen.backingAlignedRect(
             NSMakeRect(0.3, 0.0, 100.3, 123.5),
-            options: NSAlignmentOptions.AlignRectFlipped | .AlignMinXInward | .AlignMinYNearest |
-                .AlignMaxXInward | .AlignMaxYNearest  )
+            options: [NSAlignmentOptions.AlignRectFlipped, .AlignMinXInward, .AlignMinYNearest, .AlignMaxXInward, .AlignMaxYNearest]  )
         
         NSLog("aligneRect003 = (x=%.1f,y=%.1f,w=%.1f,h=%.1f)",
             Float(aligneRect003.origin.x),
@@ -219,8 +218,7 @@ class ViewController: NSViewController {
         //
         let aligneRect004 : NSRect = theScreen.backingAlignedRect(
             NSMakeRect(0.3, 0.0, 100.3, 123.5),
-            options: NSAlignmentOptions.AlignMinXInward | .AlignMinYNearest |
-                .AlignMaxXInward | .AlignMaxYNearest  )
+            options: [NSAlignmentOptions.AlignMinXInward, .AlignMinYNearest, .AlignMaxXInward, .AlignMaxYNearest]  )
         
         NSLog("aligneRect004 = (x=%.1f,y=%.1f,w=%.1f,h=%.1f)",
             Float(aligneRect004.origin.x),

@@ -16,10 +16,10 @@ class ToolbarDelegate001: NSObject,NSToolbarDelegate {
     
     //NSToolbarDelegate にはこの3つのメソッドが必要
     var toolBarArray : [String] = ["toolBarItem1",NSToolbarSeparatorItemIdentifier,"SearchDocToolbarItemIdentifier"]
-    func toolbarAllowedItemIdentifiers(toolbar: NSToolbar) -> [AnyObject] {
+    func toolbarAllowedItemIdentifiers(toolbar: NSToolbar) -> [String] {
         return toolBarArray
     }
-    func toolbarDefaultItemIdentifiers(toolbar: NSToolbar) -> [AnyObject] {
+    func toolbarDefaultItemIdentifiers(toolbar: NSToolbar) -> [String] {
         return toolBarArray
     }
     func toolbar(toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: String, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {

@@ -20,19 +20,19 @@ class ViewController: NSViewController {
     @IBOutlet weak var imageView001: NSImageView!
     //NSAnimationContext
     @IBAction func function001(sender: AnyObject) {
-        var newPoint : NSPoint = didMoveView ? NSMakePoint(0.0, 0.0):NSMakePoint(200.0, 0.0)
+        let newPoint : NSPoint = didMoveView ? NSMakePoint(0.0, 0.0):NSMakePoint(200.0, 0.0)
         imageView001.animator().setFrameOrigin(newPoint)
         didMoveView = !didMoveView
     }
     //NSAnimationContext beginGrouping
     //NSAnimationContext endGrouping
     @IBAction func function002(sender: AnyObject) {
-        var appDelegate = NSApplication.sharedApplication().delegate
-        var window : NSWindow = self.view.window!
+        //var appDelegate = NSApplication.sharedApplication().delegate
+        let window : NSWindow = self.view.window!
         
         NSAnimationContext.beginGrouping()
-            var nowPosition : NSPoint = window.frame.origin
-            var newRect : NSRect = didMoveView ?
+            let nowPosition : NSPoint = window.frame.origin
+            let newRect : NSRect = didMoveView ?
                             NSMakeRect(nowPosition.x,nowPosition.y, 500.0, 500.0):
                             NSMakeRect(nowPosition.x,nowPosition.y, 200.0, 200.0)
             window.animator().setFrame(newRect, display: true)
@@ -45,18 +45,18 @@ class ViewController: NSViewController {
     //NSAnimationContext duration
     //NSAnimationContext timingFunction
     @IBAction func function003(sender: AnyObject) {
-        var appDelegate = NSApplication.sharedApplication().delegate
-        var window : NSWindow = self.view.window!
+        //var appDelegate = NSApplication.sharedApplication().delegate
+        let window : NSWindow = self.view.window!
         
         NSAnimationContext.beginGrouping()
-        var nowPosition : NSPoint = window.frame.origin
-        var newRect : NSRect = didMoveView ?
+        let nowPosition : NSPoint = window.frame.origin
+        let newRect : NSRect = didMoveView ?
             NSMakeRect(nowPosition.x,nowPosition.y, 500.0, 500.0):
             NSMakeRect(nowPosition.x,nowPosition.y, 500.0, 200.0)
         window.animator().setFrame(newRect, display: true)
         window.animator().alphaValue = didMoveView ? 1.0 : 0.5
         NSAnimationContext.currentContext().duration = 10.0
-        var timing : CAMediaTimingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        let timing : CAMediaTimingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         NSAnimationContext.currentContext().timingFunction = timing
         NSAnimationContext.currentContext().completionHandler = {NSLog("end!")}
         NSAnimationContext.endGrouping()
@@ -64,11 +64,11 @@ class ViewController: NSViewController {
     }
     //NSAnimationContext runAnimationGroup
     @IBAction func function004(sender: AnyObject) {
-        var appDelegate = NSApplication.sharedApplication().delegate
-        var window : NSWindow = self.view.window!
+        //var appDelegate = NSApplication.sharedApplication().delegate
+        let window : NSWindow = self.view.window!
         
-        var nowPosition : NSPoint = window.frame.origin
-        var newRect : NSRect = didMoveView ?
+        let nowPosition : NSPoint = window.frame.origin
+        let newRect : NSRect = didMoveView ?
             NSMakeRect(nowPosition.x,nowPosition.y, 500.0, 500.0):
             NSMakeRect(nowPosition.x,nowPosition.y, 500.0, 200.0)
         
@@ -84,7 +84,7 @@ class ViewController: NSViewController {
         
         
         
-        var redLeftConstraint : NSLayoutConstraint = NSLayoutConstraint(item: button005!,
+        let redLeftConstraint : NSLayoutConstraint = NSLayoutConstraint(item: button005!,
             attribute: NSLayoutAttribute.Left,
             relatedBy: NSLayoutRelation.Equal,
             toItem: self.button005.superview,

@@ -56,13 +56,13 @@ import Cocoa
 
         //sort descriptorが変更された場合
         func tableView(aTableView: NSTableView,
-            sortDescriptorsDidChange oldDescriptors: [AnyObject]){
+            sortDescriptorsDidChange oldDescriptors: [NSSortDescriptor]){
                 NSLog("sort desc change")
                 
         }
         
         func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
-            var newString: (AnyObject?) = getDataArray().objectAtIndex(row).objectForKey(tableColumn!.identifier)
+            let newString: (AnyObject?) = getDataArray().objectAtIndex(row).objectForKey(tableColumn!.identifier)
             return newString
         }
         

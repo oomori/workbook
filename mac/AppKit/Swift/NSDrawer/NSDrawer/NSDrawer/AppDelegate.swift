@@ -5,7 +5,7 @@
 //  Created by air on 2015/04/05.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
-
+//Swift2.0
 import Cocoa
 
 @NSApplicationMain

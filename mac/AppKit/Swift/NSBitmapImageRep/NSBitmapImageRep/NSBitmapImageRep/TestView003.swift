@@ -100,7 +100,7 @@ class TestView003: NSView {
 //        bBezier.fill()
 //        
         //var g : NSGraphicsContext = NSGraphicsContext(bitmapImageRep: self.theBitmap001)!
-        var g : NSGraphicsContext = NSGraphicsContext.currentContext()!
+        let g : NSGraphicsContext = NSGraphicsContext.currentContext()!
         g.saveGraphicsState()
         NSGraphicsContext.setCurrentContext(g)
         
@@ -150,7 +150,7 @@ class TestView003: NSView {
             //マウスダウンして以降、左マウスアップするまでのイベントを取得
             newEvent = anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as! NSDate),
+                untilDate:(NSDate.distantPast() ),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true)
             

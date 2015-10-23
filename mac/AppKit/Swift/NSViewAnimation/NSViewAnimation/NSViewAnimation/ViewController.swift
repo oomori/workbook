@@ -18,7 +18,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var imageView001: NSImageView!
     //NSAnimationContext
     @IBAction func function001(sender: AnyObject) {
-        var newPoint : NSPoint = didMoveView ? NSMakePoint(0.0, 0.0):NSMakePoint(200.0, 0.0)
+        let newPoint : NSPoint = didMoveView ? NSMakePoint(0.0, 0.0):NSMakePoint(200.0, 0.0)
         imageView001.animator().setFrameOrigin(newPoint)
         didMoveView = !didMoveView
     }

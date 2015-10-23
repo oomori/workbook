@@ -4,14 +4,14 @@
 //
 //  Created by air on 2015/02/11.
 //  Copyright (c) 2015年 oomori. All rights reserved.
-//  Swift 1.2対応
+//  convert Swift 1.1 -> 2.0 2015/10/23
 
 import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
 
-    //Swift 1.2
+    //Swift 2.0
     @IBOutlet weak var window: NSWindow!
     var theAnim001: NSAnimation?
     var theAnim002: NSAnimation?
@@ -35,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         //アニメーション設定
         theAnim001 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
@@ -53,90 +53,72 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
     //アニメーション
     func animation(animation: NSAnimation, didReachProgressMark progress: NSAnimationProgress) {
         
-        if (animation == theAnim001){ //Swift1.2修正
+        if (animation == theAnim001){
             NSLog("theAnim001")
         }
-        if (animation == theAnim002){ //Swift1.2修正
+        if (animation == theAnim002){
             NSLog("theAnim002")
         }
-        if (animation == theAnim003){ //Swift1.2修正
+        if (animation == theAnim003){
             NSLog("theAnim003")
-//            var returnValue : [AnyObject]? = theAnim003.runLoopModesForAnimating　 //Swift1.2修正
-//            if ((returnValue) != nil){
-//                for mode : AnyObject in returnValue! {
-//                    NSLog("!! %@",mode as! NSString) //Swift1.2修正
-//                }
-//            }
         }
-        if (animation == theAnim004){ //Swift1.2修正
+        
+        if (animation == theAnim004){
             NSLog("theAnim004")
         }
-        if (animation == theAnim005){ //Swift1.2修正
+        if (animation == theAnim005){
             NSLog("theAnim005")
         }
-        if (animation == theAnim006){ //Swift1.2修正
+        if (animation == theAnim006){
             NSLog("theAnim006")
         }
-        if (animation == theAnim007){ //Swift1.2修正
+        if (animation == theAnim007){
             NSLog("theAnim007")
         }
-        if (animation == theAnim008){ //Swift1.2修正
+        if (animation == theAnim008){
             NSLog("theAnim008")
         }
-        if (animation == theAnim008){ //Swift1.2修正
+        if (animation == theAnim008){
             NSLog("theAnim008")
         }
-        if (animation == theAnim009){ //Swift1.2修正
+        if (animation == theAnim009){
             NSLog("theAnim009 %.1f",theAnim009!.currentProgress)
             if (theAnim009!.currentProgress > 0.5){
                 theAnim009!.stopAnimation()
                 NSLog("end")
             }
         }
-        if (animation == theAnim010){ //Swift1.2修正
+        if (animation == theAnim010){
             NSLog("theAnim010 %.1f",theAnim010!.currentProgress)
             if (theAnim010!.currentProgress > 0.5){
                 theAnim010!.stopAnimation()
                 NSLog("end")
             }
         }
-        if (animation == theAnim011){ //Swift1.2修正
+        if (animation == theAnim011){
             NSLog("theAnim011 %.2f %.2f ",theAnim011!.currentValue,progress)
             if (theAnim011!.currentProgress > 0.8){
                 theAnim011!.stopAnimation()
                 NSLog("end")
             }
         }
-        if (animation == theAnim012){ //Swift1.2修正
+        if (animation == theAnim012){
             NSLog("theAnim012 %.2f",theAnim012!.currentValue,progress)
         }
-//        if (animation == theAnim012sub){ //Swift1.2修正
-//            NSLog("theAnim012sub %.2f",theAnim012sub.currentValue,progress)
-//        }
+
         
-//        if (animation == theAnim014){ //Swift1.2修正
-//            NSLog("theAnim014 %.2f",theAnim014.currentValue,progress)
-//            indicator014.doubleValue = Double( theAnim014.currentValue*100.0 )
-//            self.window.update()
-//            label014.floatValue =   theAnim014.currentValue*100.0
-//            NSLog("theAnim014 %.2f",indicator014.doubleValue)
-//        }
-//        if (animation == theAnim014sub){ //Swift1.2修正
-//            NSLog("theAnim014sub %.2f",theAnim014sub.currentValue,progress)
-//            label014sub.floatValue =   theAnim014sub.currentValue*100.0
-//            
-//        }
-//        
+        
     }
 
     //NSAnimation animationBlockingMode
+    //Swift 2.0
     @IBAction func function002(sender: AnyObject) {
         //NSAnimationProgress
         var progMarks : [NSAnimationProgress] =  [
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         //アニメーション設定
         theAnim002 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
@@ -156,13 +138,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         
     }
     //NSAnimation runLoopModesForAnimating
+    //Swift 2.0
     @IBAction func function003(sender: AnyObject) {
         //NSAnimationProgress
         var progMarks : [NSAnimationProgress] =  [
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         //アニメーション設定
         theAnim003 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
@@ -181,13 +164,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         
     }
     //NSAnimation　animationCurve
+    //Swift 2.0
     @IBAction func function004(sender: AnyObject) {
         //NSAnimationProgress
         var progMarks : [NSAnimationProgress] =  [
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         //アニメーション設定
         theAnim004 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
@@ -206,13 +190,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         }
     }
     //NSAnimation duration
+    //Swift 2.0
     @IBAction func function005(sender: AnyObject) {
         //NSAnimationProgress
         var progMarks : [NSAnimationProgress] =  [
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         //アニメーション設定
         theAnim005 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
@@ -231,13 +216,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         }
     }
     //NSAnimation frameRate
+    //Swift 2.0
     @IBAction func function006(sender: AnyObject) {
         //NSAnimationProgress
         var progMarks : [NSAnimationProgress] =  [
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         //アニメーション設定
         theAnim006 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
@@ -256,13 +242,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         }
     }
     //NSAnimation　delegate
+    //Swift 2.0
     @IBAction func function007(sender: AnyObject) {
         //NSAnimationProgress
         var progMarks : [NSAnimationProgress] =  [
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         //アニメーション設定
         theAnim007 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
@@ -282,13 +269,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
 
     }
     //NSAnimation startAnimation
+    //Swift 2.0
     @IBAction func function008(sender: AnyObject) {
         //NSAnimationProgress
         var progMarks : [NSAnimationProgress] =  [
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         //アニメーション設定
         theAnim008 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
@@ -307,13 +295,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         }
     }
     //NSAnimation stopAnimation
+    //Swift 2.0
     @IBAction func function009(sender: AnyObject) {
         //NSAnimationProgress
         var progMarks : [NSAnimationProgress] =  [
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         //アニメーション設定
         theAnim009 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
@@ -333,13 +322,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         
     }
     //NSAnimation currentProgress
+    //Swift 2.0
     @IBAction func function010(sender: AnyObject) {
         //NSAnimationProgress
         var progMarks : [NSAnimationProgress] =  [
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         //アニメーション設定
         theAnim010 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
@@ -358,13 +348,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         }
     }
     //NSAnimation currentValue
+    //Swift 2.0
     @IBAction func function011(sender: AnyObject) {
         //NSAnimationProgress
         var progMarks : [NSAnimationProgress] =  [
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         //アニメーション設定
         theAnim011 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
         
@@ -384,13 +375,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
     }
     //NSAnimation　startWhenAnimation:reachesProgress
     //NSAnimation　addProgressMark
+    //Swift 2.0
     @IBAction func function012(sender: AnyObject) {
         //NSAnimationProgress
         var progMarks : [NSAnimationProgress] =  [
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         
         //アニメーション設定
         theAnim012 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
@@ -403,7 +395,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         
         theAnim012!.animationCurve = NSAnimationCurve.EaseInOut
         theAnim012!.duration = 5.0
-        var mark:NSAnimationProgress = 0.3
+        let mark:NSAnimationProgress = 0.3
         theAnim012!.addProgressMark(mark)
         
         //
@@ -436,14 +428,15 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
     //NSAnimation addProgressMark
     //NSAnimation removeProgressMark
     //NSAnimation progressMarks
+    //Swift 2.0
     var theAnim013: NSAnimation!
     @IBAction func function013(sender: AnyObject) {
         //NSAnimationProgress
-        var progMarks : [NSAnimationProgress] =  [
-            0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
-            0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
-        var i :Int
-        var count :Int = 20
+        //var progMarks : [NSAnimationProgress] =  [
+        //    0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
+        //    0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
+        //var i :Int
+        //var count :Int = 20
         
         //アニメーション設定
         theAnim013 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
@@ -453,17 +446,17 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         theAnim013.animationCurve = NSAnimationCurve.EaseInOut
         theAnim013.duration = 5.0
         
-        var mark1:NSAnimationProgress = 0.3
+        let mark1:NSAnimationProgress = 0.3
         theAnim013.addProgressMark(mark1)
         NSLog("progressMarks a %@", theAnim013.progressMarks.description)
         //->progressMarks a [0.300000011920929]
         
-        var mark2:NSAnimationProgress = 0.4
+        let mark2:NSAnimationProgress = 0.4
         theAnim013.addProgressMark(mark2)
         NSLog("progressMarks b %@", theAnim013.progressMarks.description)
         //->progressMarks b [0.300000011920929, 0.4000000059604645]
         
-        var mark3:NSAnimationProgress = 0.5
+        let mark3:NSAnimationProgress = 0.5
         theAnim013.addProgressMark(mark3)
         NSLog("progressMarks c %@", theAnim013.progressMarks.description)
         //->progressMarks c [0.300000011920929, 0.4000000059604645, 0.5]
@@ -472,9 +465,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         NSLog("progressMarks d %@", theAnim013.progressMarks.description)
         //->progressMarks d [0.300000011920929, 0.4000000059604645]
         
-        var mark4:NSAnimationProgress = 0.7
-        var mark5:NSAnimationProgress = 0.8
-        var mark6:NSAnimationProgress = 0.9
+        let mark4:NSAnimationProgress = 0.7
+        let mark5:NSAnimationProgress = 0.8
+        let mark6:NSAnimationProgress = 0.9
         theAnim013.progressMarks = [mark4,mark5,mark6]
         NSLog("progressMarks e %@", theAnim013.progressMarks.description)
         //->progressMarks e [0.7, 0.8, 0.9]
@@ -483,6 +476,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
     }
 
     //NSAnimation
+    //Swift 2.0
     var theAnim014: NSAnimation!
     var theAnim014sub: NSAnimation!
     @IBOutlet weak var indicator014: NSProgressIndicator!
@@ -496,7 +490,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
             0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
             0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0  ]
         var i :Int
-        var count :Int = 20
+        let count :Int = 20
         
         //アニメーション設定
         theAnim014 = NSAnimation(duration: 10.0, animationCurve: NSAnimationCurve.EaseInOut)
@@ -509,8 +503,8 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
         
         theAnim014.animationCurve = NSAnimationCurve.EaseInOut
         theAnim014.duration = 15.0
-        var mark1:NSAnimationProgress = 0.3
-        var mark2:NSAnimationProgress = 0.5
+        let mark1:NSAnimationProgress = 0.3
+        //var mark2:NSAnimationProgress = 0.5
         theAnim014.addProgressMark(mark1)
         
         //
@@ -546,6 +540,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
 
     }
     //NSAnimation
+    //Swift 2.0
     @IBAction func function015(sender: AnyObject) {
         //indicator014.doubleValue = 0.5//Double( theAnim014.currentValue*100.0 )
         

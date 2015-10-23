@@ -5,7 +5,7 @@
 //  Created by air on 2015/06/04.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
-
+//Swift2.0
 import Cocoa
 
 class ViewController: NSViewController {
@@ -59,7 +59,7 @@ class ViewController: NSViewController {
                 theBitmap.setColor(NSColor.greenColor(), atX: x, y: y)
             }
         }
-        var g : NSGraphicsContext = NSGraphicsContext(bitmapImageRep: theBitmap)!
+        let g : NSGraphicsContext = NSGraphicsContext(bitmapImageRep: theBitmap)!
         g.saveGraphicsState()
         NSGraphicsContext.setCurrentContext(g)
         
@@ -69,38 +69,41 @@ class ViewController: NSViewController {
         
         NSGraphicsContext.restoreGraphicsState()
         
-        theBitmap.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile("~/Desktop/test.png".stringByExpandingTildeInPath, atomically: true)
+        let destiPath : NSString = ("~/Desktop/test.png" as NSString).stringByExpandingTildeInPath
+        theBitmap.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile(destiPath as String, atomically: true)
+        
+        
         
         
         
         
     }
     @IBAction func function001  (sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBezierPath"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction001:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : TestView001 = TestView001(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
+        let theView : TestView001 = TestView001(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton001 = theButton    //ボタン

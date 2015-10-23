@@ -5,7 +5,7 @@
 //  Created by air on 2014/12/30.
 //  Copyright (c) 2014年 oomori. All rights reserved.
 //
-
+//Swift2.0
 import Cocoa
 
 @NSApplicationMain
@@ -36,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func function003(sender: AnyObject) {
         NSLog("function003 called")
         let anApplication = NSApplication.sharedApplication()
-        var imageObj:NSImage = anApplication.applicationIconImage
+        let imageObj:NSImage = anApplication.applicationIconImage
         NSLog("Image Object: \(imageObj).")
         imageView.image = imageObj
         
@@ -48,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSLog("function004 called")
         NSLog("I will terminate after 5 minutes")
         //タイマー作成
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("update"), userInfo: nil, repeats: false)
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("update"), userInfo: nil, repeats: false)
 
     }
     //タイマーが起動した時の実行メソッド
@@ -66,8 +66,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func function005(sender: AnyObject) {
         NSLog("function005 called")
         let anApplication = NSApplication.sharedApplication()
-        var event:NSEvent = anApplication.currentEvent!
-        var type:NSEventType = event.type
+        let event:NSEvent = anApplication.currentEvent!
+        let type:NSEventType = event.type
         switch type {
         case .LeftMouseDown :       //NSEventType.LeftMouseDownでも良い
             NSLog("LeftMouseDown")

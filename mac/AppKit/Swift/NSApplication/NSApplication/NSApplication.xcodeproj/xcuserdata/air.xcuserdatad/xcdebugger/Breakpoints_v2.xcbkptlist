@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSApplication/AppDelegate.swift"
-            timestampString = "450484879.108059"
+            timestampString = "467284645.87463"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1167"
-            endingLineNumber = "1167"
+            startingLineNumber = "1170"
+            endingLineNumber = "1170"
             landmarkName = "application(_:openFiles:)"
             landmarkType = "5">
          </BreakpointContent>

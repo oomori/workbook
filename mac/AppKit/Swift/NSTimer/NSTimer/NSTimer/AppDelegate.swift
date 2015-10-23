@@ -5,6 +5,7 @@
 //  Created by air on 2014/12/30.
 //  Copyright (c) 2014年 oomori. All rights reserved.
 //
+//  convert Swift 1.1 -> 2.0 2015/10/23
 
 import Cocoa
 
@@ -36,7 +37,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func function003(sender: AnyObject) {
         NSLog("function003 called")
         let anApplication = NSApplication.sharedApplication()
-        var imageObj:NSImage = anApplication.applicationIconImage
+        let imageObj:NSImage = anApplication.applicationIconImage
         NSLog("Image Object: \(imageObj).")
         imageView.image = imageObj
         
@@ -53,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSLog("function004 called")
         NSLog("I will terminate after 5 minutes")
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
 
     }
     

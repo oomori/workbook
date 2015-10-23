@@ -30,18 +30,18 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         alert.messageText = messageText
         alert.informativeText = informativeText
         alert.alertStyle = .CriticalAlertStyle
-        let response:Int = alert.runModal()
+        //let response:Int = alert.runModal()
     }
     //NSAlert alertWithError
     @IBAction func function002(sender: AnyObject) {
         //なにかモーダルがあっても終わり
         NSApp.abortModal()
-        var anError: NSError? = NSError(domain: NSMachErrorDomain,
+        _ = NSError(domain: NSMachErrorDomain,
                                     code: -1,
                                     userInfo: nil)
         //NSAlertの作成
-        let anAlert:NSAlert = NSAlert(error: anError!)
-        let response:Int = anAlert.runModal()
+        //let anAlert:NSAlert = NSAlert(error: anError!)
+        //let response:Int = anAlert.runModal()
     }
     //NSAlert layout
     //調査中
@@ -59,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         alert.informativeText = informativeText
         alert.alertStyle = .CriticalAlertStyle
         alert.layout()
-        let response:Int = alert.runModal()
+        //let response:Int = alert.runModal()
 
     }
     //NSAlert alertStyle
@@ -75,7 +75,8 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         alert.messageText = messageText
         alert.informativeText = informativeText
         alert.alertStyle = .CriticalAlertStyle
-        let response:Int = alert.runModal()
+        alert.runModal()
+        //let response:Int = alert.runModal()
         switch alert.alertStyle {
         case .WarningAlertStyle :
             NSLog("WarningAlertStyle")
@@ -86,8 +87,8 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         case .CriticalAlertStyle :
             NSLog("CriticalAlertStyle")
             break
-        default :
-            break
+        //default :
+          //  break
         }
     }
     //NSAlert alertStyle
@@ -104,7 +105,7 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         alert.messageText = messageText
         alert.informativeText = informativeText
         //alert.alertStyle = .CriticalAlertStyle
-        let response:Int = alert.runModal()
+        _ = alert.runModal()
         switch alert.alertStyle {
         case .WarningAlertStyle :
             NSLog("WarningAlertStyle")
@@ -115,8 +116,8 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         case .CriticalAlertStyle :
             NSLog("CriticalAlertStyle")
             break
-        default :
-            break
+        //default :
+          //  break
         }
 
     }
@@ -134,7 +135,7 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         alert.messageText = messageText
         alert.informativeText = informativeText
         alert.accessoryView = accessoryView
-        let response:Int = alert.runModal()
+        _ = alert.runModal()
         
     }
     //NSAlert showsHelp
@@ -152,7 +153,7 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         alert.informativeText = informativeText
         alert.helpAnchor = "Help"
         alert.showsHelp = true
-        let response:Int = alert.runModal()
+        _ = alert.runModal()
     }
     //NSAlert delegate
     @IBAction func function008(sender: AnyObject) {
@@ -168,7 +169,7 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         alert.messageText = messageText
         alert.informativeText = informativeText
         alert.delegate = self
-        var delegateObj  = alert.delegate//Swift 1.2
+        let delegateObj  = alert.delegate//Swift 1.2
         //var delegateObj  = alert.delegate?
         if (delegateObj != nil) {
             if (delegateObj!.conformsToProtocol(NSAlertDelegate)) {
@@ -179,7 +180,7 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         }else{
             NSLog("nil")
         }
-        let response:Int = alert.runModal()
+        _ = alert.runModal()
         
     }
     //NSAlert runModal/addButtonWithTitle
@@ -259,7 +260,7 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         //2つめのボタン
         alert.addButtonWithTitle(NSLocalizedString("Continue", comment:""))
         
-        var aButton :NSButton = alert.suppressionButton!
+        let aButton :NSButton = alert.suppressionButton!
         NSLog("---%@", aButton.title)
         alert.showsSuppressionButton = true
         alert.delegate = self
@@ -288,7 +289,7 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         //2つめのボタン
         alert.addButtonWithTitle(NSLocalizedString("Continue", comment:""))
         
-        var aButton :NSButton = alert.suppressionButton!
+        let aButton :NSButton = alert.suppressionButton!
         NSLog("---%@", aButton.title)
         alert.showsSuppressionButton = true
         alert.delegate = self
@@ -317,7 +318,7 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         //2つめのボタン
         alert.addButtonWithTitle(NSLocalizedString("Continue", comment:""))
         
-        var aButton :NSButton = alert.suppressionButton!
+        let aButton :NSButton = alert.suppressionButton!
         NSLog("---%@", aButton.title)
         alert.showsSuppressionButton = true
         alert.delegate = self
@@ -337,13 +338,13 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         NSApp.abortModal()
         
         //テキストの作成
-        let messageText:String = "Message text" as String
-        let informativeText:String = "Information text" as String
+        //let messageText:String = "Message text" as String
+        //let informativeText:String = "Information text" as String
         //NSAlertの作成
         let alert:NSAlert = NSAlert()
         
-        let anApplication = NSApplication.sharedApplication()
-        var imageObj:NSImage = NSImage(named: "anIcon")!
+        //let anApplication = NSApplication.sharedApplication()
+        let imageObj:NSImage = NSImage(named: "anIcon")!
         //        var imageObj:NSImage = anApplication.applicationIconImage
         alert.icon = imageObj
         //1つめのボタン
@@ -369,13 +370,13 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         NSApp.abortModal()
         
         //テキストの作成
-        let messageText:String = "Message text" as String
-        let informativeText:String = "Information text" as String
+        //let messageText:String = "Message text" as String
+        //let informativeText:String = "Information text" as String
         //NSAlertの作成
         let alert:NSAlert = NSAlert()
         
         let anApplication = NSApplication.sharedApplication()
-        var imageObj:NSImage = anApplication.applicationIconImage
+        let imageObj:NSImage = anApplication.applicationIconImage
         alert.icon = imageObj
         //1つめのボタン
         alert.addButtonWithTitle(NSLocalizedString("Stop", comment:"停止"))
@@ -388,8 +389,8 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
                 self.imageView.image = imageObj
             }
         }
-        for (index, button) in enumerate(alert.buttons) {
-            NSLog("SecondButton %d %@",index,(button as! NSButton).title ) //Swift 1.2
+        for (index, button) in alert.buttons.enumerate() {
+            NSLog("SecondButton %d %@",index,(button ).title ) //Swift 1.2
             //NSLog("SecondButton %d %@",index,(button as NSButton).title )
         }
         
@@ -401,13 +402,13 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         NSApp.abortModal()
         
         //テキストの作成
-        let messageText:String = "Message text" as String
-        let informativeText:String = "Information text" as String
+        //let messageText:String = "Message text" as String
+        //let informativeText:String = "Information text" as String
         //NSAlertの作成
         let alert:NSAlert = NSAlert()
         
         let anApplication = NSApplication.sharedApplication()
-        var imageObj:NSImage = anApplication.applicationIconImage
+        let imageObj:NSImage = anApplication.applicationIconImage
         alert.icon = imageObj
         //1つめのボタン
         alert.addButtonWithTitle(NSLocalizedString("Stop", comment:"停止"))
@@ -430,8 +431,8 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         NSApp.abortModal()
         
         //テキストの作成
-        let messageText:String = "Message text" as String
-        let informativeText:String = "Information text" as String
+        //let messageText:String = "Message text" as String
+        //let informativeText:String = "Information text" as String
         //NSAlertの作成
         let alert:NSAlert = NSAlert()
         alert.alertStyle = .CriticalAlertStyle
@@ -463,8 +464,8 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         NSApp.abortModal()
         
         //テキストの作成
-        let messageText:String = "Message text" as String
-        let informativeText:String = "Information text" as String
+        //let messageText:String = "Message text" as String
+        //let informativeText:String = "Information text" as String
         //NSAlertの作成
         let alert:NSAlert = NSAlert()
         alert.alertStyle = .CriticalAlertStyle
@@ -487,8 +488,8 @@ class AppDelegate: NSObject, NSApplicationDelegate ,NSAlertDelegate{
         NSApp.abortModal()
         
         //テキストの作成
-        let messageText:String = "Message text" as String
-        let informativeText:String = "Information text" as String
+        //let messageText:String = "Message text" as String
+        //let informativeText:String = "Information text" as String
         //NSAlertの作成
         let alert:NSAlert = NSAlert()
         alert.alertStyle = .CriticalAlertStyle

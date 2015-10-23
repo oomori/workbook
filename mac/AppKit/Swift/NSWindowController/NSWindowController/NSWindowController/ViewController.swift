@@ -5,6 +5,7 @@
 //  Created by air on 2015/03/20.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
+//  convert Swift 1.1 -> 2.0 2015/10/22
 
 import Cocoa
 
@@ -13,16 +14,18 @@ class ViewController: NSViewController {
     var windowArray : NSMutableArray = []
     
     //NSWindowContoroller window
-    ////Swift1.2
+    //Swift2.0
     @IBAction func function001(sender: AnyObject) {
         //ウインドウのNSWinodowControllerを取得
-        var theWindowContoroller : NSWindowController = sender.window.windowController() as! NSWindowController
+        let theWindowContoroller : NSWindowController = ((sender as! NSButton).window?.windowController)!
+        
+        //let theWindowContoroller : NSWindowController = sender.window().windowController! as! NSWindowController
         
         NSLog("windowContoroller = %@",theWindowContoroller.description )
         
         let theWindow : NSWindow = theWindowContoroller.window!
         //if (window.title != nil){
-        NSLog("window %@",theWindow.title! )
+        NSLog("window %@",theWindow.title )
         //}
         let theDocument : NSDocument = theWindowContoroller.document! as! NSDocument
         NSLog("window %@",theDocument.description )
@@ -49,7 +52,7 @@ class ViewController: NSViewController {
     @IBAction func function003(sender: AnyObject) {
         let theWindowController : NSWindowController = NSWindowController()
         
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, defer: false)
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200), styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask, backing: .Buffered, `defer`: false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         
@@ -81,7 +84,7 @@ class ViewController: NSViewController {
     //NSWindowContoroller storyboardより
     @IBAction func function005(sender: AnyObject) {
         let document : Document = Document()
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)!
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
         let windowController = storyboard.instantiateControllerWithIdentifier("Document Window Controller") as! NSWindowController
 
         document.addWindowController(windowController)

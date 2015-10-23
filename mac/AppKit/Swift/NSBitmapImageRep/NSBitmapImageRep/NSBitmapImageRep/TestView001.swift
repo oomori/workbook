@@ -104,7 +104,7 @@ class TestView001: NSView {
         //var g : NSGraphicsContext = NSGraphicsContext(bitmapImageRep: self.theBitmap001)!
         
         //グラフィックコンテキストを作成
-        var g : NSGraphicsContext = NSGraphicsContext.currentContext()!
+        let g : NSGraphicsContext = NSGraphicsContext.currentContext()!
         g.saveGraphicsState()
         NSGraphicsContext.setCurrentContext(g)
         
@@ -154,7 +154,7 @@ class TestView001: NSView {
             //マウスダウンして以降、左マウスアップするまでのイベントを取得
             newEvent = anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as! NSDate),
+                untilDate:(NSDate.distantPast() ),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true)
             

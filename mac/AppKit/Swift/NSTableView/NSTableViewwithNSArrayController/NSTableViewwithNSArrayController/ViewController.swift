@@ -26,27 +26,27 @@ class ViewController: NSViewController {
     //まだ出来てない
     //ウインドウのボタン
     func buttonAction001(sender: AnyObject){
-        var theWindow : NSWindow = (sender as! NSButton).window!
+        //var theWindow : NSWindow = (sender as! NSButton).window!
         //NSLog("!!!")
     }
     var arrayController001 = NSArrayController(content: nil)
     @IBAction func function001(sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Set"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("buttonAction001:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         //アレイコントローラー
         
@@ -58,7 +58,7 @@ class ViewController: NSViewController {
         //arrayController.content = theArray
         //エンティティ名を設定
         arrayController001.entityName = "Entity1"
-        var error : NSError? = nil
+        //var error : NSError? = nil
 //        if (arrayController.fetchWithRequest(nil , merge: true , error: error)){
 //            
 //        }
@@ -67,12 +67,12 @@ class ViewController: NSViewController {
         
         //テーブルビューを作成
         //まずはスクロールビュー
-        var scrollView : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
+        let scrollView : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
         //中身のテーブルビュー
-        var theTableView : NSTableView = NSTableView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
+        let theTableView : NSTableView = NSTableView(frame: NSMakeRect(0.0,30.0,300.0,170.0))
         //列
-        var tableColumn1 : NSTableColumn = NSTableColumn(identifier: "col1")
-        var tableColumn2 : NSTableColumn = NSTableColumn(identifier: "col2")
+        let tableColumn1 : NSTableColumn = NSTableColumn(identifier: "col1")
+        let tableColumn2 : NSTableColumn = NSTableColumn(identifier: "col2")
         tableColumn1.width = 170
         tableColumn2.width = 130
         //列をテーブルにセット
@@ -81,18 +81,18 @@ class ViewController: NSViewController {
     
 
         
-        var theArray:[NSDictionary] = [["col1": "和蘭陀", "col2": "おらんだ"],
-            ["col1": "西班牙", "col2": "すぺいん"],
-            ["col1": "亜米利加", "col2": "あめりか"],
-            ["col1": "独逸", "col2": "どいつ"],
-            ["col1": "露西亜", "col2": "ろしあ"] ]
+        //var theArray:[NSDictionary] = [["col1": "和蘭陀", "col2": "おらんだ"],
+        //    ["col1": "西班牙", "col2": "すぺいん"],
+        //    ["col1": "亜米利加", "col2": "あめりか"],
+        //    ["col1": "独逸", "col2": "どいつ"],
+        //    ["col1": "露西亜", "col2": "ろしあ"] ]
         
         //arrayController.addObjects(theArray)
         
-        var objects : NSMutableArray = []
+        let objects : NSMutableArray = []
         
         for (var i = 0; i < 30; i++) {
-            var model : TheModel = TheModel()
+            let model : TheModel = TheModel()
             model.name = NSString(format: "name %d", i) as String
             model.col1 = NSString(format: "name %d", i) as String
             model.col2 = NSString(format: "name %d", i) as String
@@ -107,7 +107,7 @@ class ViewController: NSViewController {
         //theTableView.bind("col1", toObject: arrayController, withKeyPath: "selection.col2", options: nil )
 
         //データソースとデリゲートをセット
-        var dataObj : TableData001 = TableData001()
+        let dataObj : TableData001 = TableData001()
         dataObj.dataArray = [["col1": "和蘭陀", "col2": "おらんだ"],
             ["col1": "西班牙", "col2": "すぺいん"],
             ["col1": "亜米利加", "col2": "あめりか"],
@@ -121,7 +121,7 @@ class ViewController: NSViewController {
          //テーブルの入ったスクロールビューをウインドウに配置
         scrollView.documentView = theTableView
         scrollView.hasVerticalRuler = true
-        aWindow.contentView.addSubview(scrollView)
+        aWindow.contentView!.addSubview(scrollView)
         
         //ウインドウの表示
         aWindow.center()//ウインドウをスクリーンの中心に

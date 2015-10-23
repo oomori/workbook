@@ -4,7 +4,7 @@
 //
 //  Created by air on 2015/04/08.
 //  Copyright (c) 2015年 oomori. All rights reserved.
-//  Swift1.2
+//  Swift2.0
 
 import Cocoa
 
@@ -15,14 +15,14 @@ class ViewController: NSViewController {
         NSLog("!!!")
     }
     @IBAction func function001(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen()! )
         
         
@@ -37,7 +37,7 @@ class ViewController: NSViewController {
         popupMenu.addItem(popupMenuItem2)
         
         popupButton.menu = popupMenu
-        aWindow.contentView.addSubview(popupButton)
+        aWindow.contentView!.addSubview(popupButton)
         
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に

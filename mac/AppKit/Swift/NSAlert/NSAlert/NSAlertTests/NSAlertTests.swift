@@ -5,6 +5,7 @@
 //  Created by air on 2015/02/08.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
+//  convert Swift 1.1 -> 2.0 2015/10/23
 
 import Cocoa
 import XCTest

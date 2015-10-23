@@ -28,7 +28,7 @@ class MyImageView: NSImageView {
         while keepOn {
             newEvent = anApplication.nextEventMatchingMask(
                 Int(mask) ,
-                untilDate:(NSDate.distantPast() as! NSDate),
+                untilDate:(NSDate.distantPast() ),
                 inMode:NSDefaultRunLoopMode,
                 dequeue:true)            
             NSLog("loop")

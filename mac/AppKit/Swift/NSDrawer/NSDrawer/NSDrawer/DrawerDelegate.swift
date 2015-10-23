@@ -5,7 +5,7 @@
 //  Created by air on 2015/04/05.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
-
+//Swift2.0
 import Cocoa
 
 class DrawerDelegate: NSObject ,NSDrawerDelegate{
@@ -19,34 +19,32 @@ class DrawerDelegate: NSObject ,NSDrawerDelegate{
     //Swift1.2
     func drawerDidOpen(notification: NSNotification) {
         let obj : NSDrawer = notification.object as! NSDrawer
+       
         
-        
-        NSLog("drawerDidOpen %d", Int(obj.edge) )
-        
-        switch (Int(obj.edge)){
-        case 0:
+        switch (obj.edge){
+        case NSRectEdge.MinX:
             NSLog("左")
-        case 1:
+        case NSRectEdge.MinY:
             NSLog("下")
-        case 2:
+        case NSRectEdge.MaxX:
             NSLog("右")
-        case 3:
+        case NSRectEdge.MaxY:
             NSLog("上")
-        default:
-            NSLog("default")
+        //default:
+          //  NSLog("default")
         }
         
-        switch (Int(obj.preferredEdge)){
-        case 0:
+        switch (obj.preferredEdge){
+        case NSRectEdge.MinX:
             NSLog("左")
-        case 1:
+        case NSRectEdge.MinY:
             NSLog("下")
-        case 2:
+        case NSRectEdge.MaxX:
             NSLog("右")
-        case 3:
+        case NSRectEdge.MaxY:
             NSLog("上")
-        default:
-            NSLog("default")
+            //default:
+            //NSLog("default")
         }
         
     }

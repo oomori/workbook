@@ -5,6 +5,7 @@
 //  Created by air on 2014/12/30.
 //  Copyright (c) 2014年 oomori. All rights reserved.
 //
+//Swift2.0
 
 import Cocoa
 
@@ -40,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     @IBAction func function003(sender: AnyObject) {
         NSLog("function003 called")
         let anApplication = NSApplication.sharedApplication()
-        var imageObj:NSImage = anApplication.applicationIconImage
+        let imageObj:NSImage = anApplication.applicationIconImage
         NSLog("Image Object: \(imageObj).")
         imageView.image = imageObj
         
@@ -52,7 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         NSLog("function004 called")
         NSLog("I will terminate after 5 minutes")
         //タイマー作成
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("update:"), userInfo: nil, repeats: false)
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("update:"), userInfo: nil, repeats: false)
 
     }
     //タイマーが起動した時の実行メソッド
@@ -70,8 +71,8 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     @IBAction func function005(sender: AnyObject) {
         NSLog("function005 called")
         let anApplication = NSApplication.sharedApplication()
-        var event:NSEvent = anApplication.currentEvent!
-        var type:NSEventType = event.type
+        let event:NSEvent = anApplication.currentEvent!
+        let type:NSEventType = event.type
         switch type {
         case .LeftMouseDown :       //NSEventType.LeftMouseDownでも良い
             NSLog("LeftMouseDown")
@@ -87,7 +88,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     @IBAction func function006(sender: AnyObject) {
         NSLog("function006 called")
         let anApplication = MyApplication.sharedApplication()
-        var event:NSEvent = anApplication.currentEvent!
+        let event:NSEvent = anApplication.currentEvent!
 
         let maskUp = NSEventMask.LeftMouseUpMask.rawValue
         let maskDragged = NSEventMask.LeftMouseDraggedMask.rawValue
@@ -95,9 +96,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //var theEvent:NSEvent? = nil;
         NSLog("1 %@",event)
         anApplication.discardEventsMatchingMask(mask,beforeEvent: event)
-        var newEvent:NSEvent = anApplication.currentEvent!
+        let newEvent:NSEvent = anApplication.currentEvent!
         NSLog("2 %@",newEvent)
-        var type:NSEventType = newEvent.type
+        let type:NSEventType = newEvent.type
         switch type {
         case .LeftMouseDragged :       //NSEventType.LeftMouseDownでも良い
             NSLog("LeftMouseDragged")
@@ -131,7 +132,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //newWindowはNIBで作られているwindow
         //@IBOutlet weak var newWindow: NSWindow!
         let anApplication = MyApplication.sharedApplication()
-        var result = anApplication.runModalForWindow(newWindow)
+        let result = anApplication.runModalForWindow(newWindow)
         
         //モーダルが閉じられた場合の結果が帰ってくる
         
@@ -175,13 +176,13 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         NSLog("abortModal")
         let anApplication = MyApplication.sharedApplication()
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("abortTimer:"), userInfo: nil, repeats: false)
+        let timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("abortTimer:"), userInfo: nil, repeats: false)
 
         //タイマー、モーダルに入るとタイマーが動かなくなるので、ランループに追加する
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
 
         //モーダル開始
-        var result:NSModalResponse = anApplication.runModalForWindow(newWindow)
+        let result:NSModalResponse = anApplication.runModalForWindow(newWindow)
         
         //モーダルが閉じられた場合の結果が帰ってくる
         switch result {
@@ -219,9 +220,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         var modalCode:NSInteger;
         NSApp.stopModal()
         let anApplication = MyApplication.sharedApplication()
-        var session:NSModalSession = anApplication.beginModalSessionForWindow(newWindow)
+        let session:NSModalSession = anApplication.beginModalSessionForWindow(newWindow)
         
-        do{
+        repeat{
             modalCode = NSApp.runModalSession(session)
              NSLog("loop")
         }while (modalCode == NSRunContinuesResponse)
@@ -238,7 +239,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         let panelDic:Dictionary<String, String> = ["Version" : "1.1", "Copyright" : "satoshi oomori"];
         //表示用
         for key in panelDic.keys{
-            println("\(key) : \(panelDic[key])");
+            print("\(key) : \(panelDic[key])");
         }
         //アバウトパネルを表示
         anApplication.orderFrontStandardAboutPanelWithOptions(panelDic)
@@ -274,7 +275,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
         //リモート通知の取得
-        var types:NSRemoteNotificationType = anApplication.enabledRemoteNotificationTypes
+        let types:NSRemoteNotificationType = anApplication.enabledRemoteNotificationTypes
         
        //ifで判定
         if (types == NSRemoteNotificationType.None)
@@ -345,7 +346,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
         //UI方向を取得
-        var direction : NSUserInterfaceLayoutDirection = anApplication.userInterfaceLayoutDirection
+        let direction : NSUserInterfaceLayoutDirection = anApplication.userInterfaceLayoutDirection
         
         //switchで分岐
         switch direction {
@@ -353,22 +354,22 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
             NSLog("LeftToRight")
         case NSUserInterfaceLayoutDirection.RightToLeft :
             NSLog("RightToLeft")
-        default :
-            break
+        //default :
+          //  break
         }
     }
     //NSApplication keyWindow
     @IBAction func function025(sender: AnyObject) {
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
-        NSLog(anApplication.keyWindow!.title!)
+        NSLog(anApplication.keyWindow!.title)
     }
     
     //NSApplication mainWindow
     @IBAction func function026(sender: AnyObject) {
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
-        NSLog(anApplication.mainWindow!.title!)
+        NSLog(anApplication.mainWindow!.title)
     }
     
     //NSApplication windowWithWindowNumber()
@@ -431,7 +432,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         anApplication.hide(self)
         NSLog("I will unhide after 5 minutes")
         //タイマー作成
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("unhideApp:"), userInfo: nil, repeats: false)
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("unhideApp:"), userInfo: nil, repeats: false)
 
     }
     //タイマーが起動した時の実行メソッド
@@ -451,7 +452,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         anApplication.hide(self)
         NSLog("I will unhide after 5 minutes")
         //タイマー作成
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("unhideAppwithoutAct:"), userInfo: nil, repeats: false)
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("unhideAppwithoutAct:"), userInfo: nil, repeats: false)
         
     }
     //タイマーが起動した時の実行メソッド
@@ -486,7 +487,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     }
     //NSApplication arrangeInFront()
     @IBAction func function038(sender: AnyObject) {
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("arrange:"), userInfo: nil, repeats: true )
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("arrange:"), userInfo: nil, repeats: true )
 
     }
     //タイマーが起動した時の実行メソッド
@@ -511,7 +512,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
         //
-        var aMenu :NSMenu = anApplication.mainMenu!
+        let aMenu :NSMenu = anApplication.mainMenu!
         
         NSLog("NSApplication mainmenu %@",aMenu)
     }
@@ -523,13 +524,13 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //let maskDragged = NSEventMask.LeftMouseDraggedMask.rawValue
         //let mask = Int( maskUp | maskDragged ) // cast from UInt
         
-        var theWindow = NSWindow(contentRect: NSMakeRect(100, 100, 400, 150),
+        let theWindow = NSWindow(contentRect: NSMakeRect(100, 100, 400, 150),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask
             ,
-            backing: NSBackingStoreType.Buffered, defer: true);
+            backing: NSBackingStoreType.Buffered, `defer`: true);
         /*
         var NSBorderlessWindowMask: Int { get }
         var NSTitledWindowMask: Int { get }     //1　タイトルバーあり
@@ -544,7 +545,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //Add the window to the main viewer
         window.addChildWindow(theWindow, ordered:NSWindowOrderingMode.Above)
         
-        var controller = NSWindowController(window: theWindow)
+        let controller = NSWindowController(window: theWindow)
         controller.showWindow(self)
         
         anApplication.addWindowsItem(theWindow,
@@ -577,7 +578,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
         //ドックタイルを取得
-        var dockTile :NSDockTile =  anApplication.dockTile
+        let dockTile :NSDockTile =  anApplication.dockTile
         NSLog("NSApplication dockTile %@",dockTile)
     }
     //NSApplication registerServicesMenuSendTypes
@@ -586,11 +587,11 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
         //送信タイプ
-        var sendArray = ["NSPDFPboardType","NSPICTPboardType","NSPostScriptPboardType","NSTIFFPboardType"]
+        let sendArray = ["NSPDFPboardType","NSPICTPboardType","NSPostScriptPboardType","NSTIFFPboardType"]
         //リターンタイプ
-        var retArray = ["NSPDFPboardType","NSPICTPboardType","NSPostScriptPboardType","NSTIFFPboardType"]
+        let retArray = ["NSPDFPboardType","NSPICTPboardType","NSPostScriptPboardType","NSTIFFPboardType"]
         
-        var aMenu : NSMenu = NSMenu(title: "aaa")
+        let aMenu : NSMenu = NSMenu(title: "aaa")
         aMenu.addItemWithTitle("aaaaa", action: Selector("serviceMethod:") , keyEquivalent: "e")
 
 
@@ -616,7 +617,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
         //
-        var aMenu  =  anApplication.servicesMenu
+        let aMenu  =  anApplication.servicesMenu
         if ((aMenu) != nil) {
         NSLog("NSApplication aMenu %@",aMenu!)
         }
@@ -630,7 +631,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
             NSLog("NSApplication active")
             anApplication.hide(self)
             //タイマー作成
-            var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("hideCheck:"), userInfo: nil, repeats: false)
+            //var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("hideCheck:"), userInfo: nil, repeats: false)
         }else{
             NSLog("NSApplication not active")
         }
@@ -674,7 +675,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //
         anApplication.hideOtherApplications(self )
         //タイマー作成
-        var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("unhideAll:"), userInfo: nil, repeats: false)
+        //var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("unhideAll:"), userInfo: nil, repeats: false)
     }
     //タイマーが起動した時の実行メソッド
     func unhideAll(timer:NSTimer!) {
@@ -704,7 +705,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
         //
-        var helpMenu = anApplication.helpMenu
+        let helpMenu = anApplication.helpMenu
         if ((helpMenu) != nil){
         NSLog("%@", helpMenu!)
         }
@@ -712,7 +713,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     //NSApplication　detachDrawingThread:toTarget:withObject:
     @IBAction func function054(sender: AnyObject) {
         //共有アプリケーションインスタンスを取得
-        let anApplication = MyApplication.sharedApplication()
+        //let anApplication = MyApplication.sharedApplication()
         //
         NSApplication.detachDrawingThread(Selector("methodFromFunction054:"),
             toTarget: self,
@@ -726,9 +727,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     //NSApplication tryToPerform:with:
     @IBAction func function055(sender: AnyObject) {
         //共有アプリケーションインスタンスを取得
-        let anApplication = MyApplication.sharedApplication()
+        //let anApplication = MyApplication.sharedApplication()
         //このインスタンスの関数function054:を動かしてみる
-        var result:Bool = NSApp.tryToPerform(Selector("function054:"), with: self )
+        let result:Bool = NSApp.tryToPerform(Selector("function054:"), with: self )
         //結果
         if (result){
             NSLog("function055 true")
@@ -739,9 +740,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     //NSApplication sendAction:to:from:
     @IBAction func function056(sender: AnyObject) {
         //共有アプリケーションインスタンスを取得
-        let anApplication = MyApplication.sharedApplication()
+        //let anApplication = MyApplication.sharedApplication()
         //このインスタンスの関数function054:を動かしてみる
-        var result:Bool = NSApp.sendAction(Selector("function054:"),
+        let result:Bool = NSApp.sendAction(Selector("function054:"),
             to: self, from: self)
         (Selector("function054:"), with: self )
         //結果
@@ -754,9 +755,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     //NSApplication targetForAction
     @IBAction func function057(sender: AnyObject) {
         //共有アプリケーションインスタンスを取得
-        let anApplication = MyApplication.sharedApplication()
+        //let anApplication = MyApplication.sharedApplication()
         //このインスタンスの関数function057:を動かしてみる
-        var result:AnyObject? = NSApp.targetForAction(Selector("methodFromFunction057") )
+        let result:AnyObject? = NSApp.targetForAction(Selector("methodFromFunction057") )
         //表示用
         if ((result) != nil){
         NSLog("obj = %@",result!.description)
@@ -775,9 +776,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     //NSApplication targetForAction:to:from
     @IBAction func function058(sender: AnyObject) {
         //共有アプリケーションインスタンスを取得
-        let anApplication = MyApplication.sharedApplication()
+        //let anApplication = MyApplication.sharedApplication()
         //このインスタンスの関数function058:を動かしてみる
-        var result:AnyObject? = NSApp.targetForAction(Selector("methodFromFunction058"),
+        let result:AnyObject? = NSApp.targetForAction(Selector("methodFromFunction058"),
             to : self,
             from: self)
         //表示用
@@ -799,10 +800,10 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     @IBAction func function059(sender: AnyObject) {
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
-        var aContext : NSGraphicsContext = anApplication.context!
+        let aContext : NSGraphicsContext = anApplication.context!
         
         NSLog("context = %@",aContext)
-        var point : NSPoint  = aContext.patternPhase
+        let point : NSPoint  = aContext.patternPhase
         NSLog("%f,%f",point.x,point.y)
     }
     
@@ -814,9 +815,9 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //デアクティベートして
         anApplication.hide(self) //deactivate()
         //3秒後にユーザーアテンションを
-        var startTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("requestAttention:"), userInfo: nil, repeats: false)
+        //var startTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("requestAttention:"), userInfo: nil, repeats: false)
         //10秒後にユーザーアテンションを
-        var stopTimer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: Selector("cancelAttention:"), userInfo: nil, repeats: false)
+        //var stopTimer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: Selector("cancelAttention:"), userInfo: nil, repeats: false)
         
     }
     //タイマーが起動した時の実行メソッド ドックで跳ねる
@@ -848,7 +849,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     //NSApplication currentSystemPresentationOptions/presentationOptions
     @IBAction func function062(sender: AnyObject) {
        //共有アプリケーションインスタンスを取得
-        let anApplication = MyApplication.sharedApplication()
+        //let anApplication = MyApplication.sharedApplication()
         window.collectionBehavior = NSWindowCollectionBehavior.FullScreenPrimary
         window.toggleFullScreen(self)
     }
@@ -899,18 +900,18 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         anApplication.registerUserInterfaceItemSearchHandler(self )
     }
     //NSUserInterfaceItemSearchingプロトコルのメソッド（必須）Helpの検索に文字を入れるとその情報が取得できる
-    func searchForItemsWithSearchString(searchString: String, resultLimit: Int, matchedItemHandler handleMatchedItems: ([AnyObject]!) -> Void)
+    func searchForItemsWithSearchString(searchString: String, resultLimit: Int, matchedItemHandler handleMatchedItems: ([AnyObject]) -> Void)
     {
         NSLog("searchForItemsWithSearchString %@",searchString)
         
         //文字列検索
         let anApplication = MyApplication.sharedApplication()
-        var range : NSRange = NSMakeRange(0, 1)
+        //var range : NSRange = NSMakeRange(0, 1)
         var afterRange : NSRange = NSMakeRange(0, 0)
         
-        var result : Bool = anApplication.searchString(searchString,
+        let result : Bool = anApplication.searchString(searchString,
             inUserInterfaceItemString: "quit",
-            searchRange: NSMakeRange(0, count(searchString.utf16)), //Swift1.2
+            searchRange: NSMakeRange(0, searchString.utf16.count), //Swift1.2
             //searchRange: NSMakeRange(0, searchString.utf16Count), //Swift1.1
             foundRange: &afterRange  )
         NSLog("%d,%d",afterRange.location,afterRange.length)
@@ -919,10 +920,10 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         }
         
     }
-    func localizedTitlesForItem(item: AnyObject) -> [AnyObject]
+    func localizedTitlesForItem(item: AnyObject) -> [String]
     {
         NSLog("localizedTitlesForItem")
-        var sendArray = ["aaa","bbb","ccc","ddd"]
+        let sendArray = ["aaa","bbb","ccc","ddd"]
     return sendArray
     }
     //NSUserInterfaceItemSearchingプロトコルのメソッド　終了
@@ -933,12 +934,12 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         //文字列検索
         //共有アプリケーションインスタンスを取得
         let anApplication = MyApplication.sharedApplication()
-        var range : NSRange = NSMakeRange(0, 1)
+        //var range : NSRange = NSMakeRange(0, 1)
         var afterRange : NSRange = NSMakeRange(0, 0)
         
-        var result : Bool = anApplication.searchString("検索",
+        let result : Bool = anApplication.searchString("検索",
             inUserInterfaceItemString: "検索される文字列",
-            searchRange: NSMakeRange(0, count("検索される文字列".utf16)), //Swift1.2
+            searchRange: NSMakeRange(0, "検索される文字列".utf16.count), //Swift1.2
             //searchRange: NSMakeRange(0, "検索される文字列".utf16Count), //Swift1.1
             
             foundRange: &afterRange  )
@@ -975,7 +976,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
         switch anApplication.occlusionState {
         case NSApplicationOcclusionState.Visible:
             NSLog("Visible")
-        case NSApplicationOcclusionState.allZeros:
+        case NSApplicationOcclusionState():
             NSLog("allZeros")
         default:
             NSLog("default")
@@ -1021,11 +1022,13 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     }
     //064,032をクリックすると呼ばれる
     func applicationDidChangeOcclusionState(notification: NSNotification) {
-        if (NSApp.occlusionState & NSApplicationOcclusionState.Visible != nil){
-            NSLog("foreground")
-        }else{
-            NSLog("background")
-        }
+
+        NSLog("applicationDidChangeOcclusionState")
+//        if (NSApp.occlusionState & NSApplicationOcclusionState.Visible != []){
+//            NSLog("foreground")
+//        }else{
+//            NSLog("background")
+//        }
     }
     
     //NSApplication
@@ -1130,15 +1133,15 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
     //アプリケーションがファイルドロップでOpenされた
     //ターゲット　アプリケーション設定　書類のタイプ　役割Editer 拡張子"*** *" OSタイプ"*** *"を設定してある
     //Swift1.2
-    func application(sender: NSApplication, openFiles filenames: [AnyObject]) {
+    func application(sender: NSApplication, openFiles filenames: [String]) {
         remoteStateTextField.stringValue = "File drop open"
         
         var firstMissingFile :NSString? = nil ;
-        var files : NSMutableArray = NSMutableArray()
+        let files : NSMutableArray = NSMutableArray()
         var i : Int
-        var count :Int = filenames.count
+        let count :Int = filenames.count
         for (i = 0 ; i < count ; ++i){
-            var name : NSString = (filenames as NSArray).objectAtIndex(i) as! NSString
+            let name : NSString = (filenames as NSArray).objectAtIndex(i) as! NSString
             if (NSFileManager.defaultManager().fileExistsAtPath(name as String)){
                 files.addObject(name)
             }else if ( firstMissingFile != nil ){
@@ -1148,7 +1151,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSUserInterfaceItemSearching 
             
         }
         if ( firstMissingFile != nil ){
-            var alert : NSAlert = NSAlert()
+            let alert : NSAlert = NSAlert()
             alert.addButtonWithTitle("OK")
             
             var text :NSString

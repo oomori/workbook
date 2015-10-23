@@ -20,9 +20,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction001(sender : AnyObject?){
         //準備
-        let aButton = aButton001
+        //let aButton = aButton001
         let aView   = aView001
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         aView?.lockFocus()
@@ -34,30 +34,30 @@ class ViewController: NSViewController {
     }
     //実験用ウインドウ作成、実験用ビュー、実行ボタンを作成してウインドウに貼り付けるところまで
     @IBAction func function001(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "View アクション"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 10.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 10.0, 100.0, 30.0))
         theButton.title = "Color!"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction001:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 30.0, 300.0, 180.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 30.0, 300.0, 180.0))
                 theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton001 = theButton    //ボタン
@@ -73,9 +73,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction002(sender : AnyObject?){
         //準備
-        let aButton = aButton002
+        //let aButton = aButton002
         let aView   = aView002
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         aView?.lockFocus()
@@ -86,30 +86,30 @@ class ViewController: NSViewController {
         
     }
     @IBAction func function002(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "View アクション"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 10.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 10.0, 100.0, 30.0))
         theButton.title = "Color!"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction002:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 30.0, 300.0, 180.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 30.0, 300.0, 180.0))
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton002 = theButton    //ボタン
@@ -125,9 +125,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction003(sender : AnyObject?){
         //準備
-        let aButton = aButton003
+        //let aButton = aButton003
         let aView   = aView003
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         aView?.lockFocus()
@@ -138,30 +138,30 @@ class ViewController: NSViewController {
         
     }
     @IBAction func function003(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "View アクション"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 10.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 10.0, 100.0, 30.0))
         theButton.title = "Color!"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction003:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 30.0, 300.0, 180.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 30.0, 300.0, 180.0))
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton003 = theButton    //ボタン
@@ -176,9 +176,9 @@ class ViewController: NSViewController {
     //実験用ビューのボタンを押した時に実行されるところ
     func viewAction004(sender : AnyObject?){
         //準備
-        let aButton = aButton004
+        //let aButton = aButton004
         let aView   = aView004
-        var theWindow : NSWindow = aButton!.window!
+        //var theWindow : NSWindow = aButton!.window!
         //準備ここまで
         
         aView?.lockFocus()
@@ -189,30 +189,30 @@ class ViewController: NSViewController {
         
     }
     @IBAction func function004(sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "View アクション"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 10.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 10.0, 100.0, 30.0))
         theButton.title = "Color!"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction004:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : NSView = NSView(frame: NSMakeRect(0.0, 30.0, 300.0, 180.0))
+        let theView : NSView = NSView(frame: NSMakeRect(0.0, 30.0, 300.0, 180.0))
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton004 = theButton    //ボタン

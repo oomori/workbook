@@ -41,7 +41,7 @@ class ViewController: NSViewController {
                 theBitmap.setColor(NSColor.orangeColor(), atX: x, y: y)
             }
         }
-        var g : NSGraphicsContext = NSGraphicsContext(bitmapImageRep: theBitmap)!
+        let g : NSGraphicsContext = NSGraphicsContext(bitmapImageRep: theBitmap)!
         g.saveGraphicsState()
         NSGraphicsContext.setCurrentContext(g)
         
@@ -51,29 +51,31 @@ class ViewController: NSViewController {
         
         NSGraphicsContext.restoreGraphicsState()
         
-        theBitmap.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile("~/Desktop/test.png".stringByExpandingTildeInPath, atomically: true)
+        let destiPath : NSString = ("~/Desktop/test.png" as NSString).stringByExpandingTildeInPath
+        
+        theBitmap.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile(destiPath as String, atomically: true)
         
         
         
         
     }
     @IBAction func function001  (sender: AnyObject) {
-        var aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
+        let aWindow : NSWindow = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300, 200),
             styleMask:  NSTitledWindowMask |
                 NSClosableWindowMask |
                 NSMiniaturizableWindowMask |
             NSResizableWindowMask,
             backing:    .Buffered,
-            defer:      false)
+            `defer`:      false)
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         
         //ボタンを作成
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 2.0, 100.0, 30.0))
         theButton.title = "Set"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction001:")
         theButton.target = self
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
         
         //ボタンの制約設定
@@ -81,23 +83,25 @@ class ViewController: NSViewController {
         theButton.translatesAutoresizingMaskIntoConstraints = false
         
         //先にaddSubviewする
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         
-        var viewDictionary:Dictionary = ["theButton": theButton]
+        let viewDictionary:Dictionary = ["theButton": theButton]
         
-        var constraints:NSMutableArray = NSMutableArray()
+        let constraints:NSMutableArray = NSMutableArray()
         
         //横方向の制限
         //ボタン真ん中に
-        var constraintFormat1:[AnyObject] =
+        let constraintFormat1:[NSLayoutConstraint] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-[theButton]-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary)
         constraints.addObjectsFromArray(constraintFormat1)
         
-        aWindow.contentView.addConstraints(constraints as [AnyObject])
+        aWindow.contentView!.addConstraints(constraintFormat1)
+        
+        //aWindow.contentView!.addConstraints(constraints as [AnyObject])
         
         
         
@@ -105,9 +109,9 @@ class ViewController: NSViewController {
         //---------------------------------------------------------
         //オリジナルのスクロールビュー
         //まずはスクロールビュー
-        var scrollView : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,150.0,170.0))
+        let scrollView : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,150.0,170.0))
         //中身のイメージビュー
-        var theImageView : NSImageView = NSImageView(frame: NSMakeRect(0.0,30.0,150.0,300.0))
+        let theImageView : NSImageView = NSImageView(frame: NSMakeRect(0.0,30.0,150.0,300.0))
         
         theImageView.image = NSImage(named: "testImage")
         
@@ -116,7 +120,7 @@ class ViewController: NSViewController {
         scrollView.hasHorizontalScroller = true
         scrollView.hasVerticalScroller = true
         scrollView.hasHorizontalRuler = true
-        aWindow.contentView.addSubview(scrollView)
+        aWindow.contentView!.addSubview(scrollView)
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -166,9 +170,9 @@ class ViewController: NSViewController {
         //加工したNSBitmapImageRepを右側に表示
         //---------------------------------------------------------
         //ピクセルを加工した方のスクロールビュー
-        var scrollView2 : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,150.0,170.0))
+        let scrollView2 : NSScrollView = NSScrollView(frame: NSMakeRect(0.0,30.0,150.0,170.0))
         //中身のイメージビュー
-        var theImageView2 : NSImageView = NSImageView(frame: NSMakeRect(0.0,30.0,150.0,300.0))
+        let theImageView2 : NSImageView = NSImageView(frame: NSMakeRect(0.0,30.0,150.0,300.0))
         
         //addRepresentation:
         theImageView2.image = NSImage()
@@ -179,28 +183,28 @@ class ViewController: NSViewController {
         scrollView2.hasHorizontalScroller = true
         scrollView2.hasVerticalScroller = true
         scrollView2.hasHorizontalRuler = true
-        aWindow.contentView.addSubview(scrollView2)
+        aWindow.contentView!.addSubview(scrollView2)
         
         scrollView2.translatesAutoresizingMaskIntoConstraints = false
         
         //ウインドウに対するスクロールビューの制約
         //縦の制約
-        var scrollViewConstraints1 : NSMutableArray = NSMutableArray()
-        var scrollViewConstraints2 : NSMutableArray = NSMutableArray()
+        let scrollViewConstraints1 : NSMutableArray = NSMutableArray()
+        let scrollViewConstraints2 : NSMutableArray = NSMutableArray()
         
-        var viewDictionary3 : Dictionary = ["scrollView": scrollView]
-        var viewDictionary4 : Dictionary = ["scrollView2": scrollView2]
+        let viewDictionary3 : Dictionary = ["scrollView": scrollView]
+        let viewDictionary4 : Dictionary = ["scrollView2": scrollView2]
         
-        var scrollViewConstraintV:[AnyObject] =
+        let scrollViewConstraintV:[NSLayoutConstraint] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-(5)-[scrollView(==250)]-(30)-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary3)
-        var scrollViewConstraint2V:[AnyObject] =
+        let scrollViewConstraint2V:[NSLayoutConstraint] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-(5)-[scrollView2(==250)]-(30)-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary4)
         
@@ -208,19 +212,23 @@ class ViewController: NSViewController {
         scrollViewConstraints2.addObjectsFromArray(scrollViewConstraint2V)
         
         //横の制約　スクロールビューが親ビューに対して
-        var viewDictionary5 : Dictionary = ["scrollView": scrollView,"scrollView2": scrollView2]
-        var scrollViewConstraintH:[AnyObject] =
+        let viewDictionary5 : Dictionary = ["scrollView": scrollView,"scrollView2": scrollView2]
+        let scrollViewConstraintH:[NSLayoutConstraint] =
         NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-(5)-[scrollView(==150)]-(5)-[scrollView2(==150)]-(5)-|",
-            options : NSLayoutFormatOptions(0),
+            options : NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewDictionary5)
 
         scrollViewConstraints1.addObjectsFromArray(scrollViewConstraintH)
         
         //ウインドウに対するスクロールビューの制約の追加
-        aWindow.contentView.addConstraints(scrollViewConstraints1 as [AnyObject])
-        aWindow.contentView.addConstraints(scrollViewConstraints2 as [AnyObject])
+        aWindow.contentView!.addConstraints(scrollViewConstraintH)
+        aWindow.contentView!.addConstraints(scrollViewConstraintV)
+        //aWindow.contentView!.addConstraints(scrollViewConstraints1 as [AnyObject])
+        
+        aWindow.contentView!.addConstraints(scrollViewConstraint2V)
+        //aWindow.contentView!.addConstraints(scrollViewConstraints2 as [AnyObject])
 
         //ピクセルを加工した方のスクロールビュー終了
         //---------------------------------------------------------
@@ -248,36 +256,38 @@ class ViewController: NSViewController {
         let theBitmap = aView002?.bitmapImageRepForCachingDisplayInRect(aView002!.bounds)
         aView002!.cacheDisplayInRect(aView002!.bounds, toBitmapImageRep: theBitmap! )
 
-        theBitmap!.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile("~/Desktop/view.png".stringByExpandingTildeInPath, atomically: true)
+        let destiPath : NSString = ("~/Desktop/view.png" as NSString).stringByExpandingTildeInPath
+        
+        theBitmap!.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile(destiPath as String, atomically: true)
         
         
     }
     @IBAction func function002  (sender: AnyObject) {
-        var aWindow : NSWindow
+        let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
             styleMask: NSTitledWindowMask
                 | NSClosableWindowMask
                 | NSMiniaturizableWindowMask
                 | NSResizableWindowMask,
             backing: .Buffered,
-            defer: false,
+            `defer`: false,
             screen: NSScreen.mainScreen())
         windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
         aWindow.center()//ウインドウをスクリーンの中心に
         aWindow.title = "NSBitmapImageRep"//タイトル設定
         //ボタン
-        var theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
+        let theButton : NSButton = NSButton(frame: NSMakeRect(100.0, 0.0, 100.0, 30.0))
         theButton.title = "Action"
         theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         theButton.action = Selector("viewAction002:")
         theButton.target = self
         
-        aWindow.contentView.addSubview(theButton)
+        aWindow.contentView!.addSubview(theButton)
         //ビュー
-        var theView : TestView002 = TestView002(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
+        let theView : TestView002 = TestView002(frame: NSMakeRect(0.0, 20.0, 300.0, 200.0))
         //レイヤーバックドにするのだ
         theView.wantsLayer = true
-        aWindow.contentView.addSubview(theView)
+        aWindow.contentView!.addSubview(theView)
         
         //実験ウインドウにUIパーツを渡す
         self.aButton002 = theButton    //ボタン
@@ -301,7 +311,7 @@ class ViewController: NSViewController {
         //画像データを読み込み
         //NSLog("nibPath %@",nibPath )
         
-        var theData : NSMutableData = NSMutableData(contentsOfFile: nibPath as String )!
+        let theData : NSMutableData = NSMutableData(contentsOfFile: nibPath as String )!
         
         //オフスクリーンを作成
         let theBitmap : NSBitmapImageRep = NSBitmapImageRep(data: theData)!
@@ -347,7 +357,7 @@ class ViewController: NSViewController {
         
         
         //一度TIFFデータにしてみる
-        var theData2 : NSData = theBitmap.TIFFRepresentation!
+        let theData2 : NSData = theBitmap.TIFFRepresentation!
         var theData3 : NSMutableData = NSMutableData(data: theData2 )
         
         //データ書き換え
@@ -355,7 +365,7 @@ class ViewController: NSViewController {
         theData3.replaceBytesInRange(NSMakeRange(100, aLength), withBytes: &theData3, length: aLength)
         
         //imageRepWithData
-        var theData4 : NSData = NSData(data: theData3 )
+        let theData4 : NSData = NSData(data: theData3 )
         let theBitmap2 : NSBitmapImageRep = NSBitmapImageRep(data: theData4)!
         
         
@@ -366,8 +376,9 @@ class ViewController: NSViewController {
             }
         }
         
+        let destiPath : NSString = ("~/Desktop/test003.png" as NSString).stringByExpandingTildeInPath
         
-        theBitmap2.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile("~/Desktop/test003.png".stringByExpandingTildeInPath, atomically: true)
+        theBitmap2.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile(destiPath as String, atomically: true)
         
         
     }
