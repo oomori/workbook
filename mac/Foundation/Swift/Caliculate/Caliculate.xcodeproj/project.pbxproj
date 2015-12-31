@@ -150,6 +150,7 @@
 		455ADC3B1A66C25E00C4CF5F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = oomori;
 				TargetAttributes = {
@@ -393,6 +394,7 @@
 				455ADC5F1A66C25E00C4CF5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		455ADC601A66C25E00C4CF5F /* Build configuration list for PBXNativeTarget "CaliculateTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +403,7 @@
 				455ADC621A66C25E00C4CF5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

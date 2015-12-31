@@ -190,7 +190,7 @@
     [aSet unionSet:bSet];
     
     [aSet enumerateObjectsUsingBlock:^(id obj,BOOL *stop) {
-        NSLog(@"%s %p %@ %d",__FUNCTION__,obj,obj,[aSet countForObject:obj]);
+        NSLog(@"%s %p %@ %lu",__FUNCTION__,obj,obj,(unsigned long)[aSet countForObject:obj]);
     }];
     //=> d 2
     //=> b 1
@@ -201,7 +201,7 @@
     [aSet minusSet:cSet];
     
     [aSet enumerateObjectsUsingBlock:^(id obj,BOOL *stop) {
-        NSLog(@"%s %p %@ %d",__FUNCTION__,obj,obj,[aSet countForObject:obj]);
+        NSLog(@"%s %p %@ %lu",__FUNCTION__,obj,obj,(unsigned long)[aSet countForObject:obj]);
     }];
     //=> d 1
     //=> b 1
@@ -221,14 +221,14 @@
     [aSet addObject:@"a"];
     
     [aSet enumerateObjectsUsingBlock:^(id obj,BOOL *stop) {
-        NSLog(@"%s %p %@ %d",__FUNCTION__,obj,obj,[aSet countForObject:obj]);
+        NSLog(@"%s %p %@ %lu",__FUNCTION__,obj,obj,(unsigned long)[aSet countForObject:obj]);
     }];
     
     [aSet removeObject:@"b"];
     [aSet removeObject:@"a"];
     
     [aSet enumerateObjectsUsingBlock:^(id obj,BOOL *stop) {
-        NSLog(@"%s %p %@ %d",__FUNCTION__,obj,obj,[aSet countForObject:obj]);
+        NSLog(@"%s %p %@ %lu",__FUNCTION__,obj,obj,(unsigned long)[aSet countForObject:obj]);
     }];
 
 
@@ -246,7 +246,7 @@
 	NSEnumerator *aEnumerator;
     aEnumerator = [aSet objectEnumerator];
     while ((obj = [aEnumerator nextObject]) != nil) {
-		NSLog(@"%s %p %@ %d",__FUNCTION__,obj,obj,[aSet countForObject:obj]);
+		NSLog(@"%s %p %@ %lu",__FUNCTION__,obj,obj,(unsigned long)[aSet countForObject:obj]);
 	}
     
     

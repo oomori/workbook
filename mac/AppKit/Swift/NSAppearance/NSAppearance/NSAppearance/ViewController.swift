@@ -1,0 +1,68 @@
+//
+//  ViewController.swift
+//  NSAppearance
+//
+//  Created by air on 2015/11/03.
+//  Copyright © 2015年 oomori. All rights reserved.
+//
+//
+
+
+import Cocoa
+
+class ViewController: NSViewController {
+
+    var windowArray : NSMutableArray = []   //ウインドウ保持用
+    
+    func buttonAction001(sender: AnyObject)
+    {
+        NSLog("!!!")
+    }
+    @IBAction func function001( sender: AnyObject) {
+        //アピアランスの変更
+        let ap : NSAppearance = NSAppearance(named: NSAppearanceNameVibrantDark)!
+        
+        let aWindow : NSWindow
+        = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
+            styleMask: NSTitledWindowMask
+                | NSClosableWindowMask
+                | NSMiniaturizableWindowMask
+                | NSResizableWindowMask,
+            backing: .Buffered,
+            `defer`: false,
+            screen: NSScreen.mainScreen())
+        windowArray.addObject(aWindow) //ウインドウを保持するための配列に追加。アプリ終了時に配列は破棄
+        aWindow.appearance = ap
+        aWindow.center()//ウインドウをスクリーンの中心に
+        aWindow.title = "ウインドウタイトル"//タイトル設定
+        //
+        let theButton : NSButton = NSButton(frame: NSMakeRect(50.0, 50.0, 100.0, 30.0))
+        theButton.title = "Change"
+        theButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        theButton.action = Selector("buttonAction001:")
+        theButton.target = self
+        theButton.setButtonType(.MomentaryLightButton)
+        //.SwitchButton
+        //.PushOnPushOffButton
+        aWindow.contentView!.addSubview(theButton)
+        
+        aWindow.orderFront(self)//前面に
+        aWindow.makeKeyAndOrderFront(self)//表示
+        
+        
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+    override var representedObject: AnyObject? {
+        didSet {
+        // Update the view, if already loaded.
+        }
+    }
+
+
+}
+

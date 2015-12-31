@@ -25,7 +25,7 @@
     NSURL *newURL = [aUrl URLByAppendingPathComponent:filename];
     NSData *aData = [NSData dataWithContentsOfURL:newURL];
     
-    NSLog(@"%u bytes",[aData length]);
+    NSLog(@"%lu bytes",(unsigned long)[aData length]);
 }
 
 #pragma mark NSData dataWithContentsOfURL:options:error
@@ -40,7 +40,7 @@
                                           options:NSDataReadingUncached
                                             error:&anError];
     
-    NSLog(@"%u bytes",[aData length]);
+    NSLog(@"%lu bytes",(unsigned long)[aData length]);
 }
 
 #pragma mark NSData dataWithContentsOfFile
@@ -53,7 +53,7 @@
     
     NSData *aData = [NSData dataWithContentsOfFile:filePath];
     
-    NSLog(@"%u bytes",[aData length]);
+    NSLog(@"%lu bytes",(unsigned long)[aData length]);
 }
 #pragma mark NSData dataWithContentsOfFile:options:error:
 -(void)method005
@@ -67,11 +67,12 @@
                                            options:NSDataReadingUncached
                                              error:&anError];
     
-    NSLog(@"%s %u bytes",__FUNCTION__,[aData length]);
+    NSLog(@"%s %lu bytes",__FUNCTION__,(unsigned long)[aData length]);
     //=>10796 bytes
 }
 
 #pragma mark NSData dataWithBytesNoCopy:
+//変更ありiOS9.0
 -(void)method006
 {
     NSBundle *bundle = [NSBundle mainBundle];
@@ -82,14 +83,14 @@
     NSData *aData = [NSData dataWithContentsOfFile:filePath
                                            options:NSDataReadingUncached
                                              error:&anError];
-    unsigned int pngLength = [aData length];
+    NSUInteger pngLength = [aData length];
     unsigned char pngBytes[pngLength];
-    [aData getBytes:pngBytes];
+    [aData getBytes:pngBytes length:pngLength];
     
     //ここまでバイト列の準備
     
     NSData *data1 = [NSData dataWithBytesNoCopy:pngBytes length:pngLength freeWhenDone:NO];
-    NSLog(@"%s %d bytes",__FUNCTION__,[data1 length]);
+    NSLog(@"%s %lu bytes",__FUNCTION__,(unsigned long)[data1 length]);
     NSLog(@"%s %p",__FUNCTION__,pngBytes);
     
     UIImage *image = [UIImage imageWithData:data1];
@@ -116,37 +117,37 @@
     unsigned char testByte1[5];
     unsigned char testByte2[5];
 
-    [data1 getBytes:testByte1];
-    [data2 getBytes:testByte2];
+    [data1 getBytes:testByte1 length:5];
+    [data2 getBytes:testByte2 length:5];
     NSLog(@"%s %u",__FUNCTION__,pngBytes[0]);
     NSLog(@"%s %u",__FUNCTION__,testByte1[0]);
     NSLog(@"%s %u",__FUNCTION__,testByte2[0]);
 
     //元のデータを変更してみる
     pngBytes[0] = 0x0009;
-    [data1 getBytes:testByte1];
-    [data2 getBytes:testByte2];
+    [data1 getBytes:testByte1 length:5];
+    [data2 getBytes:testByte2 length:5];
     
-    NSLog(@"%s %u",__FUNCTION__,pngBytes[0]); //=>9　変更された！　当たり前
-    NSLog(@"%s %u",__FUNCTION__,testByte1[0]);//=>9　変更された　元のデータを参照しているから
-    NSLog(@"%s %u",__FUNCTION__,testByte2[0]);//=>1　変更されない（コピーしているから）
+    NSLog(@"0 %s %u",__FUNCTION__,pngBytes[0]); //=>9　変更された！　当たり前
+    NSLog(@"1 %s %u",__FUNCTION__,testByte1[0]);//=>9　変更された　元のデータを参照しているから
+    NSLog(@"2 %s %u",__FUNCTION__,testByte2[0]);//=>1　変更されない（コピーしているから）
     
 
     unsigned char testByte3;
     [data1 getBytes:&testByte3 length:sizeof(unsigned char)];
-    NSLog(@"%s %u",__FUNCTION__,testByte3);
+    NSLog(@"3 %s %u",__FUNCTION__,testByte3);
     //=>9
     
     unsigned char testByte4;
     [data1 getBytes:&testByte4 range:NSMakeRange(1,1)];
-    NSLog(@"%s %u",__FUNCTION__,testByte4);
-    //=>9
+    NSLog(@"4 %s %u",__FUNCTION__,testByte4);
+    //=>2
     
     unsigned char testByte5;
     NSData *data5 = [data1 subdataWithRange:NSMakeRange(1,1)];
-    [data5 getBytes:&testByte5];
-    NSLog(@"%s %u",__FUNCTION__,testByte5);
-    //=>9
+    [data5 getBytes:&testByte5 length:sizeof(testByte5)];
+    NSLog(@"5 %s %u",__FUNCTION__,testByte5);
+    //=>2
     
     unsigned char *findByte = malloc(sizeof(unsigned char)*1);
     
@@ -155,7 +156,7 @@
     
     NSRange findRange = [data1 rangeOfData:data6 options:0 range:NSMakeRange(0,5)];
     
-    NSLog(@"%s %u-%u",__FUNCTION__,findRange.location,findRange.length);
+    NSLog(@"%s %lu-%lu",__FUNCTION__,(unsigned long)findRange.location,(unsigned long)findRange.length);
     //=>
     
     free(findByte);
@@ -206,7 +207,7 @@
     //検証
     NSData *pngData = [NSData dataWithContentsOfURL:bUrl];
     
-    NSLog(@"%u bytes",[pngData length]);
+    NSLog(@"%lu bytes",(unsigned long)[pngData length]);
     //=>[OOOAppDelegate method010]　10796 bytes
 }
 
@@ -239,7 +240,7 @@
         
     }
     
-    NSLog(@"%s %u bytes",__FUNCTION__,[aData length]);
+    NSLog(@"%s %lu bytes",__FUNCTION__,(unsigned long)[aData length]);
     //=>10796 bytes
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

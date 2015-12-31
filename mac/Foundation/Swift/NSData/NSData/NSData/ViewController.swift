@@ -5,24 +5,25 @@
 //  Created by air on 2015/02/14.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
-
+//Swift 2.0 converted
 import Cocoa
 
 class ViewController: NSViewController {
 
     //NSData getBytes:length:
     //NSData dataWithBytes:length:
+    //Swift2.0
     @IBAction func function001(sender: AnyObject) {
-        var char : [Byte]
+        var char : [UInt8]
         char = [0x10 , 0x1A, 0xBF , 0x00 , 0xAA , 0xFF]
-        var dat1 = NSData(bytes: char, length: 6)
-        println("\(dat1)")
+        let dat1 = NSData(bytes: char, length: 6)
+        print("\(dat1)")
         //-><101abf00 aaff>
     }
     //NSData data
     @IBAction func function002(sender: AnyObject) {
         let dat1 = NSData()
-        println("\(dat1)")
+        print("\(dat1)")
         //-><>
     }
     //NSData

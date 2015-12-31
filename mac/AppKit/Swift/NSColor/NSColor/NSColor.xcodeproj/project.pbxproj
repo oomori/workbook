@@ -12,6 +12,7 @@
 		451F51991AA2E68A00F15C8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451F51981AA2E68A00F15C8F /* Images.xcassets */; };
 		451F519C1AA2E68A00F15C8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451F519A1AA2E68A00F15C8F /* Main.storyboard */; };
 		451F51A81AA2E68A00F15C8F /* NSColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F51A71AA2E68A00F15C8F /* NSColorTests.swift */; };
+		4570AFE91BE59D920040DC1D /* testImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4570AFE81BE59D920040DC1D /* testImage.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		451F51A11AA2E68A00F15C8F /* NSColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		451F51A61AA2E68A00F15C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		451F51A71AA2E68A00F15C8F /* NSColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorTests.swift; sourceTree = "<group>"; };
+		4570AFE81BE59D920040DC1D /* testImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				451F51941AA2E68A00F15C8F /* AppDelegate.swift */,
 				451F51961AA2E68A00F15C8F /* ViewController.swift */,
 				451F51981AA2E68A00F15C8F /* Images.xcassets */,
+				4570AFE81BE59D920040DC1D /* testImage.png */,
 				451F519A1AA2E68A00F15C8F /* Main.storyboard */,
 				451F51921AA2E68A00F15C8F /* Supporting Files */,
 			);
@@ -191,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4570AFE91BE59D920040DC1D /* testImage.png in Resources */,
 				451F51991AA2E68A00F15C8F /* Images.xcassets in Resources */,
 				451F519C1AA2E68A00F15C8F /* Main.storyboard in Resources */,
 			);

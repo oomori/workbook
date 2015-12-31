@@ -7,6 +7,8 @@
 //  ARC ON
 // 2013.10.4 7.0 update
 
+//createFileAtPathがバンドル内に書き込みできない
+
 #import <mach/mach_time.h>
 #import "OOOAppDelegate.h"
 
@@ -145,6 +147,8 @@
 }
 
 #pragma mark writeToURL:atomically:
+//バンドルに書き込めなくなったので、ドキュメントに書き込み
+//http://cocoaapi.hatenablog.com/entry/00040417/NSArray_writeToURL_atomically_
 -(void)method011
 {
     //書き込み用のNSArrayを作成
@@ -159,12 +163,19 @@
                           @"NSFileExtensionHidden": @YES};
     
     NSMutableData *dat1 = [[NSMutableData alloc] initWithCapacity:1];
+
+    //ドキュメントディレクトリに
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    [myFile changeCurrentDirectoryPath:[documentsDirectory stringByExpandingTildeInPath]];
     
-    [myFile changeCurrentDirectoryPath:[[[NSBundle mainBundle] resourcePath] stringByExpandingTildeInPath]];
     [myFile createFileAtPath:@"plistfile2.plist" contents:dat1 attributes:dic];
     NSLog(@"011 myFile path = %@",[myFile currentDirectoryPath]);
     
-    NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"plistfile2" ofType:@"plist"];
+    NSString *resourcePath = [documentsDirectory stringByAppendingString:@"/plistfile2.plist"];
+
+    NSLog(@"************************* = %@",resourcePath);
+    
     NSURL *url = [NSURL fileURLWithPath:resourcePath];
     //書き込み
     [anArray writeToURL:url atomically:YES];
@@ -410,9 +421,9 @@
     
     //NSString+Extractとしてカテゴリを作っている。comparePlus:というメソッドを作成済み。
     //これは単に文字の長さが長いかを比べるメソッド
-    retArr = [ar sortedArrayUsingSelector:@selector(compareLength:)];
+    //retArr = [ar sortedArrayUsingSelector:@selector(compareLength:)];
     
-    NSLog(@"021 %@",[retArr description]);
+    //NSLog(@"021 %@",[retArr description]);
     //=>021 (cccc,aaa,bbb,a)
 }
 
@@ -531,8 +542,8 @@
 #pragma mark sortedArrayUsingFunction:context:
 NSInteger intSort(id val1, id val2, void *context)
 {
-    int iVal1 = [val1 integerValue];
-    int iVal2 = [val2 integerValue];
+    NSInteger iVal1 = [val1 integerValue];
+    NSInteger iVal2 = [val2 integerValue];
     if (iVal1 < iVal2)
         return NSOrderedAscending;
     else if (iVal1 > iVal2)
@@ -601,7 +612,7 @@ NSInteger intSort(id val1, id val2, void *context)
     id obj1 = anArray[1];
     NSLog(@"029 obj1= <0x%08lx>,%@",(unsigned long)obj1,obj1);
     id obj2 = anotherArray[1];
-    NSLog(@"029 obj2= <0x%08x>,%@",(NSUInteger)obj2,obj2);
+    NSLog(@"029 obj2= <0x%08lx>,%@",(unsigned long)obj2,obj2);
     //コピーされているので違うオブジェクトを含んでいる
     //=>029 obj1= <0x06838ee0>,bbb
     //=>029 obj2= <0x06838f80>,bbb
@@ -610,7 +621,7 @@ NSInteger intSort(id val1, id val2, void *context)
     [bbb appendString:@"+"];
     
     NSLog(@"029 obj1= <0x%08lx>,%@",(unsigned long)obj1,obj1);
-    NSLog(@"029 obj2= <0x%08x>,%@",(NSUInteger)obj2,obj2);
+    NSLog(@"029 obj2= <0x%08lx>,%@",(unsigned long)obj2,obj2);
     //obj1とobj2は違うNSString示しているのでobj2はbbbのまま
     //=>029 obj1= <0x06838ee0>,bbb+
     //=>029 obj2= <0x06838f80>,bbb
@@ -823,7 +834,7 @@ NSInteger intSort(id val1, id val2, void *context)
                           else
                               return NSOrderedSame;
                       }];
-    NSLog(@"%s %d",__FUNCTION__ ,index1);
+    NSLog(@"%s %lu",__FUNCTION__ ,(unsigned long)index1);
                             
 }
 #pragma mark indexOfObject:inSortedRange:options:usingComparator:
@@ -835,7 +846,7 @@ NSInteger intSort(id val1, id val2, void *context)
     for (NSUInteger i = 0; i < amount; ++i) {;
         CustomClass *customClass = [[CustomClass alloc] init];
         NSMutableString *muStr = [[NSMutableString alloc] initWithCapacity:0];
-        [muStr appendFormat:@"string%d",i];
+        [muStr appendFormat:@"string%lu",(unsigned long)i];
         [customClass setCustomClassValue:muStr];
         
         [customClass setCustomNumber:@(i)];
@@ -846,7 +857,7 @@ NSInteger intSort(id val1, id val2, void *context)
     NSNumber* number = @824242;
     CustomClass *searchObj = [[CustomClass alloc] init];
     NSMutableString *muStr = [[NSMutableString alloc] initWithCapacity:0];
-    [muStr appendFormat:@"string%d",[number integerValue]];
+    [muStr appendFormat:@"string%ld",(long)[number integerValue]];
     [searchObj setCustomClassValue:muStr];    
     [searchObj setCustomNumber:number];
 
@@ -1025,7 +1036,7 @@ NSInteger intSort(id val1, id val2, void *context)
     for (NSUInteger i = 0; i < amount; ++i) {;
         CustomClass *customClass = [[CustomClass alloc] init];
         NSMutableString *muStr = [[NSMutableString alloc] initWithCapacity:0];
-        [muStr appendFormat:@"string%d",i];
+        [muStr appendFormat:@"string%lu",(unsigned long)i];
         [customClass setCustomClassValue:muStr];
         
         [customClass setCustomNumber:@(i)];
@@ -1045,7 +1056,7 @@ NSInteger intSort(id val1, id val2, void *context)
     NSNumber* number = @824242;
     CustomClass *searchObj = [[CustomClass alloc] init];
     NSMutableString *muStr = [[NSMutableString alloc] initWithCapacity:0];
-    [muStr appendFormat:@"string%d",[number integerValue]];
+    [muStr appendFormat:@"string%ld",(long)[number integerValue]];
     [searchObj setCustomClassValue:muStr];
     [searchObj setCustomNumber:number];
     
@@ -1065,7 +1076,7 @@ NSInteger intSort(id val1, id val2, void *context)
                                        return NSOrderedSame;
                                }];
     //NSLog(@"%s %@",__FUNCTION__ ,[(CustomClass *)[anArray objectAtIndex:index1] customClassValue]);
-    NSLog(@"%s %u",__FUNCTION__ ,index1);
+    NSLog(@"%s %lu",__FUNCTION__ ,(unsigned long)index1);
     
     //NSBinarySearchingFirstEqualの場合は
     //-[OOOAppDelegate method044] string824242
@@ -1084,7 +1095,7 @@ NSInteger intSort(id val1, id val2, void *context)
     if (uindex == NSNotFound) {
         NSLog(@"Not Found");
     }else {
-        NSLog(@"002 index = %u",uindex);
+        NSLog(@"002 index = %lu",(unsigned long)uindex);
     }
     
     

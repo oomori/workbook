@@ -222,8 +222,40 @@ class ViewController: NSViewController {
         aWindow.makeKeyAndOrderFront(self)//表示
     }
     //NSColor
+    //カラーのファイルを作成
     @IBAction func function005(sender: AnyObject) {
+        //バンドル取得
+        let nibBundle : NSBundle = NSBundle.mainBundle()
         
+        //バンドルにある画像から
+        let nibPath : NSString = nibBundle.pathForResource("testImage.png", ofType: nil )!
+        
+        //画像データを読み込み
+        //NSLog("nibPath %@",nibPath )
+        
+        let theData : NSMutableData = NSMutableData(contentsOfFile: nibPath as String )!
+        
+        //オフスクリーンを作成
+        let theBitmap : NSBitmapImageRep = NSBitmapImageRep(data: theData)!
+        
+        
+        //一度TIFFデータにしてみる
+        let theData2 : NSData = theBitmap.TIFFRepresentation!
+        let theBitmap2 : NSBitmapImageRep = NSBitmapImageRep(data: theData2)!
+        
+        
+        //ビットマップの加工、ここではオレンジに塗りつぶす
+        for y in 0...50 {
+            for x in 0...100 {
+                theBitmap2.setColor(NSColor.orangeColor(), atX: x, y: y)
+            }
+        }
+        
+        let destiPath : NSString = ("~/Desktop/colorTag.png" as NSString).stringByExpandingTildeInPath
+        
+        theBitmap2.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile(destiPath as String, atomically: true)
+        
+
     }
     //NSColor
     @IBAction func function006(sender: AnyObject) {

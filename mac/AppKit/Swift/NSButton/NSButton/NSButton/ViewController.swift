@@ -13,6 +13,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var myButton: NSButton!
     var windowArray : NSMutableArray = []   //ウインドウ保持用
     //NSButton setButtonType
+    //Swift2.0
     @IBAction func function001(sender: AnyObject) {
         myButton.setButtonType(NSButtonType.PushOnPushOffButton)
         // MomentaryLightButton // was NSMomentaryPushButton
@@ -25,7 +26,7 @@ class ViewController: NSViewController {
         // MomentaryPushInButton // was NSMomentaryLight
     }
     //NSButton title
-    //Swift1.2
+    //Swift2.0
     func buttonAction002(sender: AnyObject?){
         //var theWindow : NSWindow = (sender as! NSButton).window!
         NSLog("!!!")

@@ -232,7 +232,7 @@
 			name = WordNetJPNTests;
 			productName = WordNetJPNTests;
 			productReference = 74C3476D171AF834004C1B96 /* WordNetJPNTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -241,6 +241,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
+				LastTestingUpgradeCheck = 0700;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Satoshi Oomori";
 			};

@@ -20,7 +20,6 @@
 		74924162155EB00E007A1C90 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74924160155EB00E007A1C90 /* MainStoryboard_iPhone.storyboard */; };
 		74924165155EB00E007A1C90 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74924163155EB00E007A1C90 /* MainStoryboard_iPad.storyboard */; };
 		74924168155EB00E007A1C90 /* OOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74924167155EB00E007A1C90 /* OOOViewController.m */; };
-		74924170155EB00F007A1C90 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7492416F155EB00F007A1C90 /* SenTestingKit.framework */; };
 		74924171155EB00F007A1C90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7492414E155EB00E007A1C90 /* UIKit.framework */; };
 		74924172155EB00F007A1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924150155EB00E007A1C90 /* Foundation.framework */; };
 		7492417A155EB00F007A1C90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74924178155EB00F007A1C90 /* InfoPlist.strings */; };
@@ -61,8 +60,7 @@
 		7492415E155EB00E007A1C90 /* OOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOAppDelegate.m; sourceTree = "<group>"; };
 		74924166155EB00E007A1C90 /* OOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OOOViewController.h; sourceTree = "<group>"; };
 		74924167155EB00E007A1C90 /* OOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OOOViewController.m; sourceTree = "<group>"; };
-		7492416E155EB00F007A1C90 /* NSSetTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSSetTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7492416F155EB00F007A1C90 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7492416E155EB00F007A1C90 /* NSSetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSSetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74924177155EB00F007A1C90 /* NSSetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSSetTests-Info.plist"; sourceTree = "<group>"; };
 		74924179155EB00F007A1C90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7492417B155EB00F007A1C90 /* NSSetTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSSetTests.h; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74924170155EB00F007A1C90 /* SenTestingKit.framework in Frameworks */,
 				74924171155EB00F007A1C90 /* UIKit.framework in Frameworks */,
 				74924172155EB00F007A1C90 /* Foundation.framework in Frameworks */,
 			);
@@ -110,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				7492414A155EB00E007A1C90 /* NSSet.app */,
-				7492416E155EB00F007A1C90 /* NSSetTests.octest */,
+				7492416E155EB00F007A1C90 /* NSSetTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,7 +118,6 @@
 				7492414E155EB00E007A1C90 /* UIKit.framework */,
 				74924150155EB00E007A1C90 /* Foundation.framework */,
 				74924152155EB00E007A1C90 /* CoreGraphics.framework */,
-				7492416F155EB00F007A1C90 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -211,8 +207,8 @@
 			);
 			name = NSSetTests;
 			productName = NSSetTests;
-			productReference = 7492416E155EB00F007A1C90 /* NSSetTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 7492416E155EB00F007A1C90 /* NSSetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -221,7 +217,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0460;
+				LastTestingUpgradeCheck = 0700;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 74924144155EB00E007A1C90 /* Build configuration list for PBXProject "NSSet" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -358,16 +355,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -375,10 +377,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -388,18 +394,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -418,6 +431,7 @@
 				GCC_PREFIX_HEADER = "NSSet/NSSet-Prefix.pch";
 				INFOPLIST_FILE = "NSSet/NSSet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -432,6 +446,7 @@
 				GCC_PREFIX_HEADER = "NSSet/NSSet-Prefix.pch";
 				INFOPLIST_FILE = "NSSet/NSSet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -443,14 +458,14 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSSet.app/NSSet";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSSet/NSSet-Prefix.pch";
 				INFOPLIST_FILE = "NSSetTests/NSSetTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -460,14 +475,14 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSSet.app/NSSet";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSSet/NSSet-Prefix.pch";
 				INFOPLIST_FILE = "NSSetTests/NSSetTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

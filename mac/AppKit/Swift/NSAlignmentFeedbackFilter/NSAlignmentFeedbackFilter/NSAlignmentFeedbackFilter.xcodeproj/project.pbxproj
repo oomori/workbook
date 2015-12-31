@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45FEAFF91BE8718700896957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEAFF81BE8718700896957 /* AppDelegate.swift */; };
+		45FEAFFB1BE8718700896957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEAFFA1BE8718700896957 /* ViewController.swift */; };
+		45FEAFFD1BE8718700896957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FEAFFC1BE8718700896957 /* Assets.xcassets */; };
+		45FEB0001BE8718700896957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45FEAFFE1BE8718700896957 /* Main.storyboard */; };
+		45FEB00B1BE8718800896957 /* NSAlignmentFeedbackFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEB00A1BE8718800896957 /* NSAlignmentFeedbackFilterTests.swift */; };
+		45FEB0161BE8718800896957 /* NSAlignmentFeedbackFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEB0151BE8718800896957 /* NSAlignmentFeedbackFilterUITests.swift */; };
+		45FEB0261BE8723D00896957 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEB0251BE8723D00896957 /* MyView.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45FEB0071BE8718800896957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45FEAFED1BE8718700896957 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45FEAFF41BE8718700896957;
+			remoteInfo = NSAlignmentFeedbackFilter;
+		};
+		45FEB0121BE8718800896957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45FEAFED1BE8718700896957 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45FEAFF41BE8718700896957;
+			remoteInfo = NSAlignmentFeedbackFilter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		45FEAFF51BE8718700896957 /* NSAlignmentFeedbackFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSAlignmentFeedbackFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FEAFF81BE8718700896957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45FEAFFA1BE8718700896957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45FEAFFC1BE8718700896957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45FEAFFF1BE8718700896957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45FEB0011BE8718700896957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45FEB0061BE8718800896957 /* NSAlignmentFeedbackFilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSAlignmentFeedbackFilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FEB00A1BE8718800896957 /* NSAlignmentFeedbackFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAlignmentFeedbackFilterTests.swift; sourceTree = "<group>"; };
+		45FEB00C1BE8718800896957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45FEB0111BE8718800896957 /* NSAlignmentFeedbackFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSAlignmentFeedbackFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FEB0151BE8718800896957 /* NSAlignmentFeedbackFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAlignmentFeedbackFilterUITests.swift; sourceTree = "<group>"; };
+		45FEB0171BE8718800896957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45FEB0251BE8723D00896957 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyView.swift; path = ../MyView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45FEAFF21BE8718700896957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEB0031BE8718800896957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEB00E1BE8718800896957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45FEAFEC1BE8718700896957 = {
+			isa = PBXGroup;
+			children = (
+				45FEAFF71BE8718700896957 /* NSAlignmentFeedbackFilter */,
+				45FEB0091BE8718800896957 /* NSAlignmentFeedbackFilterTests */,
+				45FEB0141BE8718800896957 /* NSAlignmentFeedbackFilterUITests */,
+				45FEAFF61BE8718700896957 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45FEAFF61BE8718700896957 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45FEAFF51BE8718700896957 /* NSAlignmentFeedbackFilter.app */,
+				45FEB0061BE8718800896957 /* NSAlignmentFeedbackFilterTests.xctest */,
+				45FEB0111BE8718800896957 /* NSAlignmentFeedbackFilterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45FEAFF71BE8718700896957 /* NSAlignmentFeedbackFilter */ = {
+			isa = PBXGroup;
+			children = (
+				45FEAFF81BE8718700896957 /* AppDelegate.swift */,
+				45FEAFFA1BE8718700896957 /* ViewController.swift */,
+				45FEB0251BE8723D00896957 /* MyView.swift */,
+				45FEAFFC1BE8718700896957 /* Assets.xcassets */,
+				45FEAFFE1BE8718700896957 /* Main.storyboard */,
+				45FEB0011BE8718700896957 /* Info.plist */,
+			);
+			path = NSAlignmentFeedbackFilter;
+			sourceTree = "<group>";
+		};
+		45FEB0091BE8718800896957 /* NSAlignmentFeedbackFilterTests */ = {
+			isa = PBXGroup;
+			children = (
+				45FEB00A1BE8718800896957 /* NSAlignmentFeedbackFilterTests.swift */,
+				45FEB00C1BE8718800896957 /* Info.plist */,
+			);
+			path = NSAlignmentFeedbackFilterTests;
+			sourceTree = "<group>";
+		};
+		45FEB0141BE8718800896957 /* NSAlignmentFeedbackFilterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				45FEB0151BE8718800896957 /* NSAlignmentFeedbackFilterUITests.swift */,
+				45FEB0171BE8718800896957 /* Info.plist */,
+			);
+			path = NSAlignmentFeedbackFilterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45FEAFF41BE8718700896957 /* NSAlignmentFeedbackFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FEB01A1BE8718800896957 /* Build configuration list for PBXNativeTarget "NSAlignmentFeedbackFilter" */;
+			buildPhases = (
+				45FEAFF11BE8718700896957 /* Sources */,
+				45FEAFF21BE8718700896957 /* Frameworks */,
+				45FEAFF31BE8718700896957 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSAlignmentFeedbackFilter;
+			productName = NSAlignmentFeedbackFilter;
+			productReference = 45FEAFF51BE8718700896957 /* NSAlignmentFeedbackFilter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45FEB0051BE8718800896957 /* NSAlignmentFeedbackFilterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FEB01D1BE8718800896957 /* Build configuration list for PBXNativeTarget "NSAlignmentFeedbackFilterTests" */;
+			buildPhases = (
+				45FEB0021BE8718800896957 /* Sources */,
+				45FEB0031BE8718800896957 /* Frameworks */,
+				45FEB0041BE8718800896957 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45FEB0081BE8718800896957 /* PBXTargetDependency */,
+			);
+			name = NSAlignmentFeedbackFilterTests;
+			productName = NSAlignmentFeedbackFilterTests;
+			productReference = 45FEB0061BE8718800896957 /* NSAlignmentFeedbackFilterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		45FEB0101BE8718800896957 /* NSAlignmentFeedbackFilterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FEB0201BE8718800896957 /* Build configuration list for PBXNativeTarget "NSAlignmentFeedbackFilterUITests" */;
+			buildPhases = (
+				45FEB00D1BE8718800896957 /* Sources */,
+				45FEB00E1BE8718800896957 /* Frameworks */,
+				45FEB00F1BE8718800896957 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45FEB0131BE8718800896957 /* PBXTargetDependency */,
+			);
+			name = NSAlignmentFeedbackFilterUITests;
+			productName = NSAlignmentFeedbackFilterUITests;
+			productReference = 45FEB0111BE8718800896957 /* NSAlignmentFeedbackFilterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45FEAFED1BE8718700896957 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = oomori;
+				TargetAttributes = {
+					45FEAFF41BE8718700896957 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					45FEB0051BE8718800896957 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 45FEAFF41BE8718700896957;
+					};
+					45FEB0101BE8718800896957 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 45FEAFF41BE8718700896957;
+					};
+				};
+			};
+			buildConfigurationList = 45FEAFF01BE8718700896957 /* Build configuration list for PBXProject "NSAlignmentFeedbackFilter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45FEAFEC1BE8718700896957;
+			productRefGroup = 45FEAFF61BE8718700896957 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45FEAFF41BE8718700896957 /* NSAlignmentFeedbackFilter */,
+				45FEB0051BE8718800896957 /* NSAlignmentFeedbackFilterTests */,
+				45FEB0101BE8718800896957 /* NSAlignmentFeedbackFilterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45FEAFF31BE8718700896957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FEAFFD1BE8718700896957 /* Assets.xcassets in Resources */,
+				45FEB0001BE8718700896957 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEB0041BE8718800896957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEB00F1BE8718800896957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45FEAFF11BE8718700896957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FEB0261BE8723D00896957 /* MyView.swift in Sources */,
+				45FEAFFB1BE8718700896957 /* ViewController.swift in Sources */,
+				45FEAFF91BE8718700896957 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEB0021BE8718800896957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FEB00B1BE8718800896957 /* NSAlignmentFeedbackFilterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEB00D1BE8718800896957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FEB0161BE8718800896957 /* NSAlignmentFeedbackFilterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45FEB0081BE8718800896957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45FEAFF41BE8718700896957 /* NSAlignmentFeedbackFilter */;
+			targetProxy = 45FEB0071BE8718800896957 /* PBXContainerItemProxy */;
+		};
+		45FEB0131BE8718800896957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45FEAFF41BE8718700896957 /* NSAlignmentFeedbackFilter */;
+			targetProxy = 45FEB0121BE8718800896957 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		45FEAFFE1BE8718700896957 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45FEAFFF1BE8718700896957 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45FEB0181BE8718800896957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45FEB0191BE8718800896957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		45FEB01B1BE8718800896957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NSAlignmentFeedbackFilter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.workshop.NSAlignmentFeedbackFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		45FEB01C1BE8718800896957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NSAlignmentFeedbackFilter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.workshop.NSAlignmentFeedbackFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		45FEB01E1BE8718800896957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NSAlignmentFeedbackFilterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.workshop.NSAlignmentFeedbackFilterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSAlignmentFeedbackFilter.app/Contents/MacOS/NSAlignmentFeedbackFilter";
+			};
+			name = Debug;
+		};
+		45FEB01F1BE8718800896957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NSAlignmentFeedbackFilterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.workshop.NSAlignmentFeedbackFilterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSAlignmentFeedbackFilter.app/Contents/MacOS/NSAlignmentFeedbackFilter";
+			};
+			name = Release;
+		};
+		45FEB0211BE8718800896957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NSAlignmentFeedbackFilterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.workshop.NSAlignmentFeedbackFilterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NSAlignmentFeedbackFilter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		45FEB0221BE8718800896957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NSAlignmentFeedbackFilterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.workshop.NSAlignmentFeedbackFilterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NSAlignmentFeedbackFilter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45FEAFF01BE8718700896957 /* Build configuration list for PBXProject "NSAlignmentFeedbackFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FEB0181BE8718800896957 /* Debug */,
+				45FEB0191BE8718800896957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45FEB01A1BE8718800896957 /* Build configuration list for PBXNativeTarget "NSAlignmentFeedbackFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FEB01B1BE8718800896957 /* Debug */,
+				45FEB01C1BE8718800896957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		45FEB01D1BE8718800896957 /* Build configuration list for PBXNativeTarget "NSAlignmentFeedbackFilterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FEB01E1BE8718800896957 /* Debug */,
+				45FEB01F1BE8718800896957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		45FEB0201BE8718800896957 /* Build configuration list for PBXNativeTarget "NSAlignmentFeedbackFilterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FEB0211BE8718800896957 /* Debug */,
+				45FEB0221BE8718800896957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45FEAFED1BE8718700896957 /* Project object */;
+}

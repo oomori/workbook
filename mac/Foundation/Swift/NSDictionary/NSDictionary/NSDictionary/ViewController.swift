@@ -5,18 +5,19 @@
 //  Created by air on 2015/02/14.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
-
+//Swift2.0 converted
 import Cocoa
 
 class ViewController: NSViewController {
     //NSDictionary
+    //Swift2.0
     @IBAction func function001(sender: AnyObject) {
         var aDict: NSDictionary?
         if let path = NSBundle.mainBundle().pathForResource("TESTDICTIONARY", ofType: "plist"){
             aDict = NSDictionary(contentsOfFile: path)
         }
         if let dict = aDict {
-            NSLog("%@",dict.description )
+            NSLog("dic %@",dict.description )
         }
         
     }

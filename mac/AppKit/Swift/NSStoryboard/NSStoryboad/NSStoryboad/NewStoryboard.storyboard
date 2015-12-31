@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="vVa-bF-5C0">
+            <objects>
+                <viewController storyboardIdentifier="anotherSBfirstVC" id="DgR-a4-Bzz" sceneMemberID="viewController">
+                    <view key="view" id="Qcz-et-fZ8">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSZ-8t-Ui2">
+                                <rect key="frame" x="131" y="111" width="163" height="96"/>
+                                <animations/>
+                            </customView>
+                        </subviews>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="rcv-qY-94l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="403"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="sKM-CJ-wQj">
+            <objects>
+                <windowController storyboardIdentifier="anotherSBsecondWi" id="6ox-se-Fxf" sceneMemberID="viewController">
+                    <window key="window" identifier="anotherSBsecondWi" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="OAZ-W3-bMM">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="181" y="186" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
+                    </window>
+                    <connections>
+                        <segue destination="qCe-B9-etn" kind="relationship" relationship="window.shadowedContentViewController" id="69H-TV-xz6"/>
+                    </connections>
+                </windowController>
+                <customObject id="Dot-kM-aO9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="1123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="z4c-SU-LLB">
+            <objects>
+                <viewController storyboardIdentifier="anotherSBsecondVC" id="qCe-B9-etn" sceneMemberID="viewController">
+                    <view key="view" id="nrv-5c-dVU">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2j-6i-qKm">
+                                <rect key="frame" x="76" y="154" width="285" height="52"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="別のストーリーボードからのウインドウ" id="NjZ-oR-Va5">
+                                    <font key="font" size="13" name=".HiraKakuInterface-W3"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button identifier="anotherSBsecondVCButton001" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5I6-m2-XHT">
+                                <rect key="frame" x="65" y="104" width="71" height="16"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="001" bezelStyle="rounded" alignment="center" controlSize="mini" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7mn-KJ-za6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="GPd-4d-5t5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="1098"/>
+        </scene>
+    </scenes>
+</document>

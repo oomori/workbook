@@ -156,6 +156,8 @@
 		45745E1D1A90563E008D682D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = oomori;
 				TargetAttributes = {
@@ -407,6 +409,7 @@
 				45745E461A90563E008D682D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45745E471A90563E008D682D /* Build configuration list for PBXNativeTarget "UITextFieldTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +418,7 @@
 				45745E491A90563E008D682D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

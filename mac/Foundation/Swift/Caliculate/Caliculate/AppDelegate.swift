@@ -22,6 +22,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         resultTextField.doubleValue = myConstant
         
     }
+    
+    //if let
+    //if case
+    @IBAction func finction002(sender: AnyObject) {
+        //if let
+        //if case
+        let someOptional: Int? = 42
+        
+        if case .Some(let x) = someOptional {
+            print(x)
+        }
+        
+        if case let x? = someOptional {
+            print(x)
+        }
+        
+        let a: Int? = 10
+        let b: Int? = 11
+        let c: Int? = 12
+        if case let (x?, y?, z?) = (a, b, c) {
+            print(x + y + z)
+        }
+        
+
+    }
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application

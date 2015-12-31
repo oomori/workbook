@@ -17,7 +17,7 @@ int main(int argc, const char * argv[])
     // insert code here...
     
     
-    LSMTextAddWord
+    //LSMTextAddWord
     
     CFShow(CFSTR("Hello, World!\n"));
     

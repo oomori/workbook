@@ -147,7 +147,7 @@
     
     NSArray *anArray = @[aString,bString,cString];
     NSSet *aSet = [NSSet setWithArray:anArray];
-    NSLog(@"%d",[aSet count]);
+    NSLog(@"%lu",(unsigned long)[aSet count]);
     //=>3
     
 }
@@ -497,13 +497,27 @@
     
 }
 //監視対象のオブジェクト通知
--(void )observeValueForKeyPath:(NSString *)keyPath ofObject:( id )object
-                        change:(NSDictionary *)change
-                       context:(void *)context
+- (void)observeValueForKeyPath:(nullable NSString *)keyPath
+                      ofObject:(nullable id)object
+                        change:(nullable NSDictionary<NSString*, id> *)change
+                       context:(nullable void *)context
 {
-    NSLog( @"%s key = %@,object = %@,change = %@" ,__FUNCTION__,keyPath,[object description],[change description]);
-} 
+    //NSLog( @"%s key = %@,object = %@,change = %@" ,__FUNCTION__,keyPath,[object description],[change description]);
+    
+}
+
+//-(void )observeValueForKeyPath:(NSString *)keyPath ofObject:( id )object
+//                        change:(NSDictionary *)change
+//                       context:(void *)context
+//{
+//    
+//}
+
 #pragma mark addObserver:toObjectsAtIndexes:forKeyPath:options:context:
+//http://cocoaapi.hatenablog.com/entry/00040330/NSArray_addObserver_toObjectsAtIndexes_forKeyPath_options_context_
+#pragma mark TODO
+//iOS9.0でエラーあり
+//OS X 10.11
 -(void)method024
 {
     NSMutableString *aString = [NSMutableString stringWithCapacity:1];
@@ -512,21 +526,19 @@
     
     [anArray addObject:aString];
     NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
+
     [indexSet addIndex:3];
 
-    
-    //
     
     [indexSet addObserver:self
                forKeyPath:@"aString"
                   options:NSKeyValueObservingOptionInitial
                   context:nil];
 
+
+    
     [aString appendString:@"+aString"];
 
-    //NSLog(@"013 = %@",[anArray description]);
-    
-    //=>
 }
 #pragma mark NSSet NSNumberなどを含むことができるか
 -(void)method025

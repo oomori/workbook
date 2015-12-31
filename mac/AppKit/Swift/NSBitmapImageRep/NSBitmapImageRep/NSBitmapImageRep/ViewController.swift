@@ -300,6 +300,7 @@ class ViewController: NSViewController {
     
     //NSBitmapImageRep +imageRepWithData:
     //NSBitmapImageRep
+    //Swift2.0
     @IBAction func function003(sender: AnyObject) {
         
         //バンドル取得
@@ -369,6 +370,9 @@ class ViewController: NSViewController {
         let theBitmap2 : NSBitmapImageRep = NSBitmapImageRep(data: theData4)!
         
         
+        
+        
+        
         //ビットマップの加工、ここではオレンジに塗りつぶす
         for y in 20...460 {
             for x in 20...620 {
@@ -383,12 +387,654 @@ class ViewController: NSViewController {
         
     }
     
+
+    //NSBitmapImageRep
+    //init(bitmapDataPlanes:pixelsWide:pixelsHigh:bitsPerSample:samplesPerPixel:hasAlpha:isPlanar:colorSpaceName:bytesPerRow:bitsPerPixel:)
+    //RGBRGBRGBのデータ
+    //Swift2.0
     @IBAction func function004(sender: AnyObject) {
+        
+        let bitmapWidth : Int = 640
+        let bitmapHeight : Int = 480
+        let bitmapSample : Int = 3  //アルファがあるときは1つ増える
+        let bufferSize  = ( bitmapWidth*bitmapHeight*bitmapSample)//幅*高さ*ピクセルあたりのサンプル数
+        var buffer = UnsafeMutablePointer<UInt8>.alloc(bufferSize)//8
+        //オフスクリーンを作成
+        let theBitmap = NSBitmapImageRep(
+                bitmapDataPlanes: &buffer,  //バッファ
+                pixelsWide: bitmapWidth,    //幅
+                pixelsHigh: bitmapHeight,            //高さ
+                bitsPerSample: 8,           //サンプルあたりのビット（色）
+                samplesPerPixel: bitmapSample,//ピクセル当たりのサンプル数（RGBなら3,RGBAなら4）
+                hasAlpha: false,            //アルファ（不透明度）があるときはtrue
+                isPlanar: false,            //プレーン化されるかfalseだとRGBRGBRGBRGBとなる
+                colorSpaceName: NSDeviceRGBColorSpace,//カラースペース
+                bytesPerRow: 0,
+                bitsPerPixel: 0
+        )
+        //ビットマップの操作、ここではバッファのメモリを書き換える
+        //バッファをクリア
+        for index in 0..<bufferSize
+        {
+            buffer[index] = 0
+        }
+        //上から半分赤で埋め尽くす
+        for index in 0..<(bufferSize/3)/2
+        {
+            buffer[index*3] = 255
+        }
+        //メモリ書き換え終了
+        
+        
+        //ビットマップの加工、ここではブルーに塗りつぶす
+        //setColorで塗る
+        for y in 20...460 {
+            for x in 20...620 {
+                theBitmap!.setColor(NSColor.blueColor(), atX: x, y: y)
+            }
+        }
+        //setColor終了
+        
+        //ビットマップフォーマット
+        switch (theBitmap!.bitmapFormat){
+        case NSBitmapFormat.NSAlphaFirstBitmapFormat :
+            NSLog("NSAlphaFirstBitmapFormat ")
+        case NSBitmapFormat.NSAlphaNonpremultipliedBitmapFormat :
+            NSLog("NSAlphaNonpremultipliedBitmapFormat ")
+        case NSBitmapFormat.NSFloatingPointSamplesBitmapFormat :
+            NSLog("NSFloatingPointSamplesBitmapFormat ")
+        case NSBitmapFormat.NS16BitLittleEndianBitmapFormat :
+            NSLog("NS16BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitLittleEndianBitmapFormat :
+            NSLog("NS32BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS16BitBigEndianBitmapFormat :
+            NSLog("NS16BitBigEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitBigEndianBitmapFormat :
+            NSLog("NS32BitBigEndianBitmapFormat ")
+        default:
+            NSLog("default")
+        }
+        
+        //ピクセルあたりのビット数
+        NSLog("bitsPerPixel = %d",theBitmap!.bitsPerPixel)
+        
+        //Planeごとのバイト数
+        NSLog("bytesPerPlane = %d",theBitmap!.bytesPerPlane)
+        
+        //画像の1ラインのバイト数
+        NSLog("bytesPerRow = %d",theBitmap!.bytesPerRow)
+        
+        //プレーンの数
+        NSLog("numberOfPlanes = %d",theBitmap!.numberOfPlanes)
+        
+        //サンプル数
+        NSLog("samplesPerPixel = %d",theBitmap!.samplesPerPixel)
+        
+        //チャンネルあたりのバイト数
+        NSLog("byte per pixel = %d",(theBitmap!.bytesPerRow/theBitmap!.samplesPerPixel) )
+        
+        
+        
+        
+        
+//        for index in 0..<bufferSize
+//        {
+//            NSLog("%d",buffer[index])
+//        }
+        
+        //ファイル書き出し
+        let destiPath : NSString = ("~/Desktop/test004.png" as NSString).stringByExpandingTildeInPath
+        
+        theBitmap!.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile(destiPath as String, atomically: true)
+        buffer.dealloc(bufferSize)
     }
     
+    //作成中　アルファのある色
+    //RGBARGBA...の並び
     @IBAction func function005(sender: AnyObject) {
+        
+        let bitmapWidth : Int = 640
+        let bitmapHeight : Int = 480
+        let bitmapSample : Int = 4  //アルファがあるときは1つ増える
+        let bufferSize  = ( bitmapWidth*bitmapHeight*bitmapSample)//幅*高さ*ピクセルあたりのサンプル数
+        var buffer = UnsafeMutablePointer<UInt8>.alloc(bufferSize)//8
+        //オフスクリーンを作成
+        let theBitmap = NSBitmapImageRep(
+            bitmapDataPlanes: &buffer,  //バッファ
+            pixelsWide: bitmapWidth,    //幅
+            pixelsHigh: bitmapHeight,            //高さ
+            bitsPerSample: 8,           //サンプルあたりのビット（色）
+            samplesPerPixel: bitmapSample,//ピクセル当たりのサンプル数（RGBなら3,RGBAなら4）
+            hasAlpha: true,            //アルファ（不透明度）があるときはtrue
+            isPlanar: false,            //プレーン化されるかfalseだとRGBRGBRGBRGBとなる
+            colorSpaceName: NSDeviceRGBColorSpace,//カラースペース
+            bytesPerRow: 0,
+            bitsPerPixel: 0
+        )
+        //ビットマップの操作、ここではバッファのメモリを書き換える
+        //バッファをクリア
+        for index in 0..<bufferSize
+        {
+            buffer[index] = 0
+        }
+        //アルファ値 数字が大きいと不透明に成る
+        for index in 0..<(bufferSize/4)/2
+        {
+            buffer[index*4+3] = 150
+        }
+        
+        //RGBの色　数字が大きいと濃くなる
+        for index in 0..<(bufferSize/4)/2
+        {
+            buffer[index*4+0] = 200 //R赤
+            //buffer[index*4+1] = 200 //G緑
+            //buffer[index*4+2] = 200 //B青
+        }
+        //メモリ書き換え終了
+        
+        
+        //ビットマップの加工、ここではブルーに塗りつぶす
+        //setColorで塗る
+//        for y in 100...(bitmapHeight-100) {
+//            for x in 100...(bitmapWidth-100) {
+//                theBitmap!.setColor(NSColor.blueColor(), atX: x, y: y)
+//            }
+//        }
+        //setColor終了
+        
+        //ビットマップフォーマット
+        switch (theBitmap!.bitmapFormat){
+        case NSBitmapFormat.NSAlphaFirstBitmapFormat :
+            NSLog("NSAlphaFirstBitmapFormat ")
+        case NSBitmapFormat.NSAlphaNonpremultipliedBitmapFormat :
+            NSLog("NSAlphaNonpremultipliedBitmapFormat ")
+        case NSBitmapFormat.NSFloatingPointSamplesBitmapFormat :
+            NSLog("NSFloatingPointSamplesBitmapFormat ")
+        case NSBitmapFormat.NS16BitLittleEndianBitmapFormat :
+            NSLog("NS16BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitLittleEndianBitmapFormat :
+            NSLog("NS32BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS16BitBigEndianBitmapFormat :
+            NSLog("NS16BitBigEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitBigEndianBitmapFormat :
+            NSLog("NS32BitBigEndianBitmapFormat ")
+        default:
+            NSLog("default")
+        }
+        
+        //ピクセルあたりのビット数
+        NSLog("bitsPerPixel = %d",theBitmap!.bitsPerPixel)
+        
+        //Planeごとのバイト数
+        NSLog("bytesPerPlane = %d",theBitmap!.bytesPerPlane)
+        
+        //画像の1ラインのバイト数
+        NSLog("bytesPerRow = %d",theBitmap!.bytesPerRow)
+        
+        //プレーンの数
+        NSLog("numberOfPlanes = %d",theBitmap!.numberOfPlanes)
+        
+        //サンプル数
+        NSLog("samplesPerPixel = %d",theBitmap!.samplesPerPixel)
+        
+        //チャンネルあたりのバイト数
+        NSLog("byte per pixel = %d",(theBitmap!.bytesPerRow/theBitmap!.samplesPerPixel) )
+        
+        
+        
+        
+        
+        //        for index in 0..<bufferSize
+        //        {
+        //            NSLog("%d",buffer[index])
+        //        }
+        
+        //ファイル書き出し
+        let destiPath : NSString = ("~/Desktop/test005.png" as NSString).stringByExpandingTildeInPath
+        
+        theBitmap!.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile(destiPath as String, atomically: true)
+        buffer.dealloc(bufferSize)
+    }
+    //CMYKカラーモデル
+    //アルファなし
+    @IBAction func function006(sender: AnyObject) {
+        
+        let bitmapWidth : Int = 640
+        let bitmapHeight : Int = 480
+        let bitmapSample : Int = 4  //アルファがあるときは1つ増える
+        let bufferSize  = ( bitmapWidth*bitmapHeight*bitmapSample)//幅*高さ*ピクセルあたりのサンプル数
+        var buffer = UnsafeMutablePointer<UInt8>.alloc(bufferSize)//8
+        //オフスクリーンを作成
+        let theBitmap = NSBitmapImageRep(
+            bitmapDataPlanes: &buffer,  //バッファ
+            pixelsWide: bitmapWidth,    //幅
+            pixelsHigh: bitmapHeight,            //高さ
+            bitsPerSample: 8,           //サンプルあたりのビット（色）
+            samplesPerPixel: bitmapSample,//ピクセル当たりのサンプル数（RGBなら3,RGBAなら4）
+            hasAlpha: false,            //アルファ（不透明度）があるときはtrue
+            isPlanar: false,            //プレーン化されるかfalseだとRGBRGBRGBRGBとなる
+            colorSpaceName: NSDeviceCMYKColorSpace,//カラースペース
+            bytesPerRow: 0,
+            bitsPerPixel: 0
+        )
+        //ビットマップの操作、ここではバッファのメモリを書き換える
+        //バッファをクリア
+        for index in 0..<bufferSize
+        {
+            buffer[index] = 0
+        }
+        //アルファ値 数字が大きいと不透明に成る
+//        for index in 0..<(bufferSize/4)/2
+//        {
+//            buffer[index*4+3] = 150
+//        }
+        
+        //CMYKの色　数字が大きいと濃くなる
+        for index in 0..<(bufferSize/4)/2
+        {
+            //buffer[index*4+0] = 200 //Cシアン
+            //buffer[index*4+1] = 200 //Mマゼンタ
+            //buffer[index*4+2] = 200 //Yイエロー
+            buffer[index*4+3] = 200 //Kブラック
+        }
+        //メモリ書き換え終了
+        
+        
+        //ビットマップの加工、ここではブルーに塗りつぶす
+        //setColorで塗る
+        //        for y in 100...(bitmapHeight-100) {
+        //            for x in 100...(bitmapWidth-100) {
+        //                theBitmap!.setColor(NSColor.blueColor(), atX: x, y: y)
+        //            }
+        //        }
+        //setColor終了
+        
+        //ビットマップフォーマット
+        switch (theBitmap!.bitmapFormat){
+        case NSBitmapFormat.NSAlphaFirstBitmapFormat :
+            NSLog("NSAlphaFirstBitmapFormat ")
+        case NSBitmapFormat.NSAlphaNonpremultipliedBitmapFormat :
+            NSLog("NSAlphaNonpremultipliedBitmapFormat ")
+        case NSBitmapFormat.NSFloatingPointSamplesBitmapFormat :
+            NSLog("NSFloatingPointSamplesBitmapFormat ")
+        case NSBitmapFormat.NS16BitLittleEndianBitmapFormat :
+            NSLog("NS16BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitLittleEndianBitmapFormat :
+            NSLog("NS32BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS16BitBigEndianBitmapFormat :
+            NSLog("NS16BitBigEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitBigEndianBitmapFormat :
+            NSLog("NS32BitBigEndianBitmapFormat ")
+        default:
+            NSLog("default")
+        }
+        
+        //ピクセルあたりのビット数
+        NSLog("bitsPerPixel = %d",theBitmap!.bitsPerPixel)
+        
+        //Planeごとのバイト数
+        NSLog("bytesPerPlane = %d",theBitmap!.bytesPerPlane)
+        
+        //画像の1ラインのバイト数
+        NSLog("bytesPerRow = %d",theBitmap!.bytesPerRow)
+        
+        //プレーンの数
+        NSLog("numberOfPlanes = %d",theBitmap!.numberOfPlanes)
+        
+        //サンプル数
+        NSLog("samplesPerPixel = %d",theBitmap!.samplesPerPixel)
+        
+        //チャンネルあたりのバイト数
+        NSLog("byte per pixel = %d",(theBitmap!.bytesPerRow/theBitmap!.samplesPerPixel) )
+        
+        
+        
+        
+        
+        //        for index in 0..<bufferSize
+        //        {
+        //            NSLog("%d",buffer[index])
+        //        }
+        
+        //ファイル書き出し
+        let destiPath : NSString = ("~/Desktop/test006.png" as NSString).stringByExpandingTildeInPath
+        
+        theBitmap!.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile(destiPath as String, atomically: true)
+         buffer.dealloc(bufferSize)
     }
     
+    //CMYKカラーモデル
+    //アルファ
+    @IBAction func function007(sender: AnyObject) {
+        
+        let bitmapWidth : Int = 640
+        let bitmapHeight : Int = 480
+        let bitmapSample : Int = 5  //アルファがあるときは1つ増える
+        let bufferSize  = ( bitmapWidth*bitmapHeight*bitmapSample)//幅*高さ*ピクセルあたりのサンプル数
+        var buffer = UnsafeMutablePointer<UInt8>.alloc(bufferSize)//8
+        //オフスクリーンを作成
+        let theBitmap = NSBitmapImageRep(
+            bitmapDataPlanes: &buffer,  //バッファ
+            pixelsWide: bitmapWidth,    //幅
+            pixelsHigh: bitmapHeight,            //高さ
+            bitsPerSample: 8,           //サンプルあたりのビット（色）
+            samplesPerPixel: bitmapSample,//ピクセル当たりのサンプル数（RGBなら3,RGBAなら4）
+            hasAlpha: true,            //アルファ（不透明度）があるときはtrue
+            isPlanar: false,            //プレーン化されるかfalseだとRGBRGBRGBRGBとなる
+            colorSpaceName: NSDeviceCMYKColorSpace,//カラースペース
+            bytesPerRow: 0,
+            bitsPerPixel: 0
+        )
+        //ビットマップの操作、ここではバッファのメモリを書き換える
+        //バッファをクリア
+        for index in 0..<bufferSize
+        {
+            buffer[index] = 0
+        }
+        //アルファ値 数字が大きいと不透明に成る
+        for index in 0..<(bufferSize/5)/2
+        {
+            buffer[index*5+4] = 250
+        }
+        
+        //CMYKの色　数字が大きいと濃くなる
+        for index in 0..<(bufferSize/5)/2
+        {
+            buffer[index*5+0] = 200 //Cシアン
+            buffer[index*5+1] = 200 //Mマゼンタ
+            //buffer[index*5+2] = 200 //Yイエロー
+            //buffer[index*5+3] = 200 //Kブラック
+        }
+        //メモリ書き換え終了
+        
+        
+        //ビットマップの加工、ここではブルーに塗りつぶす
+        //setColorで塗る
+        //        for y in 100...(bitmapHeight-100) {
+        //            for x in 100...(bitmapWidth-100) {
+        //                theBitmap!.setColor(NSColor.blueColor(), atX: x, y: y)
+        //            }
+        //        }
+        //setColor終了
+        
+        //ビットマップフォーマット
+        switch (theBitmap!.bitmapFormat){
+        case NSBitmapFormat.NSAlphaFirstBitmapFormat :
+            NSLog("NSAlphaFirstBitmapFormat ")
+        case NSBitmapFormat.NSAlphaNonpremultipliedBitmapFormat :
+            NSLog("NSAlphaNonpremultipliedBitmapFormat ")
+        case NSBitmapFormat.NSFloatingPointSamplesBitmapFormat :
+            NSLog("NSFloatingPointSamplesBitmapFormat ")
+        case NSBitmapFormat.NS16BitLittleEndianBitmapFormat :
+            NSLog("NS16BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitLittleEndianBitmapFormat :
+            NSLog("NS32BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS16BitBigEndianBitmapFormat :
+            NSLog("NS16BitBigEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitBigEndianBitmapFormat :
+            NSLog("NS32BitBigEndianBitmapFormat ")
+        default:
+            NSLog("default")
+        }
+        
+        //ピクセルあたりのビット数
+        NSLog("bitsPerPixel = %d",theBitmap!.bitsPerPixel)
+        
+        //Planeごとのバイト数
+        NSLog("bytesPerPlane = %d",theBitmap!.bytesPerPlane)
+        
+        //画像の1ラインのバイト数
+        NSLog("bytesPerRow = %d",theBitmap!.bytesPerRow)
+        
+        //プレーンの数
+        NSLog("numberOfPlanes = %d",theBitmap!.numberOfPlanes)
+        
+        //サンプル数
+        NSLog("samplesPerPixel = %d",theBitmap!.samplesPerPixel)
+        
+        //チャンネルあたりのバイト数
+        NSLog("byte per pixel = %d",(theBitmap!.bytesPerRow/theBitmap!.samplesPerPixel) )
+        
+        
+        
+        
+        
+        //        for index in 0..<bufferSize
+        //        {
+        //            NSLog("%d",buffer[index])
+        //        }
+        
+        //ファイル書き出し
+        let destiPath : NSString = ("~/Desktop/test007.png" as NSString).stringByExpandingTildeInPath
+        
+        theBitmap!.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile(destiPath as String, atomically: true)
+        buffer.dealloc(bufferSize)
+    }
+    
+    //作成中
+    //16ビットRGBカラーモデル
+    @IBAction func function008(sender: AnyObject) {
+        
+        let bitmapWidth : Int = 640
+        let bitmapHeight : Int = 480
+        let bitmapSample : Int = 3  //アルファがあるときは1つ増える
+        let bit : Int = 16          //ビット数
+        let bufferSize  = ( bitmapWidth*bitmapHeight*bitmapSample*(bit/2))//幅*高さ*ピクセルあたりのサンプル数*ビット数
+        var buffer = UnsafeMutablePointer<UInt8>.alloc(bufferSize)//8ビットでも16ビットでもUInt8を使う
+        //オフスクリーンを作成
+        let theBitmap = NSBitmapImageRep(
+            bitmapDataPlanes: &buffer,  //バッファ
+            pixelsWide: bitmapWidth,    //幅
+            pixelsHigh: bitmapHeight,            //高さ
+            bitsPerSample: bit,           //サンプルあたりのビット（色）
+            samplesPerPixel: bitmapSample,//ピクセル当たりのサンプル数（RGBなら3,RGBAなら4）
+            hasAlpha: false,            //アルファ（不透明度）があるときはtrue
+            isPlanar: false,            //プレーン化されるかfalseだとRGBRGBRGBRGBとなる
+            colorSpaceName: NSDeviceRGBColorSpace,//カラースペース
+            bytesPerRow: 0,
+            bitsPerPixel: 0
+        )
+        //ビットマップの操作、ここではバッファのメモリを書き換える
+        //バッファをクリア
+        for index in 0..<bufferSize
+        {
+            buffer[index] = 0
+        }
+        //上から半分赤で埋め尽くす
+        //RRGGBBの形式に成っている
+        //let color16Bit : Int16 = 65500
+        for index in 0..<(bufferSize/3)/2
+        {
+            //RGBのR
+            buffer[index*(3*2)]   = 0     //下位ビット
+            buffer[index*(3*2)+1] = 255 //上位ビット
+            //RGBのG
+            //buffer[index*(3*2)+(1*2)]     = 0     //下位ビット
+            //buffer[index*(3*2)+(1*2)+1]   = 255 //上位ビット
+            //RGBのB
+            //buffer[index*(3*2)+(2*2)]     = 0     //下位ビット
+            //buffer[index*(3*2)+(2*2)+1]   = 255 //上位ビット
+        }
+        //メモリ書き換え終了
+        
+        
+        //ビットマップの加工、ここではブルーに塗りつぶす
+        //setColorで塗る
+//        for y in 20...460 {
+//            for x in 20...620 {
+//                theBitmap!.setColor(NSColor.blueColor(), atX: x, y: y)
+//            }
+//        }
+        //setColor終了
+        
+        //ビットマップフォーマット
+        switch (theBitmap!.bitmapFormat){
+        case NSBitmapFormat.NSAlphaFirstBitmapFormat :
+            NSLog("NSAlphaFirstBitmapFormat ")
+        case NSBitmapFormat.NSAlphaNonpremultipliedBitmapFormat :
+            NSLog("NSAlphaNonpremultipliedBitmapFormat ")
+        case NSBitmapFormat.NSFloatingPointSamplesBitmapFormat :
+            NSLog("NSFloatingPointSamplesBitmapFormat ")
+        case NSBitmapFormat.NS16BitLittleEndianBitmapFormat :
+            NSLog("NS16BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitLittleEndianBitmapFormat :
+            NSLog("NS32BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS16BitBigEndianBitmapFormat :
+            NSLog("NS16BitBigEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitBigEndianBitmapFormat :
+            NSLog("NS32BitBigEndianBitmapFormat ")
+        default:
+            NSLog("default")
+        }
+        
+        //ピクセルあたりのビット数
+        NSLog("bitsPerPixel = %d",theBitmap!.bitsPerPixel)
+        
+        //Planeごとのバイト数
+        NSLog("bytesPerPlane = %d",theBitmap!.bytesPerPlane)
+        
+        //画像の1ラインのバイト数
+        NSLog("bytesPerRow = %d",theBitmap!.bytesPerRow)
+        
+        //プレーンの数
+        NSLog("numberOfPlanes = %d",theBitmap!.numberOfPlanes)
+        
+        //サンプル数
+        NSLog("samplesPerPixel = %d",theBitmap!.samplesPerPixel)
+        
+        //チャンネルあたりのバイト数
+        NSLog("byte per pixel = %d",(theBitmap!.bytesPerRow/theBitmap!.samplesPerPixel) )
+        
+        //ファイル書き出し
+        let destiPath : NSString = ("~/Desktop/test008.png" as NSString).stringByExpandingTildeInPath
+        
+        theBitmap!.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile(destiPath as String, atomically: true)
+      
+        buffer.dealloc(bufferSize)
+    }
+    
+    //作成中
+    @IBAction func function009(sender: AnyObject) {
+        
+        let bitmapWidth : Int = 640
+        let bitmapHeight : Int = 480
+        let bitmapSample : Int = 3  //アルファがあるときは1つ増える
+        let bufferSize  = ( bitmapWidth*bitmapHeight*bitmapSample)//幅*高さ*ピクセルあたりのサンプル数
+        var buffer = UnsafeMutablePointer<UInt8>.alloc(bufferSize)//8
+        //オフスクリーンを作成
+        let theBitmap = NSBitmapImageRep(
+            bitmapDataPlanes: &buffer,  //バッファ
+            pixelsWide: bitmapWidth,    //幅
+            pixelsHigh: bitmapHeight,            //高さ
+            bitsPerSample: 8,           //サンプルあたりのビット（色）
+            samplesPerPixel: bitmapSample,//ピクセル当たりのサンプル数（RGBなら3,RGBAなら4）
+            hasAlpha: false,            //アルファ（不透明度）があるときはtrue
+            isPlanar: false,            //プレーン化されるかfalseだとRGBRGBRGBRGBとなる
+            colorSpaceName: NSDeviceRGBColorSpace,//カラースペース
+            bytesPerRow: 0,
+            bitsPerPixel: 0
+        )
+        
+        //ビットマップの操作、ここではバッファのメモリを書き換える
+        //バッファをクリア
+        for index in 0..<bufferSize
+        {
+            buffer[index] = 0
+        }
+        //上から半分赤で埋め尽くす
+        for index in 0..<(bufferSize/3)/2
+        {
+            buffer[index*3] = 255
+        }
+        //メモリ書き換え終了
+        
+        
+        //ビットマップの加工、ここではブルーに塗りつぶす
+        //setColorで塗る
+        for y in 20...460 {
+            for x in 20...620 {
+                theBitmap!.setColor(NSColor.blueColor(), atX: x, y: y)
+            }
+        }
+        //setColor終了
+        
+        //ビットマップフォーマット
+        switch (theBitmap!.bitmapFormat){
+        case NSBitmapFormat.NSAlphaFirstBitmapFormat :
+            NSLog("NSAlphaFirstBitmapFormat ")
+        case NSBitmapFormat.NSAlphaNonpremultipliedBitmapFormat :
+            NSLog("NSAlphaNonpremultipliedBitmapFormat ")
+        case NSBitmapFormat.NSFloatingPointSamplesBitmapFormat :
+            NSLog("NSFloatingPointSamplesBitmapFormat ")
+        case NSBitmapFormat.NS16BitLittleEndianBitmapFormat :
+            NSLog("NS16BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitLittleEndianBitmapFormat :
+            NSLog("NS32BitLittleEndianBitmapFormat ")
+        case NSBitmapFormat.NS16BitBigEndianBitmapFormat :
+            NSLog("NS16BitBigEndianBitmapFormat ")
+        case NSBitmapFormat.NS32BitBigEndianBitmapFormat :
+            NSLog("NS32BitBigEndianBitmapFormat ")
+        default:
+            NSLog("default")
+        }
+        
+        //ピクセルあたりのビット数
+        NSLog("bitsPerPixel = %d",theBitmap!.bitsPerPixel)
+        
+        //Planeごとのバイト数
+        NSLog("bytesPerPlane = %d",theBitmap!.bytesPerPlane)
+        
+        //画像の1ラインのバイト数
+        NSLog("bytesPerRow = %d",theBitmap!.bytesPerRow)
+        
+        //プレーンの数
+        NSLog("numberOfPlanes = %d",theBitmap!.numberOfPlanes)
+        
+        //サンプル数
+        NSLog("samplesPerPixel = %d",theBitmap!.samplesPerPixel)
+        
+        //チャンネルあたりのバイト数
+        NSLog("byte per pixel = %d",(theBitmap!.bytesPerRow/theBitmap!.samplesPerPixel) )
+        
+        
+        
+        
+        
+        //        for index in 0..<bufferSize
+        //        {
+        //            NSLog("%d",buffer[index])
+        //        }
+        
+        //ファイル書き出し
+        let destiPath : NSString = ("~/Desktop/test009.png" as NSString).stringByExpandingTildeInPath
+        
+        theBitmap!.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: [:])?.writeToFile(destiPath as String, atomically: true)
+        
+        
+        buffer.dealloc(bufferSize)
+    }
+    
+    
+    @IBAction func function010(sender: AnyObject) {
+    }
+    
+    @IBAction func function011(sender: AnyObject) {
+    }
+    
+    @IBAction func function012(sender: AnyObject) {
+    }
+    
+    @IBAction func function013(sender: AnyObject) {
+    }
+    
+    @IBAction func function014(sender: AnyObject) {
+    }
+    
+    @IBAction func function015(sender: AnyObject) {
+    }
+    
+    @IBAction func function016(sender: AnyObject) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

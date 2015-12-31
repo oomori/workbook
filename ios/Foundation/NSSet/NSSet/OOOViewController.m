@@ -20,7 +20,7 @@
     //どの指かタッチしたら
     NSSet *aSet = [event allTouches];
     
-    NSLog(@"%d",[aSet count]);
+    NSLog(@"%lu",(unsigned long)[aSet count]);
     
     [aSet enumerateObjectsUsingBlock:^(id obj, BOOL *stop)
      {

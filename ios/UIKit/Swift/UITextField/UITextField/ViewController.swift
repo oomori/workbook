@@ -23,9 +23,9 @@ class ViewController: UIViewController {
     //UITextField attributedText
     //属性付きテキスト
     @IBAction func function003(sender: AnyObject) {
-        var attrs = [NSForegroundColorAttributeName: UIColor.redColor(),
+        let attrs = [NSForegroundColorAttributeName: UIColor.redColor(),
                         NSFontAttributeName : UIFont.systemFontOfSize(19.0)]
-        var aText : NSAttributedString = NSAttributedString(string: "属性付き文字",
+        let aText : NSAttributedString = NSAttributedString(string: "属性付き文字",
                                             attributes: attrs)
         defaultTF.attributedText = aText
     }

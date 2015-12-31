@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45FEAFB11BE6C75700896957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEAFB01BE6C75700896957 /* AppDelegate.swift */; };
+		45FEAFB31BE6C75700896957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEAFB21BE6C75700896957 /* ViewController.swift */; };
+		45FEAFB51BE6C75700896957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FEAFB41BE6C75700896957 /* Assets.xcassets */; };
+		45FEAFB81BE6C75700896957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45FEAFB61BE6C75700896957 /* Main.storyboard */; };
+		45FEAFC31BE6C75800896957 /* bitmapCLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEAFC21BE6C75800896957 /* bitmapCLTests.swift */; };
+		45FEAFCE1BE6C75800896957 /* bitmapCLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEAFCD1BE6C75800896957 /* bitmapCLUITests.swift */; };
+		45FEAFDC1BE6C7F500896957 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FEAFDB1BE6C7F500896957 /* OpenCL.framework */; settings = {ASSET_TAGS = (); }; };
+		45FEAFDE1BE6C8AC00896957 /* TestCL.cl in Sources */ = {isa = PBXBuildFile; fileRef = 45FEAFDD1BE6C8AC00896957 /* TestCL.cl */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45FEAFBF1BE6C75800896957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45FEAFA51BE6C75700896957 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45FEAFAC1BE6C75700896957;
+			remoteInfo = bitmapCL;
+		};
+		45FEAFCA1BE6C75800896957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45FEAFA51BE6C75700896957 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45FEAFAC1BE6C75700896957;
+			remoteInfo = bitmapCL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		45FEAFAD1BE6C75700896957 /* bitmapCL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bitmapCL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FEAFB01BE6C75700896957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45FEAFB21BE6C75700896957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45FEAFB41BE6C75700896957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45FEAFB71BE6C75700896957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45FEAFB91BE6C75700896957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45FEAFBE1BE6C75800896957 /* bitmapCLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bitmapCLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FEAFC21BE6C75800896957 /* bitmapCLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitmapCLTests.swift; sourceTree = "<group>"; };
+		45FEAFC41BE6C75800896957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45FEAFC91BE6C75800896957 /* bitmapCLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bitmapCLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FEAFCD1BE6C75800896957 /* bitmapCLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitmapCLUITests.swift; sourceTree = "<group>"; };
+		45FEAFCF1BE6C75800896957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45FEAFDB1BE6C7F500896957 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = ../../../../../../../../../../../System/Library/Frameworks/OpenCL.framework; sourceTree = "<group>"; };
+		45FEAFDD1BE6C8AC00896957 /* TestCL.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; name = TestCL.cl; path = ../TestCL.cl; sourceTree = "<group>"; };
+		45FEAFE81BE8482200896957 /* bitmapCL-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bitmapCL-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45FEAFAA1BE6C75700896957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FEAFDC1BE6C7F500896957 /* OpenCL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEAFBB1BE6C75800896957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEAFC61BE6C75800896957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45FEAFA41BE6C75700896957 = {
+			isa = PBXGroup;
+			children = (
+				45FEAFAF1BE6C75700896957 /* bitmapCL */,
+				45FEAFC11BE6C75800896957 /* bitmapCLTests */,
+				45FEAFCC1BE6C75800896957 /* bitmapCLUITests */,
+				45FEAFAE1BE6C75700896957 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45FEAFAE1BE6C75700896957 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45FEAFAD1BE6C75700896957 /* bitmapCL.app */,
+				45FEAFBE1BE6C75800896957 /* bitmapCLTests.xctest */,
+				45FEAFC91BE6C75800896957 /* bitmapCLUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45FEAFAF1BE6C75700896957 /* bitmapCL */ = {
+			isa = PBXGroup;
+			children = (
+				45FEAFDD1BE6C8AC00896957 /* TestCL.cl */,
+				45FEAFB01BE6C75700896957 /* AppDelegate.swift */,
+				45FEAFB21BE6C75700896957 /* ViewController.swift */,
+				45FEAFB41BE6C75700896957 /* Assets.xcassets */,
+				45FEAFB61BE6C75700896957 /* Main.storyboard */,
+				45FEAFB91BE6C75700896957 /* Info.plist */,
+				45FEAFDB1BE6C7F500896957 /* OpenCL.framework */,
+				45FEAFE81BE8482200896957 /* bitmapCL-Bridging-Header.h */,
+			);
+			path = bitmapCL;
+			sourceTree = "<group>";
+		};
+		45FEAFC11BE6C75800896957 /* bitmapCLTests */ = {
+			isa = PBXGroup;
+			children = (
+				45FEAFC21BE6C75800896957 /* bitmapCLTests.swift */,
+				45FEAFC41BE6C75800896957 /* Info.plist */,
+			);
+			path = bitmapCLTests;
+			sourceTree = "<group>";
+		};
+		45FEAFCC1BE6C75800896957 /* bitmapCLUITests */ = {
+			isa = PBXGroup;
+			children = (
+				45FEAFCD1BE6C75800896957 /* bitmapCLUITests.swift */,
+				45FEAFCF1BE6C75800896957 /* Info.plist */,
+			);
+			path = bitmapCLUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45FEAFAC1BE6C75700896957 /* bitmapCL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FEAFD21BE6C75800896957 /* Build configuration list for PBXNativeTarget "bitmapCL" */;
+			buildPhases = (
+				45FEAFA91BE6C75700896957 /* Sources */,
+				45FEAFAA1BE6C75700896957 /* Frameworks */,
+				45FEAFAB1BE6C75700896957 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bitmapCL;
+			productName = bitmapCL;
+			productReference = 45FEAFAD1BE6C75700896957 /* bitmapCL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45FEAFBD1BE6C75800896957 /* bitmapCLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FEAFD51BE6C75800896957 /* Build configuration list for PBXNativeTarget "bitmapCLTests" */;
+			buildPhases = (
+				45FEAFBA1BE6C75800896957 /* Sources */,
+				45FEAFBB1BE6C75800896957 /* Frameworks */,
+				45FEAFBC1BE6C75800896957 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45FEAFC01BE6C75800896957 /* PBXTargetDependency */,
+			);
+			name = bitmapCLTests;
+			productName = bitmapCLTests;
+			productReference = 45FEAFBE1BE6C75800896957 /* bitmapCLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		45FEAFC81BE6C75800896957 /* bitmapCLUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FEAFD81BE6C75800896957 /* Build configuration list for PBXNativeTarget "bitmapCLUITests" */;
+			buildPhases = (
+				45FEAFC51BE6C75800896957 /* Sources */,
+				45FEAFC61BE6C75800896957 /* Frameworks */,
+				45FEAFC71BE6C75800896957 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45FEAFCB1BE6C75800896957 /* PBXTargetDependency */,
+			);
+			name = bitmapCLUITests;
+			productName = bitmapCLUITests;
+			productReference = 45FEAFC91BE6C75800896957 /* bitmapCLUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45FEAFA51BE6C75700896957 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = oomori;
+				TargetAttributes = {
+					45FEAFAC1BE6C75700896957 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					45FEAFBD1BE6C75800896957 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 45FEAFAC1BE6C75700896957;
+					};
+					45FEAFC81BE6C75800896957 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 45FEAFAC1BE6C75700896957;
+					};
+				};
+			};
+			buildConfigurationList = 45FEAFA81BE6C75700896957 /* Build configuration list for PBXProject "bitmapCL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45FEAFA41BE6C75700896957;
+			productRefGroup = 45FEAFAE1BE6C75700896957 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45FEAFAC1BE6C75700896957 /* bitmapCL */,
+				45FEAFBD1BE6C75800896957 /* bitmapCLTests */,
+				45FEAFC81BE6C75800896957 /* bitmapCLUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45FEAFAB1BE6C75700896957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FEAFB51BE6C75700896957 /* Assets.xcassets in Resources */,
+				45FEAFB81BE6C75700896957 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEAFBC1BE6C75800896957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEAFC71BE6C75800896957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45FEAFA91BE6C75700896957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FEAFDE1BE6C8AC00896957 /* TestCL.cl in Sources */,
+				45FEAFB31BE6C75700896957 /* ViewController.swift in Sources */,
+				45FEAFB11BE6C75700896957 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEAFBA1BE6C75800896957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FEAFC31BE6C75800896957 /* bitmapCLTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FEAFC51BE6C75800896957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FEAFCE1BE6C75800896957 /* bitmapCLUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45FEAFC01BE6C75800896957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45FEAFAC1BE6C75700896957 /* bitmapCL */;
+			targetProxy = 45FEAFBF1BE6C75800896957 /* PBXContainerItemProxy */;
+		};
+		45FEAFCB1BE6C75800896957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45FEAFAC1BE6C75700896957 /* bitmapCL */;
+			targetProxy = 45FEAFCA1BE6C75800896957 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		45FEAFB61BE6C75700896957 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45FEAFB71BE6C75700896957 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45FEAFD01BE6C75800896957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "bitmapCL/bitmapCL-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45FEAFD11BE6C75800896957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "bitmapCL/bitmapCL-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		45FEAFD31BE6C75800896957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitmapCL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.bitmapCL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "bitmapCL/bitmapCL-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45FEAFD41BE6C75800896957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitmapCL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.bitmapCL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "bitmapCL/bitmapCL-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		45FEAFD61BE6C75800896957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitmapCLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.workshop.bitmapCLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bitmapCL.app/Contents/MacOS/bitmapCL";
+			};
+			name = Debug;
+		};
+		45FEAFD71BE6C75800896957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitmapCLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.workshop.bitmapCLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bitmapCL.app/Contents/MacOS/bitmapCL";
+			};
+			name = Release;
+		};
+		45FEAFD91BE6C75800896957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitmapCLUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.workshop.bitmapCLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = bitmapCL;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		45FEAFDA1BE6C75800896957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitmapCLUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oomori.workshop.bitmapCLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = bitmapCL;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45FEAFA81BE6C75700896957 /* Build configuration list for PBXProject "bitmapCL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FEAFD01BE6C75800896957 /* Debug */,
+				45FEAFD11BE6C75800896957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45FEAFD21BE6C75800896957 /* Build configuration list for PBXNativeTarget "bitmapCL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FEAFD31BE6C75800896957 /* Debug */,
+				45FEAFD41BE6C75800896957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		45FEAFD51BE6C75800896957 /* Build configuration list for PBXNativeTarget "bitmapCLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FEAFD61BE6C75800896957 /* Debug */,
+				45FEAFD71BE6C75800896957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		45FEAFD81BE6C75800896957 /* Build configuration list for PBXNativeTarget "bitmapCLUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FEAFD91BE6C75800896957 /* Debug */,
+				45FEAFDA1BE6C75800896957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45FEAFA51BE6C75700896957 /* Project object */;
+}
