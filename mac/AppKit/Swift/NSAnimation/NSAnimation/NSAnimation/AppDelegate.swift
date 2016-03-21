@@ -28,6 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSAnimationDelegate {
     var theAnim012sub: NSAnimation!
     
     //NSAnimation init
+    //Swift2.0
     @IBAction func function001(sender: AnyObject) {
         
         //NSAnimationProgress

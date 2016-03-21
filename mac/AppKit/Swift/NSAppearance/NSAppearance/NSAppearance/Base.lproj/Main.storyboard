@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
@@ -682,6 +682,105 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="function001:" target="XfG-lQ-9wD" id="tFF-f1-0dl"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgY-dM-U5E">
+                                <rect key="frame" x="-5" y="220" width="65" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="002" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qG6-QK-IhL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="function002:" target="XfG-lQ-9wD" id="Mro-yL-pTi"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPv-56-Lcg">
+                                <rect key="frame" x="-5" y="199" width="65" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="003" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QS1-NJ-xNi">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="function003:" target="XfG-lQ-9wD" id="mqN-YD-6dG"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfN-ct-fXP">
+                                <rect key="frame" x="-5" y="181" width="65" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="004" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HUa-Nw-6vO">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="function004:" target="XfG-lQ-9wD" id="iXV-84-fG3"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u8K-xk-rnL">
+                                <rect key="frame" x="-5" y="160" width="65" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="005" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Pvq-gD-KKG">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="function005:" target="XfG-lQ-9wD" id="3dc-ed-vsx"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VeE-sm-H91">
+                                <rect key="frame" x="-5" y="142" width="65" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="006" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9a5-ec-u7C">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="function006:" target="XfG-lQ-9wD" id="OAt-Oi-Nbq"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wRy-dA-Kqe">
+                                <rect key="frame" x="-5" y="122" width="64" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="007" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="btu-z2-kiT">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="function007:" target="XfG-lQ-9wD" id="aYd-08-Uwd"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tqc-dt-m0V">
+                                <rect key="frame" x="-5" y="99" width="65" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="008" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mHW-si-y8z">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="function008:" target="XfG-lQ-9wD" id="Izk-Gk-6eb"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BD8-57-37b">
+                                <rect key="frame" x="-5" y="75" width="65" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="009" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Xu5-KK-whX">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="function009:" target="XfG-lQ-9wD" id="89g-RY-gtE"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNg-BF-dmm">
+                                <rect key="frame" x="-5" y="54" width="63" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="010" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HiD-x3-h1Y">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="function010:" target="XfG-lQ-9wD" id="rVn-Tz-aw4"/>
                                 </connections>
                             </button>
                         </subviews>

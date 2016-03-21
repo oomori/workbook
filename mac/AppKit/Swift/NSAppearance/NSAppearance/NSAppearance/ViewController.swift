@@ -51,6 +51,34 @@ class ViewController: NSViewController {
         
         
     }
+    @IBAction func function002( sender: AnyObject) {
+        
+    }
+    @IBAction func function003( sender: AnyObject) {
+        
+    }
+    @IBAction func function004( sender: AnyObject) {
+        
+    }
+    @IBAction func function005( sender: AnyObject) {
+        
+    }
+    @IBAction func function006( sender: AnyObject) {
+        
+    }
+    @IBAction func function007( sender: AnyObject) {
+        
+    }
+    @IBAction func function008( sender: AnyObject) {
+        
+    }
+    @IBAction func function009( sender: AnyObject) {
+        
+    }
+    @IBAction func function010( sender: AnyObject) {
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

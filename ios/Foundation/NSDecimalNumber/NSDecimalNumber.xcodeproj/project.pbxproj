@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45F4974A1C9D7E2C00A417B2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F497491C9D7E2C00A417B2 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 		74924067155E68BA007A1C90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924066155E68BA007A1C90 /* UIKit.framework */; };
 		74924069155E68BA007A1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74924068155E68BA007A1C90 /* Foundation.framework */; };
 		7492406B155E68BA007A1C90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7492406A155E68BA007A1C90 /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45F497491C9D7E2C00A417B2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		74924062155E68BA007A1C90 /* NSDecimalNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSDecimalNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74924066155E68BA007A1C90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74924068155E68BA007A1C90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +85,7 @@
 		74924057155E68BA007A1C90 = {
 			isa = PBXGroup;
 			children = (
+				45F497491C9D7E2C00A417B2 /* Default-568h@2x.png */,
 				7492406C155E68BA007A1C90 /* NSDecimalNumber */,
 				7492408D155E68BA007A1C90 /* NSDecimalNumberTests */,
 				74924065155E68BA007A1C90 /* Frameworks */,
@@ -191,7 +194,7 @@
 			name = NSDecimalNumberTests;
 			productName = NSDecimalNumberTests;
 			productReference = 74924086155E68BA007A1C90 /* NSDecimalNumberTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -200,7 +203,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OOO;
-				LastUpgradeCheck = 0430;
+				LastTestingUpgradeCheck = 0700;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 7492405C155E68BA007A1C90 /* Build configuration list for PBXProject "NSDecimalNumber" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -226,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74924071155E68BA007A1C90 /* InfoPlist.strings in Resources */,
+				45F4974A1C9D7E2C00A417B2 /* Default-568h@2x.png in Resources */,
 				7492407A155E68BA007A1C90 /* MainStoryboard_iPhone.storyboard in Resources */,
 				7492407D155E68BA007A1C90 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
@@ -326,12 +331,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -339,10 +353,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,14 +370,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -375,6 +404,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSDecimalNumber/NSDecimalNumber-Prefix.pch";
 				INFOPLIST_FILE = "NSDecimalNumber/NSDecimalNumber-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,6 +416,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSDecimalNumber/NSDecimalNumber-Prefix.pch";
 				INFOPLIST_FILE = "NSDecimalNumber/NSDecimalNumber-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -402,6 +433,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSDecimalNumber/NSDecimalNumber-Prefix.pch";
 				INFOPLIST_FILE = "NSDecimalNumberTests/NSDecimalNumberTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -419,6 +451,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSDecimalNumber/NSDecimalNumber-Prefix.pch";
 				INFOPLIST_FILE = "NSDecimalNumberTests/NSDecimalNumberTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oomori.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -444,6 +477,7 @@
 				7492409A155E68BA007A1C90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7492409B155E68BA007A1C90 /* Build configuration list for PBXNativeTarget "NSDecimalNumberTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +486,7 @@
 				7492409D155E68BA007A1C90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

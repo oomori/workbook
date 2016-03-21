@@ -13,6 +13,7 @@ class ViewController: NSViewController {
 
     var windowArray : NSMutableArray = []
     
+    //Swift2.0
     //NSScreen mainScreen()
     //NSScreen deepestScreen()
     //NSScreen screens()

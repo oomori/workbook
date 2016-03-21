@@ -299,6 +299,7 @@ class ViewController: NSViewController {
     }
     
     //NSBitmapImageRep +imageRepWithData:
+    //http://cocoaapi.hatenablog.com/entry/00000101/recID34445
     //NSBitmapImageRep
     //Swift2.0
     @IBAction func function003(sender: AnyObject) {

@@ -5,14 +5,27 @@
 //  Created by air on 2015/02/15.
 //  Copyright (c) 2015年 oomori. All rights reserved.
 //
-//Swift2.0
+// Swift2.0
+// OS X 10.11.3
+
+//未記載
+//springLoaded
+//http://cocoaapi.hatenablog.com/entry/Appkit/NSButton/springLoaded
+
+//maxAcceleratorLevel
+//http://cocoaapi.hatenablog.com/entry/Appkit/NSButton/maxAcceleratorLevel
+
 
 import Cocoa
 
 class ViewController: NSViewController {
     @IBOutlet weak var myButton: NSButton!
     var windowArray : NSMutableArray = []   //ウインドウ保持用
+    
+    // MARK: - NSButton
+    // MARK: setButtonType
     //NSButton setButtonType
+    //http://cocoaapi.hatenablog.com/entry/00011019/NSButton_setButtonType_
     //Swift2.0
     @IBAction func function001(sender: AnyObject) {
         myButton.setButtonType(NSButtonType.PushOnPushOffButton)
@@ -25,7 +38,10 @@ class ViewController: NSViewController {
         // OnOffButton
         // MomentaryPushInButton // was NSMomentaryLight
     }
+    
+    
     //NSButton title
+    //http://cocoaapi.hatenablog.com/entry/00011003/NSButtontitle
     //Swift2.0
     func buttonAction002(sender: AnyObject?){
         //var theWindow : NSWindow = (sender as! NSButton).window!
@@ -59,7 +75,10 @@ class ViewController: NSViewController {
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
     }
+    
+    // MARK: - getPeriodicDelay
     //NSButton getPeriodicDelay
+    //http://cocoaapi.hatenablog.com/entry/00011105/NSButton_getPeriodicDelay_interval_
     @IBAction func function003(sender: AnyObject) {
         //ウインドウ作成
         let aWindow : NSWindow
@@ -94,8 +113,11 @@ class ViewController: NSViewController {
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
     }
+    
+    // MARK: - setPeriodicDelay
     //NSButton setPeriodicDelay
-    //Swift1.2
+    //http://cocoaapi.hatenablog.com/entry/00011013/NSButton_setPeriodicDelay_interval_
+    //Swift2.0
     var counter004 : Int = 0
     func buttonAction004(sender: AnyObject?){
         //var theWindow : NSWindow = (sender as! NSButton).window!
@@ -139,8 +161,10 @@ class ViewController: NSViewController {
         
     }
     
-    @IBOutlet weak var alter: NSButton!
+    // MARK: - alternateTitle
     //NSButton　alternateTitle
+    //http://cocoaapi.hatenablog.com/entry/00011108/NSButton_alternateTitle
+    @IBOutlet weak var alter: NSButton!
     @IBAction func function005(sender: AnyObject) {
         //ウインドウ作成
         let aWindow : NSWindow
@@ -174,7 +198,10 @@ class ViewController: NSViewController {
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
     }
+    
+    // MARK: bezelStyle
     //NSButton bezelStyle
+    //http://cocoaapi.hatenablog.com/entry/00011106/NSButton_bezelStyle
     @IBAction func function006(sender: AnyObject) {
         
         switch (alter.bezelStyle){
@@ -215,7 +242,10 @@ class ViewController: NSViewController {
         }
         
     }
+    
+    // MARK: attributedTitle
     //NSButton attributedTitle
+    //http://cocoaapi.hatenablog.com/entry/Appkit/NSButton/attributedTitle
     @IBAction func function007(sender: AnyObject) {
         let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
@@ -250,7 +280,11 @@ class ViewController: NSViewController {
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
     }
+    
+    // MARK: - attributedAlternateTitle
     //NSButton attributedAlternateTitle
+    //http://cocoaapi.hatenablog.com/entry/00011107/NSButton_attributedAlternateTitle
+    //Swift2.0
     @IBAction func function008(sender: AnyObject) {
         //ウインドウ作成
         let aWindow : NSWindow
@@ -290,7 +324,11 @@ class ViewController: NSViewController {
         aWindow.orderFront(self)//前面に
         aWindow.makeKeyAndOrderFront(self)//表示
     }
+    
+    // MARK: - image
     //NSButton　image
+    //http://cocoaapi.hatenablog.com/entry/00011103/NSButton_image
+    //Swift2.0
     @IBAction func function009(sender: AnyObject) {
         //ウインドウ作成
         let aWindow : NSWindow
@@ -331,7 +369,11 @@ class ViewController: NSViewController {
         
         
     }
+    
+    // MARK: - alternateImage
     //NSButton alternateImage
+    //http://cocoaapi.hatenablog.com/entry/00011109/NSButton_alternateImage
+    //Swift2.0
     @IBAction func function010(sender: AnyObject) {
         //ウインドウ作成
         let aWindow : NSWindow
@@ -371,6 +413,7 @@ class ViewController: NSViewController {
         aWindow.makeKeyAndOrderFront(self)//表示
     }
     
+    // MARK: -
     //NSButton
     @IBAction func function011(sender: AnyObject) {
         let aWindow : NSWindow
@@ -399,7 +442,10 @@ class ViewController: NSViewController {
         aWindow.makeKeyAndOrderFront(self)//表示
 
     }
+    // MARK: - transparent
     //NSButton  transparent
+    //http://cocoaapi.hatenablog.com/entry/Appkit/NSButton/transparent
+    //Swift2.0
     @IBAction func function012(sender: AnyObject) {
         let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),
@@ -427,7 +473,10 @@ class ViewController: NSViewController {
         aWindow.makeKeyAndOrderFront(self)//表示
         
     }
+    // MARK: - showsBorderOnlyWhileMouseInside
     //NSButton　showsBorderOnlyWhileMouseInside
+    //http://cocoaapi.hatenablog.com/entry/00011006/NSButton_showsBorderOnlyWhileMouseInside
+    //Swift2.0
     @IBAction func function013(sender: AnyObject) {
         let aWindow : NSWindow
         = NSWindow(contentRect: NSMakeRect(0.0, 0.0, 300.0, 200.0),

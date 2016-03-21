@@ -178,7 +178,7 @@ class ViewController: NSViewController {
             correct[3] += mat[i+12] * vec[i];
         }
         
-        let context = gcl_get_context()  //cl_context
+        //let context = gcl_get_context()  //cl_context
         let queue = gcl_create_dispatch_queue(cl_queue_flags(CL_DEVICE_TYPE_CPU), nil)!
         
         dispatch_sync(queue) {
@@ -190,13 +190,13 @@ class ViewController: NSViewController {
                 local_work_size: (0, 0, 0)
             )
             
-            var mat_buff = gcl_malloc(sizeof(cl_float) * 16, &mat, cl_malloc_flags(CL_MEM_COPY_HOST_PTR | CL_MEM_READ_ONLY))
-            var vec_buff = gcl_malloc(sizeof(cl_float) * 4, &vec, cl_malloc_flags(CL_MEM_COPY_HOST_PTR | CL_MEM_READ_ONLY))
-            var res_buff = gcl_malloc(sizeof(cl_float) * 4, nil, cl_malloc_flags(CL_MEM_WRITE_ONLY))
+            let mat_buff = gcl_malloc(sizeof(cl_float) * 16, &mat, cl_malloc_flags(CL_MEM_COPY_HOST_PTR | CL_MEM_READ_ONLY))
+            let vec_buff = gcl_malloc(sizeof(cl_float) * 4, &vec, cl_malloc_flags(CL_MEM_COPY_HOST_PTR | CL_MEM_READ_ONLY))
+            let res_buff = gcl_malloc(sizeof(cl_float) * 4, nil, cl_malloc_flags(CL_MEM_WRITE_ONLY))
             
-            var resC = UnsafeMutablePointer<cl_float>(res_buff)
-            var matPointer = UnsafeMutablePointer<cl_float4>(mat_buff)
-            var vecPointer = UnsafeMutablePointer<cl_float4>(vec_buff)
+            let resC = UnsafeMutablePointer<cl_float>(res_buff)
+            let matPointer = UnsafeMutablePointer<cl_float4>(mat_buff)
+            let vecPointer = UnsafeMutablePointer<cl_float4>(vec_buff)
             
             withUnsafePointer(&ndRange) {
                 matvec_mult_kernel($0, matPointer, vecPointer, resC)
